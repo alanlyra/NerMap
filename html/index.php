@@ -13,7 +13,7 @@ saveCurrentURL();
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.css" rel="stylesheet">
 
-  <title>Dissertação Mestrado </title>
+  <title>Dissertação Mestrado</title>
   <link rel="stylesheet" type="text/css" href="/css/default.css"/>
  </head>
  <body style="background-image: url('img/futuro.jpeg')">

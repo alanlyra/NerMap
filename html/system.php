@@ -34,7 +34,7 @@ function saveCurrentURL() {
 
 /* DATA FUNCTIONS */
 function get_connection(){
-  return pg_connect ('host=localhost port=5432 dbname=roadmap user=alan password=batera1104');
+  return pg_connect ('host=localhost port=5432 dbname=roadmap user=alan password=e41e31d932f774da99bea67a010db9fd');
 }
 
 
@@ -76,8 +76,9 @@ function login($user,$password)
 {
   if (!!isset($user) && !!isset($password) && !$password=="")
   {
+    $md5password = md5($password);
     $function_ret=0;
-    $result = get_data('SELECT * FROM users WHERE email=$1 AND password=$2', array($user, $password));
+    $result = get_data('SELECT * FROM users WHERE email=$1 AND password=$2', array($user, $md5password));
     if (pg_num_rows($result)>0)
     {
       $usuario=pg_fetch_object($result);
