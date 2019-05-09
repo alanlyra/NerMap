@@ -48,23 +48,29 @@ saveCurrentURL();
                 </br>
                 <div class="col-xl-4 col-lg-5">
                   <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Carregar Relatório</a>
-                  </br></br>
-                  <label class="container">Conll
-                    <input type="radio" checked="checked" name="radio">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="container">Texto
-                    <input type="radio" name="radio">
-                    <span class="checkmark"></span>
-                  </label>
+                  </br>
+
                 </div>
                 </br>
                 <div class="col-xl-4 col-lg-5">
+                 <h5>Nome:</h5>
                   <input type="text" class="form-control bg-light border-0 small" placeholder="Nome do Roadmap..." aria-label="Search" aria-describedby="basic-addon2">
                 </div>
                 </br>
                 <div class="col-xl-4 col-lg-5">
-                  <input type="text" class="form-control bg-light border-0 small" placeholder="Tema da Prospecção..." aria-label="Search" aria-describedby="basic-addon2">
+		              <h5>Tema:</h5>
+                  <select class="form-control" style="cursor: pointer;">
+                    <option value="" disabled selected>Selecione o tema...</option>
+                    <option value="Educação">Educação</option>
+                    <option value="Medicina">Medicina</option>
+                    <option value="Transporte">Transporte</option>
+                    <option value="Trabalho">Trabalho</option>
+                  </select>
+                </div>
+		            </br>
+		<div class="col-xl-4 col-lg-5">
+		<h5>Data:</h5>
+                  <input type="text" class="form-control bg-light border-0 small" placeholder="Ano de Publicação da Prospecção..." aria-label="Search" aria-describedby="basic-addon2">
                 </div>
                 </br>
                 <a href="#" class="btn btn-primary btn-icon-split" style="width:8em;">
@@ -124,10 +130,12 @@ saveCurrentURL();
 
   <script>
     function load(){
-      document.getElementById("li_config").classList.add('active');
+      document.getElementById("li_roadmap").classList.add('active');
     }
   </script>
 
 </body>
+
+
 
 </html>
