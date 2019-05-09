@@ -46,39 +46,42 @@ saveCurrentURL();
                   <h6 class="m-0 font-weight-bold text-primary">Inserir dados</h6>
                 </div>
                 </br>
-                <div class="col-xl-4 col-lg-5">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Carregar Relatório</a>
+
+                <form id="forms" action="roadmap.php" method="post" enctype="multipart/form-data">
+
+                  <div class="col-xl-4 col-lg-5">
+                    <input type="file" name="file" accept="text/*"/>
+                    <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Carregar Relatório</a> -->
+                    </br>
+                  </div>
                   </br>
-
-                </div>
-                </br>
-                <div class="col-xl-4 col-lg-5">
-                 <h5>Nome:</h5>
-                  <input type="text" class="form-control bg-light border-0 small" placeholder="Nome do Roadmap..." aria-label="Search" aria-describedby="basic-addon2">
-                </div>
-                </br>
-                <div class="col-xl-4 col-lg-5">
-		              <h5>Tema:</h5>
-                  <select class="form-control" style="cursor: pointer;">
-                    <option value="" disabled selected>Selecione o tema...</option>
-                    <option value="Educação">Educação</option>
-                    <option value="Medicina">Medicina</option>
-                    <option value="Transporte">Transporte</option>
-                    <option value="Trabalho">Trabalho</option>
-                  </select>
-                </div>
-		            </br>
-		<div class="col-xl-4 col-lg-5">
-		<h5>Data:</h5>
-                  <input type="text" class="form-control bg-light border-0 small" placeholder="Ano de Publicação da Prospecção..." aria-label="Search" aria-describedby="basic-addon2">
-                </div>
-                </br>
-                <a href="#" class="btn btn-primary btn-icon-split" style="width:8em;">
-
-                    <span class="text">Iniciar</span>
-                </a>
-                </br>
+                  <div class="col-xl-4 col-lg-5">
+                   <h5>Nome:</h5>
+                    <input type="text" id="nome" name="nome" class="form-control bg-light border-0 small" placeholder="Nome do Roadmap..." aria-label="Search" aria-describedby="basic-addon2">
+                  </div>
+                  </br>
+                  <div class="col-xl-4 col-lg-5">
+  		              <h5>Tema:</h5>
+                    <select class="form-control" style="cursor: pointer;">
+                      <option value="" disabled selected>Selecione o tema...</option>
+                      <option value="Educação">Educação</option>
+                      <option value="Medicina">Medicina</option>
+                      <option value="Transporte">Transporte</option>
+                      <option value="Trabalho">Trabalho</option>
+                    </select>
+                  </div>
+  		            </br>
+              		<div class="col-xl-4 col-lg-5">
+              		<h5>Data:</h5>
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Ano de Publicação da Prospecção..." aria-label="Search" aria-describedby="basic-addon2">
+                  </div>
+                  </br>
+                  <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Iniciar" style="margin-left: 45%; width: 8em; height: 2em; margin-bottom: 15px;" />
+                  </br>
+                </form>
               </div>
+
+
             </div>
 
             <!-- Pie Chart -->
@@ -133,6 +136,13 @@ saveCurrentURL();
       document.getElementById("li_roadmap").classList.add('active');
     }
   </script>
+
+  <?php
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
+    {
+      echo "<script>console.log( 'Debug Objects: " . $_FILES['file']['name'] . "' );</script>";
+    }
+  ?>
 
 </body>
 
