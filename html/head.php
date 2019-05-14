@@ -6,7 +6,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Dissertação</title>
+  <title>NerMap</title>
+   <link rel="shortcut icon" type="image/x-icon" href="img/horse.ico">
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">

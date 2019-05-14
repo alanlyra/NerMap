@@ -50,7 +50,7 @@ saveCurrentURL();
                 <form id="forms" action="roadmap.php" method="post" enctype="multipart/form-data">
 
                   <div class="col-xl-4 col-lg-5">
-                    <input type="file" name="file" accept="text/*"/>
+                    <input type="file" name="fileUpload" multiple accept="text/*"/>
                     <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Carregar Relatório</a> -->
                     </br>
                   </div>
@@ -140,7 +140,25 @@ saveCurrentURL();
   <?php
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
     {
-      echo "<script>console.log( 'Debug Objects: " . $_FILES['file']['name'] . "' );</script>";
+      $target_dir = 'files/';
+      if( isset($_FILES['fileUpload']['name'])) {
+            
+        $total_files = count($_FILES['fileUpload']['name']);
+        
+        for($key = 0; $key < $total_files; $key++) {
+          
+          // Check if file is selected
+          if(isset($_FILES['fileUpload']['name'][$key]) 
+                            && $_FILES['fileUpload']['size'][$key] > 0) {
+            
+            $original_filename = $_FILES['fileUpload']['name'][$key];
+            $target = $target_dir . basename($original_filename);
+            $tmp  = $_FILES['fileUpload']['tmp_name'][$key];
+            move_uploaded_file($tmp, $target);
+          }   
+        }
+      }
+      echo "<script>console.log( 'Debug Objects: " . $_FILES['fileUpload']['name'] . "' );</script>";
     }
   ?>
 

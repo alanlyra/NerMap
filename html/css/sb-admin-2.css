@@ -10681,6 +10681,7 @@ a:focus {
   background-color: black;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, black), to(black));
   background-image: linear-gradient(180deg, black 10%, black 100%);
+  /*background-image: url(../img/futuro.jpeg);*/
   background-size: cover;
 }
 
