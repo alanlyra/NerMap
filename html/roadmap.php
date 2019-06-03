@@ -47,10 +47,12 @@ saveCurrentURL();
                 </div>
                 </br>
 
-                <form id="forms" action="roadmap.php" method="post" enctype="multipart/form-data">
+                <form action="roadmap.php" method="post" multipart="" enctype="multipart/form-data">
+        
 
                   <div class="col-xl-4 col-lg-5">
-                    <input type="file" name="fileUpload" multiple accept="text/*"/>
+                  	<input type="file" name="files[]" multiple accept="text/*">
+                    
                     <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Carregar Relatório</a> -->
                     </br>
                   </div>
@@ -137,33 +139,38 @@ saveCurrentURL();
     }
   </script>
 
-  <?php
-    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
-    {
-      $target_dir = 'files/';
-      if( isset($_FILES['fileUpload']['name'])) {
-            
-        $total_files = count($_FILES['fileUpload']['name']);
-        
-        for($key = 0; $key < $total_files; $key++) {
-          
-          // Check if file is selected
-          if(isset($_FILES['fileUpload']['name'][$key]) 
-                            && $_FILES['fileUpload']['size'][$key] > 0) {
-            
-            $original_filename = $_FILES['fileUpload']['name'][$key];
-            $target = $target_dir . basename($original_filename);
-            $tmp  = $_FILES['fileUpload']['tmp_name'][$key];
-            move_uploaded_file($tmp, $target);
-          }   
-        }
-      }
-      echo "<script>console.log( 'Debug Objects: " . $_FILES['fileUpload']['name'] . "' );</script>";
-    }
-  ?>
-
 </body>
-
-
-
 </html>
+
+<?php
+	echo '<pre>';
+	$img = $_FILES['files'];
+
+	if(!empty($img))
+	{
+	    $img_desc = reArrayFiles($img);
+	    print_r($img_desc);
+	    
+	    foreach($img_desc as $val)
+	    {
+	        $newname = $val['name'];
+	        move_uploaded_file($val['tmp_name'],'uploads/'.$newname);
+	    }
+	}
+
+	function reArrayFiles($file)
+	{
+	    $file_ary = array();
+	    $file_count = count($file['name']);
+	    $file_key = array_keys($file);
+	    
+	    for($i=0;$i<$file_count;$i++)
+	    {
+	        foreach($file_key as $val)
+	        {
+	            $file_ary[$i][$val] = $file[$val][$i];
+	        }
+	    }
+	    return $file_ary;
+	}
+?>
