@@ -176,7 +176,7 @@ saveCurrentURL();
 		        move_uploaded_file($val['tmp_name'],'uploads/'.$newname);	
 		        $num_textos++;	        
 		    }
-		    db($id_prospec, $nome, $tema, $ano, $num_textos);
+		    db_prospec($id_prospec, $nome, $tema, $ano, $num_textos, "PROCESSANDO");
 		    }
 		else{
 			echo "<script>console.log( 'Deu ruim!' );</script>";
@@ -221,12 +221,7 @@ saveCurrentURL();
         return $number;
     }
 
-	function db($id_prospec_db, $nome_db, $tema_db, $ano_db, $num_textos_db) {   
-		$number1 = get_data("select MAX(id_prospec) from prospec");
-		$row = pg_fetch_array($number1);				
-		$number2 = $row[0];	
-		$number = $number2 + 1;
-
-        $save_on_prospec = set_data("INSERT INTO prospec (id_prospec, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec) VALUES ($1, $2, $3, $4, $5)", array($id_prospec_db, $nome_db, $tema_db, $ano_db, $num_textos_db));
+	function db_prospec($id_prospec_db, $nome_db, $tema_db, $ano_db, $num_textos_db, $status_ren_db) {   
+        $save_on_prospec = set_data("INSERT INTO prospec (id_prospec, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec, status_ren_prospec) VALUES ($1, $2, $3, $4, $5, $6)", array($id_prospec_db, $nome_db, $tema_db, $ano_db, $num_textos_db, $status_ren_db));
     }
 ?>
