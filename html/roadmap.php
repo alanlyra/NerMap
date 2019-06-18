@@ -59,12 +59,12 @@ saveCurrentURL();
                   </br>
                   <div class="col-xl-4 col-lg-5">
                    <h5>Nome:</h5>
-                    <input type="text" id="nome" name="nome" class="form-control bg-light border-0 small" placeholder="Nome do Roadmap..." aria-label="Search" aria-describedby="basic-addon2">
+                    <input type="text" id="nomeRoadmap" name="nomeRoadmap" class="form-control bg-light border-0 small" placeholder="Nome do Roadmap..." aria-label="Search" aria-describedby="basic-addon2">
                   </div>
                   </br>
                   <div class="col-xl-4 col-lg-5">
   		              <h5>Tema:</h5>
-                    <select class="form-control" style="cursor: pointer;">
+                    <select type="text" id="temaRoadmap" name="temaRoadmap" class="form-control" style="cursor: pointer;">
                       <option value="" disabled selected>Selecione o tema...</option>
                       <option value="Educação">Educação</option>
                       <option value="Medicina">Medicina</option>
@@ -75,7 +75,7 @@ saveCurrentURL();
   		            </br>
               		<div class="col-xl-4 col-lg-5">
               		<h5>Data:</h5>
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Ano de Publicação da Prospecção..." aria-label="Search" aria-describedby="basic-addon2">
+                    <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="Ano de Publicação da Prospecção..." aria-label="Search" aria-describedby="basic-addon2">
                   </div>
                   </br>
                   <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Iniciar" style="margin-left: 45%; width: 8em; height: 2em; margin-bottom: 15px;" />
@@ -94,6 +94,7 @@ saveCurrentURL();
 
 
         </div>
+        <input type="text" id="foo" name="foo" class="form-control bg-light border-0 small" placeholder="" aria-label="Search" aria-describedby="basic-addon2">
         <!-- /.container-fluid -->
 
       </div>
@@ -142,20 +143,44 @@ saveCurrentURL();
 </body>
 </html>
 
+
 <?php
 	echo '<pre>';
-	$img = $_FILES['files'];
+	$file = $_FILES['files'];
+	$nome = $_POST['nomeRoadmap'];
+	$tema = $_POST['temaRoadmap'];
+	$ano = $_POST['anoRoadmap'];
 
-	if(!empty($img))
+	if(!empty($file))
 	{
-	    $img_desc = reArrayFiles($img);
-	    print_r($img_desc);
-	    
-	    foreach($img_desc as $val)
-	    {
-	        $newname = $val['name'];
-	        move_uploaded_file($val['tmp_name'],'uploads/'.$newname);
-	    }
+		if(!$nome == "" && !$tema == "" && !$ano == "") {
+	    	echo "<script>console.log( 'Nome: " . $nome . "' );</script>";
+	    	echo "<script>console.log( 'Tema: " . $tema . "' );</script>";
+	    	echo "<script>console.log( 'Ano: " . $ano . "' );</script>";
+	    	
+    	    $id_prospec = get_max_id_prospec();
+		    $file_desc = reArrayFiles($file);
+		    print_r($file_desc);
+		    $num_textos = 0;
+		    
+		    foreach($file_desc as $val)
+		    {
+		    	//$newname = date('YmdHis',time()).mt_rand().'.jpg';
+		        $newname = get_max_id_prospec();
+		        if($num_textos > 0) {
+		        	$newname .= "_";
+		        	$other_text = $num_textos + 1;
+		        	$newname .= $other_text;
+		        }
+		        $newname .= ".txt";
+		        move_uploaded_file($val['tmp_name'],'uploads/'.$newname);	
+		        $num_textos++;	        
+		    }
+		    db($id_prospec, $nome, $tema, $ano, $num_textos);
+		    }
+		else{
+			echo "<script>console.log( 'Deu ruim!' );</script>";
+		}
 	}
 
 	function reArrayFiles($file)
@@ -173,4 +198,35 @@ saveCurrentURL();
 	    }
 	    return $file_ary;
 	}
+
+	if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction'])) {
+		if(!$nome == "" && !$tema == "" && !$ano == "" ) {
+		    	echo "<script>console.log( 'Nome: " . $nome . "' );</script>";
+		    	echo "<script>console.log( 'Tema: " . $tema . "' );</script>";
+		    	echo "<script>console.log( 'Ano: " . $ano . "' );</script>";
+    	}
+		else{
+			if(empty($file)){
+				echo "<script>console.log( 'Deu ruim!' );</script>";
+			}
+		}
+	}
+
+	function get_max_id_prospec() {   
+		$number1 = get_data("select MAX(id_prospec) from prospec");
+		$row = pg_fetch_array($number1);				
+		$number2 = $row[0];	
+		$number = $number2 + 1;
+
+        return $number;
+    }
+
+	function db($id_prospec_db, $nome_db, $tema_db, $ano_db, $num_textos_db) {   
+		$number1 = get_data("select MAX(id_prospec) from prospec");
+		$row = pg_fetch_array($number1);				
+		$number2 = $row[0];	
+		$number = $number2 + 1;
+
+        $save_on_prospec = set_data("INSERT INTO prospec (id_prospec, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec) VALUES ($1, $2, $3, $4, $5)", array($id_prospec_db, $nome_db, $tema_db, $ano_db, $num_textos_db));
+    }
 ?>

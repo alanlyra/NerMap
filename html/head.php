@@ -17,4 +17,9 @@
   <link href="css/sb-admin-2.css" rel="stylesheet">
   <link href="css/site.css" rel="stylesheet">
 
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
 </head>
