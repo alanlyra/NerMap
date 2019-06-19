@@ -1,0 +1,38 @@
+<html>
+<head>
+
+  <script>
+
+  if (window.opener) {
+    window.opener.document.reload();
+    window.close();
+  }
+  else {
+    window.location.href='/index.php';
+  }
+
+  </script>
+</head>
+
+</html>
+
+PHP Notice:  Undefined index: HTTP_HOST in /home/alan/NerMap/html/system.php on line 23
+PHP Notice:  Undefined index: REQUEST_URI in /home/alan/NerMap/html/system.php on line 23
+<html>
+<head>
+
+  <script>
+
+  if (window.opener) {
+    window.opener.document.reload();
+    window.close();
+  }
+  else {
+    window.location.href='/index.php';
+  }
+
+  </script>
+</head>
+
+</html>
+

@@ -177,8 +177,8 @@ saveCurrentURL();
 		        $num_textos++;	        
 		    }
 		    db_prospec($id_prospec, $nome, $tema, $ano, $num_textos, "PROCESSANDO");
-		    popen("java -mx600m -cp '*:lib\*' edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/own-ner-model.ser.gz -textFile uploads/" . $id_prospec . ".txt > roadmaps/". $id_prospec . "-tagged.txt", "r");
-		    popen("bash process_input.sh 1", "r");
+		    //popen("java -mx600m -cp '*:lib\*' edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/own-ner-model.ser.gz -textFile uploads/" . $id_prospec . ".txt > roadmaps/". $id_prospec . "-tagged.txt", "r");
+		    popen("bash /home/alan/NerMap/html/process_input.sh " . $id_prospec, "r");
 		    }
 		else{
 			echo "<script>console.log( 'Deu ruim!' );</script>";
