@@ -52,6 +52,11 @@
 
   <!-- Nav Item - Roadmaps Collapse Menu -->
   <li id="li_rodmaps" class="nav-item">
+    <a class="nav-link" href="seeroadmap.php">
+      <i class="fas fa-fw fa-chart-area"></i>
+      <span>Roadmaps</span></a>
+  </li>
+  <!-- <li id="li_rodmaps" class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
       <i class="fas fa-fw fa-chart-area"></i>
       <span>Roadmaps</span>
@@ -65,7 +70,7 @@
         <a class="collapse-item" href="utilities-other.html">Other</a>
       </div>
     </div>
-  </li>
+  </li> -->
 
   <!-- Divider -->
   <hr class="sidebar-divider">
