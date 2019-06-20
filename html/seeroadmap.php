@@ -200,7 +200,7 @@ saveCurrentURL();
 
   <script>
     function load(){
-      document.getElementById("li_roadmap").classList.add('active');
+      document.getElementById("li_seerodmaps").classList.add('active');
     }
   </script>
 
