@@ -45,6 +45,7 @@
                       <th>Ano</th>
                       <th>Nº de textos</th>
                       <th>Status</th>
+                      <th>Arquivo</th>
                     </tr>
                   </thead>
                   <tfoot>
@@ -55,6 +56,7 @@
                       <th>Ano</th>
                       <th>Nº de textos</th>
                       <th>Status</th>
+                      <th>Arquivo</th>
                     </tr>
                   </tfoot>
                   <tbody>
@@ -66,13 +68,14 @@
 				    	if  ($results_max>0) {
 							while($result=pg_fetch_object($search_results)) {
 						    	echo "<tr>
-							    		  <td>".$result->id_prospec."</td>
-					                      <td>".$result->nome_prospec."</td>
-					                      <td>".$result->assunto_prospec."</td>
-					                      <td>".$result->ano_prospec."</td>
-					                      <td>".$result->num_textos_prospec."</td>
-					                      <td>".$result->status_ren_prospec."</td>
-					                      </tr>";
+  							    		  <td>".$result->id_prospec."</td>
+  	                      <td>".$result->nome_prospec."</td>
+  	                      <td>".$result->assunto_prospec."</td>
+  	                      <td>".$result->ano_prospec."</td>
+  	                      <td>".$result->num_textos_prospec."</td>
+                          <td><div style='text-align: center;'><img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
+                          <td><a href='/uploads/".$result->id_prospec.".txt' download><div style='text-align: center;'><img src='img/icon_doc.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+	                      </tr>";
 		                	}
 						}
                   	?>

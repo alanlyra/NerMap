@@ -45,9 +45,35 @@ saveCurrentURL();
 
            <div class="container" style="background: #333 !important; max-height: 55vh; overflow: auto;">
 
+<!-- query: SELECT * FROM prospec p
+INNER JOIN texto t ON t.id_texto = p.id_prospec
+INNER JOIN ren r ON r.id_ren = t.id_texto -->
+
             <ul class="timeline">
               <li><div class="tldate">2020</div></li>
-              
+
+              <?php 
+                      $search_results=get_data('SELECT * FROM prospec p INNER JOIN texto t ON t.id_texto = p.id_prospec INNER JOIN ren r ON r.id_ren = t.id_texto WHERE id_prospec = 4');
+
+                      $results_max = pg_num_rows($search_results);
+
+                        if  ($results_max>0) {
+                        while($result=pg_fetch_object($search_results)) {
+                            echo "<li>
+                                    <div class='tl-circ'></div>
+                                    <div class='timeline-panel'>
+                                      <div class='tl-heading'>
+                                        <h4>".$result->nome_prospec."</h4>
+                                        <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i> 3 hours ago</small></p>
+                                      </div>
+                                      <div class='tl-body'>
+                                        <p>Lorem Ipsum and such.</p>
+                                      </div>
+                                    </div>
+                                  </li>";
+                                }
+                      }
+                    ?>          
               <li>
                 <div class="tl-circ"></div>
                 <div class="timeline-panel">
