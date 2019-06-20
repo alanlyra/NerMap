@@ -9,7 +9,7 @@ require_once 'system.php';
 
       $pieces_space_Array = explode(" ", $roadmapText);
 
-      $fp = fopen('testes.txt', 'w');
+      //$fp = fopen('testes.txt', 'w');
       
       $count=0;  
       foreach($pieces_space_Array as $value) {

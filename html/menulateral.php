@@ -45,17 +45,9 @@
 
   <!-- Nav Item - Prospecções Collapse Menu -->
   <li id="li_prospec" class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+    <a class="nav-link" href="prospeccoes.php">
       <i class="fas fa-fw fa-table"></i>
-      <span>Prospecções</span>
-    </a>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-      <div class="bg-white py-2 collapse-inner rounded">
-        <h6 class="collapse-header">Custom Components:</h6>
-        <a class="collapse-item" href="buttons.html">Buttons</a>
-        <a class="collapse-item" href="cards.html">Cards</a>
-      </div>
-    </div>
+      <span>Prospecções</span></a>
   </li>
 
   <!-- Nav Item - Roadmaps Collapse Menu -->
