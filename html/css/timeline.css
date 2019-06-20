@@ -1,6 +1,9 @@
-body { background: #333 !important; }
 
 img { border: 0; max-width: 100%; }
+
+.body_timeline{
+  background: #333 !important;
+}
 
 .page-header h1 {
   font-size: 3.26em;
