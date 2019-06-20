@@ -69,7 +69,7 @@
 							    		  <td>".$result->id_prospec."</td>
 					                      <td>".$result->nome_prospec."</td>
 					                      <td>".$result->assunto_prospec."</td>
-					                      <td>".$result->ano."</td>
+					                      <td>".$result->ano_prospec."</td>
 					                      <td>".$result->num_textos_prospec."</td>
 					                      <td>".$result->status_ren_prospec."</td>
 					                      </tr>";
