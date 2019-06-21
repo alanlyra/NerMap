@@ -223,7 +223,7 @@ saveCurrentURL();
         //$conf_value = $_POST['rate'];
 		    db_prospec($id_prospec, $nome, $tema, $ano, $num_textos, "PROCESSANDO");
 		    //popen("java -mx600m -cp '*:lib\*' edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/own-ner-model.ser.gz -textFile uploads/" . $id_prospec . ".txt > roadmaps/". $id_prospec . "-tagged.txt", "r");
-		    popen("bash /home/alan/NerMap/html/process_input.sh " . $id_prospec, "r");
+		    popen("bash /home/alan/NerMap/html/process_input.sh " . $id_prospec . " " . $num_textos, "r");
 		    }
 		else{
 			echo "<script>console.log( 'Deu ruim!' );</script>";

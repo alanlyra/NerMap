@@ -1,0 +1,6 @@
+In/O 2017/O ,/O the/BPRED government/MPRED of/MPRED China/MPRED put/MPRED out/MPRED its/MPRED plan/MPRED to/MPRED lead/MPRED the/MPRED world/MPRED in/MPRED Artificial/MPRED Intelligence/EPRED by/UTEMPPRED 2030/UDATEPRED ./O 
+According/O to/O Eric/O Schmidt/O ``/O it/O 's/O pretty/O simple/O ./O 
+By/UTEMPPRED 2020/UDATEPRED ,/O they/BPRED will/MPRED have/MPRED caught/MPRED up/EPRED ./O 
+By/UTEMPPRED 2025/UDATEPRED ,/O they/BPRED will/MPRED be/MPRED better/MPRED than/MPRED us/EPRED ./O 
+By/UTEMPPRED 2030/UDATEPRED ,/O they/BPRED will/MPRED dominate/MPRED the/MPRED industries/MPRED of/MPRED AI/EPRED ./O ''/O 
+And/O the/O numbers/O do/O n't/O lie/O ,/O says/O Peter/O Diamandis/O :/O ``/O PricewaterhouseCoopers/O recently/O projected/O AI/O 's/BPRED deployment/MPRED will/MPRED add/MPRED $/MPRED 15.7/MPRED trillion/MPRED to/MPRED the/MPRED global/MPRED GDP/EPRED by/UTEMPPRED 2030/UDATEPRED ,/O with/BPRED China/MPRED taking/MPRED home/MPRED $/MPRED 7/MPRED trillion/MPRED of/MPRED that/MPRED total/MPRED ,/MPRED dwarfing/MPRED North/MPRED America/MPRED 's/MPRED $/MPRED 3.7/MPRED trillion/MPRED in/MPRED gains/EPRED ./O ''/O 
