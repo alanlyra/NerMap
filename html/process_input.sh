@@ -13,6 +13,7 @@ LOG_FILE="logbash.log"
 if ! [ $NUM -eq 1 ]; then
 	until [ $COUNT -gt $NUM ]
 	do
+	  CAT+=" breakline.txt "
 	  CAT+=" uploads/"
 	  CAT+=$ID
 	  CAT+="_"
@@ -28,7 +29,7 @@ echo $CAT
 cat $CAT > relatorios/relatorio_$ID.txt
 
 # Executa REN
-java -mx600m -cp "*:lib\*" edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/own-ner-model.ser.gz -textFile uploads/$ID.txt > roadmaps/$ID-tagged.txt
+java -mx600m -cp "*:lib\*" edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/own-ner-model.ser.gz -textFile relatorios/relatorio_$ID.txt > roadmaps/$ID-tagged.txt
 
 # Chama PHP 
 php geraroadmap.php "$ID"

@@ -74,7 +74,7 @@
   	                      <td>".$result->ano_prospec."</td>
   	                      <td>".$result->num_textos_prospec."</td>
                           <td><div style='text-align: center;'><img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
-                          <td><a href='/uploads/".$result->id_prospec.".txt' download><div style='text-align: center;'><img src='img/icon_doc.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                          <td><a href='/relatorios/relatorio_".$result->id_prospec.".txt' download><div style='text-align: center;'><img src='img/icon_doc.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
 	                      </tr>";
 		                	}
 						}

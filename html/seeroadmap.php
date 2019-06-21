@@ -53,7 +53,7 @@ INNER JOIN ren r ON r.id_ren = t.id_texto -->
               <li><div class="tldate">2020</div></li>
 
               <?php 
-                      $search_results=get_data('SELECT * FROM prospec p INNER JOIN texto t ON t.id_texto = p.id_prospec INNER JOIN ren r ON r.id_ren = t.id_texto WHERE id_prospec = 4');
+                      $search_results=get_data('SELECT * FROM prospec p INNER JOIN texto t ON t.id_texto = p.id_prospec INNER JOIN ren r ON r.id_ren = t.id_texto WHERE id_prospec = 20');
 
                       $results_max = pg_num_rows($search_results);
 
