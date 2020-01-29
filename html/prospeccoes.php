@@ -61,7 +61,7 @@
                   </tfoot>
                   <tbody>
               		<?php 
-                  		$search_results=get_data('SELECT * FROM prospec order by id_prospec');
+                  		$search_results=get_data("SELECT * FROM prospec WHERE usuario_prospec = '". $_SESSION['email'] ."'order by id_prospec");
 
 		              	$results_max = pg_num_rows($search_results);
 

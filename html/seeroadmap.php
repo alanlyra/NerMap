@@ -43,35 +43,70 @@ saveCurrentURL();
                   <h6 class="m-0 font-weight-bold text-primary">Roadmap para a área de...</h6>
                 </div>
 
-           <div class="container" style="background: #333 !important; max-height: 55vh; overflow: auto;">
+           <div class="container" style="background: white !important; max-height: 55vh; overflow: auto;">
 
-<!-- query: SELECT * FROM prospec p
-INNER JOIN texto t ON t.id_texto = p.id_prospec
-INNER JOIN ren r ON r.id_ren = t.id_texto -->
+<!-- query: SELECT DISTINCT id_prospec, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec, status_ren_prospec, conf_prospec, usuario_prospec, palavra, ordem, tag FROM prospec p, texto t, ren r WHERE t.id_texto = p.id_prospec AND r.id_ren = t.id_texto and t.ordem = r.ordem_texto and id_prospec = 1 AND r.tag != 'O' ORDER BY ordem -->
 
             <ul class="timeline">
               <li><div class="tldate">2020</div></li>
 
               <?php 
-                      $search_results=get_data('SELECT * FROM prospec p INNER JOIN texto t ON t.id_texto = p.id_prospec INNER JOIN ren r ON r.id_ren = t.id_texto WHERE id_prospec = 20');
+                      $search_results=get_data('SELECT * FROM prospec p INNER JOIN texto t ON t.id_texto = p.id_prospec INNER JOIN ren r ON r.id_ren = t.id_texto AND r.ordem_texto = t.ordem WHERE id_prospec = 1');
 
                       $results_max = pg_num_rows($search_results);
 
                         if  ($results_max>0) {
+                        //Processo para coletar os acontecimentos do Roadmap
+                        $side_left = true;
+                        $prospec = array(
+                            date => "",
+                            info => "",
+                        );
+                        $already_info = false;
+                        $already_date = false;
                         while($result=pg_fetch_object($search_results)) {
-                            echo "<li>
-                                    <div class='tl-circ'></div>
+                          
+
+                          $tag = $result->tag;
+
+                          if($tag != "O" && $tag != "" && $tag != null) {
+
+                          if($tag == "UDATEPRED") {
+                            $prospec[date] = $result->palavra;
+                            $already_date = true;
+                          }
+
+                          if($tag == "BPRED" || $tag == "MPRED" || $tag == "EPRED" || $tag == "UPRED") {
+                            $prospec[info] .= $result->palavra . " ";
+                          }
+
+                          if($tag == "EPRED" || $tag == "UPRED")
+                              $already_info = true;
+
+                          if($already_date && $already_info) {
+                            if($side_left)
+                            echo "<li>";
+                            else
+                            echo "<li class='timeline-inverted'>";
+                            echo "<div class='tl-circ'></div>
                                     <div class='timeline-panel'>
                                       <div class='tl-heading'>
-                                        <h4>".$result->nome_prospec."</h4>
-                                        <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i> 3 hours ago</small></p>
+                                        <h4>".$result->assunto_prospec."</h4>
+                                        <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i>".$prospec[date]."</small></p>
                                       </div>
                                       <div class='tl-body'>
-                                        <p>Lorem Ipsum and such.</p>
+                                        <p>".$prospec[info]."</p>
                                       </div>
                                     </div>
                                   </li>";
-                                }
+                            $side_left = !$side_left;
+                            $already_info = false;
+                            $already_date = false;
+                            $prospec[date] = "";
+                            $prospec[info] = "";
+                          }
+                          }
+                        }
                       }
                     ?>          
               <li>
