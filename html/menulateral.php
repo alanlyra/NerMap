@@ -26,11 +26,11 @@
     Ações
   </div>
 
-  <!-- Nav Item - Novo Roadmap -->
+  <!-- Nav Item - Criar Roadmap -->
   <li id="li_roadmap" class="nav-item">
     <a class="nav-link" href="roadmap.php">
       <i class="fas fa-fw fa-folder"></i>
-      <span>Novo Roadmap</span></a>
+      <span>Criar Roadmap</span></a>
   </li>
 
 

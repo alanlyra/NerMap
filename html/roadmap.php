@@ -32,7 +32,7 @@ saveCurrentURL();
         <div class="container-fluid">
 
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Novo Roadmap</h1>
+            <h1 class="h3 mb-0 text-gray-800">Criar Roadmap</h1>
           </div>
 
           <!-- Content Row -->
@@ -48,15 +48,7 @@ saveCurrentURL();
                 </br>
 
                 <form action="roadmap.php" method="post" multipart="" enctype="multipart/form-data">
-        
-
-                  <div class="col-xl-6 col-lg-7">
-                  	<input type="file" name="files[]" multiple accept="text/*">
-                    
-                    <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Carregar Relatório</a> -->
-                    </br>
-                  </div>
-                  </br>
+               
                   <div class="col-xl-6 col-lg-7">
                    <h5>Nome:</h5>
                     <input type="text" id="nomeRoadmap" name="nomeRoadmap" class="form-control bg-light border-0 small" placeholder="Nome do Roadmap..." aria-label="Search" aria-describedby="basic-addon2">
@@ -74,53 +66,13 @@ saveCurrentURL();
                   </div>
   		            </br>
               		<div class="col-xl-6 col-lg-7">
-              		<h5>Data:</h5>
+              		<h5>Ano da Publicação:</h5>
                     <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="Ano de Publicação da Prospecção..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
                   </div>
-                  </br>
-                  
-                  <div class="col-xl-6 col-lg-7">
-                  <h5>Confiabilidade:</h5>
-                  <div class="btn-group" data-toggle="buttons">
-                    <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option1" value="0" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
-                      <div>
-                        <!-- <img src="img/conf_0.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_0_bw.png" style="width: 40px; height: 40px;" />
-                      </div>
-                    </label>
-                    <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option2" value="3" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
-                      <div>
-                        <!-- <img src="img/conf_2.5.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_2.5_bw.png" style="width: 40px; height: 40px;" />
-                      </div>
-                    </label>
-                    <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option3" value="5" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
-                      <div>
-                        <!-- <img src="img/conf_5.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_5_bw.png" style="width: 40px; height: 40px;" />
-                      </div>
-                    </label>
-                     <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option4" value="8" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
-                      <div>
-                        <!-- <img src="img/conf_7.5.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_7.5_bw.png" style="width: 40px; height: 40px;" />
-                      </div>
-                    </label>
-                     <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option5" value="10" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
-                      <div>
-                        <!-- <img src="img/conf_10.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_10_bw.png" style="width: 40px; height: 40px;" />
-                      </div>
-                    </label>
-                  </div>
+                          
                 </div>
                 <div class="card-header py-3" style="text-align: center;">
-                <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Iniciar" style="width: 8em; height: 2em; display: inline-block;" />
+                <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Criar" style="width: 8em; height: 2em; display: inline-block;" />
                   </br>
                 </div>
                 </form>
@@ -178,10 +130,11 @@ saveCurrentURL();
       document.getElementById("li_roadmap").classList.add('active');
     }
 
-    function get_rate() {
-    return $("input[name='rate']:checked").val();
-}
   </script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
@@ -189,74 +142,20 @@ saveCurrentURL();
 
 <?php
 	echo '<pre>';
-	$file = $_FILES['files'];
 	$nome = $_POST['nomeRoadmap'];
 	$tema = $_POST['temaRoadmap'];
 	$ano = $_POST['anoRoadmap'];
 
-	if(!empty($file))
-	{
-		if(!$nome == "" && !$tema == "" && !$ano == "") {
-	    	echo "<script>console.log( 'Nome: " . $nome . "' );</script>";
-	    	echo "<script>console.log( 'Tema: " . $tema . "' );</script>";
-	    	echo "<script>console.log( 'Ano: " . $ano . "' );</script>";
-	    	
-    	    $id_prospec = get_max_id_prospec();
-		    $file_desc = reArrayFiles($file);
-		    print_r($file_desc);
-		    $num_textos = 0;
-		    
-		    foreach($file_desc as $val)
-		    {
-		    	//$newname = date('YmdHis',time()).mt_rand().'.jpg';
-		        $newname = get_max_id_prospec();
-		        if($num_textos > 0) {
-		        	$newname .= "_";
-		        	$other_text = $num_textos + 1;
-		        	$newname .= $other_text;
-		        }
-		        $newname .= ".txt";
-		        move_uploaded_file($val['tmp_name'],'uploads/'.$newname);	
-		        $num_textos++;	        
-		    }
-       
-        //$conf_value = $_POST['rate'];
-		    db_prospec($id_prospec, $nome, $tema, $ano, $num_textos, "PROCESSANDO");
-		    //popen("java -mx600m -cp '*:lib\*' edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/own-ner-model.ser.gz -textFile uploads/" . $id_prospec . ".txt > roadmaps/". $id_prospec . "-tagged.txt", "r");
-		    popen("bash /home/alan/NerMap/html/process_input.sh " . $id_prospec . " " . $num_textos, "r");
-		    }
-		else{
-			echo "<script>console.log( 'Deu ruim!' );</script>";
-		}
-	}
 
-	function reArrayFiles($file)
-	{
-	    $file_ary = array();
-	    $file_count = count($file['name']);
-	    $file_key = array_keys($file);
-	    
-	    for($i=0;$i<$file_count;$i++)
-	    {
-	        foreach($file_key as $val)
-	        {
-	            $file_ary[$i][$val] = $file[$val][$i];
-	        }
-	    }
-	    return $file_ary;
+	if(!$nome == "" && !$tema == "" && !$ano == "") {
+    	echo "<script>console.log( 'Nome: " . $nome . "' );</script>";
+    	echo "<script>console.log( 'Tema: " . $tema . "' );</script>";
+    	echo "<script>console.log( 'Ano: " . $ano . "' );</script>";    	
+  	  $id_prospec = get_max_id_prospec();
+      db_prospec($id_prospec, $nome, $tema, $ano);
 	}
-
-	if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction'])) {
-		if(!$nome == "" && !$tema == "" && !$ano == "" ) {
-		    	echo "<script>console.log( 'Nome: " . $nome . "' );</script>";
-		    	echo "<script>console.log( 'Tema: " . $tema . "' );</script>";
-		    	echo "<script>console.log( 'Ano: " . $ano . "' );</script>";
-    	}
-		else{
-			if(empty($file)){
-				echo "<script>console.log( 'Deu ruim!' );</script>";
-			}
-		}
+	else{
+		echo "<script>console.log( 'Deu ruim!' );</script>";
 	}
 
 	function get_max_id_prospec() {   
@@ -264,11 +163,11 @@ saveCurrentURL();
 		$row = pg_fetch_array($number1);				
 		$number2 = $row[0];	
 		$number = $number2 + 1;
+    return $number;
+  }
 
-        return $number;
-    }
-
-	function db_prospec($id_prospec_db, $nome_db, $tema_db, $ano_db, $num_textos_db, $status_ren_db) {   
-        $save_on_prospec = set_data("INSERT INTO prospec (id_prospec, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec, status_ren_prospec, conf_prospec, usuario_prospec) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_prospec_db, $nome_db, $tema_db, $ano_db, $num_textos_db, $status_ren_db, $_POST['rate'], $_SESSION['email']));
+  //TODO: REMOVER INSERÇÃO DE STATUS E CONFIABILIDADE
+	function db_prospec($id_prospec_db, $nome_db, $tema_db, $ano_db) {   
+        $save_on_prospec = set_data("INSERT INTO prospec (id_prospec, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec, status_ren_prospec, conf_prospec, usuario_prospec) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_prospec_db, $nome_db, $tema_db, $ano_db, 0, 'null', 10, $_SESSION['email']));
     }
 ?>

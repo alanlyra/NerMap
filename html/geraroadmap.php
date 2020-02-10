@@ -25,7 +25,8 @@ require_once 'system.php';
 
        //fclose($fp);
 
-      $update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'CONCLUIDO' where id_prospec = $1", array($id));
+      //$update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'CONCLUIDO' where id_prospec = $1", array($id));
+      $update_on_prospec = set_data("UPDATE arquivos SET status_ren = 'CONCLUIDO' where id_arquivo = $1", array($id));
 
     }
   }
