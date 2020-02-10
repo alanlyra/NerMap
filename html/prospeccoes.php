@@ -236,6 +236,10 @@
 
         })
     });
+
+    function reloadtable(){
+      $("#dataTable").load(window.location.href + " #dataTable" );
+    }
   </script>
 
   <!-- Bootstrap core JavaScript-->
@@ -289,6 +293,9 @@
           }
          
           db_arquivo($id_arquivo, $conf_value, $ano, "PROCESSANDO", $nome, $identificador);
+          $num_arquivos = get_num_arquivos_on_prospec($identificador);
+          db_prospec($identificador, $num_arquivos);
+
 
           popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
           }
@@ -322,11 +329,24 @@
 
         echo "<script>console.log( 'ID ARQUIVO function: " . $number . "' );</script>";
         return $number;
-    }
+  }
+
+  function get_num_arquivos_on_prospec($id_prospec) {   
+    $number1 = get_data("SELECT COUNT(*) FROM arquivos WHERE id_prospec_arquivo =".$id_prospec);
+    $row = pg_fetch_array($number1);        
+    $number = $row[0]; 
+
+        return $number;
+  }
 
   function db_arquivo($id_arquivo_db, $conf_value_db, $ano_db, $status_ren_db, $nome_arquivo_db, $identificador_db) {   
       echo "<script>console.log( 'Gravando no banco' );</script>";
       $save_on_arquivos = set_data("INSERT INTO arquivos (id_arquivo, nome_arquivo, ano_prospec, autores_arquivo, conf_arquivo, id_prospec_arquivo, status_ren, usuario_arquivo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_arquivo_db, $nome_arquivo_db, $ano_db, 1, $conf_value_db, $identificador_db, 'PROCESSANDO', $_SESSION['email']));
       echo "<script>console.log( 'Gravado com sucesso' );</script>";
     }
+
+  function db_prospec($id_prospec_db, $num_arquivos_db) {   
+    $save_on_prospec = set_data("UPDATE prospec SET num_textos_prospec = ".$num_arquivos_db." WHERE id_prospec = ".$id_prospec_db);
+    echo "<script>reloadtable();;</script>";
+  }
 ?>
