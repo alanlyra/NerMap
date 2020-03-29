@@ -81,9 +81,7 @@ saveCurrentURL();
 
             </div>
 
-          </div>
-
-
+          
         </div>
         <input type="text" id="foo" name="foo" class="form-control bg-light border-0 small" placeholder="" aria-label="Search" aria-describedby="basic-addon2">
         <!-- /.container-fluid -->

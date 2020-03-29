@@ -29,7 +29,9 @@ echo $CAT
 cat $CAT > relatorios/relatorio_$ID.txt
 
 # Executa REN
-cd ner && java -mx600m -cp "*:lib\*" edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/own-ner-model.ser.gz -textFile ../relatorios/relatorio_$ID.txt > ../roadmaps/$ID-tagged.txt && cd ..
+#cd ner && java -mx600m -cp "*:lib\*" edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/own-ner-model.ser.gz -textFile ../relatorios/relatorio_$ID.txt > ../roadmaps/$ID-tagged.txt && cd ..
+
+cd ner && java -mx1g -cp "*:lib/*" edu.stanford.nlp.ie.NERClassifierCombiner -textFile ../relatorios/relatorio_$ID.txt -ner.model classifiers/english.muc.7class.distsim.crf.ser.gz,classifiers/own-ner-model.ser.gz > ../roadmaps/$ID-tagged.txt && cd ..
 
 # Chama PHP 
 php geraroadmap.php "$ID"

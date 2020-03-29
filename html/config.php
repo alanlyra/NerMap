@@ -43,7 +43,7 @@ saveCurrentURL();
             <div class="col-xl-8 col-lg-9">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Inserir dados</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Aprimorar modelo de treino</h6>
                 </div>
                 </br>
                 <div class="col-xl-4 col-lg-5">

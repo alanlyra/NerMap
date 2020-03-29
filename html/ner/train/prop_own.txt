@@ -1,0 +1,29 @@
+trainFile = /home/alan/NerMap/html/ner/train/texto2.tsv
+serializeTo = own-ner-model.ser.gz
+map = word=0,answer=1
+
+useClassFeature=true
+useWord=true
+useNGrams=true
+noMidNGrams=true
+maxNGramLeng=6
+usePrev=true
+useNext=true
+useSequences=true
+usePrevSequences=true
+useNextSequences=true
+useLongSequences=true
+useLemmas=true
+usePrevNextLemmas=true
+maxLeft=1
+maxRight=1
+usePosition=true
+useDisjunctive=true
+disjunctionWidth=10
+useWordTag=true
+useShapeConjunctions=true
+useTypeSeqs=true
+useTypeSeqs2=true
+useTypeySequences=true
+wordShape=chris2useLC
+useDisjunctive=true

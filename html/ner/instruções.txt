@@ -1,0 +1,18 @@
+/////// Carrega o modelo e analisa o arquivo "testePPT.txt" para escrever o resultado tagged em "testePPT-tagged":
+
+java -mx600m -cp "*;lib\*" edu.stanford.nlp.ie.crf.CRFClassifier -loadClassifier classifiers/english.muc.7class.distsim.crf.ser.gz -textFile testePPT.txt > testePPT-tagged.txt
+
+
+
+/////// Combinação de 2 modelos:
+
+java -mx1g -cp "*;lib/*" edu.stanford.nlp.ie.NERClassifierCombiner -textFile sample.txt ner.model classifiers/english.all.3class.distsim.crf.ser.gz,classifiers/english.conll.4class.distsi
+m.crf.ser.gz
+
+
+java -mx1g -cp "*;lib/*" edu.stanford.nlp.ie.NERClassifierCombiner -textFile sample.txt ner.model classifiers/english.muc.7class.distsim.crf.ser.gz,classifiers/own-ner-model.ser.gz
+
+/////// Treinamento do modelo próprio
+
+java -cp "stanford-ner.jar;lib/*" -mx4g edu.stanford.nlp.ie.crf.CRFClassifier -prop C:/Users/Alan/Documents/stanford-ner-own-model/train/train/prop.txt
+
