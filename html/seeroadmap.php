@@ -40,13 +40,7 @@ saveCurrentURL();
               <?php 
 
                 if(isset($_GET["arquivo"]) || isset($_GET["roadmap"])) {
-                echo "<div class='col-xl-11 col-lg-12'>
-                        <div class='card shadow mb-4'>
-                          <div class='card-header py-3'>
-                            <h6 class='m-0 font-weight-bold text-primary'>Roadmap para a área de...</h6>
-                          </div>
-
-                          <div class='container' style='background: white !important; max-height: 55vh; overflow: auto;'>";
+               
 
                           if(isset($_GET["arquivo"]))   
                             $id_arquivo = $_GET["arquivo"];
@@ -54,12 +48,15 @@ saveCurrentURL();
                             $id_roadmap = $_GET["roadmap"];
                             $id_busca = $id_roadmap;
                             $key = "id_prospec";
+                            $tipoCabecalho = "roadmap";
                           }
                           else {
                             $id_busca = $id_arquivo;
                             $key = "id_arquivo";
+                            $tipoCabecalho = "arquivo";
                           }
 
+                          $countProspecs = 0;
 
                           $search_results=get_data('SELECT * FROM arquivos a INNER JOIN texto t ON t.id_texto = a.id_arquivo INNER JOIN ren r ON r.id_ren = t.id_texto INNER JOIN prospec p ON p.id_prospec = a.id_prospec_arquivo AND r.ordem_texto = t.ordem WHERE ' . $key . ' = ' . $id_busca . 'order by id_arquivo, ordem_texto');
 
@@ -72,7 +69,7 @@ saveCurrentURL();
                                 date => "",
                                 temppred => "",
                                 info => "",
-                                asunto => "",
+                                assunto => "",
                                 section => "",
                                 id_section => "",
                                 ordem => "",
@@ -101,7 +98,7 @@ saveCurrentURL();
                                 $section[assunto] = $result->assunto_prospec;
                                 $array_sections[$i_section] = $section;
 
-                                echo "<script>console.log('Index: " . $i . " Section: " . $i_section . "');</script>";
+                                //echo "<script>console.log('Index: " . $i . " Section: " . $i_section . "');</script>";
                                 $section[date] = "";
                                 $section[info] = "";
                                 $section[has_date] = false;
@@ -136,12 +133,25 @@ saveCurrentURL();
                             }
                           }
 
+                         echo "
+                          <div class='col-xl-11 col-lg-12'>
+                            <div class='card shadow mb-4'>
+                              <div class='card-header py-3'>
+                                 <a href='#' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
+                                 	<i class='fas fa-download fa-sm text-white-50'></i> Gerar Relatório
+                                 </a>                          
+                                <h6 class='m-0 font-weight-bold text-primary'>Roadmap para a área de ".$section[assunto]."</h6>
+                              </div>
+                              <div class='container' style='background: white !important; max-height: 55vh; overflow: auto;'>";
+
                           echo "<ul class='timeline'>
                           <li><div class='tldate'>2020</div></li>";
 
-
+                          $i_prospec = 0;
+                          $array_relatorio = [];
                           for ($j = 0; $j < sizeof($array_sections); $j++) {
                             if($array_sections[$j][is_prospec]) {
+                              $array_relatorio[$i_prospec] = $array_sections[$j];
                               if($side_left)
                                 echo "<li>";
                               else
@@ -158,8 +168,12 @@ saveCurrentURL();
                                       </div>
                                     </li>";
                               $side_left = !$side_left;
+
+                            
+                              $i_prospec++;
                             }
                           }
+
 
                   echo "</ul>
                       </div>
@@ -200,7 +214,7 @@ saveCurrentURL();
                                           <td>".$result->ano_prospec."</td>
                                           <td><div style='text-align: center;'><img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
                                           <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
-                                          <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                          <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                         </tr>";
                                   }
                               }
@@ -214,6 +228,7 @@ saveCurrentURL();
                   }
 
               ?> 
+         
             
       </div>
        <!-- /.container-fluid -->
@@ -307,9 +322,7 @@ saveCurrentURL();
 
         })
     });  
-  </script>
 
-  <script>
     function load(){
       document.getElementById("li_seerodmaps").classList.add('active');
     }
@@ -320,12 +333,88 @@ saveCurrentURL();
 
   </script>
 
+  <script type="text/javascript">
+
+  	function geraRelatorio() {
+    	var relatorio_arrayJS = <?php echo json_encode($array_relatorio); ?>;
+
+  		var fileTitle = 'relatorio';
+  		formatArray(relatorio_arrayJS);
+  		exportCSVFile(headers, itemsFormatted, fileTitle);
+  	}
+
+  	function convertToCSV(objArray) {
+	    var array = typeof objArray != 'object' ? JSON.parse(objArray) : objArray;
+	    var str = '';
+
+	    for (var i = 0; i < array.length; i++) {
+	        var line = '';
+	        for (var index in array[i]) {
+	            if (line != '') line += ';'
+
+	            line += array[i][index];
+	        }
+
+	        str += line + '\r\n';
+	    }
+	    return str;
+	}
+
+	function exportCSVFile(headers, items, fileTitle) {
+	    if (headers) {
+	        items.unshift(headers);
+	    }
+
+	    // Convert Object to JSON
+	    var jsonObject = JSON.stringify(items);
+
+	    var csv = this.convertToCSV(jsonObject);
+
+	    var exportedFilenmae = fileTitle + '.csv' || 'export.csv';
+
+	    var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+	    if (navigator.msSaveBlob) { // IE 10+
+	        navigator.msSaveBlob(blob, exportedFilenmae);
+	    } else {
+	        var link = document.createElement("a");
+	        if (link.download !== undefined) { // feature detection
+	            // Browsers that support HTML5 download attribute
+	            var url = URL.createObjectURL(blob);
+	            link.setAttribute("href", url);
+	            link.setAttribute("download", exportedFilenmae);
+	            link.style.visibility = 'hidden';
+	            document.body.appendChild(link);
+	            link.click();
+	            document.body.removeChild(link);
+	        }
+	    }
+	}
+
+	var headers = {
+	    date: 'Data'.replace(/,/g, ''), // remove commas to avoid errors
+	    event: "Acontecimento"
+	};
+
+	var itemsFormatted = [];
+
+	function formatArray(array) {
+		// format the data
+		array.forEach((item) => {
+		    itemsFormatted.push({
+		        model: item.date,
+		        cases: item.info //.replace(/,/g, '') // remove commas to avoid errors,
+		    });
+		});
+	}
+
+ </script>
+
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/jquery.dataTables.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
 </body>

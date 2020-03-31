@@ -71,7 +71,7 @@ saveCurrentURL();
                   </div>
                   </br>
                   <div class="py-3" style="text-align: center;">
-                    <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Criar" style="width: 8em; height: 2em; display: inline-block;" />
+                    <input class="btn btn-primary btn-icon-split" type="submit" name="criaRoadmap" value="Criar" style="width: 8em; height: 2em; display: inline-block;" />
                   </div>   
                 </div>
                 

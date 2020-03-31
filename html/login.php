@@ -21,12 +21,12 @@ if (!!isset($_POST["email"]) && !!isset($_POST["password"]))
   }
     else
   {
-    $_SESSION['message']="Incorrect e-mail or password. Try again.";
+    $_SESSION['message']="Senha ou e-mail incorretos. Tente novamente.";
   }
 }
   else
 {
-  $_SESSION['message']="Invalid e-mail or password. Try again.";
+  $_SESSION['message']="Senha ou e-mail inválidos. Tente novamente.";
 }
  header("Location: "."/index.php");
 }
@@ -46,7 +46,7 @@ switch ($action) {
       break;
 
   default:
-    $_SESSION['message']="Invalid action. Please contact the system administrator.";
+    $_SESSION['message']="Ação inválida. Contate o administrador do sistema.";
     header("Location: "."/index.php");
     break;
 }
