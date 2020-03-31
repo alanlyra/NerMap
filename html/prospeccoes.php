@@ -27,8 +27,7 @@
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Prospecções Tecnológicas</h1>
-          <!-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
- -->
+    
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -39,7 +38,7 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Identificador</th>
+                      <th>ID</th>
                       <th>Nome</th>
                       <th>Tema</th>
                       <th>Ano</th>
@@ -47,11 +46,12 @@
                       <th>Adicionar arquivo</th>
                       <th>Status</th>
                       <th>Arquivo</th>
+                      <th>Roadmap</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Identificador</th>
+                      <th>ID</th>
                       <th>Nome</th>
                       <th>Tema</th>
                       <th>Ano</th>
@@ -59,29 +59,31 @@
                       <th>Adicionar arquivo</th>
                       <th>Status</th>
                       <th>Arquivo</th>
+                      <th>Roadmap</th>
                     </tr>
                   </tfoot>
                   <tbody>
               		<?php 
-                  		$search_results=get_data("SELECT * FROM prospec WHERE usuario_prospec = '". $_SESSION['email'] ."'order by id_prospec");
+                  	$search_results=get_data("SELECT * FROM prospec WHERE usuario_prospec = '". $_SESSION['email'] ."'order by id_prospec");
 
 		              	$results_max = pg_num_rows($search_results);
 
-				    	if  ($results_max>0) {
-							while($result=pg_fetch_object($search_results)) {
-						    	echo "<tr>
-  							    		  <td>".$result->id_prospec."</td>
-  	                      <td>".$result->nome_prospec."</td>
-  	                      <td>".$result->assunto_prospec."</td>
-  	                      <td>".$result->ano_prospec."</td>
-  	                      <td>".$result->num_textos_prospec."</td>
-                          <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'>Adicionar</a></td>
-                          <td><div style='text-align: center;'><img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
-                          <td><a href='/relatorios/relatorio_".$result->id_prospec.".txt' download><div style='text-align: center;'><img src='img/icon_doc.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
-	                      </tr>";
-		                	}
-						}
-                  	?>
+      				    	if  ($results_max>0) {
+      							while($result=pg_fetch_object($search_results)) {
+      						    	echo "<tr>
+        							    		  <td>".$result->id_prospec."</td>
+        	                      <td>".$result->nome_prospec."</td>
+        	                      <td>".$result->assunto_prospec."</td>
+        	                      <td>".$result->ano_prospec."</td>
+        	                      <td>".$result->num_textos_prospec."</td>
+                                <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/file_add.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                <td><div style='text-align: center;'><img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
+                                <td><a href='/relatorios/relatorio_".$result->id_prospec.".txt' download><div style='text-align: center;'><img src='img/icon_doc.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+      	                      </tr>";
+      		                	}
+      						  }
+                	?>
                   </tbody>
                 </table>
               </div>
@@ -119,8 +121,9 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
+          <h4 class="modal-title">Adicionar arquivo ao Roadmap</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          
         </div>
         <div class="modal-body">
          <form action="prospeccoes.php" method="post" multipart="" enctype="multipart/form-data">
@@ -131,22 +134,22 @@
                     </br>
                   </div>
                   </br>
-                  <div class="col-xl-6 col-lg-7">
+                  <div class="col-xl-9 col-lg-10s">
                    <h5>Nome:</h5>
                     <input type="text" id="nomeArquivo" name="nomeArquivo" class="form-control bg-light border-0 small" placeholder="Nome do Roadmap..." aria-label="Search" aria-describedby="basic-addon2">
                   </div>
-                 
+                 </br>
                   <div class="col-xl-6 col-lg-7">
                   <h5>Data:</h5>
-                    <input type="text" id="anoArquivo" name="anoArquivo" class="form-control bg-light border-0 small" placeholder="Ano de Publicação da Prospecção..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                    <input type="text" id="anoArquivo" name="anoArquivo" class="form-control bg-light border-0 small" placeholder="Ano da Publicação..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
                   </div>
                   </br>
                   
-                  <div class="col-xl-6 col-lg-7">
+                  <div class="col-xl-12 col-lg-12">
                   <h5>Confiabilidade:</h5>
                   <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option1" value="0" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
+                      <input type="radio" name="rate" id="option1" value="1" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
                       <div>
                         <!-- <img src="img/conf_0.png" style="width: 40px; height: 40px;" /> -->
                         <img src="img/conf_0_bw.png" style="width: 40px; height: 40px;" />
@@ -187,13 +190,13 @@
                 <input type="text" id="identificador" name="identificador" class="form-control bg-light border-0 small" placeholder="" aria-label="Search" aria-describedby="basic-addon2" style="display: none; visibility: hidden;">
              
                 <div class="card-header py-3" style="text-align: center;">
-                <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Iniciar" style="width: 8em; height: 2em; display: inline-block;" />
+                <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Enviar" style="width: 8em; height: 2em; display: inline-block;" />
                   </br>
                 </div>
                 </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
         </div>
       </div>
 

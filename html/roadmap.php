@@ -32,7 +32,7 @@ saveCurrentURL();
         <div class="container-fluid">
 
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Criar Roadmap</h1>
+            <h1 class="h3 mb-0 text-gray-800">Criar Technology Roadmapping</h1>
           </div>
 
           <!-- Content Row -->
@@ -69,12 +69,12 @@ saveCurrentURL();
               		<h5>Ano da Publicação:</h5>
                     <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="Ano de Publicação da Prospecção..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
                   </div>
-                          
-                </div>
-                <div class="card-header py-3" style="text-align: center;">
-                <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Criar" style="width: 8em; height: 2em; display: inline-block;" />
                   </br>
+                  <div class="py-3" style="text-align: center;">
+                    <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Criar" style="width: 8em; height: 2em; display: inline-block;" />
+                  </div>   
                 </div>
+                
                 </form>
               </div>
 

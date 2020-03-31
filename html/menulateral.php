@@ -26,11 +26,11 @@
     Ações
   </div>
 
-  <!-- Nav Item - Criar Roadmap -->
+  <!-- Nav Item - Criar TRM -->
   <li id="li_roadmap" class="nav-item">
     <a class="nav-link" href="roadmap.php">
       <i class="fas fa-fw fa-folder"></i>
-      <span>Criar Roadmap</span></a>
+      <span>Criar TRM</span></a>
   </li>
 
 
