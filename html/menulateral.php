@@ -30,7 +30,7 @@
   <li id="li_roadmap" class="nav-item">
     <a class="nav-link" href="roadmap.php">
       <i class="fas fa-fw fa-folder"></i>
-      <span>Criar TRM</span></a>
+      <span>Novo TRM</span></a>
   </li>
 
 

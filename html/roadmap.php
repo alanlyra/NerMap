@@ -32,12 +32,12 @@ saveCurrentURL();
         <div class="container-fluid">
 
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Criar Technology Roadmapping</h1>
+            <h1 class="h3 mb-0 text-gray-800">Novo Technology Roadmapping</h1>
           </div>
 
           <!-- Content Row -->
 
-          <div class="row">
+          <div class="row justify-content-center">
 
             <!-- Project Card Example -->
             <div class="col-xl-11 col-lg-10">
@@ -66,8 +66,8 @@ saveCurrentURL();
                   </div>
   		            </br>
               		<div class="col-xl-6 col-lg-7">
-              		<h5>Ano da Publicação:</h5>
-                    <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="Ano de Publicação da Prospecção..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+              		<h5>Ano limite do TRM:</h5>
+                    <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="Ano..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
                   </div>
                   </br>
                   <div class="py-3" style="text-align: center;">
@@ -83,7 +83,6 @@ saveCurrentURL();
 
           
         </div>
-        <input type="text" id="foo" name="foo" class="form-control bg-light border-0 small" placeholder="" aria-label="Search" aria-describedby="basic-addon2">
         <!-- /.container-fluid -->
 
       </div>
@@ -167,5 +166,7 @@ saveCurrentURL();
   //TODO: REMOVER INSERÇÃO DE STATUS E CONFIABILIDADE
 	function db_prospec($id_prospec_db, $nome_db, $tema_db, $ano_db) {   
         $save_on_prospec = set_data("INSERT INTO prospec (id_prospec, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec, status_ren_prospec, conf_prospec, usuario_prospec) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_prospec_db, $nome_db, $tema_db, $ano_db, 0, 'null', 10, $_SESSION['email']));
+        //echo "<script>window.location.href = 'success.php?action=trm-adicionado';</script>";
+        echo "<script>window.location.href = 'prospeccoes.php';</script>";
     }
 ?>

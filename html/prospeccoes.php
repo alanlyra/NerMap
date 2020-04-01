@@ -77,7 +77,10 @@
         	                      <td>".$result->ano_prospec."</td>
         	                      <td>".$result->num_textos_prospec."</td>
                                 <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/file_add.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
-                                <td><div style='text-align: center;'><img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
+                                <td><div style='text-align: center;'>";
+                                if($result->status_ren_prospec != "null")
+                                  echo "<img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/>";
+                                echo "</div></td>
                                 <td><a href='/relatorios/relatorio_".$result->id_prospec.".txt' download><div style='text-align: center;'><img src='img/icon_doc.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                 <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
       	                      </tr>";
@@ -343,13 +346,14 @@
   }
 
   function db_arquivo($id_arquivo_db, $conf_value_db, $ano_db, $status_ren_db, $nome_arquivo_db, $identificador_db) {   
-      echo "<script>console.log( 'Gravando no banco' );</script>";
+      //echo "<script>console.log( 'Gravando no banco' );</script>";
       $save_on_arquivos = set_data("INSERT INTO arquivos (id_arquivo, nome_arquivo, ano_prospec, autores_arquivo, conf_arquivo, id_prospec_arquivo, status_ren, usuario_arquivo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_arquivo_db, $nome_arquivo_db, $ano_db, 1, $conf_value_db, $identificador_db, 'PROCESSANDO', $_SESSION['email']));
-      echo "<script>console.log( 'Gravado com sucesso' );</script>";
+      //echo "<script>console.log( 'Gravado com sucesso' );</script>";
     }
 
   function db_prospec($id_prospec_db, $num_arquivos_db) {   
     $save_on_prospec = set_data("UPDATE prospec SET num_textos_prospec = ".$num_arquivos_db." WHERE id_prospec = ".$id_prospec_db);
     echo "<script>reloadtable();;</script>";
+    echo "<script>window.location.href = 'prospeccoes.php';</script>";
   }
 ?>

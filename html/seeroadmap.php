@@ -39,16 +39,16 @@ saveCurrentURL();
 
               <?php 
 
-                if(isset($_GET["arquivo"]) || isset($_GET["roadmap"])) {
+                if(isset($_GET["arquivo"]) || isset($_GET["roadmap-completo"])) {
                
 
                           if(isset($_GET["arquivo"]))   
                             $id_arquivo = $_GET["arquivo"];
-                          if(isset($_GET["roadmap"])) {  
-                            $id_roadmap = $_GET["roadmap"];
+                          if(isset($_GET["roadmap-completo"])) {  
+                            $id_roadmap = $_GET["roadmap-completo"];
                             $id_busca = $id_roadmap;
                             $key = "id_prospec";
-                            $tipoCabecalho = "roadmap";
+                            $tipoCabecalho = "roadmap-completo";
                           }
                           else {
                             $id_busca = $id_arquivo;
@@ -180,6 +180,40 @@ saveCurrentURL();
                       </div>
                     </div>";
                   }
+                  else if(isset($_GET["roadmap"])) {
+                  	 echo "<div class='card shadow mb-4'>
+                      		<div class='card-header py-3'>
+                        		<h6 class='m-0 font-weight-bold text-primary'>Selecione uma opção</h6>
+                      		</div>
+                     	   	<div class='card-body'>
+				           	</div>
+
+				           	<div class='row justify-content-center'>
+						<div class='col-sm-6 col-md-3'>
+							<div class='col-md-12 feature-box'>
+								<img src='img/timeline6.png' style='width: 130px; height: 100px; display: inline-block;'/>
+								<h4>Completo</h4>
+								<p>Gerar roadmap de todos os arquivos do TRM.</p>
+								<button class='btn btn-primary' style='margin:5px;' 
+                            			onclick='redirect(\"seeroadmap.php?roadmap-completo=".$_GET["roadmap"]."\");'>Gerar roadmap</button>
+								
+
+							</div>
+						</div> <!-- End Col -->
+						<div class='col-sm-6 col-md-3'>
+								<div class='col-md-12 feature-box'>
+								<img src='img/files2.png' style='width: 100px; height: 100px; display: inline-block;'/>
+								<h4>Individual</h4>
+								<p>Gerar roadmap individual de um arquivo do TRM.</p>
+								<a href='#' data-target='#myModal' data-toggle='modal' data-id='".$_GET["roadmap"]."'><button class='btn btn-primary' style='margin:5px;'>Visualizar arquivos</button></a>
+							</div>
+						</div> <!-- End Col -->	
+						
+	
+					</div>
+				               
+		                   </div>";
+                  }
                   else {
                     echo "<div class='card shadow mb-4'>
                       <div class='card-header py-3'>
@@ -212,7 +246,11 @@ saveCurrentURL();
                                           <td>".$result->nome_prospec."</td>
                                           <td>".$result->assunto_prospec."</td>
                                           <td>".$result->ano_prospec."</td>
-                                          <td><div style='text-align: center;'><img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
+                                          <td><div style='text-align: center;'>";
+                                		  if($result->status_ren_prospec != "null")
+                                  		  echo "<img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/>";
+                                		  echo "</div></td>
+                                			</div></td>
                                           <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                           <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                         </tr>";
@@ -330,6 +368,15 @@ saveCurrentURL();
     $(document).ready(function() {
       $('#table-prospec').DataTable();
     });
+
+    function goBack() {
+      window.history.back();
+    }
+
+    function redirect(url) {
+      console.log(url);
+      window.location.href = url;
+    }
 
   </script>
 
