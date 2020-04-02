@@ -26,12 +26,12 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Prospecções Tecnológicas</h1>
+          <h1 class="h3 mb-2 text-gray-800">Gerenciar Prospecções</h1>
     
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Relatórios de Prospecção</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Technology Roadmappings</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
@@ -47,6 +47,7 @@
                       <th>Status</th>
                       <th>Arquivo</th>
                       <th>Roadmap</th>
+                      <th>Ações</th>
                     </tr>
                   </thead>
                   <tfoot>
@@ -60,6 +61,7 @@
                       <th>Status</th>
                       <th>Arquivo</th>
                       <th>Roadmap</th>
+                      <th>Ações</th>
                     </tr>
                   </tfoot>
                   <tbody>
@@ -81,8 +83,14 @@
                                 if($result->status_ren_prospec != "null")
                                   echo "<img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 echo "</div></td>
-                                <td><a href='/relatorios/relatorio_".$result->id_prospec.".txt' download><div style='text-align: center;'><img src='img/icon_doc.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                <td><a href='#' data-target='#modalArquivos' data-toggle='modal' data-id='arquivos-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+
                                 <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                <td>
+                                <form action='prospeccoes.php?roadmap=".$result->id_prospec."' method='post' multipart='' enctype='multipart/form-data' style='text-align: center;'>
+                                <button style='border: 0; background: transparent' type='submit' name='deleteProspec' value=''> <img src='/img/deletar2.png' width='20px' height='20px'/></button >
+                                </form>
+                                </td>
       	                      </tr>";
       		                	}
       						  }
@@ -225,6 +233,36 @@
     </div>
   </div>
 
+  <div id="modalArquivos" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Arquivos do Roadmap</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>       
+        </div>
+        <div class="modal-body">
+          <!-- DataTales Example -->
+         <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Selecione um arquivo para gerar roadmap</h6>
+            </div>
+            <div class="card-body">
+              <div id="table-modal" class="table-responsive">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script>
     function load(){
       document.getElementById("li_prospec").classList.add('active');
@@ -235,10 +273,24 @@
         $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
           
           if (typeof $(this).data('id') !== 'undefined') {
-            data_id = $(this).data('id');
+          	data_id = $(this).data('id');
           }
-          console.log(data_id);
-          document.getElementById('identificador').value = data_id;
+          //console.log(data_id);
+          var data_txt =  data_id.toString();
+          var data_id_prospec = data_txt.replace('arquivos-','');
+          if(data_txt.indexOf('arquivos-') > -1) {
+          	$.ajax({
+	            url: "table-arquivos-modal-prospec.php",
+	            method: "POST",
+	            data: { "identificador": data_id_prospec },
+	            success: function(html) {
+	              $('#table-modal').html(html);
+	              $('#modalArquivos').modal('show');
+	            }
+          	})
+          } 
+          else
+          	document.getElementById('identificador').value = data_id;
 
         })
     });
@@ -264,6 +316,35 @@
 </html>
 
 <?php
+
+  if(isset($_POST["deleteProspec"])) {
+
+    $id_prospec = $_GET["roadmap"];
+
+    $remover_prospec = set_data(" DELETE FROM prospec WHERE id_prospec = $1", array($id_prospec));
+
+    echo "<script>reloadtable();;</script>";
+    echo "<script>window.location.href = 'prospeccoes.php';</script>";
+
+  }
+
+  if(isset($_POST["deleteArquivo"])) {
+
+    $id_arquivo = $_GET["arquivo"];
+
+    $id_prospec = $_GET["roadmap"];
+
+    $remover_arquivo = set_data("DELETE FROM arquivos WHERE id_arquivo = $1", array($id_arquivo));
+
+    $num_arquivos_prospec = get_num_arquivos_on_prospec($id_prospec);
+
+    db_prospec($id_prospec, $num_arquivos_prospec);
+
+  }
+
+?>
+
+<?php
   echo '<pre>';
   $file = $_FILES['files'];;
   $ano = $_POST['anoArquivo'];
@@ -275,11 +356,11 @@
     if(!empty($file))
     {
       if(!$nome == "" && !$conf_value == "" && !$ano == "") {
-          echo "<script>console.log( 'Confiabilidade: " . $conf_value . "' );</script>";
-          echo "<script>console.log( 'Ano: " . $ano . "' );</script>";
+          //echo "<script>console.log( 'Confiabilidade: " . $conf_value . "' );</script>";
+          //echo "<script>console.log( 'Ano: " . $ano . "' );</script>";
           
           $id_arquivo = get_max_id_arquivo();
-          echo "<script>console.log( 'ID ARQUIVO: " . $id_arquivo . "' );</script>";
+          //echo "<script>console.log( 'ID ARQUIVO: " . $id_arquivo . "' );</script>";
           $file_desc = reArrayFiles($file);
           print_r($file_desc);
           $num_textos = 0;
@@ -306,7 +387,7 @@
           popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
           }
       else{
-        echo "<script>console.log( 'Deu ruim!!' );</script>";
+        //echo "<script>console.log( 'Deu ruim!!' );</script>";
       }
     }
   }
@@ -333,7 +414,6 @@
     $number2 = $row[0]; 
     $number = $number2 + 1;
 
-        echo "<script>console.log( 'ID ARQUIVO function: " . $number . "' );</script>";
         return $number;
   }
 
@@ -346,14 +426,12 @@
   }
 
   function db_arquivo($id_arquivo_db, $conf_value_db, $ano_db, $status_ren_db, $nome_arquivo_db, $identificador_db) {   
-      //echo "<script>console.log( 'Gravando no banco' );</script>";
       $save_on_arquivos = set_data("INSERT INTO arquivos (id_arquivo, nome_arquivo, ano_prospec, autores_arquivo, conf_arquivo, id_prospec_arquivo, status_ren, usuario_arquivo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_arquivo_db, $nome_arquivo_db, $ano_db, 1, $conf_value_db, $identificador_db, 'PROCESSANDO', $_SESSION['email']));
-      //echo "<script>console.log( 'Gravado com sucesso' );</script>";
     }
 
   function db_prospec($id_prospec_db, $num_arquivos_db) {   
     $save_on_prospec = set_data("UPDATE prospec SET num_textos_prospec = ".$num_arquivos_db." WHERE id_prospec = ".$id_prospec_db);
-    echo "<script>reloadtable();;</script>";
+    echo "<script>reloadtable();</script>";
     echo "<script>window.location.href = 'prospeccoes.php';</script>";
   }
 ?>
