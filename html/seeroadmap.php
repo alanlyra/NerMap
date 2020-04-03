@@ -42,8 +42,12 @@ saveCurrentURL();
                 if(isset($_GET["arquivo"]) || isset($_GET["roadmap-completo"])) {
                
 
-                          if(isset($_GET["arquivo"]))   
+                          if(isset($_GET["arquivo"])) {
                             $id_arquivo = $_GET["arquivo"];
+                            $number1 = get_data("SELECT id_prospec_arquivo FROM arquivos WHERE id_arquivo =".intval($id_arquivo));
+                            $row = pg_fetch_array($number1);        
+                            $id_roadmap = $row[0]; 
+                          }
                           if(isset($_GET["roadmap-completo"])) {  
                             $id_roadmap = $_GET["roadmap-completo"];
                             $id_busca = $id_roadmap;
@@ -133,16 +137,20 @@ saveCurrentURL();
                             }
                           }
 
+                        $number2 = get_data("SELECT nome_prospec FROM prospec WHERE id_prospec =".intval($id_roadmap));
+                        $row1 = pg_fetch_array($number2);        
+                        $nome_roadmap = $row1[0]; 
+
                          echo "
-                          <div class='col-xl-11 col-lg-12'>
+                          <div class='col-xl-12 col-lg-12'>
                             <div class='card shadow mb-4'>
                               <div class='card-header py-3'>
                                  <a href='#' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
                                  	<i class='fas fa-download fa-sm text-white-50'></i> Gerar Relatório
                                  </a>                          
-                                <h6 class='m-0 font-weight-bold text-primary'>Roadmap para a área de ".$section[assunto]."</h6>
+                                <h6 class='m-0 font-weight-bold text-primary'>TRM ".$nome_roadmap." - Roadmap para a área de ".$section[assunto]."</h6>
                               </div>
-                              <div class='container' style='background: white !important; max-height: 55vh; overflow: auto;'>";
+                              <div class='container' style='background: white !important; max-height: 55vh; overflow: auto; max-width:100%;'>";
 
                           echo "<ul class='timeline'>
                           <li><div class='tldate'>2020</div></li>";

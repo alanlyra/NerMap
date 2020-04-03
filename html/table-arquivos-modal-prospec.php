@@ -31,12 +31,8 @@ saveCurrentURL();
   </tfoot>
   <tbody>
   <?php 
-      $id_arquivo = $_POST["identificador"];
-      $search_popup=get_data("SELECT * FROM arquivos WHERE id_prospec_arquivo =". $id_arquivo . "order by id_arquivo");
-
-      $number1 = get_data("SELECT id_prospec_arquivo FROM arquivos WHERE id_arquivo =".intval($id_arquivo));
-      $row = pg_fetch_array($number1);        
-      $id_prospec = $row[0]; 
+      $id_prospec = $_POST["identificador"];
+      $search_popup=get_data("SELECT * FROM arquivos WHERE id_prospec_arquivo =". $id_prospec . "order by id_arquivo");   
 
       $results_max_popup = pg_num_rows($search_popup);
 

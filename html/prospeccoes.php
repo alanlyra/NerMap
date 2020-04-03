@@ -298,6 +298,15 @@
     function reloadtable(){
       $("#dataTable").load(window.location.href + " #dataTable" );
     }
+
+    function init_process(id_arquivo) {
+    	$.ajax({
+	            url: "init_process_input.php",
+	            method: "POST",
+	            data: { "id-arquivo": id_arquivo }
+    	});
+    }
+
   </script>
 
   <!-- Bootstrap core JavaScript-->
@@ -378,13 +387,13 @@
             move_uploaded_file($val['tmp_name'],'uploads/'.$newname); 
             $num_textos++;          
           }
-         
+          
           db_arquivo($id_arquivo, $conf_value, $ano, "PROCESSANDO", $nome, $identificador);
           $num_arquivos = get_num_arquivos_on_prospec($identificador);
           db_prospec($identificador, $num_arquivos);
 
 
-          popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
+          //popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
           }
       else{
         //echo "<script>console.log( 'Deu ruim!!' );</script>";
@@ -427,6 +436,7 @@
 
   function db_arquivo($id_arquivo_db, $conf_value_db, $ano_db, $status_ren_db, $nome_arquivo_db, $identificador_db) {   
       $save_on_arquivos = set_data("INSERT INTO arquivos (id_arquivo, nome_arquivo, ano_prospec, autores_arquivo, conf_arquivo, id_prospec_arquivo, status_ren, usuario_arquivo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_arquivo_db, $nome_arquivo_db, $ano_db, 1, $conf_value_db, $identificador_db, 'PROCESSANDO', $_SESSION['email']));
+      echo "<script>init_process(".$id_arquivo_db.");</script>"; 
     }
 
   function db_prospec($id_prospec_db, $num_arquivos_db) {   
