@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php include 'pdfparser/vendor/autoload.php'; ?>
+
 <?php include_once("head.php") ?>
 
 <body id="page-top" onload="load();">
@@ -30,7 +32,10 @@
     
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
-            <div class="card-header py-3">
+            <div class="card-header py-3">	
+            <button style='display: none; float:right; border: 0; margin: 0px; background: transparent;' onclick='reloadPage();'>
+         		<img src='img/refresh5.png' style='width: 20px; height: 20px; display: inline-block;'/>
+        	 </button>                 	
               <h6 class="m-0 font-weight-bold text-primary">Technology Roadmappings</h6>
             </div>
             <div class="card-body">
@@ -43,9 +48,9 @@
                       <th>Tema</th>
                       <th>Ano</th>
                       <th>Nº de arquivos</th>
-                      <th>Adicionar arquivo</th>
                       <th>Status</th>
-                      <th>Arquivo</th>
+                      <th>Adicionar arquivo</th>
+                      <th>Arquivos</th>
                       <th>Roadmap</th>
                       <th>Ações</th>
                     </tr>
@@ -57,9 +62,9 @@
                       <th>Tema</th>
                       <th>Ano</th>
                       <th>Nº de arquivos</th>
-                      <th>Adicionar arquivo</th>
                       <th>Status</th>
-                      <th>Arquivo</th>
+                      <th>Adicionar arquivo</th>
+                      <th>Arquivos</th>
                       <th>Roadmap</th>
                       <th>Ações</th>
                     </tr>
@@ -78,11 +83,12 @@
         	                      <td>".$result->assunto_prospec."</td>
         	                      <td>".$result->ano_prospec."</td>
         	                      <td>".$result->num_textos_prospec."</td>
-                                <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/file_add.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
-                                <td><div style='text-align: center;'>";
+        	                       <td><div style='text-align: center;'>";
                                 if($result->status_ren_prospec != "null")
                                   echo "<img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 echo "</div></td>
+                                <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/file_add.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                               
                                 <td><a href='#' data-target='#modalArquivos' data-toggle='modal' data-id='arquivos-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
 
                                 <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
@@ -140,14 +146,15 @@
          <form action="prospeccoes.php" method="post" multipart="" enctype="multipart/form-data">
 
                   <div class="col-xl-6 col-lg-7">
-                    <input type="file" name="files[]" multiple accept="text/*">
+                    <!-- <input type="file" name="files[]" multiple accept="text/*"> -->
+                    <input type="file" name="files[]" accept=".txt,.pdf">
                     
                     </br>
                   </div>
                   </br>
                   <div class="col-xl-9 col-lg-10s">
-                   <h5>Nome:</h5>
-                    <input type="text" id="nomeArquivo" name="nomeArquivo" class="form-control bg-light border-0 small" placeholder="Nome do Roadmap..." aria-label="Search" aria-describedby="basic-addon2">
+                   <h5>Título:</h5>
+                    <input type="text" id="nomeArquivo" name="nomeArquivo" class="form-control bg-light border-0 small" placeholder="Nome do Arquivo..." aria-label="Search" aria-describedby="basic-addon2">
                   </div>
                  </br>
                   <div class="col-xl-6 col-lg-7">
@@ -200,7 +207,7 @@
    
                 <input type="text" id="identificador" name="identificador" class="form-control bg-light border-0 small" placeholder="" aria-label="Search" aria-describedby="basic-addon2" style="display: none; visibility: hidden;">
              
-                <div class="card-header py-3" style="text-align: center;">
+                <div class="py-3" style="text-align: center;">
                 <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Enviar" style="width: 8em; height: 2em; display: inline-block;" />
                   </br>
                 </div>
@@ -307,6 +314,10 @@
     	});
     }
 
+    function reloadPage(){
+      //window.location.href = 'prospeccoes.php';
+    }
+
   </script>
 
   <!-- Bootstrap core JavaScript-->
@@ -330,6 +341,16 @@
 
     $id_prospec = $_GET["roadmap"];
 
+    $ids_arquivos = set_data("SELECT id_arquivo FROM arquivos WHERE id_prospec_arquivo = $1", array($id_prospec));
+
+    $results_max_ids_arquivos = pg_num_rows($ids_arquivos);
+
+    if  ($results_max_ids_arquivos>0) {
+      while($result=pg_fetch_object($ids_arquivos)) {
+        remove_file_in_directory($result->id_arquivo);
+      }
+    }
+
     $remover_prospec = set_data(" DELETE FROM prospec WHERE id_prospec = $1", array($id_prospec));
 
     echo "<script>reloadtable();;</script>";
@@ -345,16 +366,31 @@
 
     $remover_arquivo = set_data("DELETE FROM arquivos WHERE id_arquivo = $1", array($id_arquivo));
 
+    $remover_roadmap = set_data("DELETE FROM roadmap WHERE id_prospec_roadmap = $1", array($id_prospec));
+
+    remove_file_in_directory($id_arquivo);
+
     $num_arquivos_prospec = get_num_arquivos_on_prospec($id_prospec);
 
     db_prospec($id_prospec, $num_arquivos_prospec);
 
   }
 
+  function remove_file_in_directory($id_arquivo){
+    if (file_exists("uploads/pdf/".$id_arquivo.".pdf"))
+      unlink("uploads/pdf/".$id_arquivo.".pdf");
+    if (file_exists("uploads/".$id_arquivo.".txt")) 
+      unlink("uploads/".$id_arquivo.".txt");
+    if (file_exists("relatorios/relatorio_".$id_arquivo.".txt"))  
+      unlink("relatorios/relatorio_".$id_arquivo.".txt");
+  }
+
 ?>
 
+
+
 <?php
-  echo '<pre>';
+  //echo '<pre>';
   $file = $_FILES['files'];;
   $ano = $_POST['anoArquivo'];
   $nome = $_POST['nomeArquivo'];
@@ -371,7 +407,7 @@
           $id_arquivo = get_max_id_arquivo();
           //echo "<script>console.log( 'ID ARQUIVO: " . $id_arquivo . "' );</script>";
           $file_desc = reArrayFiles($file);
-          print_r($file_desc);
+          //print_r($file_desc);
           $num_textos = 0;
           
           foreach($file_desc as $val)
@@ -384,7 +420,31 @@
               $newname .= $other_text;
             }
             $newname .= ".txt";
-            move_uploaded_file($val['tmp_name'],'uploads/'.$newname); 
+
+            $ext = pathinfo($val['name'], PATHINFO_EXTENSION);  
+
+            if($ext == "pdf" || $ext == ".pdf") {
+              $parser = new \Smalot\PdfParser\Parser();
+              $pdf    = $parser->parseFile($val['tmp_name']);
+               
+              // Retrieve all pages from the pdf file.
+              $pages  = $pdf->getPages();
+
+              $pdfUploaded = fopen("uploads/".$newname, "w") or die("Unable to open file!");
+               
+              // Loop over each page to extract text.
+              foreach ($pages as $page) {
+                  fwrite($pdfUploaded, $page->getText());
+              }
+
+              fclose($pdf_uploaded);
+
+              $newname_pdf = str_replace(".txt", ".pdf", $newname);
+              move_uploaded_file($val['tmp_name'],'uploads/pdf/'.$newname_pdf);
+            }
+            else
+              move_uploaded_file($val['tmp_name'],'uploads/'.$newname);	
+            
             $num_textos++;          
           }
           
@@ -400,6 +460,8 @@
       }
     }
   }
+
+
 
   function reArrayFiles($file)
   {
@@ -435,13 +497,50 @@
   }
 
   function db_arquivo($id_arquivo_db, $conf_value_db, $ano_db, $status_ren_db, $nome_arquivo_db, $identificador_db) {   
-      $save_on_arquivos = set_data("INSERT INTO arquivos (id_arquivo, nome_arquivo, ano_prospec, autores_arquivo, conf_arquivo, id_prospec_arquivo, status_ren, usuario_arquivo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_arquivo_db, $nome_arquivo_db, $ano_db, 1, $conf_value_db, $identificador_db, 'PROCESSANDO', $_SESSION['email']));
+      $save_on_arquivos = set_data("INSERT INTO arquivos (id_arquivo, nome_arquivo, ano_arquivo, autores_arquivo, conf_arquivo, id_prospec_arquivo, status_ren, usuario_arquivo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_arquivo_db, $nome_arquivo_db, $ano_db, 1, $conf_value_db, $identificador_db, 'PROCESSANDO', $_SESSION['email']));
       echo "<script>init_process(".$id_arquivo_db.");</script>"; 
     }
 
   function db_prospec($id_prospec_db, $num_arquivos_db) {   
     $save_on_prospec = set_data("UPDATE prospec SET num_textos_prospec = ".$num_arquivos_db." WHERE id_prospec = ".$id_prospec_db);
+    $update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'PROCESSANDO' where id_prospec = $1", array($id_prospec_db));
     echo "<script>reloadtable();</script>";
     echo "<script>window.location.href = 'prospeccoes.php';</script>";
   }
+?>
+
+<?php
+	$number3 = get_data("SELECT id_prospec FROM prospec WHERE usuario_prospec = '".$_SESSION['email']."'");
+    $row3 = pg_fetch_all($number3);
+
+    for($j=0; $j < sizeof($row3); $j++) {
+    	if(has_arquivo_processando($row3[$j][id_prospec]))
+      	$update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'PROCESSANDO' where id_prospec = $1", array($row3[$j][id_prospec]));
+    	else if (has_arquivo_com_erro($row3[$j][id_prospec]))
+      	$update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'ERROR' where id_prospec = $1", array($row3[$j][id_prospec]));
+    	else
+      	$update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'CONCLUIDO' where id_prospec = $1", array($row3[$j][id_prospec]));
+      //echo "<script>reloadtable();</script>";
+    } 
+
+
+    function has_arquivo_processando($id_prospec) {   
+    $number1 = get_data("SELECT COUNT(*) FROM arquivos WHERE id_prospec_arquivo = ".$id_prospec." AND status_ren = 'PROCESSANDO'");
+    $row = pg_fetch_array($number1);  
+    //echo "<script>console.log('id: ".empty($row)."');</script>";      
+    if($row[0] == 0)
+      return false;
+    else
+      return true;
+  }
+
+  function has_arquivo_com_erro($id_prospec) {   
+    $number1 = get_data("SELECT COUNT(*) FROM arquivos WHERE id_prospec_arquivo = ".$id_prospec." AND status_ren = 'ERROR'");
+    $row = pg_fetch_array($number1);        
+    if($row[0] == 0)
+      return false;
+    else
+        return true;
+  }
+
 ?>

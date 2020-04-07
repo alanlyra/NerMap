@@ -37,7 +37,7 @@ saveCurrentURL();
           echo "<tr>
                   <td>".$result->id_arquivo."</td>
                   <td>".$result->nome_arquivo."</td>
-                  <td>".$result->ano_prospec."</td>
+                  <td>".$result->ano_arquivo."</td>
                   <td>".$result->conf_arquivo."</td>
                   <td><div style='text-align: center;'><img src='img/".$result->status_ren.".png' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
                   <td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
