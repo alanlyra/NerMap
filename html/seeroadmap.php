@@ -178,8 +178,8 @@ saveCurrentURL();
                         $nome_roadmap = $row1[0]; 
 
                          echo "
-                          <div class='col-xl-12 col-lg-12'>
-                            <div class='card shadow mb-4'>
+                          <div class='col-xl-12 col-lg-12' style='height: 77vh;'>
+                            <div class='card shadow mb-4' style='height: 100%;'>
                               <div class='card-header py-3'>
 
                                  <a href='#' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
@@ -192,7 +192,7 @@ saveCurrentURL();
                                 </div>                         
                                 <h5 class='m-0 font-weight-bold text-primary'>TRM ".$nome_roadmap."</h5>
                               </div>
-                              <div class='container' style='background: white !important; max-height: 55vh; overflow: auto; max-width:100%;'>";
+                              <div class='container' style='background: white !important; height: 100%; overflow: auto; max-width:100%;'>";
 
                           echo "<ul class='timeline'>";
                           //echo "<li><div class='tldate'>2020</div></li>";
@@ -232,7 +232,7 @@ saveCurrentURL();
                                       
                                         echo "<div class='tl-heading'>
                                           <h4>".$array_sections[$j][date]."</h4>
-                                          <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i>Fonte: ".$array_sections[$j][nome_arquivo]." (".$array_sections[$j][ano_arquivo].")</small></p>
+                                          <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i><b>Fonte:</b> ".$array_sections[$j][nome_arquivo]." (".$array_sections[$j][ano_arquivo].")</small></p>
                                         </div>
                                         <div class='tl-body'>
                                           <p>".$array_sections[$j][info]."</p>
@@ -430,7 +430,7 @@ saveCurrentURL();
           }
           var data_txt =  data_id.toString();
           var data_id_prospec = data_txt.replace('abrirpdf-','');
-          console.log(data_id);
+          //console.log(data_id);
           if(data_txt.indexOf('abrirpdf-') > -1) {
             $.ajax({
               url: "abrir-pdf.php",

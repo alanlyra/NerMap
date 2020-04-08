@@ -23,7 +23,7 @@ saveCurrentURL();
               }
               else {
                 echo "<div>
-                <a href='/uploads/".$id_arquivo.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>
+                <a href='/uploads/".$id_arquivo.".txt' download><div><img src='img/download.png' style='width: 20px; height: 20px; float:right;'/></a>
                 <iframe src='uploads/".$id_arquivo.".txt' scrolling='auto' width='100%' height='600px'></iframe>
                 </div>";
               }
