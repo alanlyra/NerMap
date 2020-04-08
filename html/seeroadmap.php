@@ -199,13 +199,14 @@ saveCurrentURL();
 
                                  <a href='#' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
                                  	<i class='fas fa-download fa-sm text-white-50'></i> Gerar .CSV
-                                 </a> 
+                                 </a>"; 
 
-                                 <div style='float:right; margin-right:10px; margin-right:10px;border: transparent;border-radius: 2px;border-style: solid;'>
-                                    <input style='cursor:pointer !important;' type='checkbox' class='custom-control-input' id='edicaoRoadmap'>
+                                /*echo "<div style='float:right; margin-right:10px; margin-right:10px;border: transparent;border-radius: 2px;border-style: solid;'>
+                                    <input type='checkbox' class='custom-control-input' id='edicaoRoadmap'>
                                     <label class='custom-control-label' for='edicaoRoadmap'>Habilitar Edição</label>
-                                </div>                         
-                                <h5 class='m-0 font-weight-bold text-primary'>TRM ".$nome_roadmap."</h5>
+                                </div>";   */
+
+                             echo "<h5 class='m-0 font-weight-bold text-primary'>TRM ".$nome_roadmap."</h5>
                               </div>
                               <div class='container' style='background: white !important; height: 100%; overflow: auto; max-width:100%;'>";
 
@@ -240,7 +241,7 @@ saveCurrentURL();
                               echo "<div class='tl-circ'></div>
                                       <div class='timeline-panel'>";
 
-									                    /*if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
+				                    /*if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
                                       	echo "<a href='/uploads/pdf/".$array_sections[$j][id_arquivo].".pdf' download><div><img src='img/pdf_download3.png' style='width: 20px; height: 20px; float:right;'/></a>";
                                       else
                                       	echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
@@ -258,6 +259,7 @@ saveCurrentURL();
                                         <div class='tl-body'>
                                           <p>".$array_sections[$j][info]."</p>
                                         </div>
+                                        <a href='#' data-target='#modalEditarRoadmap' data-toggle='modal' data-id='editarRoadmap-".$array_sections[$j][id_arquivo]."' data-indice='".$i_prospec."' data-date='".$array_sections[$j][date]."' data-info='".$array_sections[$j][info]."' data-cabecalho='".$tipoCabecalho."' data-prospec='".$id_roadmap."' ><div><img src='img/editar7.png' style='width: 20px; height: 20px; float:right;'/></a>
                                       </div>
                                     </li>";
                               $side_left = !$side_left;                           
@@ -423,6 +425,14 @@ saveCurrentURL();
     </div>
   </div>
 
+  <div id="modalEditarRoadmap" class="modal fade" role="dialog">
+    <div id="content-campo-roadmap" class="modal-dialog">
+      <!-- Modal content-->
+      
+
+    </div>
+  </div>
+
  <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -450,8 +460,25 @@ saveCurrentURL();
           if (typeof $(this).data('id') !== 'undefined') {
             data_id = $(this).data('id');
           }
+          if (typeof $(this).data('indice') !== 'undefined') {
+            data_indice_roadmap = $(this).data('indice');
+            data_indice_roadmap++;
+          }
+          if (typeof $(this).data('date') !== 'undefined') {
+            data_date_roadmap = $(this).data('date');
+          }
+          if (typeof $(this).data('info') !== 'undefined') {
+            data_info_roadmap = $(this).data('info');
+          }
+          if (typeof $(this).data('cabecalho') !== 'undefined') {
+            data_cabecalho = $(this).data('cabecalho');
+          }
+          if (typeof $(this).data('prospec') !== 'undefined') {
+            data_prospec = $(this).data('prospec');
+          }
           var data_txt =  data_id.toString();
           var data_id_prospec = data_txt.replace('abrirpdf-','');
+          var data_id_arquivo = data_txt.replace('editarRoadmap-','');
           //console.log(data_id);
           if(data_txt.indexOf('abrirpdf-') > -1) {
             $.ajax({
@@ -461,6 +488,22 @@ saveCurrentURL();
               success: function(html) {
                 $('#content-pdf').html(html);
                 $('#modalAbrirPDF').modal('show');
+              }
+            })
+          }
+          else if(data_txt.indexOf('editarRoadmap-') > -1) {
+          	 $.ajax({
+              url: "modal-editar-roadmap.php",
+              method: "POST",
+              data: { "identificador": data_id_arquivo, 
+              		  "indice": data_indice_roadmap,
+              		  "date": data_date_roadmap,
+              		  "info": data_info_roadmap,
+              		  "cabecalho": data_cabecalho,
+              		  "prospec": data_prospec },
+              success: function(html) {
+                $('#content-campo-roadmap').html(html);
+                $('#modalEditarRoadmap').modal('show');
               }
             })
           }
@@ -596,3 +639,38 @@ saveCurrentURL();
   }
 ?>
 
+<?php
+
+  if(isset($_POST["salvarEdicaoRoadmap"])) {
+
+  	$anoProspec = $_POST['anoProspec'];
+  	$infoProspec = $_POST['infoProspec'];
+  	$idRoadmap = $_POST['idRoadmap'];
+  	$idArquivo = $_POST['idArquivo'];
+  	$indiceRoadmap = $_POST['indiceRoadmap'];
+  	$cabecalhoCompleto = $_POST['cabecalhoCompleto'];
+  	$keyConsulta = $_POST['keyConsulta'];
+
+    $update_on_roadmap = set_data("UPDATE roadmap SET tempo = $1, prospeccao = $2 where ".$keyConsulta." = $3 AND ordem = $4 AND id_prospec_roadmap = $5", array($anoProspec, $infoProspec, $idArquivo, $indiceRoadmap, $idRoadmap));
+
+    echo "<script>window.location.href = 'seeroadmap.php?".$cabecalhoCompleto."';</script>";
+
+  }
+
+  if(isset($_POST["deletarProspeccaoRoadmap"])) {
+
+  	$anoProspec = $_POST['anoProspec'];
+  	$infoProspec = $_POST['infoProspec'];
+  	$idRoadmap = $_POST['idRoadmap'];
+  	$idArquivo = $_POST['idArquivo'];
+  	$indiceRoadmap = $_POST['indiceRoadmap'];
+  	$cabecalhoCompleto = $_POST['cabecalhoCompleto'];
+  	$keyConsulta = $_POST['keyConsulta'];
+
+    $delete_on_roadmap = set_data("DELETE FROM roadmap where ".$keyConsulta." = $1 AND ordem = $2 AND id_prospec_roadmap = $3", array($idArquivo, $indiceRoadmap, $idRoadmap));
+
+    echo "<script>window.location.href = 'seeroadmap.php?".$cabecalhoCompleto."';</script>";
+
+  }
+
+?>
