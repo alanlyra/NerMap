@@ -92,7 +92,8 @@ require_once 'system.php';
       else
         $update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'CONCLUIDO' where id_prospec = $1", array($id_prospec));
 
- 	  remove_roadmap_completo_antigo($id_prospec);
+      //Nao remover mais, pois agora o roadmap é concatenado
+ 	  //remove_roadmap_completo_antigo($id_prospec);
     }
   }
   else {

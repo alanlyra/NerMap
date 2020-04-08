@@ -82,96 +82,111 @@ saveCurrentURL();
 	                        $i = 0;
 	                        $i_section = 0;
 
-	                        $search_roadmap=get_data('SELECT * FROM roadmap r INNER JOIN prospec p ON p.id_prospec = r.id_prospec_roadmap INNER JOIN arquivos a ON a.id_arquivo = r.arquivo_origem WHERE ' . $key_roadmap_table . ' = ' . $id_busca . 'order by id_roadmap, ordem');
+                          if($tipoCabecalho != "arquivo") {
+                            $ids_arquivos = get_data("SELECT id_arquivo FROM arquivos WHERE id_prospec_arquivo = $1", array($id_roadmap));
+                            $query1 = "IS NULL";
+                            $query2 = "r.arquivo_origem";
+                          }
+                          else{
+                            $ids_arquivos = get_data("SELECT id_arquivo FROM arquivos WHERE id_prospec_arquivo = $1 AND id_arquivo = $2", array($id_roadmap, $id_arquivo));
+                            $query1 = "= ".$id_arquivo;
+                            $query2 = "r.id_arquivo_unico";
+                          }
 
-                          	$results_roadmap_max = pg_num_rows($search_roadmap);
+                          $results_max_ids_arquivos = pg_num_rows($ids_arquivos);
 
-                            //True para executar sempre o processamento ao invés de só checar na tabela ROADMAP
-                            $executa_processamento = true;
-                          	if  ($results_roadmap_max == 0) {
+                          if ($results_max_ids_arquivos>0) {
 
-                            $search_results=get_data('SELECT * FROM arquivos a INNER JOIN texto t ON t.id_texto = a.id_arquivo INNER JOIN ren r ON r.id_ren = t.id_texto INNER JOIN prospec p ON p.id_prospec = a.id_prospec_arquivo AND r.ordem_texto = t.ordem WHERE ' . $key . ' = ' . $id_busca . 'order by a.id_arquivo, r.ordem_texto');
+                            while($result=pg_fetch_object($ids_arquivos)) {
+                              //echo "<script>console.log(".$result->id_arquivo.");</script>";
+                             
+                              $search_roadmap1=get_data('SELECT * FROM roadmap WHERE arquivo_origem = ' . $result->id_arquivo . ' AND id_arquivo_unico '.$query1);
+                              $results_max = pg_num_rows($search_roadmap1);
 
-                          	$results_max = pg_num_rows($search_results);
+                              if ($results_max == 0) {
+                                $search_results=get_data('SELECT * FROM arquivos a INNER JOIN texto t ON t.id_texto = a.id_arquivo INNER JOIN ren r ON r.id_ren = t.id_texto INNER JOIN prospec p ON p.id_prospec = a.id_prospec_arquivo AND r.ordem_texto = t.ordem WHERE a.id_arquivo = '.$result->id_arquivo.' order by a.id_arquivo, r.ordem_texto');
 
-                            if  ($results_max>0) {
-                            //Processo para coletar os acontecimentos do Roadmap
-                            
-                            while($result=pg_fetch_object($search_results)) {
+                                  $results_max = pg_num_rows($search_results);
+                                    if  ($results_max>0) {
+                                    //Processo para coletar os acontecimentos do Roadmap
+                                    
+                                    while($result2=pg_fetch_object($search_results)) {
 
-                              //echo "<script>console.log('Debug Objects: " . $result->palavra . "' );</script>";
+                                      //echo "<script>console.log('Debug Objects: " . $result->palavra . "' );</script>";
 
-                              $palavra = $result->palavra;
-                              $palavra = str_replace(array("\r", "\n"), '', $palavra);
-                              $palavra = str_replace(array("'"), '\\\'', $palavra);
-                              $palavra = str_replace(array('"'), '\\\"', $palavra);
+                                      $palavra = $result2->palavra;
+                                      $palavra = str_replace(array("\r", "\n"), '', $palavra);
+                                      $palavra = str_replace(array("'"), '\\\'', $palavra);
+                                      $palavra = str_replace(array('"'), '\\\"', $palavra);
 
-                              if($palavra == "." || $palavra == "," || $palavra == ":")
-                                $section[info] = rtrim($section[info], " ");
+                                      if($palavra == "." || $palavra == "," || $palavra == ":")
+                                        $section[info] = rtrim($section[info], " ");
 
-                              $section[info] .= $palavra . " "; 						  
+                                      $section[info] .= $palavra . " ";               
 
-                              if($palavra == ".") {
-                              	$section[id_arquivo] = $result->id_arquivo;
-                                $section[assunto] = $result->assunto_prospec;
-                                $section[nome_arquivo] = $result->nome_arquivo;
-                                $section[ano_arquivo] = $result->ano_arquivo;
-                                $array_sections[$i_section] = $section;
+                                      if($palavra == ".") {
+                                        $section[id_arquivo] = $result2->id_arquivo;
+                                        $section[assunto] = $result2->assunto_prospec;
+                                        $section[nome_arquivo] = $result2->nome_arquivo;
+                                        $section[ano_arquivo] = $result2->ano_arquivo;
+                                        $array_sections[$i_section] = $section;
 
-                                $section[date] = "";
-                                $section[info] = "";
-                                $section[has_date] = false;
-                                $section[has_temppred] = false;
-                                $section[is_prospec] = false;
-                                $i_section++;
+                                        $section[date] = "";
+                                        $section[info] = "";
+                                        $section[has_date] = false;
+                                        $section[has_temppred] = false;
+                                        $section[is_prospec] = false;
+                                        $i_section++;
+                                      }
+
+                                      $tag = $result2->tag;
+
+                                      if($tag != "O" && $tag != "" && $tag != null) {
+
+                                        if($tag == "DATE") {
+                                          if($palavra != "today" && $palavra != "now") {
+                                            $section[date] = $result2->palavra;
+                                            $section[has_date] = true;
+                                          }
+                                        }
+                                        if($tag == "U_TEMPPRED" || $tag == "B_TEMPPRED" || $tag == "M_TEMPPRED" || $tag == "E_TEMPPRED") {
+                                          if($palavra != "today") {
+                                            $section[temppred] = $result2->palavra;
+                                            $section[has_temppred] = true;
+                                          }
+                                        }
+
+                                        if($section[has_date] && $section[has_temppred]) {
+                                          $section[is_prospec] = true;
+                                        }
+                                    
+                                      }
+                                    }
+                                  }
                               }
-
-                              $tag = $result->tag;
-
-                              if($tag != "O" && $tag != "" && $tag != null) {
-
-                                if($tag == "DATE") {
-                                  if($palavra != "today" && $palavra != "now") {
-                                    $section[date] = $result->palavra;
-                                    $section[has_date] = true;
-                                  }
-                                }
-                                if($tag == "U_TEMPPRED" || $tag == "B_TEMPPRED" || $tag == "M_TEMPPRED" || $tag == "E_TEMPPRED") {
-                                  if($palavra != "today") {
-                                    $section[temppred] = $result->palavra;
-                                    $section[has_temppred] = true;
-                                  }
-                                }
-
-                                if($section[has_date] && $section[has_temppred]) {
+                              else {
+                                 //echo "<script>console.log(".$result->id_arquivo.");</script>";
+                                 $search_roadmap2=get_data('SELECT * FROM roadmap r INNER JOIN prospec p ON p.id_prospec = r.id_prospec_roadmap INNER JOIN arquivos a ON a.id_arquivo = '.$query2.' WHERE a.id_arquivo = '.$result->id_arquivo.' AND id_arquivo_unico '.$query1.' order by id_roadmap, ordem');
+                                 while($result3=pg_fetch_object($search_roadmap2)) {
                                   $section[is_prospec] = true;
-                                }
-                            
-                              }
-                            $i++;
-                            }
-                      	}
-                      	}else //Roadmap ou Arquivo já possui roadmap criado na tabela ROADMAP
-                        {
-                        	 $i_section = 0;
-                        	 while($result=pg_fetch_object($search_roadmap)) {
-                        	 	$section[is_prospec] = true;
-                        	 	$section[date] = $result->tempo;
-                        	 	$section[info] = $result->prospeccao;
-                        	 	$section[assunto] = $result->assunto_prospec;
-                        	 	$section[id_arquivo] = $result->arquivo_origem;
-                            $section[nome_arquivo] = $result->nome_arquivo;
-                            $section[ano_arquivo] = $result->ano_arquivo;
-                        	 	$array_sections[$i_section] = $section;
+                                  $section[date] = $result3->tempo;
+                                  $section[info] = $result3->prospeccao;
+                                  $section[assunto] = $result3->assunto_prospec;
+                                  $section[id_arquivo] = $result3->arquivo_origem;
+                                  $section[nome_arquivo] = $result3->nome_arquivo;
+                                  $section[ano_arquivo] = $result3->ano_arquivo;
+                                  $array_sections[$i_section] = $section;
 
-                        	 	$section[date] = "";
-                                $section[info] = "";
-                                $section[has_date] = false;
-                                $section[has_temppred] = false;
-                                $section[is_prospec] = false;
-                                $i_section++;
-                        	 }
-                        }
+                                  $section[date] = "";
+                                      $section[info] = "";
+                                      $section[has_date] = false;
+                                      $section[has_temppred] = false;
+                                      $section[is_prospec] = false;
+                                      $i_section++;
+                                 }
+                              }
+                            }
+                          }
 
                         $number2 = get_data("SELECT nome_prospec FROM prospec WHERE id_prospec =".intval($id_roadmap));
                         $row1 = pg_fetch_array($number2);        
@@ -187,7 +202,7 @@ saveCurrentURL();
                                  </a> 
 
                                  <div style='float:right; margin-right:10px; margin-right:10px;border: transparent;border-radius: 2px;border-style: solid;'>
-                                    <input type='checkbox' class='custom-control-input' id='edicaoRoadmap'>
+                                    <input style='cursor:pointer !important;' type='checkbox' class='custom-control-input' id='edicaoRoadmap'>
                                     <label class='custom-control-label' for='edicaoRoadmap'>Habilitar Edição</label>
                                 </div>                         
                                 <h5 class='m-0 font-weight-bold text-primary'>TRM ".$nome_roadmap."</h5>
@@ -200,14 +215,20 @@ saveCurrentURL();
                           $i_prospec = 0;
                           $array_relatorio = [];
 
-                          $id_roadmap_table = get_max_id_roadmap();
-                          if($id_roadmap_table == null)
-                          	$id_roadmap_table = 1;
-
                           if($tipoCabecalho == "arquivo")
                             $id_arquivo_roadmap = $id_arquivo;
                           else
                             $id_arquivo_roadmap = "null";
+
+                          if($id_arquivo_roadmap == "null")
+                              set_data("DELETE FROM roadmap WHERE id_prospec_roadmap = ".$id_roadmap." AND id_arquivo_unico IS NULL");
+                          else
+                              set_data("DELETE FROM roadmap WHERE id_prospec_roadmap = ".$id_roadmap." AND id_arquivo_unico =".$id_arquivo);
+
+
+                          $id_roadmap_table = get_max_id_roadmap();
+                          if($id_roadmap_table == null)
+                            $id_roadmap_table = 1;
 
                           for ($j = 0; $j < sizeof($array_sections); $j++) {                            
                             if($array_sections[$j][is_prospec]) {  
@@ -243,6 +264,7 @@ saveCurrentURL();
                               $i_prospec++;
 
                               //Adiciona na tabela ROADMAP
+
                               $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo) VALUES ('".$array_sections[$j][assunto]."', null, ".$id_arquivo_roadmap.", ".$id_roadmap.", ".$id_roadmap_table.", '".$array_sections[$j][info]."', false,".$array_sections[$j][id_arquivo].", ".$i_prospec.",'".$array_sections[$j][date]."');");
                             }
                           }

@@ -366,6 +366,7 @@
 
     $remover_arquivo = set_data("DELETE FROM arquivos WHERE id_arquivo = $1", array($id_arquivo));
 
+    //TODO: Melhorar, fazendo com que remova apenas o campo de roadmap que é vinculado a este arquivo
     $remover_roadmap = set_data("DELETE FROM roadmap WHERE id_prospec_roadmap = $1", array($id_prospec));
 
     remove_file_in_directory($id_arquivo);
