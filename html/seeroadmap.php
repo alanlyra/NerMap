@@ -72,8 +72,8 @@ saveCurrentURL();
 	                            id_section => "",
 	                            ordem => "",
 	                            id_arquivo => "",
-                              nome_arquivo => "",
-                              ano_arquivo => "",
+                              	nome_arquivo => "",
+                              	ano_arquivo => "",
 	                            is_prospec => false,
 	                            has_date => false,
 	                            has_temppred => false,
@@ -167,6 +167,9 @@ saveCurrentURL();
                               else {
                                  //echo "<script>console.log(".$result->id_arquivo.");</script>";
                                  $search_roadmap2=get_data('SELECT * FROM roadmap r INNER JOIN prospec p ON p.id_prospec = r.id_prospec_roadmap INNER JOIN arquivos a ON a.id_arquivo = '.$query2.' WHERE a.id_arquivo = '.$result->id_arquivo.' AND id_arquivo_unico '.$query1.' order by id_roadmap, ordem');
+
+                                 
+
                                  while($result3=pg_fetch_object($search_roadmap2)) {
                                   $section[is_prospec] = true;
                                   $section[date] = $result3->tempo;
@@ -184,10 +187,32 @@ saveCurrentURL();
                                       $section[is_prospec] = false;
                                       $i_section++;
                                  }
+
+                                 
                               }
+
                             }
                           }
 
+					$search_roadmap3=get_data('SELECT * FROM roadmap r WHERE id_prospec_roadmap = '.$id_roadmap.' AND arquivo_origem = 0 AND id_arquivo_unico '.$query1.' order by id_roadmap, ordem');
+                              
+                              while($result3=pg_fetch_object($search_roadmap3)) {
+                                  $section[is_prospec] = true;
+                                  $section[date] = $result3->tempo;
+                                  $section[info] = $result3->prospeccao;
+                                  $section[assunto] = $result3->assunto_prospec;
+                                  $section[id_arquivo] = 0;
+                                  $section[nome_arquivo] = "";
+                                  $section[ano_arquivo] = "";
+                                  $array_sections[$i_section] = $section;
+
+                                  $section[date] = "";
+                                      $section[info] = "";
+                                      $section[has_date] = false;
+                                      $section[has_temppred] = false;
+                                      $section[is_prospec] = false;
+                                      $i_section++;
+                                 }
                         $number2 = get_data("SELECT nome_prospec FROM prospec WHERE id_prospec =".intval($id_roadmap));
                         $row1 = pg_fetch_array($number2);        
                         $nome_roadmap = $row1[0]; 
@@ -195,7 +220,7 @@ saveCurrentURL();
                          echo "
                           <div class='col-xl-12 col-lg-12' style='height: 77vh;'>
                             <div class='card shadow mb-4' style='height: 100%;'>
-                              <div class='card-header py-3'>
+                              <div id='box_roadmap' class='card-header py-3'>
 
                                  <a href='#' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
                                  	<i class='fas fa-download fa-sm text-white-50'></i> Gerar .CSV
@@ -207,6 +232,14 @@ saveCurrentURL();
                                 </div>";   */
 
                              echo "<h5 class='m-0 font-weight-bold text-primary'>TRM ".$nome_roadmap."</h5>
+                             <p style='margin: 0px 0px -8px 0px;'><small class='text-muted'>Área: ".$section[assunto]."</small></p>";
+
+                             if($tipoCabecalho == "arquivo")
+                             	$id_arquivo_adicionar = $id_arquivo;
+                             else
+                             	$id_arquivo_adicionar = 0;
+
+                             echo "<a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$section[assunto]."'><div style='text-align: center; margin-top: -3.3vh; margin-left: 88px;'><img src='img/add2.png' style='width: 25px; height: 25px; display: inline-block;'/></div></a>
                               </div>
                               <div class='container' style='background: white !important; height: 100%; overflow: auto; max-width:100%;'>";
 
@@ -433,6 +466,14 @@ saveCurrentURL();
     </div>
   </div>
 
+  <div id="modalAdicionarRoadmap" class="modal fade" role="dialog">
+    <div id="content-campo-adicionar-roadmap" class="modal-dialog">
+      <!-- Modal content-->
+      
+
+    </div>
+  </div>
+
  <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -476,9 +517,16 @@ saveCurrentURL();
           if (typeof $(this).data('prospec') !== 'undefined') {
             data_prospec = $(this).data('prospec');
           }
+          if (typeof $(this).data('arquivo') !== 'undefined') {
+            data_idArquivoRoadmap = $(this).data('arquivo');
+          }
+          if (typeof $(this).data('assunto') !== 'undefined') {
+            data_assunto = $(this).data('assunto');
+          }
           var data_txt =  data_id.toString();
           var data_id_prospec = data_txt.replace('abrirpdf-','');
           var data_id_arquivo = data_txt.replace('editarRoadmap-','');
+          var data_id_roadmap = data_txt.replace('adicionarRoadmap-','');
           //console.log(data_id);
           if(data_txt.indexOf('abrirpdf-') > -1) {
             $.ajax({
@@ -504,6 +552,20 @@ saveCurrentURL();
               success: function(html) {
                 $('#content-campo-roadmap').html(html);
                 $('#modalEditarRoadmap').modal('show');
+              }
+            })
+          }
+          else if(data_txt.indexOf('adicionarRoadmap-') > -1) {
+          	 $.ajax({
+              url: "modal-adicionar-roadmap.php",
+              method: "POST",
+              data: { "identificador": data_id_roadmap,
+              		  "cabecalho": data_cabecalho,
+              		  "idArquivoRoadmap": data_idArquivoRoadmap,
+              		  "assunto": data_assunto },
+              success: function(html) {
+                $('#content-campo-adicionar-roadmap').html(html);
+                $('#modalAdicionarRoadmap').modal('show');
               }
             })
           }
@@ -668,6 +730,56 @@ saveCurrentURL();
   	$keyConsulta = $_POST['keyConsulta'];
 
     $delete_on_roadmap = set_data("DELETE FROM roadmap where ".$keyConsulta." = $1 AND ordem = $2 AND id_prospec_roadmap = $3", array($idArquivo, $indiceRoadmap, $idRoadmap));
+
+    echo "<script>window.location.href = 'seeroadmap.php?".$cabecalhoCompleto."';</script>";
+
+  }
+
+  if(isset($_POST["salvarAdicionarRoadmap"])) {
+
+  	$anoProspec = $_POST['anoProspec'];
+  	$infoProspec = $_POST['infoProspec'];
+  	$idRoadmap = $_POST['idRoadmap'];
+  	$idArquivo = $_POST['idArquivo'];
+  	$cabecalhoCompleto = $_POST['cabecalhoCompleto'];
+  	$keyConsulta = $_POST['keyConsulta'];
+  	$assuntoAdicionar = $_POST['assuntoAdd'];
+
+  	if($idArquivo == 0) {
+  		$consulta1 = "IS NULL";
+  		$id_unico = "null";
+  	}
+  	else {
+  		$consulta1 = "= ".$idArquivo." AND arquivo_origem = ".$idArquivo;
+  		$id_unico = $idArquivo;
+  	}
+
+  	//select MAX(ordem) from roadmap where id_prospec_roadmap = 1 and id_arquivo_unico IS NULL
+
+	//select MAX(ordem) from roadmap where id_prospec_roadmap = 1 and id_arquivo_unico = 1 AND arquivo_origem = 1
+
+    $number1 = get_data("select MAX(ordem) from roadmap where id_prospec_roadmap = ".$idRoadmap." and id_arquivo_unico ".$consulta1);
+    $row = pg_fetch_array($number1);        
+    $number2 = $row[0]; 
+    $indice = $number2 + 1;
+
+    $number3 = get_data("select MAX(id_roadmap) from roadmap where id_prospec_roadmap = ".$idRoadmap." and id_arquivo_unico ".$consulta1);
+    $row2 = pg_fetch_array($number3);        
+    $number4 = $row2[0]; 
+    $id_roadmap_table_adicionar = $number4;
+
+    echo "<script>console.log('".$assuntoAdicionar."');</script>";
+    echo "<script>console.log(".$id_unico.");</script>";
+    echo "<script>console.log(".$idRoadmap.");</script>";
+    echo "<script>console.log(".$id_roadmap_table_adicionar.");</script>";
+    echo "<script>console.log('".$infoProspec."');</script>";
+    echo "<script>console.log('".$anoProspec."');</script>";
+    echo "<script>console.log(".$indice.");</script>";
+
+    $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo) VALUES ('".$assunto."', null, ".$id_unico.", ".$idRoadmap.", ".$id_roadmap_table_adicionar.", '".$infoProspec."', false, ".$idArquivo.", ".$indice.",'".$anoProspec."');");
+  
+    //echo "<script>console.log(".$indice.");</script>";
+
 
     echo "<script>window.location.href = 'seeroadmap.php?".$cabecalhoCompleto."';</script>";
 

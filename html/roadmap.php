@@ -55,9 +55,9 @@ saveCurrentURL();
                   </div>
                   </br>
                   <div class="col-xl-6 col-lg-7">
-  		              <h5>Tema:</h5>
+  		              <h5>Área:</h5>
                     <select type="text" id="temaRoadmap" name="temaRoadmap" class="form-control" style="cursor: pointer;">
-                      <option value="" disabled selected>Selecione o tema...</option>
+                      <option value="" disabled selected>Selecione a área...</option>
                       <option value="Educação">Educação</option>
                       <option value="Medicina">Medicina</option>
                       <option value="Transporte">Transporte</option>
