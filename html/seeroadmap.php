@@ -78,6 +78,7 @@ saveCurrentURL();
 	                            has_date => false,
 	                            has_temppred => false,
 	                        );
+	                        $assunto_roadmap = "";
 	                        $array_sections = [];
 	                        $i = 0;
 	                        $i_section = 0;
@@ -130,6 +131,7 @@ saveCurrentURL();
                                         $section[nome_arquivo] = $result2->nome_arquivo;
                                         $section[ano_arquivo] = $result2->ano_arquivo;
                                         $array_sections[$i_section] = $section;
+                                        $assunto_roadmap = $result2->assunto_prospec;
 
                                         $section[date] = "";
                                         $section[info] = "";
@@ -163,12 +165,11 @@ saveCurrentURL();
                                       }
                                     }
                                   }
+                                  array_multisort(array_column($array_sections, 'date'), SORT_ASC, $array_sections);
                               }
                               else {
                                  //echo "<script>console.log(".$result->id_arquivo.");</script>";
-                                 $search_roadmap2=get_data('SELECT * FROM roadmap r INNER JOIN prospec p ON p.id_prospec = r.id_prospec_roadmap INNER JOIN arquivos a ON a.id_arquivo = '.$query2.' WHERE a.id_arquivo = '.$result->id_arquivo.' AND id_arquivo_unico '.$query1.' order by id_roadmap, ordem');
-
-                                 
+                                 $search_roadmap2=get_data('SELECT * FROM roadmap r INNER JOIN prospec p ON p.id_prospec = r.id_prospec_roadmap INNER JOIN arquivos a ON a.id_arquivo = '.$query2.' WHERE a.id_arquivo = '.$result->id_arquivo.' AND id_arquivo_unico '.$query1.' AND arquivo_origem != 0 order by tempo asc');
 
                                  while($result3=pg_fetch_object($search_roadmap2)) {
                                   $section[is_prospec] = true;
@@ -179,6 +180,7 @@ saveCurrentURL();
                                   $section[nome_arquivo] = $result3->nome_arquivo;
                                   $section[ano_arquivo] = $result3->ano_arquivo;
                                   $array_sections[$i_section] = $section;
+                                  $assunto_roadmap = $result3->assunto_prospec;
 
                                   $section[date] = "";
                                       $section[info] = "";
@@ -187,23 +189,22 @@ saveCurrentURL();
                                       $section[is_prospec] = false;
                                       $i_section++;
                                  }
-
-                                 
+                              
                               }
 
                             }
                           }
 
-					$search_roadmap3=get_data('SELECT * FROM roadmap r WHERE id_prospec_roadmap = '.$id_roadmap.' AND arquivo_origem = 0 AND id_arquivo_unico '.$query1.' order by id_roadmap, ordem');
+					$search_roadmap3=get_data('SELECT * FROM roadmap r WHERE id_prospec_roadmap = '.$id_roadmap.' AND arquivo_origem = 0 AND id_arquivo_unico '.$query1.' order by tempo asc');
                               
                               while($result3=pg_fetch_object($search_roadmap3)) {
                                   $section[is_prospec] = true;
                                   $section[date] = $result3->tempo;
                                   $section[info] = $result3->prospeccao;
-                                  $section[assunto] = $result3->assunto_prospec;
+                                  $section[assunto] = $result3->assunto;
                                   $section[id_arquivo] = 0;
-                                  $section[nome_arquivo] = "";
-                                  $section[ano_arquivo] = "";
+                                  $section[nome_arquivo] = $result3->nome_arquivo_adicionado;
+                                  $section[ano_arquivo] = $result3->ano_arquivo_adicionado;
                                   $array_sections[$i_section] = $section;
 
                                   $section[date] = "";
@@ -222,7 +223,7 @@ saveCurrentURL();
                             <div class='card shadow mb-4' style='height: 100%;'>
                               <div id='box_roadmap' class='card-header py-3'>
 
-                                 <a href='#' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
+                                 <a href='#' title='Baixar relatório em CSV' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
                                  	<i class='fas fa-download fa-sm text-white-50'></i> Gerar .CSV
                                  </a>"; 
 
@@ -232,14 +233,18 @@ saveCurrentURL();
                                 </div>";   */
 
                              echo "<h5 class='m-0 font-weight-bold text-primary'>TRM ".$nome_roadmap."</h5>
-                             <p style='margin: 0px 0px -8px 0px;'><small class='text-muted'>Área: ".$section[assunto]."</small></p>";
+                             <p style='margin: 0px 0px -8px 0px;'><small class='text-muted'>Área: ".$assunto_roadmap."</small></p>";
 
                              if($tipoCabecalho == "arquivo")
                              	$id_arquivo_adicionar = $id_arquivo;
                              else
                              	$id_arquivo_adicionar = 0;
 
-                             echo "<a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$section[assunto]."'><div style='text-align: center; margin-top: -3.3vh; margin-left: 88px;'><img src='img/add2.png' style='width: 25px; height: 25px; display: inline-block;'/></div></a>
+                             echo "<a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."'>
+                             		<div style='text-align: center; margin-top: -3.3vh; margin-left: 88px;'>
+                             			<img src='img/add2.png' title='Adicionar prospecção manualmente' style='width: 25px; height: 25px; display: inline-block;'/>
+                             		</div>
+                             		</a>
                               </div>
                               <div class='container' style='background: white !important; height: 100%; overflow: auto; max-width:100%;'>";
 
@@ -264,9 +269,17 @@ saveCurrentURL();
                           if($id_roadmap_table == null)
                             $id_roadmap_table = 1;
 
+                          //Ordena o array através da data
+        				  array_multisort(array_column($array_sections, 'date'), SORT_ASC, $array_sections);
+
+                          $previous_date = 0;
+
                           for ($j = 0; $j < sizeof($array_sections); $j++) {                            
                             if($array_sections[$j][is_prospec]) {  
                               $array_relatorio[$i_prospec] = $array_sections[$j];
+                              if($array_sections[$j][date] > $previous_date)
+                              	echo "<li><div class='tldate'>".$array_sections[$j][date]."</div></li>";
+
                               if($side_left)
                                 echo "<li>";
                               else
@@ -279,10 +292,15 @@ saveCurrentURL();
                                       else
                                       	echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
 
-                                      if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-                                        echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."'><div><img src='img/pdf_download3.png' style='width: 20px; height: 20px; float:right;'/></a>";
-                                      else
-                                        echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."'><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";
+                                      if($array_sections[$j][id_arquivo] != 0) {	
+	                                      if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
+	                                        echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."'><div><img src='img/pdf_download3.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right;'/></a>";
+	                                      else
+	                                        echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."'><div><img src='img/txt_download2.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right;'/></a>";
+	                                  }
+	                                   else {
+	                                   	 echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
+	                                  }
 
                                       
                                         echo "<div class='tl-heading'>
@@ -292,7 +310,9 @@ saveCurrentURL();
                                         <div class='tl-body'>
                                           <p>".$array_sections[$j][info]."</p>
                                         </div>
-                                        <a href='#' data-target='#modalEditarRoadmap' data-toggle='modal' data-id='editarRoadmap-".$array_sections[$j][id_arquivo]."' data-indice='".$i_prospec."' data-date='".$array_sections[$j][date]."' data-info='".$array_sections[$j][info]."' data-cabecalho='".$tipoCabecalho."' data-prospec='".$id_roadmap."' ><div><img src='img/editar7.png' style='width: 20px; height: 20px; float:right;'/></a>
+                                        <div class='divBotaoEditarRoadmap' style='visibility: hidden;'>
+                                        <a href='#' data-target='#modalEditarRoadmap' data-toggle='modal' data-id='editarRoadmap-".$array_sections[$j][id_arquivo]."' data-indice='".$i_prospec."' data-date='".$array_sections[$j][date]."' data-info='".$array_sections[$j][info]."' data-cabecalho='".$tipoCabecalho."' data-prospec='".$id_roadmap."' ><div><img src='img/editar7.png' title='Editar prospecção' style='width: 20px; height: 20px; float:right; opacity: 50%;'/></a>
+                                        <div>
                                       </div>
                                     </li>";
                               $side_left = !$side_left;                           
@@ -300,8 +320,9 @@ saveCurrentURL();
 
                               //Adiciona na tabela ROADMAP
 
-                              $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo) VALUES ('".$array_sections[$j][assunto]."', null, ".$id_arquivo_roadmap.", ".$id_roadmap.", ".$id_roadmap_table.", '".$array_sections[$j][info]."', false,".$array_sections[$j][id_arquivo].", ".$i_prospec.",'".$array_sections[$j][date]."');");
+                              $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado) VALUES ('".$array_sections[$j][assunto]."', null, ".$id_arquivo_roadmap.", ".$id_roadmap.", ".$id_roadmap_table.", '".$array_sections[$j][info]."', false,".$array_sections[$j][id_arquivo].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."');");
                             }
+                            $previous_date = $array_sections[$j][date];
                           }
 
 
@@ -584,6 +605,22 @@ saveCurrentURL();
         })
     });  
 
+    $('.timeline-panel').hover(function(){
+	    $(this).find('.divBotaoEditarRoadmap').css("visibility", "visible");
+	},
+	function(){
+	    $(this).find('.divBotaoEditarRoadmap').css("visibility", "hidden");
+	});
+
+
+    $('.divButtonAddProspec').hover(function() {
+	    $(this).find("img:last").fadeToggle();
+	});
+
+
+    
+
+
     function load(){
       document.getElementById("li_seerodmaps").classList.add('active');
     }
@@ -744,19 +781,17 @@ saveCurrentURL();
   	$cabecalhoCompleto = $_POST['cabecalhoCompleto'];
   	$keyConsulta = $_POST['keyConsulta'];
   	$assuntoAdicionar = $_POST['assuntoAdd'];
+  	$nomeArquivo = $_POST['nomeArquivoAdicionado'];
+  	$anoArquivo = $_POST['anoArquivoAdicionado'];
 
   	if($idArquivo == 0) {
   		$consulta1 = "IS NULL";
-  		$id_unico = "null";
+  		$id_unico = null;
   	}
   	else {
   		$consulta1 = "= ".$idArquivo." AND arquivo_origem = ".$idArquivo;
   		$id_unico = $idArquivo;
   	}
-
-  	//select MAX(ordem) from roadmap where id_prospec_roadmap = 1 and id_arquivo_unico IS NULL
-
-	//select MAX(ordem) from roadmap where id_prospec_roadmap = 1 and id_arquivo_unico = 1 AND arquivo_origem = 1
 
     $number1 = get_data("select MAX(ordem) from roadmap where id_prospec_roadmap = ".$idRoadmap." and id_arquivo_unico ".$consulta1);
     $row = pg_fetch_array($number1);        
@@ -775,11 +810,10 @@ saveCurrentURL();
     echo "<script>console.log('".$infoProspec."');</script>";
     echo "<script>console.log('".$anoProspec."');</script>";
     echo "<script>console.log(".$indice.");</script>";
+    echo "<script>console.log('".$nomeArquivo."');</script>";
+    echo "<script>console.log('".$anoArquivo."');</script>";
 
-    $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo) VALUES ('".$assunto."', null, ".$id_unico.", ".$idRoadmap.", ".$id_roadmap_table_adicionar.", '".$infoProspec."', false, ".$idArquivo.", ".$indice.",'".$anoProspec."');");
-  
-    //echo "<script>console.log(".$indice.");</script>";
-
+    $set_on_roadmap = set_data("INSERT INTO roadmap (ano_arquivo_adicionado, arquivo_origem, assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, nome_arquivo_adicionado, ordem, prospeccao, tem_filtro, tempo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)", array($anoArquivo, '0', $assuntoAdicionar, 'null', $id_unico, $idRoadmap, $id_roadmap_table_adicionar, $nomeArquivo, $indice, $infoProspec, 'false', $anoProspec));
 
     echo "<script>window.location.href = 'seeroadmap.php?".$cabecalhoCompleto."';</script>";
 
