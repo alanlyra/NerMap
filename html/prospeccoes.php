@@ -28,7 +28,7 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Gerenciar Prospecções</h1>
+          <h1 class="h3 mb-2 text-gray-800">Gerenciar TRMs</h1>
     
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
@@ -44,12 +44,12 @@
                   <thead>
                     <tr>
                       <th>ID</th>
-                      <th>Nome</th>
+                      <th style="width: 300px">Nome</th>
                       <th>Tema</th>
                       <th>Ano</th>
-                      <th>Nº de arquivos</th>
+                      <th style="width: 120px">Nº de arquivos</th>
                       <th>Status</th>
-                      <th>Adicionar arquivo</th>
+                      <th style="width: 140px">Adicionar arquivo</th>
                       <th>Arquivos</th>
                       <th>Roadmap</th>
                       <th>Ações</th>
@@ -85,16 +85,16 @@
         	                      <td>".$result->num_textos_prospec."</td>
         	                       <td><div style='text-align: center;'>";
                                 if($result->status_ren_prospec != "null")
-                                  echo "<img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/>";
+                                  echo "<img src='img/".$result->status_ren_prospec.".png' title='".$result->status_ren_prospec."' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 echo "</div></td>
-                                <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/file_add.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/file_add.png' title='Adicionar arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                
-                                <td><a href='#' data-target='#modalArquivos' data-toggle='modal' data-id='arquivos-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                <td><a href='#' data-target='#modalArquivos' data-toggle='modal' data-id='arquivos-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='Visualizar arquivos' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
 
-                                <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Ir para Roadmaps' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                 <td>
                                 <form action='prospeccoes.php?roadmap=".$result->id_prospec."' method='post' multipart='' enctype='multipart/form-data' style='text-align: center;'>
-                                <button style='border: 0; background: transparent' type='submit' name='deleteProspec' value=''> <img src='/img/deletar2.png' width='20px' height='20px'/></button >
+                                <button style='border: 0; background: transparent' type='submit' name='deleteProspec' value=''> <img src='/img/deletar2.png' title='Remover TRM' width='20px' height='20px'/></button >
                                 </form>
                                 </td>
       	                      </tr>";
@@ -353,7 +353,7 @@
 
     $remover_prospec = set_data(" DELETE FROM prospec WHERE id_prospec = $1", array($id_prospec));
 
-    echo "<script>reloadtable();;</script>";
+    //echo "<script>reloadtable();;</script>";
     echo "<script>window.location.href = 'prospeccoes.php';</script>";
 
   }
@@ -505,7 +505,7 @@
   function db_prospec($id_prospec_db, $num_arquivos_db) {   
     $save_on_prospec = set_data("UPDATE prospec SET num_textos_prospec = ".$num_arquivos_db." WHERE id_prospec = ".$id_prospec_db);
     $update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'PROCESSANDO' where id_prospec = $1", array($id_prospec_db));
-    echo "<script>reloadtable();</script>";
+    //echo "<script>reloadtable();</script>";
     echo "<script>window.location.href = 'prospeccoes.php';</script>";
   }
 ?>

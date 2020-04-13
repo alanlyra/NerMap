@@ -16,15 +16,18 @@ saveCurrentURL();
               <h4 class='modal-title'>".$nome_arquivo."</h4>
               <button type='button' class='close' data-dismiss='modal'>&times;</button>       
             </div>
-            <div class='modal-body'>";
+            <div id='content-file' class='modal-body'>";
 
               if(file_exists("uploads/pdf/".$id_arquivo.".pdf")) {
                 echo "<embed src='uploads/pdf/".$id_arquivo.".pdf' type='application/pdf' width='100%' height='600px' />";
               }
               else {
                 echo "<div>
-                <a href='/uploads/".$id_arquivo.".txt' download><div><img src='img/download.png' style='width: 20px; height: 20px; float:right;'/></a>
+                <a href='/uploads/".$id_arquivo.".txt' download><div><img src='img/download.png' title='Fazer o download' style='width: 20px; height: 20px; float:right; margin: -10px 5px 2px 0px; opacity: 60%;'/></a>
+                </div>
+                <div>
                 <iframe src='uploads/".$id_arquivo.".txt' scrolling='auto' width='100%' height='600px'></iframe>
+                </div>
                 </div>";
               }
              
@@ -37,6 +40,7 @@ saveCurrentURL();
     
         
   ?>
+
 
 
 

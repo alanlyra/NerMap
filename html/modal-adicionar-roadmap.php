@@ -35,9 +35,9 @@ saveCurrentURL();
                     <input type='text' id='anoProspec' name='anoProspec' value='' placeholder='Ano da prospecção...' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')'>
                   </div>
                   </br>
-                  <div class='col-xl-9 col-lg-10s'>
+                  <div class='col-xl-12 col-lg-12'>
                    <h5>Prospecção:</h5>
-                    <input type='text' id='infoProspec' name='infoProspec' value='' placeholder='Acontecimento...' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2'>
+                    <textarea rows='6' type='text' id='infoProspec' name='infoProspec' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2'></textarea>
                   </div>
                  </br>
                  <div class='col-xl-9 col-lg-10s'>

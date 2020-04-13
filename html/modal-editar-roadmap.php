@@ -43,9 +43,9 @@ saveCurrentURL();
                     <input type='text' id='anoProspec' name='anoProspec' value='".$date_roadmap."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')'>
                   </div>
                   </br>
-                  <div class='col-xl-9 col-lg-10s'>
+                  <div class='col-xl-12 col-lg-12'>
                    <h5>Prospecção:</h5>
-                    <input type='text' id='infoProspec' name='infoProspec' value='".$info_roadmap."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2'>
+                    <textarea rows='6' type='text' id='infoProspec' name='infoProspec' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2'>".$info_roadmap."</textarea>
                   </div>
                  </br>
 
@@ -60,7 +60,7 @@ saveCurrentURL();
                 <input type='text' id='keyConsulta' name='keyConsulta' class='form-control bg-light border-0 small' value='".$keyConsulta."'  aria-label='Search' aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
              
                 <div class='py-3' style='text-align: center;'>
-                <button class='btn btn-secondary btn-icon-split' type='submit' name='deletarProspeccaoRoadmap' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button>
+                <button class='btn btn-warning btn-icon-split' type='submit' name='deletarProspeccaoRoadmap' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button>
                 <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoRoadmap' value='Salvar' style='width: 8em; height: 2em; display: inline-block;' />
 
                   </br>

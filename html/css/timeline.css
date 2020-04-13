@@ -34,10 +34,10 @@ img { border: 0; max-width: 100%; }
   display: block;
   width: 200px;
   background: #414141;
-  border: 3px solid #212121;
+  /*border: 3px solid #212121;*/
   color: #ededed;
   margin: 0 auto;
-  padding: 3px 0;
+  padding: 5px 0;
   font-weight: bold;
   text-align: center;
   -webkit-box-shadow: 0 0 11px rgba(0,0,0,0.35);
@@ -212,7 +212,12 @@ img { border: 0; max-width: 100%; }
   }
 }
 
+#imageAddProspec { 
+  transition: all .2s ease-in-out; 
+}
 
-
+#imageAddProspec:hover {
+  transform: scale(2.5);
+}
 
 

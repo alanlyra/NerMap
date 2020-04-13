@@ -47,7 +47,7 @@
   <li id="li_prospec" class="nav-item">
     <a class="nav-link" href="prospeccoes.php">
       <i class="fas fa-fw fa-table"></i>
-      <span>Prospecções</span></a>
+      <span>TRMs e Arquivos</span></a>
   </li>
 
   <!-- Nav Item - Roadmaps Collapse Menu -->

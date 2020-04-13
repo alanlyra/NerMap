@@ -233,7 +233,7 @@ saveCurrentURL();
                                 </div>";   */
 
                              echo "<h5 class='m-0 font-weight-bold text-primary'>TRM ".$nome_roadmap."</h5>
-                             <p style='margin: 0px 0px -8px 0px;'><small class='text-muted'>Área: ".$assunto_roadmap."</small></p>";
+                             <p style='margin: 0px 0px -8px 0px;'><small class='text-muted'><b>Área:</b> ".$assunto_roadmap."</small></p>";
 
                              if($tipoCabecalho == "arquivo")
                              	$id_arquivo_adicionar = $id_arquivo;
@@ -242,7 +242,7 @@ saveCurrentURL();
 
                              echo "<a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."'>
                              		<div style='text-align: center; margin-top: -3.3vh; margin-left: 88px;'>
-                             			<img src='img/add2.png' title='Adicionar prospecção manualmente' style='width: 25px; height: 25px; display: inline-block;'/>
+                             			<img id='imageAddProspec' src='img/add2.png' title='Adicionar prospecção manualmente' style='width: 10px; height: 10px; display: inline-block;'/>
                              		</div>
                              		</a>
                               </div>
@@ -296,7 +296,7 @@ saveCurrentURL();
 	                                      if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
 	                                        echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."'><div><img src='img/pdf_download3.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right;'/></a>";
 	                                      else
-	                                        echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."'><div><img src='img/txt_download2.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right;'/></a>";
+	                                        echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."'><div><img src='img/txt_download2.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
 	                                  }
 	                                   else {
 	                                   	 echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
@@ -376,7 +376,7 @@ saveCurrentURL();
                             <thead>
                               <tr>
                                 <th>ID</th>
-                                <th>Nome</th>
+                                <th style='width: 300px'>Nome</th>
                                 <th>Tema</th>
                                 <th>Ano</th>
                                 <th>Status</th>
@@ -384,6 +384,17 @@ saveCurrentURL();
                                 <th>Roadmap por arquivo</th>
                               </tr>
                             </thead>
+                            <tfoot>
+                            	<tr>
+                                <th>ID</th>
+                                <th>Nome</th>
+                                <th>Tema</th>
+                                <th>Ano</th>
+                                <th>Status</th>
+                                <th>Roadmap completo</th>
+                                <th>Roadmap por arquivo</th>
+                              </tr>
+                            </tfoot>
                             <tbody>";
 
                               $search_prospec=get_data("SELECT * FROM prospec WHERE usuario_prospec = '". $_SESSION['email'] ."'order by id_prospec");
@@ -399,11 +410,11 @@ saveCurrentURL();
                                           <td>".$result->ano_prospec."</td>
                                           <td><div style='text-align: center;'>";
                                 		  if($result->status_ren_prospec != "null")
-                                  		  echo "<img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/>";
+                                  		  echo "<img src='img/".$result->status_ren_prospec.".png' title='".$result->status_ren_prospec."' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 		  echo "</div></td>
                                 			</div></td>
-                                          <td><a href='/seeroadmap.php?roadmap-completo=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
-                                          <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                          <td><a href='/seeroadmap.php?roadmap-completo=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Gerar roadmap completo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                          <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='Visualizar arquivos' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                         </tr>";
                                   }
                               }
@@ -637,6 +648,7 @@ saveCurrentURL();
       console.log(url);
       window.location.href = url;
     }
+
 
   </script>
 

@@ -12,7 +12,7 @@ saveCurrentURL();
       <th>Ano</th>
       <th>Confiabilidade</th>
       <th>Status</th>
-      <th>Arquivo</th>
+      <th>Download</th>
       <th>Roadmap</th>
       <th>Ações</th>
     </tr>
@@ -24,7 +24,7 @@ saveCurrentURL();
       <th>Ano</th>
       <th>Confiabilidade</th>
       <th>Status</th>
-      <th>Arquivo</th>
+      <th>Download</th>
       <th>Roadmap</th>
       <th>Ações</th>
     </tr>
@@ -44,15 +44,20 @@ saveCurrentURL();
                   <td>".$result->ano_arquivo."</td>
                   <td>".$result->conf_arquivo."</td>
 
-                  <td><div style='text-align: center;'><img src='img/".$result->status_ren.".png' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
+                  <td><div style='text-align: center;'><img src='img/".$result->status_ren.".png' title='".$result->status_ren."' style='width: 20px; height: 20px; display: inline-block;'/></div></td>";
 
-                  <td><a href='/relatorios/relatorio_".$id_prospec.".txt' download><div style='text-align: center;'><img src='img/icon_doc.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                  if (file_exists("uploads/pdf/".$result->id_arquivo.".pdf")) 
+                    echo "<td><a href='uploads/pdf/".$result->id_arquivo.".pdf' download><div style='text-align: center;'><img src='img/pdf_download3.png' title='Baixar arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>";
+                  else
+                    echo "<td><a href='uploads/".$result->id_arquivo.".txt' download><div style='text-align: center;'><img src='img/txt_download2.png' title='Baixar arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>";
 
-                  <td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+
+
+                  echo "<td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='Gerar roadmap do arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
 
                   <td>
                   <form action='prospeccoes.php?roadmap=".$id_prospec."&arquivo=".$result->id_arquivo."' method='post' multipart='' enctype='multipart/form-data' style='text-align: center;'>
-                  <button style='border: 0; background: transparent' type='submit' name='deleteArquivo' value=''> <img src='/img/deletar2.png' width='20px' height='20px'/></button >
+                  <button style='border: 0; background: transparent' type='submit' name='deleteArquivo' value=''> <img src='/img/deletar2.png' title='Remover arquivo' width='20px' height='20px'/></button >
                   </form>
                   </td>
                 </tr>";
