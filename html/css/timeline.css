@@ -220,4 +220,14 @@ img { border: 0; max-width: 100%; }
   transform: scale(2.5);
 }
 
+.highlighted {
+    background-color:yellow;
+}
+.emptyBlock1000 {
+    height:1000px;
+}
+.emptyBlock2000 {
+    height:2000px;
+}
+
 
