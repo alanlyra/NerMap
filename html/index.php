@@ -5,7 +5,7 @@ saveCurrentURL();
 
  <html>
  <?php include_once("head.php") ?>
- <body style="background-image: url('img/futuro.jpeg')">
+ <body style="background-image: url('img/futuro.jpeg'); width: 98%">
 
    <?php
    // Se o usuario possui sessao

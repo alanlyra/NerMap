@@ -424,84 +424,17 @@ saveCurrentURL();
 
   var values = info_original_JS.split(" ");
 
-  var terms = [];
+  var queryBusca = values[0] + " " + values[1] + " " + values[2] + " " + values[3];
 
-  terms.push(values[0] + " " + values[1] + " " + values[2] + " " + values[3]);
-  terms.push(values[0] + "  " + values[1] + "  " + values[2] + "  " + values[3]);
-  terms.push(values[0] + "   " + values[1] + "   " + values[2] + "   " + values[3]);
-    
-  //Permutações de 1, 2 e 3 espaços
-
-  terms.push(values[0] + "  " + values[1] + " " + values[2] + " " + values[3]);
-  
-  terms.push(values[0] + " " + values[1] + "  " + values[2] + " " + values[3]);
-  
-  terms.push(values[0] + " " + values[1] + " " + values[2] + "  " + values[3]);
-  
-  terms.push(values[0] + "  " + values[1] + "  " + values[2] + " " + values[3]);
-  
-  terms.push(values[0] + "  " + values[1] + " " + values[2] + "  " + values[3]);
-  
-  terms.push(values[0] + " " + values[1] + "  " + values[2] + "  " + values[3]);
-  
-  terms.push(values[0] + "  " + values[1] + "  " + values[2] + "  " + values[3]);
-  
-
-  terms.push(values[0] + "   " + values[1] + " " + values[2] + " " + values[3]);
-  
-  terms.push(values[0] + " " + values[1] + "   " + values[2] + " " + values[3]);
-  
-  terms.push(values[0] + " " + values[1] + " " + values[2] + "   " + values[3]);
-  
-  terms.push(values[0] + "   " + values[1] + "   " + values[2] + " " + values[3]);
-  
-  terms.push(values[0] + "   " + values[1] + " " + values[2] + "   " + values[3]);
-  
-  terms.push(values[0] + " " + values[1] + "   " + values[2] + "   " + values[3]);
-
-  
-  terms.push(values[0] + "   " + values[1] + "  " + values[2] + "  " + values[3]);
-  
-  terms.push(values[0] + "  " + values[1] + "   " + values[2] + "  " + values[3]);
-  
-  terms.push(values[0] + "  " + values[1] + "  " + values[2] + "   " + values[3]);
-  
-  terms.push(values[0] + "   " + values[1] + "   " + values[2] + "  " + values[3]);
-  
-  terms.push(values[0] + "   " + values[1] + "  " + values[2] + "   " + values[3]);
-  
-  terms.push(values[0] + "  " + values[1] + "   " + values[2] + "   " + values[3]);
-
-  terms.push(values[0] + "    " + values[1]);
-
-  var delay = 600;
-
-  function checkIfFound () {
-      if (document.getElementById("findMsg").innerText.indexOf("não") > -1)
-        return false;
-      else
-        return true;
-  }
-
-  function searchTerm(trecho, i) {
-    document.getElementById("findInput").value = trecho[i];
+  function searchTerm() {
+    document.getElementById("findInput").value = queryBusca;
     document.getElementById("findNext").click();
-
-    setTimeout(function () {
-      if(document.getElementById("findInput").classList.contains('notFound'))
-        if(i < terms.length-1)
-          searchTerm(terms, i+1);
-        else
-          return;
-      else
-        return;
-     }, delay);
 
   }
 
   window.setTimeout(function(){
-        searchTerm(terms, 0);
-  }, 1000);
+        searchTerm();
+  }, 700);
 
   </script>
 

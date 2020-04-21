@@ -6987,22 +6987,48 @@ function () {
     key: "_calculatePhraseMatch",
     value: function _calculatePhraseMatch(query, pageIndex, pageContent, entireWord) {
       var matches = [];
+      var queryLimpa = query.replace(/\s+/g,' ');
       var queryLen = query.length;
+      var queryLenLimpa = queryLimpa.length;
       var matchIdx = -queryLen;
+      var matchIdxLimpo = -queryLenLimpa;
+      var pageContentLimpo = pageContent.replace(/\s+/g,' ');
 
       while (true) {
-        matchIdx = pageContent.indexOf(query, matchIdx + queryLen);
+        
+        matchIdxLimpo = pageContentLimpo.indexOf(queryLimpa, matchIdxLimpo + queryLenLimpa);
 
-        if (matchIdx === -1) {
+        if (matchIdxLimpo === -1) {
           break;
         }
 
-        if (entireWord && !this._isEntireWord(pageContent, matchIdx, queryLen)) {
+        if (entireWord && !this._isEntireWord(pageContentLimpo, matchIdxLimpo, queryLenLimpa)) {
           continue;
         }
 
+        var offset = 0;
+        var matchIdxIter = matchIdxLimpo;
+        var maxIter = 0;
+
+        do {
+          matchIdx = pageContent.indexOf(query.split(/\s+/)[1], matchIdxIter);
+
+          var pageContentTemp = pageContent.substring(matchIdx).replace(/\s+/g,' ');
+
+          var offset = pageContentTemp.indexOf(queryLimpa, 0);
+
+          if(offset === 1) {
+            break;
+          }
+
+          matchIdxIter+=offset;
+          maxIter++;
+
+        } while (offset >= 0 || maxIter > 50)
+
         matches.push(matchIdx);
       }
+
 
       this._pageMatches[pageIndex] = matches;
     }
@@ -7107,9 +7133,15 @@ function () {
             var textItems = textContent.items;
             var strBuf = [];
 
+            //console.log(textItems);
+
             for (var j = 0, jj = textItems.length; j < jj; j++) {
+
+              /*var strNew = textItems[j].str.replace(/\s+/g,' ');
+              strBuf.push(strNew);*/
               strBuf.push(textItems[j].str);
             }
+
 
             _this2._pageContents[i] = normalize(strBuf.join(''));
             extractTextCapability.resolve(i);
@@ -7117,6 +7149,8 @@ function () {
             //console.error("Unable to get text content for page ".concat(i + 1), reason);
             _this2._pageContents[i] = '';
             extractTextCapability.resolve(i);
+
+            //console.log(_this2._pageContents);
           });
         });
       };
@@ -7218,6 +7252,13 @@ function () {
       var offset = this._offset;
       var numMatches = matches.length;
       var previous = this._state.findPrevious;
+
+      //console.log(matches);
+
+      //console.log(numMatches);
+
+
+      //console.log(offset);
 
       if (numMatches) {
         offset.matchIdx = previous ? numMatches - 1 : 0;
