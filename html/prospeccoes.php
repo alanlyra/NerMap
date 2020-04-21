@@ -360,20 +360,19 @@
 
   if(isset($_POST["deleteArquivo"])) {
 
-    $id_arquivo = $_GET["arquivo"];
+      $id_arquivo = $_GET["arquivo"];
 
-    $id_prospec = $_GET["roadmap"];
+      $id_prospec = $_GET["roadmap"];
 
-    $remover_arquivo = set_data("DELETE FROM arquivos WHERE id_arquivo = $1", array($id_arquivo));
+      $remover_arquivo = set_data("DELETE FROM arquivos WHERE id_arquivo = $1", array($id_arquivo));
 
-    //TODO: Melhorar, fazendo com que remova apenas o campo de roadmap que é vinculado a este arquivo
-    $remover_roadmap = set_data("DELETE FROM roadmap WHERE id_prospec_roadmap = $1", array($id_prospec));
+      $remover_roadmap = set_data("DELETE FROM roadmap WHERE id_prospec_roadmap = $1 AND id_arquivo_unico = $2", array($id_prospec, $id_arquivo));
 
-    remove_file_in_directory($id_arquivo);
+      remove_file_in_directory($id_arquivo);
 
-    $num_arquivos_prospec = get_num_arquivos_on_prospec($id_prospec);
+      $num_arquivos_prospec = get_num_arquivos_on_prospec($id_prospec);
 
-    db_prospec($id_prospec, $num_arquivos_prospec);
+      db_prospec($id_prospec, $num_arquivos_prospec);
 
   }
 
