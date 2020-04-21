@@ -45,18 +45,24 @@ saveCurrentURL();
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Inserir dados</h6>
                 </div>
+                <div id="messageCampos" style="display: none;" class="alert alert-warning ">
+                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true" style="font-size:20px">×</span>
+                  </button>    <strong>Atenção!</strong> Todos os campos devem ser preenchidos.
+                </div>
+                
                 </br>
 
                 <form action="roadmap.php" method="post" multipart="" enctype="multipart/form-data">
                
                   <div class="col-xl-6 col-lg-7">
                    <h5>Nome:</h5>
-                    <input type="text" id="nomeRoadmap" name="nomeRoadmap" class="form-control bg-light border-0 small" placeholder="Nome do Roadmap..." aria-label="Search" aria-describedby="basic-addon2">
+                    <input type="text" id="nomeRoadmap" name="nomeRoadmap" class="form-control bg-light border-0 small" placeholder="Nome do TRM..." aria-label="Search" aria-describedby="basic-addon2" required>
                   </div>
                   </br>
                   <div class="col-xl-6 col-lg-7">
   		              <h5>Área:</h5>
-                    <select type="text" id="temaRoadmap" name="temaRoadmap" class="form-control" style="cursor: pointer;">
+                    <select type="text" id="temaRoadmap" name="temaRoadmap" class="form-control" style="cursor: pointer;" required>
                       <option value="" disabled selected>Selecione a área...</option>
                       <option value="Educação">Educação</option>
                       <option value="Medicina">Medicina</option>
@@ -67,11 +73,11 @@ saveCurrentURL();
   		            </br>
               		<div class="col-xl-6 col-lg-7">
               		<h5>Ano limite do TRM:</h5>
-                    <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="Ano..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                    <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="Ano..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')" required>
                   </div>
                   </br>
                   <div class="py-3" style="text-align: center;">
-                    <input class="btn btn-primary btn-icon-split" type="submit" name="criaRoadmap" value="Criar" style="width: 8em; height: 2em; display: inline-block;" />
+                    <input class="btn btn-primary btn-icon-split" type="submit" name="criaTRM" value="Criar" style="width: 8em; height: 2em; display: inline-block;" />
                   </div>   
                 </div>
                 
@@ -138,22 +144,25 @@ saveCurrentURL();
 
 
 <?php
-	echo '<pre>';
-	$nome = $_POST['nomeRoadmap'];
-	$tema = $_POST['temaRoadmap'];
-	$ano = $_POST['anoRoadmap'];
+	//echo '<pre>';
+
+  if(isset($_POST["criaTRM"])) {
+
+  	$nome = $_POST['nomeRoadmap'];
+  	$tema = $_POST['temaRoadmap'];
+  	$ano = $_POST['anoRoadmap'];
 
 
-	if(!$nome == "" && !$tema == "" && !$ano == "") {
-    	echo "<script>console.log( 'Nome: " . $nome . "' );</script>";
-    	echo "<script>console.log( 'Tema: " . $tema . "' );</script>";
-    	echo "<script>console.log( 'Ano: " . $ano . "' );</script>";    	
-  	  $id_prospec = get_max_id_prospec();
-      db_prospec($id_prospec, $nome, $tema, $ano);
-	}
-	else{
-		echo "<script>console.log( 'Deu ruim!' );</script>";
-	}
+  	if(!$nome == "" && !$tema == "" && !$ano == "") {   	
+    	  $id_prospec = get_max_id_prospec();
+        db_prospec($id_prospec, $nome, $tema, $ano);
+  	}
+  	else{
+      echo "<script> document.getElementById('messageCampos').style.display = 'block'; </script>";
+  		//echo "<script>console.log( 'Deu ruim!' );</script>";
+  	}
+
+  }
 
 	function get_max_id_prospec() {   
 		$number1 = get_data("select MAX(id_prospec) from prospec");

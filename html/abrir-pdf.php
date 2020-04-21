@@ -173,7 +173,7 @@ saveCurrentURL();
                           <div id='toolbarContainer'>
                             <div id='toolbarViewer'>
                               <div id='toolbarViewerLeft'>
-                                <button id='sidebarToggle' class='toolbarButton' title='Toggle Sidebar' tabindex='11' data-l10n-id='toggle_sidebar'>
+                                <button id='sidebarToggle' style='display: none;' class='toolbarButton' title='Toggle Sidebar' tabindex='11' data-l10n-id='toggle_sidebar'>
                                   <span data-l10n-id='toggle_sidebar_label'>Toggle Sidebar</span>
                                 </button>
                                 <div class='toolbarButtonSpacer'></div>
@@ -197,7 +197,7 @@ saveCurrentURL();
                                   <span data-l10n-id='presentation_mode_label'>Presentation Mode</span>
                                 </button>
 
-                                <button id='openFile' class='toolbarButton openFile hiddenLargeView' title='Open File' tabindex='32' data-l10n-id='open_file'>
+                                <button id='openFile' style='display: none;' class='toolbarButton openFile hiddenLargeView' title='Open File' tabindex='32' data-l10n-id='open_file'>
                                   <span data-l10n-id='open_file_label'>Open</span>
                                 </button>
 
@@ -501,7 +501,7 @@ saveCurrentURL();
 
   window.setTimeout(function(){
         searchTerm(terms, 0);
-  }, 500);
+  }, 1000);
 
   </script>
 

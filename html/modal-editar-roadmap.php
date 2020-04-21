@@ -40,12 +40,12 @@ saveCurrentURL();
                 
                    <div class='col-xl-6 col-lg-7'>
                   <h5>Ano:</h5>
-                    <input type='text' id='anoProspec' name='anoProspec' value='".$date_roadmap."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')'>
+                    <input type='text' id='anoProspec' name='anoProspec' value='".$date_roadmap."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')' required>
                   </div>
                   </br>
                   <div class='col-xl-12 col-lg-12'>
                    <h5>Prospecção:</h5>
-                    <textarea rows='6' type='text' id='infoProspec' name='infoProspec' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2'>".$info_roadmap."</textarea>
+                    <textarea rows='6' type='text' id='infoProspec' name='infoProspec' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required>".$info_roadmap."</textarea>
                   </div>
                  </br>
 

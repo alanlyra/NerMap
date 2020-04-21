@@ -147,19 +147,19 @@
 
                   <div class="col-xl-6 col-lg-7">
                     <!-- <input type="file" name="files[]" multiple accept="text/*"> -->
-                    <input type="file" name="files[]" accept=".txt,.pdf">
+                    <input type="file" name="files[]" accept=".txt,.pdf" required>
                     
                     </br>
                   </div>
                   </br>
                   <div class="col-xl-9 col-lg-10s">
                    <h5>Título:</h5>
-                    <input type="text" id="nomeArquivo" name="nomeArquivo" class="form-control bg-light border-0 small" placeholder="Nome do Arquivo..." aria-label="Search" aria-describedby="basic-addon2">
+                    <input type="text" id="nomeArquivo" name="nomeArquivo" class="form-control bg-light border-0 small" placeholder="Nome do Arquivo..." aria-label="Search" aria-describedby="basic-addon2" required>
                   </div>
                  </br>
                   <div class="col-xl-6 col-lg-7">
                   <h5>Data:</h5>
-                    <input type="text" id="anoArquivo" name="anoArquivo" class="form-control bg-light border-0 small" placeholder="Ano da Publicação..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
+                    <input type="text" id="anoArquivo" name="anoArquivo" class="form-control bg-light border-0 small" placeholder="Ano da Publicação..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')" required>
                   </div>
                   </br>
                   
@@ -167,35 +167,35 @@
                   <h5>Confiabilidade:</h5>
                   <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option1" value="1" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
+                      <input type="radio" name="rate" id="option1" value="1" autocomplete="off" style="cursor: pointer;" required> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
                         <!-- <img src="img/conf_0.png" style="width: 40px; height: 40px;" /> -->
                         <img src="img/conf_0_bw.png" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                     <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option2" value="3" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
+                      <input type="radio" name="rate" id="option2" value="3" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
                         <!-- <img src="img/conf_2.5.png" style="width: 40px; height: 40px;" /> -->
                         <img src="img/conf_2.5_bw.png" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                     <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option3" value="5" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
+                      <input type="radio" name="rate" id="option3" value="5" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
                         <!-- <img src="img/conf_5.png" style="width: 40px; height: 40px;" /> -->
                         <img src="img/conf_5_bw.png" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                      <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option4" value="8" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
+                      <input type="radio" name="rate" id="option4" value="8" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
                         <!-- <img src="img/conf_7.5.png" style="width: 40px; height: 40px;" /> -->
                         <img src="img/conf_7.5_bw.png" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                      <label class="btn btn-plain" style="cursor: pointer;">
-                      <input type="radio" name="rate" id="option5" value="10" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check checked"></span>
+                      <input type="radio" name="rate" id="option5" value="10" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
                         <!-- <img src="img/conf_10.png" style="width: 40px; height: 40px;" /> -->
                         <img src="img/conf_10_bw.png" style="width: 40px; height: 40px;" />
@@ -208,7 +208,7 @@
                 <input type="text" id="identificador" name="identificador" class="form-control bg-light border-0 small" placeholder="" aria-label="Search" aria-describedby="basic-addon2" style="display: none; visibility: hidden;">
              
                 <div class="py-3" style="text-align: center;">
-                <input class="btn btn-primary btn-icon-split" type="submit" name="someAction" value="Enviar" style="width: 8em; height: 2em; display: inline-block;" />
+                <input class="btn btn-primary btn-icon-split" type="submit" name="adicionarArquivo" value="Enviar" style="width: 8em; height: 2em; display: inline-block;" />
                   </br>
                 </div>
                 </form>
@@ -390,73 +390,76 @@
 
 
 <?php
-  //echo '<pre>';
-  $file = $_FILES['files'];;
-  $ano = $_POST['anoArquivo'];
-  $nome = $_POST['nomeArquivo'];
-  $conf_value = $_POST['rate'];
-  $identificador = $_POST['identificador'];
+  
+  if(isset($_POST["adicionarArquivo"])) {
 
-  if($identificador) {
-    if(!empty($file))
-    {
-      if(!$nome == "" && !$conf_value == "" && !$ano == "") {
-          //echo "<script>console.log( 'Confiabilidade: " . $conf_value . "' );</script>";
-          //echo "<script>console.log( 'Ano: " . $ano . "' );</script>";
-          
-          $id_arquivo = get_max_id_arquivo();
-          //echo "<script>console.log( 'ID ARQUIVO: " . $id_arquivo . "' );</script>";
-          $file_desc = reArrayFiles($file);
-          //print_r($file_desc);
-          $num_textos = 0;
-          
-          foreach($file_desc as $val)
-          {
-            //$newname = date('YmdHis',time()).mt_rand().'.jpg';
-            $newname = get_max_id_arquivo();
-            if($num_textos > 0) {
-              $newname .= "_";
-              $other_text = $num_textos + 1;
-              $newname .= $other_text;
-            }
-            $newname .= ".txt";
+    $file = $_FILES['files'];;
+    $ano = $_POST['anoArquivo'];
+    $nome = $_POST['nomeArquivo'];
+    $conf_value = $_POST['rate'];
+    $identificador = $_POST['identificador'];
 
-            $ext = pathinfo($val['name'], PATHINFO_EXTENSION);  
-
-            if($ext == "pdf" || $ext == ".pdf") {
-              $parser = new \Smalot\PdfParser\Parser();
-              $pdf    = $parser->parseFile($val['tmp_name']);
-               
-              // Retrieve all pages from the pdf file.
-              $pages  = $pdf->getPages();
-
-              $pdfUploaded = fopen("uploads/".$newname, "w") or die("Unable to open file!");
-               
-              // Loop over each page to extract text.
-              foreach ($pages as $page) {
-                  fwrite($pdfUploaded, $page->getText());
-              }
-
-              fclose($pdf_uploaded);
-
-              $newname_pdf = str_replace(".txt", ".pdf", $newname);
-              move_uploaded_file($val['tmp_name'],'uploads/pdf/'.$newname_pdf);
-            }
-            else
-              move_uploaded_file($val['tmp_name'],'uploads/'.$newname);	
+    if($identificador) {
+      if(!empty($file))
+      {
+        if(!$nome == "" && !$conf_value == "" && !$ano == "") {
+            //echo "<script>console.log( 'Confiabilidade: " . $conf_value . "' );</script>";
+            //echo "<script>console.log( 'Ano: " . $ano . "' );</script>";
             
-            $num_textos++;          
-          }
-          
-          db_arquivo($id_arquivo, $conf_value, $ano, "PROCESSANDO", $nome, $identificador);
-          $num_arquivos = get_num_arquivos_on_prospec($identificador);
-          db_prospec($identificador, $num_arquivos);
+            $id_arquivo = get_max_id_arquivo();
+            //echo "<script>console.log( 'ID ARQUIVO: " . $id_arquivo . "' );</script>";
+            $file_desc = reArrayFiles($file);
+            //print_r($file_desc);
+            $num_textos = 0;
+            
+            foreach($file_desc as $val)
+            {
+              //$newname = date('YmdHis',time()).mt_rand().'.jpg';
+              $newname = get_max_id_arquivo();
+              if($num_textos > 0) {
+                $newname .= "_";
+                $other_text = $num_textos + 1;
+                $newname .= $other_text;
+              }
+              $newname .= ".txt";
+
+              $ext = pathinfo($val['name'], PATHINFO_EXTENSION);  
+
+              if($ext == "pdf" || $ext == ".pdf") {
+                $parser = new \Smalot\PdfParser\Parser();
+                $pdf    = $parser->parseFile($val['tmp_name']);
+                 
+                // Retrieve all pages from the pdf file.
+                $pages  = $pdf->getPages();
+
+                $pdfUploaded = fopen("uploads/".$newname, "w") or die("Unable to open file!");
+                 
+                // Loop over each page to extract text.
+                foreach ($pages as $page) {
+                    fwrite($pdfUploaded, $page->getText());
+                }
+
+                fclose($pdf_uploaded);
+
+                $newname_pdf = str_replace(".txt", ".pdf", $newname);
+                move_uploaded_file($val['tmp_name'],'uploads/pdf/'.$newname_pdf);
+              }
+              else
+                move_uploaded_file($val['tmp_name'],'uploads/'.$newname);	
+              
+              $num_textos++;          
+            }
+            
+            db_arquivo($id_arquivo, $conf_value, $ano, "PROCESSANDO", $nome, $identificador);
+            $num_arquivos = get_num_arquivos_on_prospec($identificador);
+            db_prospec($identificador, $num_arquivos);
 
 
-          //popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
-          }
-      else{
-        //echo "<script>console.log( 'Deu ruim!!' );</script>";
+            //popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
+            }
+        else{
+          //echo "<script>console.log( 'Deu ruim!!' );</script>";
+        }
       }
     }
   }

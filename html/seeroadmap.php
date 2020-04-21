@@ -272,7 +272,21 @@ saveCurrentURL();
                              		</div>
                              		</a>
                               </div>
-                              <div class='container' style='background: white !important; height: 100%; overflow: auto; max-width:100%;'>";
+                              <div id='box_info_roadmap' class='card-header' style='margin: 0; padding: 0; background-color: whitesmoke; border-radius: 0px 0px 0px 40px;'>";
+
+
+                              if(isset($_GET["roadmap-completo"])) {
+	                            echo "<p style='margin: 0px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>Roadmap completo do TRM</b></small></p>
+	                              	<a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 0px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>Filtrar por arquivos</b></small></p></a>
+	                              </div></div>";
+	                          }
+	                          else {
+	                          	echo "<p style='margin: 0px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>Roadmap do arquivo ".$section[nome_arquivo]."</b></small></p>
+	                              	<a href='seeroadmap.php?roadmap-completo=".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 0px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>Ver Roadmap Completo do TRM</b></small></p></a>
+	                              </div></div>";
+	                          }
+
+                              echo "<div class='container' style='background: white !important; height: 100%; overflow: auto; max-width:100%;'>";
 
                           echo "<ul class='timeline'>";
                           //echo "<li><div class='tldate'>2020</div></li>";
@@ -314,9 +328,9 @@ saveCurrentURL();
                                       	echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
                                       	if($array_sections[$j][arquivo_origem] != 0) {	
 	                                      if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-	                                        echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."'><div><img src='img/pdf_download3.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right;'/></a>";
+	                                        echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."'><div><img src='img/pdf_download3.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right;'/></a>";
 	                                      else
-	                                        echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."'><div><img src='img/txt_download2.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
+	                                        echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."'><div><img src='img/txt_download2.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
 	                                  }
 	                                   else {
 	                                   	 echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
@@ -387,7 +401,7 @@ saveCurrentURL();
 								<img src='img/files2.png' style='width: 100px; height: 100px; display: inline-block;'/>
 								<h4>Individual</h4>
 								<p>Gerar roadmap individual de um arquivo do TRM.</p>
-								<a href='#' data-target='#myModal' data-toggle='modal' data-id='".$_GET["roadmap"]."'><button class='btn btn-primary' style='margin:5px;'>Visualizar arquivos</button></a>
+								<a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$_GET["roadmap"]."'><button class='btn btn-primary' style='margin:5px;'>Visualizar arquivos</button></a>
 							</div>
 						</div> <!-- End Col -->	
 						
@@ -445,7 +459,7 @@ saveCurrentURL();
                                 		  echo "</div></td>
                                 			</div></td>
                                           <td><a href='/seeroadmap.php?roadmap-completo=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Gerar roadmap completo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
-                                          <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='Visualizar arquivos' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                          <td><a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='Visualizar arquivos' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                         </tr>";
                                   }
                               }
@@ -483,7 +497,7 @@ saveCurrentURL();
   </a>
 
   <!-- Modal -->
-  <div id="myModal" class="modal fade" role="dialog">
+  <div id="modalArquivosRoadmap" class="modal fade" role="dialog">
     <div class="modal-dialog modal-xl">
 
       <!-- Modal content-->
@@ -602,6 +616,7 @@ saveCurrentURL();
           var data_id_verNoTexto = data_txt.replace('verNoTexto-','');
           var data_id_arquivo = data_txt.replace('editarRoadmap-','');
           var data_id_roadmap = data_txt.replace('adicionarRoadmap-','');
+          var data_id_modalArquivos = data_txt.replace('modalArquivosRoadmap-','');
           //console.log(data_id);
           if(data_txt.indexOf('abrirpdf-') > -1) {
             $.ajax({
@@ -656,16 +671,19 @@ saveCurrentURL();
               }
             })
           }
-          else {
+          else if(data_txt.indexOf('modalArquivosRoadmap-') > -1) {
             $.ajax({
               url: "table-arquivos-modal.php",
               method: "POST",
-              data: { "identificador": data_id },
+              data: { "identificador": data_id_modalArquivos },
               success: function(html) {
                 $('#table-modal').html(html);
-                $('#myModal').modal('show');
+                $('#modalArquivosRoadmap').modal('show');
               }
             })
+          }
+          else{
+          	
           }
 
         })

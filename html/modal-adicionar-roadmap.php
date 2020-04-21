@@ -32,22 +32,22 @@ saveCurrentURL();
                 
                    <div class='col-xl-6 col-lg-7'>
                   <h5>Ano:</h5>
-                    <input type='text' id='anoProspec' name='anoProspec' value='' placeholder='Ano da prospecção...' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')'>
+                    <input type='text' id='anoProspec' name='anoProspec' value='' placeholder='Ano da prospecção...' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')' required />
                   </div>
                   </br>
                   <div class='col-xl-12 col-lg-12'>
                    <h5>Prospecção:</h5>
-                    <textarea rows='6' type='text' id='infoProspec' name='infoProspec' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2'></textarea>
+                    <textarea rows='6' type='text' id='infoProspec' name='infoProspec' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required></textarea>
                   </div>
                  </br>
                  <div class='col-xl-9 col-lg-10s'>
                    <h5>Fonte:</h5>
-                    <input type='text' id='nomeArquivoAdicionado' name='nomeArquivoAdicionado' value='' placeholder='Título da fonte...' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2'>
+                    <input type='text' id='nomeArquivoAdicionado' name='nomeArquivoAdicionado' value='' placeholder='Título da fonte...' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required />
                   </div>
                  </br>
                  <div class='col-xl-9 col-lg-10s'>
                    <h5>Ano de Publicação:</h5>
-                    <input type='text' id='anoArquivoAdicionado' name='anoArquivoAdicionado' value='' placeholder='Ano da fonte...' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2'>
+                    <input type='text' id='anoArquivoAdicionado' name='anoArquivoAdicionado' value='' placeholder='Ano da fonte...' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required />
                   </div>
                  </br>
 
