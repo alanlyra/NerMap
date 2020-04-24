@@ -796,10 +796,10 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
   height: auto;
 }
 html[dir='ltr'] .findbar {
-  left: 68px;
+  left: 30px;
 }
 html[dir='rtl'] .findbar {
-  right: 68px;
+  right: 30px;
 }
 
 .findbar label {

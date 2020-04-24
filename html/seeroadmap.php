@@ -328,9 +328,9 @@ saveCurrentURL();
                                       	echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
                                       	if($array_sections[$j][arquivo_origem] != 0) {	
 	                                      if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-	                                        echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."'><div><img src='img/pdf_download3.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right;'/></a>";
+	                                        echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/pdf_download3.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right;'/></a>";
 	                                      else
-	                                        echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."'><div><img src='img/txt_download2.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
+	                                        echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/txt_download2.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
 	                                  }
 	                                   else {
 	                                   	 echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
@@ -611,6 +611,9 @@ saveCurrentURL();
           if (typeof $(this).data('original') !== 'undefined') {
             data_original = $(this).data('original');
           }
+          if (typeof $(this).data('tipoarquivo') !== 'undefined') {
+            data_tipoarquivo = $(this).data('tipoarquivo');
+          }
           var data_txt =  data_id.toString();
           var data_id_prospec = data_txt.replace('abrirpdf-','');
           var data_id_verNoTexto = data_txt.replace('verNoTexto-','');
@@ -623,7 +626,8 @@ saveCurrentURL();
               url: "abrir-pdf.php",
               method: "POST",
               data: { "identificador": data_id_prospec,
-                      "original": data_original },
+                      "original": data_original,
+                      "tipoarquivo": data_tipoarquivo },
               success: function(html) {
                 $('#content-pdf').html(html);
                 $('#modalAbrirPDF').modal('show');

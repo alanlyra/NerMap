@@ -15,12 +15,13 @@ saveCurrentURL();
   <?php 
       $id_arquivo = $_POST["identificador"];
       $info_original = $_POST["original"];
+      $tipo_arquivo = $_POST["tipoarquivo"];
 
       $nome1 = get_data("SELECT nome_arquivo FROM arquivos WHERE id_arquivo =".$id_arquivo);
       $row = pg_fetch_array($nome1);        
       $nome_arquivo = $row[0];    
 
-      echo "<div class='modal-content' style='height: 90vh;'>
+      echo "<div class='modal-content'>
             <div class='modal-header'>
               <h4 class='modal-title'>".$nome_arquivo."</h4>
               <button type='button' class='close' data-dismiss='modal'>&times;</button>       
@@ -28,7 +29,7 @@ saveCurrentURL();
             
 
             if(file_exists("uploads/pdf/".$id_arquivo.".pdf")) {
-              echo "<div id='content-file' class='modal-body' style='padding:0 !important'>";
+              echo "<div id='content-file' class='modal-body' style='height: 75vh; padding:0 !important'>";
               echo "<div id='outerContainer'>
 
                       <div id='sidebarContainer'>
@@ -380,13 +381,35 @@ saveCurrentURL();
 
                 }
                 else {
-                  echo "<div id='content-file' class='modal-body'>";
+                  echo "<div id='content-file' class='modal-body' style='padding:0;'>";
                   echo "<div>
-                  <a href='/uploads/".$id_arquivo.".txt' download><div><img src='img/download.png' title='Fazer o download' style='width: 20px; height: 20px; float:right; margin: -10px 5px 2px 0px; opacity: 60%;'/></a>
+                  <!--
+                  <input id='search' type='text' name='page_no' size='3'/>          
+                  <input id='go' type='button' name='goto' value='Go'/>  --> 
+                  
+                  <div class='toolbar'>
+                    <div id='toolbarContainer'>
+                      <div id='toolbarViewerLeft'>
+                        <button class='toolbarButton' title='Find in Document' tabindex='12' data-l10n-id='findbar'>
+                          <span data-l10n-id='findbar_label'>Find</span>
+                        </button>
+                      </div>
+                      
+                      <div id='toolbarViewerRight'>
+                        <a href='/uploads/".$id_arquivo.".txt' download>
+                          <button class='toolbarButton download hiddenMediumView' style='position: relative; margin-right: 12px;' title='Download' tabindex='34' data-l10n-id='download'/>
+                        </a> 
+                      </div>
+                      <div id='toolbarViewerMiddle'>
+                      <span class='toolbarLabel'>Documento de Texto</span>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                  <iframe src='uploads/".$id_arquivo.".txt' scrolling='auto' width='100%' height='600px'></iframe>
+                  
                   </div>
+                  <div id='divIframe' style='padding: 1rem;'>
+                  <iframe id='iframe_txt' src='uploads/".$id_arquivo.".txt' scrolling='auto' width='100%' height='600px' style='box-shadow: inset 0px 11px 8px -10px #CCC, inset 11px 0px 8px -10px #CCC; border-style: groove; border-color: #CCC;'></iframe>
+                
                   </div>";
                 }
 
@@ -410,32 +433,45 @@ saveCurrentURL();
               <button type='button' class='btn btn-default' data-dismiss='modal'>Fechar</button>
             </div>
           </div>";
-
-    
         
   ?>
 
   <script>
 
-  var id_arquivo_JS = <?php echo $id_arquivo; ?>;
-  var info_original_JS = "<?php echo $info_original; ?>";
+    var id_arquivo_JS = <?php echo $id_arquivo; ?>;
+    var info_original_JS = "<?php echo $info_original; ?>";
+    var tipo_arquivo_JS = "<?php echo $tipo_arquivo; ?>";
 
-  defaultOptions.defaultUrl.value = "uploads/pdf/"+id_arquivo_JS+".pdf";
+    if(tipo_arquivo_JS.indexOf("pdf") > -1)
+      defaultOptions.defaultUrl.value = "uploads/pdf/"+id_arquivo_JS+".pdf";
 
-  var values = info_original_JS.split(" ");
+    var values = info_original_JS.split(" ");
 
-  var queryBusca = values[0] + " " + values[1] + " " + values[2] + " " + values[3];
+    var queryBusca = values[0] + " " + values[1] + " " + values[2] + " " + values[3];
 
-  function searchTerm() {
-    document.getElementById("findInput").value = queryBusca;
-    document.getElementById("findNext").click();
+    function searchTermPDF() {
+      document.getElementById("findInput").value = queryBusca;
+      document.getElementById("findNext").click();
+    }
 
-  }
+    function searchTermTXT(){
+      var iframe = document.getElementById("iframe_txt").contentDocument.body;
 
-  window.setTimeout(function(){
-        searchTerm();
-  }, 700);
+      /*create a new RegExp object using search variable as a parameter,
+      the g option is passed in so it will find more than one occurence of the
+      search parameter*/                                               
+      var result = new RegExp(queryBusca, 'g');
 
+      iframe.innerHTML = iframe.innerHTML.replace(result,"<span id='termoBuscado' style='background-color: #cce0cc;'>" + queryBusca + "</span>" );  
+    }
+
+    window.setTimeout(function(){
+      if(tipo_arquivo_JS.indexOf("pdf") > -1)
+        searchTermPDF();
+      else
+        searchTermTXT();
+    }, 700);
+  
   </script>
 
 
