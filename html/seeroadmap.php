@@ -41,6 +41,8 @@ saveCurrentURL();
 
                 if(isset($_GET["arquivo"]) || isset($_GET["roadmap-completo"])) {
                
+                          $tipoCabecalho = "";
+                          $nome_arquivo = "";
 
                           if(isset($_GET["arquivo"])) {
                             $id_arquivo = $_GET["arquivo"];
@@ -60,6 +62,10 @@ saveCurrentURL();
                             $key = "a.id_arquivo";
                             $key_roadmap_table = "id_arquivo_unico";
                             $tipoCabecalho = "arquivo";
+
+                            $number7 = get_data("SELECT nome_arquivo FROM arquivos WHERE id_arquivo =".intval($id_arquivo));
+                            $row7 = pg_fetch_array($number7);        
+                            $nome_arquivo = $row7[0];
                           }                      
 
 	                      	$side_left = true;
@@ -716,10 +722,6 @@ saveCurrentURL();
 	    $(this).find("img:last").fadeToggle();
 	});
 
-
-    
-
-
     function load(){
       document.getElementById("li_seerodmaps").classList.add('active');
     }
@@ -744,9 +746,15 @@ saveCurrentURL();
 
   	function geraRelatorio() {
       var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
-      var nome_trmJS = <?php echo json_encode($nome_roadmap); ?>;
+      var nome_trmJS = "<?php echo $nome_roadmap; ?>";
+      var tipoCabecalhoJS = "<?php echo $tipoCabecalho; ?>";
+      var nome_arquivoJS = "<?php echo $nome_arquivo; ?>";
 
-  		var fileTitle = 'Relatório do TRM ' + nome_trmJS;
+      if(tipoCabecalhoJS.indexOf("roadmap-completo") > -1)
+        var fileTitle = "Relatório do TRM " + nome_trmJS + " (Completo) - " + getFormattedTime();
+      else
+        var fileTitle = "Relatório do TRM " + nome_trmJS + " (Arquivo " + nome_arquivoJS + ") - " + getFormattedTime();
+
   		formatArray(relatorio_arrayJS);
   		exportCSVFile(headers, itemsFormatted, fileTitle);
   	}
@@ -813,7 +821,19 @@ saveCurrentURL();
 		        cases: item.info //.replace(/,/g, '') // remove commas to avoid errors,
 		    });
 		});
-	}
+  }
+  
+  function getFormattedTime() {
+    var today = new Date();
+    var y = today.getFullYear();
+    // JavaScript months are 0-based.
+    var m = today.getMonth() + 1;
+    var d = today.getDate();
+    var h = today.getHours();
+    var mi = today.getMinutes();
+    var s = today.getSeconds();
+    return y + "-" + m + "-" + d + "-" + h + "-" + mi + "-" + s;
+}
 
  </script>
 

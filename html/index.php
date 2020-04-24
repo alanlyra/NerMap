@@ -7,7 +7,11 @@ saveCurrentURL();
  <?php include_once("head.php") ?>
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
- <body style="background-image: url('img/futuro.jpeg'); width: 98%">
+ <body style="width: 98%">
+
+<video autoplay muted loop id="videoBackground">
+  <source src="img/mar_loop.mp4" type="video/mp4">
+</video>
 
    <?php
    // Se o usuario possui sessao
@@ -58,7 +62,7 @@ saveCurrentURL();
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Login</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Entrar no sistema</h1>
                   </div>
                     <center>
    <br />
@@ -86,19 +90,19 @@ saveCurrentURL();
         	<tr>
    	          <td align="right" width=50%>Usuário:</td>
               <td align="left" width=50%>
-                <input type="text" id="username" name="email">
+                <input type="text" id="username" name="email" class="form-control bg-light border-0" style="width:250px;">
               </td>
             </tr>
             <tr>
               <td align="right">Senha:</td>
               <td align="left">
-                <input type="password" id="password" name="password">
+                <input type="password" id="password" name="password" class="form-control bg-light border-0" style="width:250px;">
               </td>
             </tr>
             <tr>
               <td height="70px" valign="middle" align="center" colspan=2>
                 <input type="hidden" name="afterLoginGoTo"  value="<?php   echo $_SESSION['afterLoginGoTo'];?>">
-                <input type="submit" value="Entrar">
+                <input class="btn btn-primary" type="submit" value="Entrar">
               </td>
             </tr>
           </table>
