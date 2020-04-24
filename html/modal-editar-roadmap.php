@@ -34,7 +34,7 @@ saveCurrentURL();
               <h4 class='modal-title'>Editar Prospecção</h4>
               <button type='button' class='close' data-dismiss='modal'>&times;</button>       
             </div>
-            <div class='modal-body'>";
+            <div id='content-teste' class='modal-body'>";
 
         echo "<form action='seeroadmap.php?".$cabecalho."=".$param."' method='post' multipart='' enctype='multipart/form-data'>
                 
@@ -60,7 +60,7 @@ saveCurrentURL();
                 <input type='text' id='keyConsulta' name='keyConsulta' class='form-control bg-light border-0 small' value='".$keyConsulta."'  aria-label='Search' aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
              
                 <div class='py-3' style='text-align: center;'>
-                <button class='btn btn-warning btn-icon-split' type='submit' name='deletarProspeccaoRoadmap' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button>
+                <button class='btn btn-danger btn-icon-split' type='submit' name='deletarProspeccaoRoadmap' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button>
                 <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoRoadmap' value='Salvar' style='width: 8em; height: 2em; display: inline-block;' />
 
                   </br>
@@ -76,6 +76,15 @@ saveCurrentURL();
 
   ?>
 
+<script>
+
+//onclick='validAction(event);'
+function validAction(e)
+{
+    if(!confirm('Confirmar ação?'))e.preventDefault();
+}
+
+</script>
  
 
 

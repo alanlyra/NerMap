@@ -2789,14 +2789,16 @@ fieldset:disabled a.btn {
 
 .btn-danger {
   color: #fff;
-  background-color: #e74a3b;
-  border-color: #e74a3b;
+  background-color: #e02d1b;
+  border-color: #d52a1a;
+  opacity: 75%;
 }
 
 .btn-danger:hover {
   color: #fff;
-  background-color: #e02d1b;
-  border-color: #d52a1a;
+  background-color: #e74a3b;
+  border-color: #e74a3b;
+  opacity: 75%;
 }
 
 .btn-danger:focus, .btn-danger.focus {

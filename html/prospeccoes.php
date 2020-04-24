@@ -92,8 +92,9 @@
                                 <td><a href='#' data-target='#modalArquivos' data-toggle='modal' data-id='arquivos-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='Visualizar arquivos' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
 
                                 <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Ir para Roadmaps' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
-                                <td>
-                                <form action='prospeccoes.php?roadmap=".$result->id_prospec."' method='post' multipart='' enctype='multipart/form-data' style='text-align: center;'>
+                                <td style='text-align: center;'>
+                                <a href='#' data-target='#modalEditarTrm' data-toggle='modal' data-id='editartrm-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."' data-tematrm='".$result->assunto_prospec."' data-anotrm='".$result->ano_prospec."'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do TRM' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></a>
+                                <form action='prospeccoes.php?roadmap=".$result->id_prospec."' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
                                 <button style='border: 0; background: transparent' type='submit' name='deleteProspec' value=''> <img src='/img/deletar2.png' title='Remover TRM' width='20px' height='20px'/></button >
                                 </form>
                                 </td>
@@ -138,7 +139,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Adicionar arquivo ao Roadmap</h4>
+          <h4 class="modal-title">Adicionar arquivo ao TRM</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           
         </div>
@@ -169,15 +170,15 @@
                     <label class="btn btn-plain" style="cursor: pointer;">
                       <input type="radio" name="rate" id="option1" value="1" autocomplete="off" style="cursor: pointer;" required> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
-                        <!-- <img src="img/conf_0.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_0_bw.png" style="width: 40px; height: 40px;" />
+                        <!-- <img src="img/conf_1.png" style="width: 40px; height: 40px;" /> -->
+                        <img src="img/conf_1_bw.png" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                     <label class="btn btn-plain" style="cursor: pointer;">
                       <input type="radio" name="rate" id="option2" value="3" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
-                        <!-- <img src="img/conf_2.5.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_2.5_bw.png" style="width: 40px; height: 40px;" />
+                        <!-- <img src="img/conf_3.png" style="width: 40px; height: 40px;" /> -->
+                        <img src="img/conf_3_bw.png" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                     <label class="btn btn-plain" style="cursor: pointer;">
@@ -190,8 +191,8 @@
                      <label class="btn btn-plain" style="cursor: pointer;">
                       <input type="radio" name="rate" id="option4" value="8" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
-                        <!-- <img src="img/conf_7.5.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_7.5_bw.png" style="width: 40px; height: 40px;" />
+                        <!-- <img src="img/conf_8.png" style="width: 40px; height: 40px;" /> -->
+                        <img src="img/conf_8_bw.png" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                      <label class="btn btn-plain" style="cursor: pointer;">
@@ -270,6 +271,15 @@
     </div>
   </div>
 
+  <div id="modalEditarTrm" class="modal fade" role="dialog">
+    <div id="edicao-trm" class="modal-dialog">
+      <!-- Modal content-->
+      
+    </div>
+  </div>
+
+  
+
   <script>
     function load(){
       document.getElementById("li_prospec").classList.add('active');
@@ -282,9 +292,21 @@
           if (typeof $(this).data('id') !== 'undefined') {
           	data_id = $(this).data('id');
           }
+
+          if (typeof $(this).data('nometrm') !== 'undefined') {
+            data_nometrm = $(this).data('nometrm');
+          }
+          if (typeof $(this).data('tematrm') !== 'undefined') {
+            data_tematrm = $(this).data('tematrm');
+          }
+          if (typeof $(this).data('anotrm') !== 'undefined') {
+            data_anotrm = $(this).data('anotrm');
+          }
+
           //console.log(data_id);
           var data_txt =  data_id.toString();
           var data_id_prospec = data_txt.replace('arquivos-','');
+          var data_id_editarTrm = data_txt.replace('editartrm-','');
           if(data_txt.indexOf('arquivos-') > -1) {
           	$.ajax({
 	            url: "table-arquivos-modal-prospec.php",
@@ -296,6 +318,20 @@
 	            }
           	})
           } 
+          else if (data_txt.indexOf('editartrm-') > -1) {
+            $.ajax({
+              url: "modal-editar-trm.php",
+              method: "POST",
+              data: { "identificador": data_id_editarTrm,
+                      "nometrm": data_nometrm,
+                      "tematrm": data_tematrm,
+                      "anotrm": data_anotrm },
+              success: function(html) {
+                $('#edicao-trm').html(html);
+                $('#modalEditarTrm').modal('show');
+              }
+            })
+          }
           else
           	document.getElementById('identificador').value = data_id;
 
@@ -336,6 +372,35 @@
 </html>
 
 <?php
+
+  if(isset($_POST["salvarEdicaoTRM"])) {
+
+      $idRoadmap = $_POST['idRoadmap'];
+      $nomeTrm = $_POST['nomeProspec'];
+      $temaTrm = $_POST['temaProspec'];
+      $anoTrm = $_POST['anoProspec'];
+
+      $update_on_prospec = set_data("UPDATE prospec SET nome_prospec = $1, assunto_prospec = $2, ano_prospec = $3 where id_prospec = $4", array($nomeTrm, $temaTrm, $anoTrm, $idRoadmap));
+
+      echo "<script>window.location.href = 'prospeccoes.php?';</script>";
+
+  }
+
+  if(isset($_POST["salvarEdicaoArquivo"])) {
+
+    $idArquivo = $_POST['idArquivo'];
+    $nomeArquivo = $_POST['nomeArquivo'];
+    $anoArquivo = $_POST['anoArquivo'];
+    $confArquivo = $_POST['confArquivo'];
+
+    $update_on_arquivo= set_data("UPDATE arquivos SET nome_arquivo = $1, ano_arquivo = $2, conf_arquivo = $3 where id_arquivo = $4", array($nomeArquivo, $anoArquivo, $confArquivo, $idArquivo));
+
+    echo "$('#modalEditarArquivo').modal('hide');";
+    echo "$('#modalArquivos').modal('hide');";
+
+    //echo "<script>window.location.href = 'prospeccoes.php?';</script>";
+
+}
 
   if(isset($_POST["deleteProspec"])) {
 

@@ -5,6 +5,8 @@ saveCurrentURL();
 
  <html>
  <?php include_once("head.php") ?>
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
  <body style="background-image: url('img/futuro.jpeg'); width: 98%">
 
    <?php
@@ -44,7 +46,15 @@ saveCurrentURL();
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-              <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+              <div class="col-lg-6 d-none d-lg-block bg-login-image">
+              
+              <div class="w3-display-middle">
+                <h1 class="w3-jumbo w3-animate-top" style="color: white;">NERMAP</h1>
+                <hr class="w3-border-grey" style="margin:auto;width:60%;color: white;">
+                <p class="w3-large w3-center" style="margin-top:5px;color: white;">Coppe UFRJ</p>
+              </div>
+              
+              </div>
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
