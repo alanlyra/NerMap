@@ -60,7 +60,7 @@ saveCurrentURL();
                             $key = "a.id_arquivo";
                             $key_roadmap_table = "id_arquivo_unico";
                             $tipoCabecalho = "arquivo";
-                          }
+                          }                      
 
 	                      	$side_left = true;
 	                        $section = array(
@@ -82,7 +82,7 @@ saveCurrentURL();
 	                            has_temppred => false,
 	                        );
 	                        $assunto_roadmap = "";
-	                        $array_sections = [];
+                          $array_sections = [];
 	                        $i = 0;
 	                        $i_section = 0;
 
@@ -137,6 +137,8 @@ saveCurrentURL();
                                       $section[info] .= $palavra . " ";               
 
                                       if($palavra == ".") {
+                                        $regex_references = '/-LSB-\s*(.*?)\s*-RSB-/';
+                                        $section[info] = preg_replace($regex_references, '', $section[info]);
                                       	$section[info] = str_replace(" % ", "% ", $section[info]);
                                         $section[id_arquivo] = $result2->id_arquivo;
                                         $section[arquivo_origem] = $result2->id_arquivo;
@@ -161,7 +163,7 @@ saveCurrentURL();
                                       if($tag != "O" && $tag != "" && $tag != null) {
 
                                         if($tag == "DATE") {
-                                          if($palavra != "today" && $palavra != "now") {
+                                          if($palavra != "today" && $palavra != "now" && $palavra != "right") {
                                             $section[date] = $result2->palavra;
                                             $section[has_date] = true;
                                           }
@@ -218,7 +220,7 @@ saveCurrentURL();
                           else
                           	$query0 = " AND id_arquivo_unico = ".$id_arquivo;
 
-					$search_roadmap3=get_data('SELECT * FROM roadmap r WHERE id_prospec_roadmap = '.$id_roadmap.' AND arquivo_origem = 0'.$query0.' order by tempo asc');
+					                  $search_roadmap3=get_data('SELECT * FROM roadmap r WHERE id_prospec_roadmap = '.$id_roadmap.' AND arquivo_origem = 0'.$query0.' order by tempo asc');
                               
                               while($result3=pg_fetch_object($search_roadmap3)) {
                                   $section[is_prospec] = true;
@@ -242,7 +244,11 @@ saveCurrentURL();
                                  }
                         $number2 = get_data("SELECT nome_prospec FROM prospec WHERE id_prospec =".intval($id_roadmap));
                         $row1 = pg_fetch_array($number2);        
-                        $nome_roadmap = $row1[0]; 
+                        $nome_roadmap = $row1[0];
+                        
+                        $number5 = get_data("SELECT ano_prospec FROM prospec WHERE id_prospec =".intval($id_roadmap));
+                        $row5 = pg_fetch_array($number5);        
+                        $ano_limite_roadmap = $row5[0]; 
 
                          echo "
                           <div class='col-xl-12 col-lg-12' style='height: 77vh;'>
@@ -293,9 +299,8 @@ saveCurrentURL();
 
                           $i_prospec = 0;
                           $array_relatorio = [];
-
-                   	
-
+                          $array_relatorio_filtered = [];
+                          
                          
                        if(isset($_GET["roadmap-completo"]))                          
                           set_data("DELETE FROM roadmap WHERE id_prospec_roadmap = ".$id_roadmap);
@@ -308,59 +313,65 @@ saveCurrentURL();
         				  array_multisort(array_column($array_sections, 'date'), SORT_ASC, $array_sections);
 
                           $previous_date = 0;
+                          $id_filtered = 0;
 
                           for ($j = 0; $j < sizeof($array_sections); $j++) {                            
                             if($array_sections[$j][is_prospec]) {  
                               $array_relatorio[$i_prospec] = $array_sections[$j];
-                              if($array_sections[$j][date] > $previous_date)
-                              	echo "<li><div class='tldate'>".$array_sections[$j][date]."</div></li>";
+                              if($array_sections[$j][date] > $array_sections[$j][ano_arquivo] && $array_sections[$j][date] <= $ano_limite_roadmap) {
+                                
+                                $array_relatorio_filtered[$id_filtered] = $array_sections[$j];
+                                if($array_sections[$j][date] > $previous_date)
+                                  echo "<li><div class='tldate'>".$array_sections[$j][date]."</div></li>";
 
-                              if($side_left)
-                                echo "<li>";
-                              else
-                                echo "<li class='timeline-inverted'>";
-                              echo "<div class='tl-circ'></div>
-                                      <div class='timeline-panel'>";
+                                if($side_left)
+                                  echo "<li>";
+                                else
+                                  echo "<li class='timeline-inverted'>";
+                                echo "<div class='tl-circ'></div>
+                                        <div class='timeline-panel'>";
 
-				                    /*if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-                                      	echo "<a href='/uploads/pdf/".$array_sections[$j][id_arquivo].".pdf' download><div><img src='img/pdf_download3.png' style='width: 20px; height: 20px; float:right;'/></a>";
-                                      else
-                                      	echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
-                                      	if($array_sections[$j][arquivo_origem] != 0) {	
-	                                      if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-	                                        echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/pdf_download3.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right;'/></a>";
-	                                      else
-	                                        echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/txt_download2.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
-	                                  }
-	                                   else {
-	                                   	 echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
-	                                  }
+                              /*if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
+                                          echo "<a href='/uploads/pdf/".$array_sections[$j][id_arquivo].".pdf' download><div><img src='img/pdf_download3.png' style='width: 20px; height: 20px; float:right;'/></a>";
+                                        else
+                                          echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
+                                          if($array_sections[$j][arquivo_origem] != 0) {	
+                                          if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
+                                            echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/pdf_download3.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right;'/></a>";
+                                          else
+                                            echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/txt_download2.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
+                                      }
+                                      else {
+                                        echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
+                                      }
 
-	                                  //Ver no texto
-                                     /* if($array_sections[$j][id_arquivo] != 0) {	
-	                                      if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-	                                        echo "<a href='#' data-target='#modalVerNoTexto' data-toggle='modal' data-id='verNoTexto-".$array_sections[$j][id_arquivo]."'><div><img src='img/add.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right;'/></a>";
-	                                      else
-	                                        echo "<a data-target='#modalVerNoTexto' data-toggle='modal' data-id='verNoTexto-".$array_sections[$j][id_arquivo]."'><div><img src='img/add.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
-	                                  }
-	                                   else {
-	                                   	 echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
-	                                  }
-*/
-                                      
-                                        echo "<div class='tl-heading'>
-                                          <h4>".$array_sections[$j][date]."</h4>
-                                          <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i><b>Fonte:</b> ".$array_sections[$j][nome_arquivo]." (".$array_sections[$j][ano_arquivo].")</small></p>
+                                      //Ver no texto
+                                      /* if($array_sections[$j][id_arquivo] != 0) {	
+                                          if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
+                                            echo "<a href='#' data-target='#modalVerNoTexto' data-toggle='modal' data-id='verNoTexto-".$array_sections[$j][id_arquivo]."'><div><img src='img/add.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right;'/></a>";
+                                          else
+                                            echo "<a data-target='#modalVerNoTexto' data-toggle='modal' data-id='verNoTexto-".$array_sections[$j][id_arquivo]."'><div><img src='img/add.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
+                                      }
+                                      else {
+                                        echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
+                                      }
+  */
+                                        
+                                          echo "<div class='tl-heading'>
+                                            <h4>".$array_sections[$j][date]."</h4>
+                                            <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i><b>Fonte:</b> ".$array_sections[$j][nome_arquivo]." (".$array_sections[$j][ano_arquivo].")</small></p>
+                                          </div>
+                                          <div class='tl-body'>
+                                            <p>".$array_sections[$j][info]."</p>
+                                          </div>
+                                          <div class='divBotaoEditarRoadmap' style='visibility: hidden;'>
+                                          <a href='#' data-target='#modalEditarRoadmap' data-toggle='modal' data-id='editarRoadmap-".$array_sections[$j][id_arquivo]."' data-indice='".$i_prospec."' data-date='".$array_sections[$j][date]."' data-info='".$array_sections[$j][info]."' data-cabecalho='".$tipoCabecalho."' data-prospec='".$id_roadmap."' ><div><img src='img/editar7.png' title='Editar prospecção' style='width: 20px; height: 20px; float:right; opacity: 50%;'/></a>
+                                          <div>
                                         </div>
-                                        <div class='tl-body'>
-                                          <p>".$array_sections[$j][info]."</p>
-                                        </div>
-                                        <div class='divBotaoEditarRoadmap' style='visibility: hidden;'>
-                                        <a href='#' data-target='#modalEditarRoadmap' data-toggle='modal' data-id='editarRoadmap-".$array_sections[$j][id_arquivo]."' data-indice='".$i_prospec."' data-date='".$array_sections[$j][date]."' data-info='".$array_sections[$j][info]."' data-cabecalho='".$tipoCabecalho."' data-prospec='".$id_roadmap."' ><div><img src='img/editar7.png' title='Editar prospecção' style='width: 20px; height: 20px; float:right; opacity: 50%;'/></a>
-                                        <div>
-                                      </div>
-                                    </li>";
-                              $side_left = !$side_left;                           
+                                      </li>";
+                                $side_left = !$side_left;
+                                $id_filtered++;
+                              }                           
                               $i_prospec++;
 
                               //Adiciona na tabela ROADMAP
@@ -732,9 +743,10 @@ saveCurrentURL();
   <script type="text/javascript">
 
   	function geraRelatorio() {
-    	var relatorio_arrayJS = <?php echo json_encode($array_relatorio); ?>;
+      var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
+      var nome_trmJS = <?php echo json_encode($nome_roadmap); ?>;
 
-  		var fileTitle = 'relatorio';
+  		var fileTitle = 'Relatório do TRM ' + nome_trmJS;
   		formatArray(relatorio_arrayJS);
   		exportCSVFile(headers, itemsFormatted, fileTitle);
   	}

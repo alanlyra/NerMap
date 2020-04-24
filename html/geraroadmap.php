@@ -35,7 +35,7 @@ require_once 'system.php';
         if($pieces_barra_Array[1] != "O" && $pieces_barra_Array[1] != "" && $pieces_barra_Array[1] != null) {
 
 	        if($pieces_barra_Array[1] == "DATE") {
-	          if($pieces_barra_Array[0] != "today" && $pieces_barra_Array[0] != "now") {
+	          if($pieces_barra_Array[0] != "today" && $pieces_barra_Array[0] != "now" && $pieces_barra_Array[0] != "right") {
 	            $has_date = true;
 	          }
 	        }
