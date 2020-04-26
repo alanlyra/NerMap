@@ -60,10 +60,10 @@ saveCurrentURL();
                 <input type='text' id='keyConsulta' name='keyConsulta' class='form-control bg-light border-0 small' value='".$keyConsulta."'  aria-label='Search' aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
              
                 <div class='py-3' style='text-align: center;'>
-                <button class='btn btn-danger btn-icon-split' type='submit' name='deletarProspeccaoRoadmap' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button>
-                <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoRoadmap' value='Salvar' style='width: 8em; height: 2em; display: inline-block;' />
+                  <a href='#' data-target='#modalConfirmarDeleteProspeccao' data-toggle='modal' data-id='deleteprospeccao-".$id_roadmap."' data-arquivo='".$id_arquivo."' data-ano='".$date_roadmap."' data-info='".$info_roadmap."' data-indice='".$indice_roadmap."' data-cabecalho='".$cabecalhoCompleto."' data-keyconsulta='".$keyConsulta."' style='display: inline-block; margin-left:3px;'><button class='btn btn-danger btn-icon-split' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button></a>
 
-                  </br>
+                  <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoRoadmap' value='Salvar' style='width: 8em; height: 2em; display: inline-block;' />
+
                 </div>
 
               </form>";
@@ -76,13 +76,64 @@ saveCurrentURL();
 
   ?>
 
-<script>
+  <!-- Confirma Remoção do TRM Modal-->
+  <div class="modal fade" id="modalConfirmarDeleteProspeccao" role="dialog" style="top: 15vh;">
+    <div id="delete-prospeccao" class="modal-dialog" >
+      
+    </div>
+  </div>
 
-//onclick='validAction(event);'
-function validAction(e)
-{
-    if(!confirm('Confirmar ação?'))e.preventDefault();
-}
+<script>
+var data_id = '';
+    $(document).ready(function() {
+        $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
+          
+          if (typeof $(this).data('id') !== 'undefined') {
+          	data_id = $(this).data('id');
+          }      
+
+          if (typeof $(this).data('arquivo') !== 'undefined') {
+            data_arquivo = $(this).data('arquivo');
+          }
+          if (typeof $(this).data('ano') !== 'undefined') {
+            data_anoarquivo = $(this).data('ano');
+          }
+          if (typeof $(this).data('info') !== 'undefined') {
+            data_infoarquivo = $(this).data('info');
+          }
+          if (typeof $(this).data('indice') !== 'undefined') {
+            data_indice = $(this).data('indice');
+          }
+          if (typeof $(this).data('cabecalho') !== 'undefined') {
+            data_cabecalho = $(this).data('cabecalho');
+          }
+          if (typeof $(this).data('keyconsulta') !== 'undefined') {
+            data_keyconsulta = $(this).data('keyconsulta');
+          }
+          
+
+          var data_txt =  data_id.toString();
+          var data_id_deleteprospeccao = data_txt.replace('deleteprospeccao-','');
+          if (data_txt.indexOf('deleteprospeccao-') > -1) {
+            $.ajax({
+              url: "modal-confirma-delete-prospeccao.php",
+              method: "POST",
+              data: { "identificador": data_id_deleteprospeccao,
+                      "arquivo": data_arquivo,
+                      "ano": data_anoarquivo,
+                      "info": data_infoarquivo,
+                      "indice": data_indice,
+                      "cabecalho": data_cabecalho,
+                      "consulta": data_keyconsulta },
+              success: function(html) {
+                $('#delete-prospeccao').html(html);
+                $('#modalConfirmarDeleteProspeccao').modal('show');
+              }
+            })
+          }
+        })
+    });
+
 
 </script>
  

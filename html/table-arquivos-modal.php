@@ -38,9 +38,9 @@ saveCurrentURL();
                   <td>".$result->id_arquivo."</td>
                   <td>".$result->nome_arquivo."</td>
                   <td>".$result->ano_arquivo."</td>
-                  <td><div style='text-align: center;'><img src='img/conf_".$result->conf_arquivo."_bw.png' title='Confiabilidade: ".$result->conf_arquivo." (Min: 1, Máx: 10)' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
+                  <td><div style='text-align: center;'><img src='img/conf_".$result->conf_arquivo."_bw.png' title='Confiabilidade: ".$result->conf_arquivo." (Mín: 1, Máx: 10)' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
                   <td><div style='text-align: center;'><img src='img/".$result->status_ren.".png' title='".$result->status_ren."' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
-                  <td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='Gerar roadmap do arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                  <td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='Ver roadmap do arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                 </tr>";
               }
     }

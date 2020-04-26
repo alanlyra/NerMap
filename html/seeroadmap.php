@@ -406,9 +406,9 @@ saveCurrentURL();
 							<div class='col-md-12 feature-box'>
 								<img src='img/timeline6.png' style='width: 130px; height: 100px; display: inline-block;'/>
 								<h4>Completo</h4>
-								<p>Gerar roadmap de todos os arquivos do TRM.</p>
+								<p>Roadmap de todos os arquivos do TRM.</p>
 								<button class='btn btn-primary' style='margin:5px;' 
-                            			onclick='redirect(\"seeroadmap.php?roadmap-completo=".$_GET["roadmap"]."\");'>Gerar roadmap</button>
+                            			onclick='redirect(\"seeroadmap.php?roadmap-completo=".$_GET["roadmap"]."\");'>Ver roadmap</button>
 								
 
 							</div>
@@ -417,7 +417,7 @@ saveCurrentURL();
 								<div class='col-md-12 feature-box'>
 								<img src='img/files2.png' style='width: 100px; height: 100px; display: inline-block;'/>
 								<h4>Individual</h4>
-								<p>Gerar roadmap individual de um arquivo do TRM.</p>
+								<p>Roadmap individual de um arquivo do TRM.</p>
 								<a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$_GET["roadmap"]."'><button class='btn btn-primary' style='margin:5px;'>Visualizar arquivos</button></a>
 							</div>
 						</div> <!-- End Col -->	
@@ -430,7 +430,7 @@ saveCurrentURL();
                   else {
                     echo "<div class='card shadow mb-4'>
                       <div class='card-header py-3'>
-                        <h6 class='m-0 font-weight-bold text-primary'>Selecione uma prospecção para gerar roadmap</h6>
+                        <h6 class='m-0 font-weight-bold text-primary'>Selecione uma prospecção para visualizar o roadmap</h6>
                       </div>
                       <div class='card-body'>
                         <div class='table-responsive'>
@@ -475,7 +475,7 @@ saveCurrentURL();
                                   		  echo "<img src='img/".$result->status_ren_prospec.".png' title='".$result->status_ren_prospec."' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 		  echo "</div></td>
                                 			</div></td>
-                                          <td><a href='/seeroadmap.php?roadmap-completo=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Gerar roadmap completo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                          <td><a href='/seeroadmap.php?roadmap-completo=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Visualizar roadmap completo do TRM' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                           <td><a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='Visualizar arquivos' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                         </tr>";
                                   }
@@ -520,14 +520,14 @@ saveCurrentURL();
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Arquivos do Roadmap</h4>
+          <h4 class="modal-title">Arquivos do TRM</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>       
         </div>
         <div class="modal-body">
           <!-- DataTales Example -->
          <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Selecione um arquivo para gerar roadmap</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Selecione um arquivo para visualizar o roadmap</h6>
             </div>
             <div class="card-body">
               <div id="table-modal" class="table-responsive">

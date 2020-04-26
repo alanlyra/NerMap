@@ -78,8 +78,6 @@ saveCurrentURL();
              
                 <div class='py-3' style='text-align: center;'>
                 
-                <button class='btn btn-danger btn-icon-split' type='submit' name='deletarProspeccaoRoadmap' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button>
-
                 <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoArquivo' value='Salvar' style='width: 8em; height: 2em; display: inline-block;' />
 
                   </br>

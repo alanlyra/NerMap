@@ -92,12 +92,13 @@
                                 <td><a href='#' data-target='#modalArquivos' data-toggle='modal' data-id='arquivos-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='Visualizar arquivos' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
 
                                 <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Ir para Roadmaps' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
-                                <td style='text-align: center;'>
-                                <a href='#' data-target='#modalEditarTrm' data-toggle='modal' data-id='editartrm-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."' data-tematrm='".$result->assunto_prospec."' data-anotrm='".$result->ano_prospec."'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do TRM' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></a>
-                                <form action='prospeccoes.php?roadmap=".$result->id_prospec."' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
-                                <button style='border: 0; background: transparent' type='submit' name='deleteProspec' value=''> <img src='/img/deletar2.png' title='Remover TRM' width='20px' height='20px'/></button >
-                                </form>
+
+                                <td style='text-align: center;'>                              
+                                  <a href='#' data-target='#modalEditarTrm' data-toggle='modal' data-id='editartrm-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."' data-tematrm='".$result->assunto_prospec."' data-anotrm='".$result->ano_prospec."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do TRM' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
+                          
+                                  <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='Remover TRM' style='width: 18px; height: 18px; display: inline-block;'/></div></a>                              
                                 </td>
+
       	                      </tr>";
       		                	}
       						  }
@@ -209,7 +210,7 @@
                 <input type="text" id="identificador" name="identificador" class="form-control bg-light border-0 small" placeholder="" aria-label="Search" aria-describedby="basic-addon2" style="display: none; visibility: hidden;">
              
                 <div class="py-3" style="text-align: center;">
-                <input class="btn btn-primary btn-icon-split" type="submit" name="adicionarArquivo" value="Enviar" style="width: 8em; height: 2em; display: inline-block;" />
+                <input class="btn btn-primary btn-icon-split" type="submit" name="adicionarArquivo" value="Adicionar" style="width: 8em; height: 2em; display: inline-block;" />
                   </br>
                 </div>
                 </form>
@@ -247,7 +248,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Arquivos do Roadmap</h4>
+          <h4 class="modal-title">Arquivos do TRM</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>       
         </div>
         <div class="modal-body">
@@ -278,7 +279,12 @@
     </div>
   </div>
 
-  
+  <!-- Confirma Remoção do TRM Modal-->
+  <div class="modal fade" id="modalConfirmarDeleteProspec" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="delete-trm" class="modal-dialog" role="document">
+      
+    </div>
+  </div>
 
   <script>
     function load(){
@@ -303,10 +309,15 @@
             data_anotrm = $(this).data('anotrm');
           }
 
+          if (typeof $(this).data('deleteprospec') !== 'undefined') {
+            deleteprospec = $(this).data('deleteprospec');
+          }
+
           //console.log(data_id);
           var data_txt =  data_id.toString();
           var data_id_prospec = data_txt.replace('arquivos-','');
           var data_id_editarTrm = data_txt.replace('editartrm-','');
+          var data_id_deleteprospec = data_txt.replace('deleteprospec-','');
           if(data_txt.indexOf('arquivos-') > -1) {
           	$.ajax({
 	            url: "table-arquivos-modal-prospec.php",
@@ -329,6 +340,17 @@
               success: function(html) {
                 $('#edicao-trm').html(html);
                 $('#modalEditarTrm').modal('show');
+              }
+            })
+          }
+          else if (data_txt.indexOf('deleteprospec-') > -1) {
+            $.ajax({
+              url: "modal-confirma-delete-trm.php",
+              method: "POST",
+              data: { "identificador": data_id_deleteprospec},
+              success: function(html) {
+                $('#delete-trm').html(html);
+                $('#modalConfirmarDeleteProspec').modal('show');
               }
             })
           }
@@ -404,7 +426,7 @@
 
   if(isset($_POST["deleteProspec"])) {
 
-    $id_prospec = $_GET["roadmap"];
+    $id_prospec = $_POST["idProspec"];
 
     $ids_arquivos = set_data("SELECT id_arquivo FROM arquivos WHERE id_prospec_arquivo = $1", array($id_prospec));
 
@@ -425,9 +447,9 @@
 
   if(isset($_POST["deleteArquivo"])) {
 
-      $id_arquivo = $_GET["arquivo"];
+      $id_arquivo = $_POST["idArquivo"];
 
-      $id_prospec = $_GET["roadmap"];
+      $id_prospec = $_POST["idProspec"];
 
       $remover_arquivo = set_data("DELETE FROM arquivos WHERE id_arquivo = $1", array($id_arquivo));
 
