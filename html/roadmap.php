@@ -121,7 +121,7 @@ saveCurrentURL();
         </div>
         <div class="modal-body">Clique em "Sair" para encerrar a sessão.</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Voltar</button>
+          <button class="btn btn-danger" type="button" data-dismiss="modal">Voltar</button>
           <a class="btn btn-primary" href="login.php?action=logout">Sair</a>
         </div>
       </div>
@@ -179,3 +179,7 @@ saveCurrentURL();
         echo "<script>window.location.href = 'prospeccoes.php';</script>";
     }
 ?>
+
+
+
+ 
