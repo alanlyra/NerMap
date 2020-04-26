@@ -174,7 +174,7 @@ saveCurrentURL();
 
   //TODO: REMOVER INSERÇÃO DE STATUS E CONFIABILIDADE
 	function db_prospec($id_prospec_db, $nome_db, $tema_db, $ano_db) {   
-        $save_on_prospec = set_data("INSERT INTO prospec (id_prospec, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec, status_ren_prospec, conf_prospec, usuario_prospec) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_prospec_db, $nome_db, $tema_db, $ano_db, 0, 'null', 10, $_SESSION['email']));
+        $save_on_prospec = set_data("INSERT INTO prospec (id_prospec, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec, status_ren_prospec, conf_prospec, usuario_prospec) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_prospec_db, $nome_db, $tema_db, $ano_db, 0, 'null', 10, $_SESSION['id']));
         //echo "<script>window.location.href = 'success.php?action=trm-adicionado';</script>";
         echo "<script>window.location.href = 'prospeccoes.php';</script>";
     }

@@ -83,8 +83,9 @@ function login($user,$password)
     {
       $usuario=pg_fetch_object($result);
       $_SESSION['email']=$usuario->email;
-      $_SESSION['name']=$usuario->name;
+      $_SESSION['name']=$usuario->name_user;
       $_SESSION['photo']=$usuario->photo;
+      $_SESSION['id']=$usuario->id_user;
       $_SESSION['admin']=($usuario->admin=='1'?true:false); //boolean convertion
       $_SESSION['message']=null;
       $function_ret=1;

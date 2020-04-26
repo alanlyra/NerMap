@@ -71,7 +71,7 @@
                   </tfoot>
                   <tbody>
               		<?php 
-                  	$search_results=get_data("SELECT * FROM prospec WHERE usuario_prospec = '". $_SESSION['email'] ."'order by id_prospec");
+                  	$search_results=get_data("SELECT * FROM prospec WHERE usuario_prospec = '". $_SESSION['id'] ."'order by id_prospec");
 
 		              	$results_max = pg_num_rows($search_results);
 
@@ -565,7 +565,7 @@
   }
 
   function db_arquivo($id_arquivo_db, $conf_value_db, $ano_db, $status_ren_db, $nome_arquivo_db, $identificador_db) {   
-      $save_on_arquivos = set_data("INSERT INTO arquivos (id_arquivo, nome_arquivo, ano_arquivo, autores_arquivo, conf_arquivo, id_prospec_arquivo, status_ren, usuario_arquivo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_arquivo_db, $nome_arquivo_db, $ano_db, 1, $conf_value_db, $identificador_db, 'PROCESSANDO', $_SESSION['email']));
+      $save_on_arquivos = set_data("INSERT INTO arquivos (id_arquivo, nome_arquivo, ano_arquivo, autores_arquivo, conf_arquivo, id_prospec_arquivo, status_ren, usuario_arquivo) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_arquivo_db, $nome_arquivo_db, $ano_db, 1, $conf_value_db, $identificador_db, 'PROCESSANDO', $_SESSION['id']));
       echo "<script>init_process(".$id_arquivo_db.");</script>"; 
     }
 
@@ -578,7 +578,7 @@
 ?>
 
 <?php
-	$number3 = get_data("SELECT id_prospec FROM prospec WHERE usuario_prospec = '".$_SESSION['email']."'");
+	$number3 = get_data("SELECT id_prospec FROM prospec WHERE usuario_prospec = '".$_SESSION['id']."'");
     $row3 = pg_fetch_all($number3);
 
     for($j=0; $j < sizeof($row3); $j++) {

@@ -53,7 +53,7 @@ saveCurrentURL();
     <li class="nav-item dropdown no-arrow">
       <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['name']?></span>
-        <img class="img-profile rounded-circle" src="img/alan.jpg">
+        <img class="img-profile rounded-circle" src="<?php echo $_SESSION['photo']?>">
       </a>
       <!-- Dropdown - User Information -->
       <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -62,8 +62,13 @@ saveCurrentURL();
           <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
           <?php echo $_SESSION['email']?>
         </a>
+        <div class="dropdown-divider" style="visibility: hidden; margin: 0;"></div>
+        <a class="dropdown-item" href="config-usuario.php" style="margin-bottom: 0.3rem;">
+          <i class="fas fa-cog fa-sm fa-fw mr-2 text-gray-400"></i>
+          Configurações
+        </a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal" style="margin-top: 0.3rem;">
           <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
           Sair
         </a>
