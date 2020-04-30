@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>NerMap</title>
+  <title>NERMAP</title>
    <link rel="shortcut icon" type="image/x-icon" href="img/horse.ico">
 
   <!-- Custom fonts for this template-->

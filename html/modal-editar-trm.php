@@ -46,7 +46,7 @@ saveCurrentURL();
              
                 <div class='py-3' style='text-align: center;'>
                 
-                <button class='btn btn-danger btn-icon-split' type='submit' name='deletarProspeccaoRoadmap' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button>
+                <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$id_roadmap."' style='display: inline-block; margin-left:3px;'><button class='btn btn-danger btn-icon-split' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button></a>  
 
                 <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoTRM' value='Salvar' style='width: 8em; height: 2em; display: inline-block;' />
 
@@ -63,10 +63,44 @@ saveCurrentURL();
 
   ?>
 
+  <!-- Confirma Remoção do TRM Modal-->
+  <div class="modal fade" id="modalConfirmarDeleteProspec" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="delete-trm" class="modal-dialog" role="document">
+      
+    </div>
+  </div>
+
   <script>
 
     var tema_trm_JS = "<?php echo $tema_trm; ?>";
     document.getElementById("option-"+tema_trm_JS).selected = true;
+
+    var data_id = '';
+    $(document).ready(function() {
+        $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
+          
+          if (typeof $(this).data('id') !== 'undefined') {
+          	data_id = $(this).data('id');
+          }         
+
+          var data_txt =  data_id.toString();
+          var data_id_deleteprospec = data_txt.replace('deleteprospec-','');         
+          if (data_txt.indexOf('deleteprospec-') > -1) {
+            $.ajax({
+              url: "modal-confirma-delete-trm.php",
+              method: "POST",
+              data: { "identificador": data_id_deleteprospec},
+              success: function(html) {
+                $('#delete-trm').html(html);
+                $('#modalConfirmarDeleteProspec').modal('show');
+              }
+            })
+          }
+          else
+          	document.getElementById('identificador').value = data_id;
+
+        })
+    });
 
   </script>
 

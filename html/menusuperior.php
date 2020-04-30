@@ -4,7 +4,7 @@ require_once 'checklogin.php';
 saveCurrentURL();
 ?>
 
-<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="background-image: url(img/futuro.jpeg);">
+<nav class="navbar navbar-expand navbar-light bg-menusuperior topbar mb-4 static-top shadow" style="background-image: url(img/futuro.jpeg);">
 
   <!-- Sidebar Toggle (Topbar) -->
   <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">

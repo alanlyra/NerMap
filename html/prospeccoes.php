@@ -1,3 +1,9 @@
+<?php
+require_once 'system.php';
+require_once 'checklogin.php';
+saveCurrentURL();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -93,8 +99,10 @@
 
                                 <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Ir para Roadmaps' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
 
-                                <td style='text-align: center;'>                              
-                                  <a href='#' data-target='#modalEditarTrm' data-toggle='modal' data-id='editartrm-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."' data-tematrm='".$result->assunto_prospec."' data-anotrm='".$result->ano_prospec."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do TRM' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
+                                <td style='text-align: center;'>      
+                                  <a href='#' data-target='#modalUsuarios' data-toggle='modal' data-id='usuarios-".$result->id_prospec."' data-usuarioconvite='".$_SESSION['id']."'style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/share2.png' title='Compartilhar' style='width: 18px; height: 18px; display: inline-block;'/></div></a>         
+
+                                  <a href='#' data-target='#modalEditarTrm' data-toggle='modal' data-id='editartrm-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."' data-tematrm='".$result->assunto_prospec."' data-anotrm='".$result->ano_prospec."' style='display: inline-block; margin-left:3px; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do TRM' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
                           
                                   <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='Remover TRM' style='width: 18px; height: 18px; display: inline-block;'/></div></a>                              
                                 </td>
@@ -286,6 +294,37 @@
     </div>
   </div>
 
+  <!-- Modal de Usuários-->
+  <div id="modalUsuarios" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Compartilhar TRM</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>       
+        </div>
+        <div class="modal-body">
+          <!-- DataTales Example -->
+         <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Convide um usuário para participar do TRM</h6>
+            </div>
+            <div class="card-body">
+              <div id="table-modal-usuarios" class="table-responsive">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script>
     function load(){
       document.getElementById("li_prospec").classList.add('active');
@@ -313,11 +352,16 @@
             deleteprospec = $(this).data('deleteprospec');
           }
 
+          if (typeof $(this).data('usuarioconvite') !== 'undefined') {
+            id_usuarioconvite = $(this).data('usuarioconvite');
+          }
+
           //console.log(data_id);
           var data_txt =  data_id.toString();
           var data_id_prospec = data_txt.replace('arquivos-','');
           var data_id_editarTrm = data_txt.replace('editartrm-','');
           var data_id_deleteprospec = data_txt.replace('deleteprospec-','');
+          var data_id_usuarios = data_txt.replace('usuarios-','');
           if(data_txt.indexOf('arquivos-') > -1) {
           	$.ajax({
 	            url: "table-arquivos-modal-prospec.php",
@@ -354,6 +398,18 @@
               }
             })
           }
+          else if(data_txt.indexOf('usuarios-') > -1) {
+          	$.ajax({
+	            url: "modal-usuarios-convite.php",
+	            method: "POST",
+	            data: { "identificador": data_id_usuarios,
+                      "usuario": id_usuarioconvite },
+	            success: function(html) {
+	              $('#table-modal-usuarios').html(html);
+	              $('#modalUsuarios').modal('show');
+	            }
+          	})
+          } 
           else
           	document.getElementById('identificador').value = data_id;
 
@@ -460,6 +516,22 @@
       $num_arquivos_prospec = get_num_arquivos_on_prospec($id_prospec);
 
       db_prospec($id_prospec, $num_arquivos_prospec);
+
+  }
+
+  if(isset($_POST["convidaUsuario"])) {
+
+    $id_prospec = $_POST["idProspec"];
+    $id_usuario_convidado = $_POST["idUsuarioConvidado"];
+    $id_usuario_convite = $_POST["idUsuarioConvite"];
+
+    echo "<script>console.log( 'idProspec: " . $id_prospec . "' );</script>";
+    echo "<script>console.log( 'idUsuarioConvidado: " . $id_usuario_convidado . "' );</script>";
+    echo "<script>console.log( 'idUsuarioConvite: " . $id_usuario_convite . "' );</script>";
+
+    $save_on_grupos = set_data("INSERT INTO grupos (id_prospec_grupos, id_user_grupos, accepted, id_user_convite) VALUES ($1, $2, $3, $4)", array($id_prospec, $id_usuario_convidado, 'false', $id_usuario_convite));
+
+    echo "<script>window.location.href = 'prospeccoes.php';</script>";
 
   }
 

@@ -90,4 +90,12 @@
   background-position: center;
 }
 
+.nermap_font_copyright {
+  color: #858796;
+  text-decoration: none;
+}
 
+.nermap_font_copyright :hover {
+  color:#c25b4e;
+  text-decoration: none;
+}

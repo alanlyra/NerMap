@@ -447,7 +447,16 @@ saveCurrentURL();
 
     var values = info_original_JS.split(" ");
 
-    var queryBusca = values[0] + " " + values[1] + " " + values[2] + " " + values[3];
+    var queryBusca = "";
+    if(values.length >= 5){
+      if(values[0].length != 1)
+        queryBusca = values[0] + " " + values[1] + " " + values[2] + " " + values[3] + " " + values[4];
+      else
+        queryBusca = values[2] + " " + values[3] + " " + values[4] + " " + values[5] + " " + values[6];
+    }
+    else {
+        queryBusca = values[0] + " " + values[1] + " " + values[2];
+    }    
 
     function searchTermPDF() {
       document.getElementById("findInput").value = queryBusca;

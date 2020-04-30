@@ -10,6 +10,10 @@ saveCurrentURL();
       $ano_arquivo= $_POST["anoarquivo"];
       $conf_arquivo = $_POST["confarquivo"];
 
+      $number1 = get_data("SELECT id_prospec_arquivo FROM arquivos WHERE id_arquivo =".intval($id_arquivo));
+      $row = pg_fetch_array($number1);        
+      $id_prospec = $row[0]; 
+
       echo "<div class='modal-content'>
             <div class='modal-header'>
               <h4 class='modal-title'>Editar informações do arquivo</h4>
@@ -77,6 +81,9 @@ saveCurrentURL();
                
              
                 <div class='py-3' style='text-align: center;'>
+
+                <a href='#' data-target='#modalConfirmarDeleteArquivo' data-toggle='modal' data-id='deleteprospec-".$id_prospec."' data-deletearquivo='".$id_arquivo."' style='display: inline-block; margin-right:3px;'><button class='btn btn-danger btn-icon-split' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button></a>
+                  
                 
                 <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoArquivo' value='Salvar' style='width: 8em; height: 2em; display: inline-block;' />
 
@@ -93,6 +100,13 @@ saveCurrentURL();
 
   ?>
 
+<div id="modalEditarArquivo" class="modal fade" role="dialog" style="top: 1vh;">
+    <div id="edicao-arquivo" class="modal-dialog">
+      <!-- Modal content-->
+      
+    </div>
+  </div>
+
   <script>
 
     function hideModalEdicaoArquivo() {
@@ -101,6 +115,36 @@ saveCurrentURL();
 
     var conf_arquivo_JS = "<?php echo $conf_arquivo; ?>";
     document.getElementById("divOption-"+conf_arquivo_JS).click();
+
+    var data_id = '';
+    $(document).ready(function() {
+        $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
+          
+          if (typeof $(this).data('id') !== 'undefined') {
+          	data_id = $(this).data('id');
+          }      
+
+          if (typeof $(this).data('deletearquivo') !== 'undefined') {
+            data_deletearquivo = $(this).data('deletearquivo');
+          }
+
+          var data_txt =  data_id.toString();
+          var data_id_deleteprospec = data_txt.replace('deleteprospec-','');
+          
+          if (data_txt.indexOf('deleteprospec-') > -1) {
+            $.ajax({
+              url: "modal-confirma-delete-arquivo.php",
+              method: "POST",
+              data: { "identificador": data_id_deleteprospec,
+                      "arquivo": data_deletearquivo},
+              success: function(html) {
+                $('#delete-arquivo').html(html);
+                $('#modalConfirmarDeleteArquivo').modal('show');
+              }
+            })
+          } 
+        })
+    });
 
   </script>
 
