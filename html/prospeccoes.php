@@ -124,11 +124,11 @@ saveCurrentURL();
                   <?php
                     if ($results_max>0)
                       if ($results_max==1)
-                        echo "<a class='dropdown-item text-center small text-gray-500'>Você tem ".$results_max." convite pendente!</a>";
+                        echo "<a class='dropdown-item text-center small text-gray-500'>Você tem ".$results_max." convite pendente.</a>";
                       else
-                        echo "<a class='dropdown-item text-center small text-gray-500'>Você tem ".$results_max." convites pendentes!</a>";
+                        echo "<a class='dropdown-item text-center small text-gray-500'>Você tem ".$results_max." convites pendentes.</a>";
                     else
-                      echo "<a class='dropdown-item text-center small text-gray-500'>Você não tem convites pendentes!</a>";
+                      echo "<a class='dropdown-item text-center small text-gray-500'>Você não tem convites pendentes.</a>";
                   ?>
                   
                 </div>
@@ -202,14 +202,14 @@ saveCurrentURL();
                                 <td style='text-align: center;'>";
                                 
                                 if($result->usuario_prospec == $result->id_user_grupos) {
-                                  echo " <a href='#' data-target='#modalUsuarios' data-toggle='modal' data-id='usuarios-".$result->id_prospec."' data-usuarioconvite='".$_SESSION['id']."'style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/shared5.png' title='Compartilhamento' style='width: 18px; height: 18px; display: inline-block; opacity:70%;'/></div></a>         
+                                  echo " <a href='#' data-target='#modalUsuarios' data-toggle='modal' data-id='usuarios-".$result->id_prospec."' data-usuarioconvite='".$_SESSION['id']."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/shared5.png' title='Compartilhamento' style='width: 18px; height: 18px; display: inline-block; opacity:70%;'/></div></a>         
 
                                   <a href='#' data-target='#modalEditarTrm' data-toggle='modal' data-id='editartrm-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."' data-tematrm='".$result->assunto_prospec."' data-anotrm='".$result->ano_prospec."' style='display: inline-block; margin-left:3px; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do TRM' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
                           
                                   <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='Remover TRM' style='width: 18px; height: 18px; display: inline-block;'/></div></a>";
                                 }
                                 else{
-                                  echo "<a href='#' data-target='#removeCompartilharmentoTRM' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/out5.png' title='Sair do compartilhamento' style='width: 22px; height: 22px; display: inline-block; opacity: 70%;'/></div></a>";
+                                  echo "<a href='#' data-target='#modalRemoveCompartilharmentoTRM' data-toggle='modal' data-id='removecompartilhamentoprospec-".$result->id_prospec."' data-usuarioremovecompartilhamento='".$_SESSION['id']."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/out5.png' title='Sair do compartilhamento' style='width: 22px; height: 22px; display: inline-block; opacity: 70%;'/></div></a>";
                                 }
 
                                 echo "</td>
@@ -401,6 +401,13 @@ saveCurrentURL();
     </div>
   </div>
 
+  <!-- Confirma Sair do compartilhamento do TRM Modal-->
+  <div class="modal fade" id="modalRemoveCompartilharmentoTRM" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="remove-compartilhamento-trm" class="modal-dialog" role="document">
+      
+    </div>
+  </div>
+
   <!-- Modal de Usuários-->
   <div id="modalUsuarios" class="modal fade" role="dialog">
     <div class="modal-dialog modal-xl">
@@ -463,12 +470,17 @@ saveCurrentURL();
             id_usuarioconvite = $(this).data('usuarioconvite');
           }
 
+          if (typeof $(this).data('usuarioremovecompartilhamento') !== 'undefined') {
+            id_usuarioremovecompartilhamento = $(this).data('usuarioremovecompartilhamento');
+          }
+
           //console.log(data_id);
           var data_txt =  data_id.toString();
           var data_id_prospec = data_txt.replace('arquivos-','');
           var data_id_editarTrm = data_txt.replace('editartrm-','');
           var data_id_deleteprospec = data_txt.replace('deleteprospec-','');
           var data_id_usuarios = data_txt.replace('usuarios-','');
+          var data_id_removecompartilhamentoprospec = data_txt.replace('removecompartilhamentoprospec-','');
           if(data_txt.indexOf('arquivos-') > -1) {
           	$.ajax({
 	            url: "table-arquivos-modal-prospec.php",
@@ -514,6 +526,18 @@ saveCurrentURL();
 	            success: function(html) {
 	              $('#table-modal-usuarios').html(html);
 	              $('#modalUsuarios').modal('show');
+	            }
+          	})
+          }
+          else if(data_txt.indexOf('removecompartilhamentoprospec-') > -1) {
+          	$.ajax({
+	            url: "modal-confirma-sair-compartilhamento.php",
+	            method: "POST",
+	            data: { "identificador": data_id_removecompartilhamentoprospec,
+                      "usuario": id_usuarioremovecompartilhamento },
+	            success: function(html) {
+	              $('#remove-compartilhamento-trm').html(html);
+	              $('#modalRemoveCompartilharmentoTRM').modal('show');
 	            }
           	})
           } 
@@ -656,7 +680,18 @@ saveCurrentURL();
     $id_usuario_convidado = $_POST["idUsuarioConvidado"];
     $id_usuario_convite = $_POST["idUsuarioConvite"];
 
-    $save_on_grupos = set_data("DELETE from grupos WHERE id_prospec_grupos = $1 AND id_user_grupos = $2 AND id_user_convite = $3", array($id_prospec, $id_usuario_convidado, $id_usuario_convite));
+    $delete_on_grupos = set_data("DELETE from grupos WHERE id_prospec_grupos = $1 AND id_user_grupos = $2 AND id_user_convite = $3", array($id_prospec, $id_usuario_convidado, $id_usuario_convite));
+
+    echo "<script>window.location.href = 'prospeccoes.php';</script>";
+
+  }
+
+  if(isset($_POST["removeCompartilhamento"])) {
+
+    $id_prospec = $_POST["idProspec"];
+    $id_usuario_compartilhamento = $_POST["idUsuarioCompartilhamento"];
+
+    $delete_on_grupos = set_data("DELETE from grupos WHERE id_prospec_grupos = $1 AND id_user_grupos = $2 AND id_user_convite IS NOT NULL", array($id_prospec, $id_usuario_compartilhamento));
 
     echo "<script>window.location.href = 'prospeccoes.php';</script>";
 
