@@ -42,14 +42,106 @@ saveCurrentURL();
             <button style='display: none; float:right; border: 0; margin: 0px; background: transparent;' onclick='reloadPage();'>
          		<img src='img/refresh5.png' style='width: 20px; height: 20px; display: inline-block;'/>
         	 </button>                 	
-              <h6 class="m-0 font-weight-bold text-primary">Technology Roadmappings</h6>
+              <h6 class="m-0 font-weight-bold text-primary" style="float:left;">Technology Roadmappings</h6>
+
+              <?php
+                
+                $search_results=get_data("SELECT id_prospec_grupos, id_user_grupos, accepted, id_user_convite, email, name_user, photo, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec, status_ren_prospec, conf_prospec, usuario_prospec FROM grupos g INNER JOIN users u ON g.id_user_convite = u.id_user INNER JOIN prospec p ON g.id_prospec_grupos = p.id_prospec WHERE g.accepted = 'false' AND g.id_user_convite is not null AND g.id_user_grupos = ".$_SESSION['id']);
+
+                $results_max = pg_num_rows($search_results);
+           
+              ?>
+
+              <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="background-color: whitesmoke; float:right; margin:0; height:15px; padding: 0; margin-bottom: 0px !important;">
+
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - Messages -->
+              <li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none;">
+                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="height: 5px;">
+                  <i class="fas fa-envelope fa-fw"></i>
+                  <!-- Counter - Messages -->
+                  <?php
+                    if ($results_max>0)
+                      echo "<span class='badge badge-danger badge-counter'>".$results_max."</span>";
+                  ?>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                  
+                  <h6 class="dropdown-header">
+                    Convites
+                  </h6>
+
+                  <?php
+                    if ($results_max>0) {
+                      $h = $results_max * 85;
+                      if ($h > 256)
+                        echo "<div style='height: 255px; width: 500px; overflow: auto;'>";
+                      else
+                        echo "<div style='height: ".$h."px; width: 500px; overflow: auto;'>";
+                    }
+                    else
+                    echo "<div style='height: 0px; width: 500px; overflow: auto;'>";
+                  ?>
+                  
+                  <?php
+
+                      if ($results_max>0) {
+
+                        while($result2=pg_fetch_object($search_results)) {
+
+                          echo "<a class='dropdown-item d-flex align-items-center' href='#' style='cursor: default;'>
+                                  <div class='dropdown-list-image mr-3'>
+                                    <img class='rounded-circle' src='".$result2->photo."' alt='' style='width:50px; height:50px;'>
+                                  </div>
+                                  <div class='font-weight-bold'>
+                                    <div class='text-truncate'>".$result2->nome_prospec."</div>
+                                    <div class='small text-gray-500'>".$result2->name_user." te convidou para participar do TRM.</div>
+
+                                    <form action='prospeccoes.php?' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
+                                      <input type='text' id='idProspec' name='idProspecGrupos' class='form-control bg-light border-0 small' value='".$result2->id_prospec_grupos."' aria-label='Search' 
+                                      aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
+                                      <input type='text' id='idUsuarioConvidado' name='idUsuarioConvidado' class='form-control bg-light border-0 small' value='".$result2->id_user_grupos."' aria-label='Search' 
+                                      aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
+                                      <input type='text' id='idUsuarioConvite' name='idUsuarioConvite' class='form-control bg-light border-0 small' value='".$result2->id_user_convite."' aria-label='Search' 
+                                      aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
+              
+                                      <input class='button-transparent-aceitar' type='submit' name='aceitaConvite' value='Aceitar' style='float:left;'/>
+                                      <div class='small text-gray-500' style='float:left; margin-left:3px; margin-right:3px;'> · </div>
+                                      <input class='button-transparent-remover' type='submit' name='removeConvite' value='Remover' style='float:left; margin-left: 0.5px;'/>
+                                    </form>
+
+                                    
+                                  </div>
+                                </a>";
+
+                        }
+                      }
+
+                  ?>
+                  
+                  </div>
+                  <?php
+                    if ($results_max>0)
+                      if ($results_max==1)
+                        echo "<a class='dropdown-item text-center small text-gray-500'>Você tem ".$results_max." convite pendente!</a>";
+                      else
+                        echo "<a class='dropdown-item text-center small text-gray-500'>Você tem ".$results_max." convites pendentes!</a>";
+                    else
+                      echo "<a class='dropdown-item text-center small text-gray-500'>Você não tem convites pendentes!</a>";
+                  ?>
+                  
+                </div>
+              </li>
+            </ul>
+            </nav>
             </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>ID</th>
+                      <th style="position:unset;"></th>
                       <th style="width: 300px">Nome</th>
                       <th>Tema</th>
                       <th>Ano</th>
@@ -63,7 +155,7 @@ saveCurrentURL();
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>ID</th>
+                      <th></th>
                       <th>Nome</th>
                       <th>Tema</th>
                       <th>Ano</th>
@@ -77,17 +169,24 @@ saveCurrentURL();
                   </tfoot>
                   <tbody>
               		<?php 
-                  	$search_results=get_data("SELECT * FROM prospec WHERE usuario_prospec = '". $_SESSION['id'] ."'order by id_prospec");
+                  	$search_results=get_data("SELECT * FROM prospec p INNER JOIN grupos g on g.id_prospec_grupos = p.id_prospec WHERE g.accepted = 'true' AND g.id_user_grupos =  '". $_SESSION['id'] ."' order by p.id_prospec");
 
 		              	$results_max = pg_num_rows($search_results);
 
       				    	if  ($results_max>0) {
       							while($result=pg_fetch_object($search_results)) {
       						    	echo "<tr>
-        							    		  <td>".$result->id_prospec."</td>
+                                <td style='text-align: center;' width='30px;'>
+                                  <div style='text-align: center;'>";
+                                    if($result->usuario_prospec == $result->id_user_grupos)
+                                      echo "<img src='img/manager2.png' title='Dono do TRM' style='width: 22px; height: 20px; display: inline-block; opacity:60%;'/>";
+                                    else
+                                      echo "<img src='img/shared5.png' title='Compartilhado com você' style='width: 20px; height: 20px; display: inline-block; opacity:70%;'/>";
+                                echo "</div>
+                                </td>
         	                      <td>".$result->nome_prospec."</td>
         	                      <td>".$result->assunto_prospec."</td>
-        	                      <td>".$result->ano_prospec."</td>
+        	                      <td style='width='2em;'>".$result->ano_prospec."</td>
         	                      <td>".$result->num_textos_prospec."</td>
         	                       <td><div style='text-align: center;'>";
                                 if($result->status_ren_prospec != "null")
@@ -99,13 +198,21 @@ saveCurrentURL();
 
                                 <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Ir para Roadmaps' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
 
-                                <td style='text-align: center;'>      
-                                  <a href='#' data-target='#modalUsuarios' data-toggle='modal' data-id='usuarios-".$result->id_prospec."' data-usuarioconvite='".$_SESSION['id']."'style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/share2.png' title='Compartilhar' style='width: 18px; height: 18px; display: inline-block;'/></div></a>         
+
+                                <td style='text-align: center;'>";
+                                
+                                if($result->usuario_prospec == $result->id_user_grupos) {
+                                  echo " <a href='#' data-target='#modalUsuarios' data-toggle='modal' data-id='usuarios-".$result->id_prospec."' data-usuarioconvite='".$_SESSION['id']."'style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/shared5.png' title='Compartilhamento' style='width: 18px; height: 18px; display: inline-block; opacity:70%;'/></div></a>         
 
                                   <a href='#' data-target='#modalEditarTrm' data-toggle='modal' data-id='editartrm-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."' data-tematrm='".$result->assunto_prospec."' data-anotrm='".$result->ano_prospec."' style='display: inline-block; margin-left:3px; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do TRM' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
                           
-                                  <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='Remover TRM' style='width: 18px; height: 18px; display: inline-block;'/></div></a>                              
-                                </td>
+                                  <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='Remover TRM' style='width: 18px; height: 18px; display: inline-block;'/></div></a>";
+                                }
+                                else{
+                                  echo "<a href='#' data-target='#removeCompartilharmentoTRM' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/out5.png' title='Sair do compartilhamento' style='width: 22px; height: 22px; display: inline-block; opacity: 70%;'/></div></a>";
+                                }
+
+                                echo "</td>
 
       	                      </tr>";
       		                	}
@@ -301,14 +408,14 @@ saveCurrentURL();
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Compartilhar TRM</h4>
+          <h4 class="modal-title">Compartilhamento do TRM</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>       
         </div>
         <div class="modal-body">
           <!-- DataTales Example -->
          <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Convide um usuário para participar do TRM</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Adicionar usuários ao TRM</h6>
             </div>
             <div class="card-body">
               <div id="table-modal-usuarios" class="table-responsive">
@@ -525,11 +632,31 @@ saveCurrentURL();
     $id_usuario_convidado = $_POST["idUsuarioConvidado"];
     $id_usuario_convite = $_POST["idUsuarioConvite"];
 
-    echo "<script>console.log( 'idProspec: " . $id_prospec . "' );</script>";
-    echo "<script>console.log( 'idUsuarioConvidado: " . $id_usuario_convidado . "' );</script>";
-    echo "<script>console.log( 'idUsuarioConvite: " . $id_usuario_convite . "' );</script>";
-
     $save_on_grupos = set_data("INSERT INTO grupos (id_prospec_grupos, id_user_grupos, accepted, id_user_convite) VALUES ($1, $2, $3, $4)", array($id_prospec, $id_usuario_convidado, 'false', $id_usuario_convite));
+
+    echo "<script>window.location.href = 'prospeccoes.php';</script>";
+
+  }
+
+  if(isset($_POST["aceitaConvite"])) {
+
+    $id_prospec = $_POST["idProspecGrupos"];
+    $id_usuario_convidado = $_POST["idUsuarioConvidado"];
+    $id_usuario_convite = $_POST["idUsuarioConvite"];
+
+    $save_on_grupos = set_data("UPDATE grupos SET accepted = 'true' WHERE id_prospec_grupos = $1 AND id_user_grupos = $2 AND id_user_convite = $3", array($id_prospec, $id_usuario_convidado, $id_usuario_convite));
+
+    echo "<script>window.location.href = 'prospeccoes.php';</script>";
+
+  }
+
+  if(isset($_POST["removeConvite"])) {
+
+    $id_prospec = $_POST["idProspecGrupos"];
+    $id_usuario_convidado = $_POST["idUsuarioConvidado"];
+    $id_usuario_convite = $_POST["idUsuarioConvite"];
+
+    $save_on_grupos = set_data("DELETE from grupos WHERE id_prospec_grupos = $1 AND id_user_grupos = $2 AND id_user_convite = $3", array($id_prospec, $id_usuario_convidado, $id_usuario_convite));
 
     echo "<script>window.location.href = 'prospeccoes.php';</script>";
 

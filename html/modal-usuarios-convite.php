@@ -7,16 +7,16 @@ saveCurrentURL();
 <table class="table table-bordered" id="table-arquivos" width="100%" cellspacing="0">
   <thead>
     <tr>
+      <th style="position:unset;"></th>
       <th>Usuário</th>
-      <th>Nome</th>
       <th>Email</th>
-      <th>Compartilhar</th>
+      <th style='width: 20px;'>Compartilhar</th>
     </tr>
   </thead>
   <tfoot>
     <tr>
+      <th></th>
       <th>Usuário</th>
-      <th>Nome</th>
       <th>Email</th>
       <th>Compartilhar</th>
     </tr>
@@ -25,31 +25,58 @@ saveCurrentURL();
   <?php 
       $id_prospec = $_POST["identificador"];
       $id_usuario = $_POST["usuario"];
-      $search_popup=get_data("SELECT * FROM users");   
+     
+      $search_popup=get_data("SELECT * FROM users u WHERE u.id_user != ".$_SESSION['id']);   
 
       $results_max_popup = pg_num_rows($search_popup);
 
       if  ($results_max_popup>0) {
       while($result=pg_fetch_object($search_popup)) {
+
+
           echo "<tr>
                   <td style='text-align: center;' width='30px;'><img class='img-profile rounded-circle' src='".$result->photo."' style='width:30px; height:30px;' title='".$result->name_user."'/></td>
                   <td>".$result->name_user."</td>
                   <td>".$result->email."</td>
 
-                  <td>
-                    <form action='prospeccoes.php?' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
-                        <input type='text' id='idProspec' name='idProspec' class='form-control bg-light border-0 small' value='".$id_prospec."' aria-label='Search' 
-                        aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
-                        <input type='text' id='idUsuarioConvidado' name='idUsuarioConvidado' class='form-control bg-light border-0 small' value='".$result->id_user."' aria-label='Search' 
-                        aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
-                        <input type='text' id='idUsuarioConvite' name='idUsuarioConvite' class='form-control bg-light border-0 small' value='".$id_usuario."' aria-label='Search' 
-                        aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
+                  <td style='text-align: center;'>";
 
-                        <input class='btn btn-primary' type='submit' name='convidaUsuario' value='Convidar' />
-                    </form>
-                  </td>
-                  
-                </tr>";
+                  $search_popup2=get_data("SELECT * FROM users u INNER JOIN grupos g on u.id_user = g.id_user_grupos WHERE g.id_prospec_grupos = ".$id_prospec." AND u.id_user = ".$result->id_user);
+
+                  $results_max_popup2 = pg_num_rows($search_popup2);
+
+                  if  ($results_max_popup2 > 0) {
+                    
+                    $result2=pg_fetch_object($search_popup2);
+
+                      if($result2->accepted == "t")
+                        echo "<div style='text-align: center;'>
+                                <button style='border: 0; background: transparent; display: inline-block;' type='submit' name='convidaUsuario' value=''> <img src='/img/shared5.png' title='".$result2->name_user." já participa do TRM' width='20px' height='20px' style='opacity:70%;' /></button >
+                              </div>";
+                      else
+                      echo "<div style='text-align: center;'>
+                              <button style='border: 0; background: transparent; display: inline-block;' type='submit' name='convidaUsuario' value=''> <img src='/img/wait.png' title='Aguardando ".$result2->name_user." aceitar o convite' width='20px' height='20px' style='opacity:60%;' /></button >
+                            </div>";
+                                   
+                  }
+                  else{
+                    echo  "<form action='prospeccoes.php?' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
+                            <input type='text' id='idProspec' name='idProspec' class='form-control bg-light border-0 small' value='".$id_prospec."' aria-label='Search' 
+                            aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
+                            <input type='text' id='idUsuarioConvidado' name='idUsuarioConvidado' class='form-control bg-light border-0 small' value='".$result->id_user."' aria-label='Search' 
+                            aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
+                            <input type='text' id='idUsuarioConvite' name='idUsuarioConvite' class='form-control bg-light border-0 small' value='".$id_usuario."' aria-label='Search' 
+                            aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
+
+                            <div style='text-align: center;'>
+                              <button style='border: 0; background: transparent; display: inline-block;' type='submit' name='convidaUsuario' value=''> <img src='/img/invite.png' title='Enviar convite para ".$result->name_user."' width='20px' height='20px'/></button >
+                            </div>  
+                          </form>";                    
+
+                  }    
+                 
+                  echo "</td>   
+                    </tr>";
               }
     }
     ?>

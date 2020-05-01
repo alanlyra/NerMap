@@ -1,0 +1,3777 @@
+   	
+A view of how changes on the work will affect society      
+Table of Contents 
+Overview ................................................................................................................................. 1	 
+1.  Introduction ............................................. ...................................................................................................... 2 	
+Part 1:  Key Trends of Future Work ............................ ............................................................ 5	 
+2.  Increasing automation will impact your life ............................ ........................................................ 6 
+2.1.  Will we need policies to regulate advanced AI and Robots?  ............................................... 6 
+2.2.  How Internet of Things (IoT) will impact us?  ........................................................................... 7 
+3.  Employment will be continuously changing .............................. ...................................................... 9 
+3.1.  My career no longer exists. What should I do now?  ................................................................ 9 
+3.2.  Will the globalized work overcome local work?  .................................................................... 10 
+3.3.  Will I have to work here all day long?  ....................................................................................... 11 
+3.4.  How about my labor rights?  ..................................................................................................... ..... 12 
+3.5.  Will trade unions lose their importance?  ................................................................................. 13 
+4.  Education will need to be updated ........................................ ............................................................. 15 
+4.1.  Do we need new skills?  .................................................. ................................................... ............... 15 
+4.2.  How will knowledge-intensive work change the Education?  ............................................ 16 
+4.3.  Will self-employment save the world?  ....................................................................................... 17 
+4.4.  Will everyone receive Advanced Education and Training? ................................................ 18 
+5.  We are slowly moving to a social welfare state ................................ ............................................ 18 
+5.1.  Will we have to change our definition of old?  ......................................................................... 19 
+5.2.  Are we entering in the equality era?  .......................................................................................... 20 
+5.3.  Is Universal Basic Income a solution?  ........................................................................................ 22 
+6.  The economy will grow faster .................................... .......................................................................... 23 
+6.1.  Is Knowledge the key? ................................................... ................................................... ................ 25 
+6.2.  Will Automation destroy or enhance the Economy?  ............................................................ 27 
+6.3.  Will the Advances in technology increase inequality?  ......................................................... 27 	
+Part 2:  A view of Future Work in 2050 ........................ ......................................................... 29	 
+7.  Optimistic Scenario ....................................... ............................................................................................ 30 
+7.1.  Automation  .................................................. ................................................... ..................................... 30 
+7.2.  Employment  .................................................. ................................................... ................................... 30 
+7.3.  Education  .................................................. ................................................... ........................................ 31 
+7.4.  Social Welfare ................................................... ................................................... ............................... 31 
+7.5.  Economy  .................................................. ................................................... .......................................... 31 
+8.  Pessimist Scenario ...................................... .............................................................................................. 32 
+8.1.  Automation  .................................................. ................................................... ..................................... 32 
+8.2.  Employment  .................................................. ................................................... ................................... 32 
+8.3.  Education  .................................................. ................................................... ........................................ 33 
+8.4.  Social welfare  .................................................. ................................................... ................................ 34 
+8.5.  Economy  .................................................. ................................................... .......................................... 35 
+9.  Likely Scenario ........................................... ................................................................................................ 35 
+9.1.  Automation  .................................................. ................................................... ..................................... 35 
+9.2.  Employment  .................................................. ................................................... ................................... 36 
+9.3.  Education  .................................................. ................................................... ........................................ 37 
+9.4.  Social Welfare ................................................... ................................................... ............................... 37 
+9.5.  Economy  .................................................. ................................................... .......................................... 38 	
+References ........................................... ................................................................................. 40    
+OVERVIEW	 
+                               	
+   
+In this chapter we present the aim of this report.	 	
+Introduction    OVERVIEW	 	
+2 W	ORKING IN  	2050	 	
+O 
+1. I	NTRODUCTION	 	
+Work  has  changed  and  it  is  changing, 
+this  could  have  been  said  at  any  time  in  
+history.  The  very  meaning  of  the  word 
+“work”  is  multiple  and  changed  throughout 
+time.  Etymologically,  its  origins  go  back  to  
+the  Latin  word 	
+tripalium	  which  means  a 
+torture device [1]. 
+In  the  Greek  society,  only  slaves  or 
+second-class  citizens  used  to  work  as  it  was 
+mainly  a  physical  activity  considered  
+undesirable  by  the  upper-class  people  [2].  
+Work  remained  as  an  activity  reserved  for  
+the  unfortunate  on  the  medieval  ages  as  it  
+was  considered  something  terrible  by  the  
+Catholic  Church  and  the  nobles  [3].  The 
+ethics  of  the  religious  denominations  that 
+derived  from  the  Protestant  Reformation  
+went  in  direct  opposition  with  the  Catholic  
+perspective of work   by  viewing  it  as  a 
+mean to salvation [4]. 
+This  change  in  the  meaning  of  work 
+was  extremely  important  for  the  Industrial 
+Revolution that was to follow for it provided  
+the  cultural  and  moral  justification  to  keep  
+people  working  for  at  least  16  hours  per  
+day.  The  industrial  revolutions  deserve  
+special  consideration  in  the  history  of  work 
+as  they  represent  “profound  changes  in  the 
+means  of  production”  [5],  in  these  periods 
+work  suffered  severe  changes  in  a  short 
+period of time. 
+The  1 st
+  Industrial  Revolution  –  which 
+took  place  in  the  XVIII  century  – 
+represented  the  shift  from  an  artisanal 
+production  to  the  factory  mode  of 
+production  boosted  by  the  new  steam- 
+powered  machines  [5].  Several  intellectuals  
+perceived  the  changes  happening  in  this 
+period  and  –  even  though  their  accounts 
+differed  in  several  ways  –  there  are  some 
+points  of  convergence.  For  example,  Smith 
+and  Marx  saw  how  the  work  done  by  the 
+artisans  was  being  replaced  by  a  highly 
+specialized work and that work organization  
+was  bringing  several  negative  effects  to  the  
+workers  and  positive  economic  results  [6],  
+[7].  During  the  2
+nd
+  Industrial  Revolution, 
+when  electricity  was  applied  in  the  
+production,  work  has  also  changed  rapidly  
+[5]. The characteristics of the factory system 
+were  further  intensified  by  the  works  of 
+entrepreneurs  such  as  Taylor  that  brought  
+the  scientific  administration  to  the  factories  
+and  Ford  that  sought  to  intensify  the 
+division  and  specialization  of  work  by  the 
+creation  of  the  production  lines[8],  [9].  The  
+electrification  of  production  meant  that  
+machines  substituted  some  of  the  work 
+done  by  the  people.  Around  that  time, 
+Fayol’s  work  helped  to  organize  companies  
+as the white-collar work was increasing[10]. 
+The  invention  of  Information  and 
+Computation  Technologies  (ICT)  and  its  
+application  on  business  around  the  1970s  
+represent  the  main  event  of  the  3 rd
+ 
+Industrial  Revolution  [11].  With  the  ICTs  
+came  new  industries  and  new  types  of jobs, 
+the  main  product  of  many  companies  
+became  information  and  the  third  sector  of  
+the  economy  (services)  represented  –  for 
+the  first  time  in  history  –  the  biggest  share 
+of GDP of several developed countries.  
+Robotics,  Artificial  Intelligence  (AI),  bio 
+and  nanotechnology  are  considered  the  tip 
+of  the  iceberg  of  what  might  be  called  the 4 th
+  Industrial  Revolution  [12].  As  these 
+technologies  are  further  developed,  we  will 
+see even  more changes to  work. This report 
+will  discuss  the  main  trends  that  are  
+affecting  work  and  present  some  scenarios  
+that  might  be  part  of  the  next  chapters  in 
+the history (of the future) of work. 
+Although  it  is  not  possible  to  predict 
+the  future,  there  are  global  trends  showing  
+us  forthcoming  changes  in  the  society.  In  
+such  dynamic  world,  changes  occur  on  a 
+continual basis  – which makes us consider a 
+long-term perspective for work. In this high-
+automation  low-employment  context,  skills 
+development  becomes  an  important  long-
+term  issue  [13].  Other  long-term  issues  
+include  AI  regulation,  income  transfer  
+programs,  and  the  Non-Standard  forms  of  
+Employment (NSE).    OVERVIEW	 	
+WORKING IN 	2050	   3	 	
+ 	
+ This  Report  explores  three  possible 
+scenarios  for  Work  in  2050:  a  pessimist  
+scenario,  in  which  the  development  and  
+new  technologies  will  bring  unemployment  and  economic  crisis;  an  optimistic  scenario,  
+in  which  the  development  and  new  
+technologies will bring wealth and  a welfare  
+state;  and  a  likely  scenario,  in  which  the  
+development  and  new  technologies  will 	
+The  most  likely  scenario  for  work  in  2050  presented  in  this  report  may 
+be  summarized  in  13	 	
+key points: 
+1.	
+Automation  continues  to  advance  in  industry,  in  contrast  to  the  governments  increase  
+regulations  and  laws  on  the  subject,  continuing  projects  of  insertion  of  new  forms  of 
+work in society.  
+2. Computerization will reduce the demand for low-skill and low-wage j	
+obs. After facing a 	
+period of unemployment, 	most people will train to new careers while some will not be 
+able to do so relying on the state to provide them a basic income. The em ployment will 	
+change  to  create  new  opportunities:  some  economies  will  reduce  t	he  working  hours, 	
+avoiding unemployment of higher skilled people. 
+3. After  a  period  of  job  insecurity  and  a  series  of  disputes  between  N on-	
+Standard  forms 
+of  Employment  workers  and  their  employees,  the  new  types  of  work  contracts  will  b e 	
+better  regulated  in  or	der  to  provide  minimum  worker  rights.  Traditional  unions  will 	
+help 	workers  in  new  NSEs  to  organize  themselves  in  order  to  fight  for  their  rights  and 	
+for better working conditions.  
+4. A  transition  to  a  personalized  education  process  will  be  possible  by   using 	
+new 	
+technologies, which takes into account personal needs, interests and pace of learning.  
+5. This  personalized  education  and  the  trend  of  jobs  automation  will  make  re duce  the	
+ 	
+workload  to  the  workers,  giving  them  more 	free  time  to  study  and  learn  new  skills, 	
+keeping them updated and involved in a lifelong learning. 
+6. Workers will receive knowledge-intensive training, allowing their adaptation  to 	
+the new 	
+types of jobs. 
+7. The  collaboration  and  exchanges  will  increase,  as  well  as  the  self -	
+employment  and 	
+entrepreneurship in the global labor market.  
+8. The society will demand more transparency and participation in political  matters 	
+using 
+new  technologies,  although  keeping  the  traditional  structures  of  governments. 	
+Minorities will use these new technologies and mediums to 	strengthen their movement 	
+for political empowerment. 
+9.
+The  population  will  age  and  legislations  will  be  amended  so  that  pensions  have 
+increased  ages. The  government  will  play  a  more  active and  essential 	role  in  seeking  a 	
+balance  between  the  demand  for  jobs  a	nd  supply,  seeking  to  reduce  the  impact  of 	
+unemployment. 
+10. Universal  Basic  Income 	
+will  not  reach  its  full  potential,  but  income  transfer  programs 
+will be implemented for the most vulnerable population. Inequalities  will continue and 	
+the government will play an important social role by taxing large fortunes. 
+11. Knowledge-	
+intensive  work  and  services  will  become  more  advanced.  These  types  of  
+jobs  are  seen  as  an  opportunity  for  developing  economies  to  reap  technological  and  	
+social benefits from technological learning, knowledge spillover and higher incomes. 
+12. Alternative, sharing, social, green and creative economies will bec ome more popular.  
+13. Extreme  poverty  is  going  to  decrease 	
+but  inequality  will  be  slightly  higher  than  it  is 	
+nowadays. 	
+       OVERVIEW	 	
+4 W	ORKING IN  	2050	 	
+O 
+bring  some  benefits  for  the  society,  as  well  
+as  some  new  challenges.  The  importance  of  
+this  report  relies  in  addressing  these  
+challenges  as  soon  as  possible  in  order  to 
+produce efficient results in our society.  
+We  took  some  assumptions  while 
+performing our analysis until 2050. The first 
+one  is  that  there  will  be  no  disruptive 
+technological  breakthrough.  The  second 
+one  is  that  will  be  no  large-scale  war  – 
+although  asymmetric  conflicts  will  continue 
+to  exist.  Finally,  the  third  one  is  that  will  be 
+no global catastrophe. 
+Therefore,  we  pointed  out  the  key 
+themes  that  policy-makers,  entrepreneurs 
+and  workers  should  discuss  in  the  near 
+future.  Although  there  is  no  right  model  to 
+be  followed,  we  believe  that  these  actors  
+should debate these topics:  
+1.  Robots  and  AI  Regulation:  
+should  Robots  and  AI  be  limited  or  
+forbidden,  highly  taxed  in  order  to  support  
+income  transfer  programs,  or  be  left  
+unregulated?  2.  Income  transfer  programs:  
+should  the  government  create  income  
+transfer  programs?  If  so,  which  model,  
+Universal  Basic  Income,  Universal  Basic 
+Assets or other?  3.  Non-Standard  forms  of 
+Employment:   NSEs  should  be  regulated? 
+Should  this  regulation  be  left  for  each 
+country  to  decide  or  a  global  effort  should  
+be made in this direction? 
+4.  Flexible  Education:   with  the  rise 
+of  new  forms  of  education,  how  will  the  
+governments  recognize  them?  Should  new  
+kinds  of  degree  separated  from  our  current  
+ones  or  as  part  of  the  current  curricula,  
+adapting them to accept these new forms of 
+education?  Leave  these  new  forms  of  
+education unregulated is an option? 
+The  findings  presented  in  this  report 
+reflect  our  mission  to  conduct  
+interdisciplinary  research  to  explore  
+scenarios  and  to  base  solutions  for  
+governments,  organizations  and  societies,  
+helping  them  to  move  towards  a  more  egalitarian,  participatory  and  sustainable  
+society. 	
+      
+PART  1:  
+K EY  TRENDS OF  FUTURE  WORK	
+ 
+                            	
+In  this 	part	,  we  analyze  the  key  trends  that  drive  the  future  of 	
+work. 
+Increasing automation will impact your life 
+Employment will be continuously changing  
+Education will need to be updated 
+We are slowly moving to a social welfare state  
+The economy will grow faster      PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+6  W	ORKING IN  	2050	 	
+P
+K
+ 
+2. I	NCREASING AUTOMATION WILL 
+IMPACT YOUR LIFE	
+ 	
+Since  the  last  century,  computers  have 
+been  routinely  performing  physical  
+activities  in  industries,  performing  better 
+and  being  cheaper  than  humans.  With  new  
+technologies, machines are  getting  closer to  
+being able to make judgments and decision-
+making.  Formerly,  such  capacities  were  
+impossible for something non-human [14].  
+Today  only  5%  of  occupations  are 
+candidates  for  total  automation,  with  total  
+loss of human tasks [14]. Even so, almost all  
+professions  have  partial  automation  
+potential.  The  impact  of  automation  on 
+workers  is  predictable  in  the  production  of 
+physical  products,  especially  in  the  retail  
+and  retail  market.  Collection  and  data  
+processing  are  also  fully  automatable  and 
+as  we  see  the  latest  assembly  line 
+operations  and  archivists  suffer  from  the  
+same problem. 
+Some  key  points  have  to  be  considered 
+when  talking  about  adopting  automation  
+[14]:  ·   Technical  feasibility:  The  technique  may  
+be  in  the  prototype  phase,  making  it 
+impossible to use it extensively.  
+·   Development  and  Implementation 
+Costs: The cost of automation cannot be 
+higher  than  the  cost  of  hiring  labor  for  
+the same task. 
+·   Labor  market  dynamics:  Demand  and  
+costs  related  to  human  labor,  which  for  
+social  reasons  may  make  the  use  of  
+humans  more  favorable  than  
+automation itself.  
+·   Economic  Benefits:  Government  
+agencies  fund  projects  in  a  given  region  
+can  increase  income  according  to  labor 
+laws.  Tax  reductions,  among  other  
+incentives,  stimulate  the  development  
+of  more  productive  and  wealthier 
+regions. 
+·   Social  Acceptance:  Automation  may  be  
+badly  received  by  society  since  it  can  
+generate  unemployment,  and  without  popular  acceptance,  the  automation 
+adoption becomes more complex.   
+The  effects  of  automation  may  be  slow 
+at  the  macro  level  in  the  economy,  but  at 
+the  micro  level  they  can  be  very  fast,  with 
+increasing  unemployment  in  a  particular  
+region  or  monopoly  of  the  market  by  
+companies with automated processes [14].  	
+2.1.	 W	ILL WE NEED POLICIES TO REGULATE  
+ADVANCED 	
+AI	 AND 	ROBOTS	? 	
+Artificial Intelligence is being developed 
+for 60 years now, and over the last 20 years, 
+remarkable  progress  has  been  made  in  this  
+area.  In  2011,  Watson,  a  cognitive  system  
+designed  by  IBM,  won  in  a  series  of 
+questionnaires  the  champions  of  Jeopardy, 
+Brad  Rutter  and  Ken  Jennings,  being  the  
+first  moment  in  which  computers  beaten  
+humans in this type of competition. In 2016, 
+AlphaGo,  one  of  Google&#39;s  artificial 
+intelligence  systems,  was  able  to  win  a  
+game  challenge  with  Lee  Sedol,  one  of  the  
+best  professional  Go  players  in  the  world 
+[15]. 
+The  technological  wave  of  automation 
+is  in  process.  The  costs  of  processing, 
+memory,  bandwidth,  sensors  and  storage 
+have  been  falling  exponentially.  Cloud 
+computing  will  provide  all  the  necessary  
+resources  in  a  cheaper  and  clustered  way.  
+Data  obtained  from  digital  systems  will 
+become  more  accurate  and  refined, 
+allowing  for  accurate  experiments,  theory  
+testing,  and  more  importantly  learning  to  
+produce  results  without  human  supervision 
+on an ever-increasing scale [16]. 
+Billions  of  people  across  the  world 
+grow  using  the  Internet,  being  more  and 
+more  connected,  expanding  and  absorbing 
+knowledge.  This  means  that  the  global  
+population  of  innovators,  entrepreneurs  
+and  curious  is  growing  rapidly  and  with  it 
+advances in technology [16]. 
+With advances in AI, there will probably 
+be more  robots  or  smart programs  that can 
+help  us  as  human  assistants,  such  as   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   7	 	
+ 	
+reading  emails,  cleaning  or  even  driving  
+cars  for  us.  However,  this  will  also  impact  
+our  privacy,  security,  and  ethics.  Many  
+uncontrolled  consequences  can  arise  if  we 
+are unable to identify the  previously related 
+threats [15]. 
+Building  machines  that  can  learn  on 
+their  own  is  a  key  to  this  revolution,  along 
+with  new  regulatory  policies.  Historically, 
+we  have  an  automation  problem:  if,  for  any  
+reason,  no  human  could  explain  all  the  
+steps  taken  in  completing  a  task,  then  no 
+programmer  could  incorporate  those  rules  
+into  software.  Recent  advances  shows  that  
+this  is  not  a  great  obstacle  to  be  overcome 
+anymore.  Machines  can  learn  even  when 
+humans  cannot  teach  them  and  can  learn  
+more  efficiently,  since  they  can  generate  
+new  knowledge  alone  and  faster  than 
+humans [16]. 
+Technological  advances  have  an  impact 
+on  the  way  work  is  done.  Such  a  radical 
+reform  of  labor  will  require  new  policies  to 
+protect  the  vulnerable  unprepared  for  the 
+new  age.  The  choices  made  now  will  be  
+decisive  in  the  direction  to  be  followed.  
+Erroneous  interventions  undermine  the 
+economic  prospects  of  millions  of  people 
+around  the  world,  leaving  underdeveloped  
+nations  out  of  the  race  against  the  
+machines  of  more  developed  nations, 
+thereby  creating  economic,  social  and 
+political  inequality  as  technology  advances  
+[17]. 
+We  cannot  work  with  policies  that 
+undermine  innovations  for  the  
+development of society. The solution then is  
+to  formulate  policies  that  allow  a  smooth  
+transition  to  this  new  model  of  production 
+[17]. 
+Accepting this new model of production 
+requires  a  pre-examination  since  not  all 
+jobs  can  be  automated  by  a  variety  of  economic,  legal  and  regulatory  advantages,  
+such  as  police  or  medical,  at  least  in  the  
+first  stage  of  this  new  era.  Jobs  involving  a  
+high  creativity  load  are  not  affected  by  automation  yet,  given  there  is  a  lack  of  
+technology  and  knowledge  to  imitate  this  
+human  behavior  in  the  area  of  artificial  
+intelligence [17]. 
+What  we  have  as  a  fact  is  that  mass 
+automation  will  create  new  technologies  in  
+areas  such  as  AI  and  robotics,  creating  
+entirely  new  jobs  that  will  generate 
+additional wealth and expense [17]. 
+This  discussion  is  delicate,  especially 
+for  underdeveloped  nations,  which  are  at 
+the  margin  of  the  discussion  and  of  the  
+focus  of  studies  in  the  area.  Most  jobs  have  
+characteristics  suitable  for  automation.  In  
+such  cases,  intervention  from  government 
+is  required  to  ensure  that  these  nations  are 
+prepared  for  the  new  era  and  that  they  can  
+share  the  potential  gains  of  automation  
+broadly  with  society  through  policies  such 
+as  increased  investment  in  education  and 
+vocational training [17]. 
+Regarding  the  privacy  issue,  in  recent 
+years  the  concept  of  machine  learning  has 
+grown,  so  the  number  and  quality  of  data  
+sets  affect  the  results  of  the  machine  
+training.  Therefore,  the  most  successful  
+applications  will  require  a  large  amount  of 
+data.  The  privacy  issue  is  a  major  threat  of 
+exploiting  this  data,  inevitably  there  will  
+also  be  privacy  issues  in  applications  that  
+work with sensitive data [15]. 	
+2.2.	 HOW 	INTERNET OF 	THINGS 	(IOT)	 
+WILL IMPACT US	
+? 	
+One  definition  of  Internet  of  Things  is 
+&#34;the  global  network  of  interconnected  
+objects  exclusively  addressable  based  on  
+standard  communication  protocols&#34;  [18].  A 
+more  generic  definition  of  IoT  is  that  it  is  a 
+concept  of  interconnected  intelligent  
+objects  that  work  together  to  achieve  
+common goals [19]. 
+The  advancement  of  technology  has 
+provided the rapid development of low-cost  
+sensors,  wireless  technologies  and  the  
+generation  of  more  data  with  the  Internet.  
+The  topics  covered  by  the  IoT  include   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+8  W	ORKING IN  	2050	 	
+P
+K
+ 
+intelligent  transportation  and  logistics,  
+smart  building,  environmental  monitoring,  
+medical  and  health  care,  among  others.  
+[19]. 
+Predictions  for  the  number  of 
+connected devices on the Internet of Things  
+for  the  year  2020  vary  considerably,  from  
+Gartner  26  billion  (Gartner)  to  30  billion 
+(ABI  Research),  to  50  billion  (Cisco)  to  75 
+billion (Morgan Stanley) [18]. 
+The  impact  of  IoT  on  industrial 
+automation  and  control  is  increasingly  
+present  in  society.  The  evolution  of  sensor  
+technologies  that  define  the  Internet  of  
+Things  will  lead  to  lower  cost  automation 
+systems  and  production  maximization.  The 
+benefits  of  IoT  include  low-cost,  high- 
+performance  processors,  robust  low-cost  
+sensors,  analytical  software,  vision  systems, 
+cloud  computing,  and  highly  distributed 
+system architectures [20].  
+Many  companies  are  seeking  key 
+knowledge  to  be  applied  for  competitive 
+advantage  through  Big  Data  analysis.  
+Therefore, companies that possess the skills  
+needed  to  analyze  and  generate  business  
+intelligence  from  several  sources  of  data  in 
+real  time  will  take  the  lead  in  the  market. 
+This  trend  follows  the  flow  of  increasingly  
+steady  use  of  mobile  devices,  social  media  
+tools,  and  the  IoT  with  its  milestone  in  RFID 
+(Radio  Frequency  Identification)  technology 
+[20]. 
+Internet  of  Things  will  become 
+increasingly present in the reality of society. 
+This  kind  of  ubiquitous  computing  will  
+generate  huge  amounts  of  data  that  must  
+be  analyzed  to  generate  value  for  
+individuals,  organizations,  entire  industries 
+and ultimately, the society [20].  
+The  large  volume  of  data  produced  by 
+many  sources  defines  the  plan  of 
+governments  and  companies,  focusing  on 
+the  implementation  of  smart  metering  by  
+improving  the  use  of  energy  resources  and  
+efficiency  in  supply  and  consumption.  
+Automation  is  present  at  all  levels  of  society,  in  the  case  of  IoT  we  can  have 
+smart  meters  that  monitor  the  activities  of  
+patients, seniors or children [21]. 
+Other  implications  such  as  privacy 
+issues  should  be  taken  into  account,  
+especially  in  home  automation  and  leakage  
+of  sensor  data  as  a  form  of  industrial  
+espionage [21]. 
+Security  issues  are  low  priority  for 
+mainly  IoT  device  vendors,  and  this  has  led  
+to a situation where numerous devices have  
+critical  security  vulnerabilities  at  their  core.  
+Therefore,  the  security  and  privacy  of  
+location  information  is  often  exposed  to  
+attacks [19]. 
+The  4 th
+  Industrial  Revolution  improves 
+the  global  competitiveness  and  shifts  of  the  
+production  to  the  countries  where  the  
+supplier  company  are  expected  [22].    This 
+model is named Industry 4.0, and it is based 
+on  intelligent  infrastructures  such  as  smart  
+mobility,  the  smart  grid,  smart  cities  and  
+smart  buildings.  All  incorporated  in  the  IoT 
+concept, in a collaborative network. 
+The  increase  of  automation  based  on 
+new  technologies  is  the  core  concept  of 
+Industry  4.0.  Connectivity  and  inter-part 
+interaction,  integrated  use  of  machines  and 
+human  beings  will  make  production  
+systems  30%  faster  and  25%  more  efficient  
+and  raise  product  customization  to  a  new 
+scale [22]. 
+Industrial  processes  increasingly  adopt 
+Information  Technology  (IT),  with  the 
+development  of  digital  circuits  since  the  
+1970s  [22].  Since  then,  we  watch  a  digital  
+transformation in the production forms. 
+An  example  of  such  virtual  circuits  is 
+the  adoption  of  CPPS  (CyberPhysical 
+Production  Systems)  that  are  increasingly 
+present.  CPPS  are  online  networks  for  
+communication  between  machines,  linking  
+mechanical  and  electronic  components. 
+RFID  technology  was  an  early  form  of  this  
+technology,  until  its  evolution  to  the  
+concept  of  IoT  [22].  An  RFID  system,  on  the   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   9	 	
+ 	
+other  hand,  usually  consists  of  readers  and  
+a  large  population  of  tags.  In  addition,  each  
+tag  has  a  small  memory  to  store  its  unique  
+ID  and  some  other  information,  for 
+example,  product  price,  expiration  date, 
+personal  information,  and  so  on.  These  
+labels  may  be  managed  through  wireless  
+network  in  real  time,  among  other 
+advantages  over  identification  techniques 
+such as magnetic stripe and bar code [23]. 
+3. E	MPLOYMENT WILL BE CONTINUOUSLY 
+CHANGING	
+ 	
+The  world  faces  the  4 th
+  Industrial 
+Revolution  which  has  a  widespread  impact  
+on  society,  affecting  education, 
+employment,  and  skills,  requiring  stronger  
+partnerships  between  governments,  
+educators,  training  providers,  workers  and 
+employers  [24].  The  main  drivers  of  this 
+revolution  are  artificial  intelligence,  
+machine  learning,  nanotechnology,  3D  
+printing,  robotics,  biotechnology,  and 
+genetics  each  interacting  in  multiple 
+directions  and  intensifying  each  other.  
+While  new  technologies  are  expected  to  
+promote  a  better  society  and  well-being  
+they  can  also  represent  threats  to  jobs  and 
+shall  be  proactively  observed  and  adapted  
+by,  societies,  governments,  corporations,  
+and individuals [24].  
+In  order  to  meet  future  job  demands, 
+there  will  be  an  adoption  of  more  flexible 
+work  contracts,  modifying  the  traditional 
+relationship  between  employees  and 
+employers,  with  the  popularization  of  part- 
+time  jobs  and  other  types  of  hiring  that  are  
+not  common  in  the  business  model  of  large  
+companies,  e.g.  crowdsourcing  [25]  [26].  
+Crowdsourcing  involves  the  coordination  of  
+a  crowd  (a  large  group  of  people  online)  to  
+do  autonomously  a  fraction  (small  tasks)  of 
+a large work. Companies use crowdsourcing 
+to  accomplish  their  tasks,  find  solutions  to  
+problems or gather information [27]. 
+In  the  future,  gender  equality  will  be 
+natural  and  intrinsic  in  most  societies,  as  
+well  as  the  participation  of  aging  people,  returning  from  retirement  or  even  delaying 
+the  exit  from  the  job  market.  These  
+scenarios  tend  to  create  a  more  powerful  
+workforce,  with  a  high  work-life  balance 
+promoted  by  part-time  jobs  and  home-
+office  enhanced  by  virtual  reality  and  
+augmented reality [24] [28].  
+As  expected,  the  global  economy  will 
+reduce  the  countries’  borders  promoting  a  
+global  workforce  able  to  be  hired  from  
+anywhere  in  the  globe.  This  is  not  a  recent  
+trend  but  tends  to  grow  and  consolidate  as 
+a solution in a future where automation will  
+be  widespread  in  the  societies,  substituting  
+manual  and  repetitive  tasks,  and  amplifying 
+the  creative  economy.  These  trends  will 
+require  the  adaptation  of  education  to  
+prepare  the  workforce  to  answer  the  
+market  necessity  as  soon  as  it  raises,  not 
+creating  a  gap  and  consequently  a  massive 
+unemployment [29] [30].   
+In  conformance  with  previously 
+mentioned  trends  for  employment,  the  way 
+how  people  claim  for  labor  rights  tends  to 
+change,  creating  a  movement  of  self- 
+organized  independent  groups  in  contrast  
+with the traditional trade unions. Given that 
+regulation  tends  to  strengthen  employees’ 
+rights,  collective  agreements  will  become  
+increasingly redundant. 	
+3.1.	 M	Y CAREER NO LONGER E XISTS	. W	HAT 
+SHOULD 	
+I DO NOW	?  	
+There  is  a  dispute  between  the 
+technological  unemployment  and  the  job  
+displacement thesis [31]. 
+Technological  unemployment  can  be 
+defined  as  “unemployment  due  to  our 
+discovery  of  means  of  economizing  the  use 
+of  labor  outrunning  the  pace  at  which  we  
+can  find  new  uses  for  labor”  [32].  Showing 
+the present strength of this line of thought  – 
+that  has  defenders  since  the  First  Industrial  
+Revolution  –  Strawn  [33]  lists  seven  books 
+written  since  2013  by  authors  that  defend 
+the technological unemployment thesis.   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+10  W	ORKING IN  	2050	 	
+P
+K
+ 	
+The job displacement theory states that 
+automation  will  cause  the  extinction  of  
+certain  careers  but  also  the  creation  of  new  
+ones  causing  little  to  no  harm  to 
+employment  [34].  Even  if  this  prediction 
+seems  more  optimistic  than  the  
+technological  unemployment,  it  also  has  its  
+dangers  for  society.  For  the  last  two 
+centuries, economists defended that the job 
+displacement  theory  have  been  right  but  
+there  is  no  economic  law  guaranteeing  that  
+most  people  automatically  benefit  from 
+technological progress [35]. 
+The  occupations  that  are  more  likely  to 
+be  computerized  in  the  next  decades  are 
+the  ones  with  the  lowest  average  median 
+wages  and  the  ones  in  which  we  are  less  
+likely  to  find  people  with  a  bachelor’s  
+degree or better [36]. 
+This  trend  should  be  a  concern  for 
+society  because  the  people  that  are  more  
+likely  to  lose  their  jobs  are  also  the  ones  
+with least resources to change careers given 
+that  it  requires  enrolling  in  courses  to 
+acquire new creative and social skills [36]. 
+Another  trend  that  is  likely  to  help  to 
+destroy  some  careers  is  the  rise  of  the 
+knowledge  economy.  As  the  economy 
+moves  away  from  being  dominated  by  the  
+processing  of  materials  towards  a  more  
+information-intensive  production  [37]  it  can 
+be  expected  that  the  careers  related  to  this 
+previous  mode  of  production  will  no  longer  
+exist as happened in the past with the move  
+from  the  farming  sector  to  the  industrial 
+one [34]. 
+Wide-spread  skill-development  policies 
+will  be  required  in  the  future  along  with 
+some  sort  of  universal  basic  income  that 
+would  allow  individuals  to  act  as  free  and 
+choosing agents [38]. 
+If  the  trend  of  technological 
+unemployment  comes  to  fruition,  society 
+will  have  to  find  ways  of  coping  with  higher  
+rates  of  unemployment  and  may  face  the  
+impossibility  of  maintaining  the  traditional  
+work  week  and  hours  which  will  lead  to  solutions  that  look  to  reduce  the  hours  in 
+the work week [33]. 
+The  end  of  careers  can  be  an  even 
+bigger  issue  if  considered  from  a  more 
+philosophical  perspective.  Voltaire  [39] 
+writes  that  “work  keeps  at  bay  three  great  
+evils:  boredom,  vice,  and  need”.  The  
+solutions  outlined  above  only  address  the 
+evil  of  need,  what  to  do  of  the  other  two? 
+The  end  of  careers  puts  pressure  on  
+humankind  to  look  for  other  ways  of  filling  
+the  void  left  by  the  end  of  work  (at  least  for 
+a  part  of  society)  with  something  else  that  
+gives meaning to life. 	
+3.2.	 W	ILL THE GLOBALIZED WORK 
+OVERCOME LOCAL WORK	
+? 	
+Globalization  is  not  a  recent 
+phenomenon,  but  it  was  accelerated  by  the  
+increase  of  communication  and  the  decline 
+of  electronic  devices  prices.  Models  based  
+on outsourcing are also not recent, but their  
+capillarity,  quality,  and  availability  tend  to 
+improve  in  the  future  [40]  [41].  The 
+globalization  created  two  trends  on  
+markets:  the  remote  worker  hired  without  
+needing  to  migration  and  the  immigrant 
+that is  hired  and  displaced  from  his  original 
+country to another. 
+Remote  working  is  already  a  reality, 
+even  on  traditional  enterprises  as  IBM 
+where  only  42  percent  of  employees  work 
+at  IBM  location  [42].  This  internal  remote  
+allocation  is  only  recently  being  adopted  by  
+big companies, but on startups it’s already a 
+common  practice.  This  approach  to  team  
+formation  allows  the  hiring  of  high-skilled  
+workers  and,  in  the  future,  considering  the  
+flexibilization  of  traditional  employment 
+contracts,  a  firm  will  be  able  to  contract  a  
+part-time  employee  wherever  he  is  without  
+the need of displacing the worker [43] [44].  
+The  evolution  of  technology  and 
+communication  will  allow  the  use  of  fast  
+internet  by  a  feasible  price  on  small  cities,  
+which  has  a  fraction  of  the  cost  of  big  
+metropolis[45]  [26].  This  cheap  and  fast  
+Internet  will  enable  a  lower  cost  of  life  and   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   11	 	
+ 	
+will  engender  the  improvement  of  
+infrastructure  on  small  cities,  proving  a  
+fertile ground to a massive urban exodus.  
+Local  work  will  be  refreshed  to  provide 
+value  on  another  sort  of  occupations,  
+mainly  motivated  by  the  automation  and  its  
+consequences,  which  will  generate  in  the  
+medium term the extinction of manual jobs, 
+as  well  as  the  dangerous,  dirty  and  risky 
+jobs.  [26]  [46].  Globalization  will  not 
+overcome  local  work,  but  will  promote 
+modifications on how the work is done. 
+Considering  the  flexibility  of  where  the 
+worker  can  be,  as  mentioned  previously, 
+centralized  offices  with  hundreds  of  people 
+that  ignore  the  travel  time  of  employees 
+tends  to  change.  Distributed  offices  on  
+multiple  locations  or  even  co-working  
+spaces  will  promote  a  cost  reduction  to 
+enterprises,  becoming  an  alternative  to 
+central offices located on a fully commercial  
+area [26].  
+Despite  a  global  population  of 
+approximately  six  billion  individuals,  just  
+the  minority  is  considered  part  of  the  
+developed  global  workforce  [47]  [48].  It  is  
+estimated  that  80  percent  of  the  world’s 
+population  are  at  the  bottom  of  the 
+economic  pyramid,  and  live  predominantly  
+in developing countries [49]. Meanwhile, the  
+emerging  hypercompetitive  global  economy 
+is  increasingly  intolerant  of  any  inability  to 
+keep  pace  with  change,  deliver  less  than  
+foremost  performance,  or  continue  
+dependencies  on  slow  legacy-based 
+systems of workforce preparation. 
+Motivated  by  unemployment,  lack  of 
+food,  imminence  of  war,  radiation  and 
+other  extreme  situations,  a  considerable 
+number  of  people  migrate  illegally  to 
+neighboring  countries  [48].  Considering  the  
+global  warming  and  polar  ice  sheets  
+melting,  some  regions  tend  to  disappear 
+creating  a  massive  emigration  to  nearby  
+countries,  therefore  the  fight  for  jobs  and  
+against  climate  change  requires  
+complementary  actions,  not  just  to  avoid  more  environmental  refugees  [50],  but  also  
+to  help  people  conquer  a  better  quality  of  
+life [51] [28]. 	
+3.3.	 W	ILL 	I HAVE TO WORK HERE ALL DAY 
+LONG
+? 	
+In  the  past  few  decades,  there  was  an 
+increase  in  flexible  and  adaptable  contract  
+models  which  fostered  the  emergence  of  
+part-time  jobs  and  crowdsourcing,  enabling  
+to  the  reformulation  of  the  idea  of  jobs  and 
+the  relationship  between  employee  and 
+employer [25] [26]. 
+The  trends  for  the  future  show 
+increasing  flexibility  to  workers,  becoming 
+possible  to  have  a  flexible  portfolio  of  part-
+time  jobs  or  casual  jobs  instead  of  one  
+regular  traditional  job.  Considering  this  
+scenario,  virtual  reality  (VR)  and  augmented 
+reality  (AR)  will  be  used  to  create  an 
+immersion  and  amplify  the  sense  of  
+collaboration,  allowing  the  worker  to  be  
+wherever is suitable for him [46].  
+The  increase  in  part-time  jobs  will 
+stimulate  entrepreneurship,  in  a  society  
+where  automation  will  handle  manual  jobs  
+and  creativity  will  be  the  human  differential 
+[46]  [52]  [45].  Currently,  some  nations,  to 
+avoid  high  rates  of  unemployment,  are  
+promoting a transition from regular to part- 
+time  jobs,  reducing  the  salary  and 
+consequently  the  final  cost  to  the  employer 
+[53] [54]. 
+The  traditional  family  structure  is 
+changing  and  tends  to  promote  more 
+gender  equality,  with  an  increasing  
+participation  of  women  in  the  domestic  
+economy  [24]  [28].  Furthermore,  the 
+increase  in  part-time  jobs  and  in  home 
+office,  allows  women  to  work  even  during  
+pregnancy  or  the  early  years  of  the  baby  
+[24].  
+Flexible  contracts  and  the  future 
+necessity  for  more  skilled  workforce  will  
+create  a  new  phenomenon:  the  return  of  
+older  people  to  the  workforce  motivated  by  
+the  interest  in  helping  the  society  with  their   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+12  W	ORKING IN  	2050	 	
+P
+K
+ 
+experience  but  also  as  a  financial  
+contribution  to  their  retirement  plans  and  
+domestic economy [55] [28]. This trend shall  
+promote  a  significant  impact  on  society  as 
+organizations  will  be  able  to  keep  on  being 
+competitive  by  having  access  to  a  bigger  
+pool  of  skilled  professionals  thus  reducing  
+the  shortage  of  specialists  and  the  impact 
+on social security systems [55] [25]. 
+Considering  the  advances  on 
+Healthcare  automation,  increase  in  the  use 
+of  continuous-health  tracking  devices, 
+reduction  of  healthcare  costs  and  human  
+mistakes  being  extinguished  due  to  
+automation,  life  expectancy  and  the  time 
+that  an  individual  will  be  able  to  work  and 
+have  an  active  participation  in  society  will  
+increase [56] [45]. 
+3.4.	 HOW ABOUT MY LABOR RIGHTS	? 	
+According  to  the  International  Labor 
+Organization  (ILO)  [57],  “Non-Standard 
+forms  of  Employment    have  become  a  
+contemporary  feature  of  labor  markets 
+around  the  world”.  In  South  America,  6  out 
+of  10  young  people  who  get  a  job  today  do 
+so  in  the  informal  economy  [51].  This  trend 
+is  not  exclusive  to  countries  in 
+development;  Petrie  [58]  predicts  that  40%  
+of  the  US  labor  force  will  be  self-employed  
+by 2020. 
+These  new  employment  types  share  a 
+common  feature  of  deviating  from  the  
+standard  employment  relationship  (work  
+that is full-time, indefinite, as well as part of 
+a  subordinate  relationship  between  an  
+employee  and  an  employer)  and  can  be  
+divided into four types [57]: 
+1.  Temporary:   fixed-term  contracts, 
+including  project  or  task-based  contracts;  
+seasonal  work;  casual  work,  including  daily  
+work;  2.  Part-time  and  on-call  work: 
+normal  working  hours  fewer  than  full-time  
+equivalents;  marginal  part-time  
+employment;  on-call  work,  including  zero- 
+hours  contracts  (no  guarantee  of  a  
+minimum wage);  3.
+  Multi-party  employment 
+relationship:  also  known  as  ‘dispatch’, 
+‘brokerage’  and  ‘labor  hire’.  Temporary 
+agency work; subcontracted labor;  4.  Disguised  employment  / 
+dependent  self-employment:   can  involve 
+masking  the  identity  of  the  employer  by 
+hiring  the  workers  through  a  third  party,  or 
+by  engaging  the  worker  in  a  civil, 
+commercial  or  cooperative  contract  instead  
+of an employment contract and at the same  
+time  directing  and  monitoring  the  working 
+activity  in  a  way  that  is  incompatible  with  
+the  worker’s  independent  status.  Thus,  
+workers  are  purposefully  misclassified  as 
+independent,  self-employed  workers,  even 
+though  they  are,  in  fact,  in  a  subordinate  
+employment relationship. 
+The  problem  with  some  of  these  NSE 
+can  be  summarized  by  saying  that  “there  is  
+no  more  connection  between  the  worker  
+and  the  employer  than  there  might  be  
+between a consumer and a particular brand 
+of  soap  or  potato  chips”  [59].  These  NSE 
+pose  great  risks  to  worker’s  security,  
+particularly  when  they  are  not  voluntary  
+[57].  Table  1  summarizes  the  impacts  of  
+NSE. 
+On-demand  economy  (or  gig  economy) 
+may  represent  an  opportunity  in  connected 
+and  app-driven  economies  that  could 
+produce  several benefits  for society but this 
+cannot  happen  at  the  cost  of  exploiting  and  
+degrading  human  dignity  at  work  [60].  That  
+said,  replacing  fixed  employments  with  gigs 
+can produce an economic boost, not only by 
+allowing  a  better  match  of  workers  to  jobs  
+but  also  by  freeing  the  energies  of  workers  
+frustrated with their jobs [59]. 
+Given  the  projected  increase  in  these 
+NSE  and  the  impacts  that  are  already  being  
+felt  both  by  employees  and  by  the  society,  
+we  can  expect  to  see  more  debates  and 
+policies  concerning  the  flexibility  of  worker  
+contracts  and  new  worker  classifications.  
+McAfee  & Brynjolfsson  [16] give an example  
+of  a  policy  proposed  by  Harris  &  Krueger  
+[61]  to  create  a  ne w  “independent  worker”   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   13	 	
+ 	
+designation  which  would  not  be  eligible  for  
+overtime  pay  or  unemployment  insurance.  
+However,  they  would  enjoy  the  protection 
+of  federal  antidiscrimination  statutes,  have 
+the  right  to  organize,  and  tax  withholding  
+[61].  Their  employers,  whether  online  or  
+offline,  would  make  payroll  tax  
+contributions [61]. 
+ We  should  not  expect  gigs  to  replace 
+traditional employments, even so the rise of  
+the gig economy presents an opportunity to 
+reconsider  the  social  policy  [59].  Following 
+this  line  of  thought,    two  issues  that  are  
+likely  to  be  of  great  concern  for  our  society  
+in  the  future  must  be  considered  [60].  The  
+first  one  relates  to  the  need  to  search  for  
+new  sources  of  essential  worker  protection  measures  (e.g.  vacation  pay)  traditionally  
+guaranteed  to  ordinary  employees.  The  
+erosion  of  such  rights  might  threaten 
+welfare  in  countries  where  the  welfare 
+system  is  strictly  connected  to  a  stable  
+employment  contract.  The  second  one  is  
+that  labor  regulations  must  protect  both  
+clients  and  workers,  the  rules  created  to  
+protect  workers’  rights  cannot  affect  the  
+dynamic  pote
+ntial  of  “collaborative  forces” 
+in the new economy. 	
+3.5.	 W	ILL TRADE UNIONS LOSE THEIR 
+IMPORTANCE	
+? 	
+The trends discussed in the sections 3.2 
+and  3.4,  namely  the  intensification  of 
+globalization  and  increase  in  NSE,  make  it 	
+Table 1. Summary of impacts of NSE, based on ILO [57]. 	
+Impact on   Description 
+Employment 
+security 	
+The  greater  the  incidence  of  temporary  employment  in  the  country,  
+the  greater  the  likelihood  that  workers  will  transit  between  NSE  and 
+unemployment,  with  the 	possibility  of transitioning  to  better  jobs  less 	
+likely. 
+Earnings 
+Wages  tend  to  be  substantially  lower  for  workers  in  NSE  when 
+compared to those in standard employment. 
+Working hours 
+Working  hours  are  more  uncertain  for  workers  in  NSE  resulting  in 
+lower work-life balance. 
+Occupational 
+security and health	
+ 	Injury rates are higher among workers in NSE. 
+Social security  Social  security  coverage  law  sometimes  excludes  NSE 	
+workers  and, 
+when  they  are  covered,  their  employment  arrangements  tend  to 	
+result in worse benefits. 
+Training  Workers in NSE are less likely to receive on-the-	
+job training, which can 
+have  negative  repercussions  on  career  development,  especially  for 	
+young workers. 	
+Representation and 
+other fundamental  rights at work  Workers  in  NSE  may  lack 	
+access  to  freedom  of  association  and 
+collective bargaining rights either for legal reasons or because of their  
+more  tenuous  attachment  to  the  workplace. They  may  also  face  other  
+violations of their fundamental rights at work, including discrimination 	
+and forced labor. 
+Firms 
+Firms  that  rely  heavily  on  NSE  need  to  adapt  their  human  resource 
+strategies  from  training  and  development  of  in-	house  employees  to 
+identifying  the  sets  of  skills  that  the  firm  needs  to  buy  from  the 	
+market. An over-reliance on NSE can lead to a gradual erosion of firm	-
+specific  skills  in  the  organization,  limiting  its  ability  to  respond  to  	
+changing market demand. 
+Labor markets and  society 
+Widespread  use  of  NSE  may  reinforce  labor  market  segmentation, 
+leading  to  a  greater  volatility  in 	employment  with  consequences  for 	
+economic stability.        PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+14  W	ORKING IN  	2050	 	
+P
+K
+ 
+harder  for  workers  on  the  new  NSE  to  
+organize  and  to  form  unions.  
+Crowdworkers,  for  instance,  are  facing  a  
+challenging  goal  due  to  their  geographical 
+distribution  that  makes  it  harder  to  create 
+solidarity  between  the  workers  in  this  
+particular  category  [60].  On  the  other  side,  
+the  very  spread  and  growth  of  some 
+companies  in  the  gig  economy  could  make 
+it easier for worker’s organizations to aim at  
+them  (  i.e.  by  increasing  vertical  integration  
+in  some  traditionally  highly  fragmented 
+sectors such as car-hailing services) [62]. 
+The  labor  movement  survived  recent 
+changes  in  economy  in  two  ways,  and 
+maybe  these  practices  can  be  used  in  the 
+future.  The  first  one  involves  using  the  
+same  technology  that  is  partly  responsible  
+for the creation of some of the new NSE and 
+for  the  intensification  of  globalization  to 
+help  workers  organize. This  is  already  being  
+done  as  shown  by  the  following  examples.   
+App-Based  Drivers  Association 1
+ (ABDA)  is  a 
+group from Seattle (United States) that aims 
+to give a voice to  app-based (e.g. Uber, Lyft)  
+drivers.  This  association  allows  new  
+members  to  join  it  by  filling  an  online  form  
+on  their  website.  This  group  had  a  major 
+win  in  2015  when  a  law  was  passed  by  the  
+city  of  Seattle  allowing  the  car-haling  app  
+drivers  to  form  unions  [60]  [62]. 
+Turkopticon 2
+ is  an  initiative,  with  more  than 
+10  years,  created  by  the  University  of  
+California  San  Diego  that  allows  Amazon  
+Mechanical  Turk  (AMT)  workers  to  evaluate 
+their  Human  Intelligence  Tasks.  This  can  be 
+done  by  using  either  their  Chrome  or  
+Firefox  add-on  [60]  [62].  Dynamo 3
+ is 
+another  type  of  worker  organization  that  
+focuses  on  AMT.  It  works  as  a  wiki  for  the  
+community  of  AMT  workers  in  which  they  
+can  create  campaigns  and  join  discussions  
+to improve their working conditions [60]. 
+The  second  way  to  keep  unions  alive  in 
+the  future  of  work  is  looking  for  support 
+                                                              
+1
+ http://www.abdaseattle.org 
+2  http://turkopticon.ucsd.edu 
+3  http://www.wearedynamo.org 	
+from  traditional  unions  and  other  social  
+actors.  Unions  can  see  workers  in  the  on- 
+demand  economy  as  a  huge  pool  of  new  
+members  [60].  One  case  of  the  association 
+of traditional unions with  workers on NSE is 
+the  FairCrowdWork  Watch 4
+ –   which  was 
+created  by  the  IG  Metall  (dominant 
+metalworkers’  union  in  Germany)  –   that 
+allows  workers  to  rate  platforms,  compare 
+their  payment  with  others  and  receive  legal  
+advisory  [62].  Another  example  of  digital  
+workers  being  supported  by  traditional 
+unions  was  the  strike  organized  by  the  
+Huffington  Post  collaborators  after  the  site  
+was sold to AOL for over US$ 300 million  by 
+its  owner,  Arianna  Huffington,  leaving  the 
+workers  empty-handed. The  movement  was  
+supported  by  the  Newspaper  Guild  and  by  
+the  National  Writers  Union  –  both 
+traditional  riters’  unions .  The  group  took  its 
+fight  to  the  court  demanding  that  Arianna  
+paid them US$ 105 million [63].  
+The  Crowdsourcing  Verband 5
+ –   a 
+German  association  that  brings  together  
+crowds,  companies,  and  experts  –  is  an 
+example  of  a  non-union  social  actor  that  is  
+helping to  improve working conditions for a  
+group  of  new  workers  in  NSEs.  They  are 
+doing  this  by  creating  a  code  of  conduct  
+that  aims  to  be  a  “guideline  for  a 
+prosperous  and  fair  cooperation  between  
+companies, clients, and crowdworkers ” [62]. 
+Given  the  plurality  of  examples  of 
+worker’s   organizations  and  the  importance 
+of  unionization  for  workers  in  the  future,  it 
+can be expected that unions will continue to 
+exist. Besides, another trend that can be put  
+forward  is  the  increasing  application  of  
+technology  to  help  the  organization  of  
+workers  geographically  dispersed.  These 
+trends  show  that  we  will  probably  see  a  
+change  in  the  nature  of  unions  due  to  the  
+very  change  of  the  workers  that  constitute 
+them  but  not  a  loss  of  their  importance  
+since  the  future  of  employment  holds 
+                                                              
+4
+ http://www.faircrowdwork.org 
+5  http://www.crowdsourcingverband.de   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   15	 	
+ 	
+similar challenges to those faced by workers  
+in the past [64]. 
+4. E	DUCATION WILL NEED TO BE 
+UPDATED	
+ 	
+With  the  big  changes  coming  to  work, 
+education  will  need  to  adapt  using  
+advancements  in  technology  to  achieve  this 
+change.  As  work  becomes  more  and  more  
+demanding  of  the  skilled  workforce  with  a  
+deep  knowledge  of  their  skills,  the 
+education  system  will  need  to  train  new,  
+more  specialized  workers,  with  some  forms  
+of  work  ceasing  to  exist  and  new  jobs  
+emerging [44].  
+Changes  in  education  are  usually 
+reactive: there is a tendency to continue the  
+process  of  training  workers  to  (soon-to-be)  
+old  jobs  in  order  to  serve  current  job 
+market,  creating  a  gap  for  the  new  ones. 
+The  world  will  need  to  adapt  to  a  new  way  
+of  teaching  so  that  people ’s  competences 
+are not outdated and  lose  job opportunities   
+[44].  This  is  a  major  change  in  how  we  feel 
+about  work  today,  when  an  individual  study  
+during  his  youth  and  then  chooses  a  career  
+that  tends  to  be  kept  the  same  during  the 
+life.  In  the  future,  we  will  have  to  keep  on 
+learning  throughout  life  to  adapt  to  
+different  jobs.  As  it  can  be  seen,  the  social  
+impacts of this change can be very serious if 
+we do not adapt in time [44]. 
+Another  important  trend  is  how  work 
+will  require  less  time  from  people  [44],  thus 
+leaving  them  with  more  time  to  study  and 
+learn  new  skills,  reinforcing  the  idea  that  
+people  will  be  able  to  learn  new  skills  while  
+working.  In  addition,  this  means  that  
+education  will  need  to  keep  updated  on 
+new  job  tendencies  to  be  able  to  train  
+workers to take on these new jobs. With the  
+possible  changes  in  the  model  of  education 
+we’ll  see  a  change  in  what  teachers  do,  we 
+might  be  seeing  them  turning  from   
+knowledge  providers  to  guides  through  the  
+massive  amount  of  available  knowledge  
+[44].  As  free  information  becomes  more  
+prevalent  in  society,  we  might  see  teachers  replaced  by  MOOCs  if  people  become  more 
+autodidact. 
+With  these  many  changes  and  an  ever 
+increasing  freedom  it’s  easy  to  see 
+everything  going  out  of  control,  thus  comes 
+the  government,  that  might  be  responsible  
+for  applying  incentives  to  these  changes  
+and  also  inspecting  them  to  guarantee 
+quality and fulfillment [65]. The government 
+will then be key in keeping the education up  
+to  date  with  the  new  skills  needed  by  
+workers,  keeping  those  responsible  for  the 
+education  in  close  contact  with  those  who  
+hire  the  workforce;  doing  so  will  maintain  
+attunement  in  creating  new  jobs  and 
+fulfilling them. With the government playing 
+a  role  in  education  and  the  race  of  
+knowledge-based  workforce  [66],  another  
+possibility  is  to  see  investments  in 
+development  of  intelligence  through  drugs, 
+genetics, viruses [65]. 	
+4.1.	 DO WE NEED NEW SKILLS	? 	
+The  increasing  use  of  technology  is 
+transforming  industries  and  business  
+models,  changing  the  skills  that  employees  
+need  and  reducing  the  life  cycle  of 
+employees’  skill  sets  [24].  This  means  that 
+people  will  have  to  adapt  quickly  to  
+different  skills  to  supply  the  needs  of  the  
+labor  market  [67].  For  example, 
+technologies  such  as  robotics  and  machine 
+learning  automate  specific  tasks  of  jobs,  
+allowing  workers  to  focus  on  more  complex  
+tasks  that  might  require  different  skills  [24]. 
+As  it  can  be  seen,  due  to  automation,  
+people  will  spend  more  time  learning  and  
+will  need  education  to  transition  to  a  new  
+careers [68].  
+The  new  types  of  jobs  require  high 
+skilled  workers  [67].  Higher  level  skills  lead  
+to  innovation  and  entrepreneurship,  bring 
+flexibility  and  adaptability  [69],  and  thus, 
+usually  require  higher  level  qualifications  
+[67].  Higher  skills  are  particularly  needed  to  
+Science,  Technology,  Engineering,  and 
+Mathematics  (STEM)  subjects,  which  plays  a  
+fundamental  role  in  the  economic  success  
+of  a  country  [69].  Building  such  high  skills   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+16  W	ORKING IN  	2050	 	
+P
+K
+ 
+requires  an  investment  in  education  of  
+years. 
+The  future  worker  will  need  a  different 
+set  of  skills  when  compared  to  the  present 
+ones:  they  need  more  cognitive  skills,  such 
+as critical thinking and non-routine problem  
+solving;  interpersonal  skills,  such  as  
+presentation  skills  and  conflict  resolution; 
+and intrapersonal skills, such as adaptability 
+and  self-development  [70].  Jobs  intensive  in  
+social  and  creative  skills  have  a  low  risk  of  
+automation  [67].  Thus,  six  important  skills 
+that  students  can  develop  are:  
+collaboration,  knowledge  construction,  
+skilled  communication,  self-regulation,  real-
+world  problem-solving,  and  use  of 
+information and communication technology  
+for learning [71].  
+The  rise  in  the  demand  of highly  skilled 
+workers  tends  to  occur  simultaneously  to  
+the  rise  in  the  demand  of  lower  level  jobs,  
+especially in services  – jobs requiring low or 
+no skills are projected to grow [69].  Literacy  
+and  numeracy  are  fundamental  skills  [72], 
+and  team  working  and  communication  are  
+important skills for most jobs [69]. 
+4.2.	 HOW WILL KNOWLEDGE	-INTENSIVE 
+WORK CHANGE THE 	
+EDUCATION	? 	
+One  of  the  biggest  trends  of  the  future 
+of work is how it’ll become more knowledge  
+focused  [44].  As  commented  earlier,  with 
+many  jobs  becoming  automated,  the  jobs  
+that  remain  will  be  knowledge-intensive,  
+harder to automate. Then we face ourselves 
+with  the  question  of  how  to  achieve  this  
+greater  knowledge  demanded  for  those  
+new  jobs,  or  else  how  to  make  the  majority  
+of  the  population  knowledgeable  enough  to 
+occupy these future jobs? 
+Another  trending  change  in  education 
+is  the  personalization  of  the  education  [73] 
+[74].  Researchers  consulted  a  group  of 
+specialists,  and  78%  of  them  agree  that  
+education  “will  have  personalized  le arning 
+plans  that  take  into  account  individual  
+needs,  interests  and  preferences”  [75]. 
+Personalization  might  be  one  main  driver  for  achieving  more  deepness  in  knowledge,  
+by  allowing  the  students  to  use  most  of  
+their  time  learning  a  selected  set  of  skills,  
+therefore, providing a better understanding. 
+This  better  understanding  is  later  converted 
+into  better  competitiveness  in  knowledge- 
+focused jobs.   
+Another  subject  is  that  of  how  will 
+advancements  in  technology  affect  
+education  and  maybe  help  with  these  
+needed  changes.  A  new  technology  that  
+could  be  able  to  help  with  the 
+personalization  of  education  is  the  Massive  
+Open Online Courses (MOOCs) [74] [66] [76]  
+and  the  digital  school  in  which  they  will  be 
+the  main  providers  of  the  learning  process. 
+New  Information  and  Communication  
+Technologies  might  be  of  great  importance  
+in future education [77], 
+One  possible  way  of  addressing  the 
+problem  of  improving  education  is  to  look  
+at  the  knowledge  management  inside  
+educational  organizations  [78].  While  this 
+may  look  like  a  short-term  solution,  it  may 
+prove  invaluable  in  the  creation  of  the  
+education  of  the  future,  as  the  way  we  pass  
+on  knowledge  to  others  change,  we  will 
+need  to  know  we  are  changing  it  in  an 
+effective  way.  Studies  in  the  knowledge  
+management  area  can  play  a  main  role  in  
+guaranteeing  that  we  do  not  stray  from  the 
+effectiveness on education. 
+A  trend  that  might  be  of  great 
+importance  to  create  a  knowledge  centered 
+education  is  Open  Access  [66].  Sharing 
+research  to  everyone  provides  easy  and 
+free  access  to  new  knowledge.  Students  – 
+who already are or will be workers  – benefit 
+from  this  knowledge,  and  they  are  likely  to 
+keep themselves updated for life. Therefore, 
+education  organizations  will  need  to  
+consider  this  and  teach  students  about  this  
+possibility.  We  also  see  this  making  an 
+impact  in  another  problem  of  the  future  
+workforce, which is the need to change your  
+knowledge  area  many  times  during  your  
+lifetime,  with  Open  Access  everyone  may  
+learn  of  the  newest  discoveries  as  they  are   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   17	 	
+ 	
+made,  and  then  might  be  readier  to  change  
+when needed. 
+4.3.	 W	ILL SELF	-EMPLOYMENT SAVE THE 
+WORLD	
+? 	
+The  labor  market  has  a  significant 
+presence  of  self-employed  workers  –  small 
+traders,  doctors,  basic  manufacturers,  
+lawyers,  freelance  handymen,  smallholder  
+farmers.  Self-employment  is  not  only  a 
+solution  for  individuals  who  have  not  found 
+job  opportunities,  but  is  also  a  chance  for 
+individuals  searching  for  a  different  career 
+path  [79].  As  a  recent  global  trend  in 
+working  practice,  it  is  an  option  followed  by 
+many  workers  –  according  to  OECD,  self-
+employment  rates  were  on  average  15.4% 
+in  2014,  but  data  for  individual  countries 
+show  notable  disparity,  varying  from  under  
+7%  in  the  United  States  to  over  30%  in  
+Greece,  Mexico  and  Turkey  [80],  as  shown  
+in  Figure  1.  These  workers  have  different 
+ages,  races,  physical  and  personality 
+characteristics, and educational skills. 
+The  collaborative  economy  (or  “gig 
+economy”)   allows  the  sharing  of  good, 
+space  and  services  [81].  Examples  for  this  
+case  are  private  transport  services,  such  as  
+Uber  and  Cabify,  and  rent-sharing  rooms  such  as  Airbnb.    We  identified  contradictory 
+trends 
+–  i.e.,  the  collaborative  economy 
+depends  on  the  economic  growth.  In  a 
+scenario  of  economic  growth  and  declining  
+unemployment,  the  collaborative  economy  
+complements the worker&#39;s monthly income.  
+However,  in  a  scenario  of  unfavorable  
+economic  or  labor  conditions  [82],  the  
+collaborative  economy  becomes  the  only  
+possible option for income. 
+As  an  agent  to  support  these  changes, 
+we  are  experiencing  now  a  rich  digital  
+educational  landscape,  where  can  be  
+included  massive  online  resources 
+produced  for  websites  like  YouTube 6
+, 
+Udemy 7
+ or  Udacity 8
+ that  enable  learners  to 
+access information directly and on-demand, 
+allowing  learners  and  teachers  to  find  each 
+other  outside  formal  educational  methods  
+[83].  Such  websites  have  the  power  to  
+increase  educational  training  to  self- 
+employees,  extends  the  possibilities  of 
+building  relationships  between  teachers 
+and  learners,  opening  potential  for  
+everyone  to  teach  for  the  new  “always -
+online” generations . 	
+                                                              
+6
+ http://www.youtube.com 
+7  http://www.udemy.com 
+8  http://www.udacity.com 	
+ 	
+Figure 1. Self-employment rates by country in 2014 [80]. 	
+     PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+18  W	ORKING IN  	2050	 	
+P
+K
+ 	
+However,  it  does  not  reduce  the 
+importance  of  traditional  self-employment  
+governmental  programs  that  provide  
+business  training,  technical  support,  and 
+financial  assistance,  giving  to  freelancer 
+workers  a  better  understanding  of  all  
+aspects  of  starting  and  operating  a  new  
+business  [84].  This  training  is  an  effective 
+program  for  assisting  unemployed  workers 
+interested  in  self-employment  to  start  their  
+own  business,  remain  self-employed,  and  
+avoid unemployment for long periods [84]. 	
+4.4.	 W	ILL EVERYONE RECEIVE  	ADVANCED 	
+EDUCATION AND 	TRAINING	? 	
+As  a  part  of  these  new,  big  changes, 
+workers  in  the  future  will  shift  from  having  
+generalist  ability  to  having  specialist  ability  
+[44],  at  the  higher  levels  of  knowledge  or  at 
+lower  ones.  As  technology  advances, 
+educated  workers  tend  to  benefit  more  and  
+those  less  educated  tend  to  have  their  jobs  
+automated  first  [70].  For  instance,  the 
+manufacturing  industry  went  from 
+craftsmanship  to  the  factory  system,  
+changing  dynamically  from  mechanized  
+powered  systems  to  the  present-day  trend  
+towards  application  of  advanced 
+manufacturing  technology  (computerized  
+design,  planning,  and  manufacturing  tools  
+such  as  CAD,  CAM  and  MRP).  Parallel  to 
+these  modifications  in  the  production 
+organization  and  technologies  there  have  
+been dramatic changes in the skills required  
+of  the  human  component  of  this  work 
+system [85]. 
+In  fact,  advanced  education  is  more 
+cost-effective  for  the  employer:  it  is  better  
+to  send  employees  outside  to  train  
+specialized  skills  as  needed,  than  
+permanently hire in-house trainers [86].  
+Important  innovations  are  in  progress 
+and  tend  to  become  widely  accessible,  
+bringing  the  opportunity  to  get  a  good  job,  
+possibly  with  a  higher  starting  income,  as  
+some  short-term  higher  education 
+credentials  are  worth  as  much  as  long-term  
+ones  [87].  Among  these  innovations  we  highlight  the  massive  online  training  tools,  
+where  it  is  possible  to  teach  and  train  a  
+large  number  of  workers  on-demand,  
+outside  formal  educational  methods  [83], 
+and  short-term  higher  education  courses 
+like  associate’s  degrees  in  USA,  whose  main  
+difference to traditional bachelor&#39;s degree is  
+in  the  proposal:  a  vocational  education, 
+focused  on  a  rapid  insertion  in  the  labor 
+market [88].  
+Despite  all  this  progress,  advanced 
+education  will  not  reach  a  large  part  of  the 
+population  in  the  near  future.  While  many  
+countries  have  enrolled  upwards  of  50%  of  
+the  age  cohort  attending  post-secondary 
+education  during  the  last  few  decades, 
+many  countries  still  enroll  only  a  small  
+percentage  –  poorer  nations  are  likely  to 
+enroll  fewer  students  than  wealthier  
+nations. Additionally, even when enrollment 
+has expanded, participation has rarely been  
+representative  of  the  society  as  a  whole:  
+within  most  nations,  access  to  higher 
+education  is  still  the  privilege  of  specific 
+segments of society [89]. 	
+5.  W	E ARE SLOWLY MOVING TO A SOCIAL 
+WELFARE STATE	
+ 	
+The  Welfare  State  is  the  type  of  state 
+organization  that  seeks  to  provide  society  
+with  basic  public  services  and  security, 
+guaranteeing  collective  rights  so  that  
+extreme economic and social differences do  
+not  occur  between  individuals.  The 
+discussion  on  social  welfare  involves  a 
+reflection  on  whether  social  policies  should  
+be  directed  or  universal  involving  only  the  
+poor  or  including  all  people  [90].  The  
+provision  of  basic  health,  education  and  
+security in a broad and unrestricted manner  
+are  common  in  this  type  of  organization.  
+Intervention in labor relations is also part of 
+the scope of the welfare state.  
+The  technological  progress  until  2050 
+will  modify  the  work  demand  in 
+organizations  in  an  extreme  way.  The  
+reduction  of  the  jobs  available  eventually  
+reduces  the  population  purchasing  power.   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   19	 	
+ 	
+Consumption  and  production  of  
+information  are  being  altered,  with  
+automation and learning [91]. 
+This  new  service-based  relationship 
+creates a set of human, social, scientific and  
+environmental  complexities,  including  how  
+people  live,  move,  receive  and  deliver  tasks  
+and  services  on  digital  platforms. 
+Servitization,  Informatization,  Digitalization, 
+and  Creativization  will  be  new  digital  
+services [92]. 
+Public  services  that  provide  social 
+welfare  as  services  for  digital  cities  will  be 
+based  on  jointly  resource-conscious,  
+facilitating  innovation  and  creativity, 
+functioning as a service economy [93].  
+In  fact,  this  transition  from  traditional 
+models  to  more  transparent  and  agile 
+models  is  a  symptom  that  covers  many 
+areas from software development to service 
+exchanges  and  micro-pay  according  to  the  
+time you  spend running  a  given demand. In  
+addition,  the  idea  of  creative  cities  is  also 
+related  to  an  agenda  and  progressive  
+planning  including  aspects  of  sustainability  
+and social inclusion [94].  
+New  productive  arrangements  have 
+been  tested,  mainly  due  to  the  relationship  
+between  supply  and  demand.  The  forms  of  
+production of various products have caused  
+significant  impacts  within  the  market  and 
+the  relations  between  employers  and 
+employees  seem  saturated  by  hierarchical  
+models  of  decision-making,  high  taxes  and  
+ineffective results.  
+Collaborative  practice  communities, 
+such  as  free  software  communities,  
+associated  with  universities,  hackerspaces,  
+small  businesses  and  other  productive 
+arrangements,  are  experimenting  with  and 
+applying  methodologies  that  combine  art  
+and  fast  deliveries  for  the  development  of  
+software  projects.  As  the  artisan  manifesto 9
+ 
+suggests  of  software,  presenting  different 
+                                                              
+9
+ http://manifesto.softwarecraftsmanship.org 	
+functioning  of  large  software  companies  
+and showing a new way of building software  
+where  creativity,  customer  focus,  quality  
+and agility are fundamental values. 
+In  the  other  hand,  companies  are 
+moving  to  become  Learning  Organizations.  
+Such  organizations  not  only  create,  acquire,  
+cultivate  and  transfer  knowledge,  but  also 
+to  modify  people  and  organizations  based 
+on  the  motivations  of  new  knowledge,  
+insights  and  brainstorming  to  improve  task  
+engagement [95].  
+Some  developed  countries  in  Europe  began  
+to  hold  debates  on  the  notion  of  &#34;social  
+investment&#34;  from  an  agenda  of  the 
+European  Union  in  the  early  2000s.  The 
+perspective  of  social  investment  intends  to  
+go  beyond  simply  reinforcing  policies  and  
+strategies  in  relation  to  the  labor  market 
+and highlighting the return of care and early 
+education,  driven  by  many  academic  and  
+policy-driven  contributions.  The  social  
+investment  paradigm  can  be  seen  as  the 
+ideal  institutional  structure  for  the  state, 
+which  generates  reform  efforts  in  the  
+current  structures  and  policies  through  a  
+social  investment  strategy  for  the  welfare 
+state  [96].  States  can  manage  these 
+resources  in  order  to  develop  universal  
+basic  income  programs  adapted  to  theirs  
+society needs. 
+The  answers  should  be  made  taking 
+into  consideration  what  kind  of  game  exists  
+between  the  State  and  the  Citizen  and  how  
+will  be  the  behavior  of  these  players.  This 
+allows  us  to  design  important  scenarios  at 
+the end of the analysis.  
+5.1.	 W	ILL WE HAVE TO CHANG E OUR 
+DEFINITION OF OLD	
+?  	
+As  we  have  seen  previously, 
+technological  progress  will  change  the 
+relationship  with  work.  In  health, 
+technology  will  promote  an  increase  in  the  
+quality  of  the  diagnoses  and  improvement  
+of  the  quality  of  life  of  the  people.  The  
+population  is  getting  proportionally  older  
+[80],  as  shown  in  Figure  2.  With  this,   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+20  W	ORKING IN  	2050	 	
+P
+K
+ 
+people&#39;s  productive  age  will  get  larger,  
+causing  an  increase  in  the  economically  
+active  population.  Thus,  longer  lives  imply  
+changes  in  pension  systems,  as  well  as 
+workers  going  beyond  the  normal 
+retirement age for better pension. 
+The  delayed  retirement  is  a 
+phenomenon  in  which  elderly  population 
+keeps  their  labor  force  participation.  This  is 
+a  recent  phenomenon  and  is  more  
+noticeable  in  high-income  workers  and  in  
+less  physically  demanding  occupations. 
+Workers  whom  delay  the  retirement  also  
+may  delay  claiming  Social  Security  benefits  
+[97].  
+In  general,  rules  for  eligibility  to  retire 
+and  claiming  a  pension  benefit  are  complex  
+and  vary  according  to  each  government  
+objectives.  According  to  OECD  [98],  in  2014, 
+the  average  normal  pension  age  was  equal 
+to  64.0  years  for  men  and  63.1  years  for  
+women, assuming labor market entry at age  
+20. The normal pension ages varies from 58 
+(women in Turkey) to 67 (Norway). In 11 out 
+of  the  34  OECD  countries,  the  pension  ages  
+differ between men and women.  
+The OECD predicts for 2054 an increase 
+in  the  average  normal  retirement  age,  in  
+more  countries  to  set  the  normal  
+retirement age to above 65 years and in the  
+reduction in the retirement age gender gaps 
+[98]. 
+In  the  U.S.,  changes  in  Social  Security 
+rules  have  been  encouraging  workers  to  
+delay the full exit from the workforce. Using  
+Current  Population  Survey  (CPS)  data,  Bosworth  et  al.  [97]  show  that  the  labor 
+force  participation  for  men  over  age  60  has  
+a  slowly  falling  pattern.  This  pattern  
+reversed  In  the  1990s,  indicating  that  older 
+men have been delaying retirement.  	
+5.2.	 ARE WE ENTERING IN THE EQUALITY 
+ERA
+? 	
+A  market  economy  based  on  private 
+property  left  to  itself  has  powerful  forces  of 
+convergence (such as diffusion of skills) and 
+of  divergence.  The  main  divergence  force  is 
+the inequality between the rate of return on  
+capital  and  the  rate  of  growth  of  income  
+and  output.  Projections  show  that  this  
+inequality  tends  to  increase  in  the  future  as 
+depicted  in  Figure  3.  This  trend  has  serious  
+negative  consequences  for  wealth  
+distribution  as  wealth  previously 
+accumulated  grows  faster  than  output  and  
+wages  meaning  that  entrepreneurs  tend  to  
+become rentiers increasingly dominant over  
+those  without  properties  but  their  labor 
+[99]. 
+Several  factors  impact  the  rate  of 
+return  on  capital  and  the  rate  of  growth  of 
+income  and  output,  one  is  the  increase  in  
+gender  equality.  For  instance,  the  changes  
+to  inheritance  law  that  have  been  made  
+throughout  history  that  guarantee  a  more  
+equal  distribution  both  between 
+primogenitors  and  younger  children  and 
+between  men  and  women  tend  to  keep  the  
+pace  of  growth  of  the  rate  of  return  on  
+capital
+ slower  than  otherwise  over  time.  An 
+increase  in  the  participation  of  women  in  
+the  economy  also  tends  to  give  them  more  
+political power to demand a better work-life 	
+Figure 2. Elderly population, as a percentage of total population [80].	     PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   21	 	
+ 	
+balance  and  to  promote  human  capital  
+investments  thus  increasing  the  rate  of 
+growth  of  income  and  output.  In  summary,  
+if  the  trend  in  increase  of  gender  equality  
+sustains  itself  over  the  next  decades,  a 
+reduction  in  the  rate  of  increase  of 
+economic inequality can be expected [100].  
+Gender  equality  itself  has  been 
+improving over the last decades but there is 
+still  a  lot  to  be  done  for  women  rights  in 
+several countries with some critical cases as  
+some  countries  in  North  Africa  and  Middle  
+East.  As  shown  by  Figure  4,  the  gender  gap 
+has  been  slowly  reducing  with  subindexes 
+as  health  and  education  reaching  values  
+close  to  1  (equality)  but  the  economic  and  
+political  subindexes  are  still  far  from 
+equality.  Considering  the  current  trend,  the 
+gender  gap  would  only  close  in  83  years  
+[101].  Discrimination  towards  women  
+happens  throughout  their  lives,  sometimes 
+even before birth as some parents prefer to  
+have  a  son  rather  than  a  daughter  leading  
+to strategies such as sex-selective abortions.  
+It  also  happens  intra-household  via  
+selective  resource  allocation  (parents  tend  
+to invest more in the education of their son)  
+and in the society (i.e. lower participation in 
+paid work than men, lower wages than men 
+for same positions) [102].  
+What  about  the  role  of  technology  in 
+the  economic  equality?  Some  researchers 
+defend  that  the  exponential  change  in  the  
+technology  that  sustains  the  economic  system  is  the  main  driver  behind  the  
+growing  inequality.  Digital  technology  acts 
+as  a  catalyzer  of the  economic  payoff  to  the  
+winners  in  our  modern  economy  as  the  
+others  become  increasingly  dispensable 
+and  receive  fewer  resources.  The  winners 
+are those who accumulated the right capital  
+assets,  either  nonhuman  (e.g.  equipment,  
+real  estate  and  financial  assets)  or  human 
+(e.g.  training,  experience  and  skills),  or  the 
+superstars  among  us  that  have  special  
+talents  (or  luck) (e.g. famous  soccer  players,  
+singers and CEOs) [103]. We cannot speak of  
+inequality  without  considering  the  racial 
+inequality.  If  we  take  the  United  States  as  
+an  example,  Native,  African  and  Latin  
+Americans  have  a  Human  Development 
+Index  value  lower  than  that  of  Asian  and 
+White  Americans.  Taking  the  inequality  
+between  White/Asian  and  African  
+Americans,  the  difference  between  the 
+value of several social indicators such as life  
+expectancy,  wages,  education,  employment  
+and  incarceration  show  a  startling  disparity 
+among these racial groups [102].  
+Some  advances  have  been  made  in  
+reducing  racial  inequality.  In  the  US,  for  
+instance,  the  white-black  gap  in  high  school 
+completion  rates  has  been  reduced. 
+Meanwhile,  other  indicators  show  that  little  
+change  or  even  a  worsening  of  the  
+inequality.  This  is  clear  in  the  case  of 
+household  income:  in  1967,  the  median  
+adjusted  income  for  households  headed  by  
+whites  was  US$  44,700  and  by  blacks  was 	
+ 	Figure 3. After tax rate of return on capital vs growth rate at the world level, unt
+il 2100 [99].      PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+22  W	ORKING IN  	2050	 	
+P
+K
+ 
+US$  24,700;  2014  data  shows  that  this  gap  
+has widened as the first group income went  
+up to US$ 71,300 while the second raised to  
+US$ 43,300 [104]. 
+ 
+Figure 4: Global Gender Gap Index and 
+subindexes [101].  
+Another minority that has been fighting 
+for  its  rights  is  the  lesbian,  gay,  bisexual, 
+transgender  and  intersex  (LGBTI).  Since  sexual  orientation  is  still  a  taboo  theme  in 
+several  countries  there  is  not  much  data  
+about  it  making  evidence-based  
+policymaking  very  hard.  Still,  what  is  known 
+about  this  subject  shows  a  bleak  picture  as 
+only  ten  countries  grant  equal  
+constitutional rights to the  LGBTI group and  
+73  countries  consider  same-sex  sexual  acts 
+illegal  from  which  in  13  these  acts  are 
+punishable  by  death.  These  facts  show  that  
+there  is  still  much  to  be  done  for  LGBTI  
+rights  before  we  can  call  our  society  equal. 
+Antidiscrimination  laws  provide  a  powerful  
+tool  in  making  people’s  attitudes  towards  
+the  LGBTI  community  more  tolerant  as 
+Figure 5 shows [102].  	
+5.3.	 IS UNIVERSAL 	BASIC 	INCOME A 
+SOLUTION	
+?  	
+Universal  Basic  Income  (UBI)  can  be 
+defined  as  an  income  paid  by  a  political  
+community  to  all  its  members  on  an  
+individual  basis,  without  the  need  for 
+means  or  labor  requirements  [105].  This 
+concept  is  also  known  as  Unconditional  
+Basic  Income  [106].  For  McGahey  [107],  
+social  welfare  states  face  challenges  of  
+economic  growth  and  employment, 
+consequences  arising  from  rising  costs  of  
+benefits,  demographic  changes  and  job  
+losses  caused  by  information  technology 
+and  computerization.  Such  a  combination 
+pressures  societies  to  explore  new  ways  of  
+offering  welfare  benefits,  or  building  a  new 	
+ 	
+Figure 5. Advances in tolerance as countries establish antidiscrimination law s [102].       PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   23	 	
+ 	
+outlet for this problem. 
+Faced  with  this  scenario,  McGahey 
+suggests  exists  a  path  towards  the  
+introduction of a UBI as a  floor to provide  a 
+basic  level  of  subsistence  as  a  complement 
+to existing policies of the welfare state, or in  
+some  cases  as  a  substitute  for  the  welfare  
+state [107].  
+Esping-Andersen  advocates  a 
+classification  into  three  categories  of  care  
+states:  Liberal;  Conservative  or  Corporatist  
+and  Social  Democrat  [108].  Thinking  of  
+forms  of  regimes,  implemented  by  nations,  
+UBI  would  play  out  differently  in  each  of  
+these regimes, and in relation to the diverse 
+set of existing policies in each [107].  
+In  the  other  hand,  the  Institute  for  the 
+Future 10
+ understands  that  Universal  Basic 
+Assets  (UBA)  is  a  fairer  way  of  challenging 
+inequality.  The  UBA  is  a  core  set  of 
+resources  that  everyone  should  have,  
+including  housing,  education,  healthcare  
+and  financial  security  and  has  been 
+proposed  as  a  way  to  avoid  economic  
+disasters  by  properly  assessing  and  
+distributing  our  resources  to  meet  the  
+needs  of  each  person.  It  can  be  seen  as  an 
+evolution  of  the  UBI  concept,  which  gives 
+each  citizen  a  fixed  amount  of  guaranteed  
+money,  regardless  of  how  much  they  earn  
+[109]. 
+Recent  UBI  experiments  include 
+Finland,  in  which  2,000  unemployed  people  
+between the ages of 25 and 58 will receive a  
+basic income of  €560 a month for two years 
+[110];  and  Ontario  (Canada),  in  which  
+approximately  4,000  people  will  receive  a  
+complementary  basic  income  up  to  C$  
+16,989  per  year  (C$  24,027  for  couples)  – 
+while  keeping  other  previous  benefits  [111].  
+Switzerland,  in  its  turn,  massively  rejected  a 
+UBI  proposal  of  CHF  2,500  monthly  for  
+every adult Swiss citizen in 2016 [112]. 
+                                                              
+10
+ http://www.iftf.org 	
+6.  T	HE ECONOMY WILL GROW FASTER	 	
+The  economy  in  2050  will  be  highly 
+influenced  by  demographic  changes  that  
+are  occurring  right  now.  The  world 
+population  is  currently  about  7.6  billion 
+people  and,  by  2050,  can  reach  about  10  
+billion  people  distributed  across  the  five  
+continents  [113].  This  increase  in  the 
+world’s  population  will  represent  a 
+challenge  to  societies  as    hundreds  of  
+millions  of  jobs  will  have  to  be  created  
+[113].  
+Following  the  demographic  tendencies, 
+a  phenomenon  called  the  “Rise  of  The  Rest” 
+is  predicted  by  some  studies  [114]  [115]. 
+This  phenomenon  describes  the  shifting 
+Gross  Domestic  Product  (GPD)  from  
+developed  countries  to  developing  ones.  
+Today,  we  already  see  the  global  economic 
+activity  shifting  from  the  G7  to  the  G20,  this 
+means  that  developing  countries  are  
+increasing  at  a  larger  rate  their  technology,  
+capital and people [114] [115]. 
+Countries  like  Brazil,  China,  India, 
+Indonesia  and  Mexico  are  likely  to  grow  
+their  GDP  an  average  of  three  to  four  
+percent  per  year  [115].  Mexico  and 
+Indonesia  are  likely  to  be  economically 
+larger  in  terms  of  GDP  than  the  United  
+Kingdom  and  France  while  Pakistan  and  
+Egypt  could  overtake  Italy  and  Canada  on  a 
+Purchasing  Power  Parity  (PPP)  basis.  In 
+terms  of  growth  per  year,  Vietnam,  India  
+and  Bangladesh  can  be  the  fastest  growing  
+economies  from  now  to  2050.  Figure  6 
+shows  the  projected  average  GPD  growth 
+from 2016 until 2050.  
+The  economic  change  of  industries  and 
+manufacturing  will  progressively  bring 
+industrial  services  in  retention,  education, 
+social  welfare,  business  and  financial  
+services.  The  emergence  of  service  systems  
+could  be  characterized  by  the  low-paid  low-
+skill  manual  job,  with  wage  proportional  to  
+the  production,  especially  in  the  private  
+sector [92].   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+24  W	ORKING IN  	2050	 	
+P
+K
+ 	
+The  development  of  emerging  markets 
+will  create  many  business  opportunities.  
+These  opportunities  will  arise  as  these 
+countries  progress  into  industries  and 
+engage  the  world  with  their  growing  
+population.  Even  on  2050,  the  population  
+from  developing  countries  will  be  younger 
+than the ones in developed countries [115]. 
+On  developed  countries,  population 
+ageing  distribution  is  shifting  towards  older 
+ages.  In  these  countries,  birth  control 
+methods  are  helping  to  reduce  the  number 
+of  born  children  and  the  elderly  population  
+is living  even more because of the advances  
+in  technology.  On  developing  countries,  the 
+effects  of  the  population  growth  problem 
+are  much  harder  to  observe,  because  this  
+change  is  happening  at  a  slower  pace.  As  
+people  live  longer,  they  will  have  to 
+continue  working  to  make  the  pension  
+schemes  affordable  and  this  will  probably  
+cause  some  negative  effect  on  youth  
+employment. 
+The  number  of  people  in  the  cities  will 
+also  grow,  for  two  main  reasons.  First,  the  
+total  population  on  Earth  is  growing,  and  
+second,  people  living  on  rural  areas  are 
+migrating  to  urban  areas  –  large  and 
+medium  cities.  By  2050,  86%  of  the  
+developed  countries’  population ,  and  64% of  the  developing 
+countries’  population  will 
+be  urbanized.  This  behavior  shows  some  
+negatives and positives trends, urbanization 
+may  cause  unplanned  growth  of  cities,  
+health  hazards  caused  by  air  and  water  
+pollution  and  unemployment.  On  the  other 
+hand,  urbanization  can  bring  reduction  to 
+expenses  on  transports,  education  and  
+create diversity [113]. 
+By  2050,  part  of  the  workforce  will  be 
+automated  to  better  suit  the  new  world  
+market. Tasks like translation, legal research  
+and  low  level  journalism  will  be  done  by  
+machines [115]. 
+Most  of  the  difficulties  for  automation 
+today are the areas where  the income wage  
+is  already  low.  For  instance,  areas  such  as  
+fast  food,  retail  and  telemarketing  keep 
+automation  at  bay  because  of  the  prices  of  
+the  automation  equipment  [116].  However,  
+the technology will become cheaper and the  
+tradeoff will make sense.  Table 2 shows the 
+probability  of  automation  of a  set  of  jobs  in  
+the next decades [36].  
+The  changes  in  work  and  technology 
+derive  another  tendency  for  the  future,  the  
+inequality [113] [116]. There are many types  
+of  inequality,  like  of  rights,  access,  
+participation  and  protection.  Some  of  them  
+are  widespread  across  the  countries  and 	
+ 	
+Figure 6. Projected average real GDP growth 2016-2050, from [115]. 	
+      PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   25	 	
+ 	
+others  are  more  likely  to  be  seen  on  non- 
+democratic countries.  
+ Income  inequality  is  easy  to  perceive 
+in  the  future  of  automation.  Fewer  jobs, 
+combined  with  the  higher  skill  level 
+required  for  the  existing  ones,  reduce  the  
+space  for  the  “average  worker”.  Also,  while 
+some  countries  are  rapidly  growing,  some  
+of  them  are  not  growing  at  all,  increasing 
+the  gap  between  developed  and  
+underdeveloped countries [116]. 
+Inequality  has  significant  implications 
+on  the  macroeconomic  stability  on  2050  as 
+it  tends  to  concentrate  the  power  in  the  
+hands  of  the  few.  Inequality  can  lead  to 
+suboptimal  use  of  human  resources,  cause 
+investment  reduction,  and  political  and  
+economic instability [116]. 	6.1.	 IS KNOWLEDGE THE KEY	? 	
+The  economy  today  is  very  labor 
+intensive.  A  high  number  of  firms  and  
+workers  in  Africa,  Asia  and  Latin  America 
+are  linked  to  the  global  economy  on  heavy 
+export-oriented  industries  such  as  
+agriculture, clothing and technology [117].  
+In  the  information  age,  Internet  and 
+other  Information  and  Communication  
+Technologies  are  creating  a  network  of  
+information  and  knowledge.  This  allows  
+workers  to  be  more  cooperative  among  
+them.  The  intellectual  property  is  going  to  
+be  less  relevant  in  an  environment  in  which  
+innovative  companies  are  getting  their 
+innovations  from  outside  the  firms  and  it 
+has  been  based  on  the  social  cooperation  
+[118]. 	
+Table 2. Jobs with higher probability to be automated, adapted from [36]. 	
+Job   Probability 	
+Recreational Therapist  0,28% 
+Orthotists and prosthetists  0,35% 
+Athletic trainers  0,71% 
+Clergy  0,81% 
+Chemical engineers  1,7%  Civil engineers  1,9% 
+Lawyers  3,5% 
+Software developers  4,2% 
+Petroleum engineers  16%  Concierges  21% 
+Biological technicians  30%  Judges  40% 
+Historians  44% 
+Commercial pilots  55% 
+Librarians  65% 
+Bartenders  77% 
+Security guards  84% 
+Nuclear technicians  85% 
+Butchers and meat cutters  93% 
+Nuclear power reactor operators  95%  Cashiers  97% 
+Telemarketers  99% 	
+          PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+26  W	ORKING IN  	2050	 	
+P
+K
+ 	
+On  the  other  hand,  some  authors 
+consent  that  in  the  twenty-first  century,  
+emerging  countries,  especially  Brazil,  
+Russia,  India  and  China  (BRIC),  strengthen 
+their  own  national  system  of  innovation 
+creating  new  Intellectual  Propriety  (IP)  for  
+problems  that  current  technology-exporting  
+countries  find  so  daunting  [119]  [120]. 
+Developing  countries  can  find  an 
+opportunity  to  lead  the  creation  of  new  IPs  
+while  exploiting  technologies  and  
+challenges  that  developed  countries  and 
+avoiding  to  commit  the  same  mistakes  of  
+the developed countries [119]. 
+The  growing  number  of  IPs  in  the 
+developing  countries  can  cause  some  harm  
+too.  The  great  number  of  new  patents  and  
+IPs  can  cause  a  scenario  of  choking  and  
+blocking  of  the  technology  creation  [119]. 
+This  phenomenon,  caused  by  low  standard 
+IPs,  can  be  avoided  by  the  creation  of  new,  
+and  more  rigid  standards  for  registering  a  
+new  patent,  and  causing  an  over-protection 
+of the IPs a country currently holds [119].  The  work,  in  the  economy  of  2050, 
+changes  from  a  high-skilled,  technology- 
+intensive work, which emerged in 1980, to a  
+knowledge-intensive  work.  Knowledge-
+intensive  services  started  with  simple  jobs, 
+but  now  includes  advanced  business  
+services,  like  finance,  accounting,  software,  
+medical  services  and  engineering  [117]. 
+These  types  of  jobs  are  seen  as  an 
+opportunity  for  developing  economies  to  
+reap  technological  and  social  benefits  from  
+technological  learning,  knowledge  spillover 
+and  higher  incomes.  Figure  7  shows  the  
+increasing  share  of  knowledge-intensive  
+works  on  different  Global  Production 
+Networks.  
+Knowledge-intensive  careers  provide 
+fewer  jobs  when  compared  to  other  types 
+of  work.  They  require  very  high  skills  and 
+advanced  degrees,  mainly  in  the  fields  of 
+science  and  engineering.  The  unskilled  and  
+less-educated  majority  in  many  countries  is  
+excluded  from  the  very  desirable 
+employment  opportunities  provided  by  the 	
+ 
+Figure 7. Workforce composition across different Global Production Networks, fr om [117].	
+      PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+WORKING IN  	2050	   27	 	
+ 	
+knowledge-intensive work [117].  
+6.2.	 W	ILL 	AUTOMATION DESTROY OR 
+ENHANCE THE 	
+ECONOMY	? 	
+ Technology  alone  will  not  determine 
+economic  results  in  terms  of  growth,  
+inequality,  or  employment.  All  leading 
+economies have had access to similar levels 
+of  technology,  but  have  had  very  different  
+outcomes  throughout  history  because  they  
+have  had  different  institutions  and  policies 
+[121].  
+Although  today  less  than  5%  of  the 
+occupations  can  be  fully  automated  [14],  
+the  increasing  automation  will  affect  almost 
+all  occupations,  not  only  factory  workers 
+and  employees,  but  also  landscaping  
+gardeners  and  dental  laboratory  
+technicians,  stylists,  insurance  sales 
+representatives  and  CEOs  to  a  greater  or 
+lesser extent. 
+Technological  progress  is  the  main 
+driver  of 	
+per  capita	  GDP  growth,  allowing 
+output  to  rise  faster  than  labor  and  capital.  
+Increases  in  labor  productivity  generally  
+translate  into  increases  in  average  wages,  
+giving  workers  the  opportunity  to  reduce 
+working  hours  and  offer  more  goods  and 
+services [121]. 
+These  economic  benefits,  however,  will 
+not  necessarily  be  evenly  distributed  in 
+society.  For  example,  the  19 th
+  century  was 
+characterized  by  technological  changes  that  
+raised  the  productivity  of  less  skilled  
+workers  relative  to  that  of  high-level 
+workers [121]. 
+In  the  United  States,  about  46%  of  the 
+time  spent on work  activities  in occupations 
+and  industries  is  technically  automatable, 
+based  on  current  technologies.  On  a  global  
+scale,  it  is  estimated  that  the  adaptation  of  
+the  currently  developed  automation 
+technologies  could  affect  50%  of  the 
+working hours in the global economy [14]. 
+This  automation  potential  corresponds 
+to  the  equivalent  of  1.2  billion  workers  and  to  US$  14.6  trillion  in  wages.  Among 
+countries,  the  potential  ranges  from  41  to  
+56 percent, with only four countries 
+– China, 
+India,  Japan  and  the  United  States  – 
+accounting  for  just  over  half  of  all  wages  
+and workers [14]. 
+The  effects  of  AI  will  be  felt  unequally 
+by  the  economy.  New  jobs  will  be  created 
+directly in areas such as the development of 
+AI,  as  well  as  indirectly  created  in  a  variety  
+of  areas  across  the  economy,  as  higher  
+revenues lead to demand expansion [121]. 
+The  economy  has  repeatedly  shown  to 
+be  able  to  cope  with  this  scale  of  change, 
+although  it  depends  on  how  quickly 
+changes  occur  and  on  what  concentrations 
+of losses on specific tasks [121]. 	
+6.3.	 W	ILL THE 	ADVANCES IN TECHNOLOGY 
+INCREASE INEQUALITY	
+? 	
+Advances  in  technology  are  going  to 
+change  the  dynamic  in  the  labor  market. 
+Automation  will  increase  unemployment 
+and  that  will  aggravate  inequality  [122].  On  
+the  other  hand,  there  will  be  other  ways  to  
+organize  production.  Alternative,  sharing,  
+social,  green  and  creative  economy  will 
+become  more  popular.  Social  banks  will 
+support  these  initiatives.  For  that  reason,  
+poverty is going to decrease and people will  
+need  to  be  able  to  reinvent  themselves  for 
+finding  alternative  methods  to  make  money 
+[123].  
+The  race  between  institutes  and 
+technology  will  force  companies  to  reinvest 
+money  in  expensive  machines.  The  
+competition  between  small  companies  and  
+big  companies  is  going  to  be  unfair  due  to 
+investment  power  differences.  In  this 
+scenario,  small  companies  are  going  to  
+close  their  doors  and  big  companies  are  
+going to control the Market dynamics [124]. 
+Academy  and  government  are 
+important  pieces  in  that  discussion.  They  
+have  responsibility  for  creating  and  
+fomenting  technology,  respectively. New  
+technologies  may  be  used  as  a  mechanism   PART 	1:	  
+K	
+EY 	TRENDS OF 	FUTURE 	W	ORK	 	
+28  W	ORKING IN  	2050	 	
+P
+K
+ 
+to  reduce  inequality  between  companies  
+and  between  people.  The  Academy  can  
+invest  in  new  ways  of  learning  and  the  
+government  may  create  regulation  for  the 
+society and markets [99]. 
+Basic  income  is  a  policy  that  may  be 
+created  by  a  government  in  order  to 
+decrease  inequality  –  minimum  wage  is  a 
+common  example  of  this  type  of  social 
+policy.  This  subject  is  much  debated  among  
+specialists  in  the  area  and  is  also  
+controversial.  In  a  very  short  and  reduced 
+explanation,  some  of  them,  more  liberal,  
+consider  that  basic  income  and  minimum  
+wages  can  cause  a  disequilibrium  in  the 
+labor  market  [125].  One  of  the 
+consequences is inflation. In the other point  
+of  view,  minimum  wages  and  basic  income  
+are  an  important  public  policy  to  reduce 
+wage  inequality  and  to  have  more  equality 
+between  people.  Some  studies  consider  
+that  basic  income  and  minimum  wages  can  
+accelerate  the  market  through  stimulated 
+aggregate demand [126].      
+PART  2:  
+A  VIEW OF  FUTURE  WORK IN  2050	
+ 
+                           	
+     
+   	
+ 
+ 	 	
+In  this 	part	,  we  develop  three  scenarios  for  the  Future  Work: 	
+the optimistic, which considers the best outcome for all trends; 
+the pessimist,  which  considers  the  worst;  and  the  likely,  which 
+considers the trends we judged most probable. 
+Optimistic Scenario 
+Pessimist Scenario  
+Likely Scenario    PART 	2:	  
+A	
+ VIEW OF 	FUTURE 	W	ORK IN 	2050  	
+30 W	ORKING IN  	2050	 	
+P
+A
+ 
+7. O	PTIMISTIC 	SCENARIO	 	
+In  this  scenario,  we  present  an 
+optimistic  foresight  in  how  working  will  be  
+in  the  year  of  2050.  Using  the  trending 
+changes  identified  in  the 	
+Key  Trends  of  the 
+Future	
+,  we  present  our  view  for  the  next 
+years if the best of the changes come to be. 	
+7.1.	 AUTOMATION	 	
+In  this  scenario  we  will  not  reach  the 
+singularity  –  a  point  where  AI  triggers  an 	
+intelligence  explosion	,  but  on  the  other 
+hand, we will absorb a strong impact on the  
+way  of  processing  data  and  information  
+more  quickly  influenced  by  quantum 
+computation.  Artificial  Intelligence  will  be 
+controlled  by  global  and  democratic  
+regulations  among  nations  to  prevent  their  
+undue use as the domination of  humankind 
+by  machines.  Artificial  Intelligence  will 
+provide  a  scenario  in  2050  of  profound  
+changes  in  work,  replacing  humans  with  
+robots  and  software  in  various  areas, 
+especially  in  tasks  that  do  not  use  critical 
+thinking  and  the  accumulation  of  
+knowledge  acquired  by  human  learning  
+experiences. 
+In this way, humans will adapt to a new 
+reality  of  man-machine  synergy  in  the  
+workplace.  The  collaboration  and  co- 
+creation of ideas and tasks will open up new 
+opportunities  for  work  with  a  deep  balance 
+in the management of natural resources. 
+The concept that automation eliminates 
+jobs  will  disappear,  since  humankind  could  observe for at least a century that the death  
+of most professions  is usually related to the  
+birth  of  new  ones.  And  these  new 
+professions  tend  to  have  a  better  income, 
+because  they  are  often  more  knowledge- 
+based  than  the  previous  professions.  
+Therefore,  the  automation  will  produce 
+increased production and consumption. 
+With the value saved in automation, the 
+company  can  produce  more  and  with  more  
+attractive  products,  inducing  an  increased  
+consumption,  which  generates  new  jobs.  More  jobs  opportunities  will  induce  wage 
+increase,  which  induce  more  consumption  
+and  investment.  Finally,  more  consumption  
+induces  the  production  of  goods,  creating 
+more jobs, in a virtuous circle. 
+With  companies  being  able  to  earn 
+more  money  from  the  same  number  of 
+workers,  they  can  theoretically  increase  the 
+benefits  for  those  workers.  If  they  prefer  to 
+lower  the  prices,  these  workers  can  buy  
+more  goods  with  the  same  amount  of  
+money. 
+Automation  does  not  come  to  make 
+human  work  obsolete,  but  rather  facilitate 
+it,  by  replacing  parts  of  jobs.  In  the  future, 
+we will have plausible metrics to help young 
+people  deciding  between  professions  that  
+will  be  ranked  according  to  their  
+automation potential. 	
+7.2.	 EMPLOYMENT	 	
+In  this  scenario,  both  governments  and 
+companies  will  recognize  the  need  to  train 
+workers  that  will  lose  their  jobs  due  to  
+automation  and  will  find  ways  to  do  so  
+predictively.  This  will  allow  society  to  reap  
+the  benefits  of  automation  such  as 
+reduction  of  the  cost  of  living  and 
+elimination of repetitive and risky jobs while  
+reducing  the  impact  of  technological  
+unemployment. 
+Companies  will  accept  that  reduction 
+and  flexibilization  of  working  hours  are  
+necessary  to  keep  most  of  the  population  
+employed. Governments will be prepared to 
+educate  people  for  new  careers  while  
+providing  a  Universal  Basic  Income  or  
+Universal  Basic  Asset,  which  will  allow 
+people  to  have  their  most  basic  needs 
+tended  to  even  when  not  working.  To  assist  
+both  workers  in  improving  their  
+employment  conditions  and  adapting  to 
+new  circumstances,  unions  will  find  ways  to 
+modernize  themselves.  The  geographical  
+separation  between  workers  in  the  future  
+economy  and  the  rise  of  the  Non-Standard  
+Forms  of  Employment  will  be  counteracted  
+by  ever  improving  worker  organization  that   PART 	2:	  
+A	
+ VIEW OF 	FUTURE 	W	ORK IN 	2050  	
+WORKING IN  	2050	   31	 	
+ 	
+keep informed of the trends in employment  
+and  use  the  same  technology  that  disrupt  
+work for their benefit. 
+Globalization  will  reach  its  most 
+beneficial  potential  with  workers  dispersed  
+around  the  world  collaborating  via  
+computational  tools  such  as  augmented  
+and  virtual  reality.  This  computer-mediated 
+work  will  allow  people  to  do  more 
+homework  bringing  workers  closer  to  their  
+families  and  neighborhood  lives  and,  more  
+importantly  for  the  globalization  impact, 
+they  will  not  need  to  leave  their  home  
+countries in order to find work. 
+7.3.	 EDUCATION	 	
+We  can  see  as  a  consequence  of  the 
+trending  changes  and  advancements  of  
+education,  learning  will  be  mostly  self-
+taught,  there  will  be  easy  and  fast  access  to 
+high  quality  education,  alas  the  education  
+will  be  even  more  specialized  and  
+knowledge-intensive  generating  a  deep 
+improvement  in  the  workforce  that  will  be 
+more qualified. 
+With  the  increasing  personalization  of 
+education  and  its  importance  to  the  new 
+jobs  needs,  self-taught  provides  a  higher  adaptability  to  the  worker.  Rather  than  
+having  a  teacher  to  guide  the  student ’s 
+education,  we  will  see  most  people  
+searching  for  their  own  education  by 
+themselves.  Technological  advancements  
+and  its  integration  with  education  will  
+provide  easy  access  to  knowledge  for 
+everyone.  These  changes  will  not  only  be  
+present  they  will  be  the  base  of  future  
+education. Another reason for this change is  
+how  people  will  have  more  free  time,  as 
+jobs become less demanding in work hours, 
+this  will  lead  to  people  investing  their  free 
+time  in  acquiring  new  knowledge  to  be 
+ready  for  the  changes  in  their  work,  and 
+changes  of  job,  which  will  be  very  much  
+common. 
+As  the  world  becomes  increasingly 
+more  technology-dependent,  the  education  
+will  adapt  itself  to  this  new  world.  STEM  education  will  grow  with  importance,  as 
+STEM  jobs  will  be  more  common  in  the  
+future  world.  Therefore,  this  technology  
+integration  would  change  education  not 
+only  by  grafting  it  on  this  new  way  of  living, 
+but by changing its core, and thus leading to  
+the adaptation of the old education systems  
+into new ones, that better fit this new core. 
+As  this  new  education  will  be  highly 
+structured,  there  will  be  little  need  of  
+regularization  or  incentive  by  governments.  
+However,  as  we  make  the  shift  to  this  new 
+education  we  still  need  the  government  to  
+assert  that  the  high  quality  of  education  
+remains. 	
+7.4.	 SOCIAL 	W	ELFARE	 	
+In  this  scenario,  people  will  be  able  to 
+retire  early  and  there  will  be  income  for 
+people  to  spend  on  education  and  culture 
+in their free time. 
+Natural  and  fundamental  rights  are 
+preserved  and  expanded.  With  the  use  of 
+technology,  participatory  democracy  
+broadens  and  allows  minorities  to  be  
+protected,  reducing  social  inequalities.  The  
+Universal  Basic  Income  will  be 
+implemented.  Countries  are  moving  to 
+cheaper  and  sustainable  energy,  allowing  
+greater  savings  in  the  operation  of  
+machines,  devices,  objects  and  computers. 
+The  population&#39;s  income  will  provide  the 
+basic  needs  of  food,  housing,  health  and  
+education  and  will  allow  investments  in  
+others such as leisure and fun. 
+Satisfaction  and  human  well-being  will 
+be  mediated  through  social  networks.  In 
+this  way,  the  government  and  society, 
+together,  will  design  a  new  Social  Welfare 
+and  find  the  necessary  balance  through  a  
+game  where  learning,  innovation,  research  
+and  science  are  developed,  generating  a 
+change in their mindset. 	
+7.5.	 ECONOMY	 	
+In  this  scenario,  developing  countries 
+start  to  grow  even  faster  until  2050:   PART 	2:	  
+A	
+ VIEW OF 	FUTURE 	W	ORK IN 	2050  	
+32 W	ORKING IN  	2050	 	
+P
+A
+ 
+countries  on  G20  grow  their  GDP  at  an  
+average  rate  of  three  to  four  percent  a  year  
+and the top economies of the world change.  
+Countries  like  Brazil,  Indonesia,  India  and 
+Mexico  closes  their  technology  gap  with  the 
+developed  countries,  increasing  their  GDP  
+and  creating  a  favorable  environment  for  
+new  business  opportunities,  allowing  their 
+population  to  engage  on  the  new 
+opportunities. 
+All  this  advancement  in  technology  is 
+extremely important for workers, as it helps 
+them  to  develop  and  update  their  
+knowledge  and  skills.  In  a  world  where  
+everyone  will  have  access  to  the  internet, 
+the  ability  to  learn  new  things  from  open 
+and  free  learning  platforms  will  reduce  the  
+unemployment  impact,  because  people  will  
+acquire new skills, mitigating the technology 
+unemployment.  Thus,  these  technological 
+advances  will  slow  down  the  growth  in  
+inequality,  the  creation  of  new  jobs  and  
+people having more free time to spend with 
+family and to have fun.  
+In  2050,  the  rapid  growth  of  the  global  
+population  also  starts  to  decrease  and  the  
+population  stabilizes  around  ten  billion 
+people.  With  the  increased  population 
+number,  more  cities  start  to  appear.  People  
+start to migrate from larger cities to smaller  
+ones,  with  better  living  conditions.  The 
+urbanization  tends  to  reduce 
+transportation,  health  and  infrastructure  
+costs,  which  allows  the  government  to  
+provide  better  conditions  to  the  people. 
+New  cities  also  tend  to  offer  better  job 
+opportunities  and  allow  most  of  people  to  
+get  in  touch  with  the  emerging  
+technologies. 
+8.  P	ESSIMIST 	SCENARIO	 	
+In  this  scenario,  we  present  a  pessimist 
+foresight  of  how  working  will  be  in  the  year  
+of  2050.  Using  the  trending  changes  
+identified  in  the 	
+Key  Trends  of  the  Future	, 
+we  present  our  view  of  the  upcoming  
+decades if the worst is to happen. 	
+8.1.	 AUTOMATION	 	
+In  this  scenario,  technology  will 
+advance  quicker  than  predicted  by 
+becoming  increasingly  cheaper  resulting  in 
+a  high  unemployment  rate  as  employers 
+see the benefits of changing their expensive  
+workers  for  more  productive  machines.  
+Public  policies  to  help  citizens  dealing  with 
+this  scenario  will  not  be  created  leaving  a 
+big portion of society out of the job market. 
+The  owners  of  the  robots  and 
+algorithms  that  caused  technological  
+unemployment  will  “own  the  world”  selling  
+their  products  to  the  elite  that  is  able  to  
+work.  
+Therefore,  new  technologies  such  as 
+IoT  will  not  fulfill  its  expected  growth  
+because of the lack of demand, which raises  
+its  costs.  Governments  and  companies  will 
+fail  to  realiz e  such  technologies’  potential 
+for  the  improvement  of  productivity  in  
+industrial applications or for the betterment  
+of  cities  by  the  use  of  smart  sensors,  for 
+instance. 	
+8.2.	 EMPLOYMENT	 	
+In  this  scenario,  societies  will  face 
+technological  unemployment  mainly  due  to 
+computerization  –  advances  in  Artificial 
+Intelligence  and  Robotics.  As  many  careers 
+cease  to  exist,  most  individuals  rely  solely 
+on  governments  to  prepare  them  for  new 
+jobs but this faith proves to be a wrong one 
+as  not  even  the  government  knows  what 
+can be done to  create new occupations that 
+are economically viable. 
+This  will  lead  to  the  rise  of  an 
+“ extremely  poor  class”  that  is  economically 
+irrelevant  to  society  in  that  they  neither 
+work  nor  consume.  Meanwhile,  the  ones  
+that  control  the  machines  that  produce  
+most  of  the  wealth  in  the  world  will  form  a 
+super  elite,  even  richer  and  more  powerful 
+than  the  top  1%  as  we  know  it.  The  super  
+elite  will  reap  the  benefits  of  automation  
+and  jobless  growth  making  inequality  even   PART 	2:	  
+A	
+ VIEW OF 	FUTURE 	W	ORK IN 	2050  	
+WORKING IN  	2050	   33	 	
+ 	
+higher  than  in  present  with  the  increase  of  
+poverty. 
+As  wars  continue  to  be  waged  –  mainly 
+on  the  Middle  East  –  and  climate  change 
+makes  few  coastal  regions  uninhabitable. 
+Thus,  immigration  is  expected  to  increase  
+causing  impacts  in  the  places  that  receive  
+these  fluxes  such  as  higher  unemployment 
+rates and lower average wages. 
+Furthermore,  the  intensification  of  the 
+globalization  of  the  workforce  will  increase 
+immigration from poorer countries to richer  
+ones.  In  this  scenario,  the  loss  of  jobs  to  
+foreign  workers  will  be  made  easier  by  
+advances  in  IT,  which  will  allow  companies 
+to  hire  workers  from  wherever  they  cost 
+less. 
+Companies  will  not  reduce  working 
+hours  making  some  women  feel  that 
+working  conflicts  with  their  interest  of 
+having  children  and  the  elderly  are  unable  
+to  find  jobs  because  they  need  more  time  
+than  young  workers  to  take  care  of  their 
+health, spend time with the family and rest. 
+The  reluctance  of  changing  working 
+hours creates a phenomenon where a small 
+group  of  people  works  8  or  more  hours 
+while a great number of people do not have 
+a job or are neglected to gig to survive. 
+The  rise  of  new  Non-Standard  forms  of 
+Employment  will  create  a  plurality  of  types 
+of  work  contracts  and  many  workers  will 
+not  have  any  type  of  contract  with  their  
+alleged  employers.  This  will  be  a  problem  
+for  labor  rights,  which  will  cover  a  smaller  
+group  of  workers  than  it  does  today.  The  
+workers  deprived  of  labor  rights  will  see  
+themselves  in  an  insecure  situation  as  their  
+employers do not recognize them as part of 
+companies but as independent contractors. 
+Few  companies  will  dominate  markets 
+such  as  personal  transportation  and 
+crowdsourcing  allowing them  to impose the 
+rules  above  on  (or  supported  by)  any  
+government  power.  As  a  result,  workers  in  
+new  NSEs  will  not  be  able  to  unionize  themselves  despite  their  attempts  to  do  so. 
+Being  harder  to  fight  for  better  working  
+conditions  will  make  these  workers  enter  in  
+a  downward  spiral  with  respect  to  their 
+labor rights.  	
+8.3.	 EDUCATION	 	
+In  this  scenario,  education  will  not 
+develop  at  the  same  pace  as  automation.  
+Most  news  jobs  will  require  knowledge  and  
+skills  that  very  few  people  have.  The 
+personalization  of  the  education  will 
+increase,  but  it  will  be  insufficient  for  the  
+students  to  receive  an  adequate  education.  
+The  personalization  will  not  work  because 
+the schools will have not build  the  structure 
+to  treat  the  students  with  individual  needs,  
+interests and preferences.  
+The  traditional  model  of  education, 
+which  ignores  the  different  needs  of  the  
+students,  will  prevail.  The  schools  that  will  
+be  trying  to  use  personalization  will  
+significantly  fail.  As  result  of  this,  the 
+improvement  of  education  will  not  be 
+supported  by  the  government  creating  
+insecurity and disbelief that it could work.  
+Furthermore,  with  the  advances  of 
+automation and new jobs, news skills will be  
+required.  Most  workers  will  not  have  
+developed  skills  such  as  managing  people,  
+solving  problems,  critical  thinking,  and  the 
+common  cognitive  skills.  Self-employment 
+becomes  the  principal  and  maybe  the  only,  
+way  for  work  due  to  the  conditions  
+economic and the demand of jobs. 
+The  demand  of  skilled  labor  becomes  a 
+crucial  element  in  the  economy  and  the 
+Government  will  not  able  to  deal  with  this 
+problem.  Government  will  not  guide 
+workers to educate for new careers.
+Due  to  the  expected  demand,  the 
+people  will  need  to  receiving  appropriate 
+education  and  training  for  work.  The  group 
+of  people  with  advanced  education  and  
+training  will  be  a  part  for  all  and  they  will  
+not  be  able  to  occupy  new  jobs  created.  
+Despite  the  advances  of  technology,  part  of   PART 	2:	  
+A	
+ VIEW OF 	FUTURE 	W	ORK IN 	2050  	
+34 W	ORKING IN  	2050	 	
+P
+A
+ 
+population  will  not  receive  the  equal  access  
+for  education  and  training  because  this  
+advance  will  not  achieve  everybody.  Some  
+people  will  be  to  continue  receiving  a  bad 
+education either training or none of training 
+to adapt for change jobs rapidly. 
+ Open  Access  initiatives  will  fail  due  its 
+high costs, increasing the  number of people 
+unprepared  for  to  work.  Besides,  MOOCs 
+will  be  unsuccessful  for  part  of  population  
+because  for  accept  this  kind  of platform  the  
+technology  must  be  integrated  with  people 
+and  Government  needs  to  interfere.  Only  
+part  of  the  population  with  a  minimum  
+technology  are  going  to  receive  this  accept 
+and they will occupy the jobs, concentrating 
+the labor with them. The MOOCs such other  
+forms  to  learn  will  not  be  regulated  from  
+Government,  decreasing  the  quality  of  the 
+service. 
+This  unfair  access  to  information  will 
+hamper  the  knowledge  acquisition  process 
+and  reinforce  the  unpreparedness  for  most 
+people.  The  knowledge-intensive  jobs  will 
+be  rare  expensive  because  of  this  inducing  
+the  significantly  difference  between  
+demand  and  offer.  This  cost  raise  will 
+difficult  the  entrance  of  new  competitors  – 
+reinforcing  the  existing  elite.  Although  the  
+delays  of  technology,  the  automation  will  
+change  working  hours,  giving  more  free 
+time  for  workers.  They  will  not  invest  the 
+new free time in education for being able to  
+occupy  new  jobs  and  the  changes  of  
+careers, increasing the inappropriate labor.  
+The  area  of  STEM  will  grow  up, 
+especially the study of math and computers,  
+but  this  process  will  not  prepare  people  for  
+all  skills  requirement  for  them  work.  Due  to 
+the  delays  of  technology  and  poor 
+regulation  of  Government  in  education,  the  
+professionals  of  this  area  will  not  receive  
+appropriate  training  and  education  for  act 
+in  jobs.  Generally,  this  professionals  are  
+known  for  possess  critical  and  innovative  
+thinking  but  this  skills  will  be  forgotten,  
+focusing  only  in  technology.  It  will  form  
+disable  professionals  for  developed  products  and  services  looking  after  the 
+needs of the new economy and people.  	
+8.4.	 SOCIAL WELFARE	 	
+In  this  scenario,  advances  in  health 
+combined  with  an  abundance  of  products 
+and  services  due  to  automation  will  allow 
+the  richest  stratum  of  society  to  live  longer 
+and  better  lives.  In  contrast,  the  portion  of  
+the  population  that  does  not  have  access  to  
+this  high-quality  life  will  age  with  a  poor 
+health condition. 
+The  inequality  between  these  two 
+groups  will  not  stop  there.  As  policy  makers 
+perceive  the  aging  of  the  population,  they 
+will  amend  the  legislation  to  increase  the 
+retirement  age. As  the  elderly  remain  in  the  
+labor  market  longer  to  be  eligible  for  a  
+pension,  it  will  be  harder  for  young  people 
+to  find  job  opportunities  and  will  end  up  as 
+part of the  “extremely poor class ”. 
+The  trend  of  rising  inequality  that  has 
+been  perceived  in  the  past  decades  will 
+continue  in  the  future  as  governments  do  
+not  raise  taxes  on  heritages  and  regressive  
+taxes  keep  on  being  adopted  in  some  
+nations.  The  concentration  of  money  and, 
+consequently,  power  in  the  hands  of  the 
+richest  (1%  and  0.1%)  is  aggravated  by  
+automation  and  jobless  growth  as  a  small  
+portion  of  the  population  will  own  the 
+means of production while some people will 
+not even have a job. 
+Inequality  between  countries  will  also 
+become worse as the Middle East is plagued 
+by  wars  and  most  countries  in  the  African  
+continent  do  not  participate  in  the  new  
+digital  economy.  Meanwhile,  advanced 
+economies  such  as  England,  Germany, 
+Japan  and  the  USA  will  control  the 
+technology  being  created  and  the  data 
+being produced worldwide allowing them to 
+control the world economy. 
+Besides  economic  inequality,  gender 
+inequality  will  also  increase  as  reactionary  
+movements  get  in  the  power  and  seize  the  
+rights  acquired  by  women  in  the  past   PART 	2:	  
+A	
+ VIEW OF 	FUTURE 	W	ORK IN 	2050  	
+WORKING IN  	2050	   35	 	
+ 	
+decades.  Other  minorities,  such  afro- 
+descendants,  and  immigrants,  will  suffer  as  
+alt-right,  and  supremacist  movements  get  
+more  support.  In  this  wave  of  conservative 
+thought,  LGBTI  community  will  also  see 
+almost  no  advancement  of  their  rights  – 
+and  possibly  some  regress.  As  countries 
+face  rising  inequality,  nationalist  groups  will 
+increase in power and, as seen previously in 
+history,  immigrants  will  be  pointed  as  
+responsible for all the evils in the developed  
+countries.  Wars,  climate  change  and 
+increasing  poverty  will  intensify  
+immigration  adding  more  fuel  to  the  
+xenophobic movement. 
+Ideas  such  as  Universal  Basic  Income 
+and  Universal  Basic  Assets  will  not  gain  
+strength  and  will  not  be  applied  in  most  
+countries.  This  will  only  worsen  the 
+situation  of  the  portion  of  society  unable  to 
+find  a  job,  which  will  be  left  to  starve.  Part  
+of this “ extremely poor class ” will not accept 
+their  situation  in  the  economy,  creating  a  
+security problem for governments as crimes 
+rates increase. 
+Machines  will  have  a  strong  role  in 
+imposing rules on the population. Given the 
+great social inequality, laws and security will 
+be  realized  through  machines.  The  game  
+will  have  a  major  imbalance  for  the  poorest  
+as  it  will  be  developed  by  governments, 
+which  will  be  strongly  influenced  by  the  big 
+corporations.  
+8.5.	 ECONOMY	 	
+In  this  scenario,  the  economy  will 
+continue  growing  faster;  however  HDI  
+(Human  Development  Index)  will  not  
+increase  as  GDP  (Gross  Domestic  Product). 
+This  will  decrease  the  social  equality,  
+directly  affecting  public  services  in  areas  
+such  as  health,  education  and  security. 
+Inequality  will  reduce  the  macroeconomic 
+stability  and  concentrate  power  in  a  –  even 
+smaller  – minority. 
+The  harder  access  to  education  will 
+divide the society in two: those that can pay 
+for  education  and  those  who  cannot.  The  first  group  will  be  capable  of  competing  for 
+jobs  in  a  shrinking  market  while  the  second 
+group  will  have  to  fight  for  survival  doing 
+any  kind  of  work  that  appears.  This 
+situation  will  further  increase  the  inequality 
+taking  it  to  new  records  and  testing  the  
+limits  of  governments  to  maintain  society’s 
+order. 
+Some countries will grow up faster with 
+the  advances  in  technology  but  some  of 
+them will not grow up. That will increase the  
+gap  between  developed  and  undeveloped 
+countries.  The  undeveloped  countries  will  
+not  be  able  to  invest  in  modern  technology  
+and the necessary education. Thus, they will 
+not  prepare  the  workers  for  new  careers, 
+creating  a  difficult  obstacle  to  the  
+development of these countries.  
+Urbanization  will  grow  up  in  an 
+unplanned  way.  The  people  living  in  rural  
+areas will migrate for cities looking for a job  
+and probably  will not find them. As a result,  
+people  unemployment  will  increase  in 
+cities.  The  environment  will  be  altered 
+because  of  the  advances  of  technology  and  
+industries  without  the  correct  regulation  
+from the government. The quality of air and 
+water pollution will cause health hazards. 	
+9.  L	IKELY 	SCENARIO	 	
+In  this  scenario,  we  present  a  likely 
+foresight  in  how  working  will  be  in  the  year  
+of  2050.  Using  the  trending  changes  
+identified  in  the 	
+Key  Trends  of  the  Future	, 
+we  present  our  view  for  working  in  2050if 
+the most probable trends come to fruition.  	
+9.1.	 AUTOMATION	 	
+In  this  scenario,  the  advancement  of 
+automation  will  result  in  the  substitution  of  
+a  portion  of  workers  by  machines  and  
+Artificial  Intelligence.  The  benefits 
+generated  by  these  substitutions  are 
+considerable  and  will  promote  widespread  
+improvements  in  society,  e.g.  healthcare  
+and  transportation  costs  reduction,  safer  
+roads, and fewer human-mistakes on health  
+care  treatments.  Meanwhile,  even   PART 	2:	  
+A	
+ VIEW OF 	FUTURE 	W	ORK IN 	2050  	
+36 W	ORKING IN  	2050	 	
+P
+A
+ 
+considering  the  benefits  provided  by  
+automation,  the  government  will  keep  an  
+eye  on  the  unemployment  rates  in  order  to  
+keep  it  controlled  while  promoting 
+economic  growth.  The  balance  between 
+automation  and  society  demands  is  the  key  
+point  to  establish  a  virtuous  circle  in  the  
+automation expansion. 
+Governments  will  promote  regulatory 
+policies,  in  order  to  control  the  balance  of  
+the  advancement  in  industry  automation  
+without  locking  it  up  and  avoid  the  side 
+effect  of  mass  unemployment  (or  at  least  
+contain  its  fast  growth).  Such  policies  will  
+aim  at  protecting  vulnerable  people  who 
+will  not  be  ready  for  this  transformation.  In 
+a first moment, only jobs that involve a high  
+creativity  load  will  remain  unaffected  
+because  of  the  lack  of  technology  to 
+emulate  this  behavior  on  AI.  Governments 
+and  institutions  will  be  able  to  contain  this  
+effect  by  investment  and  strengthening  of  
+education,  with  the  aim  of  teaching  new 
+jobs  in  areas  that  will  emerge.  Thus,  governance  institutions  will  be  able  to  play  
+a  key  role  in  this  scenario  as  mediators  
+between  technology  advances  and  people  
+needs. 
+Technologies  such  as  IoT  will  continue 
+to  grow  along  with  its  demand.  The 
+demographic  change  is  one  of  theirs 
+drivers.  People  living  on  rural  areas  are 
+migrating  to  urban  areas.  For  that  reason,  
+there  will  be  opportunities  for  IoT,  Big  Data  
+and  mainly  for  Smart  Cities  –  topics  already 
+under  discussion.  Human,  Smart  and 
+Sustainable will be keywords for cities in the  
+future. Smart Cities  is a term used since the  
+1990s  when  a  big  movement  claimed  new  
+politics for urban planning. Companies have 
+been  using  this  term  for  the  integration  of  
+the  infrastructure  and  urban  services,  and  
+will be a trend for the next 30 years. On one 
+hand, automation will help cities to be more  
+connected and smart.  
+9.2.	 EMPLOYMENT	 	
+In  this  scenario,  new  opportunities  will 
+arise  from  computerization,  with  better  services  and  products  being  delivered  but,  
+at  the  same  time,  a  portion  of  society  will  
+lose  their  jobs,  being  forced  to  look  for  new  
+ones  even  if  not  prepared  for  it. Companies 
+and  governments  will  take  precautionary 
+measures  to  reduce  the  social  cost  of  
+automation to society avoiding a collapse of  
+the economy. 
+Computerization  will  cause  the 
+reduction  of  low-skill  and  low-wage  jobs.  
+Most  of  these  people  will  face  
+unemployment  and  companies  will  be 
+stimulated  to  reduce  the  transition  impact,  
+training  their  workers  in  new  skills  before  
+complete  automation  of  these  jobs.  The 
+government  will  provide  them  a  basic 
+income.  This  smoother  transition  will  cause  
+fewer  damages  to  society,  as  people  will  
+keep  consuming  and  the  economy  remains 
+stable.  
+Communication  will  be  improved 
+globally  as  easier  access  to  optic  fiber 
+extensions  and  wireless  technologies  will 
+cheapen  the  access  to  internet  in  most 
+countries.  There  will  be  a  better  integration  
+between  international  and  national  
+markets.  More  people  in  different  countries 
+will  be  able  to  work  by  the  internet,  but  the 
+quality  of  outsourcing  job  will  not  increase  
+and  the  prices  will  be  the  same  as  it  is  
+today.  
+The  most  developed  countries  will  be 
+able  to  automate  the  low-skill  jobs,  but  the  
+most  part  of  developing  countries  will  not  
+be  at  the  same  pace  and  they  will  use  their 
+low-skill  workforce  for  outsourcing.  Local 
+markets  in  developed  countries  will  keep  
+their  demand  of  medium  and  high-skilled  
+people  –  however,  computerization  will 
+replace  most  of  low-skill  jobs.  On 
+developing  countries,  the  demands  that  
+require  lower  skills  or  repetitive  work  will  
+be  either  outsourced  to  the  international 
+market  –  from  even  poorer  countries  –  or 
+computerized  as  soon  the  prices  become 
+affordable to these economies.    PART 	2:	  
+A	
+ VIEW OF 	FUTURE 	W	ORK IN 	2050  	
+WORKING IN  	2050	   37	 	
+ 	
+The  government,  motivated  by  the  risk 
+of  reduction  of  the  consumer  market,  will  
+promote  the  flexibility  of  working  hours,  
+increasing  the  employment  rate  and  the 
+economic  growth.  The  medium  and  low-
+skilled  workers  that  keep  their  jobs  will  face  
+a reduction from the traditional 40 hours to  
+32  hours  per  week,  gaining  more  time  to 
+use  as  desired.  This  change  will  reduce  the 
+salaries.  To  high-skilled  workers,  the  
+flexibility  will  be  an  option  considering  that  
+they  will  be  a  scarce  workforce  and  the 
+wage will be open to negotiation. 
+After  a  period  of  job  insecurity  and  a 
+series  of  disputes  between  Non-Standard 
+forms  of  Employment  (NSE)  workers  and 
+their  employees,  the  new  types  of  work  
+contracts  will  be  better  regulated  in  order  
+to  provide  minimum  rights.  These  changes 
+on regulation tend to improve the quality of 
+services  and  reduce  the  conflicts  between  
+employers  and  employees  on  this  job  
+category  
+Considering  the  new  forms  of 
+employment,  workers  will  not  necessarily  
+be  associated  to  traditional  trade  unions  as  
+the ones we know. It will take some time for 
+these  movements  to  be  recognized  by 
+employers  and  by  governments,  but  as  
+soon  as  it  happens,  this  movement  will  
+create  ways  most  focused  on  the 
+representation  of  workers  and  employers’ 
+interests, creating gains for both sides.  	
+9.3.	 EDUCATION	 	
+In  this  scenario,  the  provision  and 
+diffusion of MOOCs will allow a transition to  
+a  “customized”  status  of  the  education  
+process,  taking  into  account  individual 
+needs  and  pace  of  learning;  though  it  does  
+not  mean  the  complete  dismissal  of  the  
+teacher role, which  can act as a tutor in this 
+environment. Monitoring and regulation will 
+be  required  for  this  new  methodology,  in  
+order  to  avoid  break  or  conflict  with  
+traditional  educational  models,  and  the 
+government  will  take  a  key  role  in  this  
+function.  This  transition  will  be  gradual,  
+with  technology  serving  and  integrating  with  current  methods 
+—  which  already 
+happens  today,  on  a  smaller  scale  —  and 
+progressively  assuming  its  protagonist  role  
+in this future new schema. 
+Such  progress  will  have  consequences 
+in the  labor market. Training of workers will  
+be  deeper  in  knowledge,  allowing  their  
+adaptation  to  knowledge-intensive  jobs, 
+which are the strongest trend for the future; 
+again,  governments  can  take  a  key  role  by  
+helping and align the education with market  
+needed  skills.  Additionally,  personalization 
+of  education  methods  and  trends  of  jobs  
+automation  will  make  possible  a  lower  
+workload to the workers, allowing them free 
+time  to  study  and  learn  new  skills,  keeping 
+them  updated  on  new  needs  and  
+opportunities in each time and continuously  
+in  the  future,  as  a  movement  of  lifelong 
+learning.  Thus,  a  larger  part  of  the 
+population  will  be  prepared  to  meet  the  
+needs  of  the  new  roles  and  jobs,  however,  
+the  educational  technology  advances  will 
+not  reach  everybody,  letting  a  small  portion 
+of  workers  marginalized  from  jobs  that  are  
+more qualified.  
+Another  important  change  is  the 
+influence of  freedom of choice and  learning  
+versatility provided by the technology to the  
+self-employment.  In  addition  to  a  favorable  
+scenario  for  collaboration  and  exchanges 
+(&#34;gig  economy&#34;),  self-employment  and 
+entrepreneurship will increasingly take their  
+place in the global labor market. 	
+9.4.	 SOCIAL 	W	ELFARE	 	
+In  this  scenario,  society  will  increase 
+the  demand  for  transparency  and  
+representativeness.  The  technological 
+evolution  in  tools  of  information  and  
+communication  will  allow  people  to  interact  
+on  the  most  diverse  subjects  discussed  in 
+the public field. Digital platforms, to provide 
+discussion  and  voting  spaces  on  issues  
+related  to  social  demands.  This  new  model  
+of  participatory  democracy  will  have  to 
+break  with  some  barriers.  The  traditional  
+structures  of  governments  will  use  political   PART 	2:	  
+A	
+ VIEW OF 	FUTURE 	W	ORK IN 	2050  	
+38 W	ORKING IN  	2050	 	
+P
+A
+ 
+power  to  resist  change;  legislative  power  
+(policy makers) will be the most impacted. 
+The  most  radical  groups  will  polarize 
+the  discussions  in  the  political  arena.  This 
+phenomenon  is  a  consequence  of  the 
+greater  dissemination  of  their  ideas  and  
+convictions.  Moderates,  in  contrast,  will  be  
+attacked  from  both  sides  and,  thus,  losing 
+part  of  their  representativeness.  Besides, 
+minorities  will  also  be  able  to  join  forces  
+and  empower  themselves  to  confront  social  
+issues. 
+Broad  dissemination  of  information 
+and  education  will  play  important  roles  in 
+promoting  the  protection  of  fundamental 
+rights. The role of the government will be to 
+promote  discussions  on  the  platforms  and  
+to  provide  citizens  with  the  most  impartial  
+information  as  possible,  so  that  digital 
+democracy  can  be  put  into  practice.  In 
+addition,  it  must  execute,  with  the  support  
+and  popular  participation,  the  winning  
+proposals. 
+With  greater  participation  of  the 
+population  in  decisions,  governments  tend  
+to  increase  the  regulation  of  corporate  
+actions,  thus  reducing  the  political  power 
+that  large  corporations  have  in  the  political 
+arena. 
+The  tendency  for  decisions  to  balance 
+demand  and  supply  will  promote  the 
+reduction  of  working  hours.  Reducing  the 
+working  day  will  have  a  major  impact  on  
+how  society  will  organize  itself.  Less  
+working  time  will  allow  an  increase  in 
+leisure  time.  People  can  use  this  time  to  
+stay  informed  and  participate  in  the  
+discussions of the various political agendas. 
+The  population  and  organized  groups 
+will  drive  some  adjustments  and  reforms  in  
+order  to  maintain  the  social  balance.  One  
+example  of  legislation  adjustment  is  the  
+increased  of  the  minimum  retirement  age, 
+as  the  population  ages.  In  this  case,  the  
+government  will  play  an  important  role  in  
+striking a balance between demand  for jobs  
+and supply.  Another  important  factor  for  the 
+reduction  of  social  inequality  will  be  the  
+distribution  of  income.  By  promoting  
+increased  taxation  through  progressive 
+taxation  in  large  corporations,  in  the  great 
+fortunes  of  the  people  and  in  the  goods  
+received  by  the  heirs,  the  government  can  
+distribute  wealth  to  poorer  sections  of 
+society,  promoting  a  basic  income  for  the 
+most  vulnerable.  Because  of  its  great  
+impact  on  society,  the  Universal  Basic  
+Income  should  not  reach  its  full  potential 
+and inequalities will continue to exist. 	
+9.5.	 ECONOMY	 	
+In  this  scenario,  countries  like  Brazil, 
+China,  India,  Indonesia  and  Mexico  are  
+likely  to  grow  their  GDP  an  average  of three  
+to  four  percent  per  year.  Mexico  and 
+Indonesia  are  likely  to  be  economically 
+larger  than  the  United  Kingdom  and  France  
+while  Pakistan  and  Egypt  could  overtake  
+Italy  and  Canada  on  a  Purchasing  Power 
+Parity  (PPP)  basis.  In  terms  of  growth  per 
+year, Vietnam,  India  and Bangladesh  can be  
+the  fastest  growing  economies  from  now  to  
+2050.  
+GDP  will  not  be  the  best  method  to 
+measure  how  fast  a  country  is  developing  
+itself  –  others  indexes  are  already  being 
+used,  such  as  the  Human  Development  
+Index  (HDI).  People  will  worry  more  about 
+their quality of life. For that reason, HDI will  
+be  more  relevant  for  the  citizens.  Some  
+methods  for  measuring  HDI,  especially  the 
+ones  that  are  related  to  well-being  will  be  
+incorporated  to  the  index.  Developed  
+countries  might  worry  a  bit  more  about  
+well-being  than  the  undeveloped  ones.  
+While  developed  countries  will  be  on  the  
+top  and  worrying  about  well-being  for  their  
+citizens,  the  rest  will  be  still  concerned 
+about  how  fast  they  are  growing  their 
+economies (based on GDP) per year.  
+In  this  scenario,  the  economy  will  be 
+directly  impacted  by  automation:  it  will 
+increase  unemployment  and  that  fact  may  
+contribute  to  increase  inequality.  The  
+government  will  be  the  main  responsible  in   PART 	2:	  
+A	
+ VIEW OF 	FUTURE 	W	ORK IN 	2050  	
+WORKING IN  	2050	   39	 	
+ 	
+this  role.  The  definition  of  new  ways  of  
+working,  basic  income  and  new  public  
+policies  will  be  decisive  tasks  to  the  
+government. Countries that are prepared to 
+it  will  succeed;  the  rest  of  them  must  learn 
+how  to  deal  with  it.  There  is  not  a  recipe.  
+For  that  reason,  the  rules  related  to  create  
+new  ways  of  employment  and  diversities  of 
+public  policies  does  not  apply  to  all 
+countries.  
+Governments  have  to  find  ways  to 
+reinvent  themselves,  adapting  to  their 
+specificities  and  building  their  own  public  
+policies,  possible  mitigating  the  automation  
+effects.  In  addition,  free  market  may  also 
+help  society.  There  will  be  other  ways  to 
+organize  production.  Alternative,  sharing,  
+social,  green  and  creative  economy  will  
+become  more  popular.  Social  banks  will  be 
+important  allies  for  that  process.  They  can 
+finance  these  initiatives,  so  that  is  
+important  to  create  new  jobs,  moving  
+economy and mitigating poverty. 
+Although  a  worldwide-growth  scenario 
+is positive, this scenario is the one that slow  
+down  the  inequality  increase.  Inequality  
+may  be  considered  the  gap  between  the 
+richest  people  and  the  poorest  people.  In 
+the  future,  government  will  have  an  
+important  role  in  this  discussion.  It  is  the  
+only  responsible  to  regulate  that.  As  GDP 
+grows, if it stays in the hands of the market, 
+it  tends  to  concentrate  in  the  hands  of  
+richest  people.  The  government  has  to  find  
+out  ways  to  deal  with  that.  On  one  hand, 
+government  cannot  be  an  impediment  for 
+market’s  growth.  On  the  othe r  hand,  it 
+deserves  regulation  and  mechanisms  to  
+redistribute  GDP  among  people.  It  is  a  fine  
+line;  each  country  will  have  to  make  your 
+own  policies  according  to  their  specificity.  
+The  one  that  insists  in  an  extreme  liberal  
+economy  could  grow  its  GDP,  but  will 
+increase  its  inequality  and  reduce  other  
+index like HDI.  
+The  number  of  people  in  the  cities  will 
+also  grow,  for  two  main  reasons.  First,  the  
+total  population  on  Earth  is  growing,  and  second,  people  living  on  rural  areas  are 
+migrating  to  urban  areas.  By  2050,  86%  of  
+the  developed,  and  64%  of  the  developing  
+world  will  be  urbanized.  This  behavior 
+shows  some  negative  and  positive  trends, 
+urbanization  may  cause  unplanned  growth  
+of  cities,  health  hazards  caused  by  air  and  
+water  pollution  and  unemployment.  On  the 
+other  hand,  urbanization  can  reduce 
+expenses  on  transports,  education  and  
+create cultural diversity. 
+Cities  will  be  smarter  and  more 
+connected.  It  will  create  a  new  market,  
+which  is  already  possible  to  see.  Solutions  
+for  connected  and  smart  cities  are  today  a 
+kind  of  a  shy  market.  In  addition,  people 
+will  start  working  at  home  more  than  
+nowadays,  heating  the  economy  of  home- 
+office  products.  People  on  rural  areas  will 
+migrate  to  urban  areas.  The  opposite  will 
+also happen, but in a smaller level. Big cities  
+will  be  crowded  and  some  people  will  look  
+for  rural  areas  for  retiring,  for  example.  For 
+that  reason,  rural  areas  are  not  going  to  be 
+only  for  agriculture.  Actually,  this  migration  
+movement  for  rural  areas  will  stimulate  the  
+local economy and will help to increase GDP  
+and quality of life on rural areas.    
+40 W	ORKING IN  	2050	 	
+REFERENCES  
+[1]  S.  Albornoz, 	O  que  é  trabalho	,  vol.  171. 
+Brasiliense, 1988. 
+[2]  D.  De  Masi  and  M.  S.  Palieri, 	
+O  ócio  criativo	. 
+Sextante Rio de Janeiro, 2000. 
+[3]  P.  Lafargue, 	
+The  Right  to  be  Lazy:  And  Other 
+Studies	. CH Kerr, 1907. 
+[4]  M. Weber, 	
+The Protestant Ethics and the Spirit 
+of  Capitalism,  republished  with  a  new  introduction  by  Anthony  Giddens	
+.  London: 
+Allen and Unwin, 1930. 
+[5]  D.  S.  Landes, 	
+The  Unbound  Prometheus: 
+Technological  Change  and  Development  in  Western  Europe  from  1750  to  the  Present	
+. 
+Cambridge University Press, 1969. 
+[6]  A.  Smith, 	
+The  Wealth  of  Nations	.  Virginia: 
+Thrifty Books, 2009. 
+[7]  K. Marx, 	
+Capital	, vol. 1. Penguin Books, 1990. 
+[8]  F.  Taylor, 
+Princípios  de  Administração 
+Científcia	. São Paulo: Atlas, 1995. 
+[9]  H.  Ford, 
+My  Life  and  Work	.  CreateSpace 
+Independent Publishing Platform, 2017. 
+[10]  H.  Fayol, 	
+General  and  Industrial  Management	. 
+Martino Fine Books, 2013. 
+[11]  M.  Castells, 	
+The  information  age:  Economy, 
+society,  and  culture.  Volume  I:  The  rise  of  the  network society
+. Oxford, UK: Blackwell, 1996. 
+[12]  K.  Schwab, 	
+The  fourth  industrial  revolution	. 
+Crown Business, 2017. 
+[13]  UKCES,  “The  Future  of  Work:  Trends  and  
+disruptions,”  UK  Commission  for  Employment  
+and Skills, UK, Full Report, 2014. 
+[14]  McKinsey Global Institute, 	
+A future that works: 
+Automation,  employment,  and  productivity	. 
+San  Francisco,  California:  McKinsey  Global 
+Institute, 2017. 
+[15]  X. Li and T. Zhang, “An exploration on artificial 
+intelligence application: From security, privacy 
+and  ethic  perspective,”  in 	
+2017  IEEE  2nd 
+International Conference on Cloud Computing 
+and  Big  Data  Analysis  (ICCCBDA)	
+,  2017,  pp. 
+416 –420. 
+[16]  A.  McAfee  and  E.  Brynjolfsson,  “Human  Work 
+in  the  Robotic  Future:  Policy  for  the  Age  of 
+Automation,” 	
+Foreign  Aff.	,  vol.  95,  p.  139, 
+2016. 
+[17]  J.- H.  Chang  and  P.  Huynh,  “ASEAN  in 
+transformation:  The  future  of  jobs  at  risk  of 
+automation,” 	
+International  Labour 
+Organization  Bureau  for  Employers’  Activities,  Working Paper	
+, no. 9, 2016. 
+[18]  J.  Gubbi,  R.  Buyya,  S.  Marusic,  and  M.  Palaniswami,  “Internet  of  Things  (IoT):  A 
+vision,  architectural  elements,  and  future 
+directions,” 
+Future  generation  computer 
+systems	, vol. 29, no. 7, pp. 1645 –1660, 2013. 
+[19]  L.  Chen 
+et  al.	,  “Robustness,  Security  and 
+Privacy  in  Location-Based  Services  for  Future 
+IoT:  A  Survey,” 
+IEEE  Access	,  vol.  5,  pp.  8956 –
+8977, 2017.  [20] 
+F.  J.  Riggins  and  S.  F.  Wamba,  “Research 
+directions  on  the  adoption,  usage,  and  impact 
+of the internet of things through the use of big 
+data  analytics,”  in 	
+System  Sciences  (HICSS), 
+2015  48th  Hawaii  International  Conference  on	
+, 2015, pp. 1531 –1540. 
+[21]  J.  Crump and I. Brown, “The societal Impact of 
+the  Internet  of  Things,”  in 	
+BCS  workshop  on 
+the  Internet  of  Things,  the  Chartered  Institute  for IT	
+, 2013, vol. 14. 
+[22]  R.  C.  Schlaepfer,  M.  Koch,  and  P.  Merkofer,  “Industry  4.0  Challenges  and  solutions  for  the 
+digital  transformation  and  use  of  exponential 
+technologies,”  Audit  Tax  Consulting  Corporate 
+Finance, 2015. 
+[23]  X.  Liu 
+et  al.	,  “Pinpointing  Anomaly  RFID  Tags: 
+Situation  and  Opportunities,” 	IEEE  Network	, 
+vol. PP, no. 99, pp. 1 –8, 2017. 
+[24]  World  Economic  Fo rum,  “The  future  of  jobs: 
+Employment,  skills  and  workforce  strategy  for 
+the fourth industrial revolution,” 2016.  
+[25]  Roosevelt  Institute,  “Technology  and  the 
+Future  of  Work:  The  State  of  the  Debate,” 
+Open Society Foundations, 2015. 
+[26]  E. Störmer 	
+et al.	,  “The future of work: jobs and 
+skills in 2030,” 2014.  
+[27]  X.  Chen  and  K.  Xiong,  “A  Payment  Scheme  in 
+Crowdsourcing,”  in 	
+Communications  (ICC), 
+2017  IEEE  International  Conference  on	,  2017, 
+pp. 1 –6. 
+[28]  J. Mortensen and M. Vilella- Vila, “The future of 
+employment  supply  and  demand  in  social 
+Europe,” 	
+Futures	,  vol.  44,  no.  7,  pp.  671 –677, 
+2012. 
+[29]  B.  J.  Taber  and  M.  Blankemeyer,  “Future  work 
+self  and  career  adaptability  in  the  prediction 
+of  proactive  career  behaviors,” 	
+Journal  of 
+Vocational  Behavior	,  vol.  86,  pp.  20 –27,  Feb. 
+2015. 
+[30]  Y.  Guan 	
+et  al.	,  “New  job  market  entrants’ 
+future  work  self,  career  adaptability  and  job 
+search  outcomes:  Examining  mediating  and 
+moderating  models,” 	
+Journal  of  Vocational 
+Behavior	,  vol.  85,  no.  1,  pp.  136 –145,  Aug. 
+2014. 
+[31]  Y.  Lima  and  Jano  Moreira  de  Souza,  “The 
+future  of  work:  insights  for  CSCW,”  in 	
+Proceedings  of  the  2017  IEEE  21st 
+International  Conference  on  Computer Supported  Cooperative  Work  in  Design 
+(CSCWD)	
+, Wellington, New Zealand, 2017. 
+[32]  J.  M.  Keynes,  “Economic  Po ssibilities  for  Our 
+Grandchildren,”  in 	
+Essays  in  Persuasion	, 
+Palgrave Macmillan UK, 2010, pp. 321 –332. 
+[33]  G.  Strawn,  “Automation  and  Future 
+Unemployment,” 	
+IT  Professional	,  vol.  18,  no. 
+1, pp. 62 –64, 2016. 
+[34]  A.  Finkel,  “Reflecting  on  the  future  of  work   in 
+Australia:  Pessimism,  optimism  and 
+opportunities,”  in 	
+Journal  and  Proceedings  of 
+the  Royal  Society  of  New  South  Wales	,  2015, 
+vol. 148, p. 125.  REFERENCES	 	
+WORKING IN 	2050	   41	 	
+ 	
+[35]  E.  Brynjolfsson  and  A.  McAfee, 	Race  against 
+the  machine:  How  the  digital  revolution  is  accelerating  innovation,  driving  productivity, and  irreversibly  transforming  employment and  the  economy	
+.  Brynjolfsson  and  McAfee, 
+2012. 
+[36]  C.  B.  Frey  and  M.  A.  Osborne,  “The  future  of  
+employment:  how  susceptible  are  jobs  to 
+computerisation?,” 
+Technological  Forecasting 
+and  Social  Change,  vol.  114,  pp.  254 –280, 
+2017. 
+[37]  D.  Bell, 	
+The  coming  of  post-industrial  society: 
+A  venture  in  social  forecasting	.  New  York: 
+Basic Books, 1976. 
+[38]  G.  M.  Hodgson,  “The  Future  of  Work  in  the 
+Twenty-First  Century,” 	
+Journal  of  Economic 
+Issues	, vol. 50, no. 1, pp. 197 –216, 2016. 
+[39]  Voltaire, 
+Candide	. Simon and Schuster, 2005. 
+[40]  S.  Khallash  and  M.  Kruse,  “The  future  of  work 
+and  work- life  balance  2025,” 	
+Futures	,  vol.  44, 
+no. 7, pp. 678 –686, 2012. 
+[41]  European  Commission  European  Political  Strategy Centre, “The future of work: skills and 
+resilience for a world of change.” 2016.  
+[42]  E.  Galinsky  and  K.  Matos,  “The  future  of  work -
+life  fit,” 	
+Organizational  dynamics	,  vol.  40,  no. 
+4, pp. 267 –280, 2011. 
+[43]  ANZ  Chartered  Accountants,  “The  Future  of 
+Work:  How  Can  We  Adapt  to  Survive  and 
+Thrive,” 2016.  
+[44]  L. Gratton, “The future of work,” 2010.  
+[45]  I. Stewart, D. De, and A. Cole, “Technology and 
+People:  The  great  job- creating  machine,” 	
+Deloitte, London: UK	, 2015. 
+[46]  D.  Tuffley,  “Can  intelligent   machines  in  the 
+workforce  lead  to  a  net  gain  in  the  number  of 
+jobs?,” 	
+Ecodate	, vol. 31, 2017. 
+[47]  A.  J.  Murray  and  K.  A.  Greenes,  “Building  the  
+enterprise  of  the  future,” 	
+VINE	,  vol.  36,  no.  1, 
+pp. 38 –44, 2006. 
+[48]  G.  S.  Franco  Filho,  “Mobilidade  Humana  e  
+Futuro  do  Trabalho:  Efeitos  da  Globalização,” 	
+Revista Direito UFMS	, vol. 1, no. 1, 2015. 
+[49]  C.  K.  Prahalad, 	
+The  Fortune  at  the  Bottom  of 
+the Pyramid	. Pearson Education India, 2006. 
+[50]  N.  Myers,  “Environmental  re fugees:  a  growing 
+phenomenon  of  the  21st  century,” 	
+Philosophical Transactions of the Royal Society 
+of  London  B:  Biological  Sciences	,  vol.  357,  no. 
+1420, pp. 609 –613, 2002. 
+[51]  G.  Ryder,  “The  International  Labour 
+Organization:  The  next  100  years,” 	
+Journal  of 
+Industrial  Relations	,  vol.  57,  no.  5,  pp.  748 –
+757, 2015. 
+[52]  White  House,  “Artificial  Intelligence, 
+Automation,  and  the  Economy,” 	
+Executive 
+office of the President	, 2016. 
+[53]  L.  Drutman  and  Y.  Mounk,  “Will  Robots  Kill 
+Democracy?,” 	
+The  National  Interest	,  pp.  18–
+31, 2016. 
+[54]  N.  Srnicek  and  A.  Williams,  “The  future  isn’t  
+working,” 	
+Juncture	, vol. 22, no. 3, pp. 243 –247, 
+2015.  [55] 
+L. Maxin and J. Deller, “Activities in retirement:  
+individual  experience  of  silver  work,” 	
+Comparative Population Studies	, vol. 35, no. 4, 
+2011. 
+[56]  M.  O.  Qureshi  and  R.  S.  Syed,  “The  impact  of  
+robotics  on  employment  and  motivation  of  
+employees  in  the  service  sector,  with  special  
+reference to  health  care,” 	
+Safety and  health at 
+work	, vol. 5, no. 4, pp. 198 –202, 2014. 
+[57]  ILO,  “Non-standard  employment  around  the 
+world:  Understanding  challenges,  shaping 
+prospects,” Report, Nov. 2016.  
+[58]  C.  Petrie,  “Predictions  about  the  Future  (of 
+Work),” 	
+IEEE  Internet  Computing	,  vol.  19,  no. 
+6, pp. 77 –79, 2015. 
+[59]  G.  Friedman,  “Workers  without   employers: 
+shadow  corporations  and  the  rise  of  the  gig  
+economy,” 	
+Review  of  Keynesian  Economics	, 
+vol. 2, no. 2, pp. 171 –188, 2014. 
+[60]  A.  Aloisi,  “Commoditized  Workers:  Case  Study  
+Research  on  Labor  Law  Issues  Arising  from  a 
+Set  of  on-Demand/Gig  Economy  Pl atforms,” 	
+Comparative  Labor  Law  &  Policy  Journal	,  vol. 
+37, 2016. 
+[61]  S.  D.  Harris  and  A.  B.  Krueger,  “A  Proposal  for 
+Modernizing  Labor  Laws  for  Twenty-First-
+Century  Work:  The  ‘Independent  Worker,’” 
+the 
+Hamilton  project,  Discussion  paper	,  vol.  10, 
+2015. 
+[62]  V.  De  Stefano,  “The  Rise  of  the  Just -in-Time 
+Workforce:  On-Demand  Work,  Crowdwork, 
+and  Labor  Protection  in  the  Gig- Economy,” 	
+Comparative  Labor  Law  &  Policy  Journal	,  vol. 
+37, p. 471, 2016. 
+[63]  A.  Ross  and  T.  Scholz,  “In  search  of  the  lost  
+paycheck,”  in 	
+Digital  labor:  The  Internet  as 
+playground and factory	, 2013, pp. 13 –32. 
+[64]  M.  W.  Finkin,  “Beclouded  Work,  Beclouded  
+Workers  in  Historical  Perspective,” 	
+Comparative  Labor  Law  &  Policy  Journal	,  vol. 
+37, p. 603, 2016. 
+[65]  The  Millennium  Project,  “Future  of   Education 
+2030,”  2007.  [Online].  Available:  
+http://www.millennium- 
+project.org/millennium/Education-2030.html. 
+[Accessed: 20-May-2017]. 
+[66]  M.  Hall,  M.  Harrow,  and  L.  Estelle, 
+Digital 
+Futures:  Expert  Briefings  on  Digital  Technologies  for  Education  and  Research	
+. 
+Chandos Publishing, 2015. 
+[67]  Citi GPS, “Technology at work V 2.0: The future 
+is  not  what  it  used  to  be,” 	
+Citi  GPS:  Global 
+Perspectives & Solutions	, 2016. 
+[68]  M.  Brundage,  “Economic  Possibilities  for  Our 
+Children:  Artificial  Intelligence  and  the  Future 
+of  Work,  Education,  and  Leisure,”  in 	
+Workshops  at  the  Twenty-Ninth  AAAI 
+Conference on Artificial Intelligence	, 2015. 
+[69]  R.  Wilson,  “Skills  anticipation— The  future  of 
+work  and  education,” 	
+International  Journal  of 
+Educational  Research,  vol.  61,  pp.  101 –110, 
+2013. 
+[70]  B. P. Woolf, H. C. Lane, V. K. Chaudhri, and J. L.  Kolodner,  “AI  Grand  Challenges  for 
+Education,” 	
+AI  Magazine	,  vol.  34,  no.  4,  p.  9, 
+2013.   REFERENCES	 	
+42 W	ORKING IN  	2050	 	
+R 
+[71] ITL  Research,  “21st  Century  Learning  Design:  
+Learning Activity Rubrics.” 2012.  
+[72]  S.  Leitch, 	
+Prosperity  for  all  in  the  global 
+economy-world  class  skills:  final  report	.  The 
+Stationery Office, 2006. 
+[73]  K.  Facer  and  R.  Sandford,  “The  next  25  years?:  
+future  scenarios  and  future  directions  for  
+education  and  technology,” 	
+Journal  of 
+computer  assisted  learning	,  vol.  26,  no.  1,  pp. 
+74 –93, 2010. 
+[74]  F.  S.  Tsai,  “Engineering  the  Future  of 
+Education,” 	
+Proceedings  of  the  IEEE	,  vol.  101, 
+no. 6, pp. 1268 –1270, 2013. 
+[75]  C.  Redecker  and  Y.  Punie,  “The  Future  of 
+Learning  2025:  Developing  a  vision  for 
+change,” 	
+Future  Learning	,  vol.  2,  no.  1,  pp.  3 –
+17, 2013. 
+[76]  K.  Harman  and  A.  Koohang,  “MOOC  2050:  a 
+futuristic tour,” 	
+Issues in Information Systems	, 
+vol. 14, no. 2, pp. 346 –352, 2013. 
+[77]  J. Slowinski, “What Will the Future of Education 
+Look  Like?,” 	
+BOOK  REPORT-COLUMBUS-	,  vol. 
+20, no. 4, pp. 18 –21, 2002. 
+[78]  W.-L.  Wu,  Y.-C.  Lee, and  H.- S. Shu,  “Knowledge 
+management  in  educational  organizations:  A 
+perspective of knowledge spiral,” 	
+International 
+Journal  of  Organizational  Innovation  (Online)	, 
+vol. 5, no. 4, p. 7, 2013. 
+[79]  N.  Simões,  N.  Crespo,  and  S.  B.  Moreira,  “Individual  determinants  of  self -employment 
+entry:  What  do  we  really  know?,” 	
+Journal  of 
+Economic Surveys	, 2015. 
+[80]  OECD, 	
+OECD Factbook 2015-2016	. Paris: OECD 
+Publishing, 2016. 
+[81]  I.  E.  McDermott,  “The  Gig  Economy:  Working 
+the  Side  Hustle,” 	
+Online  Searcher	,  vol.  41,  no. 
+January/February, 2017. 
+[82]  P.  Glavin  and  T.  Filipovic,  “Reexamining  the  
+Pushed-Pulled  Debate:  The  Antecedents  and  
+Consequences  of  Wage  Workers’  Transitions 
+into  Self- Employment,”  McMaster  University, 
+2016. 
+[83]  K.  Facer,  “Taking  the  2 1st  century  seriously: 
+young  people,  education  and  socio-technical 
+futures,” 	
+Oxford  Review  of  Education	,  vol.  38, 
+no. 1, pp. 97 –113, 2012. 
+[84]  M.  Michaelides  and  J.  Benus,  “Are  self -
+employment  training  programs  effective? 
+Evidence  from  Project  GATE,” 
+Labour 
+Economics	, vol. 19, no. 5, pp. 695 –705, 2012. 
+[85]  A. Mital 
+et al.	, “The need for worker training in 
+advanced  manufacturing  technology  (AMT) 
+environments:  A  white  paper,” 	
+International 
+Journal of Industrial Ergonomics, vol. 24, no. 2, 
+pp. 173 –184, 1999. 
+[86]  S.  D.  Carter,  “The  growth  of  supply  and 
+demand  of  occupational-based  training  and 
+certification  in  the  United  States,  1990- 2003,” 	
+Human  Resource  Development  Quarterly	,  vol. 
+16, no. 1, p. 33, 2005. 
+[87]  M. Schneider, “Does Education Pay?,” 	
+Issues in 
+Science and Technology	, vol. 30, no. 1, pp. 33 –
+38, 2013. 
+[88]  R.  C.  Moraes,  “Short -term  higher  education: 
+the  united  states’  community  colleges’  experience,” 	
+Cadernos  de  Pesquisa	,  vol.  44, 
+no. 152, pp. 450 –464, Jun. 2014. 
+[89]  P.  G.  Altbach,  L.  Reisberg,  and  L.  E.  Rumbley, 	
+Trends in global higher education: Tracking an  academic  revolution	.  UNESCO  Pub.;  Sense, 
+2009. 
+[90]  W.  Korpi  and  J.  Palme,  “The  paradox  of 
+redistribution  and  strategies  of  equality: 
+Welfare  state  institutions,  inequality,  and 
+poverty  in  the  Western  countries,” 	
+American 
+sociological review	, pp. 661 –687, 1998. 
+[91]  F.  J.  Carrillo, 	
+Knowledge  cities:  Approaches, 
+experiences  and  perspectives	.  Routledge, 
+2006. 
+[92]  A.-V.  Anttiroiko,  P.  Valkama,  and  S.  J.  Bailey,  “Smart  cities  in  the  new  service  ec onomy: 
+building  platforms  for  smart  services,” 	
+AI  & 
+society	, vol. 29, no. 3, pp. 323 –334, 2014. 
+[93]  J. M. Eger, “Smart growth, smart cities, and the 
+crisis at the pump a worldwide phenomenon,” 	
+I-WAYS-The  Journal  of  E-Government  Policy 
+and Regulation	, vol. 32, no. 1, pp. 47 –53, 2009. 
+[94]  M.  Sasaki,  “Kanazawa:  a  creative  and 
+sustainable  city,” 
+Policy  Science	,  vol.  10,  no.  2, 
+pp. 17 –30, 2003. 
+[95]  U.  Eriksson-Zetterquist,  T.  Müllern,  and  A.  Styhre, 	
+Organization  Theory:  a  practice  based 
+approach. Oxford University Press, 2011. 
+[96]  B.  Nolan,  “What  use  is  ‘social  investment’?,” 	
+Journal  of  European  Social  Policy	,  vol.  23,  no. 
+5, pp. 459 –468, 2013. 
+[97]  B.  Bosworth,  G.  Burtless,  and  K.  Zhang,  “Later 
+retirement,  inequality  in  old  age,  and  the 
+growing  gap  in  longevity  between  rich  and  
+poor,” 	
+Economic  Studies  at  Brookings	,  p.  87, 
+2016. 
+[98]  OECD, 	
+Pensions  at  a  Glance  2015	.  OECD 
+Publishing, 2015. 
+[99]  T.  Piketty  and  A.  Goldhammer, 	
+Capital  in  the 
+twenty-first  century	.  Cambridge 
+Massachusetts:  The  Belknap  Press  of  Harvard  
+University Press, 2014. 
+[100]  H.  Boushey,  J.  B.  DeLong,  and  M.  Steinbaum, 	
+After  Piketty:  The  Agenda  for  Economics  and  Inequality	. Harvard University Press, 2017. 
+[101]  World  Economic  Forum,  “The  Global  Gender 
+Gap Report,” World Economic Forum, 2016.  
+[102]  UNDP, Ed., 
+Human development for everyone	. 
+New  York,  NY:  United  Nations  Development  
+Programme, 2016. 
+[103]  E.  Brynjolfsson  and  A.  McAfee, 	
+The  Second 
+Machine  Age:  Work,  Progress,  and  Prosperity  in  a  Time  of  Brilliant  Technologies	
+.  W.  W. 
+Norton & Company, 2014. 
+[104]  Pew  Research  Center,  “On  Views  of  Race  and  
+Inequality,  Blacks  and  Whites  Are  Worlds 
+Apart,” 2016.  
+[105]  P.  V.  Parijs,  “Basic  Income:  A  simple  and 
+powerful  idea  for  the  21  st  century,” 	
+Redesigning  Distribution:  Basic  Income  and 
+Stakeholder  Grants  as  Cornerstones  for  an Egalitarian  Capitalism,  London  &  New  York: Verso	
+, 2005.   REFERENCES	 	
+WORKING IN 	2050	   43	 	
+ 	
+[106] L.  Haywood,  “Unconditional  Basic  Income:  An  
+Economic  Perspective,”  DIW  Roundup:  Politik  
+im Fokus, 2014. 
+[107]  R.  McGahey,  “Universal  Basic  Income  and  the 
+Welfare  State, ”  Social  Science  Research 
+Network,  Rochester,  NY,  SSRN  Scholarly  Paper  
+ID 2863954, Oct. 2016. 
+[108]  G.  Esping-Andersen, 	
+The  three  worlds  of 
+welfare capitalism	. John Wiley & Sons, 2013. 
+[109]  T.  Ward,  “There  Is  a  Solution  to  Our  Broken  
+Economy  Besides  Unive rsal  Basic  Income,” 	
+Futurism	, 10-May-2017. . 
+[110]  S. Sodha, “Is Finland’s basic universal income a 
+solution  to  automation,  fewer  jobs  and  lower 
+wages?,” 
+The Observer	, 19-Feb-2017. 
+[111]  Government  of  Ontario,  “Ontario  Basic 
+Income  Pilot,”  2017.  [Online].  Available: 
+https://www.ontario.ca/page/ontario-basic-
+income-pilot. [Accessed: 29-Oct-2017]. 
+[112]  R.  Minder,  “Guaranteed  Income  for  All? 
+Switzerland’s  Voters  Say  No  Thanks,” 	
+The  New 
+York Times	, 05-Jun-2016. 
+[113]  J.  Schwettmann,  “Cooperatives  and  the  Futur e 
+of Work,” 2015.  
+[114]  U.  Dadush  and  B.  Stancil,  “The  world  order  in 
+2050,”  Carnegie  Endowment  for  International 
+Peace, 2010. 
+[115]  J. Hawksworth, 	
+The world in 2050: how big will 
+the  major  emerging  market  economies  get  and  how  can  the  OECD  compete?	
+ 
+PricewaterhouseCoopers, 2006. 
+[116]  M.  R.  Ford, 	
+The  lights  in  the  tunnel: 
+Automation,  accelerating  technology  and  the  economy  of  the  future	
+.  Acculant  Publishing, 
+2009. 
+[117]  S.  Barrientos,  G.  Gereffi,  and  A.  Rossi,  “Economic  and  social  upgrading  in  global 
+production  networks:  A  new  paradigm  for  a  
+changing  world,” 	
+International  Labour  Review	, 
+vol. 150, no. 3 –4, pp. 319 –340, 2011.  [118]  Y.  M.  Boutang,  S.  Albagli,  and  M.  Maciel, 
+“Wikipolitics  and  the  economy  of  the  bees:  
+information,  power,  and  politics  in  a  digital 
+society,” 	
+Information,  Power,  and  Politics: 
+Technological  and  Institutional  Mediations,  Lexington Books, Lanham, MD	
+, 2010. 
+[119]  J.  H.  Reichman,  “Intellectual  property  in  the 
+twenty-first  century:  will  the  developing 
+countries  lead  or  follow?,” 
+Houston  law 
+review/University of Houston	, vol. 46, no. 4, p. 
+1115, 2009. 
+[120]  R.  C.  Bird,  “Defending  intellectual  property 
+rights  in  the  BRIC  economies,” 	
+American 
+Business  Law  Journal	,  vol.  43,  no.  2,  pp.  317 –
+363, 2006. 
+[121]  White  House,  “Artificial  Intelligence, 
+Automation,  and  the  Economy,” 	
+Executive 
+office  of  the  President.  https://obamawhitehouse.  archives. gov/sites/whitehouse. gov/files/documents/Artificial-Intelligence-Automation-Economy. PDF	
+, 2016. 
+[122]  T.  Piketty, 	
+The  economics  of  inequality	. 
+Harvard University Press, 2015. 
+[123]  S.  Abranches, 	
+A  era  do  imprevisto:  A  grande 
+transição  do  século  XXI	.  Editora  Companhia 
+das Letras, 2017. 
+[124]  F.  Lai,  X.  Zhao,  and  Q.  Wang,  “The  impact  of  
+information  technology  on  the  competitive  
+advantage  of  logistics  firms  in  China,” 	
+Industrial  Management  &  Data  Systems	,  vol. 
+106, no. 9, pp. 1249 –1271, 2006. 
+[125]  M.  Christl,  M.  Köppl-Turyna,  and  D.  Kucsera,  “Revisiting  the  employment  effects  of 
+minimum  wages  in  Europe,” 	
+German 
+Economic Review	, 2017. 
+[126]  F. Serrano and R. Summa, “Aggregate demand 
+and  the  slowdown  of  Brazilian  economic  
+growth in 2011- 2014,” 	
+Nova Economia	, vol. 25, 
+2015. 	
+      
+This  work  is  published  on  the  responsibility  of  the  Director  of  the  Laboratório  do  Futuro.  The  
+resulted  analysis  herein  does  not  necessarily  reflect  the  official  views  of  the  PESC,  COPPE  or 
+the Universidade Federal do Rio de Janeiro.       
+Acknowledgements  
+This  work  was  coordinated  by  Carlos  Eduardo  Barbosa  under  the  supervision  from  the  
+Laboratório do Futuro Director, Jano Moreira de Souza. Five groups studied key trends, formed  
+by  Leon  Augusto  and  Técia  Duarte  (Automation);  Yuri  Lima  and  Eduardo  Mioto  (Employment);  
+Airine Carmo, Jonathan Augusto da Silva and Joshua Kritz (Education); Luis Felipe Coimbra and  
+David  Almeida  (Social  Welfare);  and,  finally,  Alessandro  Caetano  Beltrão  and    Pe dro  Henrique 
+Kleinpaul Bruno (Economy).        
+Please cite this publication as: 
+Barbosa,  C.E.,  Lima,  Y.,  Mioto,  E.,  Costa,  L.F.C.,  Carmo,  A.,  Silva,  J.A.  da,  Kritz,  J.,  Almeida,  D.,  
+Beltrão,  A.C.,  Bruno,  P.H.K.,  Augusto,  L.,  Duarte,  T.,  Souza,  J.M.  de,  2017.  Working  in  2050:  A 
+view  of  how  changes  on  the  work  will  affect  society.  Laboratório  do  Futuro  –  UFRJ,  Rio  de 
+Janeiro. 
+                        Copyright © 2017  

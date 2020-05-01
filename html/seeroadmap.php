@@ -402,42 +402,42 @@ saveCurrentURL();
 				           	</div>
 
 				           	<div class='row justify-content-center'>
-						<div class='col-sm-6 col-md-3'>
-							<div class='col-md-12 feature-box'>
-								<img src='img/timeline6.png' style='width: 130px; height: 100px; display: inline-block;'/>
-								<h4>Completo</h4>
-								<p>Roadmap de todos os arquivos do TRM.</p>
-								<button class='btn btn-primary' style='margin:5px;' 
-                            			onclick='redirect(\"seeroadmap.php?roadmap-completo=".$_GET["roadmap"]."\");'>Ver roadmap</button>
-								
+                          <div class='col-sm-6 col-md-3'>
+                            <div class='col-md-12 feature-box'>
+                              <img src='img/timeline6.png' style='width: 130px; height: 100px; display: inline-block;'/>
+                              <h4>Completo</h4>
+                              <p>Roadmap de todos os arquivos do TRM.</p>
+                              <button class='btn btn-primary' style='margin:5px;' 
+                                                onclick='redirect(\"seeroadmap.php?roadmap-completo=".$_GET["roadmap"]."\");'>Ver roadmap</button>
+                              
 
-							</div>
-						</div> <!-- End Col -->
-						<div class='col-sm-6 col-md-3'>
-								<div class='col-md-12 feature-box'>
-								<img src='img/files2.png' style='width: 100px; height: 100px; display: inline-block;'/>
-								<h4>Individual</h4>
-								<p>Roadmap individual de um arquivo do TRM.</p>
-								<a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$_GET["roadmap"]."'><button class='btn btn-primary' style='margin:5px;'>Visualizar arquivos</button></a>
-							</div>
-						</div> <!-- End Col -->	
-						
-	
-					</div>
+                            </div>
+                          </div> <!-- End Col -->
+                          <div class='col-sm-6 col-md-3'>
+                              <div class='col-md-12 feature-box'>
+                              <img src='img/files2.png' style='width: 100px; height: 100px; display: inline-block;'/>
+                              <h4>Individual</h4>
+                              <p>Roadmap individual de um arquivo do TRM.</p>
+                              <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$_GET["roadmap"]."'><button class='btn btn-primary' style='margin:5px;'>Visualizar arquivos</button></a>
+                            </div>
+                          </div> <!-- End Col -->	
+                          
+                
+                        </div>
 				               
 		                   </div>";
                   }
                   else {
                     echo "<div class='card shadow mb-4'>
                       <div class='card-header py-3'>
-                        <h6 class='m-0 font-weight-bold text-primary'>Selecione uma prospecção para visualizar o roadmap</h6>
+                        <h6 class='m-0 font-weight-bold text-primary'>Selecione um TRM para visualizar o roadmap</h6>
                       </div>
                       <div class='card-body'>
                         <div class='table-responsive'>
                           <table class='table table-bordered' id='table-prospec' width='100%' cellspacing='0'>
                             <thead>
                               <tr>
-                                <th>ID</th>
+                                <th style='position:unset;'></th>
                                 <th style='width: 300px'>Nome</th>
                                 <th>Tema</th>
                                 <th>Ano</th>
@@ -448,7 +448,7 @@ saveCurrentURL();
                             </thead>
                             <tfoot>
                             	<tr>
-                                <th>ID</th>
+                                <th></th>
                                 <th>Nome</th>
                                 <th>Tema</th>
                                 <th>Ano</th>
@@ -459,14 +459,21 @@ saveCurrentURL();
                             </tfoot>
                             <tbody>";
 
-                              $search_prospec=get_data("SELECT * FROM prospec WHERE usuario_prospec = '". $_SESSION['id'] ."'order by id_prospec");
+                            $search_prospec=get_data("SELECT * FROM prospec p INNER JOIN grupos g on g.id_prospec_grupos = p.id_prospec WHERE g.accepted = 'true' AND g.id_user_grupos =  '". $_SESSION['id'] ."' order by p.id_prospec");
 
                               $results_max = pg_num_rows($search_prospec);
 
                               if  ($results_max>0) {
                                   while($result=pg_fetch_object($search_prospec)) {
                                     echo "<tr>
-                                          <td>".$result->id_prospec."</td>
+                                          <td style='text-align: center;' width='30px;'>
+                                          <div style='text-align: center;'>";
+                                            if($result->usuario_prospec == $result->id_user_grupos)
+                                              echo "<img src='img/manager2.png' title='Dono do TRM' style='width: 22px; height: 20px; display: inline-block; opacity:60%;'/>";
+                                            else
+                                              echo "<img src='img/shared5.png' title='Compartilhado com você' style='width: 20px; height: 20px; display: inline-block; opacity:70%;'/>";
+                                          echo "</div>
+                                          </td>
                                           <td>".$result->nome_prospec."</td>
                                           <td>".$result->assunto_prospec."</td>
                                           <td>".$result->ano_prospec."</td>
