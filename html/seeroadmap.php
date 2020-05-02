@@ -656,7 +656,7 @@ saveCurrentURL();
           var data_id_arquivo = data_txt.replace('editarRoadmap-','');
           var data_id_roadmap = data_txt.replace('adicionarRoadmap-','');
           var data_id_modalArquivos = data_txt.replace('modalArquivosRoadmap-','');
-          var data_id_modalArquivos = data_txt.replace('gerarelatorio-','');
+          var data_id_gerarelatorio = data_txt.replace('gerarelatorio-','');
           //console.log(data_id);
           if(data_txt.indexOf('abrirpdf-') > -1) {
             $.ajax({
@@ -727,7 +727,7 @@ saveCurrentURL();
           	 $.ajax({
               url: "modal-gera-relatorio.php",
               method: "POST",
-              data: { "identificador": data_id_roadmap},
+              data: { "identificador": data_id_gerarelatorio},
               success: function(html) {
                 $('#content-gera-relatorio').html(html);
                 $('#modalGeraRelatorio').modal('show');
