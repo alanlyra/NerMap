@@ -3,7 +3,7 @@ require_once 'system.php';
 require_once 'checklogin.php';
 saveCurrentURL();
 ?>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,6 +68,14 @@ saveCurrentURL();
                             $nome_arquivo = $row7[0];
                           }                      
 
+                          $number2 = get_data("SELECT nome_prospec FROM prospec WHERE id_prospec =".intval($id_roadmap));
+                          $row1 = pg_fetch_array($number2);        
+                          $nome_roadmap = $row1[0];
+                          
+                          $number5 = get_data("SELECT ano_prospec FROM prospec WHERE id_prospec =".intval($id_roadmap));
+                          $row5 = pg_fetch_array($number5);        
+                          $ano_limite_roadmap = $row5[0]; 
+
 	                      	$side_left = true;
 	                        $section = array(
 	                            date => "",
@@ -83,6 +91,8 @@ saveCurrentURL();
 	                            arquivo_origem => "",
                               nome_arquivo => "",
                               ano_arquivo => "",
+                              nome_trm => $nome_roadmap,
+                              ano_limite_trm => $ano_limite_roadmap,
 	                            is_prospec => false,
 	                            has_date => false,
 	                            has_temppred => false,
@@ -248,13 +258,6 @@ saveCurrentURL();
                                       $section[is_prospec] = false;
                                       $i_section++;
                                  }
-                        $number2 = get_data("SELECT nome_prospec FROM prospec WHERE id_prospec =".intval($id_roadmap));
-                        $row1 = pg_fetch_array($number2);        
-                        $nome_roadmap = $row1[0];
-                        
-                        $number5 = get_data("SELECT ano_prospec FROM prospec WHERE id_prospec =".intval($id_roadmap));
-                        $row5 = pg_fetch_array($number5);        
-                        $ano_limite_roadmap = $row5[0]; 
 
                          echo "
                           <div class='col-xl-12 col-lg-12' style='height: 77vh;'>
@@ -262,7 +265,7 @@ saveCurrentURL();
                               <div id='box_roadmap' class='card-header py-3'>
 
                               <a href='#' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm' style='float:right;' data-target='#modalGeraRelatorio' data-toggle='modal' data-id='gerarelatorio-".$id_roadmap."'>                         		
-                                <i class='fas fa-download fa-sm text-white-50'></i> Gerar relatórios
+                                <i class='fas fa-download fa-sm text-white-50'></i> Exportar
                               </a>";
 
                                  /* echo "<a href='#' title='Baixar relatório em CSV' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
@@ -282,11 +285,12 @@ saveCurrentURL();
                              else
                              	$id_arquivo_adicionar = 0;
 
-                             echo "<a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."'>
-                             		<div style='text-align: center; margin-top: -3.3vh; margin-left: 88px;'>
-                             			<img id='imageAddProspec' src='img/add2.png' title='Adicionar prospecção manualmente' style='width: 20px; height: 20px; display: inline-block;'/>
-                             		</div>
-                             		</a>
+                             echo "<div style='text-align: center; margin-top: -3.3vh; margin-left: 71px;'>
+                                    <a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."'>
+                             		      <img id='imageAddProspec' src='img/add2.png' title='Adicionar prospecção manualmente' style='width: 20px; height: 20px; display: inline-block;'/>
+                                    </a> 
+                                   </div>
+                             	
                               </div>
                               <div id='box_info_roadmap' class='card-header' style='margin: 0; padding: 0; background-color: whitesmoke; border-radius: 0px 0px 0px 40px;'>";
 
@@ -302,7 +306,7 @@ saveCurrentURL();
 	                              </div></div>";
 	                          }
 
-                              echo "<div class='container' style='background: white !important; height: 100%; overflow: auto; max-width:100%;'>";
+                              echo "<div id='container-roadmap' class='container' style='background: white !important; height: 100%; overflow: auto; max-width:100%;'>";
 
                           echo "<ul class='timeline'>";
                           //echo "<li><div class='tldate'>2020</div></li>";
@@ -331,6 +335,7 @@ saveCurrentURL();
                               if($array_sections[$j][date] > $array_sections[$j][ano_arquivo] && $array_sections[$j][date] <= $ano_limite_roadmap) {
                                 
                                 $array_relatorio_filtered[$id_filtered] = $array_sections[$j];
+
                                 if($array_sections[$j][date] > $previous_date)
                                   echo "<li><div class='tldate'>".$array_sections[$j][date]."</div></li>";
 
@@ -389,6 +394,13 @@ saveCurrentURL();
                               $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original) VALUES ('".$array_sections[$j][assunto]."', null, ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."');");
                             }
                             $previous_date = $array_sections[$j][date];
+                          }
+
+                          if(isset($_GET["api"])) {
+                            if ($_GET["api"] == "json") {
+                              echo "<script>var relatorio_arrayJS = ".json_encode($array_relatorio_filtered)."</script>";
+                              echo "<script>document.body.innerHTML = JSON.stringify(relatorio_arrayJS);</script>";
+                            }                                      
                           }
 
 
@@ -776,7 +788,7 @@ saveCurrentURL();
   <script type="text/javascript">
   
 
-  	function geraRelatorio() {
+  	function geraRelatorioCSV() {
       
       var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
 
@@ -860,7 +872,7 @@ saveCurrentURL();
     return y + "-" + m + "-" + d + "-" + h + "-" + mi + "-" + s;
 }
 
-  function geraJSONdownload() {
+  function geraRelatorioJSON() {
     var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
     
     var a = document.createElement('a');
@@ -869,6 +881,127 @@ saveCurrentURL();
     a.download = getNomeArquivoRelatorio() + '.json';
     a.click();
   };
+
+  function  geraRelatorioTXT() {
+    var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
+    var filename = getNomeArquivoRelatorio() + ".txt";
+    var text = "";
+
+    for (var i = 0; i < relatorio_arrayJS.length; i++) {
+      text += relatorio_arrayJS[i].info;
+      text += '\r\n\r\n';
+	  }
+
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+  }
+
+  function  geraRelatorioDOC() {
+    var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
+    var tipoCabecalhoJS = "<?php echo $tipoCabecalho; ?>";
+    var filename = getNomeArquivoRelatorio() + ".doc";
+    var text = "";
+
+    if(tipoCabecalhoJS.indexOf("roadmap-completo") > -1)
+        var tipo = "Roadmap Completo";
+      else
+        var tipo = "Roadmap do Arquivo: " + relatorio_arrayJS[0].nome_arquivo;
+
+    text += relatorio_arrayJS[0].nome_trm;
+    text += '\r\n\r\n';
+    text += tipo;
+    text += '\r\n\r\n';
+
+    for (var i = 0; i < relatorio_arrayJS.length; i++) {
+      text += relatorio_arrayJS[i].info;
+      text += '\r\n\r\n';
+	  }
+
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+  }
+
+  function geraRelatorioPDF() {
+    var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
+    var tipoCabecalhoJS = "<?php echo $tipoCabecalho; ?>";
+    var text = "";
+
+    for (var i = 0; i < relatorio_arrayJS.length; i++) {
+      text += relatorio_arrayJS[i].info;
+      text += '\n\n';
+	  }
+
+    var doc = new jsPDF('p', 'in', 'letter'),
+    sizes = [12, 16, 20],
+    fonts = [['Times', 'Roman'], ['Helvetica', ''], ['Times', 'Italic']],
+    font, size, lines,
+    margin = 0.5, // inches on a 8.5 x 11 inch sheet.
+    verticalOffset = margin,
+    data = text;
+
+    if (fonts.hasOwnProperty(0)) {
+      font = fonts[0];
+      size = sizes[0];
+
+      if(tipoCabecalhoJS.indexOf("roadmap-completo") > -1)
+        var tipo = "Roadmap Completo";
+      else
+        var tipo = "Roadmap do Arquivo: " + relatorio_arrayJS[0].nome_arquivo;
+
+      doc.text(0.5, verticalOffset + size / 72,  "TRM " + relatorio_arrayJS[0].nome_trm);
+
+      doc.text(0.5, 1 + size / 72,  tipo);
+
+      lines = doc.setFont(font[0], font[1])
+            .setFontSize(size)
+            .splitTextToSize(data, 7.5);
+      
+      var pageHeight = doc.internal.pageSize.height;
+      
+      var space = 1.5;
+      for (var j = 0; j < lines.length; j++) {
+        if(space >= pageHeight-0.5) {
+          doc.addPage();
+          space = 0.5;
+        }
+        doc.text(0.5, space + size / 72, lines[j]);
+        space += 0.2;  
+      }
+
+    }
+    filename = getNomeArquivoRelatorio();
+    doc.save(filename + '.pdf');
+  }
+
+  function visualizarAPI() {
+    window.open(window.location.href + "&api=json");
+  }
+
+  function geraRelatorioPDFTimeline() {
+
+    var pdf = new jsPDF('p', 'pt', 'a4');
+    pdf.addHTML(document.getElementById("container-roadmap"), function() {
+
+        filename = getNomeArquivoRelatorio();
+        pdf.save(filename + '.pdf');
+    });
+  }
 
   function getNomeArquivoRelatorio() {
     var nome_trmJS = "<?php echo $nome_roadmap; ?>";
