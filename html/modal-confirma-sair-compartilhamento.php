@@ -17,7 +17,7 @@ saveCurrentURL();
                   <span aria-hidden='true'>×</span>
                 </button>
               </div>
-              <div class='modal-body'>Todos os arquivos e roadmaps associados também serão removidos.</div>
+              <div class='modal-body'>Você não terá mais acesso aos arquivos e aos roadmaps vinculados à este TRM.</div>
               <div class='modal-footer'>
               <form action='prospeccoes.php?' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
               <input type='text' id='idProspec' name='idProspec' class='form-control bg-light border-0 small' value='".$id_prospec."' aria-label='Search' aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>

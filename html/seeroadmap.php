@@ -261,9 +261,13 @@ saveCurrentURL();
                             <div class='card shadow mb-4' style='height: 100%;'>
                               <div id='box_roadmap' class='card-header py-3'>
 
-                                 <a href='#' title='Baixar relatório em CSV' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
+                              <a href='#' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm' style='float:right;' data-target='#modalGeraRelatorio' data-toggle='modal' data-id='gerarelatorio-".$id_roadmap."'>                         		
+                                <i class='fas fa-download fa-sm text-white-50'></i> Gerar relatórios
+                              </a>";
+
+                                 /* echo "<a href='#' title='Baixar relatório em CSV' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
                                  	<i class='fas fa-download fa-sm text-white-50'></i> Gerar .CSV
-                                 </a>"; 
+                                 </a>";  */
 
                                 /*echo "<div style='float:right; margin-right:10px; margin-right:10px;border: transparent;border-radius: 2px;border-style: solid;'>
                                     <input type='checkbox' class='custom-control-input' id='edicaoRoadmap'>
@@ -583,6 +587,14 @@ saveCurrentURL();
     </div>
   </div>
 
+  <div id="modalGeraRelatorio" class="modal fade" role="dialog">
+    <div id="content-gera-relatorio" class="modal-dialog modal-xl">
+      <!-- Modal content-->
+      
+
+    </div>
+  </div>
+
  <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -644,6 +656,7 @@ saveCurrentURL();
           var data_id_arquivo = data_txt.replace('editarRoadmap-','');
           var data_id_roadmap = data_txt.replace('adicionarRoadmap-','');
           var data_id_modalArquivos = data_txt.replace('modalArquivosRoadmap-','');
+          var data_id_modalArquivos = data_txt.replace('gerarelatorio-','');
           //console.log(data_id);
           if(data_txt.indexOf('abrirpdf-') > -1) {
             $.ajax({
@@ -710,6 +723,17 @@ saveCurrentURL();
               }
             })
           }
+          else if(data_txt.indexOf('gerarelatorio-') > -1) {
+          	 $.ajax({
+              url: "modal-gera-relatorio.php",
+              method: "POST",
+              data: { "identificador": data_id_roadmap},
+              success: function(html) {
+                $('#content-gera-relatorio').html(html);
+                $('#modalGeraRelatorio').modal('show');
+              }
+            })
+          }
           else{
           	
           }
@@ -750,20 +774,14 @@ saveCurrentURL();
   </script>
 
   <script type="text/javascript">
+  
 
   	function geraRelatorio() {
+      
       var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
-      var nome_trmJS = "<?php echo $nome_roadmap; ?>";
-      var tipoCabecalhoJS = "<?php echo $tipoCabecalho; ?>";
-      var nome_arquivoJS = "<?php echo $nome_arquivo; ?>";
-
-      if(tipoCabecalhoJS.indexOf("roadmap-completo") > -1)
-        var fileTitle = "Relatório do TRM " + nome_trmJS + " (Completo) - " + getFormattedTime();
-      else
-        var fileTitle = "Relatório do TRM " + nome_trmJS + " (Arquivo " + nome_arquivoJS + ") - " + getFormattedTime();
 
   		formatArray(relatorio_arrayJS);
-  		exportCSVFile(headers, itemsFormatted, fileTitle);
+  		exportCSVFile(headers, itemsFormatted, getNomeArquivoRelatorio());
   	}
 
   	function convertToCSV(objArray) {
@@ -841,6 +859,29 @@ saveCurrentURL();
     var s = today.getSeconds();
     return y + "-" + m + "-" + d + "-" + h + "-" + mi + "-" + s;
 }
+
+  function geraJSONdownload() {
+    var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
+    
+    var a = document.createElement('a');
+    var blob = new Blob([JSON.stringify(relatorio_arrayJS)], {'type':'application\/json'});
+    a.href = window.URL.createObjectURL(blob);
+    a.download = getNomeArquivoRelatorio() + '.json';
+    a.click();
+  };
+
+  function getNomeArquivoRelatorio() {
+    var nome_trmJS = "<?php echo $nome_roadmap; ?>";
+    var tipoCabecalhoJS = "<?php echo $tipoCabecalho; ?>";
+    var nome_arquivoJS = "<?php echo $nome_arquivo; ?>";
+
+    if(tipoCabecalhoJS.indexOf("roadmap-completo") > -1)
+        var fileTitle = "Relatório do TRM " + nome_trmJS + " (Completo) - " + getFormattedTime();
+      else
+        var fileTitle = "Relatório do TRM " + nome_trmJS + " (Arquivo " + nome_arquivoJS + ") - " + getFormattedTime();
+
+    return fileTitle;    
+  }
 
  </script>
 
