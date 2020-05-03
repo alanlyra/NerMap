@@ -146,11 +146,11 @@ saveCurrentURL();
                       <th>Tema</th>
                       <th>Ano</th>
                       <th style="width: 120px">Nº de arquivos</th>
-                      <th>Status</th>
-                      <th style="width: 140px">Adicionar arquivo</th>
-                      <th>Arquivos</th>
-                      <th>Roadmap</th>
-                      <th>Ações</th>
+                      <th style="position:unset;">Status</th>
+                      <th style="width: 140px; position:unset;">Adicionar arquivo</th>
+                      <th style="position:unset;">Arquivos</th>
+                      <th style="position:unset;">Roadmap</th>
+                      <th style="position:unset;">Ações</th>
                     </tr>
                   </thead>
                   <tfoot>

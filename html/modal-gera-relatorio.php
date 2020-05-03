@@ -63,7 +63,7 @@ saveCurrentURL();
                   <div class='col-md-12 feature-box'>
                     <img src='img/api6.png' style='width: 100px; height: 100px; display: inline-block;'/>
                     <h4>API</h4>
-                    <p>Acesse seu roadmap de qualquer projeto.</p>
+                    <p>Acesse o roadmap de qualquer projeto.</p>
                     <button class='btn btn-primary' style='margin:5px;' onclick='visualizarAPI();'>Visualizar</button>
                   </div>
                 </div> <!-- End Col -->	
