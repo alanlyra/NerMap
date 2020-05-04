@@ -209,7 +209,7 @@ saveCurrentURL();
                                   <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='Remover TRM' style='width: 18px; height: 18px; display: inline-block;'/></div></a>";
                                 }
                                 else{
-                                  echo "<a href='#' data-target='#modalRemoveCompartilharmentoTRM' data-toggle='modal' data-id='removecompartilhamentoprospec-".$result->id_prospec."' data-usuarioremovecompartilhamento='".$_SESSION['id']."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/out5.png' title='Sair do compartilhamento' style='width: 22px; height: 22px; display: inline-block; opacity: 70%;'/></div></a>";
+                                  echo "<a href='#' data-target='#modalRemoveCompartilharmentoTRM' data-toggle='modal' data-id='removecompartilhamentoprospec-".$result->id_prospec."' data-usuarioremovecompartilhamento='".$_SESSION['id']."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/out5.png' title='Sair do TRM' style='width: 22px; height: 22px; display: inline-block; opacity: 70%;'/></div></a>";
                                 }
 
                                 echo "</td>

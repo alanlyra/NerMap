@@ -35,7 +35,7 @@ saveCurrentURL();
 
 
           echo "<tr>
-                  <td style='text-align: center;' width='30px;'><img class='img-profile rounded-circle' src='".$result->photo."' style='width:30px; height:30px;' title='".$result->name_user."'/></td>
+                  <td style='text-align: center;';><img class='img-profile rounded-circle' src='".$result->photo."' style='width:30px; height:30px;' title='".$result->name_user."'/></td>
                   <td>".$result->name_user."</td>
                   <td>".$result->email."</td>
 
@@ -51,7 +51,7 @@ saveCurrentURL();
 
                       if($result2->accepted == "t")
                         echo "<div style='text-align: center;'>
-                                <button style='border: 0; background: transparent; display: inline-block;' type='submit' name='convidaUsuario' value=''> <img src='/img/shared5.png' title='".$result2->name_user." já participa do TRM' width='20px' height='20px' style='opacity:70%;' /></button >
+                        <a href='#' data-target='#modalConfirmaRemoveUsuarioCompartilhamentoTRM' data-toggle='modal' data-id='removecompartilhamentousuario-".$id_prospec."' data-usuarioremovecompartilhamento='".$result->id_user."' style='display: inline-block;'><div style='text-align: center;'><img src='img/remove-user2.png' title='Remover usuário do TRM' style='width: 24px; height: 24px; display: inline-block; opacity:60%;'/></div></a>
                               </div>";
                       else
                       echo "<div style='text-align: center;'>
@@ -69,7 +69,7 @@ saveCurrentURL();
                             aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
 
                             <div style='text-align: center;'>
-                              <button style='border: 0; background: transparent; display: inline-block;' type='submit' name='convidaUsuario' value=''> <img src='/img/invite.png' title='Enviar convite para ".$result->name_user."' width='20px' height='20px'/></button >
+                              <button style='border: 0; background: transparent; display: inline-block;' type='submit' name='convidaUsuario' value=''> <img src='/img/invite.png' title='Enviar convite para ".$result->name_user."' width='22px' height='22px'/></button >
                             </div>  
                           </form>";                    
 
@@ -83,16 +83,11 @@ saveCurrentURL();
   </tbody>
 </table>
 
-<div id="modalEditarArquivo" class="modal fade" role="dialog" style="top: 1vh;">
-    <div id="edicao-arquivo" class="modal-dialog">
-      <!-- Modal content-->
-      
-    </div>
-  </div>
 
-  <!-- Confirma Remoção do arquivo Modal-->
-  <div class="modal fade" id="modalConfirmarDeleteArquivo" role="dialog" style="top: 15vh;">
-    <div id="delete-arquivo" class="modal-dialog" >
+
+  <!-- Confirma Remoção do usuário do compartilhamento Modal-->
+  <div class="modal fade" id="modalConfirmaRemoveUsuarioCompartilhamentoTRM" role="dialog">
+    <div id="comfirma-remove-compartilhamento" class="modal-dialog" style="top:16vh;">
       
     </div>
   </div>
@@ -110,51 +105,28 @@ saveCurrentURL();
           	data_id = $(this).data('id');
           }      
 
-          if (typeof $(this).data('nomearquivo') !== 'undefined') {
-            data_nomearquivo = $(this).data('nomearquivo');
+          if (typeof $(this).data('usuarioremovecompartilhamento') !== 'undefined') {
+            id_usuarioremovecompartilhamento = $(this).data('usuarioremovecompartilhamento');
           }
-          if (typeof $(this).data('anoarquivo') !== 'undefined') {
-            data_anoarquivo = $(this).data('anoarquivo');
-          }
-          if (typeof $(this).data('confarquivo') !== 'undefined') {
-            data_confarquivo = $(this).data('confarquivo');
-          }
-
-          if (typeof $(this).data('deletearquivo') !== 'undefined') {
-            data_deletearquivo = $(this).data('deletearquivo');
-          }
-
           var data_txt =  data_id.toString();
-          var data_id_editarArquivo = data_txt.replace('editararquivo-','');
-          var data_id_deleteprospec = data_txt.replace('deleteprospec-','');
-          if (data_txt.indexOf('editararquivo-') > -1) {
+          var data_id_removecompartilhamentousuario = data_txt.replace('removecompartilhamentousuario-','');
+          
+          if (data_txt.indexOf('removecompartilhamentousuario-') > -1) {
             $.ajax({
-              url: "modal-editar-arquivo.php",
+              url: "modal-confirma-remover-usuario-compartilhamento.php",
               method: "POST",
-              data: { "identificador": data_id_editarArquivo,
-                      "nomearquivo": data_nomearquivo,
-                      "anoarquivo": data_anoarquivo,
-                      "confarquivo": data_confarquivo },
+              data: { "identificador": data_id_removecompartilhamentousuario,
+                      "usuario": id_usuarioremovecompartilhamento},
               success: function(html) {
-                $('#edicao-arquivo').html(html);
-                $('#modalEditarArquivo').modal('show');
-              }
-            })
-          }
-          else if (data_txt.indexOf('deleteprospec-') > -1) {
-            $.ajax({
-              url: "modal-confirma-delete-arquivo.php",
-              method: "POST",
-              data: { "identificador": data_id_deleteprospec,
-                      "arquivo": data_deletearquivo},
-              success: function(html) {
-                $('#delete-arquivo').html(html);
-                $('#modalConfirmarDeleteArquivo').modal('show');
+                $('#comfirma-remove-compartilhamento').html(html);
+                $('#modalConfirmaRemoveUsuarioCompartilhamentoTRM').modal('show');
               }
             })
           } 
         })
     });
+
+  
 </script>
 
 
