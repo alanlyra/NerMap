@@ -102,6 +102,31 @@
   text-decoration: none;
 }
 
+.divWorkplace {
+  height: 36.7vh;
+  margin-top:23px;
+}
+
+.divAnalise {
+  height: 19.6vh;
+}
+
+.divMetodologia {
+  height: 15vh;
+}
+
+@media (max-width: 991px) {
+  .divAnalise {
+    height: auto;
+  }
+  .divWorkplace {
+    height: auto;
+  }
+  .divMetodologia {
+    height: auto;
+  }
+}
+
 .button-transparent-aceitar {
   background-color: Transparent;
   background-repeat:no-repeat;

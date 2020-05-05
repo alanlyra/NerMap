@@ -158,8 +158,10 @@ saveCurrentURL();
                                 $section[info] .= $palavra . " ";               
 
                                 if($palavra == ".") {
-                                  $regex_references = '/-LSB-\s*(.*?)\s*-RSB-/';
-                                  $section[info] = preg_replace($regex_references, '', $section[info]);
+                                  $regex_reference_tipo1 = '/-LSB-\s*(.*?)\s*-RSB-/';
+                                  $regex_reference_tipo2 = '/-LRB-\s*(.*?)\s*-RRB-/';
+                                  $section[info] = preg_replace($regex_reference_tipo1, '', $section[info]);
+                                  $section[info] = preg_replace($regex_reference_tipo2, '', $section[info]);
                                   $section[info] = str_replace(" % ", "% ", $section[info]);
                                   $section[id_arquivo] = $result2->id_arquivo;
                                   $section[arquivo_origem] = $result2->id_arquivo;
@@ -280,7 +282,7 @@ saveCurrentURL();
                     </div>";   */
 
                     echo "<h5 class='m-0 font-weight-bold text-primary'>TRM ".$nome_roadmap."</h5>
-                    <p style='margin: 0px 0px -8px 0px;'><small class='text-muted'><b>Área:</b> ".$assunto_roadmap."</small></p>";
+                    <p style='margin: 0px 0px -8px 0px; padding-top: 5px;'><small class='text-muted'><b>Área:</b> ".$assunto_roadmap."</small></p>";
 
                     if($tipoCabecalho == "arquivo")
                     $id_arquivo_adicionar = $id_arquivo;
@@ -294,18 +296,20 @@ saveCurrentURL();
                           </div>
                     
                     </div>
-                    <div id='box_info_roadmap' class='card-header' style='margin: 0; padding: 0; background-color: whitesmoke; border-radius: 0px 0px 0px 40px;'>";
+                    <div id='box_info_roadmap' class='card-header' style='height: 3vh; margin: 0; padding: 0; background-color: whitesmoke; border-radius: 0px 0px 0px 40px;'>";
 
 
                     if(isset($_GET["roadmap-completo"])) {
-                      echo "<p style='margin: 0px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>Roadmap completo do TRM</b></small></p>
-                          <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 0px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>Filtrar por arquivos</b></small></p></a>
-                        </div></div>";
+                      echo "<p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>Roadmap completo do TRM</b></small></p>
+                          <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>Filtrar por arquivos</b></small></div></p></a>
+                        </div>";
                     }
                     else {
-                      echo "<p style='margin: 0px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>Roadmap do arquivo ".$section[nome_arquivo]."</b></small></p>
-                          <a href='seeroadmap.php?roadmap-completo=".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 0px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>Ver Roadmap Completo do TRM</b></small></p></a>
-                        </div></div>";
+                      echo "<p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>Roadmap do arquivo ".$section[nome_arquivo]."</b></small></p>
+                          <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 3px 0px 0px 6px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>Filtrar por arquivos</b></small></div></p></a>
+                          <div href='' style='margin: 0; float: right;'><p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>·</b></small></p></div>
+                          <a href='seeroadmap.php?roadmap-completo=".$id_roadmap."' style='margin: 0; float: right;'><div style='text-align: center;'><p style='margin: 3px -14px 0px 0px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>Ver Roadmap Completo do TRM</b></small></p></div></a>
+                        </div>";
                     }
 
                     echo "<div id='container-roadmap' class='container' style='background: white !important; height: 100%; overflow: auto; max-width:100%;'>";
@@ -448,10 +452,13 @@ saveCurrentURL();
                     $results_max_grupos2 = pg_num_rows($search_grupos2);
 
                     if($results_max_grupos2 > 0)
-                      echo "<script>$('#main-content').html('Você tem um convite pendente de aceitação para acessar este roadmap. </br></br> Acesse seus convites na página TRMs e Arquivos para ter acesso.');</script>";
+                      echo "<script>$('#main-content').html('Sem permissão de acesso ao TRM.</br></br>Você tem um convite pendente de aceitação para acessar este TRM. Acesse seus convites na página TRMs e Arquivos para ter acesso ou contate o Administrador do sistema.');</script>";
                     else
-                      echo "<script>$('#main-content').html('Sem permissão de acesso. Contate o Administrador do sistema.');</script>";
+                      echo "<script>$('#main-content').html('Sem permissão de acesso ao TRM. Contate o Administrador do sistema.');</script>";
+
+                    echo "</div>";
                   }
+                  
                 }
                 else if(isset($_GET["roadmap"])) {
                   echo "<div class='card shadow mb-4'>

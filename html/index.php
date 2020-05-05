@@ -16,7 +16,7 @@ saveCurrentURL();
    <?php
    // Se o usuario possui sessao
    if (isset($_SESSION['email'])  && $_SESSION['email']!='') {
-      header("Location: "."/painel.php");
+      header("Location: "."/roadmap.php");
    ?>
    <div id="top_bar">
          <table width=100% border=0>

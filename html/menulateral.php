@@ -12,25 +12,25 @@
   <hr class="sidebar-divider my-0">
 
   <!-- Nav Item - Painel de Análise -->
-  <li id="li_painel" class="nav-item">
+ <!--  <li id="li_painel" class="nav-item">
     <a class="nav-link" href="index.php">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Painel de Análise</span></a>
-  </li>
+  </li> -->
 
   <!-- Divider -->
-  <hr class="sidebar-divider">
+  <!-- <hr class="sidebar-divider"> -->
 
   <!-- Heading -->
-  <div class="sidebar-heading">
+ <!--  <div class="sidebar-heading">
     Ações
-  </div>
+  </div> -->
 
   <!-- Nav Item - Criar TRM -->
   <li id="li_roadmap" class="nav-item">
     <a class="nav-link" href="roadmap.php">
-      <i class="fas fa-fw fa-folder"></i>
-      <span>Novo TRM</span></a>
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Painel de Início</span></a>
   </li>
 
 
@@ -73,20 +73,20 @@
   </li> -->
 
   <!-- Divider -->
-  <hr class="sidebar-divider">
+ <!--  <hr class="sidebar-divider"> -->
 
   <!-- Heading -->
-  <div class="sidebar-heading">
+ <!--  <div class="sidebar-heading">
     Sobre
-  </div>
+  </div> -->
 
   <!-- Nav Item - Metodologia -->
-  <li id="li_metodologia" class="nav-item">
+ <!--  <li id="li_metodologia" class="nav-item">
     <a class="nav-link" href="metodologia.php">
       <i class="fas fa-fw fa-wrench"></i>
       <span>Metodologia</span></a>
   </li>
-
+ -->
   <!-- Divider -->
   <hr class="sidebar-divider">
 

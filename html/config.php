@@ -32,53 +32,58 @@ saveCurrentURL();
         <div class="container-fluid">
 
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Novo Roadmap</h1>
+            <h1 class="h3 mb-0 text-gray-800">Configurações do Sistema</h1>
           </div>
 
           <!-- Content Row -->
-
           <div class="row">
 
-            <!-- Project Card Example -->
-            <div class="col-xl-8 col-lg-9">
-              <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Aprimorar modelo de treino</h6>
-                </div>
-                </br>
-                <div class="col-xl-4 col-lg-5">
-                  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Carregar Relatório</a>
-                  </br></br>
-                  <label class="container">Conll
-                    <input type="radio" checked="checked" name="radio">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="container">Texto
-                    <input type="radio" name="radio">
-                    <span class="checkmark"></span>
-                  </label>
-                </div>
-                </br>
-                <div class="col-xl-4 col-lg-5">
-                  <input type="text" class="form-control bg-light border-0 small" placeholder="Nome do Roadmap..." aria-label="Search" aria-describedby="basic-addon2">
-                </div>
-                </br>
-                <div class="col-xl-4 col-lg-5">
-                  <input type="text" class="form-control bg-light border-0 small" placeholder="Tema da Prospecção..." aria-label="Search" aria-describedby="basic-addon2">
-                </div>
-                </br>
-                <a href="#" class="btn btn-primary btn-icon-split" style="width:8em;">
+          <?php
+          $search_admin=get_data("SELECT * FROM users WHERE id_user = " .intval($_SESSION["id"]) . " AND admin = 'true'");
+          $results_max_admin = pg_num_rows($search_admin);
 
-                    <span class="text">Iniciar</span>
-                </a>
-                </br>
-              </div>
-            </div>
+          if($results_max_admin > 0) {
+            echo "<div class='col-xl-8 col-lg-9'>
+                    <div class='card shadow mb-4'>
+                      <div class='card-header py-3'>
+                        <h6 class='m-0 font-weight-bold text-primary'>Aprimorar modelo de treino</h6>
+                      </div>
+                      </br>
+                      <div class='col-xl-4 col-lg-5'>
+                        <a href='#' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'><i class='fas fa-download fa-sm text-white-50'></i> Carregar Relatório</a>
+                        </br></br>
+                        <label class='container'>Conll
+                          <input type='radio' checked='checked' name='radio'>
+                          <span class='checkmark'></span>
+                        </label>
+                        <label class='container'>Texto
+                          <input type='radio' name='radio'>
+                          <span class='checkmark'></span>
+                        </label>
+                      </div>
+                      </br>
+                      <div class='col-xl-4 col-lg-5'>
+                        <input type='text' class='form-control bg-light border-0 small' placeholder='Nome do Roadmap...' aria-label='Search' aria-describedby='basic-addon2'>
+                      </div>
+                      </br>
+                      <div class='col-xl-4 col-lg-5'>
+                        <input type='text' class='form-control bg-light border-0 small' placeholder='Tema da Prospecção...' aria-label='Search' aria-describedby='basic-addon2'>
+                      </div>
+                      </br>
+                      <a href='#' class='btn btn-primary btn-icon-split' style='width:8em;'>
 
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
+                          <span class='text'>Iniciar</span>
+                      </a>
+                      </br>
+                    </div>
+                  </div>";
+          }
+          else {
+            echo "<div id='main-content' class='col-xl-12 col-lg-12' style='height: 77vh;'>Sem permissão de acesso. Contate o Administrador do sistema.</div>";
+          }
 
-            </div>
+          ?>
+            
           </div>
 
 

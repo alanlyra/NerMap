@@ -422,7 +422,7 @@ saveCurrentURL();
           <!-- DataTales Example -->
          <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Adicionar usuários ao TRM</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Adicionar ou remover usuários do TRM</h6>
             </div>
             <div class="card-body">
               <div id="table-modal-usuarios" class="table-responsive">
@@ -746,7 +746,7 @@ saveCurrentURL();
 
               $ext = pathinfo($val['name'], PATHINFO_EXTENSION);  
 
-              if($ext == "pdf" || $ext == ".pdf") {
+              if($ext == "pdf" || $ext == ".pdf" || $ext == "PDF" || $ext == ".PDF") {
                 $parser = new \Smalot\PdfParser\Parser();
                 $pdf    = $parser->parseFile($val['tmp_name']);
                  
