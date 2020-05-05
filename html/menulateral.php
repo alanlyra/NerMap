@@ -53,7 +53,7 @@
   <!-- Nav Item - Roadmaps Collapse Menu -->
   <li id="li_seerodmaps" class="nav-item">
     <a class="nav-link" href="seeroadmap.php">
-      <i class="fas fa-fw fa-chart-area"></i>
+      <i class="fas fa-fw fa-map-signs"></i>
       <span>Roadmaps</span></a>
   </li>
   <!-- <li id="li_rodmaps" class="nav-item">
