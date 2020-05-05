@@ -281,7 +281,18 @@ saveCurrentURL();
                         <label class='custom-control-label' for='edicaoRoadmap'>Habilitar Edição</label>
                     </div>";   */
 
-                    echo "<h5 class='m-0 font-weight-bold text-primary'>TRM ".$nome_roadmap."</h5>
+                    echo "<h5 class='m-0 font-weight-bold text-primary' style='float:left;'>TRM ".$nome_roadmap."</h5>";
+
+                    //Verifica se só tem o proprio dono como participante para nao exibir
+                   /*  
+                    $search_users=get_data("SELECT * FROM grupos WHERE id_prospec_grupos = ".$id_roadmap." AND id_user_convite IS NOT NULL");   
+
+                    $results_max_users = pg_num_rows($search_users);
+
+                    if  ($results_max_users>0) */
+                      echo "<a href='#' data-target='#modalUsuariosParticipantes' data-toggle='modal' data-id='participantes-".$id_roadmap."' style='display: inline-block; margin-left:10px; margin-top:2px; float:left;'><div style='text-align: center;'><img src='img/shared5.png' title='Ver participantes' style='width: 18px; height: 18px; display: inline-block; opacity:70%;'/></div></a>";
+                    
+                    echo "</br>
                     <p style='margin: 0px 0px -8px 0px; padding-top: 5px;'><small class='text-muted'><b>Área:</b> ".$assunto_roadmap."</small></p>";
 
                     if($tipoCabecalho == "arquivo")
@@ -289,8 +300,8 @@ saveCurrentURL();
                     else
                     $id_arquivo_adicionar = 0;
 
-                    echo "<div style='text-align: center; margin-top: -3.3vh; margin-left: 71px;'>
-                          <a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."'>
+                    echo "<div style='text-align: center; margin-top: -3.3vh;'>
+                          <a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."' style='margin-left: -131px;'>
                             <img id='imageAddProspec' src='img/add2.png' title='Adicionar prospecção manualmente' style='width: 20px; height: 20px; display: inline-block;'/>
                           </a> 
                           </div>
@@ -652,6 +663,37 @@ saveCurrentURL();
     </div>
   </div>
 
+  <!-- Modal de Usuários-->
+  <div id="modalUsuariosParticipantes" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-xl">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Participantes do TRM</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>       
+        </div>
+        <div class="modal-body">
+          <!-- DataTales Example -->
+         <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Usuários</h6>
+            </div>
+            <div class="card-body">
+              <div id="table-modal-usuarios-participantes" class="table-responsive">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
  <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -714,6 +756,7 @@ saveCurrentURL();
           var data_id_roadmap = data_txt.replace('adicionarRoadmap-','');
           var data_id_modalArquivos = data_txt.replace('modalArquivosRoadmap-','');
           var data_id_gerarelatorio = data_txt.replace('gerarelatorio-','');
+          var data_id_participantes = data_txt.replace('participantes-','');
           //console.log(data_id);
           if(data_txt.indexOf('abrirpdf-') > -1) {
             $.ajax({
@@ -790,6 +833,17 @@ saveCurrentURL();
                 $('#modalGeraRelatorio').modal('show');
               }
             })
+          }
+          else if(data_txt.indexOf('participantes-') > -1) {
+          	$.ajax({
+	            url: "modal-usuarios-participantes.php",
+	            method: "POST",
+	            data: { "identificador": data_id_participantes},
+	            success: function(html) {
+	              $('#table-modal-usuarios-participantes').html(html);
+	              $('#modalUsuariosParticipantes').modal('show');
+	            }
+          	})
           }
           else{
           	

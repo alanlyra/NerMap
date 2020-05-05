@@ -58,7 +58,7 @@ saveCurrentURL();
               <!-- Nav Item - Messages -->
               <li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none;">
                 <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="height: 5px;">
-                  <i class="fas fa-envelope fa-fw"></i>
+                  <i class="fas fa-envelope fa-fw" title="Convites"></i>
                   <!-- Counter - Messages -->
                   <?php
                     if ($results_max>0)

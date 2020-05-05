@@ -507,9 +507,12 @@ saveCurrentURL();
       i_tmp_anos++;
     }
 
+    var temasChart = null;
+    var anosChart = null;
+
     function drawPieCharts(labelTemas, dataTemas, colorsTemas, labelAnos, dataAnos, colorsAnos) {
       var ctx = document.getElementById("temasChart");
-      var temasChart = new Chart(ctx, {
+      temasChart = new Chart(ctx, {
         type: 'pie',
         data: {
           labels: labelTemas,
@@ -539,7 +542,7 @@ saveCurrentURL();
       });
 
       var ctx = document.getElementById("anosChart");
-      var anosChart = new Chart(ctx, {
+      anosChart = new Chart(ctx, {
         type: 'pie',
         data: {
           labels: labelAnos,
@@ -580,6 +583,11 @@ saveCurrentURL();
     var numProspeccoesGlobalJS = "<?php echo $num_prospeccoes_global; ?>";
 
     function analiseUserData(){
+      if(temasChart != null && anosChart != null) {
+        temasChart.destroy();
+        anosChart.destroy();
+      }
+      
 
       if(numTRMsUserJS == 1) document.getElementById("num-trms").innerHTML = numTRMsUserJS + " TRM";
       else document.getElementById("num-trms").innerHTML = numTRMsUserJS + " TRMs";
@@ -594,9 +602,15 @@ saveCurrentURL();
       else document.getElementById("num-prospeccoes").innerHTML = numProspeccoesUserJS + " prospecções";
 
       drawPieCharts(labelsChartTemasUser, dataChartTemasUser, colorsChartTemasUser, labelsChartAnosProspeccoesUser, dataChartAnosProspeccoesUser, colorsChartAnosProspeccoesUser);
+      
     }
 
     function analiseGlobalData(){
+      if(temasChart != null && anosChart != null) {
+        temasChart.destroy();
+        anosChart.destroy();
+      }
+
       if(numTRMsGlobalJS == 1) document.getElementById("num-trms").innerHTML = numTRMsGlobalJS + " TRM";
       else document.getElementById("num-trms").innerHTML = numTRMsGlobalJS + " TRMs";
 

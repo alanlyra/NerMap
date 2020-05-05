@@ -109,4 +109,38 @@
     <button class="rounded-circle border-0" id="sidebarToggle"></button>
   </div>
 
+
+
+  
+  <!-- Sidebar - Brand -->
+  <div style="position:absolute; bottom:2vh; left:15px;">
+  <a href="http://www.cos.ufrj.br/" class="sidebar-brand d-flex align-items-center justify-content-center">
+    <div class="sidebar-brand-icon">
+      <i class="fas fa-laugh"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3" style="color:rgba(255, 255, 255, 0.8);">PESC</div>
+  </a>
+
+  <a href="http://www.coppe.ufrj.br/" class="sidebar-brand d-flex align-items-center justify-content-center">
+    <div class="sidebar-brand-icon">
+      <i class="fas fa-laugh-beam"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3" style="color:rgba(255, 255, 255, 0.8);">COPPE</div>
+  </a>
+
+  <a href="http://www.ufrj.br/" class="sidebar-brand d-flex align-items-center justify-content-center">
+    <div class="sidebar-brand-icon">
+      <i class="fas fa-laugh-squint"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3" style="color:rgba(255, 255, 255, 0.8);">UFRJ</div>
+  </a>
+  </div>
+
+  
+
 </ul>
+
+
+
+
+

@@ -2316,13 +2316,20 @@ readers do not read off random characters that represent icons */
   content: "\f203"; }
 
 .fa-laugh:before {
-  content: "\f599"; }
+  content: url(../../../img/pesc-logo-resized.png);
+  filter: grayscale(100%);
+}
 
 .fa-laugh-beam:before {
-  content: "\f59a"; }
+  content: url(../../../img/coppe-logo-resized.png);
+  filter: grayscale(100%);
+  
+}
 
 .fa-laugh-squint:before {
-  content: "\f59b"; }
+  content: url(../../../img/ufrj-logo-resized.png);
+  filter: grayscale(100%);
+}
 
 .fa-laugh-wink:before {
   content: url(../../../img/horse2.png);
