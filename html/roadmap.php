@@ -40,7 +40,7 @@ saveCurrentURL();
           <div class="row">
 
             <!-- Project Card Example -->
-            <div class="col-xl-5 col-lg-5">
+            <div class="col-xl-4 col-lg-4">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Novo Technology Roadmapping</h6>
@@ -83,32 +83,50 @@ saveCurrentURL();
                 </form>
               </div>
 
-              <div class="col-xl-7 col-lg-7">
+              <div class="col-xl-5 col-lg-5">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Workplace</h6>
                   </div>
                   <div class="row justify-content-center divWorkplace">
-                  <div class="col-sm-5 col-md-5">
-                    <div class="col-md-12 feature-box">
-                    <img src="img/files2.png" style="width: 100px; height: 100px; display: inline-block;"/>
-                      <h4>TRMs & Arquivos</h4>
-                      <p style="height: 3rem;">Seus TRMs e arquivos cadastrados no sistema.</p>
-                      <a href="prospeccoes.php"><button class="btn btn-primary" style="margin:5px;">Acessar</button></a>
-                    </div>
-                  </div> <!-- End Col -->
-                  <div class="col-sm-5 col-md-5">
-                    <div class="col-md-12 feature-box">
-                    <img src="img/timeline6.png" style="width: 130px; height: 100px; display: inline-block;"/>
-                      <h4>Roadmaps</h4>
-                      <p style="height: 3rem;">Seus roadmaps gerados e editados.</p>
-                      <a href="seeroadmap.php"><button class="btn btn-primary" style="margin:5px;">Acessar</button></a>
-                    </div>
+                    <div class="col-sm-5 col-md-5">
+                      <div class="col-md-12 feature-box">
+                      <img src="img/files2.png" style="width: 100px; height: 100px; display: inline-block;"/>
+                        <h4>TRMs & Arquivos</h4>
+                        <p style="height: 3rem;">Seus TRMs e arquivos cadastrados no sistema.</p>
+                        <a href="prospeccoes.php"><button class="btn btn-primary" style="margin:5px;">Acessar</button></a>
+                      </div>
+                    </div> <!-- End Col -->
+                    <div class="col-sm-5 col-md-5">
+                      <div class="col-md-12 feature-box">
+                      <img src="img/timeline6.png" style="width: 130px; height: 100px; display: inline-block;"/>
+                        <h4>Roadmaps</h4>
+                        <p style="height: 3rem;">Seus roadmaps gerados e editados.</p>
+                        <a href="seeroadmap.php"><button class="btn btn-primary" style="margin:5px;">Acessar</button></a>
+                      </div>
                   </div> <!-- End Col -->	
                 </div>
               </div>
-            
             </div>
+
+            <div class="col-xl-3 col-lg-3">
+            <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Configurações Pessoais</h6>
+                  </div>
+                  <div class="row justify-content-center divWorkplace">
+                    <div class="col-sm-9 col-md-9">
+                      <div class="col-md-12 feature-box">
+                      <img class="img-profile rounded-circle" src="<?php echo $_SESSION['photo']?>" style="width: 100px; height: 100px; display: inline-block;"/>                   
+                        <h4>Configuração de Usuário</h4>
+                        <p style="height: 3rem;">Veja e altere seus dados pessoais.</p>
+                        <a href="config-usuario.php"><button class="btn btn-primary" style="margin:5px;">Acessar</button></a>
+                      </div>
+                    </div> <!-- End Col -->
+                </div>
+              </div>
+                
+                </div>
           </div>
           <div class="row">
             <div class="col-xl-8 col-lg-8">
