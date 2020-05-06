@@ -484,7 +484,7 @@ saveCurrentURL();
                       <div class='col-md-12 feature-box'>
                         <img src='img/timeline6.png' style='width: 130px; height: 100px; display: inline-block;'/>
                         <h4>Completo</h4>
-                        <p>Roadmap de todos os arquivos do TRM.</p>
+                        <p style='height: 3rem;'>Roadmap de todos os arquivos do TRM.</p>
                         <button class='btn btn-primary' style='margin:5px;' onclick='redirect(\"seeroadmap.php?roadmap-completo=".$_GET["roadmap"]."\");'>Ver roadmap</button>
                       </div>
                       </div> <!-- End Col -->
@@ -492,7 +492,7 @@ saveCurrentURL();
                           <div class='col-md-12 feature-box'>
                           <img src='img/files2.png' style='width: 100px; height: 100px; display: inline-block;'/>
                           <h4>Individual</h4>
-                          <p>Roadmap individual de um arquivo do TRM.</p>
+                          <p style='height: 3rem;'>Roadmap individual de um arquivo do TRM.</p>
                           <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$_GET["roadmap"]."'><button class='btn btn-primary' style='margin:5px;'>Visualizar arquivos</button></a>
                         </div>
                       </div> <!-- End Col -->	

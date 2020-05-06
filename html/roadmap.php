@@ -79,7 +79,7 @@ saveCurrentURL();
                     <input class="btn btn-primary btn-icon-split" type="submit" name="criaTRM" value="Criar" style="width: 8em; height: 2em; display: inline-block;" />
                   </div>   
                 </div>
-                
+                              
                 </form>
               </div>
 
@@ -411,7 +411,7 @@ saveCurrentURL();
     }
 
     var colorsChartDefault= ["#5a5c69", "#ce7d78", "#ea9e70", "#63b598", "#a48a9e", "#648177", "#c9a941" ,"#0d5ac1" ,
-                            "#f205e6" ,"#9e6d71" ,"#14a9ad" ,"#4ca2f9" ,"#a4e43f" ,"#d298e2" ,"#6119d0",
+                            "#00bdd5" ,"#9e6d71" ,"#14a9ad" ,"#4ca2f9" ,"#6a8db3" ,"#d298e2" ,"#6119d0",
                             "#d2737d" ,"#c0a43c" ,"#f2510e" ,"#651be6" ,"#79806e" ,"#61da5e" ,"#cd2f00" ,
                             "#9348af" ,"#01ac53" ,"#c5a4fb" ,"#996635","#b11573" ,"#4bb473" ,"#75d89e" ,
                             "#2f3f94" ,"#2f7b99" ,"#da967d" ,"#34891f" ,"#b0d87b" ,"#ca4751" ,"#7e50a8" ,
@@ -422,7 +422,7 @@ saveCurrentURL();
                             "#5be4f0", "#57c4d8", "#a4d17a", "#225b8", "#be608b", "#96b00c", "#088baf",
                             "#f158bf", "#e145ba", "#ee91e3", "#05d371", "#5426e0", "#4834d0", "#802234",
                             "#6749e8", "#0971f0", "#8fb413", "#b2b4f0", "#c3c89d", "#1c0365", "#41d158",
-                            "#fb21a3", "#51aed9", "#5bb32d", "#807fb", "#21538e", "#89d534", "#d36647",
+                            "#fb21a3", "#51aed9", "#21538e", "#807fb", "#5bb32d", "#89d534", "#d36647",
                             "#7fb411", "#0023b8", "#3b8c2a", "#986b53", "#f50422", "#983f7a", "#ea24a3",
                             "#79352c", "#521250", "#c79ed2", "#d6dd92", "#e33e52", "#b2be57", "#fa06ec",
                             "#1bb699", "#6b2e5f", "#64820f", "#1c271", "#21538e", "#89d534", "#d36647",
