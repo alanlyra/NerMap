@@ -4,10 +4,10 @@ require_once 'checklogin.php';
 saveCurrentURL();
 ?>
 
-<table class="table table-bordered" id="table-arquivos" width="100%" cellspacing="0">
+<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
   <thead>
     <tr>
-      <th style="position:unset;"></th>
+      <th></th>
       <th>Usuário</th>
       <th>Email</th>
       <th style='width: 20px;'>Compartilhar</th>
@@ -78,8 +78,6 @@ saveCurrentURL();
   </tbody>
 </table>
 
-
-
   <!-- Confirma Remoção do usuário do compartilhamento Modal-->
   <div class="modal fade" id="modalConfirmaRemoveUsuarioCompartilhamentoTRM" role="dialog">
     <div id="comfirma-remove-compartilhamento" class="modal-dialog" style="top:16vh;">
@@ -89,7 +87,19 @@ saveCurrentURL();
 
 <script>
   $(document).ready(function() {
-      $('#table-arquivos').DataTable();
+    $('#dataTable').DataTable({                  
+      "bDestroy": true,
+        "bAutoWidth": true,  
+        "bFilter": true,
+        "bSort": true,
+        "aaSorting": [[0]],
+        "aoColumns": [
+          { "bSortable": false },
+          { "bSortable": true },
+          { "bSortable": true },
+          { "bSortable": true }
+        ]   
+    });
   });
 
   var data_id = '';

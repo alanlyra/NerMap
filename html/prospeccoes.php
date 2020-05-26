@@ -138,19 +138,19 @@ saveCurrentURL();
             </div>
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="table-prospec" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th style="position:unset;"></th>
+                      <th></th>
                       <th style="width: 300px">Nome</th>
                       <th>Tema</th>
                       <th>Ano</th>
                       <th style="width: 120px">Nº de arquivos</th>
-                      <th style="position:unset;">Status</th>
-                      <th style="width: 140px; position:unset;">Adicionar arquivo</th>
-                      <th style="position:unset;">Arquivos</th>
-                      <th style="position:unset;">Roadmap</th>
-                      <th style="position:unset;">Ações</th>
+                      <th>Status</th>
+                      <th style="width: 140px;">Adicionar arquivo</th>
+                      <th>Arquivos</th>
+                      <th>Roadmap</th>
+                      <th>Ações</th>
                     </tr>
                   </thead>
                   <tfoot>
@@ -444,6 +444,28 @@ saveCurrentURL();
       document.getElementById("li_prospec").classList.add('active');
     }
 
+    $(document).ready(function() {
+      $('#table-prospec').DataTable({                  
+        "bDestroy": true,
+          "bAutoWidth": true,  
+          "bFilter": true,
+          "bSort": true, 
+          "aaSorting": [[0]],         
+          "aoColumns": [
+            { "bSortable": false },
+            { "bSortable": true },
+            { "bSortable": true },
+            { "bSortable": true },
+            { "bSortable": true },
+            { "bSortable": false },
+            { "bSortable": false },
+            { "bSortable": false },
+            { "bSortable": false },
+            { "bSortable": false }
+          ]   
+      });
+    });
+
     var data_id = '';
     $(document).ready(function() {
         $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
@@ -573,8 +595,6 @@ saveCurrentURL();
   <script src="vendor/datatables/jquery.dataTables.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-  <!-- Page level custom scripts -->
-  <script src="js/demo/datatables-demo.js"></script>
 
 </body>
 

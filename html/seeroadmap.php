@@ -509,13 +509,13 @@ saveCurrentURL();
                       <table class='table table-bordered' id='table-prospec' width='100%' cellspacing='0'>
                         <thead>
                           <tr>
-                            <th style='position:unset;'></th>
+                            <th></th>
                             <th style='width: 300px'>Nome</th>
                             <th>Tema</th>
                             <th>Ano</th>
-                            <th style='position:unset;'>Status</th>
-                            <th style='position:unset;'>Roadmap completo</th>
-                            <th style='position:unset;'>Roadmap por arquivo</th>
+                            <th>Status</th>
+                            <th>Roadmap completo</th>
+                            <th>Roadmap por arquivo</th>
                           </tr>
                         </thead>
                         <tfoot>
@@ -869,7 +869,22 @@ saveCurrentURL();
     }
 
     $(document).ready(function() {
-      $('#table-prospec').DataTable();
+      $('#table-prospec').DataTable({                  
+        "bDestroy": true,
+          "bAutoWidth": true,  
+          "bFilter": true,
+          "bSort": true, 
+          "aaSorting": [[0]],         
+          "aoColumns": [
+            { "bSortable": false },
+            { "bSortable": true },
+            { "bSortable": true },
+            { "bSortable": true },
+            { "bSortable": false },
+            { "bSortable": false },
+            { "bSortable": false }
+          ]   
+      });
     });
 
     function goBack() {

@@ -29,7 +29,8 @@
   <!-- Nav Item - Criar TRM -->
   <li id="li_roadmap" class="nav-item">
     <a class="nav-link" href="roadmap.php">
-      <i class="fas fa-fw fa-tachometer-alt"></i>
+     <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+     <i class="fas fa-fw fa-home"></i>
       <span>Painel de Início</span></a>
   </li>
 

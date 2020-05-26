@@ -50,8 +50,22 @@ saveCurrentURL();
 
 <script>
   $(document).ready(function() {
-      $('#table-arquivos').DataTable();
-  });
+      $('#table-arquivos').DataTable({                  
+        "bDestroy": true,
+          "bAutoWidth": true,  
+          "bFilter": true,
+          "bSort": true, 
+          "aaSorting": [[0]],         
+          "aoColumns": [
+            { "bSortable": true },
+            { "bSortable": true },
+            { "bSortable": true },
+            { "bSortable": false },
+            { "bSortable": false },
+            { "bSortable": false }
+          ]   
+      });
+    });
 </script>
 
 
