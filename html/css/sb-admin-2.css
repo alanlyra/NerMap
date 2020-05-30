@@ -12057,7 +12057,6 @@ body.sidebar-toggled footer.sticky-footer {
     border: 1px solid #e8e8e8;
 }
 .feature-box:hover {
-   
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .feature-box h4 {
@@ -12070,6 +12069,5 @@ body.sidebar-toggled footer.sticky-footer {
   transition: .5s;
 }
 .feature-box-simple:hover {
- 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
