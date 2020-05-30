@@ -152,7 +152,7 @@ saveCurrentURL();
                     <div class="row">
 
                       <div class="col-xl-3 col-md-3 mb-3">
-                        <div class="card border-left-primary shadow py-2" style="height: 75px;">
+                        <div class="card border-left-primary feature-box-simple py-2" style="height: 75px;">
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
                               <div class="col mr-2">
@@ -166,7 +166,7 @@ saveCurrentURL();
                           </div>
                         </div>
 
-                        <div class="card border-left-primary shadow py-2" style="height: 75px; margin-top:20px;">
+                        <div class="card border-left-primary feature-box-simple py-2" style="height: 75px; margin-top:20px;">
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
                               <div class="col mr-2">
@@ -183,7 +183,7 @@ saveCurrentURL();
                       </div>
 
                       <div class="col-xl-3 col-md-3 mb-3">
-                        <div class="card border-left-primary shadow py-2" style="height: 75px;">
+                        <div class="card border-left-primary feature-box-simple py-2" style="height: 75px;">
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
                               <div class="col mr-2">
@@ -197,7 +197,7 @@ saveCurrentURL();
                           </div>
                         </div>
 
-                        <div class="card border-left-primary shadow py-2" style="height: 75px; margin-top:20px;">
+                        <div class="card border-left-primary feature-box-simple py-2" style="height: 75px; margin-top:20px;">
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
                               <div class="col mr-2">

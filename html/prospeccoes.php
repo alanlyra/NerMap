@@ -287,35 +287,35 @@ saveCurrentURL();
                       <input type="radio" name="rate" id="option1" value="1" autocomplete="off" style="cursor: pointer;" required> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
                         <!-- <img src="img/conf_1.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_1_bw.png" style="width: 40px; height: 40px;" />
+                        <img src="img/conf_1_bw.png" title="1" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                     <label class="btn btn-plain" style="cursor: pointer;">
                       <input type="radio" name="rate" id="option2" value="3" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
                         <!-- <img src="img/conf_3.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_3_bw.png" style="width: 40px; height: 40px;" />
+                        <img src="img/conf_3_bw.png" title="3" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                     <label class="btn btn-plain" style="cursor: pointer;">
                       <input type="radio" name="rate" id="option3" value="5" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
                         <!-- <img src="img/conf_5.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_5_bw.png" style="width: 40px; height: 40px;" />
+                        <img src="img/conf_5_bw.png" title="5" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                      <label class="btn btn-plain" style="cursor: pointer;">
                       <input type="radio" name="rate" id="option4" value="8" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
                         <!-- <img src="img/conf_8.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_8_bw.png" style="width: 40px; height: 40px;" />
+                        <img src="img/conf_8_bw.png" title="8" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                      <label class="btn btn-plain" style="cursor: pointer;">
                       <input type="radio" name="rate" id="option5" value="10" autocomplete="off" style="cursor: pointer;"> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
                       <div>
                         <!-- <img src="img/conf_10.png" style="width: 40px; height: 40px;" /> -->
-                        <img src="img/conf_10_bw.png" style="width: 40px; height: 40px;" />
+                        <img src="img/conf_10_bw.png" title="10" style="width: 40px; height: 40px;" />
                       </div>
                     </label>
                   </div>
@@ -447,7 +447,7 @@ saveCurrentURL();
     $(document).ready(function() {
       $('#table-prospec').DataTable({                  
         "bDestroy": true,
-          "bAutoWidth": true,  
+          "bAutoWidth": true,
           "bFilter": true,
           "bSort": true, 
           "aaSorting": [[0]],         

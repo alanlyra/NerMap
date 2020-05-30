@@ -41,7 +41,7 @@
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    Base de Dados
+    Workplace
   </div>
 
   <!-- Nav Item - Prospecções Collapse Menu -->
@@ -93,14 +93,29 @@
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    Administrador
+    Usuário
+  </div>
+
+  <!-- Nav Item - Configurações -->
+  <li id="li_config_user" class="nav-item">
+    <a class="nav-link" href="config-usuario.php">
+      <i class="fas fa-fw fa-cog"></i>
+      <span>Configurações</span></a>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider">
+
+  <!-- Heading -->
+  <div class="sidebar-heading">
+    Admin
   </div>
 
   <!-- Nav Item - Configurações -->
   <li id="li_config" class="nav-item">
     <a class="nav-link" href="config.php">
-      <i class="fas fa-fw fa-cog"></i>
-      <span>Configurações</span></a>
+      <i class="fas fa-fw fa-tools"></i>
+      <span>Ajustes</span></a>
   </li>
 
         <!-- Divider -->

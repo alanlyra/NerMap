@@ -12065,3 +12065,11 @@ body.sidebar-toggled footer.sticky-footer {
     font-weight: 600;
     margin: 25px 0 15px;
 }
+
+.feature-box-simple {
+  transition: .5s;
+}
+.feature-box-simple:hover {
+ 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

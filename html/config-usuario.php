@@ -159,7 +159,7 @@ saveCurrentURL();
 
   <script>
     function load(){
-      document.getElementById("li_config").classList.add('active');
+      document.getElementById("li_config_user").classList.add('active');
     }
 
     function readURL(input) {

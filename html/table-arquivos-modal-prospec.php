@@ -58,7 +58,7 @@ saveCurrentURL();
                   <td style='text-align: center;'>
                   <a href='#' data-target='#modalEditarArquivo' data-toggle='modal' data-id='editararquivo-".$result->id_arquivo."' data-nomearquivo='".$result->nome_arquivo."' data-anoarquivo='".$result->ano_arquivo."' data-confarquivo='".$result->conf_arquivo."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do arquivo' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
 
-                  <a href='#' data-target='#modalConfirmarDeleteArquivo' data-toggle='modal' data-id='deleteprospec-".$id_prospec."' data-deletearquivo='".$result->id_arquivo."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='remover informações do arquivo' style='width: 18px; height: 18px; display: inline-block;'/></div></a>
+                  <a href='#' data-target='#modalConfirmarDeleteArquivo' data-toggle='modal' data-id='deleteprospecbymodal-".$id_prospec."' data-deletearquivo='".$result->id_arquivo."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='remover informações do arquivo' style='width: 18px; height: 18px; display: inline-block;'/></div></a>
                   
                   </td>
                 
@@ -128,7 +128,7 @@ saveCurrentURL();
 
           var data_txt =  data_id.toString();
           var data_id_editarArquivo = data_txt.replace('editararquivo-','');
-          var data_id_deleteprospec = data_txt.replace('deleteprospec-','');
+          var data_id_deleteprospecbymodal = data_txt.replace('deleteprospecbymodal-','');
           if (data_txt.indexOf('editararquivo-') > -1) {
             $.ajax({
               url: "modal-editar-arquivo.php",
@@ -143,11 +143,11 @@ saveCurrentURL();
               }
             })
           }
-          else if (data_txt.indexOf('deleteprospec-') > -1) {
+          else if (data_txt.indexOf('deleteprospecbymodal-') > -1) {
             $.ajax({
               url: "modal-confirma-delete-arquivo.php",
               method: "POST",
-              data: { "identificador": data_id_deleteprospec,
+              data: { "identificador": data_id_deleteprospecbymodal,
                       "arquivo": data_deletearquivo},
               success: function(html) {
                 $('#delete-arquivo').html(html);
