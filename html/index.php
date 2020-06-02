@@ -107,6 +107,9 @@ saveCurrentURL();
             </tr>
           </table>
 
+          <a href='#' data-target='#modalCadastroUsuario' data-toggle='modal' data-id='cadastrousuario' style='display: inline-block; margin-left:3px; margin-right:3px; text-decoration:none;'>Cadastre-se</a>
+                          
+
 
           <p>
             <font color=red>
@@ -137,7 +140,122 @@ saveCurrentURL();
 
       </div>
 
+      <div id="modalCadastroUsuario" class="modal fade" role="dialog">
+        <div id="cadastro-usuario" class="modal-dialog modal-xl">
+          <!-- Modal content-->
+          
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalMensagemCadastroUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" style='top: 13vh;'>
+        <div class='modal-content'>
+              <div class='modal-header'>
+             
+                <h5 class='modal-title' id='exampleModalLabel'>Cadastro realizado com sucesso!</h5>
+                <button type='button' class='close' onclick='hideModalMensagem();'> 
+                  <span aria-hidden='true'>×</span>
+                </button>
+              </div>
+              <div class='modal-body'>Faça login para acessar o sistema.
+              </div>
+              <div class='modal-footer'>
+             
+                <button class='btn btn-primary' type='button' onclick='hideModalMensagem();'>Fechar</button>
+               
+                </div>
+         
+           </div>
+        </div>
+      </div>
+
     </div>
+    
 
 </body>
 </html>
+
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  var data_id = '';
+    $(document).ready(function() {
+        $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
+          
+          if (typeof $(this).data('id') !== 'undefined') {
+          	data_id = $(this).data('id');
+          }
+
+          var data_txt =  data_id.toString();
+          
+          if (data_txt.indexOf('cadastrousuario') > -1) {
+            $.ajax({
+              url: "modal-cadastro-usuario.php",
+              method: "POST",
+              success: function(html) {
+                $('#cadastro-usuario').html(html);
+                $('#modalCadastroUsuario').modal('show');
+              }
+            })
+          }
+          else {
+            
+          }
+        })
+    });
+
+    function hideModalMensagem() {
+      $('#modalMensagemCadastroUsuario').modal('hide');
+    }
+</script>
+
+<?php
+	//echo '<pre>';
+
+  if(isset($_POST["salvarCadastroUsuario"])) {
+
+  	$nome = $_POST['nomeUsuario'];
+    $email = $_POST['emailUsuario'];
+    $password = md5($_POST['senhaUsuario']);
+  	$image = $_POST['imageUploadURL'];
+
+  	if(!$nome == "" && !$email == "") {      
+      $search_user=get_data("SELECT * FROM users WHERE email = '".$email."'");
+      $results_max = pg_num_rows($search_user);
+
+      if ($results_max == 0) {
+
+        $id_user = get_max_id_user();
+      
+        db_user($id_user, $nome, $email, $password, $image);
+      }
+      else {
+        //echo "<script>console.log('Email já cadastrado');</script>";
+      }
+  	}
+  	else{
+      //echo "<script> document.getElementById('messageCampos').style.display = 'block'; </script>";
+  		//echo "<script>console.log( 'Deu ruim!' );</script>";
+  	}
+
+  }
+
+  function get_max_id_user() {   
+    $number1 = get_data("select MAX(id_user) from users");
+    $row = pg_fetch_array($number1);        
+    $number2 = $row[0]; 
+    $number = $number2 + 1;
+
+        return $number;
+  }
+
+	function db_user($id_user_db, $nome_db, $email_db, $password_db, $photo_db) {
+    $create_user = set_data("INSERT INTO users (id_user, name_user, email, password, photo, admin) VALUES ($1, $2, $3, $4, $5, 'false')", array($id_user_db, $nome_db, $email_db, $password_db, $photo_db));
+    //echo "<script>window.location.href = 'index.php';</script>";
+    echo "<script>$('#modalMensagemCadastroUsuario').modal('show');</script>";
+  }
+
+
+?>
+
