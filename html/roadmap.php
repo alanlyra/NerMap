@@ -37,7 +37,7 @@ saveCurrentURL();
 
           <!-- Content Row -->
 
-          <div class="row">
+          <div class="row justify-content-center">
 
             <!-- Project Card Example -->
             <div class="col-xl-4 col-lg-4">
@@ -52,32 +52,38 @@ saveCurrentURL();
                 </div>
                 
 
-                <form action="roadmap.php" method="post" multipart="" enctype="multipart/form-data">
-               
-                  <div class="col-xl-11 col-lg-11" style="margin-top:2.5vh;">
+                <form action="roadmap.php" method="post" multipart="" enctype="multipart/form-data" style="text-align: center; max-height: 370px;">
+                <div class="col-md-11 feature-box" style="text-align: left; display:inline-block; margin-top:1.4rem;">
+                <div class="row justify-content-center">
+                  <div class="col-xl-12 col-lg-12" style="margin-top:2.5vh;">
                    <h5>Nome:</h5>
                     <input type="text" id="nomeRoadmap" name="nomeRoadmap" class="form-control bg-light border-0 small" placeholder="Nome do TRM..." aria-label="Search" aria-describedby="basic-addon2" required>
                   </div>
-                  </br>
-                  <div class="col-xl-6 col-lg-7">
-  		              <h5>Área:</h5>
-                    <select type="text" id="temaRoadmap" name="temaRoadmap" class="form-control" style="cursor: pointer;" required>
-                      <option value="" disabled selected>Selecione a área...</option>
-                      <option value="Educação">Educação</option>
-                      <option value="Medicina">Medicina</option>
-                      <option value="Transporte">Transporte</option>
-                      <option value="Trabalho">Trabalho</option>
-                    </select>
+                  
                   </div>
-  		            </br>
-              		<div class="col-xl-6 col-lg-7">
-              		<h5>Ano limite do TRM:</h5>
-                    <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="Ano..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')" required>
+                  </br>
+                  <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-6">
+                      <h5>Área:</h5>
+                      <select type="text" id="temaRoadmap" name="temaRoadmap" class="form-control" style="cursor: pointer;" required>
+                        <option value="" disabled selected>Selecione a área...</option>
+                        <option value="Educação">Educação</option>
+                        <option value="Medicina">Medicina</option>
+                        <option value="Transporte">Transporte</option>
+                        <option value="Trabalho">Trabalho</option>
+                      </select>
+                    </div>
+                    </br>
+                    <div class="col-xl-6 col-lg-6">
+                    <h5>Ano limite do TRM:</h5>
+                      <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="Ano..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')" required>
+                    </div>
                   </div>
                   </br>
                   <div class="py-3" style="text-align: center;">
-                    <input class="btn btn-primary btn-icon-split" type="submit" name="criaTRM" value="Criar" style="width: 8em; height: 2em; display: inline-block;" />
+                    <input class="btn btn-primary btn-icon-split" type="submit" name="criaTRM" value="Criar" style="width: 8em; height: 2em; display: inline-block; margin-top: 5px;" />
                   </div>   
+                </div>
                 </div>
                               
                 </form>
