@@ -39,7 +39,7 @@ saveCurrentURL();
       if  ($results_max_popup>0) {
       while($result=pg_fetch_object($search_popup)) {
           echo "<tr>
-                  <td>".$result->id_arquivo."</td>
+                  <td>".$result->autores."</td>
                   <td>".$result->nome_arquivo."</td>
                   <td>".$result->ano_arquivo."</td>
 
@@ -56,7 +56,7 @@ saveCurrentURL();
 
                   echo "<td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='Ver roadmap do arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                   <td style='text-align: center;'>
-                  <a href='#' data-target='#modalEditarArquivo' data-toggle='modal' data-id='editararquivo-".$result->id_arquivo."' data-nomearquivo='".$result->nome_arquivo."' data-anoarquivo='".$result->ano_arquivo."' data-confarquivo='".$result->conf_arquivo."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do arquivo' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
+                  <a href='#' data-target='#modalEditarArquivo' data-toggle='modal' data-id='editararquivo-".$result->id_arquivo."' data-nomearquivo='".$result->nome_arquivo."' data-anoarquivo='".$result->ano_arquivo."' data-confarquivo='".$result->conf_arquivo."' data-autores='".$result->autores."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do arquivo' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
 
                   <a href='#' data-target='#modalConfirmarDeleteArquivo' data-toggle='modal' data-id='deleteprospecbymodal-".$id_prospec."' data-deletearquivo='".$result->id_arquivo."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='remover informações do arquivo' style='width: 18px; height: 18px; display: inline-block;'/></div></a>
                   
@@ -121,6 +121,9 @@ saveCurrentURL();
           if (typeof $(this).data('confarquivo') !== 'undefined') {
             data_confarquivo = $(this).data('confarquivo');
           }
+          if (typeof $(this).data('autores') !== 'undefined') {
+            data_autores = $(this).data('autores');
+          }
 
           if (typeof $(this).data('deletearquivo') !== 'undefined') {
             data_deletearquivo = $(this).data('deletearquivo');
@@ -136,7 +139,8 @@ saveCurrentURL();
               data: { "identificador": data_id_editarArquivo,
                       "nomearquivo": data_nomearquivo,
                       "anoarquivo": data_anoarquivo,
-                      "confarquivo": data_confarquivo },
+                      "confarquivo": data_confarquivo,
+                      "autoresarquivo": data_autores },
               success: function(html) {
                 $('#edicao-arquivo').html(html);
                 $('#modalEditarArquivo').modal('show');

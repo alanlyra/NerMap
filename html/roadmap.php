@@ -43,7 +43,7 @@ saveCurrentURL();
             <div class="col-xl-4 col-lg-4">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Novo Technology Roadmapping</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Criar Technology Roadmapping</h6>
                 </div>
                 <div id="messageCampos" style="display: none;" class="alert alert-warning ">
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -486,6 +486,15 @@ saveCurrentURL();
     var dataChartAnosProspeccoesUser = [];
     var colorsChartAnosProspeccoesUser = [];
 
+    //Limita aos 10 primeiros anos com mais ocorrências
+    uniqs_arrayAnosProspeccoesUserJS = Object.assign(
+        ...Object
+            .entries(uniqs_arrayAnosProspeccoesUserJS)
+            .sort(({ 1: a }, { 1: b }) => b - a)
+            .slice(0, 10) //Limite
+            .map(([k, v]) => ({ [k]: v }))
+    );
+
     var i_tmp_anos = 0;
     for (const [key, value] of Object.entries(uniqs_arrayAnosProspeccoesUserJS)) {
       labelsChartAnosProspeccoesUser.push(key);
@@ -510,6 +519,15 @@ saveCurrentURL();
     var labelsChartTemasGlobal = [];
     var dataChartTemasGlobal = [];
     var colorsChartTemasGlobal = [];
+
+    //Limita aos 10 primeiros anos com mais ocorrências
+    uniqs_arrayAnosProspeccoesGlobalJS = Object.assign(
+        ...Object
+            .entries(uniqs_arrayAnosProspeccoesGlobalJS)
+            .sort(({ 1: a }, { 1: b }) => b - a)
+            .slice(0, 10) //Limite
+            .map(([k, v]) => ({ [k]: v }))
+    );
 
     var i_tmp_temas = 0;
     for (const [key, value] of Object.entries(uniqs_arrayTemasGlobalJS)) {

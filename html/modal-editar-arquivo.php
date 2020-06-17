@@ -9,6 +9,7 @@ saveCurrentURL();
       $nome_arquivo = $_POST["nomearquivo"];
       $ano_arquivo= $_POST["anoarquivo"];
       $conf_arquivo = $_POST["confarquivo"];
+      $autores_arquivo = $_POST["autoresarquivo"];
 
       $number1 = get_data("SELECT id_prospec_arquivo FROM arquivos WHERE id_arquivo =".intval($id_arquivo));
       $row = pg_fetch_array($number1);        
@@ -33,6 +34,32 @@ saveCurrentURL();
                     <input type='text' id='anoArquivo' name='anoArquivo' value='".$ano_arquivo."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')' required>
                   </div>
                   </br>
+
+                  <div class='col-xl-12 col-lg-12'>
+                    <div class='row'>
+                      <div class='col-sm-8'><h5>Autores:</h5></div>
+                      <div class='col-sm-4'>
+                          <button id='adicionarAutorButton' type='button' class='btn btn-info add-new'><i class='fa fa-plus'></i> Adicionar autor</button>
+                      </div>
+                    </div>
+
+                    <table id='tableAutoresEdicao' class='table table-bordered' style='border-collapse: collapse; border: none;'>
+                      <tbody id='tbodyAutoresEdicao'>
+                        <tr style='display:none;'>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            <a id='adicionarAutorConfirm' class='add' title='Add'><img src='img/add2.png' title='Adicionar autor' style='width: 20px; height: 20px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                            <a class='edit' title='Edit'><img src='img/editar7.png' title='Editar autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                            <a class='delete' title='Delete'><img src='img/deletar2.png' title='Remover autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                          </td>
+                        </tr>           
+                      </tbody>
+                    </table>
+                  </div>  
+
+                  <input type='text' id='autoresEdicaoString' name='autoresEdicaoString' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' style='display:block;'>
+
                   <div class='col-xl-12 col-lg-12'>
                   <h5>Confiabilidade:</h5>
                   <div class='btn-group' data-toggle='buttons'>
@@ -147,6 +174,115 @@ saveCurrentURL();
     });
 
   </script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+	var actions = $("#tableAutoresEdicao td:last-child").html();
+	// Append table with add row form on add new button click
+    $(".add-new").click(function(){
+		$(this).attr("disabled", "disabled");
+		var index = $("#tableAutoresEdicao tbody tr:last-child").index();
+        var row = '<tr>' +
+            '<td><input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome..." style="text-transform: uppercase; width: 100%; font-size: 1rem;"></td>' +
+            '<td><input type="text" class="form-control" name="nome" id="nome" placeholder="Nome..." style="width: 100%; font-size: 1rem;"></td>' +
+			'<td style="width: 5rem;">' + actions + '</td>' +
+        '</tr>';
+    	$("#tableAutoresEdicao").append(row);		
+		$("#tableAutoresEdicao tbody tr").eq(index + 1).find(".add, .edit").toggle();
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+	// Add row on add button click
+	$(document).on("click", ".add", function(){
+		var empty = false;
+		var input = $(this).parents("tr").find('input[type="text"]');
+        input.each(function(){
+			if(!$(this).val()){
+				$(this).addClass("error");
+				empty = true;
+			} else{
+          $(this).removeClass("error");
+      }
+		});
+		$(this).parents("tr").find(".error").first().focus();
+		if(!empty){
+			input.each(function(){
+        if (this.id.indexOf("sobrenome") > -1) 
+				  $(this).parent("td").html($(this).val().toUpperCase());
+        else
+          $(this).parent("td").html($(this).val());
+			});			
+			$(this).parents("tr").find(".add, .edit").toggle();
+			$(".add-new").removeAttr("disabled");
+		}		
+    });
+	// Edit row on edit button click
+	$(document).on("click", ".edit", function(){		
+        $(this).parents("tr").find("td:not(:last-child)").each(function(){
+			$(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
+		});		
+		$(this).parents("tr").find(".add, .edit").toggle();
+		$(".add-new").attr("disabled", "disabled");
+    });
+	// Delete row on delete button click
+	$(document).on("click", ".delete", function(){
+        $(this).parents("tr").remove();
+		$(".add-new").removeAttr("disabled");
+    });
+});
+
+function getAutoresToString(){
+  var autores = "";
+  x = document.getElementById("tableAutoresEdicao").rows.length;
+
+  for(i=1;i<x;i++){
+    var tr = document.getElementById("tableAutoresEdicao").getElementsByTagName("tr")[i];
+    
+    for(j=0;j<2;j++){
+      var td = tr.getElementsByTagName("td")[j];
+      if (td.innerHTML.indexOf("<") == -1 && td.innerHTML !== "") {
+        if(j==0)
+          autores += td.innerHTML + ", "; //Sobrenome
+        else
+          autores += td.innerHTML + "; "; //Nome
+      }    
+    }
+  }
+  //console.log(autores);
+  return autores;
+}
+
+  $("#tableAutoresEdicao").bind("DOMSubtreeModified", function() {
+    document.getElementById("autoresEdicaoString").value = getAutoresToString();
+  });
+
+  $(document).ready(function() {
+
+    var autoresJS = "<?php echo $autores_arquivo; ?>";
+
+    pieces_autoresJS = autoresJS.split(";");
+
+    var actions = $("#tableAutoresEdicao td:last-child").html();
+    
+    var row = "";
+
+    for(i=0; i<pieces_autoresJS.length; i++) {
+      console.log(pieces_autoresJS);
+      sn = pieces_autoresJS[i].split(",");
+      if(sn[0] != " " && sn[1] != " " && sn[0] != "" && sn[1] != "") {
+        row += '<tr>' +
+              '<td>' + sn[0].trim() + '</td>' +
+              '<td>' + sn[1].trim() + '</td>' +
+        '<td style="width: 5rem;">' + actions + '</td>' +
+          '</tr>';   
+      }  
+    }
+    $("#tableAutoresEdicao").append(row);
+    
+  });
+
+
+</script>
 
 
 

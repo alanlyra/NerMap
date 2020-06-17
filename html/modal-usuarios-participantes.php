@@ -50,22 +50,22 @@ saveCurrentURL();
 
                       if($result2->accepted == "t") {
                         if($result2->id_user_convite == null)
-                          echo "<div style='text-align: center;'>
-                                  <button style='border: 0; background: transparent; display: inline-block;' value=''> <img src='/img/manager2.png' title='Dono do TRM' width='20px' height='20px' style='opacity:60%;' /></button >
+                          echo "<div style='text-align: center; cursor:default;'>
+                                  <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/manager2.png' title='Dono do TRM' width='20px' height='20px' style='opacity:60%;' /></button >
                                 </div>";
                         else if($result2->id_user == $_SESSION["id"])
                           echo "<div style='text-align: center;'>
-                                  <button style='border: 0; background: transparent; display: inline-block;' value=''> <img src='/img/user9.png' title='Você' width='20px' height='20px' style='opacity:60%;' /></button >
+                                  <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/user9.png' title='Você' width='20px' height='20px' style='opacity:60%;' /></button >
                                 </div>";
                         else
-                          echo "<div style='text-align: center;'>
-                                  <button style='border: 0; background: transparent; display: inline-block;' value=''> <img src='/img/shared5.png' title='Compartilhado com ".$result2->name_user."' width='20px' height='20px' style='opacity:60%;' /></button >
+                          echo "<div style='text-align: center; cursor:default;'>
+                                  <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/shared5.png' title='Compartilhado com ".$result2->name_user."' width='20px' height='20px' style='opacity:60%;' /></button >
                                 </div>";
                       }
                         
                       else
-                      echo "<div style='text-align: center;'>
-                              <button style='border: 0; background: transparent; display: inline-block;' value=''> <img src='/img/wait.png' title='Aguardando ".$result2->name_user." aceitar o convite' width='20px' height='20px' style='opacity:60%;' /></button >
+                      echo "<div style='text-align: center; cursor:default;'>
+                              <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/wait.png' title='Aguardando ".$result2->name_user." aceitar o convite' width='20px' height='20px' style='opacity:60%;' /></button >
                             </div>";
                                    
                   }
