@@ -287,23 +287,27 @@ saveCurrentURL();
                           <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Adicionar autor</button>
                       </div>
                     </div>
-
-                    <table id="tableAutores" class="table table-bordered" style="border-collapse: collapse; border: none;">
-                      <tbody>
-                        <tr style="display:none;">
-                          <td></td>
-                          <td></td>
-                          <td>
-                            <a class="add" title="Add"><img src='img/add2.png' title='Adicionar autor' style='width: 20px; height: 20px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
-                            <a class="edit" title="Edit"><img src='img/editar7.png' title='Editar autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
-                            <a class="delete" title="Delete"><img src='img/deletar2.png' title='Remover autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
-                          </td>
-                        </tr>           
-                      </tbody>
-                    </table>
+                    
+                    <div style="max-height:160px; overflow:auto;">
+                      <table id="tableAutores" class="table table-bordered" style="border-collapse: collapse; border: none;">
+                        <tbody>
+                          <tr style="display:none;">
+                            <td></td>
+                            <td></td>
+                            <td>
+                              <a class="add" title="Add"><img src='img/add2.png' title='Adicionar autor' style='width: 20px; height: 20px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                              <a class="edit" title="Edit"><img src='img/editar7.png' title='Editar autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                              <a class="delete" title="Delete"><img src='img/deletar2.png' title='Remover autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                            </td>
+                          </tr>           
+                        </tbody>
+                      </table>
+                    </div>
                   </div>  
 
                   <input type="text" id="autoresString" name="autoresString" class="form-control bg-light border-0 small" aria-label="Search" aria-describedby="basic-addon2" style="display:none;">
+
+                  </br>
                   
                   <div class="col-xl-12 col-lg-12">
                   <h5>Confiabilidade:</h5>
@@ -621,7 +625,7 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		var index = $("#tableAutores tbody tr:last-child").index();
         var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome..." style="text-transform: uppercase; width: 100%; font-size: 1rem;"></td>' +
+            '<td><input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome..." style="width: 100%; font-size: 1rem;"></td>' +
             '<td><input type="text" class="form-control" name="nome" id="nome" placeholder="Nome..." style="width: 100%; font-size: 1rem;"></td>' +
 			'<td style="width: 5rem;">' + actions + '</td>' +
         '</tr>';
@@ -645,7 +649,7 @@ $(document).ready(function(){
 		if(!empty){
 			input.each(function(){
         if (this.id.indexOf("sobrenome") > -1) 
-				  $(this).parent("td").html($(this).val().toUpperCase());
+				  $(this).parent("td").html($(this).val());
         else
           $(this).parent("td").html($(this).val());
 			});			
@@ -728,9 +732,10 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
     $idArquivo = $_POST['idArquivo'];
     $nomeArquivo = $_POST['nomeArquivo'];
     $anoArquivo = $_POST['anoArquivo'];
+    $autoresArquivo = $_POST['autoresEdicaoString'];
     $confArquivo = $_POST['confArquivo'];
 
-    $update_on_arquivo= set_data("UPDATE arquivos SET nome_arquivo = $1, ano_arquivo = $2, conf_arquivo = $3 where id_arquivo = $4", array($nomeArquivo, $anoArquivo, $confArquivo, $idArquivo));
+    $update_on_arquivo= set_data("UPDATE arquivos SET nome_arquivo = $1, ano_arquivo = $2, conf_arquivo = $3, autores = $4 where id_arquivo = $5", array($nomeArquivo, $anoArquivo, $confArquivo, $autoresArquivo, $idArquivo));
 
     echo "$('#modalEditarArquivo').modal('hide');";
     echo "$('#modalArquivos').modal('hide');";

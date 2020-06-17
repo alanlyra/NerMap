@@ -7,8 +7,8 @@ saveCurrentURL();
 <table class="table table-bordered" id="table-arquivos" width="100%" cellspacing="0">
   <thead>
     <tr>
-      <th>ID</th>
       <th>Nome</th>
+      <th>Autores</th>
       <th>Ano</th>
       <th>Confiabilidade</th>
       <th>Status</th>
@@ -19,8 +19,8 @@ saveCurrentURL();
   </thead>
   <tfoot>
     <tr>
-      <th>ID</th>
       <th>Nome</th>
+      <th>Autores</th>
       <th>Ano</th>
       <th>Confiabilidade</th>
       <th>Status</th>
@@ -39,8 +39,8 @@ saveCurrentURL();
       if  ($results_max_popup>0) {
       while($result=pg_fetch_object($search_popup)) {
           echo "<tr>
-                  <td>".$result->autores."</td>
                   <td>".$result->nome_arquivo."</td>
+                  <td>".$result->autores."</td>
                   <td>".$result->ano_arquivo."</td>
 
                   <td><div style='text-align: center;'><img src='img/conf_".$result->conf_arquivo."_bw.png' title='Confiabilidade: ".$result->conf_arquivo." (Mín: 1, Máx: 10)' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
@@ -161,6 +161,7 @@ saveCurrentURL();
           } 
         })
     });
+    
 </script>
 
 

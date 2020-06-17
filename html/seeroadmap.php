@@ -96,6 +96,7 @@ saveCurrentURL();
                         id_arquivo => "",
                         id_roadmap => "",
                         arquivo_origem => "",
+                        autores => "",
                         nome_arquivo => "",
                         ano_arquivo => "",
                         nome_trm => $nome_roadmap,
@@ -169,6 +170,7 @@ saveCurrentURL();
                                   $section[assunto] = $result2->assunto_prospec;
                                   $section[nome_arquivo] = $result2->nome_arquivo;
                                   $section[ano_arquivo] = $result2->ano_arquivo;
+                                  $section[autores] = $result2->autores;
                                   $section[info_original] = $section[info];
                                   $array_sections[$i_section] = $section;
                                   $assunto_roadmap = $result2->assunto_prospec;
@@ -222,6 +224,7 @@ saveCurrentURL();
                             $section[id_roadmap] = $id_roadmap;
                             $section[nome_arquivo] = $result3->nome_arquivo;
                             $section[ano_arquivo] = $result3->ano_arquivo;
+                            $section[autores] = $result3->autores_prospeccao;
                             $array_sections[$i_section] = $section;
                             $assunto_roadmap = $result3->assunto_prospec;
 
@@ -256,6 +259,7 @@ saveCurrentURL();
                         $section[id_roadmap] = $id_roadmap;
                         $section[nome_arquivo] = $result3->nome_arquivo_adicionado;
                         $section[ano_arquivo] = $result3->ano_arquivo_adicionado;
+                        $section[autores] = $result3->autores_prospeccao;
                         $array_sections[$i_section] = $section;
 
                         $section[date] = "";
@@ -387,7 +391,7 @@ saveCurrentURL();
                                   
                                     echo "<div class='tl-heading'>
                                       <h4>".$array_sections[$j][date]."</h4>
-                                      <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i><b>Fonte:</b> ".$array_sections[$j][nome_arquivo]." (".$array_sections[$j][ano_arquivo].")</small></p>
+                                      <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i><b>Fonte:</b> ".$array_sections[$j][autores]." <b>".$array_sections[$j][nome_arquivo]."</b> (".$array_sections[$j][ano_arquivo].").</small></p>
                                     </div>
                                     <div class='tl-body'>
                                       <p>".$array_sections[$j][info]."</p>
@@ -404,7 +408,7 @@ saveCurrentURL();
 
                         //Adiciona na tabela ROADMAP
 
-                        $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original) VALUES ('".$array_sections[$j][assunto]."', null, ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."');");
+                        $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original, autores_prospeccao) VALUES ('".$array_sections[$j][assunto]."', null, ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."', '".$array_sections[$j][autores]."');");
                       }
                       $previous_date = $array_sections[$j][date];
                     }
@@ -648,7 +652,7 @@ saveCurrentURL();
   </div>
 
   <div id="modalAdicionarRoadmap" class="modal fade" role="dialog">
-    <div id="content-campo-adicionar-roadmap" class="modal-dialog">
+    <div id="content-campo-adicionar-roadmap" class="modal-dialog modal-lg">
       <!-- Modal content-->
       
 
@@ -1207,7 +1211,8 @@ saveCurrentURL();
   	$keyConsulta = $_POST['keyConsulta'];
   	$assuntoAdicionar = $_POST['assuntoAdd'];
   	$nomeArquivo = $_POST['nomeArquivoAdicionado'];
-  	$anoArquivo = $_POST['anoArquivoAdicionado'];
+    $anoArquivo = $_POST['anoArquivoAdicionado'];
+    $autores = $_POST['autoresStringAdd'];
 
   	if($idArquivo == 0) { //ROADMAP-COMPLETO
   		//$consulta1 = "IS NULL";
@@ -1242,7 +1247,7 @@ saveCurrentURL();
     echo "<script>console.log('".$nomeArquivo."');</script>";
     echo "<script>console.log('".$anoArquivo."');</script>";
 
-    $set_on_roadmap = set_data("INSERT INTO roadmap (ano_arquivo_adicionado, arquivo_origem, assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, nome_arquivo_adicionado, ordem, prospeccao, tem_filtro, tempo, prospeccao_original) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)", array($anoArquivo, '0', $assuntoAdicionar, 'null', $idArquivo, $idRoadmap, $id_roadmap_table_adicionar, $nomeArquivo, $indice, $infoProspec, 'false', $anoProspec, $infoProspec));
+    $set_on_roadmap = set_data("INSERT INTO roadmap (ano_arquivo_adicionado, arquivo_origem, assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, nome_arquivo_adicionado, ordem, prospeccao, tem_filtro, tempo, prospeccao_original, autores_prospeccao) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)", array($anoArquivo, '0', $assuntoAdicionar, 'null', $idArquivo, $idRoadmap, $id_roadmap_table_adicionar, $nomeArquivo, $indice, $infoProspec, 'false', $anoProspec, $infoProspec, $autores));
 
     echo "<script>window.location.href = 'seeroadmap.php?".$cabecalhoCompleto."';</script>";
 

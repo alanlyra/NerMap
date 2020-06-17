@@ -36,29 +36,33 @@ saveCurrentURL();
                   </br>
 
                   <div class='col-xl-12 col-lg-12'>
-                    <div class='row'>
+                    <div id='divAdicionarAutirTitle' class='row'>
                       <div class='col-sm-8'><h5>Autores:</h5></div>
                       <div class='col-sm-4'>
                           <button id='adicionarAutorButton' type='button' class='btn btn-info add-new'><i class='fa fa-plus'></i> Adicionar autor</button>
                       </div>
                     </div>
 
-                    <table id='tableAutoresEdicao' class='table table-bordered' style='border-collapse: collapse; border: none;'>
-                      <tbody id='tbodyAutoresEdicao'>
-                        <tr style='display:none;'>
-                          <td></td>
-                          <td></td>
-                          <td>
-                            <a id='adicionarAutorConfirm' class='add' title='Add'><img src='img/add2.png' title='Adicionar autor' style='width: 20px; height: 20px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
-                            <a class='edit' title='Edit'><img src='img/editar7.png' title='Editar autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
-                            <a class='delete' title='Delete'><img src='img/deletar2.png' title='Remover autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
-                          </td>
-                        </tr>           
-                      </tbody>
-                    </table>
-                  </div>  
+                    <div style='max-height:160px; overflow:auto;'>
+                      <table id='tableAutoresEdicao' class='table table-bordered' style='border-collapse: collapse; border: none;'>
+                        <tbody id='tbodyAutoresEdicao'>
+                          <tr style='display:none;'>
+                            <td></td>
+                            <td></td>
+                            <td>
+                              <a id='adicionarAutorConfirm' class='add' title='Add'><img id='adicionarAutorConfirm2' src='img/add2.png' title='Adicionar autor' style='width: 20px; height: 20px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                              <a class='edit' title='Edit'><img src='img/editar7.png' title='Editar autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                              <a class='delete' title='Delete'><img src='img/deletar2.png' title='Remover autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                            </td>
+                          </tr>           
+                        </tbody>
+                      </table>
+                      </div> 
+                    </div>  
 
-                  <input type='text' id='autoresEdicaoString' name='autoresEdicaoString' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' style='display:block;'>
+                  <input type='text' id='autoresEdicaoString' name='autoresEdicaoString' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' style='display:none;'>
+
+                  </br>
 
                   <div class='col-xl-12 col-lg-12'>
                   <h5>Confiabilidade:</h5>
@@ -184,7 +188,7 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		var index = $("#tableAutoresEdicao tbody tr:last-child").index();
         var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome..." style="text-transform: uppercase; width: 100%; font-size: 1rem;"></td>' +
+            '<td><input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome..." style="width: 100%; font-size: 1rem;"></td>' +
             '<td><input type="text" class="form-control" name="nome" id="nome" placeholder="Nome..." style="width: 100%; font-size: 1rem;"></td>' +
 			'<td style="width: 5rem;">' + actions + '</td>' +
         '</tr>';
@@ -208,11 +212,12 @@ $(document).ready(function(){
 		if(!empty){
 			input.each(function(){
         if (this.id.indexOf("sobrenome") > -1) 
-				  $(this).parent("td").html($(this).val().toUpperCase());
+				  $(this).parent("td").html($(this).val());
         else
           $(this).parent("td").html($(this).val());
 			});			
 			$(this).parents("tr").find(".add, .edit").toggle();
+      $(this).parents("tr").find(".add, .edit").toggle();
 			$(".add-new").removeAttr("disabled");
 		}		
     });
@@ -222,6 +227,7 @@ $(document).ready(function(){
 			$(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
 		});		
 		$(this).parents("tr").find(".add, .edit").toggle();
+    $(this).parents("tr").find(".add, .edit").toggle();
 		$(".add-new").attr("disabled", "disabled");
     });
 	// Delete row on delete button click
@@ -262,24 +268,26 @@ function getAutoresToString(){
 
     pieces_autoresJS = autoresJS.split(";");
 
-    var actions = $("#tableAutoresEdicao td:last-child").html();
-    
-    var row = "";
 
     for(i=0; i<pieces_autoresJS.length; i++) {
-      console.log(pieces_autoresJS);
+
       sn = pieces_autoresJS[i].split(",");
       if(sn[0] != " " && sn[1] != " " && sn[0] != "" && sn[1] != "") {
-        row += '<tr>' +
-              '<td>' + sn[0].trim() + '</td>' +
-              '<td>' + sn[1].trim() + '</td>' +
-        '<td style="width: 5rem;">' + actions + '</td>' +
-          '</tr>';   
+        addRow(sn[0].trim(), sn[1].trim());
       }  
     }
-    $("#tableAutoresEdicao").append(row);
     
   });
+
+  function addRow(sobrenome, nome){
+    window.setTimeout(function() {
+      document.getElementById("adicionarAutorButton").click();
+      document.getElementById("sobrenome").value = sobrenome;
+      document.getElementById("nome").value = nome;
+      $('#tbodyAutoresEdicao').find('a.add:last').trigger('click');
+    }, 5);
+
+  }
 
 
 </script>
