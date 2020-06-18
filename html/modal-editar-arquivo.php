@@ -60,7 +60,7 @@ saveCurrentURL();
                       </div> 
                     </div>  
 
-                  <input type='text' id='autoresEdicaoString' name='autoresEdicaoString' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' style='display:none;'>
+                  <input type='text' id='autoresEdicaoString' name='autoresEdicaoString' value='' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' style='display:none;'>
 
                   </br>
 
