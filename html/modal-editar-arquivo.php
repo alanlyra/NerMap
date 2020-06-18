@@ -188,8 +188,8 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		var index = $("#tableAutoresEdicao tbody tr:last-child").index();
         var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome..." style="width: 100%; font-size: 1rem;"></td>' +
-            '<td><input type="text" class="form-control" name="nome" id="nome" placeholder="Nome..." style="width: 100%; font-size: 1rem;"></td>' +
+            '<td><input type="text" class="form-control" name="sobrenomeEdit" id="sobrenomeEdit" placeholder="Sobrenome..." style="width: 100%; font-size: 1rem;"></td>' +
+            '<td><input type="text" class="form-control" name="nomeEdit" id="nomeEdit" placeholder="Nome..." style="width: 100%; font-size: 1rem;"></td>' +
 			'<td style="width: 5rem;">' + actions + '</td>' +
         '</tr>';
     	$("#tableAutoresEdicao").append(row);		
@@ -211,7 +211,7 @@ $(document).ready(function(){
 		$(this).parents("tr").find(".error").first().focus();
 		if(!empty){
 			input.each(function(){
-        if (this.id.indexOf("sobrenome") > -1) 
+        if (this.id.indexOf("sobrenomeEdit") > -1) 
 				  $(this).parent("td").html($(this).val());
         else
           $(this).parent("td").html($(this).val());
@@ -268,7 +268,6 @@ function getAutoresToString(){
 
     pieces_autoresJS = autoresJS.split(";");
 
-
     for(i=0; i<pieces_autoresJS.length; i++) {
 
       sn = pieces_autoresJS[i].split(",");
@@ -282,8 +281,8 @@ function getAutoresToString(){
   function addRow(sobrenome, nome){
     window.setTimeout(function() {
       document.getElementById("adicionarAutorButton").click();
-      document.getElementById("sobrenome").value = sobrenome;
-      document.getElementById("nome").value = nome;
+      document.getElementById("sobrenomeEdit").value = sobrenome;
+      document.getElementById("nomeEdit").value = nome;
       $('#tbodyAutoresEdicao').find('a.add:last').trigger('click');
     }, 5);
 

@@ -31,9 +31,9 @@ saveCurrentURL();
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Geração de Roadmaps</h1>
-          </div>
+         
+            <h1 class="h3 mb-2 text-gray-800">Geração de Roadmaps</h1>
+        
 
           <!-- Content Row -->
 
@@ -41,7 +41,7 @@ saveCurrentURL();
 
                 if(isset($_GET["arquivo"]) || isset($_GET["roadmap-completo"])) {
 
-                  echo "<div id='main-content' class='col-xl-12 col-lg-12' style='height: 77vh;'>";
+                  echo "<div id='main-content' style='height: 80vh;'>";
                
                   $tipoCabecalho = "";
                   $nome_arquivo = "";
@@ -316,7 +316,7 @@ saveCurrentURL();
                     $id_arquivo_adicionar = 0;
 
                     echo "<div style='text-align: center; margin-top: -0.2vh;'>
-                          <a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."' style='margin-left: -287px;'>
+                          <a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."' style='margin-left: -275px;'>
                             <img id='imageAddProspec' src='img/add2.png' title='Adicionar prospecção manualmente' style='width: 20px; height: 20px; display: inline-block;'/>
                           </a> 
                           </div>
@@ -926,7 +926,9 @@ saveCurrentURL();
     }
     
     var media_conf_roadmap = total_conf / relatorio_arrayJS_Global.length;
-    console.log(media_conf_roadmap);
+    media_conf_roadmap = media_conf_roadmap.toFixed(2);
+
+    //console.log(media_conf_roadmap);
 
     var conf_media = "";
     if(media_conf_roadmap > 9)
@@ -940,12 +942,9 @@ saveCurrentURL();
     if(media_conf_roadmap < 2)
       conf_media = "conf_1_bw.png"; 
 
-    console.log(conf_media);
+    //console.log(conf_media);
 
-
-    
-
-    document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> Confiabilidade média do roadmap: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='Confiabilidade média: " + media_conf_roadmap + "10' style='width: 20px; height: 20px; margin-right:10px; margin-top: -5px; margin-left: 3px;'/>";
+    document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> Confiabilidade média do roadmap: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='Confiabilidade média: " + media_conf_roadmap + "' style='width: 20px; height: 20px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
   
   	function geraRelatorioCSV() {
       

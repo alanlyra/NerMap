@@ -2307,7 +2307,8 @@ readers do not read off random characters that represent icons */
   content: "\f812"; }
 
 .fa-laravel:before {
-  content: "\f3bd"; }
+  content: url(../../../img/timeline_bw.png); 
+}
 
 .fa-lastfm:before {
   content: "\f202"; }
