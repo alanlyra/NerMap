@@ -6318,13 +6318,19 @@ a.close.disabled {
 @media (min-width: 992px) {
   .modal-lg,
   .modal-xl {
-    max-width: 1000px;
+    max-width: 1100px;
+  }
+  .modal-ll {
+    max-width: 900px;
   }
 }
 
 @media (min-width: 1200px) {
   .modal-xl {
-    max-width: 1340px;
+    max-width: 1440px;
+  }
+  .modal-ll {
+    max-width: 1100px;
   }
 }
 

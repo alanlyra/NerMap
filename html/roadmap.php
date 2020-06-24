@@ -32,10 +32,12 @@ saveCurrentURL();
         <div class="container-fluid">
 
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Painel de Início</h1>
+            <h1 class="h3 mb-0 text-gray-800"><?php echo $LANG['1']; ?></h1>
           </div>
 
           <!-- Content Row -->
+
+         
 
           <div class="row justify-content-center">
 
@@ -43,7 +45,7 @@ saveCurrentURL();
             <div class="col-xl-4 col-lg-4">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Criar Technology Roadmapping</h6>
+                  <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['2']; ?></h6>
                 </div>
                 <div id="messageCampos" style="display: none;" class="alert alert-warning ">
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -56,32 +58,32 @@ saveCurrentURL();
                 <div class="col-md-11 feature-box" style="text-align: left; display:inline-block; margin-top:1.4rem;">
                 <div class="row justify-content-center">
                   <div class="col-xl-12 col-lg-12" style="margin-top:2.5vh;">
-                   <h5>Nome:</h5>
-                    <input type="text" id="nomeRoadmap" name="nomeRoadmap" class="form-control bg-light border-0 small" placeholder="Nome do TRM..." aria-label="Search" aria-describedby="basic-addon2" required>
+                   <h5><?php echo $LANG['3']; ?>:</h5>
+                    <input type="text" id="nomeRoadmap" name="nomeRoadmap" class="form-control bg-light border-0 small" placeholder="<?php echo $LANG['22']; ?>..." aria-label="Search" aria-describedby="basic-addon2" required>
                   </div>
                   
                   </div>
                   </br>
                   <div class="row justify-content-center">
                     <div class="col-xl-6 col-lg-6">
-                      <h5>Área:</h5>
+                      <h5><?php echo $LANG['4']; ?>:</h5>
                       <select type="text" id="temaRoadmap" name="temaRoadmap" class="form-control" style="cursor: pointer;" required>
-                        <option value="" disabled selected>Selecione a área...</option>
-                        <option value="Educação">Educação</option>
-                        <option value="Medicina">Medicina</option>
-                        <option value="Transporte">Transporte</option>
-                        <option value="Trabalho">Trabalho</option>
+                        <option value="" disabled selected><?php echo $LANG['16']; ?>...</option>
+                        <option value="Educação"><?php echo $LANG['17']; ?></option>
+                        <option value="Medicina"><?php echo $LANG['18']; ?></option>
+                        <option value="Transporte"><?php echo $LANG['19']; ?></option>
+                        <option value="Trabalho"><?php echo $LANG['20']; ?></option>
                       </select>
                     </div>
                     </br>
                     <div class="col-xl-6 col-lg-6">
-                    <h5>Ano limite do TRM:</h5>
-                      <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="Ano..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')" required>
+                    <h5><?php echo $LANG['6']; ?>:</h5>
+                      <input type="text" id="anoRoadmap" name="anoRoadmap" class="form-control bg-light border-0 small" placeholder="<?php echo $LANG['21']; ?>..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')" required>
                     </div>
                   </div>
                   </br>
                   <div class="py-3" style="text-align: center;">
-                    <input class="btn btn-primary btn-icon-split" type="submit" name="criaTRM" value="Criar" style="width: 8em; height: 2em; display: inline-block; margin-top: 5px;" />
+                    <input class="btn btn-primary btn-icon-split" type="submit" name="criaTRM" value="<?php echo $LANG['5']; ?>" style="width: 8em; height: 2em; display: inline-block; margin-top: 5px;" />
                   </div>   
                 </div>
                 </div>
@@ -92,23 +94,23 @@ saveCurrentURL();
               <div class="col-xl-5 col-lg-5">
                 <div class="card shadow mb-4">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Workplace</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['7']; ?></h6>
                   </div>
                   <div class="row justify-content-center divWorkplace">
                     <div class="col-sm-5 col-md-5">
                       <div class="col-md-12 feature-box">
                       <img src="img/files2.png" style="width: 100px; height: 100px; display: inline-block;"/>
-                        <h4>TRMs & Arquivos</h4>
-                        <p style="height: 3rem;">Seus TRMs e arquivos cadastrados no sistema.</p>
-                        <a href="prospeccoes.php"><button class="btn btn-primary" style="margin:5px;">Acessar</button></a>
+                        <h4><?php echo $LANG['9']; ?></h4>
+                        <p style="height: 3rem;"><?php echo $LANG['10']; ?></p>
+                        <a href="prospeccoes.php"><button class="btn btn-primary" style="margin:5px;"><?php echo $LANG['12']; ?></button></a>
                       </div>
                     </div> <!-- End Col -->
                     <div class="col-sm-5 col-md-5">
                       <div class="col-md-12 feature-box">
                       <img src="img/timeline6.png" style="width: 130px; height: 100px; display: inline-block;"/>
-                        <h4>Roadmaps</h4>
-                        <p style="height: 3rem;">Seus roadmaps gerados e editados.</p>
-                        <a href="seeroadmap.php"><button class="btn btn-primary" style="margin:5px;">Acessar</button></a>
+                        <h4><?php echo $LANG['8']; ?></h4>
+                        <p style="height: 3rem;"><?php echo $LANG['11']; ?></p>
+                        <a href="seeroadmap.php"><button class="btn btn-primary" style="margin:5px;"><?php echo $LANG['12']; ?></button></a>
                       </div>
                   </div> <!-- End Col -->	
                 </div>
@@ -118,15 +120,15 @@ saveCurrentURL();
             <div class="col-xl-3 col-lg-3">
             <div class="card shadow mb-4">
                   <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Configurações Pessoais</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['13']; ?></h6>
                   </div>
                   <div class="row justify-content-center divWorkplace">
                     <div class="col-sm-9 col-md-9">
                       <div class="col-md-12 feature-box">
                       <img class="img-profile rounded-circle" src="<?php echo $_SESSION['photo']?>" style="width: 100px; height: 100px; display: inline-block;"/>                   
-                        <h4>Configuração de Usuário</h4>
-                        <p style="height: 3rem;">Veja e altere seus dados pessoais.</p>
-                        <a href="config-usuario.php"><button class="btn btn-primary" style="margin:5px;">Acessar</button></a>
+                        <h4><?php echo $LANG['14']; ?></h4>
+                        <p style="height: 3rem;"><?php echo $LANG['15']; ?></p>
+                        <a href="config-usuario.php"><button class="btn btn-primary" style="margin:5px;"><?php echo $LANG['12']; ?></button></a>
                       </div>
                     </div> <!-- End Col -->
                 </div>
@@ -139,15 +141,15 @@ saveCurrentURL();
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Análise de Uso</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['23']; ?></h6>
                     <div class="dropdown no-arrow">
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                       </a>
                       <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Modo de Visualização:</div>
-                        <a class="dropdown-item" href="#" onclick="analiseUserData();">Meu uso</a>
-                        <a class="dropdown-item" href="#" onclick="analiseGlobalData();">Uso Global</a>
+                        <div class="dropdown-header"><?php echo $LANG['31']; ?>:</div>
+                        <a class="dropdown-item" href="#" onclick="analiseUserData();"><?php echo $LANG['32']; ?></a>
+                        <a class="dropdown-item" href="#" onclick="analiseGlobalData();"><?php echo $LANG['33']; ?></a>
                       </div>
                     </div>
                   </div>
@@ -162,7 +164,7 @@ saveCurrentURL();
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
                               <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">TRMs</div>
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['24']; ?></div>
                                 <div id="num-trms" class="h6 mb-0 font-weight-bold text-gray-800"></div>
                               </div>
                               <div class="col-auto">
@@ -176,7 +178,7 @@ saveCurrentURL();
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
                               <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Arquivos</div>
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['25']; ?></div>
                                 <div id="num-arquivos" class="h6 mb-0 font-weight-bold text-gray-800"></div>
                               </div>
                               <div class="col-auto">
@@ -193,7 +195,7 @@ saveCurrentURL();
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
                               <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Roadmaps</div>
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['26']; ?></div>
                                 <div id="num-roadmaps" class="h6 mb-0 font-weight-bold text-gray-800"></div>
                               </div>
                               <div class="col-auto">
@@ -207,7 +209,7 @@ saveCurrentURL();
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
                               <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Prospecções</div>
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['27']; ?></div>
                                 <div id="num-prospeccoes" class="h6 mb-0 font-weight-bold text-gray-800"></div>
                               </div>
                               <div class="col-auto">
@@ -220,7 +222,7 @@ saveCurrentURL();
                       </div>
 
                       <div class="col-xl-3 col-md-3 mb-3">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Temas dos TRMs:</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['28']; ?>:</div>
                         <div style="padding: 0.5rem !important;">                        
                           <canvas id="temasChart"></canvas>
                          
@@ -228,7 +230,7 @@ saveCurrentURL();
                       </div>
 
                       <div class="col-xl-3 col-md-3 mb-3">
-                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Espaço Temporal:</div>
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['29']; ?>:</div>
                         <div style="padding: 0.5rem !important;">                         
                           <canvas id="anosChart"></canvas>
                         </div>
@@ -246,13 +248,13 @@ saveCurrentURL();
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Sobre</h6>
+                    <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['30']; ?></h6>
                     <div class="dropdown no-arrow">
                       <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                       </a>
                       <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header">Acessar:</div>
+                        <div class="dropdown-header"><?php echo $LANG['12']; ?>:</div>
                         <a class="dropdown-item" href="#">Dissertação</a>
                         <a class="dropdown-item" href="#">PESC</a>
                       </div>
@@ -261,7 +263,7 @@ saveCurrentURL();
                   <!-- Card Body -->
                   <div class="card-body">
                     <div class="divMetodologia">
-                    <p> O framework NERMAP foi desenvolvido para ser uma ferramenta de Prospecção Tecnológica, de modo a semi-automatizar o processo de Technology Roadmapping. O processo é feito através do método de Reconhecimento de Entidades Nomeadas em texto.</p>
+                    <p><?php echo $LANG['34']; ?></p>
                     </div>
                     <div class="mt-4 text-center small">
                       <span class="mr-2">
@@ -631,17 +633,17 @@ saveCurrentURL();
       }
       
 
-      if(numTRMsUserJS == 1) document.getElementById("num-trms").innerHTML = numTRMsUserJS + " TRM";
-      else document.getElementById("num-trms").innerHTML = numTRMsUserJS + " TRMs";
+      if(numTRMsUserJS == 1) document.getElementById("num-trms").innerHTML = numTRMsUserJS + " <?php echo $LANG['24'];?>";
+      else document.getElementById("num-trms").innerHTML = numTRMsUserJS + " <?php echo $LANG['24'];?>";
 
-      if(numArquivosUserJS == 1) document.getElementById("num-arquivos").innerHTML = numArquivosUserJS + " arquivo";
-      else document.getElementById("num-arquivos").innerHTML = numArquivosUserJS + " arquivos";
+      if(numArquivosUserJS == 1) document.getElementById("num-arquivos").innerHTML = numArquivosUserJS + " <?php echo $LANG['25'];?>";
+      else document.getElementById("num-arquivos").innerHTML = numArquivosUserJS + " <?php echo $LANG['25'];?>";
 
-      if(numRoadmapsUserJS == 1) document.getElementById("num-roadmaps").innerHTML = numRoadmapsUserJS + " roadmap";
-      else document.getElementById("num-roadmaps").innerHTML = numRoadmapsUserJS + " roadmaps";
+      if(numRoadmapsUserJS == 1) document.getElementById("num-roadmaps").innerHTML = numRoadmapsUserJS + " <?php echo $LANG['26'];?>";
+      else document.getElementById("num-roadmaps").innerHTML = numRoadmapsUserJS + " <?php echo $LANG['26'];?>";
 
-      if(numProspeccoesUserJS == 1) document.getElementById("num-prospeccoes").innerHTML = numProspeccoesUserJS + " prospecção";
-      else document.getElementById("num-prospeccoes").innerHTML = numProspeccoesUserJS + " prospecções";
+      if(numProspeccoesUserJS == 1) document.getElementById("num-prospeccoes").innerHTML = numProspeccoesUserJS + " <?php echo $LANG['27'];?>";
+      else document.getElementById("num-prospeccoes").innerHTML = numProspeccoesUserJS + " <?php echo $LANG['27'];?>";
 
       drawPieCharts(labelsChartTemasUser, dataChartTemasUser, colorsChartTemasUser, labelsChartAnosProspeccoesUser, dataChartAnosProspeccoesUser, colorsChartAnosProspeccoesUser);
       

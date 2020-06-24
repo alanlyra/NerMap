@@ -98,8 +98,39 @@ saveCurrentURL();
   </div>
 </li>-->
 
-<div class="topbar-divider d-none d-sm-block"></div>
+<li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none;">
+  <a class="nav-link dropdown-toggle" href="#" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <i class="fas fa-globe fa-fw"></i>
+  </a>
 
+  <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="languagesDropdown">
+    
+    <h6 class="dropdown-header">
+      <?php echo $LANG['39']; ?>
+    </h6>
+    <div style="height: auto; width: 180px; overflow: auto;">
+    <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('en-us');">
+      <div class="dropdown-list-image mr-3">
+        <img class="rounded-circle" src="img/en-us2.png" alt="">
+      </div>
+      <div class="font-weight-bold">
+        <div class="text-truncate">English</div>
+      </div>
+    </a>
+    <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('pt-BR');">
+      <div class="dropdown-list-image mr-3">
+        <img class="rounded-circle" src="img/pt-br2.png" alt="">
+      </div>
+      <div class="font-weight-bold">
+        <div class="text-truncate">Português</div>
+      </div>
+    </a>
+    
+    </div>
+  </div>
+</li>
+
+<div class="topbar-divider d-none d-sm-block"></div>
 
     <!-- Nav Item - User Information -->
     <li class="nav-item dropdown no-arrow" style="list-style:none;">

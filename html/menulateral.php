@@ -2,8 +2,8 @@
 
   <!-- Sidebar - Brand -->
   <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/roadmap.php">
-    <div class="sidebar-brand-icon rotate-n-15">
-      <i class="fas fa-laugh-wink"></i>
+    <div class="sidebar-brand-icon ">
+      <i class="fas fa-laravel"></i>
     </div>
     <div class="sidebar-brand-text mx-3">NerMap</div>
   </a>
@@ -31,7 +31,7 @@
     <a class="nav-link" href="roadmap.php">
      <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
      <i class="fas fa-fw fa-home"></i>
-      <span>Painel de Início</span></a>
+      <span><?php echo $LANG['1']; ?></span></a>
   </li>
 
 
@@ -41,21 +41,21 @@
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    Workplace
+    <?php echo $LANG['7']; ?>
   </div>
 
   <!-- Nav Item - Prospecções Collapse Menu -->
   <li id="li_prospec" class="nav-item">
     <a class="nav-link" href="prospeccoes.php">
       <i class="fas fa-fw fa-table"></i>
-      <span>TRMs e Arquivos</span></a>
+      <span><?php echo $LANG['9']; ?></span></a>
   </li>
 
   <!-- Nav Item - Roadmaps Collapse Menu -->
   <li id="li_seerodmaps" class="nav-item">
     <a class="nav-link" href="seeroadmap.php">
       <i class="fas fa-fw fa-map-signs"></i>
-      <span>Roadmaps</span></a>
+      <span><?php echo $LANG['8']; ?></span></a>
   </li>
   <!-- <li id="li_rodmaps" class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
@@ -93,14 +93,14 @@
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    Usuário
+    <?php echo $LANG['38']; ?>
   </div>
 
   <!-- Nav Item - Configurações -->
   <li id="li_config_user" class="nav-item">
     <a class="nav-link" href="config-usuario.php">
       <i class="fas fa-fw fa-cog"></i>
-      <span>Configurações</span></a>
+      <span><?php echo $LANG['35']; ?></span></a>
   </li>
 
   <!-- Divider -->
@@ -108,14 +108,14 @@
 
   <!-- Heading -->
   <div class="sidebar-heading">
-    Admin
+    <?php echo $LANG['37']; ?>
   </div>
 
   <!-- Nav Item - Configurações -->
   <li id="li_config" class="nav-item">
     <a class="nav-link" href="config.php">
       <i class="fas fa-fw fa-tools"></i>
-      <span>Ajustes</span></a>
+      <span><?php echo $LANG['36']; ?></span></a>
   </li>
 
         <!-- Divider -->

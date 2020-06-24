@@ -34,7 +34,7 @@ saveCurrentURL();
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Gerenciar TRMs</h1>
+          <h1 class="h3 mb-2 text-gray-800"><?php echo $LANG['40']; ?></h1>
     
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
@@ -42,7 +42,7 @@ saveCurrentURL();
             <button style='display: none; float:right; border: 0; margin: 0px; background: transparent;' onclick='reloadPage();'>
          		<img src='img/refresh5.png' style='width: 20px; height: 20px; display: inline-block;'/>
         	 </button>                 	
-              <h6 class="m-0 font-weight-bold text-primary" style="float:left;">Technology Roadmappings</h6>
+              <h6 class="m-0 font-weight-bold text-primary" style="float:left;"><?php echo $LANG['41']; ?></h6>
 
               <?php
                 
@@ -58,7 +58,7 @@ saveCurrentURL();
               <!-- Nav Item - Messages -->
               <li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none;">
                 <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="height: 5px;">
-                  <i class="fas fa-envelope fa-fw" title="Convites"></i>
+                  <i class="fas fa-envelope fa-fw" title="<?php echo $LANG['42']; ?>"></i>
                   <!-- Counter - Messages -->
                   <?php
                     if ($results_max>0)
@@ -69,7 +69,7 @@ saveCurrentURL();
                 <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                   
                   <h6 class="dropdown-header">
-                    Convites
+                    <?php echo $LANG['42']; ?>
                   </h6>
 
                   <?php
@@ -96,7 +96,7 @@ saveCurrentURL();
                                   </div>
                                   <div class='font-weight-bold'>
                                     <div class='text-truncate'>".$result2->nome_prospec."</div>
-                                    <div class='small text-gray-500'>".$result2->name_user." te convidou para participar do TRM.</div>
+                                    <div class='small text-gray-500'>".$result2->name_user." " . $LANG['45'] . "</div>
 
                                     <form action='prospeccoes.php?' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
                                       <input type='text' id='idProspec' name='idProspecGrupos' class='form-control bg-light border-0 small' value='".$result2->id_prospec_grupos."' aria-label='Search' 
@@ -106,9 +106,9 @@ saveCurrentURL();
                                       <input type='text' id='idUsuarioConvite' name='idUsuarioConvite' class='form-control bg-light border-0 small' value='".$result2->id_user_convite."' aria-label='Search' 
                                       aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
               
-                                      <input class='button-transparent-aceitar' type='submit' name='aceitaConvite' value='Aceitar' style='float:left;'/>
+                                      <input class='button-transparent-aceitar' type='submit' name='aceitaConvite' value='".$LANG['43']."' style='float:left;'/>
                                       <div class='small text-gray-500' style='float:left; margin-left:3px; margin-right:3px;'> · </div>
-                                      <input class='button-transparent-remover' type='submit' name='removeConvite' value='Remover' style='float:left; margin-left: 0.5px;'/>
+                                      <input class='button-transparent-remover' type='submit' name='removeConvite' value='".$LANG['44']."' style='float:left; margin-left: 0.5px;'/>
                                     </form>
 
                                     
@@ -124,11 +124,11 @@ saveCurrentURL();
                   <?php
                     if ($results_max>0)
                       if ($results_max==1)
-                        echo "<a class='dropdown-item text-center small text-gray-500'>Você tem ".$results_max." convite pendente.</a>";
+                        echo "<a class='dropdown-item text-center small text-gray-500'>".$LANG['46'] . " " . $results_max. " " . $LANG['47'] . " " . $LANG['49'] . ".</a>";
                       else
-                        echo "<a class='dropdown-item text-center small text-gray-500'>Você tem ".$results_max." convites pendentes.</a>";
+                        echo "<a class='dropdown-item text-center small text-gray-500'>".$LANG['46'] . " " . $results_max. " " . $LANG['48'] . " " . $LANG['50'] . ".</a>";
                     else
-                      echo "<a class='dropdown-item text-center small text-gray-500'>Você não tem convites pendentes.</a>";
+                      echo "<a class='dropdown-item text-center small text-gray-500'>" . $LANG['62'] . ".</a>";
                   ?>
                   
                 </div>
@@ -142,29 +142,29 @@ saveCurrentURL();
                   <thead>
                     <tr>
                       <th></th>
-                      <th style="width: 300px">Nome</th>
-                      <th>Tema</th>
-                      <th>Ano</th>
-                      <th style="width: 120px">Nº de arquivos</th>
-                      <th>Status</th>
-                      <th style="width: 140px;">Adicionar arquivo</th>
-                      <th>Arquivos</th>
-                      <th>Roadmap</th>
-                      <th>Ações</th>
+                      <th style="width: 300px"><?php echo $LANG['3']; ?></th>
+                      <th><?php echo $LANG['4']; ?></th>
+                      <th><?php echo $LANG['51']; ?></th>
+                      <th style="width: 120px"><?php echo $LANG['52']; ?></th>
+                      <th><?php echo $LANG['53']; ?></th>
+                      <th style="width: 140px;"><?php echo $LANG['54']; ?></th>
+                      <th><?php echo $LANG['65']; ?></th>
+                      <th><?php echo $LANG['55']; ?></th>
+                      <th><?php echo $LANG['56']; ?></th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
                       <th></th>
-                      <th>Nome</th>
-                      <th>Tema</th>
-                      <th>Ano</th>
-                      <th>Nº de arquivos</th>
-                      <th>Status</th>
-                      <th>Adicionar arquivo</th>
-                      <th>Arquivos</th>
-                      <th>Roadmap</th>
-                      <th>Ações</th>
+                      <th><?php echo $LANG['3']; ?></th>
+                      <th><?php echo $LANG['4']; ?></th>
+                      <th><?php echo $LANG['51']; ?></th>
+                      <th><?php echo $LANG['52']; ?></th>
+                      <th><?php echo $LANG['53']; ?></th>
+                      <th><?php echo $LANG['54']; ?></th>
+                      <th><?php echo $LANG['65']; ?></th>
+                      <th><?php echo $LANG['55']; ?></th>
+                      <th><?php echo $LANG['56']; ?></th>
                     </tr>
                   </tfoot>
                   <tbody>
@@ -179,9 +179,9 @@ saveCurrentURL();
                                 <td style='text-align: center;' width='30px;'>
                                   <div style='text-align: center;'>";
                                     if($result->usuario_prospec == $result->id_user_grupos)
-                                      echo "<img src='img/manager2.png' title='Dono do TRM' style='width: 22px; height: 20px; display: inline-block; opacity:60%;'/>";
+                                      echo "<img src='img/manager2.png' title='".$LANG['63']."' style='width: 22px; height: 20px; display: inline-block; opacity:60%;'/>";
                                     else
-                                      echo "<img src='img/shared5.png' title='Compartilhado com você' style='width: 20px; height: 20px; display: inline-block; opacity:70%;'/>";
+                                      echo "<img src='img/shared5.png' title='".$LANG['64']."' style='width: 20px; height: 20px; display: inline-block; opacity:70%;'/>";
                                 echo "</div>
                                 </td>
         	                      <td>".$result->nome_prospec."</td>
@@ -192,24 +192,24 @@ saveCurrentURL();
                                 if($result->status_ren_prospec != "null")
                                   echo "<img src='img/".$result->status_ren_prospec.".png' title='".$result->status_ren_prospec."' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 echo "</div></td>
-                                <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/file_add.png' title='Adicionar arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/file_add.png' title='".$LANG['54']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                
-                                <td><a href='#' data-target='#modalArquivos' data-toggle='modal' data-id='arquivos-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='Visualizar arquivos' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                <td><a href='#' data-target='#modalArquivos' data-toggle='modal' data-id='arquivos-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='".$LANG['57']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
 
-                                <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Ir para Roadmaps' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['58']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
 
 
                                 <td style='text-align: center;'>";
                                 
                                 if($result->usuario_prospec == $result->id_user_grupos) {
-                                  echo " <a href='#' data-target='#modalUsuarios' data-toggle='modal' data-id='usuarios-".$result->id_prospec."' data-usuarioconvite='".$_SESSION['id']."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/shared5.png' title='Compartilhamento' style='width: 18px; height: 18px; display: inline-block; opacity:70%;'/></div></a>         
+                                  echo " <a href='#' data-target='#modalUsuarios' data-toggle='modal' data-id='usuarios-".$result->id_prospec."' data-usuarioconvite='".$_SESSION['id']."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/shared5.png' title='".$LANG['59']."' style='width: 18px; height: 18px; display: inline-block; opacity:70%;'/></div></a>         
 
-                                  <a href='#' data-target='#modalEditarTrm' data-toggle='modal' data-id='editartrm-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."' data-tematrm='".$result->assunto_prospec."' data-anotrm='".$result->ano_prospec."' style='display: inline-block; margin-left:3px; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do TRM' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
+                                  <a href='#' data-target='#modalEditarTrm' data-toggle='modal' data-id='editartrm-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."' data-tematrm='".$result->assunto_prospec."' data-anotrm='".$result->ano_prospec."' style='display: inline-block; margin-left:3px; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='".$LANG['60']."' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
                           
-                                  <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='Remover TRM' style='width: 18px; height: 18px; display: inline-block;'/></div></a>";
+                                  <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='".$LANG['61']."' style='width: 18px; height: 18px; display: inline-block;'/></div></a>";
                                 }
                                 else{
-                                  echo "<a href='#' data-target='#modalRemoveCompartilharmentoTRM' data-toggle='modal' data-id='removecompartilhamentoprospec-".$result->id_prospec."' data-usuarioremovecompartilhamento='".$_SESSION['id']."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/out5.png' title='Sair do TRM' style='width: 22px; height: 22px; display: inline-block; opacity: 70%;'/></div></a>";
+                                  echo "<a href='#' data-target='#modalRemoveCompartilharmentoTRM' data-toggle='modal' data-id='removecompartilhamentoprospec-".$result->id_prospec."' data-usuarioremovecompartilhamento='".$_SESSION['id']."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/out5.png' title='".$LANG['66']."' style='width: 22px; height: 22px; display: inline-block; opacity: 70%;'/></div></a>";
                                 }
 
                                 echo "</td>
@@ -439,7 +439,7 @@ saveCurrentURL();
 
   <!-- Modal de Usuários-->
   <div id="modalUsuarios" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-ll">
 
       <!-- Modal content-->
       <div class="modal-content">

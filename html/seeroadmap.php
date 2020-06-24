@@ -41,7 +41,7 @@ saveCurrentURL();
 
                 if(isset($_GET["arquivo"]) || isset($_GET["roadmap-completo"])) {
 
-                  echo "<div id='main-content' style='height: 80vh;'>";
+                  echo "<div id='main-content' style='height: 79.2vh;'>";
                
                   $tipoCabecalho = "";
                   $nome_arquivo = "";
@@ -227,7 +227,7 @@ saveCurrentURL();
                             $section[nome_arquivo] = $result3->nome_arquivo;
                             $section[ano_arquivo] = $result3->ano_arquivo;
                             $section[autores] = $result3->autores_prospeccao;
-                            $section[confiabilidade] = $result3->conf_prospeccao;
+                            $section[confiabilidade] = $result3->conf_arquivo;
                             $array_sections[$i_section] = $section;
                             $assunto_roadmap = $result3->assunto_prospec;
 
@@ -316,7 +316,7 @@ saveCurrentURL();
                     $id_arquivo_adicionar = 0;
 
                     echo "<div style='text-align: center; margin-top: -0.2vh;'>
-                          <a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."' style='margin-left: -275px;'>
+                          <a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."' style='margin-left: -160px;'>
                             <img id='imageAddProspec' src='img/add2.png' title='Adicionar prospecção manualmente' style='width: 20px; height: 20px; display: inline-block;'/>
                           </a> 
                           </div>
@@ -673,7 +673,7 @@ saveCurrentURL();
   </div>
 
   <div id="modalGeraRelatorio" class="modal fade" role="dialog">
-    <div id="content-gera-relatorio" class="modal-dialog modal-xl">
+    <div id="content-gera-relatorio" class="modal-dialog modal-ll">
       <!-- Modal content-->
       
 
@@ -682,7 +682,7 @@ saveCurrentURL();
 
   <!-- Modal de Usuários-->
   <div id="modalUsuariosParticipantes" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-xl">
+    <div class="modal-dialog modal-ll">
 
       <!-- Modal content-->
       <div class="modal-content">
@@ -944,7 +944,7 @@ saveCurrentURL();
 
     //console.log(conf_media);
 
-    document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> Confiabilidade média do roadmap: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='Confiabilidade média: " + media_conf_roadmap + "' style='width: 20px; height: 20px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
+    document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> Confiabilidade: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='Confiabilidade média do roadmap: " + media_conf_roadmap + "' style='width: 20px; height: 20px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
   
   	function geraRelatorioCSV() {
       
