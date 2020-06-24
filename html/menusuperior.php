@@ -1,6 +1,7 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -105,23 +106,23 @@ saveCurrentURL();
 
   <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="languagesDropdown">
     
-    <h6 class="dropdown-header">
+    <h6 class="dropdown-header" style="background-color: whitesmoke; border: 0; color: #5a5c69;">
       <?php echo $LANG['39']; ?>
     </h6>
     <div style="height: auto; width: 180px; overflow: auto;">
     <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('en-us');">
       <div class="dropdown-list-image mr-3">
-        <img class="rounded-circle" src="img/en-us2.png" alt="">
+        <img class="rounded-circle" src="img/en-us2.png" title="English" style="height: 25px; width: 25px;">
       </div>
-      <div class="font-weight-bold">
+      <div>
         <div class="text-truncate">English</div>
       </div>
     </a>
     <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('pt-BR');">
       <div class="dropdown-list-image mr-3">
-        <img class="rounded-circle" src="img/pt-br2.png" alt="">
+        <img class="rounded-circle" src="img/pt-br2.png" alt="Português" style="height: 25px; width: 25px;">
       </div>
-      <div class="font-weight-bold">
+      <div>
         <div class="text-truncate">Português</div>
       </div>
     </a>
@@ -148,12 +149,12 @@ saveCurrentURL();
         <div class="dropdown-divider" style="visibility: hidden; margin: 0;"></div>
         <a class="dropdown-item" href="config-usuario.php" style="margin-bottom: 0.3rem;">
           <i class="fas fa-cog fa-sm fa-fw mr-2 text-gray-400"></i>
-          Configurações
+          <?php echo $LANG['35']; ?>
         </a>
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal" style="margin-top: 0.3rem;">
           <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-          Sair
+          <?php echo $LANG['112']; ?>
         </a>
       </div>
     </li>

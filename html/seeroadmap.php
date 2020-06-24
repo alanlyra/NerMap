@@ -1,6 +1,7 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
@@ -32,7 +33,7 @@ saveCurrentURL();
         <div class="container-fluid">
 
          
-            <h1 class="h3 mb-2 text-gray-800">Geração de Roadmaps</h1>
+            <h1 class="h3 mb-2 text-gray-800"><?php echo $LANG['113']; ?></h1>
         
 
           <!-- Content Row -->
@@ -277,7 +278,7 @@ saveCurrentURL();
                     echo "<div class='card shadow mb-4' style='height: 100%;'>
                     <div id='box_roadmap' class='card-header py-3' style='padding-top: 0.7rem !important; padding-bottom: 0.7rem !important;'>
                     <a href='#' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm' style='float:right;' data-target='#modalGeraRelatorio' data-toggle='modal' data-id='gerarelatorio-".$id_roadmap."'>                         		
-                      <i class='fas fa-download fa-sm text-white-50'></i> Exportar
+                      <i class='fas fa-download fa-sm text-white-50'></i> ".$LANG['130']."
                     </a>";
 
                       /* echo "<a href='#' title='Baixar relatório em CSV' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
@@ -298,10 +299,10 @@ saveCurrentURL();
                     $results_max_users = pg_num_rows($search_users);
 
                     if  ($results_max_users>0) */
-                      echo "<a href='#' data-target='#modalUsuariosParticipantes' data-toggle='modal' data-id='participantes-".$id_roadmap."' style='display: inline-block; margin-left:10px; margin-top:2px; float:left;'><div style='text-align: center;'><img src='img/shared5.png' title='Ver participantes' style='width: 18px; height: 18px; display: inline-block; opacity:70%;'/></div></a>";
+                      echo "<a href='#' data-target='#modalUsuariosParticipantes' data-toggle='modal' data-id='participantes-".$id_roadmap."' style='display: inline-block; margin-left:10px; margin-top:2px; float:left;'><div style='text-align: center;'><img src='img/shared5.png' title='".$LANG['127']."' style='width: 18px; height: 18px; display: inline-block; opacity:70%;'/></div></a>";
                     
                     echo "</br>
-                    <p style='margin: 0px 0px -8px 0px; padding-top: 5px; float:left;'><small class='text-muted'><b>Área:</b> ".$assunto_roadmap."</small></p>";
+                    <p style='margin: 0px 0px -8px 0px; padding-top: 5px; float:left;'><small class='text-muted'><b>".$LANG['4'].":</b> ".$assunto_roadmap."</small></p>";
 
                     echo "<div href='' style='margin: 0; float: left;'><p style='margin: 5px 0px 0px 10px; padding: 0; float: left;'><small class='text-muted'><b>·</b></small></p></div>";
 
@@ -317,7 +318,7 @@ saveCurrentURL();
 
                     echo "<div style='text-align: center; margin-top: -0.2vh;'>
                           <a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."' style='margin-left: -160px;'>
-                            <img id='imageAddProspec' src='img/add2.png' title='Adicionar prospecção manualmente' style='width: 20px; height: 20px; display: inline-block;'/>
+                            <img id='imageAddProspec' src='img/add2.png' title='".$LANG['129']."' style='width: 20px; height: 20px; display: inline-block;'/>
                           </a> 
                           </div>
                     
@@ -326,15 +327,15 @@ saveCurrentURL();
 
 
                     if(isset($_GET["roadmap-completo"])) {
-                      echo "<p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>Roadmap completo do TRM</b></small></p>
-                          <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>Filtrar por arquivos</b></small></div></p></a>
+                      echo "<p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>".$LANG['131']."</b></small></p>
+                          <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>".$LANG['133']."</b></small></div></p></a>
                         </div>";
                     }
                     else {
-                      echo "<p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>Roadmap do arquivo ".$section[nome_arquivo]."</b></small></p>
-                          <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 3px 0px 0px 6px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>Filtrar por arquivos</b></small></div></p></a>
+                      echo "<p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>".$LANG['132']." ".$section[nome_arquivo]."</b></small></p>
+                          <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 3px 0px 0px 6px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>".$LANG['133']."</b></small></div></p></a>
                           <div href='' style='margin: 0; float: right;'><p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>·</b></small></p></div>
-                          <a href='seeroadmap.php?roadmap-completo=".$id_roadmap."' style='margin: 0; float: right;'><div style='text-align: center;'><p style='margin: 3px -14px 0px 0px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>Ver Roadmap completo do TRM</b></small></p></div></a>
+                          <a href='seeroadmap.php?roadmap-completo=".$id_roadmap."' style='margin: 0; float: right;'><div style='text-align: center;'><p style='margin: 3px -14px 0px 0px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>".$LANG['137']."</b></small></p></div></a>
                         </div>";
                     }
 
@@ -381,12 +382,12 @@ saveCurrentURL();
                                     echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
                                 if($array_sections[$j][arquivo_origem] != 0) {	
                                   if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-                                    echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/pdf_download3.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right;'/></a>";
+                                    echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/pdf_download3.png' title='".$LANG['135']."' style='width: 20px; height: 20px; float:right;'/></a>";
                                   else
-                                    echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/txt_download2.png' title='Ver no arquivo' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
+                                    echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/txt_download2.png' title='".$LANG['135']."' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
                                 }
                                 else {
-                                  echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
+                                  echo "<div><img src='img/user9.png' title='".$LANG['138']."' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
                                 }
 
                                 //Ver no texto
@@ -400,17 +401,17 @@ saveCurrentURL();
                                   echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
                                 } */
 
-                                echo "<img src='img/conf_".$array_sections[$j][confiabilidade]."_bw.png' title='Confiabilidade da fonte: ".$array_sections[$j][confiabilidade]."' style='width: 20px; height: 20px; float:right; margin-right:10px;'/>";
+                                echo "<img src='img/conf_".$array_sections[$j][confiabilidade]."_bw.png' title='".$LANG['134'].": ".$array_sections[$j][confiabilidade]."' style='width: 20px; height: 20px; float:right; margin-right:10px;'/>";
                                   
                                     echo "<div class='tl-heading'>
                                       <h4>".$array_sections[$j][date]."</h4>
-                                      <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i><b>Fonte:</b> ".$array_sections[$j][autores]." <b>".$array_sections[$j][nome_arquivo]."</b> (".$array_sections[$j][ano_arquivo].").</small></p>
+                                      <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i>".$array_sections[$j][autores]." <b>".$array_sections[$j][nome_arquivo]."</b> (".$array_sections[$j][ano_arquivo].").</small></p>
                                     </div>
                                     <div class='tl-body'>
                                       <p>".$array_sections[$j][info]."</p>
                                     </div>
                                     <div class='divBotaoEditarRoadmap' style='visibility: hidden;'>
-                                    <a href='#' data-target='#modalEditarRoadmap' data-toggle='modal' data-id='editarRoadmap-".$array_sections[$j][id_arquivo]."' data-indice='".$i_prospec."' data-date='".$array_sections[$j][date]."' data-info='".$array_sections[$j][info]."' data-cabecalho='".$tipoCabecalho."' data-prospec='".$id_roadmap."' ><div><img src='img/editar7.png' title='Editar prospecção' style='width: 20px; height: 20px; float:right; opacity: 50%;'/></a>
+                                    <a href='#' data-target='#modalEditarRoadmap' data-toggle='modal' data-id='editarRoadmap-".$array_sections[$j][id_arquivo]."' data-indice='".$i_prospec."' data-date='".$array_sections[$j][date]."' data-info='".$array_sections[$j][info]."' data-cabecalho='".$tipoCabecalho."' data-prospec='".$id_roadmap."' ><div><img src='img/editar7.png' title='".$LANG['136']."' style='width: 20px; height: 20px; float:right; opacity: 50%;'/></a>
                                     <div>
                                   </div>
                                 </li>";
@@ -480,9 +481,9 @@ saveCurrentURL();
                     $results_max_grupos2 = pg_num_rows($search_grupos2);
 
                     if($results_max_grupos2 > 0)
-                      echo "<script>$('#main-content').html('Sem permissão de acesso ao TRM.</br></br>Você tem um convite pendente de aceitação para acessar este TRM. Acesse seus convites na página TRMs e Arquivos para ter acesso ou contate o Administrador do sistema.');</script>";
+                      echo "<script>$('#main-content').html('".$LANG['122']."');</script>";
                     else
-                      echo "<script>$('#main-content').html('Sem permissão de acesso ao TRM. Contate o Administrador do sistema.');</script>";
+                      echo "<script>$('#main-content').html('".$LANG['123']."');</script>";
 
                     echo "</div>";
                   }
@@ -491,7 +492,7 @@ saveCurrentURL();
                 else if(isset($_GET["roadmap"])) {
                   echo "<div class='card shadow mb-4'>
                         <div class='card-header py-3'>
-                          <h6 class='m-0 font-weight-bold text-primary'>Selecione uma opção</h6>
+                          <h6 class='m-0 font-weight-bold text-primary'>".$LANG['114']."</h6>
                         </div>
                         <div class='card-body'>
                   </div>
@@ -500,17 +501,17 @@ saveCurrentURL();
                     <div class='col-sm-6 col-md-3'>
                       <div class='col-md-12 feature-box'>
                         <img src='img/timeline6.png' style='width: 130px; height: 100px; display: inline-block;'/>
-                        <h4>Completo</h4>
-                        <p style='height: 3rem;'>Roadmap de todos os arquivos do TRM.</p>
-                        <button class='btn btn-primary' style='margin:5px;' onclick='redirect(\"seeroadmap.php?roadmap-completo=".$_GET["roadmap"]."\");'>Ver roadmap</button>
+                        <h4>".$LANG['115']."</h4>
+                        <p style='height: 3rem;'>".$LANG['117']."</p>
+                        <button class='btn btn-primary' style='margin:5px;' onclick='redirect(\"seeroadmap.php?roadmap-completo=".$_GET["roadmap"]."\");'>".$LANG['118']."</button>
                       </div>
                       </div> <!-- End Col -->
                       <div class='col-sm-6 col-md-3'>
                           <div class='col-md-12 feature-box'>
                           <img src='img/files2.png' style='width: 100px; height: 100px; display: inline-block;'/>
-                          <h4>Individual</h4>
-                          <p style='height: 3rem;'>Roadmap individual de um arquivo do TRM.</p>
-                          <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$_GET["roadmap"]."'><button class='btn btn-primary' style='margin:5px;'>Visualizar arquivos</button></a>
+                          <h4>".$LANG['116']."</h4>
+                          <p style='height: 3rem;'>".$LANG['119']."</p>
+                          <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$_GET["roadmap"]."'><button class='btn btn-primary' style='margin:5px;'>".$LANG['57']."</button></a>
                         </div>
                       </div> <!-- End Col -->	
                     </div> 
@@ -519,7 +520,7 @@ saveCurrentURL();
                 else {
                   echo "<div class='card shadow mb-4'>
                   <div class='card-header py-3'>
-                    <h6 class='m-0 font-weight-bold text-primary'>Selecione um TRM para visualizar o roadmap</h6>
+                    <h6 class='m-0 font-weight-bold text-primary'>".$LANG['121']."</h6>
                   </div>
                   <div class='card-body'>
                     <div class='table-responsive'>
@@ -527,23 +528,23 @@ saveCurrentURL();
                         <thead>
                           <tr>
                             <th></th>
-                            <th style='width: 300px'>Nome</th>
-                            <th>Tema</th>
-                            <th>Ano</th>
-                            <th>Status</th>
-                            <th>Roadmap completo</th>
-                            <th>Roadmap por arquivo</th>
+                            <th style='width: 300px'>".$LANG['3']."</th>
+                            <th>".$LANG['4']."</th>
+                            <th>".$LANG['51']."</th>
+                            <th>".$LANG['53']."</th>
+                            <th>".$LANG['124']."</th>
+                            <th>".$LANG['125']."</th>
                           </tr>
                         </thead>
                         <tfoot>
                           <tr>
                             <th></th>
-                            <th>Nome</th>
-                            <th>Tema</th>
-                            <th>Ano</th>
-                            <th>Status</th>
-                            <th>Roadmap completo</th>
-                            <th style='position:unset;'>Roadmap por arquivo</th>
+                            <th>".$LANG['3']."</th>
+                            <th>".$LANG['4']."</th>
+                            <th>".$LANG['51']."</th>
+                            <th>".$LANG['53']."</th>
+                            <th>".$LANG['124']."</th>
+                            <th>".$LANG['125']."</th>
                           </tr>
                         </tfoot>
                         <tbody>";
@@ -558,9 +559,9 @@ saveCurrentURL();
                                     <td style='text-align: center;' width='30px;'>
                                     <div style='text-align: center;'>";
                                       if($result->usuario_prospec == $result->id_user_grupos)
-                                        echo "<img src='img/manager2.png' title='Dono do TRM' style='width: 22px; height: 20px; display: inline-block; opacity:60%;'/>";
+                                        echo "<img src='img/manager2.png' title='".$LANG['63']."' style='width: 22px; height: 20px; display: inline-block; opacity:60%;'/>";
                                       else
-                                        echo "<img src='img/shared5.png' title='Compartilhado com você' style='width: 20px; height: 20px; display: inline-block; opacity:70%;'/>";
+                                        echo "<img src='img/shared5.png' title='".$LANG['64']."' style='width: 20px; height: 20px; display: inline-block; opacity:70%;'/>";
                                     echo "</div>
                                     </td>
                                     <td>".$result->nome_prospec."</td>
@@ -571,8 +572,8 @@ saveCurrentURL();
                                   echo "<img src='img/".$result->status_ren_prospec.".png' title='".$result->status_ren_prospec."' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 echo "</div></td>
                                 </div></td>
-                                    <td><a href='/seeroadmap.php?roadmap-completo=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='Visualizar roadmap completo do TRM' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
-                                    <td><a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='Visualizar arquivos' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                    <td><a href='/seeroadmap.php?roadmap-completo=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['126']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                    <td><a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='".$LANG['57']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                   </tr>";
                             }
                           }
@@ -616,14 +617,14 @@ saveCurrentURL();
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Arquivos do TRM</h4>
+          <h4 class="modal-title"><?php echo $LANG['86']; ?></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>       
         </div>
         <div class="modal-body">
           <!-- DataTales Example -->
          <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Selecione um arquivo para visualizar o roadmap</h6>
+              <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['120']; ?></h6>
             </div>
             <div class="card-body">
               <div id="table-modal" class="table-responsive">
@@ -633,7 +634,7 @@ saveCurrentURL();
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $LANG['79']; ?></button>
         </div>
       </div>
 
@@ -687,14 +688,14 @@ saveCurrentURL();
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Participantes do TRM</h4>
+          <h4 class="modal-title"><?php echo $LANG['139']; ?></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>       
         </div>
         <div class="modal-body">
           <!-- DataTales Example -->
          <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Usuários</h6>
+              <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['140']; ?></h6>
             </div>
             <div class="card-body">
               <div id="table-modal-usuarios-participantes" class="table-responsive">
@@ -704,7 +705,7 @@ saveCurrentURL();
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $LANG['79']; ?></button>
         </div>
       </div>
 
@@ -944,7 +945,7 @@ saveCurrentURL();
 
     //console.log(conf_media);
 
-    document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> Confiabilidade: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='Confiabilidade média do roadmap: " + media_conf_roadmap + "' style='width: 20px; height: 20px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
+    document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> <?php echo $LANG['76']; ?>: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='<?php echo $LANG['128']; ?>: " + media_conf_roadmap + "' style='width: 20px; height: 20px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
   
   	function geraRelatorioCSV() {
       

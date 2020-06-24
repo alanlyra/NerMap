@@ -1,6 +1,7 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -32,7 +33,7 @@ saveCurrentURL();
         <div class="container-fluid">
 
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Configurações de Usuário</h1>
+            <h1 class="h3 mb-0 text-gray-800"><?php echo $LANG['13']; ?></h1>
           </div>
 
           <!-- Content Row -->
@@ -43,7 +44,7 @@ saveCurrentURL();
             <div class="col-xl-11 col-lg-10">
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Alterar dados pessoais</h6>
+                  <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['170']; ?></h6>
                 </div>
 
                 <form action="config-usuario.php" method="post" multipart="" enctype="multipart/form-data">
@@ -62,18 +63,18 @@ saveCurrentURL();
                 <div class="row justify-content-center">
                 <div class="col-xl-5 col-lg-5 feature-box" style="float: left; margin: 0 1rem 2rem 0; text-align: left;">
                   <div class="col-xl-12 col-lg-12">
-                   <h5>Nome:</h5>
+                   <h5><?php echo $LANG['3']; ?>:</h5>
                     <input type="text" id="nomeUsuario" name="nomeUsuario" class="form-control bg-light border-0 small" value="<?php echo $_SESSION['name']?>" aria-label="Search" aria-describedby="basic-addon2" required>
                   </div>
                   </br>
                   <div class="col-xl-12 col-lg-12">
-                    <h5>Email:</h5>
+                    <h5><?php echo $LANG['96']; ?>:</h5>
                       <input type="text" id="emailUsuario" name="emailUsuario" class="form-control bg-light border-0 small" value="<?php echo $_SESSION['email']?>" aria-label="Search" aria-describedby="basic-addon2" required>
                   </div>
                   </br>
                   </br>
                   <div class="py-3" style="text-align: center;">
-                    <input class="btn btn-primary btn-icon-split" type="submit" name="salvarEdicaoUsuario" value="Salvar dados e foto" style="width: 10em; height: 2em; display: inline-block;" />
+                    <input class="btn btn-primary btn-icon-split" type="submit" name="salvarEdicaoUsuario" value="<?php echo $LANG['173']; ?>" style="width: 11rem; height: 2em; display: inline-block;" />
                   </div>
                 </div>
                 </form>
@@ -84,27 +85,27 @@ saveCurrentURL();
                 <div id="messageSenhaIncorreta" style="display: none;" class="alert alert-warning ">
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true" style="font-size:20px">×</span>
-                  </button> A senha informada é incorreta.
+                  </button> <?php echo $LANG['175']; ?>
                 </div>
                 <div id="messageSenhaAlterada" style="display: none;" class="alert alert-success ">
                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true" style="font-size:20px">×</span>
-                  </button> Sua senha foi alterada com sucesso.
+                  </button> <?php echo $LANG['176']; ?>
                 </div>
                 <form action="config-usuario.php" method="post" multipart="" enctype="multipart/form-data">
               		<div class="col-xl-12 col-lg-12">
-              		<h5>Senha atual:</h5>
+              		<h5><?php echo $LANG['171']; ?>:</h5>
                     <input type="password" id="senhaAntiga" name="senhaAntiga" class="form-control bg-light border-0 small" aria-label="Search" aria-describedby="basic-addon2" required>
                   </div>
                   </br>
                   <div class="col-xl-12 col-lg-12">
-              		<h5>Nova senha:</h5>
+              		<h5><?php echo $LANG['172']; ?>:</h5>
                     <input type="password" id="novaSenha" name="novaSenha" class="form-control bg-light border-0 small" aria-label="Search" aria-describedby="basic-addon2" required>
                   </div>
                   </br>
                   </br>
                   <div class="py-3" style="text-align: center;">
-                    <input class="btn btn-primary btn-icon-split" type="submit" name="salvarTrocaSenhaUsuario" value="Alterar senha" style="width: 8em; height: 2em; display: inline-block;" />
+                    <input class="btn btn-primary btn-icon-split" type="submit" name="salvarTrocaSenhaUsuario" value="<?php echo $LANG['174']; ?>" style="width: 9em; height: 2em; display: inline-block;" />
                   </div>
                   </form>
                 </div>
@@ -138,20 +139,20 @@ saveCurrentURL();
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <!-- Logout Modal-->
+ <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja sair?</h5>
+          <h5 class="modal-title" id="exampleModalLabel"><?php echo $LANG['168']; ?></h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Clique em "Sair" para encerrar a sessão.</div>
+        <div class="modal-body"><?php echo $LANG['169']; ?></div>
         <div class="modal-footer">
-          <button class="btn btn-danger" type="button" data-dismiss="modal">Voltar</button>
-          <a class="btn btn-primary" href="login.php?action=logout">Sair</a>
+          <button class="btn btn-danger" type="button" data-dismiss="modal"><?php echo $LANG['106']; ?></button>
+          <a class="btn btn-primary" href="login.php?action=logout"><?php echo $LANG['112']; ?></a>
         </div>
       </div>
     </div>

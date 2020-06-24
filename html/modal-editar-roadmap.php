@@ -1,6 +1,7 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -31,7 +32,7 @@ saveCurrentURL();
 
       echo "<div class='modal-content'>
             <div class='modal-header'>
-              <h4 class='modal-title'>Editar Prospecção</h4>
+              <h4 class='modal-title'>".$LANG['136']."</h4>
               <button type='button' class='close' data-dismiss='modal'>&times;</button>       
             </div>
             <div id='content-teste' class='modal-body'>";
@@ -39,12 +40,12 @@ saveCurrentURL();
         echo "<form action='seeroadmap.php?".$cabecalho."=".$param."' method='post' multipart='' enctype='multipart/form-data'>
                 
                    <div class='col-xl-6 col-lg-7'>
-                  <h5>Ano:</h5>
-                    <input type='text' id='anoProspec' name='anoProspec' value='".$date_roadmap."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')' required>
+                  <h5>".$LANG['21'].":</h5>
+                    <input type='text' id='anoProspec' name='anoProspec' value='".$date_roadmap."' placeholder='".$LANG['147']."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')' required>
                   </div>
                   </br>
                   <div class='col-xl-12 col-lg-12'>
-                   <h5>Prospecção:</h5>
+                   <h5>".$LANG['144'].":</h5>
                     <textarea rows='6' type='text' id='infoProspec' name='infoProspec' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required>".$info_roadmap."</textarea>
                   </div>
                  </br>
@@ -60,9 +61,9 @@ saveCurrentURL();
                 <input type='text' id='keyConsulta' name='keyConsulta' class='form-control bg-light border-0 small' value='".$keyConsulta."'  aria-label='Search' aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
              
                 <div class='py-3' style='text-align: center;'>
-                  <a href='#' data-target='#modalConfirmarDeleteProspeccao' data-toggle='modal' data-id='deleteprospeccao-".$id_roadmap."' data-arquivo='".$id_arquivo."' data-ano='".$date_roadmap."' data-info='".$info_roadmap."' data-indice='".$indice_roadmap."' data-cabecalho='".$cabecalhoCompleto."' data-keyconsulta='".$keyConsulta."' style='display: inline-block; margin-left:3px;'><button class='btn btn-danger btn-icon-split' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button></a>
+                  <a href='#' data-target='#modalConfirmarDeleteProspeccao' data-toggle='modal' data-id='deleteprospeccao-".$id_roadmap."' data-arquivo='".$id_arquivo."' data-ano='".$date_roadmap."' data-info='".$info_roadmap."' data-indice='".$indice_roadmap."' data-cabecalho='".$cabecalhoCompleto."' data-keyconsulta='".$keyConsulta."' style='display: inline-block; margin-left:3px;'><button class='btn btn-danger btn-icon-split' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     ".$LANG['101']."</button></a>
 
-                  <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoRoadmap' value='Salvar' style='width: 8em; height: 2em; display: inline-block;' />
+                  <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoRoadmap' value='".$LANG['103']."' style='width: 8em; height: 2em; display: inline-block;' />
 
                 </div>
 
@@ -70,7 +71,7 @@ saveCurrentURL();
              
        echo "</div>
             <div class='modal-footer'>
-              <button type='button' class='btn btn-default' data-dismiss='modal'>Fechar</button>
+              <button type='button' class='btn btn-default' data-dismiss='modal'>".$LANG['79']."</button>
             </div>
           </div>";
 

@@ -1,6 +1,7 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -17,7 +18,7 @@ saveCurrentURL();
 
       echo "<div class='modal-content'>
             <div class='modal-header'>
-              <h4 class='modal-title'>Editar informações do arquivo</h4>
+              <h4 class='modal-title'>".$LANG['92']."</h4>
               <button type='button' class='close' onclick='hideModalEdicaoArquivo();'>&times;</button>       
             </div>
             <div class='modal-body'>";
@@ -25,21 +26,21 @@ saveCurrentURL();
         echo "<form action='prospeccoes.php?' method='post' multipart='' enctype='multipart/form-data'>
                 
                   <div class='col-xl-12 col-lg-12'>
-                  <h5>Título:</h5>
-                    <input type='text' id='nomeArquivo' name='nomeArquivo' value='".$nome_arquivo."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required>
+                  <h5>".$LANG['70'].":</h5>
+                    <input type='text' id='nomeArquivo' name='nomeArquivo' placeholder='".$LANG['71']."' value='".$nome_arquivo."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required>
                   </div>
                   </br>
                   <div class='col-xl-6 col-lg-7'>
-                  <h5>Data:</h5>
-                    <input type='text' id='anoArquivo' name='anoArquivo' value='".$ano_arquivo."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')' required>
+                  <h5>".$LANG['72'].":</h5>
+                    <input type='text' id='anoArquivo' name='anoArquivo' placeholder='".$LANG['72']."' value='".$ano_arquivo."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')' required>
                   </div>
                   </br>
 
                   <div class='col-xl-12 col-lg-12'>
                     <div id='divAdicionarAutirTitle' class='row'>
-                      <div class='col-sm-8'><h5>Autores:</h5></div>
+                      <div class='col-sm-8'><h5>".$LANG['74'].":</h5></div>
                       <div class='col-sm-4'>
-                          <button id='adicionarAutorButton' type='button' class='btn btn-info add-new'><i class='fa fa-plus'></i> Adicionar autor</button>
+                          <button id='adicionarAutorButton' type='button' class='btn btn-info add-new'><i class='fa fa-plus'></i> ".$LANG['75']."</button>
                       </div>
                     </div>
 
@@ -50,9 +51,9 @@ saveCurrentURL();
                             <td></td>
                             <td></td>
                             <td>
-                              <a id='adicionarAutorConfirm' class='add' title='Add'><img id='adicionarAutorConfirm2' src='img/add2.png' title='Adicionar autor' style='width: 20px; height: 20px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
-                              <a class='edit' title='Edit'><img src='img/editar7.png' title='Editar autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
-                              <a class='delete' title='Delete'><img src='img/deletar2.png' title='Remover autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                              <a id='adicionarAutorConfirm' class='add' title='Add'><img id='adicionarAutorConfirm2' src='img/add2.png' title='".$LANG['74']."' style='width: 20px; height: 20px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                              <a class='edit' title='Edit'><img src='img/editar7.png' title='".$LANG['84']."' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                              <a class='delete' title='Delete'><img src='img/deletar2.png' title='".$LANG['83']."' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
                             </td>
                           </tr>           
                         </tbody>
@@ -65,7 +66,7 @@ saveCurrentURL();
                   </br>
 
                   <div class='col-xl-12 col-lg-12'>
-                  <h5>Confiabilidade:</h5>
+                  <h5>".$LANG['76'].":</h5>
                   <div class='btn-group' data-toggle='buttons'>
                     <label class='btn btn-plain' style='cursor: pointer;'>
                       <input type='radio' name='confArquivo' id='option1' value='1' autocomplete='off' style='cursor: pointer;' required> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
@@ -113,10 +114,10 @@ saveCurrentURL();
              
                 <div class='py-3' style='text-align: center;'>
 
-                <a href='#' data-target='#modalConfirmarDeleteArquivo' data-toggle='modal' data-id='deleteprospec-".$id_prospec."' data-deletearquivo='".$id_arquivo."' style='display: inline-block; margin-right:3px;'><button class='btn btn-danger btn-icon-split' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button></a>
+                <a href='#' data-target='#modalConfirmarDeleteArquivo' data-toggle='modal' data-id='deleteprospec-".$id_prospec."' data-deletearquivo='".$id_arquivo."' style='display: inline-block; margin-right:3px;'><button class='btn btn-danger btn-icon-split' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     ".$LANG['101']."</button></a>
                   
                 
-                <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoArquivo' value='Salvar' style='width: 8em; height: 2em; display: inline-block;' />
+                <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoArquivo' value='".$LANG['103']."' style='width: 8em; height: 2em; display: inline-block;' />
 
                   </br>
                 </div>
@@ -125,7 +126,7 @@ saveCurrentURL();
              
        echo "</div>
             <div class='modal-footer'>
-              <button type='button' class='btn btn-default' onclick='hideModalEdicaoArquivo();'>Fechar</button>
+              <button type='button' class='btn btn-default' onclick='hideModalEdicaoArquivo();'>".$LANG['79']."</button>
             </div>
           </div>";
 
@@ -188,8 +189,8 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		var index = $("#tableAutoresEdicao tbody tr:last-child").index();
         var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="sobrenomeEdit" id="sobrenomeEdit" placeholder="Sobrenome..." style="width: 100%; font-size: 1rem;"></td>' +
-            '<td><input type="text" class="form-control" name="nomeEdit" id="nomeEdit" placeholder="Nome..." style="width: 100%; font-size: 1rem;"></td>' +
+            '<td><input type="text" class="form-control" name="sobrenomeEdit" id="sobrenomeEdit" placeholder="<?php echo $LANG['82']; ?>..." style="width: 100%; font-size: 1rem;"></td>' +
+            '<td><input type="text" class="form-control" name="nomeEdit" id="nomeEdit" placeholder="<?php echo $LANG['3']; ?>..." style="width: 100%; font-size: 1rem;"></td>' +
 			'<td style="width: 5rem;">' + actions + '</td>' +
         '</tr>';
     	$("#tableAutoresEdicao").append(row);		

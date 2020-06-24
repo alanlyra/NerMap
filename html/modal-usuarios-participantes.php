@@ -1,6 +1,7 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -8,17 +9,17 @@ saveCurrentURL();
   <thead>
     <tr>
       <th></th>
-      <th>Usuário</th>
-      <th>Email</th>
-      <th style='width: 20px;'>Compartilhar</th>
+      <th><?php echo $LANG['38']; ?></th>
+      <th><?php echo $LANG['96']; ?></th>
+      <th style='width: 20px;'><?php echo $LANG['97']; ?></th>
     </tr>
   </thead>
   <tfoot>
     <tr>
       <th></th>
-      <th>Usuário</th>
-      <th>Email</th>
-      <th>Compartilhar</th>
+      <th><?php echo $LANG['38']; ?></th>
+      <th><?php echo $LANG['96']; ?></th>
+      <th><?php echo $LANG['97']; ?></th>
     </tr>
   </tfoot>
   <tbody>
@@ -51,21 +52,21 @@ saveCurrentURL();
                       if($result2->accepted == "t") {
                         if($result2->id_user_convite == null)
                           echo "<div style='text-align: center; cursor:default;'>
-                                  <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/manager2.png' title='Dono do TRM' width='20px' height='20px' style='opacity:60%;' /></button >
+                                  <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/manager2.png' title='".$LANG['63']."' width='20px' height='20px' style='opacity:60%;' /></button >
                                 </div>";
                         else if($result2->id_user == $_SESSION["id"])
                           echo "<div style='text-align: center;'>
-                                  <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/user9.png' title='Você' width='20px' height='20px' style='opacity:60%;' /></button >
+                                  <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/user9.png' title='".$LANG['141']."' width='20px' height='20px' style='opacity:60%;' /></button >
                                 </div>";
                         else
                           echo "<div style='text-align: center; cursor:default;'>
-                                  <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/shared5.png' title='Compartilhado com ".$result2->name_user."' width='20px' height='20px' style='opacity:60%;' /></button >
+                                  <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/shared5.png' title='".$LANG['142']." ".$result2->name_user."' width='20px' height='20px' style='opacity:60%;' /></button >
                                 </div>";
                       }
                         
                       else
                       echo "<div style='text-align: center; cursor:default;'>
-                              <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/wait.png' title='Aguardando ".$result2->name_user." aceitar o convite' width='20px' height='20px' style='opacity:60%;' /></button >
+                              <button style='border: 0; background: transparent; display: inline-block; cursor:default;' value=''> <img src='/img/wait.png' title='".$LANG['99']." ".$result2->name_user." ".$LANG['100']."' width='20px' height='20px' style='opacity:60%;' /></button >
                             </div>";
                                    
                   }

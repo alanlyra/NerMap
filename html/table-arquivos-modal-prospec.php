@@ -1,32 +1,33 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
 <table class="table table-bordered" id="table-arquivos" width="100%" cellspacing="0">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Autores</th>
-      <th>Ano</th>
-      <th>Confiabilidade</th>
-      <th>Status</th>
-      <th>Download</th>
-      <th>Roadmap</th>
-      <th>Ações</th>
+      <th><?php echo $LANG['3']; ?></th>
+      <th><?php echo $LANG['74']; ?></th>
+      <th><?php echo $LANG['51']; ?></th>
+      <th><?php echo $LANG['76']; ?></th>
+      <th><?php echo $LANG['53']; ?></th>
+      <th><?php echo $LANG['85']; ?></th>
+      <th><?php echo $LANG['55']; ?></th>
+      <th><?php echo $LANG['56']; ?></th>
     </tr>
   </thead>
   <tfoot>
     <tr>
-      <th>Nome</th>
-      <th>Autores</th>
-      <th>Ano</th>
-      <th>Confiabilidade</th>
-      <th>Status</th>
-      <th>Download</th>
-      <th>Roadmap</th>
-      <th>Ações</th>
+      <th><?php echo $LANG['3']; ?></th>
+      <th><?php echo $LANG['74']; ?></th>
+      <th><?php echo $LANG['51']; ?></th>
+      <th><?php echo $LANG['76']; ?></th>
+      <th><?php echo $LANG['53']; ?></th>
+      <th><?php echo $LANG['85']; ?></th>
+      <th><?php echo $LANG['55']; ?></th>
+      <th><?php echo $LANG['56']; ?></th>
     </tr>
   </tfoot>
   <tbody>
@@ -43,22 +44,22 @@ saveCurrentURL();
                   <td>".$result->autores."</td>
                   <td>".$result->ano_arquivo."</td>
 
-                  <td><div style='text-align: center;'><img src='img/conf_".$result->conf_arquivo."_bw.png' title='Confiabilidade: ".$result->conf_arquivo." (Mín: 1, Máx: 10)' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
+                  <td><div style='text-align: center;'><img src='img/conf_".$result->conf_arquivo."_bw.png' title='".$LANG['76'].": ".$result->conf_arquivo." (".$LANG['88'].": 1, ".$LANG['89'].": 10)' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
 
                   <td><div style='text-align: center;'><img src='img/".$result->status_ren.".png' title='".$result->status_ren."' style='width: 20px; height: 20px; display: inline-block;'/></div></td>";
 
                   if (file_exists("uploads/pdf/".$result->id_arquivo.".pdf")) 
-                    echo "<td><a href='uploads/pdf/".$result->id_arquivo.".pdf' download><div style='text-align: center;'><img src='img/pdf_download3.png' title='Baixar arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>";
+                    echo "<td><a href='uploads/pdf/".$result->id_arquivo.".pdf' download><div style='text-align: center;'><img src='img/pdf_download3.png' title='".$LANG['90']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>";
                   else
-                    echo "<td><a href='uploads/".$result->id_arquivo.".txt' download><div style='text-align: center;'><img src='img/txt_download2.png' title='Baixar arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>";
+                    echo "<td><a href='uploads/".$result->id_arquivo.".txt' download><div style='text-align: center;'><img src='img/txt_download2.png' title='".$LANG['90']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>";
 
 
 
-                  echo "<td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='Ver roadmap do arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                  echo "<td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['91']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                   <td style='text-align: center;'>
-                  <a href='#' data-target='#modalEditarArquivo' data-toggle='modal' data-id='editararquivo-".$result->id_arquivo."' data-nomearquivo='".$result->nome_arquivo."' data-anoarquivo='".$result->ano_arquivo."' data-confarquivo='".$result->conf_arquivo."' data-autores='".$result->autores."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='Editar informações do arquivo' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
+                  <a href='#' data-target='#modalEditarArquivo' data-toggle='modal' data-id='editararquivo-".$result->id_arquivo."' data-nomearquivo='".$result->nome_arquivo."' data-anoarquivo='".$result->ano_arquivo."' data-confarquivo='".$result->conf_arquivo."' data-autores='".$result->autores."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='".$LANG['92']."' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
 
-                  <a href='#' data-target='#modalConfirmarDeleteArquivo' data-toggle='modal' data-id='deleteprospecbymodal-".$id_prospec."' data-deletearquivo='".$result->id_arquivo."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='remover informações do arquivo' style='width: 18px; height: 18px; display: inline-block;'/></div></a>
+                  <a href='#' data-target='#modalConfirmarDeleteArquivo' data-toggle='modal' data-id='deleteprospecbymodal-".$id_prospec."' data-deletearquivo='".$result->id_arquivo."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='".$LANG['93']."' style='width: 18px; height: 18px; display: inline-block;'/></div></a>
                   
                   </td>
                 

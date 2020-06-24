@@ -1,6 +1,7 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -401,7 +402,7 @@ saveCurrentURL();
                         </a> 
                       </div>
                       <div id='toolbarViewerMiddle'>
-                      <span class='toolbarLabel'>Documento de Texto</span>
+                      <span class='toolbarLabel'>".$LANG['163']."</span>
                       </div>
                     </div>
                   </div>
@@ -430,7 +431,7 @@ saveCurrentURL();
              
        echo "</div>
             <div class='modal-footer'>
-              <button type='button' class='btn btn-default' data-dismiss='modal'>Fechar</button>
+              <button type='button' class='btn btn-default' data-dismiss='modal'>".$LANG['79']."</button>
             </div>
           </div>";
         

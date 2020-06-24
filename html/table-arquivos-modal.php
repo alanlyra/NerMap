@@ -1,28 +1,29 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
 <table class="table table-bordered" id="table-arquivos" width="100%" cellspacing="0">
   <thead>
     <tr>
-      <th>Nome</th>
-      <th>Autores</th>
-      <th>Ano</th>
-      <th>Confiabilidade</th>
-      <th>Status</th>
-      <th>Roadmap</th>
+      <th><?php echo $LANG['3']; ?></th>
+      <th><?php echo $LANG['74']; ?></th>
+      <th><?php echo $LANG['51']; ?></th>
+      <th><?php echo $LANG['76']; ?></th>
+      <th><?php echo $LANG['53']; ?></th>
+      <th><?php echo $LANG['55']; ?></th>
     </tr>
   </thead>
   <tfoot>
     <tr>
-      <th>Nome</th>
-      <th>Autores</th>
-      <th>Ano</th>
-      <th>Confiabilidade</th>
-      <th>Status</th>
-      <th>Roadmap</th>
+      <th><?php echo $LANG['3']; ?></th>
+      <th><?php echo $LANG['74']; ?></th>
+      <th><?php echo $LANG['51']; ?></th>
+      <th><?php echo $LANG['76']; ?></th>
+      <th><?php echo $LANG['53']; ?></th>
+      <th><?php echo $LANG['55']; ?></th>
     </tr>
   </tfoot>
   <tbody>
@@ -38,9 +39,9 @@ saveCurrentURL();
                   <td>".$result->nome_arquivo."</td>
                   <td>".$result->autores."</td>
                   <td>".$result->ano_arquivo."</td>
-                  <td><div style='text-align: center;'><img src='img/conf_".$result->conf_arquivo."_bw.png' title='Confiabilidade: ".$result->conf_arquivo." (Mín: 1, Máx: 10)' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
+                  <td><div style='text-align: center;'><img src='img/conf_".$result->conf_arquivo."_bw.png' title='".$LANG['76'].": ".$result->conf_arquivo." (".$LANG['88'].": 1, ".$LANG['89'].": 10)' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
                   <td><div style='text-align: center;'><img src='img/".$result->status_ren.".png' title='".$result->status_ren."' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
-                  <td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='Ver roadmap do arquivo' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                  <td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['91']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                 </tr>";
               }
     }

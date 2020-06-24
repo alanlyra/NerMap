@@ -69,10 +69,10 @@ saveCurrentURL();
                       <h5><?php echo $LANG['4']; ?>:</h5>
                       <select type="text" id="temaRoadmap" name="temaRoadmap" class="form-control" style="cursor: pointer;" required>
                         <option value="" disabled selected><?php echo $LANG['16']; ?>...</option>
-                        <option value="Educação"><?php echo $LANG['17']; ?></option>
-                        <option value="Medicina"><?php echo $LANG['18']; ?></option>
-                        <option value="Transporte"><?php echo $LANG['19']; ?></option>
-                        <option value="Trabalho"><?php echo $LANG['20']; ?></option>
+                        <option value="Education"><?php echo $LANG['17']; ?></option>
+                        <option value="Medicine"><?php echo $LANG['18']; ?></option>
+                        <option value="Transport"><?php echo $LANG['19']; ?></option>
+                        <option value="Work"><?php echo $LANG['20']; ?></option>
                       </select>
                     </div>
                     </br>
@@ -308,19 +308,19 @@ saveCurrentURL();
   </a>
 
  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja sair?</h5>
+          <h5 class="modal-title" id="exampleModalLabel"><?php echo $LANG['168']; ?></h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Clique em "Sair" para encerrar a sessão.</div>
+        <div class="modal-body"><?php echo $LANG['169']; ?></div>
         <div class="modal-footer">
-          <button class="btn btn-danger" type="button" data-dismiss="modal">Voltar</button>
-          <a class="btn btn-primary" href="login.php?action=logout">Sair</a>
+          <button class="btn btn-danger" type="button" data-dismiss="modal"><?php echo $LANG['106']; ?></button>
+          <a class="btn btn-primary" href="login.php?action=logout"><?php echo $LANG['112']; ?></a>
         </div>
       </div>
     </div>

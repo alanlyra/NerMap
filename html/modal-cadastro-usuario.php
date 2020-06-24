@@ -1,5 +1,6 @@
 <?php
 require_once 'system.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -33,27 +34,27 @@ saveCurrentURL();
                   <div class='row justify-content-center' style='margin-bottom: -20px;'>
                     <div class='col-xl-10 col-lg-10 feature-box' style='float: left; margin: 0 1rem 2rem 0; text-align: left;'>
                       <div class='col-xl-12 col-lg-12' style='margin-bottom: 2vh;'>
-                        <h5>Nome completo:</h5>
+                        <h5>".$LANG['182'].":</h5>
                         <input type='text' id='nomeUsuario' name='nomeUsuario' value='' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required>
                       </div>
                       <div class='col-xl-12 col-lg-12' style='margin-bottom: 2vh;'>
-                        <h5>Email:</h5>
+                        <h5>".$LANG['96'].":</h5>
                           <input type='text' id='emailUsuario' name='emailUsuario' class='form-control bg-light border-0 small' value='' aria-label='Search' aria-describedby='basic-addon2' required>
-                          <p id='mensagemEmailJaCadastrado' style='font-style: italic; color: red; font-size: small; display:none; margin: 0;'> * Email já cadastrado!</p>
+                          <p id='mensagemEmailJaCadastrado' style='font-style: italic; color: red; font-size: small; display:none; margin: 0;'> * ".$LANG['187']."</p>
                       </div>
                       <div class='col-xl-12 col-lg-12' style='margin-bottom: 2vh;'>
-                        <h5>Senha:</h5>
+                        <h5>".$LANG['179'].":</h5>
                         <input type='password' id='senhaUsuario' name='senhaUsuario' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required>                   
                       </div>
                       <div class='col-xl-12 col-lg-12'>
-                        <h5>Corfirmar senha:</h5>
+                        <h5>".$LANG['183'].":</h5>
                         <input type='password' id='confirmaSenhaUsuario' name='confirmaSenhaUsuario' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required>
-                        <p id='mensagemSenhaNaoIgual' style='font-style: italic; color: red; font-size: small; display:none; margin: 0;'> * As senhas não coincidem!</p>
+                        <p id='mensagemSenhaNaoIgual' style='font-style: italic; color: red; font-size: small; display:none; margin: 0;'> * ".$LANG['188']."</p>
                       </div>
                     </div>                    
                   </div>
                   <div class='py-3' style='text-align: center;'>
-                    <input class='btn btn-primary btn-icon-split' type='submit' name='salvarCadastroUsuario' value='Finalizar cadastro' style='width: 12em; height: 2em; display: inline-block;' />
+                    <input class='btn btn-primary btn-icon-split' type='submit' name='salvarCadastroUsuario' value='".$LANG['184']."' style='width: 12em; height: 2em; display: inline-block;' />
                     </br>
                   </div>
                 </form>

@@ -1,6 +1,7 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -32,7 +33,7 @@ saveCurrentURL();
         <div class="container-fluid">
 
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Configurações do Sistema</h1>
+            <h1 class="h3 mb-0 text-gray-800"><?php echo $LANG['36']; ?></h1>
           </div>
 
           <!-- Content Row -->
@@ -79,7 +80,7 @@ saveCurrentURL();
                   </div>";
           }
           else {
-            echo "<div id='main-content' class='col-xl-12 col-lg-12' style='height: 77vh;'>Sem permissão de acesso. Contate o Administrador do sistema.</div>";
+            echo "<div id='main-content' class='col-xl-12 col-lg-12' style='height: 77vh;'>".$LANG['177']."</div>";
           }
 
           ?>
@@ -113,15 +114,15 @@ saveCurrentURL();
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja sair?</h5>
+          <h5 class="modal-title" id="exampleModalLabel"><?php echo $LANG['168']; ?></h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Clique em "Sair" para encerrar a sessão.</div>
+        <div class="modal-body"><?php echo $LANG['169']; ?></div>
         <div class="modal-footer">
-          <button class="btn btn-danger" type="button" data-dismiss="modal">Voltar</button>
-          <a class="btn btn-primary" href="login.php?action=logout">Sair</a>
+          <button class="btn btn-danger" type="button" data-dismiss="modal"><?php echo $LANG['106']; ?></button>
+          <a class="btn btn-primary" href="login.php?action=logout"><?php echo $LANG['112']; ?></a>
         </div>
       </div>
     </div>

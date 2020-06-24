@@ -255,7 +255,7 @@ saveCurrentURL();
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Adicionar arquivo ao TRM</h4>
+          <h4 class="modal-title"><?php echo $LANG['69']; ?></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           
         </div>
@@ -270,21 +270,21 @@ saveCurrentURL();
                   </div>
                   </br>
                   <div class="col-xl-9 col-lg-10s">
-                   <h5>Título:</h5>
-                    <input type="text" id="nomeArquivo" name="nomeArquivo" class="form-control bg-light border-0 small" placeholder="Nome do Arquivo..." aria-label="Search" aria-describedby="basic-addon2" required>
+                   <h5><?php echo $LANG['70']; ?>:</h5>
+                    <input type="text" id="nomeArquivo" name="nomeArquivo" class="form-control bg-light border-0 small" placeholder="<?php echo $LANG['71']; ?>..." aria-label="Search" aria-describedby="basic-addon2" required>
                   </div>
                  </br>
                   <div class="col-xl-6 col-lg-7">
-                  <h5>Data:</h5>
-                    <input type="text" id="anoArquivo" name="anoArquivo" class="form-control bg-light border-0 small" placeholder="Ano da Publicação..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')" required>
+                  <h5><?php echo $LANG['72']; ?>:</h5>
+                    <input type="text" id="anoArquivo" name="anoArquivo" class="form-control bg-light border-0 small" placeholder="<?php echo $LANG['73']; ?>..." aria-label="Search" aria-describedby="basic-addon2" onkeyup="this.value=this.value.replace(/[^\d]/,'')" required>
                   </div>
                   </br>
 
                   <div class="col-xl-12 col-lg-12">
                     <div class="row">
-                      <div class="col-sm-8"><h5>Autores:</h5></div>
+                      <div class="col-sm-8"><h5><?php echo $LANG['74']; ?>:</h5></div>
                       <div class="col-sm-4">
-                          <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> Adicionar autor</button>
+                          <button type="button" class="btn btn-info add-new"><i class="fa fa-plus"></i> <?php echo $LANG['75']; ?></button>
                       </div>
                     </div>
                     
@@ -295,9 +295,9 @@ saveCurrentURL();
                             <td></td>
                             <td></td>
                             <td>
-                              <a class="add" title="Add"><img src='img/add2.png' title='Adicionar autor' style='width: 20px; height: 20px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
-                              <a class="edit" title="Edit"><img src='img/editar7.png' title='Editar autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
-                              <a class="delete" title="Delete"><img src='img/deletar2.png' title='Remover autor' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                              <a class="add" title="Add"><img src='img/add2.png' title='<?php echo $LANG['75']; ?>' style='width: 20px; height: 20px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                              <a class="edit" title="Edit"><img src='img/editar7.png' title='<?php echo $LANG['84']; ?>' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                              <a class="delete" title="Delete"><img src='img/deletar2.png' title='<?php echo $LANG['83']; ?>' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
                             </td>
                           </tr>           
                         </tbody>
@@ -310,7 +310,7 @@ saveCurrentURL();
                   </br>
                   
                   <div class="col-xl-12 col-lg-12">
-                  <h5>Confiabilidade:</h5>
+                  <h5><?php echo $LANG['76']; ?>:</h5>
                   <div class="btn-group" data-toggle="buttons">
                     <label class="btn btn-plain" style="cursor: pointer;">
                       <input type="radio" name="rate" id="option1" value="1" autocomplete="off" style="cursor: pointer;" required> <span class="glyphicon glyphicon-unchecked unchecked"></span> <span class="glyphicon glyphicon-check"></span>
@@ -354,13 +354,13 @@ saveCurrentURL();
                 <input type="text" id="identificador" name="identificador" class="form-control bg-light border-0 small" placeholder="" aria-label="Search" aria-describedby="basic-addon2" style="display: none; visibility: hidden;">
              
                 <div class="py-3" style="text-align: center;">
-                <input class="btn btn-primary btn-icon-split" type="submit" name="adicionarArquivo" value="Adicionar" style="width: 8em; height: 2em; display: inline-block;" />
+                <input class="btn btn-primary btn-icon-split" type="submit" name="adicionarArquivo" value="<?php echo $LANG['78']; ?>" style="width: 8em; height: 2em; display: inline-block;" />
                   </br>
                 </div>
                 </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $LANG['79']; ?></button>
         </div>
       </div>
 
@@ -368,19 +368,19 @@ saveCurrentURL();
   </div>
 
  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja sair?</h5>
+          <h5 class="modal-title" id="exampleModalLabel"><?php echo $LANG['168']; ?></h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Clique em "Sair" para encerrar a sessão.</div>
+        <div class="modal-body"><?php echo $LANG['169']; ?></div>
         <div class="modal-footer">
-          <button class="btn btn-danger" type="button" data-dismiss="modal">Voltar</button>
-          <a class="btn btn-primary" href="login.php?action=logout">Sair</a>
+          <button class="btn btn-danger" type="button" data-dismiss="modal"><?php echo $LANG['106']; ?></button>
+          <a class="btn btn-primary" href="login.php?action=logout"><?php echo $LANG['112']; ?></a>
         </div>
       </div>
     </div>
@@ -392,14 +392,14 @@ saveCurrentURL();
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Arquivos do TRM</h4>
+          <h4 class="modal-title"><?php echo $LANG['86']; ?></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>       
         </div>
         <div class="modal-body">
           <!-- DataTales Example -->
          <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Selecione um arquivo para gerar roadmap</h6>
+              <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['87']; ?></h6>
             </div>
             <div class="card-body">
               <div id="table-modal" class="table-responsive">
@@ -444,14 +444,14 @@ saveCurrentURL();
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Compartilhamento do TRM</h4>
+          <h4 class="modal-title"><?php echo $LANG['94']; ?></h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>       
         </div>
         <div class="modal-body">
           <!-- DataTales Example -->
          <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Adicionar ou remover usuários do TRM</h6>
+              <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['95']; ?></h6>
             </div>
             <div class="card-body">
               <div id="table-modal-usuarios" class="table-responsive">
@@ -461,7 +461,7 @@ saveCurrentURL();
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $LANG['79']; ?></button>
         </div>
       </div>
 
@@ -625,8 +625,8 @@ $(document).ready(function(){
 		$(this).attr("disabled", "disabled");
 		var index = $("#tableAutores tbody tr:last-child").index();
         var row = '<tr>' +
-            '<td><input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome..." style="width: 100%; font-size: 1rem;"></td>' +
-            '<td><input type="text" class="form-control" name="nome" id="nome" placeholder="Nome..." style="width: 100%; font-size: 1rem;"></td>' +
+            '<td><input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="<?php echo $LANG['82']; ?>..." style="width: 100%; font-size: 1rem;"></td>' +
+            '<td><input type="text" class="form-control" name="nome" id="nome" placeholder="<?php echo $LANG['3']; ?>..." style="width: 100%; font-size: 1rem;"></td>' +
 			'<td style="width: 5rem;">' + actions + '</td>' +
         '</tr>';
     	$("#tableAutores").append(row);		

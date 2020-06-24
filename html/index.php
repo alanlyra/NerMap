@@ -1,5 +1,6 @@
 <?php
 require_once 'system.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -60,9 +61,40 @@ saveCurrentURL();
               
               </div>
               <div class="col-lg-6">
+              <li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none;">
+                <a class="nav-link dropdown-toggle" href="#" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <i class="fas fa-globe fa-fw" style="float:right;"></i>
+                </a>
+
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="languagesDropdown">
+                  
+                  <h6 class="dropdown-header" style="background-color: whitesmoke; border: 0; color: #5a5c69;">
+                    <?php echo $LANG['39']; ?>
+                  </h6>
+                  <div style="height: auto; width: 180px; overflow: auto;">
+                  <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('en-us');">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="img/en-us2.png" title="English" style="height: 25px; width: 25px;">
+                    </div>
+                    <div>
+                      <div class="text-truncate">English</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('pt-BR');">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="img/pt-br2.png" alt="Português" style="height: 25px; width: 25px;">
+                    </div>
+                    <div>
+                      <div class="text-truncate">Português</div>
+                    </div>
+                  </a>
+                  
+                  </div>
+                </div>
+              </li>
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Entrar no sistema</h1>
+                    <h1 class="h4 text-gray-900 mb-4"><?php echo $LANG['178']; ?></h1>
                   </div>
                     <center>
    <br />
@@ -88,13 +120,13 @@ saveCurrentURL();
       <center>
       <table width=200px cellpadding=5px cellspacing=5px>
         	<tr>
-   	          <td align="right" width=50%>Usuário:</td>
+   	          <td align="right" width=50%><?php echo $LANG['96']; ?>:</td>
               <td align="left" width=50%>
                 <input type="text" id="username" name="email" class="form-control bg-light border-0" style="width:250px;">
               </td>
             </tr>
             <tr>
-              <td align="right">Senha:</td>
+              <td align="right"><?php echo $LANG['179']; ?>:</td>
               <td align="left">
                 <input type="password" id="password" name="password" class="form-control bg-light border-0" style="width:250px;">
               </td>
@@ -102,12 +134,12 @@ saveCurrentURL();
             <tr>
               <td height="70px" valign="middle" align="center" colspan=2>
                 <input type="hidden" name="afterLoginGoTo"  value="<?php   echo $_SESSION['afterLoginGoTo'];?>">
-                <input class="btn btn-primary" type="submit" value="Entrar">
+                <input class="btn btn-primary" type="submit" value="<?php echo $LANG['180']; ?>">
               </td>
             </tr>
           </table>
 
-          <a href='#' data-target='#modalCadastroUsuario' data-toggle='modal' data-id='cadastrousuario' style='display: inline-block; margin-left:3px; margin-right:3px; text-decoration:none;'>Cadastre-se</a>
+          <a href='#' data-target='#modalCadastroUsuario' data-toggle='modal' data-id='cadastrousuario' style='display: inline-block; margin-left:3px; margin-right:3px; text-decoration:none;'><?php echo $LANG['181']; ?></a>
                           
 
 
@@ -152,23 +184,22 @@ saveCurrentURL();
         <div class='modal-content'>
               <div class='modal-header'>
              
-                <h5 class='modal-title' id='exampleModalLabel'>Cadastro realizado com sucesso!</h5>
+                <h5 class='modal-title' id='exampleModalLabel'><?php echo $LANG['185']; ?></h5>
                 <button type='button' class='close' onclick='hideModalMensagem();'> 
                   <span aria-hidden='true'>×</span>
                 </button>
               </div>
-              <div class='modal-body'>Faça login para acessar o sistema.
+              <div class='modal-body'><?php echo $LANG['186']; ?>
               </div>
               <div class='modal-footer'>
              
-                <button class='btn btn-primary' type='button' onclick='hideModalMensagem();'>Fechar</button>
+                <button class='btn btn-primary' type='button' onclick='hideModalMensagem();'><?php echo $LANG['79']; ?></button>
                
                 </div>
          
            </div>
         </div>
       </div>
-
     </div>
     
 

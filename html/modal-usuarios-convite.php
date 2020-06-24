@@ -1,6 +1,7 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -8,17 +9,17 @@ saveCurrentURL();
   <thead>
     <tr>
       <th></th>
-      <th>Usuário</th>
-      <th>Email</th>
-      <th style='width: 20px;'>Compartilhar</th>
+      <th><?php echo $LANG['38']; ?></th>
+      <th><?php echo $LANG['96']; ?></th>
+      <th style='width: 20px;'><?php echo $LANG['97']; ?></th>
     </tr>
   </thead>
   <tfoot>
     <tr>
       <th></th>
-      <th>Usuário</th>
-      <th>Email</th>
-      <th>Compartilhar</th>
+      <th><?php echo $LANG['38']; ?></th>
+      <th><?php echo $LANG['96']; ?></th>
+      <th><?php echo $LANG['97']; ?></th>
     </tr>
   </tfoot>
   <tbody>
@@ -51,11 +52,11 @@ saveCurrentURL();
 
                       if($result2->accepted == "t")
                         echo "<div style='text-align: center;'>
-                        <a href='#' data-target='#modalConfirmaRemoveUsuarioCompartilhamentoTRM' data-toggle='modal' data-id='removecompartilhamentousuario-".$id_prospec."' data-usuarioremovecompartilhamento='".$result->id_user."' style='display: inline-block;'><div style='text-align: center;'><img src='img/remove-user2.png' title='Remover usuário do TRM' style='width: 24px; height: 24px; display: inline-block; opacity:60%;'/></div></a>
+                        <a href='#' data-target='#modalConfirmaRemoveUsuarioCompartilhamentoTRM' data-toggle='modal' data-id='removecompartilhamentousuario-".$id_prospec."' data-usuarioremovecompartilhamento='".$result->id_user."' style='display: inline-block;'><div style='text-align: center;'><img src='img/remove-user2.png' title='".$LANG['101']." ".$result2->name_user." ".$LANG['102']."' style='width: 24px; height: 24px; display: inline-block; opacity:60%;'/></div></a>
                               </div>";
                       else
                       echo "<div style='text-align: center;'>
-                              <button style='border: 0; background: transparent; display: inline-block;' type='submit' name='convidaUsuario' value=''> <img src='/img/wait.png' title='Aguardando ".$result2->name_user." aceitar o convite' width='20px' height='20px' style='opacity:60%;' /></button >
+                              <button style='border: 0; background: transparent; display: inline-block;' type='submit' name='convidaUsuario' value=''> <img src='/img/wait.png' title='".$LANG['99']." ".$result2->name_user." ".$LANG['100']."' width='20px' height='20px' style='opacity:60%;' /></button >
                             </div>";
                                    
                   }
@@ -69,7 +70,7 @@ saveCurrentURL();
                             aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
 
                             <div style='text-align: center;'>
-                              <button style='border: 0; background: transparent; display: inline-block;' type='submit' name='convidaUsuario' value=''> <img src='/img/invite.png' title='Enviar convite para ".$result->name_user."' width='22px' height='22px'/></button >
+                              <button style='border: 0; background: transparent; display: inline-block;' type='submit' name='convidaUsuario' value=''> <img src='/img/invite.png' title='".$LANG['98']." ".$result->name_user."' width='22px' height='22px'/></button >
                             </div>  
                           </form>";                    
 

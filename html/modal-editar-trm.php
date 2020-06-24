@@ -1,6 +1,7 @@
 <?php
 require_once 'system.php';
 require_once 'checklogin.php';
+require_once 'lang.php';
 saveCurrentURL();
 ?>
 
@@ -12,7 +13,7 @@ saveCurrentURL();
 
       echo "<div class='modal-content'>
             <div class='modal-header'>
-              <h4 class='modal-title'>Editar informações do TRM</h4>
+              <h4 class='modal-title'>".$LANG['60']."</h4>
               <button type='button' class='close' data-dismiss='modal'>&times;</button>       
             </div>
             <div class='modal-body'>";
@@ -20,22 +21,22 @@ saveCurrentURL();
         echo "<form action='prospeccoes.php?' method='post' multipart='' enctype='multipart/form-data'>
                 
                   <div class='col-xl-12 col-lg-12'>
-                  <h5>Ano:</h5>
+                  <h5>".$LANG['3'].":</h5>
                     <input type='text' id='anoProspec' name='nomeProspec' value='".$nome_trm."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required>
                   </div>
                   </br>
                   <div class='col-xl-6 col-lg-7'>
-                  <h5>Área:</h5>
+                  <h5>".$LANG['4'].":</h5>
                     <select type='text' id='temaRoadmap' name='temaProspec' class='form-control' style='cursor: pointer;' required>
-                      <option id='option-Educação' value='Educação'>Educação</option>
-                      <option id='option-Medicina' value='Medicina'>Medicina</option>
-                      <option id='option-Transporte' value='Transporte'>Transporte</option>
-                      <option id='option-Trabalho' value='Trabalho'>Trabalho</option>
+                      <option id='option-Education' value='Education'>".$LANG['17']."</option>
+                      <option id='option-Medicine' value='Medicine'>".$LANG['18']."</option>
+                      <option id='option-Transport' value='Transport'>".$LANG['19']."</option>
+                      <option id='option-Work' value='Work'>".$LANG['20']."</option>
                     </select>
                   </div>
                   </br>
                    <div class='col-xl-6 col-lg-7'>
-                  <h5>Ano limite do TRM:</h5>
+                  <h5>".$LANG['6'].":</h5>
                     <input type='text' id='anoProspec' name='anoProspec' value='".$ano_trm."' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' onkeyup='this.value=this.value.replace(/[^\d]/,'')' required>
                   </div>
                   </br>
@@ -46,9 +47,9 @@ saveCurrentURL();
              
                 <div class='py-3' style='text-align: center;'>
                 
-                <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$id_roadmap."' style='display: inline-block; margin-left:3px;'><button class='btn btn-danger btn-icon-split' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     Remover</button></a>  
+                <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$id_roadmap."' style='display: inline-block; margin-left:3px;'><button class='btn btn-danger btn-icon-split' value='Remover' style='width: 8em; height: 2em; display: inline-block;'><i class='fas fa-trash fa-sm text-white-50'></i>     ".$LANG['101']."</button></a>  
 
-                <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoTRM' value='Salvar' style='width: 8em; height: 2em; display: inline-block;' />
+                <input class='btn btn-primary btn-icon-split' type='submit' name='salvarEdicaoTRM' value='".$LANG['103']."' style='width: 8em; height: 2em; display: inline-block;' />
 
                   </br>
                 </div>
@@ -57,7 +58,7 @@ saveCurrentURL();
              
        echo "</div>
             <div class='modal-footer'>
-              <button type='button' class='btn btn-default' data-dismiss='modal'>Fechar</button>
+              <button type='button' class='btn btn-default' data-dismiss='modal'>".$LANG['79']."</button>
             </div>
           </div>";
 
