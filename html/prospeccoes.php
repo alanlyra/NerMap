@@ -704,6 +704,19 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Page level plugins -->
+  
+  <script>
+    var dt_mostrar = "<?php echo $LANG['189']; ?>";
+    var dt_resultados = "<?php echo $LANG['190']; ?>";
+    var dt_de = "<?php echo $LANG['191']; ?>";
+    var dt_ate = "<?php echo $LANG['192']; ?>";
+    var dt_filtrado = "<?php echo $LANG['193']; ?>";
+    var dt_totais = "<?php echo $LANG['194']; ?>";
+    var dt_pesquisar = "<?php echo $LANG['195']; ?>";
+    var dt_anterior = "<?php echo $LANG['196']; ?>";
+    var dt_proximo = "<?php echo $LANG['197']; ?>";
+    var dt_mostrando = "<?php echo $LANG['198']; ?>";
+  </script>
   <script src="vendor/datatables/jquery.dataTables.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 

@@ -11388,7 +11388,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Próximo",
+				"sNext": dt_proximo,
 	
 	
 				/**
@@ -11411,7 +11411,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Anterior"
+				"sPrevious": dt_anterior
 			},
 	
 			/**
@@ -11466,7 +11466,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Mostrando _START_ até _END_ de _TOTAL_ resultados",
+			"sInfo": dt_mostrando + " _START_ " + dt_ate +" _END_ " + dt_de + " _TOTAL_ " + dt_resultados,
 	
 	
 			/**
@@ -11487,7 +11487,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Mostrando 0 até 0 de 0 resultados",
+			"sInfoEmpty": dt_mostrando + " 0 " + dt_ate + " 0 " + dt_de + " 0 " + dt_resultados,
 	
 	
 			/**
@@ -11509,7 +11509,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "(filtrado de _MAX_ resultados totais)",
+			"sInfoFiltered": "(" + dt_filtrado + " " + dt_de + " _MAX_ " + dt_totais + ")",
 	
 	
 			/**
@@ -11627,7 +11627,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Mostrar _MENU_ resultados",
+			"sLengthMenu": dt_mostrar + " _MENU_ " + dt_resultados,
 	
 	
 			/**
@@ -11707,7 +11707,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Pesquisar:",
+			"sSearch": dt_pesquisar + ":",
 	
 	
 			/**
