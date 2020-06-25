@@ -8,7 +8,7 @@
   <meta name="author" content="">
 
   <title>NERMAP</title>
-   <link rel="shortcut icon" type="image/x-icon" href="img/timeline_own_resized_menor.png">
+   <link rel="shortcut icon" type="image/x-icon" href="img/timeline6.png">
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.css" rel="stylesheet" type="text/css">
