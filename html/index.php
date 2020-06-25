@@ -61,37 +61,7 @@ saveCurrentURL();
               
               </div>
               <div class="col-lg-6">
-              <li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none;">
-                <a class="nav-link dropdown-toggle" href="#" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  <i class="fas fa-globe fa-fw" style="float:right;"></i>
-                </a>
-
-                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="languagesDropdown">
-                  
-                  <h6 class="dropdown-header" style="background-color: whitesmoke; border: 0; color: #5a5c69;">
-                    <?php echo $LANG['39']; ?>
-                  </h6>
-                  <div style="height: auto; width: 180px; overflow: auto;">
-                  <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('en-us');">
-                    <div class="dropdown-list-image mr-3">
-                      <img class="rounded-circle" src="img/en-us2.png" title="English" style="height: 25px; width: 25px;">
-                    </div>
-                    <div>
-                      <div class="text-truncate">English</div>
-                    </div>
-                  </a>
-                  <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('pt-BR');">
-                    <div class="dropdown-list-image mr-3">
-                      <img class="rounded-circle" src="img/pt-br2.png" alt="Português" style="height: 25px; width: 25px;">
-                    </div>
-                    <div>
-                      <div class="text-truncate">Português</div>
-                    </div>
-                  </a>
-                  
-                  </div>
-                </div>
-              </li>
+              
                 <div class="p-5">
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4"><?php echo $LANG['178']; ?></h1>
@@ -169,7 +139,37 @@ saveCurrentURL();
             </div>
           </div>
         </div>
+        <li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none; float:right;">
+                <a class="nav-link dropdown-toggle" href="#" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  <i class="fas fa-globe fa-fw" style="float:right; margin-top: -80px;margin-right: -10px;"></i>
+                </a>
 
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="languagesDropdown" style="margin-top: -70px;margin-right: -10px;padding: 0;">
+                  
+                  <h6 class="dropdown-header" style="background-color: whitesmoke; border: 0; color: #5a5c69; margin: 0;">
+                    <?php echo $LANG['39']; ?>
+                  </h6>
+                  <div style="height: auto; width: 180px; overflow: auto;">
+                  <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('en-us');">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="img/en-us2.png" title="English" style="height: 25px; width: 25px;">
+                    </div>
+                    <div>
+                      <div class="text-truncate">English</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('pt-BR');">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="img/pt-br2.png" alt="Português" style="height: 25px; width: 25px;">
+                    </div>
+                    <div>
+                      <div class="text-truncate">Português</div>
+                    </div>
+                  </a>
+                  
+                  </div>
+                </div>
+              </li>
       </div>
 
       <div id="modalCadastroUsuario" class="modal fade" role="dialog">
