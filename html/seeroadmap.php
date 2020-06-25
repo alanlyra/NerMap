@@ -316,16 +316,21 @@ saveCurrentURL();
                     else
                     $id_arquivo_adicionar = 0;
 
-                    echo "<div style='text-align: center; margin-top: -0.2vh;'>
+                    /* echo "<div style='text-align: center; margin-top: -0.2vh;'>
                           <a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."' style='margin-left: -160px;'>
                             <img id='imageAddProspec' src='img/add2.png' title='".$LANG['129']."' style='width: 20px; height: 20px; display: inline-block;'/>
                           </a> 
-                          </div>
+                          </div> */
                     
+                   echo "</div>
+                   <div style='text-align: center; margin-top: -0.2vh; height:0px;'>
+                    <a href='#' data-target='#modalAdicionarRoadmap' data-toggle='modal' data-id='adicionarRoadmap-".$id_roadmap."' data-cabecalho='".$tipoCabecalho."' data-arquivo='".$id_arquivo_adicionar."' data-assunto='".$assunto_roadmap."' style='display:inline-block; margin-top: -30px; margin-left: -17.5px;'>
+                      <img id='imageAddProspec' src='img/add2.png' title='".$LANG['129']."' style='width: 20px; height: 20px; display: inline-block;'/>
+                    </a> 
                     </div>
                     <div id='box_info_roadmap' class='card-header' style='height: 3vh; margin: 0; padding: 0; background-color: whitesmoke; border-radius: 0px 0px 0px 40px;'>";
 
-
+                  
                     if(isset($_GET["roadmap-completo"])) {
                       echo "<p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>".$LANG['131']."</b></small></p>
                           <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>".$LANG['133']."</b></small></div></p></a>

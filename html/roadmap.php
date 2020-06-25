@@ -655,17 +655,17 @@ saveCurrentURL();
         anosChart.destroy();
       }
 
-      if(numTRMsGlobalJS == 1) document.getElementById("num-trms").innerHTML = numTRMsGlobalJS + " TRM";
-      else document.getElementById("num-trms").innerHTML = numTRMsGlobalJS + " TRMs";
+      if(numTRMsGlobalJS == 1) document.getElementById("num-trms").innerHTML = numTRMsGlobalJS + " <?php echo $LANG['24'];?>";
+      else document.getElementById("num-trms").innerHTML = numTRMsGlobalJS + " <?php echo $LANG['24'];?>";
 
-      if(numArquivosGlobalJS == 1) document.getElementById("num-arquivos").innerHTML = numArquivosGlobalJS + " arquivo";
-      else document.getElementById("num-arquivos").innerHTML = numArquivosGlobalJS + " arquivos";
+      if(numArquivosGlobalJS == 1) document.getElementById("num-arquivos").innerHTML = numArquivosGlobalJS + " <?php echo $LANG['25'];?>";
+      else document.getElementById("num-arquivos").innerHTML = numArquivosGlobalJS + " <?php echo $LANG['25'];?>";
 
-      if(numRoadmapsGlobalJS == 1) document.getElementById("num-roadmaps").innerHTML = numRoadmapsGlobalJS + " roadmap";
-      else document.getElementById("num-roadmaps").innerHTML = numRoadmapsGlobalJS + " roadmaps";
+      if(numRoadmapsGlobalJS == 1) document.getElementById("num-roadmaps").innerHTML = numRoadmapsGlobalJS + " <?php echo $LANG['26'];?>";
+      else document.getElementById("num-roadmaps").innerHTML = numRoadmapsGlobalJS + " <?php echo $LANG['26'];?>";
 
-      if(numProspeccoesGlobalJS == 1) document.getElementById("num-prospeccoes").innerHTML = numProspeccoesGlobalJS + " prospecção";
-      else document.getElementById("num-prospeccoes").innerHTML = numProspeccoesGlobalJS + " prospecções";
+      if(numProspeccoesGlobalJS == 1) document.getElementById("num-prospeccoes").innerHTML = numProspeccoesGlobalJS + " <?php echo $LANG['27'];?>";
+      else document.getElementById("num-prospeccoes").innerHTML = numProspeccoesGlobalJS + " <?php echo $LANG['27'];?>";
 
       drawPieCharts(labelsChartTemasGlobal, dataChartTemasGlobal, colorsChartTemasGlobal, labelsChartAnosProspeccoesGlobal, dataChartAnosProspeccoesGlobal, colorsChartAnosProspeccoesGlobal);
 
