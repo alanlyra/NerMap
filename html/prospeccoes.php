@@ -602,14 +602,6 @@ saveCurrentURL();
       $("#dataTable").load(window.location.href + " #dataTable" );
     }
 
-    function init_process(id_arquivo) {
-    	$.ajax({
-	            url: "init_process_input.php",
-	            method: "POST",
-	            data: { "id-arquivo": id_arquivo }
-    	});
-    }
-
     function init_process_upload(newname) {
     	$.ajax({
 	            url: "processa-upload.php",
@@ -904,21 +896,6 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
               if($ext == "pdf" || $ext == ".pdf" || $ext == "PDF" || $ext == ".PDF") {
                 $newname = str_replace(".txt", ".pdf", $newname);
                 move_uploaded_file($val['tmp_name'],'uploads/pdf/'.$newname);
-
-               /*  $parser = new \Smalot\PdfParser\Parser();
-                $pdf    = $parser->parseFile('uploads/pdf/'.$newname_pdf);
-                 
-                // Retrieve all pages from the pdf file.
-                $pages  = $pdf->getPages();
-
-                $pdfUploaded = fopen("uploads/".$newname, "w") or die("Unable to open file!");
-                 
-                // Loop over each page to extract text.
-                foreach ($pages as $page) {
-                    fwrite($pdfUploaded, $page->getText());
-                }
-
-                fclose($pdf_uploaded); */
                 
               }
               else
@@ -926,16 +903,11 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
               
               $num_textos++;          
             }
-            
-            
+                     
             db_arquivo($id_arquivo, $conf_value, $ano, "PROCESSANDO", $nome, $autores, $identificador, $newname);
             $num_arquivos = get_num_arquivos_on_prospec($identificador);
             db_prospec($identificador, $num_arquivos, $newname);
-            
-            
 
-
-            //popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
             }
         else{
           //echo "<script>console.log( 'Deu ruim!!' );</script>";
@@ -981,8 +953,7 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
 
   function db_arquivo($id_arquivo_db, $conf_value_db, $ano_db, $status_ren_db, $nome_arquivo_db, $autores_db, $identificador_db, $newname_db) {   
       $save_on_arquivos = set_data("INSERT INTO arquivos (id_arquivo, nome_arquivo, ano_arquivo, autores_arquivo, conf_arquivo, id_prospec_arquivo, status_ren, usuario_arquivo, autores) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)", array($id_arquivo_db, $nome_arquivo_db, $ano_db, 1, $conf_value_db, $identificador_db, 'PROCESSANDO', $_SESSION['id'], $autores_db));
-      //echo "<script>init_process(".$id_arquivo_db.");</script>"; 
-      echo "<script>init_process_upload('".$newname_db."');</script>"; 
+      echo "<script>init_process_upload('".$newname_db."');</script>";
     }
 
   function db_prospec($id_prospec_db, $num_arquivos_db) {   
