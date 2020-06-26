@@ -166,6 +166,7 @@ saveCurrentURL();
                                   $section[info] = preg_replace($regex_reference_tipo1, '', $section[info]);
                                   $section[info] = preg_replace($regex_reference_tipo2, '', $section[info]);
                                   $section[info] = str_replace(" % ", "% ", $section[info]);
+                                  //$section[info] = htmlspecialchars($section[info], ENT_QUOTES, 'UTF-8');
                                   $section[id_arquivo] = $result2->id_arquivo;
                                   $section[arquivo_origem] = $result2->id_arquivo;
                                   $section[id_roadmap] = $id_roadmap;
@@ -1230,8 +1231,8 @@ saveCurrentURL();
 
   if(isset($_POST["salvarEdicaoRoadmap"])) {
 
-  	$anoProspec = $_POST['anoProspec'];
-  	$infoProspec = $_POST['infoProspec'];
+  	$anoProspec = htmlspecialchars($_POST['anoProspec'], ENT_QUOTES, 'UTF-8');
+  	$infoProspec = htmlspecialchars($_POST['infoProspec'], ENT_QUOTES, 'UTF-8');
   	$idRoadmap = $_POST['idRoadmap'];
   	$idArquivo = $_POST['idArquivo'];
   	$indiceRoadmap = $_POST['indiceRoadmap'];

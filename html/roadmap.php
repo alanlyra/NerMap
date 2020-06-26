@@ -688,9 +688,9 @@ saveCurrentURL();
 
   if(isset($_POST["criaTRM"])) {
 
-  	$nome = $_POST['nomeRoadmap'];
-  	$tema = $_POST['temaRoadmap'];
-  	$ano = $_POST['anoRoadmap'];
+  	$nome = htmlspecialchars($_POST['nomeRoadmap'], ENT_QUOTES, 'UTF-8');
+  	$tema = htmlspecialchars($_POST['temaRoadmap'], ENT_QUOTES, 'UTF-8');
+  	$ano = htmlspecialchars($_POST['anoRoadmap'], ENT_QUOTES, 'UTF-8');
 
 
   	if(!$nome == "" && !$tema == "" && !$ano == "") {   	

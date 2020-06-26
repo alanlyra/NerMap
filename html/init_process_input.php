@@ -7,6 +7,8 @@
 
   $num_textos = 1;
 
+  file_put_contents('error_php_input.txt', $id_arquivo);
+
   popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
 
 ?>
