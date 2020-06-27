@@ -872,6 +872,8 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
       unlink("uploads/".$id_arquivo.".txt");
     if (file_exists("relatorios/relatorio_".$id_arquivo.".txt"))  
       unlink("relatorios/relatorio_".$id_arquivo.".txt");
+    if (file_exists("roadmaps/".$id_arquivo."-tagged.txt"))  
+      unlink("roadmaps/".$id_arquivo."-tagged.txt");
   }
 
 ?>

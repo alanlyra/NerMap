@@ -261,8 +261,8 @@ saveCurrentURL();
                     </div>
                   </div>
                   <!-- Card Body -->
-                  <div class="card-body" style="max-height: 208px; overflow: auto; min-height: 225px;">
-                    <div class="divMetodologia">
+                  <div class="card-body" style="min-height: 225px;">
+                    <div class="divMetodologia" style="overflow: auto; max-height: 142px;">
                     <p><?php echo $LANG['34']; ?></p>
                     </div>
                     <div class="mt-4 text-center small">
