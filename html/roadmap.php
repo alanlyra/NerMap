@@ -137,7 +137,7 @@ saveCurrentURL();
                 </div>
           </div>
           <div class="row">
-            <div class="col-xl-8 col-lg-8">
+            <div class="col-xl-9 col-lg-9">
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -154,7 +154,7 @@ saveCurrentURL();
                     </div>
                   </div>
                   <!-- Card Body -->
-                  <div class="card-body">
+                  <div class="card-body" style="padding: 1rem 1rem 0 1rem; min-height: 225px;">
                     <div class="divAnalise">
 
                     <div class="row">
@@ -244,7 +244,7 @@ saveCurrentURL();
                 </div>
               </div>
 
-              <div class="col-xl-4 col-lg-4">
+              <div class="col-xl-3 col-lg-3">
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -261,7 +261,7 @@ saveCurrentURL();
                     </div>
                   </div>
                   <!-- Card Body -->
-                  <div class="card-body">
+                  <div class="card-body" style="max-height: 208px; overflow: auto; min-height: 225px;">
                     <div class="divMetodologia">
                     <p><?php echo $LANG['34']; ?></p>
                     </div>
@@ -569,9 +569,9 @@ saveCurrentURL();
         options: {
           maintainAspectRatio: false,
           tooltips: {
-            backgroundColor: "rgb(255,255,255)",
-            bodyFontColor: "#858796",
-            borderColor: '#dddfeb',
+            backgroundColor: "#5a5c69",
+            //bodyFontColor: "#858796",
+            //borderColor: '#dddfeb',
             borderWidth: 1,
             xPadding: 15,
             yPadding: 15,
@@ -579,7 +579,12 @@ saveCurrentURL();
             caretPadding: 10,
           },
           legend: {
-            display: false
+            display: true,
+            responsive: true,
+            position: 'left',
+            labels: {
+                fontColor: '#5a5c69'
+            }
           },
           cutoutPercentage: 0,
         },
@@ -587,7 +592,7 @@ saveCurrentURL();
 
       var ctx = document.getElementById("anosChart");
       anosChart = new Chart(ctx, {
-        type: 'pie',
+        type: 'bar',
         data: {
           labels: labelAnos,
           datasets: [{
@@ -599,9 +604,9 @@ saveCurrentURL();
         options: {
           maintainAspectRatio: false,
           tooltips: {
-            backgroundColor: "rgb(255,255,255)",
-            bodyFontColor: "#858796",
-            borderColor: '#dddfeb',
+            backgroundColor: "#5a5c69",
+            //bodyFontColor: "#858796",
+            //borderColor: '#dddfeb',
             borderWidth: 1,
             xPadding: 15,
             yPadding: 15,

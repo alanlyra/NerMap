@@ -140,6 +140,7 @@ saveCurrentURL();
               <div class="table-responsive">
                 <table class="table table-bordered" id="table-prospec" width="100%" cellspacing="0">
                   <thead>
+
                     <tr>
                       <th></th>
                       <th style="width: 300px"><?php echo $LANG['3']; ?></th>
@@ -175,6 +176,26 @@ saveCurrentURL();
 
       				    	if  ($results_max>0) {
       							while($result=pg_fetch_object($search_results)) {
+                  
+                      //Traduz as areas
+                      $assunto_multilang = "";
+                      if($result->assunto_prospec == "Work")
+                        $assunto_multilang = $LANG['20'];
+                      if($result->assunto_prospec == "Education")
+                        $assunto_multilang = $LANG['17'];
+                      if($result->assunto_prospec == "Medicine")
+                        $assunto_multilang = $LANG['18'];
+                      if($result->assunto_prospec == "Transport")
+                        $assunto_multilang = $LANG['19']; 
+
+                      $status_ren_msg = "";
+                      if($result->status_ren_prospec == "CONCLUIDO")
+                        $status_ren_msg = $LANG['199'];
+                      if($result->status_ren_prospec == "PROCESSANDO")
+                        $status_ren_msg = $LANG['200'];
+                      if($result->status_ren_prospec == "ERROR")
+                        $status_ren_msg = $LANG['201'];  
+                    
       						    	echo "<tr>
                                 <td style='text-align: center;' width='30px;'>
                                   <div style='text-align: center;'>";
@@ -185,12 +206,12 @@ saveCurrentURL();
                                 echo "</div>
                                 </td>
         	                      <td>".$result->nome_prospec."</td>
-        	                      <td>".$result->assunto_prospec."</td>
+        	                      <td>".$assunto_multilang."</td>
         	                      <td style='width='2em;'>".$result->ano_prospec."</td>
         	                      <td>".$result->num_textos_prospec."</td>
         	                       <td><div style='text-align: center;'>";
                                 if($result->status_ren_prospec != "null")
-                                  echo "<img src='img/".$result->status_ren_prospec.".png' title='".$result->status_ren_prospec."' style='width: 20px; height: 20px; display: inline-block;'/>";
+                                  echo "<img src='img/".$result->status_ren_prospec.".png' title='".$status_ren_msg."' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 echo "</div></td>
                                 <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/file_add.png' title='".$LANG['54']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                
@@ -424,7 +445,7 @@ saveCurrentURL();
   </div>
 
   <!-- Confirma Remoção do TRM Modal-->
-  <div class="modal fade" id="modalConfirmarDeleteProspec" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div id="modalConfirmarDeleteProspec" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div id="delete-trm" class="modal-dialog" role="document">
       
     </div>
@@ -969,13 +990,15 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
     $row3 = pg_fetch_all($number3);
 
     for($j=0; $j < sizeof($row3); $j++) {
-    	if(has_arquivo_processando($row3[$j][id_prospec]))
-      	$update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'PROCESSANDO' where id_prospec = $1", array($row3[$j][id_prospec]));
-    	else if (has_arquivo_com_erro($row3[$j][id_prospec]))
-      	$update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'ERROR' where id_prospec = $1", array($row3[$j][id_prospec]));
-    	else
-      	$update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'CONCLUIDO' where id_prospec = $1", array($row3[$j][id_prospec]));
-      //echo "<script>reloadtable();</script>";
+      if(has_arquivos($row3[$j][id_prospec])) {
+        if(has_arquivo_processando($row3[$j][id_prospec]))
+          $update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'PROCESSANDO' where id_prospec = $1", array($row3[$j][id_prospec]));
+        else if (has_arquivo_com_erro($row3[$j][id_prospec]))
+          $update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'ERROR' where id_prospec = $1", array($row3[$j][id_prospec]));
+        else
+          $update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'CONCLUIDO' where id_prospec = $1", array($row3[$j][id_prospec]));
+        //echo "<script>reloadtable();</script>";
+      }
     } 
 
 
@@ -996,6 +1019,16 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
       return false;
     else
         return true;
+  }
+
+  function has_arquivos($id_prospec) {   
+    $number1 = get_data("SELECT COUNT(*) FROM arquivos WHERE id_prospec_arquivo = ".$id_prospec);
+    $row = pg_fetch_array($number1);  
+    //echo "<script>console.log('id: ".empty($row)."');</script>";      
+    if($row[0] == 0)
+      return false;
+    else
+      return true;
   }
 
 ?>

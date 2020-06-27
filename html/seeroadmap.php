@@ -302,8 +302,19 @@ saveCurrentURL();
                     if  ($results_max_users>0) */
                       echo "<a href='#' data-target='#modalUsuariosParticipantes' data-toggle='modal' data-id='participantes-".$id_roadmap."' style='display: inline-block; margin-left:10px; margin-top:2px; float:left;'><div style='text-align: center;'><img src='img/shared5.png' title='".$LANG['127']."' style='width: 18px; height: 18px; display: inline-block; opacity:70%;'/></div></a>";
                     
+                    //Traduz a area
+                    $assunto_multilang = "";
+                    if($assunto_roadmap == "Work")
+                      $assunto_multilang = $LANG['20'];
+                    if($assunto_roadmap == "Education")
+                      $assunto_multilang = $LANG['17'];
+                    if($assunto_roadmap == "Medicine")
+                      $assunto_multilang = $LANG['18'];
+                    if($assunto_roadmap == "Transport")
+                      $assunto_multilang = $LANG['19'];  
+
                     echo "</br>
-                    <p style='margin: 0px 0px -8px 0px; padding-top: 5px; float:left;'><small class='text-muted'><b>".$LANG['4'].":</b> ".$assunto_roadmap."</small></p>";
+                    <p style='margin: 0px 0px -8px 0px; padding-top: 5px; float:left;'><small class='text-muted'><b>".$LANG['4'].":</b> ".$assunto_multilang."</small></p>";
 
                     echo "<div href='' style='margin: 0; float: left;'><p style='margin: 5px 0px 0px 10px; padding: 0; float: left;'><small class='text-muted'><b>·</b></small></p></div>";
 
@@ -561,6 +572,26 @@ saveCurrentURL();
 
                           if  ($results_max>0) {
                             while($result=pg_fetch_object($search_prospec)) {
+
+                              //Traduz a area
+                              $assunto_multilang = "";
+                              if($result->assunto_prospec == "Work")
+                                $assunto_multilang = $LANG['20'];
+                              if($result->assunto_prospec == "Education")
+                                $assunto_multilang = $LANG['17'];
+                              if($result->assunto_prospec == "Medicine")
+                                $assunto_multilang = $LANG['18'];
+                              if($result->assunto_prospec == "Transport")
+                                $assunto_multilang = $LANG['19'];  
+
+                              $status_ren_msg = "";
+                              if($result->status_ren_prospec == "CONCLUIDO")
+                                $status_ren_msg = $LANG['199'];
+                              if($result->status_ren_prospec == "PROCESSANDO")
+                                $status_ren_msg = $LANG['200'];
+                              if($result->status_ren_prospec == "ERROR")
+                                $status_ren_msg = $LANG['201'];  
+
                               echo "<tr>
                                     <td style='text-align: center;' width='30px;'>
                                     <div style='text-align: center;'>";
@@ -571,11 +602,11 @@ saveCurrentURL();
                                     echo "</div>
                                     </td>
                                     <td>".$result->nome_prospec."</td>
-                                    <td>".$result->assunto_prospec."</td>
+                                    <td>".$assunto_multilang."</td>
                                     <td>".$result->ano_prospec."</td>
                                     <td><div style='text-align: center;'>";
                                 if($result->status_ren_prospec != "null")
-                                  echo "<img src='img/".$result->status_ren_prospec.".png' title='".$result->status_ren_prospec."' style='width: 20px; height: 20px; display: inline-block;'/>";
+                                  echo "<img src='img/".$result->status_ren_prospec.".png' title='".$status_ren_msg."' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 echo "</div></td>
                                 </div></td>
                                     <td><a href='/seeroadmap.php?roadmap-completo=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['126']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
