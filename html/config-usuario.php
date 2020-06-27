@@ -52,7 +52,7 @@ saveCurrentURL();
                 <div class="avatar-upload">
                     <div class="avatar-edit">
                         <input type='file' id="imageUpload"  name="imageUpload" accept=".png, .jpg, .jpeg" />
-                        <label for="imageUpload"><img src="img/editar7.png" alt="Editar Foto" height="15px" width="15px" style="margin-left:8.5px; margin-top:4px; opacity: 70%;"></label>
+                        <label for="imageUpload"><img src="img/editar7.png" alt="Editar Foto" height="15px" width="15px" style="margin-left:8.5px; margin-top:8px; opacity: 70%;"></label>
                     </div>
                     <div class="avatar-preview">
                         <div id="imagePreview" style="background-image: url(<?php echo $_SESSION['photo']?>);">

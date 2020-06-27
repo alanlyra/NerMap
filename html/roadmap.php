@@ -339,11 +339,14 @@ saveCurrentURL();
     $array_temas_user = [];
     $array_anos_prospeccoes_user = [];
 
+    $trms_without_files_user = 0;
+
     if  ($results_max6>0) {
       while($result6=pg_fetch_object($number6)) {
         $number5 = get_data("SELECT num_textos_prospec FROM prospec where id_prospec = ".$result6->id_prospec_grupos);
         $row5 = pg_fetch_array($number5);        
         $numero_arquivos_user_tmp = $row5[0];
+        if($numero_arquivos_user_tmp == 0) $trms_without_files_user++;
         $num_arquivos_user += $numero_arquivos_user_tmp;
 
         $number7 = get_data("SELECT COUNT(*) FROM roadmap where id_prospec_roadmap = ".$result6->id_prospec_grupos);
@@ -364,7 +367,8 @@ saveCurrentURL();
       }
     }
 
-    $num_roadmaps_user = $num_trms_user + $num_arquivos_user;
+
+    $num_roadmaps_user = $num_trms_user + $num_arquivos_user - $trms_without_files_user;
 
     //Coleta informações globais do banco para a área de análise
     $number6 = get_data("SELECT id_prospec FROM prospec");
@@ -377,11 +381,14 @@ saveCurrentURL();
     $array_temas_global = [];
     $array_anos_prospeccoes_global = [];
 
+    $trms_without_files_global = 0;
+
     if  ($results_max6>0) {
       while($result6=pg_fetch_object($number6)) {
         $number5 = get_data("SELECT num_textos_prospec FROM prospec where id_prospec = ".$result6->id_prospec);
         $row5 = pg_fetch_array($number5);        
         $numero_arquivos_global_tmp = $row5[0];
+        if($numero_arquivos_global_tmp == 0) $trms_without_files_global++;
         $num_arquivos_global += $numero_arquivos_global_tmp;
 
         $number7 = get_data("SELECT COUNT(*) FROM roadmap where id_prospec_roadmap = ".$result6->id_prospec);
@@ -402,7 +409,7 @@ saveCurrentURL();
       }
     }
 
-    $num_roadmaps_global = $num_trms_global + $num_arquivos_global;
+    $num_roadmaps_global = $num_trms_global + $num_arquivos_global - $trms_without_files_global;
 
   ?>
 
@@ -478,7 +485,18 @@ saveCurrentURL();
 
     var i_tmp_temas = 0;
     for (const [key, value] of Object.entries(uniqs_arrayTemasUserJS)) {
-      labelsChartTemasUser.push(key);
+      //Traduz a area
+      assunto_multilang_user = "";
+      if(key == "Work")
+        assunto_multilang_user = "<?php echo $LANG['20']; ?>";
+      if(key == "Education")
+        assunto_multilang_user = "<?php echo $LANG['17']; ?>";
+      if(key == "Medicine")
+        assunto_multilang_user = "<?php echo $LANG['18']; ?>";
+      if(key == "Transport")
+        assunto_multilang_user = "<?php echo $LANG['19']; ?>";
+
+      labelsChartTemasUser.push(assunto_multilang_user);
       dataChartTemasUser.push(value);
       colorsChartTemasUser.push(colorsChartDefault[i_tmp_temas]);
       i_tmp_temas++;
@@ -533,7 +551,17 @@ saveCurrentURL();
 
     var i_tmp_temas = 0;
     for (const [key, value] of Object.entries(uniqs_arrayTemasGlobalJS)) {
-      labelsChartTemasGlobal.push(key);
+      //Traduz a area
+      assunto_multilang_global = "";
+      if(key == "Work")
+        assunto_multilang_global = "<?php echo $LANG['20']; ?>";
+      if(key == "Education")
+        assunto_multilang_global = "<?php echo $LANG['17']; ?>";
+      if(key == "Medicine")
+        assunto_multilang_global = "<?php echo $LANG['18']; ?>";
+      if(key == "Transport")
+        assunto_multilang_global = "<?php echo $LANG['19']; ?>";
+      labelsChartTemasGlobal.push(assunto_multilang_global);
       dataChartTemasGlobal.push(value);
       colorsChartTemasGlobal.push(colorsChartDefault[i_tmp_temas]);
       i_tmp_temas++;

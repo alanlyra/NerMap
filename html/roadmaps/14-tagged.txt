@@ -1,6 +1,0 @@
-In/U_TEMPPRED 2030/DATE ,/O China/LOCATION will/O lead/O the/O world/O in/O Artificial/O Intelligence/O ./O 
-According/O to/O Eric/PERSON Schmidt/PERSON ``/O it/O 's/O pretty/O simple/O ./O 
-By/U_TEMPPRED 2020/DATE ,/O China/LOCATION will/O have/O caught/O up/O ./O 
-By/U_TEMPPRED 2025/DATE ,/O China/LOCATION will/O be/O better/O than/O USA/ORGANIZATION ./O 
-For/O the/B_TEMPPRED year/M_TEMPPRED of/E_TEMPPRED 2030/DATE ,/O China/LOCATION will/O dominate/O the/O industries/O of/O AI/O ./O ''/O 
-And/O the/O numbers/O do/O n't/O lie/O ,/O says/O Peter/PERSON Diamandis/PERSON :/O ``/O PricewaterhouseCoopers/O recently/DATE projected/O AI/O 's/O deployment/O will/O add/O $/MONEY 15.7/MONEY trillion/MONEY to/O the/O global/O GDP/O by/U_TEMPPRED 2030/DATE ,/O with/O China/LOCATION taking/O home/O $/MONEY 7/MONEY trillion/MONEY of/O that/O total/O ,/O dwarfing/O North/LOCATION America/LOCATION 's/O $/MONEY 3.7/MONEY trillion/MONEY in/O gains/O ./O ''/O 

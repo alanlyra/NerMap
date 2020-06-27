@@ -206,6 +206,7 @@ $LANG = array(
   '199' => 'Processing status: Completed',
   '200' => 'Processing status: In process',
   '201' => 'Processing status: Error',
+  '202' => 'No data available',
   'home'      => 'Home',
   'news'      => 'News',
   'help'      => 'Help'
