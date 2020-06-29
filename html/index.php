@@ -90,7 +90,7 @@ saveCurrentURL();
       <center>
       <table width=200px cellpadding=5px cellspacing=5px>
         	<tr>
-   	          <td align="right" width=50%><?php echo $LANG['96']; ?>:</td>
+   	          <td style="white-space: nowrap;" align="right" width=50%><?php echo $LANG['96']; ?>:</td>
               <td align="left" width=50%>
                 <input type="text" id="username" name="email" class="form-control bg-light border-0" style="width:250px;">
               </td>
