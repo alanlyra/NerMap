@@ -635,6 +635,8 @@ saveCurrentURL();
       //window.location.href = 'prospeccoes.php';
     }
 
+    //if(document.getElementById("fileInput") != null) document.getElementById("fileInput").style.display = "none";
+
   </script>
 
 <script type="text/javascript">
@@ -738,6 +740,7 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
     var dt_proximo = "<?php echo $LANG['197']; ?>";
     var dt_mostrando = "<?php echo $LANG['198']; ?>";
     var dt_sem_dados = "<?php echo $LANG['202']; ?>";
+    var dt_no_records = "<?php echo $LANG['208']; ?>";
   </script>
   <script src="vendor/datatables/jquery.dataTables.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>

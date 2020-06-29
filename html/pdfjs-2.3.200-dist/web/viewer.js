@@ -249,7 +249,7 @@ function getViewerConfiguration() {
       lessInfoButton: document.getElementById('errorShowLess')
     },
     printContainer: document.getElementById('printContainer'),
-    openFileInputName: 'fileInput',
+    //openFileInputName: 'fileInput',
     debuggerScriptPath: './debugger.js'
   };
 }
@@ -1834,21 +1834,21 @@ function webViewerInitialized() {
   var params = (0, _ui_utils.parseQueryString)(queryString);
   file = 'file' in params ? params.file : _app_options.AppOptions.get('defaultUrl');
   validateFileURL(file);
-  var fileInput = document.createElement('input');
-  fileInput.id = appConfig.openFileInputName;
-  fileInput.className = 'fileInput';
-  fileInput.setAttribute('type', 'file');
-  fileInput.oncontextmenu = _ui_utils.noContextMenuHandler;
-  document.body.appendChild(fileInput);
+  //var fileInput = document.createElement('input');
+  //fileInput.id = appConfig.openFileInputName;
+  //fileInput.className = 'fileInput';
+  //fileInput.setAttribute('type', 'file');
+  //fileInput.oncontextmenu = _ui_utils.noContextMenuHandler;
+  //document.body.appendChild(fileInput);
 
   if (!window.File || !window.FileReader || !window.FileList || !window.Blob) {
     appConfig.toolbar.openFile.setAttribute('hidden', 'true');
     appConfig.secondaryToolbar.openFileButton.setAttribute('hidden', 'true');
   } else {
-    fileInput.value = null;
+    //fileInput.value = null;
   }
 
-  fileInput.addEventListener('change', function (evt) {
+  /* fileInput.addEventListener('change', function (evt) {
     var files = evt.target.files;
 
     if (!files || files.length === 0) {
@@ -1859,7 +1859,7 @@ function webViewerInitialized() {
       source: this,
       fileInput: evt.target
     });
-  });
+  }); */
   appConfig.mainContainer.addEventListener('dragover', function (evt) {
     evt.preventDefault();
     evt.dataTransfer.dropEffect = 'move';
@@ -1874,7 +1874,7 @@ function webViewerInitialized() {
 
     PDFViewerApplication.eventBus.dispatch('fileinputchange', {
       source: this,
-      fileInput: evt.dataTransfer
+      //fileInput: evt.dataTransfer
     });
   });
 
@@ -2101,7 +2101,7 @@ var webViewerFileInputChange;
       return;
     }
 
-    var file = evt.fileInput.files[0];
+    //var file = evt.fileInput.files[0];
 
     if (URL.createObjectURL && !_app_options.AppOptions.get('disableCreateObjectURL')) {
       var url = URL.createObjectURL(file);

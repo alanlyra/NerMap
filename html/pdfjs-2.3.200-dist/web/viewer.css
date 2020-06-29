@@ -1937,6 +1937,8 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   position: fixed;
   right: 0;
   top: 0;
+  visibility: hidden;
+  display: none;
 }
 
 #PDFBug {

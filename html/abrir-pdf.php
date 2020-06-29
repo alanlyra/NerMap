@@ -25,7 +25,7 @@ saveCurrentURL();
       echo "<div class='modal-content'>
             <div class='modal-header'>
               <h4 class='modal-title'>".$nome_arquivo."</h4>
-              <button type='button' class='close' data-dismiss='modal'>&times;</button>       
+              <button type='button' class='close' onclick='hideModalVisualizarArquivo();'>&times;</button>      
             </div>";
             
 
@@ -431,7 +431,7 @@ saveCurrentURL();
              
        echo "</div>
             <div class='modal-footer'>
-              <button type='button' class='btn btn-default' data-dismiss='modal'>".$LANG['79']."</button>
+              <button type='button' class='btn btn-default' onclick='hideModalVisualizarArquivo();'>".$LANG['79']."</button>
             </div>
           </div>";
         
@@ -481,6 +481,10 @@ saveCurrentURL();
       else
         searchTermTXT();
     }, 700);
+
+    function hideModalVisualizarArquivo() {
+      $('#modalAbrirPDF').modal('hide');
+    }
   
   </script>
 

@@ -163,9 +163,9 @@ saveCurrentURL();
                         <div class="card border-left-primary feature-box-simple py-2" style="height: 75px;">
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
-                              <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['24']; ?></div>
-                                <div id="num-trms" class="h6 mb-0 font-weight-bold text-gray-800"></div>
+                              <div class="col mr-2 truncated">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 truncated"><?php echo $LANG['24']; ?></div>
+                                <div id="num-trms" class="h6 mb-0 font-weight-bold text-gray-800 truncated"></div>
                               </div>
                               <div class="col-auto">
                                 <i class="fas fa-archive fa-2x text-gray-300"></i>
@@ -177,9 +177,9 @@ saveCurrentURL();
                         <div class="card border-left-primary feature-box-simple py-2" style="height: 75px; margin-top:20px;">
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
-                              <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['25']; ?></div>
-                                <div id="num-arquivos" class="h6 mb-0 font-weight-bold text-gray-800"></div>
+                              <div class="col mr-2 truncated">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 truncated"><?php echo $LANG['25']; ?></div>
+                                <div id="num-arquivos" class="h6 mb-0 font-weight-bold text-gray-800 truncated"></div>
                               </div>
                               <div class="col-auto">
                                 <i class="fas fa-file-alt fa-2x text-gray-300" style="margin-right: 5px;"></i>
@@ -194,9 +194,9 @@ saveCurrentURL();
                         <div class="card border-left-primary feature-box-simple py-2" style="height: 75px;">
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
-                              <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['26']; ?></div>
-                                <div id="num-roadmaps" class="h6 mb-0 font-weight-bold text-gray-800"></div>
+                              <div class="col mr-2 truncated">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 truncated"><?php echo $LANG['26']; ?></div>
+                                <div id="num-roadmaps" class="h6 mb-0 font-weight-bold text-gray-800 truncated"></div>
                               </div>
                               <div class="col-auto">
                                 <i class="fas fa-map-signs fa-2x text-gray-300"></i>
@@ -208,9 +208,9 @@ saveCurrentURL();
                         <div class="card border-left-primary feature-box-simple py-2" style="height: 75px; margin-top:20px;">
                           <div style="padding: 0.5rem !important;">
                             <div class="row no-gutters align-items-center">
-                              <div class="col mr-2">
-                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['27']; ?></div>
-                                <div id="num-prospeccoes" class="h6 mb-0 font-weight-bold text-gray-800"></div>
+                              <div class="col mr-2 truncated">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 truncated"><?php echo $LANG['27']; ?></div>
+                                <div id="num-prospeccoes" class="h6 mb-0 font-weight-bold text-gray-800 truncated"></div>
                               </div>
                               <div class="col-auto">
                                 <i class="fas fa-calendar fa-2x text-gray-300"></i>

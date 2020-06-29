@@ -13,7 +13,7 @@ saveCurrentURL();
       <th><?php echo $LANG['51']; ?></th>
       <th><?php echo $LANG['76']; ?></th>
       <th><?php echo $LANG['53']; ?></th>
-      <th><?php echo $LANG['85']; ?></th>
+      <th><?php echo $LANG['204']; ?></th>
       <th><?php echo $LANG['55']; ?></th>
       <th><?php echo $LANG['56']; ?></th>
     </tr>
@@ -25,7 +25,7 @@ saveCurrentURL();
       <th><?php echo $LANG['51']; ?></th>
       <th><?php echo $LANG['76']; ?></th>
       <th><?php echo $LANG['53']; ?></th>
-      <th><?php echo $LANG['85']; ?></th>
+      <th><?php echo $LANG['204']; ?></th>
       <th><?php echo $LANG['55']; ?></th>
       <th><?php echo $LANG['56']; ?></th>
     </tr>
@@ -56,11 +56,17 @@ saveCurrentURL();
                   <td><div style='text-align: center;'><img src='img/".$result->status_ren.".png' title='".$status_ren_msg."' style='width: 20px; height: 20px; display: inline-block;'/></div></td>";
 
                   if (file_exists("uploads/pdf/".$result->id_arquivo.".pdf")) 
-                    echo "<td><a href='uploads/pdf/".$result->id_arquivo.".pdf' download><div style='text-align: center;'><img src='img/pdf_download3.png' title='".$LANG['90']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>";
+                    echo "<td style='text-align: center;'>
+                            <a href='uploads/pdf/".$result->id_arquivo.".pdf' style='display: inline-block;' download><div><img src='img/download_file.png' title='".$LANG['90']."' style='width: 22px; height: 22px; display: inline-block; opacity:80%;'/></div></a>
+                            <a href='#' style='display: inline-block;' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdftable-".$result->id_arquivo."' data-original='' data-tipoarquivo='pdf'><div><img src='img/pdf_download3.png' title='".$LANG['209']."' style='width: 19px; height: 19px; display: inline-block;'/></div></a>
+                          </td>";
                   else
-                    echo "<td><a href='uploads/".$result->id_arquivo.".txt' download><div style='text-align: center;'><img src='img/txt_download2.png' title='".$LANG['90']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>";
-
-
+                    echo "<td style='text-align: center;'>
+                            <a href='uploads/".$result->id_arquivo.".txt' style='display: inline-block;' download><div><img src='img/download_file.png' title='".$LANG['90']."' style='width: 22px; height: 22px; display: inline-block; opacity:80%;'/></div></a>
+                            <a data-target='#modalAbrirPDF' style='display: inline-block;' data-toggle='modal' data-id='abrirpdftable-".$result->id_arquivo."' data-original='' data-tipoarquivo='txt'><div><img src='img/txt_download2.png' title='".$LANG['209']."' style='width: 20px; height: 20px; display: inline-block; cursor: pointer;'/></div></a>
+                          </td>";
+                  
+                        
 
                   echo "<td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['91']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                   <td style='text-align: center;'>
@@ -81,6 +87,14 @@ saveCurrentURL();
     <div id="edicao-arquivo" class="modal-dialog">
       <!-- Modal content-->
       
+    </div>
+  </div>
+
+  <div id="modalAbrirPDF" class="modal fade" role="dialog">
+    <div id="content-pdf-table" class="modal-dialog modal-xl">
+      <!-- Modal content-->
+      
+
     </div>
   </div>
 
@@ -137,9 +151,17 @@ saveCurrentURL();
             data_deletearquivo = $(this).data('deletearquivo');
           }
 
+          if (typeof $(this).data('original') !== 'undefined') {
+            data_original = $(this).data('original');
+          }
+          if (typeof $(this).data('tipoarquivo') !== 'undefined') {
+            data_tipoarquivo = $(this).data('tipoarquivo');
+          }
+
           var data_txt =  data_id.toString();
           var data_id_editarArquivo = data_txt.replace('editararquivo-','');
           var data_id_deleteprospecbymodal = data_txt.replace('deleteprospecbymodal-','');
+          var data_id_prospec = data_txt.replace('abrirpdftable-','');
           if (data_txt.indexOf('editararquivo-') > -1) {
             $.ajax({
               url: "modal-editar-arquivo.php",
@@ -164,6 +186,19 @@ saveCurrentURL();
               success: function(html) {
                 $('#delete-arquivo').html(html);
                 $('#modalConfirmarDeleteArquivo').modal('show');
+              }
+            })
+          }
+          else if(data_txt.indexOf('abrirpdftable-') > -1) {
+            $.ajax({
+              url: "abrir-pdf.php",
+              method: "POST",
+              data: { "identificador": data_id_prospec,
+                      "original": data_original,
+                      "tipoarquivo": data_tipoarquivo },
+              success: function(html) {
+                $('#content-pdf-table').html(html);
+                $('#modalAbrirPDF').modal('show');
               }
             })
           } 

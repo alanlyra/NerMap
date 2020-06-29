@@ -958,32 +958,32 @@ saveCurrentURL();
 
     var relatorio_arrayJS_Global = <?php echo json_encode($array_relatorio_filtered); ?>;
 
-    var total_conf = 0;
-    for (var i = 0; i < relatorio_arrayJS_Global.length; i++) {
-      total_conf += parseInt(relatorio_arrayJS_Global[i]["confiabilidade"]);
+    if(relatorio_arrayJS_Global !== null) {
+      var total_conf = 0;
+      for (var i = 0; i < relatorio_arrayJS_Global.length; i++) {
+        total_conf += parseInt(relatorio_arrayJS_Global[i]["confiabilidade"]);
+      }
+    
+      var media_conf_roadmap = total_conf / relatorio_arrayJS_Global.length;
+      media_conf_roadmap = media_conf_roadmap.toFixed(2);
+
+      //console.log(media_conf_roadmap);
+
+      var conf_media = "";
+      if(media_conf_roadmap > 9)
+        conf_media = "conf_10_bw.png";
+      if(media_conf_roadmap >= 6 && media_conf_roadmap <= 9)
+        conf_media = "conf_8_bw.png";
+      if(media_conf_roadmap >= 4 && media_conf_roadmap < 6)
+        conf_media = "conf_5_bw.png";
+      if(media_conf_roadmap >= 2 && media_conf_roadmap < 4)
+        conf_media = "conf_3_bw.png";  
+      if(media_conf_roadmap < 2)
+        conf_media = "conf_1_bw.png"; 
+
+      document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> <?php echo $LANG['76']; ?>: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='<?php echo $LANG['128']; ?>: " + media_conf_roadmap + "' style='width: 20px; height: 20px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
     }
     
-    var media_conf_roadmap = total_conf / relatorio_arrayJS_Global.length;
-    media_conf_roadmap = media_conf_roadmap.toFixed(2);
-
-    //console.log(media_conf_roadmap);
-
-    var conf_media = "";
-    if(media_conf_roadmap > 9)
-      conf_media = "conf_10_bw.png";
-    if(media_conf_roadmap >= 6 && media_conf_roadmap <= 9)
-      conf_media = "conf_8_bw.png";
-    if(media_conf_roadmap >= 4 && media_conf_roadmap < 6)
-      conf_media = "conf_5_bw.png";
-    if(media_conf_roadmap >= 2 && media_conf_roadmap < 4)
-      conf_media = "conf_3_bw.png";  
-    if(media_conf_roadmap < 2)
-      conf_media = "conf_1_bw.png"; 
-
-    //console.log(conf_media);
-
-    document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> <?php echo $LANG['76']; ?>: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='<?php echo $LANG['128']; ?>: " + media_conf_roadmap + "' style='width: 20px; height: 20px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
-  
   	function geraRelatorioCSV() {
       
       var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
@@ -1040,8 +1040,8 @@ saveCurrentURL();
 	}
 
 	var headers = {
-	    date: 'Data'.replace(/,/g, ''), // remove commas to avoid errors
-	    event: "Acontecimento"
+	    date: "<?php echo $LANG['72']; ?>".replace(/,/g, ''), // remove commas to avoid errors
+	    event: "<?php echo $LANG['207']; ?>"
 	};
 
 	var itemsFormatted = [];
@@ -1156,11 +1156,11 @@ saveCurrentURL();
       size = sizes[0];
 
       if(tipoCabecalhoJS.indexOf("roadmap-completo") > -1)
-        var tipo = "Roadmap Completo";
+        var tipo = "<?php echo $LANG['205']; ?>";
       else
-        var tipo = "Roadmap do Arquivo: " + relatorio_arrayJS[0].nome_arquivo;
+        var tipo = "<?php echo $LANG['206']; ?>" + ": " + relatorio_arrayJS[0].nome_arquivo;
 
-      doc.text(0.5, verticalOffset + size / 72,  "TRM " + relatorio_arrayJS[0].nome_trm);
+      doc.text(0.5, verticalOffset + size / 72,  "TRM: " + relatorio_arrayJS[0].nome_trm);
 
       doc.text(0.5, 1 + size / 72,  tipo);
 
@@ -1215,9 +1215,9 @@ saveCurrentURL();
     var nome_arquivoJS = "<?php echo $nome_arquivo; ?>";
 
     if(tipoCabecalhoJS.indexOf("roadmap-completo") > -1)
-        var fileTitle = "Relatório do TRM " + nome_trmJS + " (Completo) - " + getFormattedTime();
+        var fileTitle = "<?php echo $LANG['203']; ?>" + " " + nome_trmJS + " ("+ "<?php echo $LANG['115']; ?>" +") - " + getFormattedTime();
       else
-        var fileTitle = "Relatório do TRM " + nome_trmJS + " (Arquivo " + nome_arquivoJS + ") - " + getFormattedTime();
+        var fileTitle = "<?php echo $LANG['203']; ?>" + " " + nome_trmJS + " (" + "<?php echo $LANG['204']; ?>" + " " + nome_arquivoJS + ") - " + getFormattedTime();
 
     return fileTitle;    
   }
@@ -1241,6 +1241,7 @@ saveCurrentURL();
     var dt_proximo = "<?php echo $LANG['197']; ?>";
     var dt_mostrando = "<?php echo $LANG['198']; ?>";
     var dt_sem_dados = "<?php echo $LANG['202']; ?>";
+    var dt_no_records = "<?php echo $LANG['208']; ?>";
   </script>
   <script src="vendor/datatables/jquery.dataTables.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
