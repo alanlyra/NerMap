@@ -69,7 +69,7 @@ saveCurrentURL();
                   
                         
 
-                  echo "<td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['91']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                  echo "<td><a href='/roadmaps.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['91']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                   <td style='text-align: center;'>
                   <a href='#' data-target='#modalEditarArquivo' data-toggle='modal' data-id='editararquivo-".$result->id_arquivo."' data-nomearquivo='".$result->nome_arquivo."' data-anoarquivo='".$result->ano_arquivo."' data-confarquivo='".$result->conf_arquivo."' data-autores='".$result->autores."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='".$LANG['92']."' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
 

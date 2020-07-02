@@ -42,7 +42,7 @@
     $id_arquivo = $id_run;
     $num_textos = 1;
   
-    popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
+  popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
   }
 
   ?>

@@ -61,7 +61,7 @@ saveCurrentURL();
                                    
                   }
                   else{
-                    echo  "<form action='prospeccoes.php?' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
+                    echo  "<form action='trms.php?' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
                             <input type='text' id='idProspec' name='idProspec' class='form-control bg-light border-0 small' value='".$id_prospec."' aria-label='Search' 
                             aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
                             <input type='text' id='idUsuarioConvidado' name='idUsuarioConvidado' class='form-control bg-light border-0 small' value='".$result->id_user."' aria-label='Search' 

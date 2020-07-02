@@ -57,12 +57,12 @@ saveCurrentURL();
                             if($action == "trm-adicionado") {
                               $message = "O Technology Roadmapping foi criado com sucesso!";
                               $action_txt = "Gerenciar TRMs";
-                              $action_page = "prospeccoes.php";
+                              $action_page = "trms.php";
                             }
                             else if($action == "arquivo-adicionado") {
                               $message = "O arquivo foi adicionado com sucesso ao TRM!";
                               $action_txt = "Visualizar TRMs";
-                              $action_page = "seeroadmap.php";
+                              $action_page = "roadmaps.php";
                             }
                             else {
                               $message = "";

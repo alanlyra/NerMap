@@ -134,7 +134,7 @@ saveCurrentURL();
                           }
 
                          echo "
-                          <form action='seeroadmap.php?".$tipoCabecalho."=".$id_busca."' method='post' multipart='' enctype='multipart/form-data'><div class='col-xl-11 col-lg-12'>
+                          <form action='roadmaps.php?".$tipoCabecalho."=".$id_busca."' method='post' multipart='' enctype='multipart/form-data'><div class='col-xl-11 col-lg-12'>
                             <div class='card shadow mb-4'>
                               <div class='card-header py-3'>
                                 <input style='float:right;' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm' type='submit' name='geraRelatorio' value='Gerar Relatório'></input>                            
@@ -222,7 +222,7 @@ saveCurrentURL();
                                           <td>".$result->assunto_prospec."</td>
                                           <td>".$result->ano_prospec."</td>
                                           <td><div style='text-align: center;'><img src='img/".$result->status_ren_prospec.".png' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
-                                          <td><a href='/seeroadmap.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                          <td><a href='/roadmaps.php?roadmap=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                           <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                         </tr>";
                                   }

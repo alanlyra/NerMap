@@ -352,7 +352,7 @@ saveCurrentURL();
                       echo "<p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>".$LANG['132']." ".$section[nome_arquivo]."</b></small></p>
                           <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 3px 0px 0px 6px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>".$LANG['133']."</b></small></div></p></a>
                           <div href='' style='margin: 0; float: right;'><p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>·</b></small></p></div>
-                          <a href='seeroadmap.php?roadmap-completo=".$id_roadmap."' style='margin: 0; float: right;'><div style='text-align: center;'><p style='margin: 3px -14px 0px 0px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>".$LANG['137']."</b></small></p></div></a>
+                          <a href='roadmaps.php?roadmap-completo=".$id_roadmap."' style='margin: 0; float: right;'><div style='text-align: center;'><p style='margin: 3px -14px 0px 0px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>".$LANG['137']."</b></small></p></div></a>
                         </div>";
                     }
 
@@ -521,7 +521,7 @@ saveCurrentURL();
                         <img src='img/timeline6.png' style='width: 130px; height: 100px; display: inline-block;'/>
                         <h4>".$LANG['115']."</h4>
                         <p style='height: 3rem;'>".$LANG['117']."</p>
-                        <button class='btn btn-primary' style='margin:5px;' onclick='redirect(\"seeroadmap.php?roadmap-completo=".$_GET["roadmap"]."\");'>".$LANG['118']."</button>
+                        <button class='btn btn-primary' style='margin:5px;' onclick='redirect(\"roadmaps.php?roadmap-completo=".$_GET["roadmap"]."\");'>".$LANG['118']."</button>
                       </div>
                       </div> <!-- End Col -->
                       <div class='col-sm-6 col-md-3'>
@@ -610,7 +610,7 @@ saveCurrentURL();
                                   echo "<img src='img/".$result->status_ren_prospec.".png' title='".$status_ren_msg."' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 echo "</div></td>
                                 </div></td>
-                                    <td><a href='/seeroadmap.php?roadmap-completo=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['126']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                                    <td><a href='/roadmaps.php?roadmap-completo=".$result->id_prospec."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['126']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                     <td><a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$result->id_prospec."'><div style='text-align: center;'><img src='img/ver_arquivos.png' title='".$LANG['57']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                                   </tr>";
                             }
@@ -1285,7 +1285,7 @@ saveCurrentURL();
 
     $update_on_roadmap = set_data("UPDATE roadmap SET tempo = $1, prospeccao = $2 where id_arquivo_unico = $3 AND ordem = $4 AND id_prospec_roadmap = $5", array($anoProspec, $infoProspec, $idArquivo, $indiceRoadmap, $idRoadmap));
 
-    echo "<script>window.location.href = 'seeroadmap.php?".$cabecalhoCompleto."';</script>";
+    echo "<script>window.location.href = 'roadmaps.php?".$cabecalhoCompleto."';</script>";
 
   }
 
@@ -1301,7 +1301,7 @@ saveCurrentURL();
 
     $delete_on_roadmap = set_data("DELETE FROM roadmap where ".$keyConsulta." = $1 AND ordem = $2 AND id_prospec_roadmap = $3", array($idArquivo, $indiceRoadmap, $idRoadmap));
 
-    echo "<script>window.location.href = 'seeroadmap.php?".$cabecalhoCompleto."';</script>";
+    echo "<script>window.location.href = 'roadmaps.php?".$cabecalhoCompleto."';</script>";
 
   }
 
@@ -1354,7 +1354,7 @@ saveCurrentURL();
 
     $set_on_roadmap = set_data("INSERT INTO roadmap (ano_arquivo_adicionado, arquivo_origem, assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, nome_arquivo_adicionado, ordem, prospeccao, tem_filtro, tempo, prospeccao_original, autores_prospeccao, conf_prospeccao) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)", array($anoArquivo, '0', $assuntoAdicionar, 'null', $idArquivo, $idRoadmap, $id_roadmap_table_adicionar, $nomeArquivo, $indice, $infoProspec, 'false', $anoProspec, $infoProspec, $autores, $conf_value));
 
-    echo "<script>window.location.href = 'seeroadmap.php?".$cabecalhoCompleto."';</script>";
+    echo "<script>window.location.href = 'roadmaps.php?".$cabecalhoCompleto."';</script>";
 
   }
 

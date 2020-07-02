@@ -54,7 +54,7 @@ saveCurrentURL();
                 </div>
                 
 
-                <form action="roadmap.php" method="post" multipart="" enctype="multipart/form-data" style="text-align: center; max-height: 370px;">
+                <form action="home.php" method="post" multipart="" enctype="multipart/form-data" style="text-align: center; max-height: 370px;">
                 <div class="col-md-11 feature-box" style="text-align: left; display:inline-block; margin-top:1.4rem;">
                 <div class="row justify-content-center">
                   <div class="col-xl-12 col-lg-12" style="margin-top:2.5vh;">
@@ -102,7 +102,7 @@ saveCurrentURL();
                       <img src="img/files2.png" style="width: 100px; height: 100px; display: inline-block;"/>
                         <h4><?php echo $LANG['9']; ?></h4>
                         <p style="height: 3rem;"><?php echo $LANG['10']; ?></p>
-                        <a href="prospeccoes.php"><button class="btn btn-primary" style="margin:5px;"><?php echo $LANG['12']; ?></button></a>
+                        <a href="trms.php"><button class="btn btn-primary" style="margin:5px;"><?php echo $LANG['12']; ?></button></a>
                       </div>
                     </div> <!-- End Col -->
                     <div class="col-sm-5 col-md-5">
@@ -110,7 +110,7 @@ saveCurrentURL();
                       <img src="img/timeline6.png" style="width: 130px; height: 100px; display: inline-block;"/>
                         <h4><?php echo $LANG['8']; ?></h4>
                         <p style="height: 3rem;"><?php echo $LANG['11']; ?></p>
-                        <a href="seeroadmap.php"><button class="btn btn-primary" style="margin:5px;"><?php echo $LANG['12']; ?></button></a>
+                        <a href="roadmaps.php"><button class="btn btn-primary" style="margin:5px;"><?php echo $LANG['12']; ?></button></a>
                       </div>
                   </div> <!-- End Col -->	
                 </div>
@@ -750,7 +750,7 @@ saveCurrentURL();
         $save_on_prospec = set_data("INSERT INTO prospec (id_prospec, nome_prospec, assunto_prospec, ano_prospec, num_textos_prospec, status_ren_prospec, conf_prospec, usuario_prospec) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)", array($id_prospec_db, $nome_db, $tema_db, $ano_db, 0, 'null', 10, $_SESSION['id']));
         db_grupos($id_prospec_db);
         //echo "<script>window.location.href = 'success.php?action=trm-adicionado';</script>";
-        echo "<script>window.location.href = 'prospeccoes.php';</script>";
+        echo "<script>window.location.href = 'trms.php';</script>";
     }
 
   function db_grupos($id_prospec_db) {   

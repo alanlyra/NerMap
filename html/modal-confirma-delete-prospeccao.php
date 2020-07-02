@@ -25,7 +25,7 @@ saveCurrentURL();
               </div>
               <div class='modal-body'>".$LANG['165']."</div>
               <div class='modal-footer'>
-              <form action='seeroadmap.php?".$cabecalho."' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
+              <form action='roadmaps.php?".$cabecalho."' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>
                 <input type='text' id='idRoadmap' name='idRoadmap' class='form-control bg-light border-0 small' value='".$id_prospec."' aria-label='Search' aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
                 <input type='text' id='idArquivo' name='idArquivo' class='form-control bg-light border-0 small' value='".$id_arquivo."' aria-label='Search' aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>
                 <input type='text' id='anoProspec' name='anoProspec' class='form-control bg-light border-0 small' value='".$ano_arquivo."' aria-label='Search' aria-describedby='basic-addon2' style='display: none; visibility: hidden;'>

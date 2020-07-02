@@ -49,7 +49,7 @@ saveCurrentURL();
                   <td>".$result->ano_arquivo."</td>
                   <td><div style='text-align: center;'><img src='img/conf_stars_".$result->conf_arquivo."_bw.png' title='".$LANG['76'].": ".$LANG[$rate]."' style='height: 20px; display: inline-block;'/></div></td>
                   <td><div style='text-align: center;'><img src='img/".$result->status_ren.".png' title='".$status_ren_msg."' style='width: 20px; height: 20px; display: inline-block;'/></div></td>
-                  <td><a href='/seeroadmap.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['91']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
+                  <td><a href='/roadmaps.php?arquivo=".$result->id_arquivo."'><div style='text-align: center;'><img src='img/timeline6.png' title='".$LANG['91']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
                 </tr>";
               }
     }

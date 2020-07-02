@@ -37,7 +37,7 @@ saveCurrentURL();
             </div>
             <div id='content-teste' class='modal-body'>";
 
-        echo "<form action='seeroadmap.php?".$cabecalho."=".$param."' method='post' multipart='' enctype='multipart/form-data'>
+        echo "<form action='roadmaps.php?".$cabecalho."=".$param."' method='post' multipart='' enctype='multipart/form-data'>
                 
                    <div class='col-xl-6 col-lg-7'>
                   <h5>".$LANG['21'].":</h5>

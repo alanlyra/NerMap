@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
   <!-- Sidebar - Brand -->
-  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/roadmap.php">
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home.php">
     <div class="sidebar-brand-icon ">
       <i class="fas fa-laravel"></i>
     </div>
@@ -28,7 +28,7 @@
 
   <!-- Nav Item - Criar TRM -->
   <li id="li_roadmap" class="nav-item">
-    <a class="nav-link" href="roadmap.php">
+    <a class="nav-link" href="home.php">
      <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
      <i class="fas fa-fw fa-home"></i>
       <span><?php echo $LANG['1']; ?></span></a>
@@ -46,14 +46,14 @@
 
   <!-- Nav Item - Prospecções Collapse Menu -->
   <li id="li_prospec" class="nav-item">
-    <a class="nav-link" href="prospeccoes.php">
+    <a class="nav-link" href="trms.php">
       <i class="fas fa-fw fa-table"></i>
       <span><?php echo $LANG['9']; ?></span></a>
   </li>
 
   <!-- Nav Item - Roadmaps Collapse Menu -->
   <li id="li_seerodmaps" class="nav-item">
-    <a class="nav-link" href="seeroadmap.php">
+    <a class="nav-link" href="roadmaps.php">
       <i class="fas fa-fw fa-map-signs"></i>
       <span><?php echo $LANG['8']; ?></span></a>
   </li>

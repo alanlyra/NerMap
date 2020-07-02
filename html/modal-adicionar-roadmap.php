@@ -29,7 +29,7 @@ saveCurrentURL();
             </div>
             <div class='modal-body'>";
 
-        echo "<form action='seeroadmap.php?".$cabecalho."=".$param."' method='post' multipart='' enctype='multipart/form-data'>
+        echo "<form action='roadmaps.php?".$cabecalho."=".$param."' method='post' multipart='' enctype='multipart/form-data'>
                 
                   <div class='row'>
                     <div class='col-xl-6 col-lg-6'>

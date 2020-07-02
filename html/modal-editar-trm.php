@@ -18,7 +18,7 @@ saveCurrentURL();
             </div>
             <div class='modal-body'>";
 
-        echo "<form action='prospeccoes.php?' method='post' multipart='' enctype='multipart/form-data'>
+        echo "<form action='trms.php?' method='post' multipart='' enctype='multipart/form-data'>
                 
                   <div class='col-xl-12 col-lg-12'>
                   <h5>".$LANG['3'].":</h5>
