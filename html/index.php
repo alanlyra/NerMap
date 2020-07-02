@@ -8,7 +8,7 @@ saveCurrentURL();
  <?php include_once("head.php") ?>
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
- <body style="width: 98%">
+ <body style="width: 98%; background-color:darkgray;">
 
 <video autoplay muted loop id="videoBackground">
   <source src="img/mar_loop.mp4" type="video/mp4">

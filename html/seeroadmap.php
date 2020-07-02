@@ -399,9 +399,9 @@ saveCurrentURL();
                                     echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
                                 if($array_sections[$j][arquivo_origem] != 0) {	
                                   if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-                                    echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/pdf_download3.png' title='".$LANG['135']."' style='width: 20px; height: 20px; float:right;'/></a>";
+                                    echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/search_on_pdf1.png' title='".$LANG['135']."' style='width: 28px; height: 20px; float:right;'/></a>";
                                   else
-                                    echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/txt_download2.png' title='".$LANG['135']."' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
+                                    echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/search_on_txt1.png' title='".$LANG['135']."' style='width: 28px; height: 20px; float:right; cursor: pointer;'/></a>";
                                 }
                                 else {
                                   echo "<div><img src='img/user9.png' title='".$LANG['138']."' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";

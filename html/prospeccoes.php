@@ -210,7 +210,7 @@ saveCurrentURL();
         	                      <td style='width='2em;'>".$result->ano_prospec."</td>
         	                      <td>".$result->num_textos_prospec."</td>
         	                       <td><div style='text-align: center;'>";
-                                if($result->status_ren_prospec != "null")
+                                if($result->status_ren_prospec != "null" && $result->status_ren_prospec != "")
                                   echo "<img src='img/".$result->status_ren_prospec.".png' title='".$status_ren_msg."' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 echo "</div></td>
                                 <td><a href='#' data-target='#myModal' data-toggle='modal' data-id='".$result->id_prospec."'><div style='text-align: center;'><img src='img/file_add.png' title='".$LANG['54']."' style='width: 20px; height: 20px; display: inline-block;'/></a></td>
@@ -1004,6 +1004,9 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
         else
           $update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'CONCLUIDO' where id_prospec = $1", array($row3[$j][id_prospec]));
         //echo "<script>reloadtable();</script>";
+      }
+      else {
+        $update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = '' where id_prospec = $1", array($row3[$j][id_prospec]));
       }
     } 
 
