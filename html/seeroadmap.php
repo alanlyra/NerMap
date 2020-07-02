@@ -399,9 +399,9 @@ saveCurrentURL();
                                     echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
                                 if($array_sections[$j][arquivo_origem] != 0) {	
                                   if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-                                    echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/search_on_pdf1.png' title='".$LANG['135']."' style='width: 28px; height: 20px; float:right;'/></a>";
+                                    echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/search_on_pdf1.png' title='".$LANG['135']."' style='width: 28px; height: 20px; float:right; margin-right: -9px;'/></a>";
                                   else
-                                    echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/search_on_txt1.png' title='".$LANG['135']."' style='width: 28px; height: 20px; float:right; cursor: pointer;'/></a>";
+                                    echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/search_on_txt1.png' title='".$LANG['135']."' style='width: 28px; height: 20px; float:right; cursor: pointer; margin-right: -9px;'/></a>";
                                 }
                                 else {
                                   echo "<div><img src='img/user9.png' title='".$LANG['138']."' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
@@ -418,8 +418,8 @@ saveCurrentURL();
                                   echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
                                 } */
 
-                                echo "<img src='img/conf_".$array_sections[$j][confiabilidade]."_bw.png' title='".$LANG['134'].": ".$array_sections[$j][confiabilidade]."' style='width: 20px; height: 20px; float:right; margin-right:10px;'/>";
-                                  
+                                //echo "<img src='img/conf_stars_".$array_sections[$j][confiabilidade]."_bw.png' title='".$LANG['134'].": ".$array_sections[$j][confiabilidade]."' style='height: 20px; float:right; margin-right:10px;'/>";
+                                $rate = $array_sections[$j][confiabilidade] * 1000;
                                     echo "<div class='tl-heading'>
                                       <h4>".$array_sections[$j][date]."</h4>
                                       <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i>".$array_sections[$j][autores]." <b>".$array_sections[$j][nome_arquivo]."</b> (".$array_sections[$j][ano_arquivo].").</small></p>
@@ -428,6 +428,7 @@ saveCurrentURL();
                                       <p>".$array_sections[$j][info]."</p>
                                     </div>
                                     <div class='divBotaoEditarRoadmap' style='visibility: hidden;'>
+                                    <p><small class='text-muted' style='float:left;'>".$LANG['134'].":</small><img src='img/conf_stars_".$array_sections[$j][confiabilidade]."_bw.png' title='".$LANG[$rate]."' style='height: 13px; float:left; margin-left: 5px; margin-top: 1.3px;'/></p>
                                     <a href='#' data-target='#modalEditarRoadmap' data-toggle='modal' data-id='editarRoadmap-".$array_sections[$j][id_arquivo]."' data-indice='".$i_prospec."' data-date='".$array_sections[$j][date]."' data-info='".$array_sections[$j][info]."' data-cabecalho='".$tipoCabecalho."' data-prospec='".$id_roadmap."' ><div><img src='img/editar7.png' title='".$LANG['136']."' style='width: 20px; height: 20px; float:right; opacity: 50%;'/></a>
                                     <div>
                                   </div>
@@ -970,18 +971,28 @@ saveCurrentURL();
       //console.log(media_conf_roadmap);
 
       var conf_media = "";
-      if(media_conf_roadmap > 9)
-        conf_media = "conf_10_bw.png";
-      if(media_conf_roadmap >= 6 && media_conf_roadmap <= 9)
-        conf_media = "conf_8_bw.png";
-      if(media_conf_roadmap >= 4 && media_conf_roadmap < 6)
-        conf_media = "conf_5_bw.png";
-      if(media_conf_roadmap >= 2 && media_conf_roadmap < 4)
-        conf_media = "conf_3_bw.png";  
-      if(media_conf_roadmap < 2)
-        conf_media = "conf_1_bw.png"; 
+      if(media_conf_roadmap > 4.9)
+        conf_media = "conf_stars_5_bw.png";
+      if(media_conf_roadmap >= 4.1 && media_conf_roadmap <= 4.9)
+        conf_media = "conf_stars_4.5_bw.png";
+      if(media_conf_roadmap >= 3.9 && media_conf_roadmap <= 4.1)
+      conf_media = "conf_stars_4_bw.png";
+      if(media_conf_roadmap >= 3.1 && media_conf_roadmap <= 3.9)
+        conf_media = "conf_stars_3.5_bw.png";
+      if(media_conf_roadmap >= 2.9 && media_conf_roadmap < 3.1)
+        conf_media = "conf_stars_3_bw.png";
+      if(media_conf_roadmap >= 2.1 && media_conf_roadmap < 2.9)
+        conf_media = "conf_stars_2.5_bw.png"; 
+      if(media_conf_roadmap >= 1.9 && media_conf_roadmap < 2.1)
+      conf_media = "conf_stars_2_bw.png"; 
+      if(media_conf_roadmap >= 1.1 && media_conf_roadmap < 1.9)
+        conf_media = "conf_stars_1.5_bw.png"; 
+      if(media_conf_roadmap >= 0.9 && media_conf_roadmap < 1.1)
+      conf_media = "conf_stars_1_bw.png"; 
+      if(media_conf_roadmap < 0.9)
+        conf_media = "conf_stars_0.5_bw.png"; 
 
-      document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> <?php echo $LANG['76']; ?>: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='<?php echo $LANG['128']; ?>: " + media_conf_roadmap + "' style='width: 20px; height: 20px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
+      document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> <?php echo $LANG['76']; ?>: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='<?php echo $LANG['128']; ?>: " + media_conf_roadmap + "' style='height: 15px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
     }
     
   	function geraRelatorioCSV() {

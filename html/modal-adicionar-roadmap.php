@@ -86,45 +86,23 @@ saveCurrentURL();
                       </br>
 
                       <div class='col-xl-12 col-lg-12'>
-                      <h5>".$LANG['76'].":</h5>
-                      <div class='btn-group' data-toggle='buttons'>
-                        <label class='btn btn-plain' style='cursor: pointer;'>
-                          <input type='radio' name='rate' id='option1' value='1' autocomplete='off' style='cursor: pointer; margin-bottom: 5px;' required> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
-                          <div>
-                            <!-- <img src='img/conf_1.png' style='width: 40px; height: 40px;' /> -->
-                            <img src='img/conf_1_bw.png' title='1' style='width: 40px; height: 40px;' />
-                          </div>
-                        </label>
-                        <label class='btn btn-plain' style='cursor: pointer;'>
-                          <input type='radio' name='rate' id='option2' value='3' autocomplete='off' style='cursor: pointer; margin-bottom: 5px;'> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
-                          <div>
-                            <!-- <img src='img/conf_3.png' style='width: 40px; height: 40px;' /> -->
-                            <img src='img/conf_3_bw.png' title='3' style='width: 40px; height: 40px;' />
-                          </div>
-                        </label>
-                        <label class='btn btn-plain' style='cursor: pointer;'>
-                          <input type='radio' name='rate' id='option3' value='5' autocomplete='off' style='cursor: pointer; margin-bottom: 5px;'> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
-                          <div>
-                            <!-- <img src='img/conf_5.png' style='width: 40px; height: 40px;' /> -->
-                            <img src='img/conf_5_bw.png' title='5' style='width: 40px; height: 40px;' />
-                          </div>
-                        </label>
-                         <label class='btn btn-plain' style='cursor: pointer;'>
-                          <input type='radio' name='rate' id='option4' value='8' autocomplete='off' style='cursor: pointer; margin-bottom: 5px;'> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
-                          <div>
-                            <!-- <img src='img/conf_8.png' style='width: 40px; height: 40px;' /> -->
-                            <img src='img/conf_8_bw.png' title='8' style='width: 40px; height: 40px;' />
-                          </div>
-                        </label>
-                         <label class='btn btn-plain' style='cursor: pointer;'>
-                          <input type='radio' name='rate' id='option5' value='10' autocomplete='off' style='cursor: pointer; margin-bottom: 5px;'> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
-                          <div>
-                            <!-- <img src='img/conf_10.png' style='width: 40px; height: 40px;' /> -->
-                            <img src='img/conf_10_bw.png' title='10' style='width: 40px; height: 40px;' />
-                          </div>
-                        </label>
-                      </div>
+                    <div>
+                      <div style='float:left'>
+                        <h5>".$LANG['76'].":</h5>
+                      </div>   
+                      <div style='float:left; margin-top:-7px; margin-left:5px;'>
+                        <div class='rating'>
+                            <input type='radio' id='optionadicionar5' name='rate' value='5' required/><label for='optionadicionar5' title='".$LANG['5000']."'></label>
+                            <input type='radio' id='optionadicionar4' name='rate' value='4' /><label for='optionadicionar4' title='".$LANG['4000']."'></label>
+                            <input type='radio' id='optionadicionar3' name='rate' value='3' /><label for='optionadicionar3' title='".$LANG['3000']."'></label>
+                            <input type='radio' id='optionadicionar2' name='rate' value='2' /><label for='optionadicionar2' title='".$LANG['2000']."'></label>
+                            <input type='radio' id='optionadicionar1' name='rate' value='1' /><label for='optionadicionar1' title='".$LANG['1000']."'></label>
+                        </div>
+                      </div> 
                     </div>
+                  </div>
+                  
+                 
                       </div>
                     
                     

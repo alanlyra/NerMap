@@ -66,45 +66,23 @@ saveCurrentURL();
                   </br>
 
                   <div class='col-xl-12 col-lg-12'>
-                  <h5>".$LANG['76'].":</h5>
-                  <div class='btn-group' data-toggle='buttons'>
-                    <label class='btn btn-plain' style='cursor: pointer;'>
-                      <input type='radio' name='confArquivo' id='option1' value='1' autocomplete='off' style='cursor: pointer;' required> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
-                      <div id='divOption-1'>
-                        <!-- <img src='img/conf_1.png' style='width: 40px; height: 40px;' /> -->
-                        <img src='img/conf_1_bw.png' title='1' style='width: 40px; height: 40px;' />
-                      </div>
-                    </label>
-                    <label class='btn btn-plain' style='cursor: pointer;'>
-                      <input type='radio' name='confArquivo' id='option2' value='3' autocomplete='off' style='cursor: pointer;'> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
-                      <div id='divOption-3'>
-                        <!-- <img src='img/conf_3.png' style='width: 40px; height: 40px;' /> -->
-                        <img src='img/conf_3_bw.png' title='3' style='width: 40px; height: 40px;' />
-                      </div>
-                    </label>
-                    <label class='btn btn-plain' style='cursor: pointer;'>
-                      <input type='radio' name='confArquivo' id='option3' value='5' autocomplete='off' style='cursor: pointer;'> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
-                      <div id='divOption-5'>
-                        <!-- <img src='img/conf_5.png' style='width: 40px; height: 40px;' /> -->
-                        <img src='img/conf_5_bw.png' title='5' style='width: 40px; height: 40px;' />
-                      </div>
-                    </label>
-                     <label class='btn btn-plain' style='cursor: pointer;'>
-                      <input type='radio' name='confArquivo' id='option4' value='8' autocomplete='off' style='cursor: pointer;'> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
-                      <div id='divOption-8'>
-                        <!-- <img src='img/conf_8.png' style='width: 40px; height: 40px;' /> -->
-                        <img src='img/conf_8_bw.png' title='8' style='width: 40px; height: 40px;' />
-                      </div>
-                    </label>
-                     <label class='btn btn-plain' style='cursor: pointer;'>
-                      <input type='radio' name='confArquivo' id='option5' value='10' autocomplete='off' style='cursor: pointer;'> <span class='glyphicon glyphicon-unchecked unchecked'></span> <span class='glyphicon glyphicon-check'></span>
-                      <div id='divOption-10'>
-                        <!-- <img src='img/conf_10.png' style='width: 40px; height: 40px;' /> -->
-                        <img src='img/conf_10_bw.png' title='10' style='width: 40px; height: 40px;' />
-                      </div>
-                    </label>
+                    <div>
+                      <div style='float:left'>
+                        <h5>".$LANG['76'].":</h5>
+                      </div>   
+                      <div style='float:left; margin-top:-7px; margin-left:5px;'>
+                        <div class='rating'>
+                            <input type='radio' id='optioneditar5' name='confArquivo' value='5' required/><label for='optioneditar5' title='".$LANG['5000']."'></label>
+                            <input type='radio' id='optioneditar4' name='confArquivo' value='4' /><label for='optioneditar4' title='".$LANG['4000']."'></label>
+                            <input type='radio' id='optioneditar3' name='confArquivo' value='3' /><label for='optioneditar3' title='".$LANG['3000']."'></label>
+                            <input type='radio' id='optioneditar2' name='confArquivo' value='2' /><label for='optioneditar2' title='".$LANG['2000']."'></label>
+                            <input type='radio' id='optioneditar1' name='confArquivo' value='1' /><label for='optioneditar1' title='".$LANG['1000']."'></label>
+                        </div>
+                      </div> 
+                    </div>
                   </div>
-                </div>
+                  
+                  </br>
                   </br>
                    
 
@@ -146,7 +124,8 @@ saveCurrentURL();
     }
 
     var conf_arquivo_JS = "<?php echo $conf_arquivo; ?>";
-    document.getElementById("divOption-"+conf_arquivo_JS).click();
+     document.getElementById("optioneditar"+conf_arquivo_JS).click()
+      //document.getElementById("divOption-"+conf_arquivo_JS).click();
 
     var data_id = '';
     $(document).ready(function() {
