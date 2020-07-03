@@ -223,16 +223,23 @@ saveCurrentURL();
 
                       <div class="col-xl-3 col-md-3 mb-3">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['28']; ?>:</div>
-                        <div style="padding: 0.5rem !important;">                        
-                          <canvas id="temasChart"></canvas>
-                         
+                        <div style="padding: 0.5rem !important; display:block;">                        
+                          <canvas id="temasChart"></canvas> 
+                                             
                         </div>
+                        <div id="noDataTemasChart" class="container4" style="margin-top:-10px; display: none;">
+                          <p><small class='text-muted'><?php echo $LANG['202']; ?></small></p>  
+                        </div>
+                        
                       </div>
 
                       <div class="col-xl-3 col-md-3 mb-3">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $LANG['29']; ?>:</div>
-                        <div style="padding: 0.5rem !important;">                         
+                        <div style="padding: 0.5rem !important; display:block;">                         
                           <canvas id="anosChart"></canvas>
+                        </div>
+                        <div id="noDataAnosChart" class="container4" style="margin-top:-10px; display: none;">
+                          <p><small class='text-muted'><?php echo $LANG['202']; ?></small></p>  
                         </div>
                       </div>
 
@@ -467,6 +474,9 @@ saveCurrentURL();
                             "#dba2e6", "#76fc1b", "#608fa4", "#20f6ba", "#07d7f6", "#dce77a", "#77ecca"];
 
     //Pass users informations to JS
+    var hasDataUserDashboard = false;
+    var hasDataGlobalDashboard = false;
+
     var arrayTemasUserJS = <?php echo json_encode($array_temas_user); ?>;
     var uniqs_arrayTemasUserJS = arrayTemasUserJS.reduce((acc, val) => {
       acc[val] = acc[val] === undefined ? 1 : acc[val] += 1;
@@ -507,20 +517,27 @@ saveCurrentURL();
     var colorsChartAnosProspeccoesUser = [];
 
     //Limita aos 10 primeiros anos com mais ocorrências
-    uniqs_arrayAnosProspeccoesUserJS = Object.assign(
-        ...Object
-            .entries(uniqs_arrayAnosProspeccoesUserJS)
-            .sort(({ 1: a }, { 1: b }) => b - a)
-            .slice(0, 10) //Limite
-            .map(([k, v]) => ({ [k]: v }))
-    );
+    if (typeof Object.keys(uniqs_arrayAnosProspeccoesUserJS) !== 'undefined' && Object.keys(uniqs_arrayAnosProspeccoesUserJS).length > 0) {
+      hasDataUserDashboard = true;
+      uniqs_arrayAnosProspeccoesUserJS = Object.assign(
+          ...Object
+              .entries(uniqs_arrayAnosProspeccoesUserJS)
+              .sort(({ 1: a }, { 1: b }) => b - a)
+              .slice(0, 10) //Limite
+              .map(([k, v]) => ({ [k]: v }))
+      );
+    
 
-    var i_tmp_anos = 0;
-    for (const [key, value] of Object.entries(uniqs_arrayAnosProspeccoesUserJS)) {
-      labelsChartAnosProspeccoesUser.push(key);
-      dataChartAnosProspeccoesUser.push(value);
-      colorsChartAnosProspeccoesUser.push(colorsChartDefault[i_tmp_anos]);
-      i_tmp_anos++;
+      var i_tmp_anos = 0;
+      for (const [key, value] of Object.entries(uniqs_arrayAnosProspeccoesUserJS)) {
+        labelsChartAnosProspeccoesUser.push(key);
+        dataChartAnosProspeccoesUser.push(value);
+        colorsChartAnosProspeccoesUser.push(colorsChartDefault[i_tmp_anos]);
+        i_tmp_anos++;
+      }
+    }
+    else {
+      
     }
 
     //Pass global informations to JS
@@ -541,30 +558,33 @@ saveCurrentURL();
     var colorsChartTemasGlobal = [];
 
     //Limita aos 10 primeiros anos com mais ocorrências
-    uniqs_arrayAnosProspeccoesGlobalJS = Object.assign(
-        ...Object
-            .entries(uniqs_arrayAnosProspeccoesGlobalJS)
-            .sort(({ 1: a }, { 1: b }) => b - a)
-            .slice(0, 10) //Limite
-            .map(([k, v]) => ({ [k]: v }))
-    );
+    if (typeof Object.keys(uniqs_arrayAnosProspeccoesGlobalJS) !== 'undefined' && Object.keys(uniqs_arrayAnosProspeccoesGlobalJS).length > 0) {
+      hasDataGlobalDashboard = true;
+      uniqs_arrayAnosProspeccoesGlobalJS = Object.assign(
+          ...Object
+              .entries(uniqs_arrayAnosProspeccoesGlobalJS)
+              .sort(({ 1: a }, { 1: b }) => b - a)
+              .slice(0, 10) //Limite
+              .map(([k, v]) => ({ [k]: v }))
+      );
 
-    var i_tmp_temas = 0;
-    for (const [key, value] of Object.entries(uniqs_arrayTemasGlobalJS)) {
-      //Traduz a area
-      assunto_multilang_global = "";
-      if(key == "Work")
-        assunto_multilang_global = "<?php echo $LANG['20']; ?>";
-      if(key == "Education")
-        assunto_multilang_global = "<?php echo $LANG['17']; ?>";
-      if(key == "Medicine")
-        assunto_multilang_global = "<?php echo $LANG['18']; ?>";
-      if(key == "Transport")
-        assunto_multilang_global = "<?php echo $LANG['19']; ?>";
-      labelsChartTemasGlobal.push(assunto_multilang_global);
-      dataChartTemasGlobal.push(value);
-      colorsChartTemasGlobal.push(colorsChartDefault[i_tmp_temas]);
-      i_tmp_temas++;
+      var i_tmp_temas = 0;
+      for (const [key, value] of Object.entries(uniqs_arrayTemasGlobalJS)) {
+        //Traduz a area
+        assunto_multilang_global = "";
+        if(key == "Work")
+          assunto_multilang_global = "<?php echo $LANG['20']; ?>";
+        if(key == "Education")
+          assunto_multilang_global = "<?php echo $LANG['17']; ?>";
+        if(key == "Medicine")
+          assunto_multilang_global = "<?php echo $LANG['18']; ?>";
+        if(key == "Transport")
+          assunto_multilang_global = "<?php echo $LANG['19']; ?>";
+        labelsChartTemasGlobal.push(assunto_multilang_global);
+        dataChartTemasGlobal.push(value);
+        colorsChartTemasGlobal.push(colorsChartDefault[i_tmp_temas]);
+        i_tmp_temas++;
+      }
     }
 
     var labelsChartAnosProspeccoesGlobal = [];
@@ -664,8 +684,20 @@ saveCurrentURL();
         temasChart.destroy();
         anosChart.destroy();
       }
-      
 
+      if(hasDataUserDashboard) {
+        document.getElementById("noDataTemasChart").style.display = "none";
+        document.getElementById("noDataAnosChart").style.display = "none";
+        document.getElementById("temasChart").style.display = "block";
+        document.getElementById("anosChart").style.display = "block";   
+      }
+      else {
+        document.getElementById("temasChart").style.display = "none";
+        document.getElementById("anosChart").style.display = "none";
+        document.getElementById("noDataTemasChart").style.display = "block";
+        document.getElementById("noDataAnosChart").style.display = "block";     
+      }
+        
       if(numTRMsUserJS == 1) document.getElementById("num-trms").innerHTML = numTRMsUserJS + " <?php echo $LANG['24'];?>";
       else document.getElementById("num-trms").innerHTML = numTRMsUserJS + " <?php echo $LANG['24'];?>";
 
@@ -686,6 +718,20 @@ saveCurrentURL();
       if(temasChart != null && anosChart != null) {
         temasChart.destroy();
         anosChart.destroy();
+      }
+
+      if(hasDataGlobalDashboard) {
+        document.getElementById("noDataTemasChart").style.display = "none";
+        document.getElementById("noDataAnosChart").style.display = "none";
+        document.getElementById("temasChart").style.display = "block";
+        document.getElementById("anosChart").style.display = "block";     
+      }
+      else {
+        document.getElementById("temasChart").style.display = "none";
+        document.getElementById("anosChart").style.display = "none";
+        document.getElementById("noDataTemasChart").style.display = "block";
+        document.getElementById("noDataAnosChart").style.display = "block";
+        
       }
 
       if(numTRMsGlobalJS == 1) document.getElementById("num-trms").innerHTML = numTRMsGlobalJS + " <?php echo $LANG['24'];?>";

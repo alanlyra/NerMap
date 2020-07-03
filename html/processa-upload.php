@@ -29,20 +29,25 @@
       
     // Loop over each page to extract text.
     foreach ($pages as $page) {
-        fwrite($pdfUploaded, $page->getText());
+      fwrite($pdfUploaded, $page->getText());
     }
 
     fclose($pdf_uploaded);
   }
 
-  //Roda o script de bash
-  run_ner(intval($namefile));
+  if(file_get_contents('uploads/' . $namefile . '.txt')) {
+    //Roda o script de bash
+    run_ner(intval($namefile));
+  }
+  else  {
+    $update_on_arquivo = set_data("UPDATE arquivos SET status_ren = 'ERROR' where id_arquivo = $1", array(intval($namefile)));
+  }
 
   function run_ner($id_run) {   
     $id_arquivo = $id_run;
     $num_textos = 1;
   
-  popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
+    popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
   }
 
   ?>
