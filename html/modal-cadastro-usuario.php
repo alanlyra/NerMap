@@ -8,7 +8,7 @@ saveCurrentURL();
 
     echo "<div class='modal-content'>
            
-            <div class='modal-body' style='padding:0;'>
+            <div class='modal-body modal-content-custom' style='padding:0;'>
               <button type='button' class='close' data-dismiss='modal' style='margin-top: 8px; margin-right: 8px;'>&times;</button>
               <div class='row justify-content-center'>
                 <div class='col-xl-6 col-lg-6 bg-login-image'>

@@ -298,7 +298,8 @@ saveCurrentURL();
 
       </div>
       <!-- End of Main Content -->
-
+      </div>
+        
       <!-- Footer -->
       <?php include_once("footer.php") ?>
       <!-- End of Footer -->

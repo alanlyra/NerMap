@@ -297,6 +297,26 @@ div.container4 p {
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
+.footer-home {
+  position:absolute;
+  bottom:0;
+  width:auto;
+}
+
+#footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+.main-background {
+  background: #FFFFFF url(../img/fundoSistema2.png) repeat;
+}
+
+input[type=text], input[type=password]{
+  border: 0.5px solid lightgray !important;
+}
+
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;

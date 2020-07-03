@@ -8,11 +8,11 @@ saveCurrentURL();
  <?php include_once("head.php") ?>
  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
- <body style="width: 98%; background-color:darkgray;">
+ <body style="width: 98%; background: #FFFFFF url(img/fundoSistema2.png) repeat;">
 
-<video autoplay muted loop id="videoBackground">
+<!-- <video autoplay muted loop id="videoBackground">
   <source src="img/mar_loop.mp4" type="video/mp4">
-</video>
+</video> -->
 
    <?php
    // Se o usuario possui sessao
@@ -47,7 +47,7 @@ saveCurrentURL();
 
       <div class="col-xl-10 col-lg-12 col-md-9">
 
-        <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card o-hidden border-0 shadow my-5">
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
@@ -201,7 +201,11 @@ saveCurrentURL();
         </div>
       </div>
     </div>
-    
+    <div id="footer">
+          <!-- Footer -->
+      <?php include_once("footer.php") ?>
+      <!-- End of Footer -->
+    </div>
 
 </body>
 </html>

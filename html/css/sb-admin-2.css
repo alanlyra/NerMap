@@ -2026,6 +2026,7 @@ pre code {
   transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  border: 0.5px solid lightgray !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2147,6 +2148,7 @@ select.form-control[size], select.form-control[multiple] {
 
 textarea.form-control {
   height: auto;
+  border: 0.5px solid lightgray !important;
 }
 
 .form-group {
@@ -6259,6 +6261,12 @@ a.close.disabled {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1rem;
+  background: #FFFFFF url(../img/fundoSistema2.png);
+}
+
+.modal-content-custom {
+  background-color: white !important;
+  background: white !important;
 }
 
 .modal-footer {
@@ -10586,7 +10594,8 @@ a:focus {
 }
 
 #wrapper #content-wrapper {
-  background-color: #f8f9fc;
+  /* background-color: #f8f9fc; */
+  background: #FFFFFF url(../img/fundoSistema2.png) repeat;
   width: 100%;
   overflow-x: hidden;
 }

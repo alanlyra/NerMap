@@ -356,7 +356,7 @@ saveCurrentURL();
                         </div>";
                     }
 
-                    echo "<div id='container-roadmap' class='container' style='background: white !important; height: 100%; overflow: auto; max-width:100%;'>";
+                    echo "<div id='container-roadmap' class='container' style='background: white url(img/fundoSistema2.png); height: 100%; overflow: auto; max-width:100%;'>";
 
                     echo "<ul class='timeline'>";
                     //echo "<li><div class='tldate'>2020</div></li>";
