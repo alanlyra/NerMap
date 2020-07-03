@@ -201,6 +201,29 @@ saveCurrentURL();
         </div>
       </div>
     </div>
+
+    <section id="one" class="wrapper1 style1">
+      <div class="inner">
+        <ul class="features">
+          <li>
+            <img src="img/focus.png" style="width: 74px; height: 60px; display: inline-block; opacity:60%;"/>
+            <h3><?php echo $LANG['210']; ?></h3>
+            <p style="margin-top:30px;"><?php echo $LANG['211']; ?></p>
+          </li>
+          <li>
+            <img src="img/distributed.png" style="width: 60px; height: 60px; display: inline-block; opacity:70%;"/>
+            <h3><?php echo $LANG['212']; ?></h3>
+            <p style="margin-top:30px;"><?php echo $LANG['213']; ?></p>
+          </li>
+          <li>
+            <img src="img/adaptable.png" style="width: 60px; height: 60px; display: inline-block; opacity:60%;"/>
+            <h3><?php echo $LANG['214']; ?></h3>
+            <p style="margin-top:30px;"><?php echo $LANG['215']; ?></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <div id="footer">
           <!-- Footer -->
       <?php include_once("footer.php") ?>

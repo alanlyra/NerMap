@@ -309,6 +309,75 @@ div.container4 p {
   width:100%;
 }
 
+.wrapper1 {
+  background:/*  #FFFFFF url(../img/fundoSistema2.png) repeat; */
+}
+
+.wrapper1.style1 {
+  color: #c1c5cb;
+}
+
+.wrapper1.style1 .features li {
+  border-color: black;
+  color: #242121;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: calc(100% - 10rem);
+  width: 80rem;
+}
+
+.features {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  cursor: default;
+  list-style: none;
+  margin-bottom: 5.5rem;
+  margin-left: -1.375rem;
+  padding-left: 0;
+}
+
+.features li {
+  border-right: 1px solid;
+  margin-left: 2.75rem;
+  padding-right: 2.75rem;
+  text-align: center;
+  max-width: 355px;
+}
+
+.features li:last-child {
+  border: none;
+}
+
+.features .triangle {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  background-image: url(assets/css/images/triangle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 10rem;
+  height: 8rem;
+  margin: 0 auto 2.75rem auto;
+  width: 10rem;
+}
+
 .main-background {
   background: #FFFFFF url(../img/fundoSistema2.png) repeat;
 }
