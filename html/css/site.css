@@ -318,8 +318,8 @@ div.container4 p {
 }
 
 .wrapper1.style1 .features li {
-  border-color: black;
-  color: #242121;
+  border-color: lightgray;
+  color: #858796;
 }
 
 .inner {
@@ -376,6 +376,13 @@ div.container4 p {
   height: 8rem;
   margin: 0 auto 2.75rem auto;
   width: 10rem;
+}
+
+hr.nermap_double_line {
+  border: 0;
+  height: 0;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #EEEEEE;
 }
 
 .main-background {

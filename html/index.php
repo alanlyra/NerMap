@@ -111,8 +111,6 @@ saveCurrentURL();
 
           <a href='#' data-target='#modalCadastroUsuario' data-toggle='modal' data-id='cadastrousuario' style='display: inline-block; margin-left:3px; margin-right:3px; text-decoration:none;'><?php echo $LANG['181']; ?></a>
                           
-
-
           <p>
             <font color=red>
           <?php
@@ -148,7 +146,7 @@ saveCurrentURL();
                   
                   <h6 class="dropdown-header" style="background-color: whitesmoke; border: 0; color: #5a5c69; margin: 0;">
                     <?php echo $LANG['39']; ?>
-                  </h6>
+                  </h6>         
                   <div style="height: auto; width: 180px; overflow: auto;">
                   <a class="dropdown-item d-flex align-items-center" href="#" onclick="change_language('en-us');">
                     <div class="dropdown-list-image mr-3">
@@ -174,6 +172,13 @@ saveCurrentURL();
 
       <div id="modalCadastroUsuario" class="modal fade" role="dialog">
         <div id="cadastro-usuario" class="modal-dialog modal-xl">
+          <!-- Modal content-->
+          
+        </div>
+      </div>
+
+      <div id="modalSobreIndex" class="modal fade" role="dialog">
+        <div id="content-sobre-index" class="modal-dialog modal-xl">
           <!-- Modal content-->
           
         </div>
@@ -224,6 +229,53 @@ saveCurrentURL();
       </div>
     </section>
 
+    <div style='text-align:center;'>
+      <div style='width:80%; display: inline-block;'>
+        <div class='col-xl-3 col-lg-3' style='float:left;'>
+          <h5 style='margin-bottom: -10px;'><?php echo $LANG['222']; ?></h5>
+          <hr class='nermap_double_line'></hr>
+          <div class='text-center small' style='margin-top: -5px;'>
+            <span class='mr-2'>                       
+                <span class='nermap_font_copyright'><a href='#' data-target='#modalSobreIndex' data-toggle='modal' data-id='sobreindex' class='nermap_font_copyright' style='text-decoration:none;'><?php echo $LANG['224']; ?></a></span>                                                   
+              </span>
+            <span class='mr-2'>
+              <span> · </span>
+            </span>
+            <span class='mr-2'>
+              <span class='nermap_font_copyright'><a href='http://www.cos.ufrj.br/' class='nermap_font_copyright'>PESC</a></span>
+            </span>
+            <span class='mr-2'>
+              <span> · </span>
+            </span>
+            <span class='mr-2'>
+              <span class='nermap_font_copyright'><a href='http://www.coppe.ufrj.br/' class='nermap_font_copyright'>COPPE</a></span>
+            </span>
+            <span class='mr-2'>
+              <span> · </span>
+            </span>
+            <span class='mr-2'>
+              <span class='nermap_font_copyright'><a href='http://www.ufrj.br/' class='nermap_font_copyright'>UFRJ</a></span>
+            </span>
+          </div>
+        </div>
+        <div class='col-xl-3 col-lg-3' style='float:right;'>
+          <h5 style='margin-bottom: -10px;'><?php echo $LANG['223']; ?></h5>
+          <hr class='nermap_double_line'></hr>
+          <div class='text-center small' style='margin-top: -5px;'>
+            <span class='mr-2'>
+              <span class='nermap_font_copyright'><a href='mailto:alanlyra@cos.ufrj.br' class='nermap_font_copyright'>E-mail</a></span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class='col-xl-12 col-lg-12' style='float:left; text-align:center;'>
+          <div class='col-xl-6 col-lg-6' style='display: inline-block;'>
+            <h5 style='margin-bottom: -10px;'></h5>
+            
+          </div>
+        </div> -->
+
     <div id="footer">
           <!-- Footer -->
       <?php include_once("footer.php") ?>
@@ -254,6 +306,16 @@ saveCurrentURL();
               success: function(html) {
                 $('#cadastro-usuario').html(html);
                 $('#modalCadastroUsuario').modal('show');
+              }
+            })
+          }
+          else if (data_txt.indexOf('sobreindex') > -1) {
+            $.ajax({
+              url: "modal-sobre.php",
+              method: "POST",
+              success: function(html) {
+                $('#content-sobre-index').html(html);
+                $('#modalSobreIndex').modal('show');
               }
             })
           }

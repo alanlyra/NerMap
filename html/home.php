@@ -257,14 +257,10 @@ saveCurrentURL();
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-primary"><?php echo $LANG['30']; ?></h6>
                     <div class="dropdown no-arrow">
-                      <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                      <a href='#' data-target='#modalSobre' data-toggle='modal' data-id='sobre' style='display: inline-block; margin-left:3px; margin-right:3px; text-decoration:none;'>
+                        <i class="fas fa-expand fa-sm fa-fw text-gray-400"></i>
                       </a>
-                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                        <div class="dropdown-header"><?php echo $LANG['12']; ?>:</div>
-                        <a class="dropdown-item" href="#">Dissertação</a>
-                        <a class="dropdown-item" href="#">PESC</a>
-                      </div>
+                     
                     </div>
                   </div>
                   <!-- Card Body -->
@@ -291,6 +287,13 @@ saveCurrentURL();
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div id="modalSobre" class="modal fade" role="dialog">
+              <div id="content-sobre" class="modal-dialog modal-xl">
+                <!-- Modal content-->
+                
               </div>
             </div>
         
@@ -432,6 +435,32 @@ saveCurrentURL();
     function load(){
       document.getElementById("li_roadmap").classList.add('active');
     }
+
+    var data_id = '';
+    $(document).ready(function() {
+        $('a[data-toggle=modal], button[data-toggle=modal]').click(function () {
+          
+          if (typeof $(this).data('id') !== 'undefined') {
+          	data_id = $(this).data('id');
+          }
+
+          var data_txt =  data_id.toString();
+          
+          if (data_txt.indexOf('sobre') > -1) {
+            $.ajax({
+              url: "modal-sobre.php",
+              method: "POST",
+              success: function(html) {
+                $('#content-sobre').html(html);
+                $('#modalSobre').modal('show');
+              }
+            })
+          }
+          else {
+            
+          }
+        })
+    });
 
     var colorsChartDefault= ["#5a5c69", "#ce7d78", "#ea9e70", "#63b598", "#a48a9e", "#648177", "#c9a941" ,"#0d5ac1" ,
                             "#00bdd5" ,"#9e6d71" ,"#14a9ad" ,"#4ca2f9" ,"#6a8db3" ,"#d298e2" ,"#6119d0",

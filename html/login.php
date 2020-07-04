@@ -1,7 +1,10 @@
 <?php
 require_once 'system.php';
+require_once 'lang.php';
 include_once dirname(__FILE__) . '/' .'admin/libs/phpass/PasswordHash.php';
+?>
 
+<?php
 function prepare_login(){
 if (!!isset($_POST["email"]) && !!isset($_POST["password"]))
 {
@@ -21,12 +24,12 @@ if (!!isset($_POST["email"]) && !!isset($_POST["password"]))
   }
     else
   {
-    $_SESSION['message']="Senha ou e-mail incorretos. Tente novamente.";
+    $_SESSION['message']= "Incorrect password or email. Try again.";
   }
 }
   else
 {
-  $_SESSION['message']="Senha ou e-mail inválidos. Tente novamente.";
+  $_SESSION['message']="Incorrect password or email. Try again.";
 }
  header("Location: "."/index.php");
 }
