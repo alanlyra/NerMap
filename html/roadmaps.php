@@ -316,7 +316,7 @@ saveCurrentURL();
                     echo "</br>
                     <p style='margin: 0px 0px -8px 0px; padding-top: 5px; float:left;'><small class='text-muted'><b>".$LANG['4'].":</b> ".$assunto_multilang."</small></p>";
 
-                    echo "<div href='' style='margin: 0; float: left;'><p style='margin: 5px 0px 0px 10px; padding: 0; float: left;'><small class='text-muted'><b>·</b></small></p></div>";
+                    echo "<div id='dot_separator' style='margin: 0; float: left;'><p style='margin: 5px 0px 0px 10px; padding: 0; float: left;'><small class='text-muted'><b>·</b></small></p></div>";
 
                     echo "<p id='box_conf_media_roadmap' style='margin: 0px 0px -8px 10px; padding-top: 5px; float:left;'></p>";
 
@@ -443,6 +443,14 @@ saveCurrentURL();
                         $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original, autores_prospeccao, conf_prospeccao) VALUES ('".$array_sections[$j][assunto]."', null, ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."', '".$array_sections[$j][autores]."', ".$array_sections[$j][confiabilidade].");");
                       }
                       $previous_date = $array_sections[$j][date];
+                    }
+
+                    echo "<script>console.log(".json_encode($array_relatorio_filtered).");</script>"; 
+                    if(sizeof($array_relatorio_filtered) <= 0) {
+                      if(isset($_GET["roadmap-completo"]))
+                        echo "<script>document.getElementById('container-roadmap').innerHTML = '<div class=\'container4\'><p class=\'text-muted\'> Sem prospecções para este TRM </p></div>';</script>";  
+                      else 
+                        echo "<script>document.getElementById('container-roadmap').innerHTML = '<div class=\'container4\'><p class=\'text-muted\'> Sem prospecções para este arquivo do TRM </p></div>';</script>";  
                     }
                     
                     // Adiciona ou atualiza a API referente ao TRM (completo)
@@ -606,7 +614,7 @@ saveCurrentURL();
                                     <td>".$assunto_multilang."</td>
                                     <td>".$result->ano_prospec."</td>
                                     <td><div style='text-align: center;'>";
-                                if($result->status_ren_prospec != "null")
+                                if($result->status_ren_prospec != "null" && $result->status_ren_prospec != "")
                                   echo "<img src='img/".$result->status_ren_prospec.".png' title='".$status_ren_msg."' style='width: 20px; height: 20px; display: inline-block;'/>";
                                 echo "</div></td>
                                 </div></td>
@@ -959,7 +967,7 @@ saveCurrentURL();
 
     var relatorio_arrayJS_Global = <?php echo json_encode($array_relatorio_filtered); ?>;
 
-    if(relatorio_arrayJS_Global !== null) {
+    if(relatorio_arrayJS_Global !== null && relatorio_arrayJS_Global.length > 0) {
       var total_conf = 0;
       for (var i = 0; i < relatorio_arrayJS_Global.length; i++) {
         total_conf += parseInt(relatorio_arrayJS_Global[i]["confiabilidade"]);
@@ -993,6 +1001,9 @@ saveCurrentURL();
         conf_media = "conf_stars_0.5_bw.png"; 
 
       document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> <?php echo $LANG['76']; ?>: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='<?php echo $LANG['128']; ?>: " + media_conf_roadmap + "' style='height: 15px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
+    }
+    else {
+      document.getElementById("dot_separator").style.visibility = "hidden";
     }
     
   	function geraRelatorioCSV() {

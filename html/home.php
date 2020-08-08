@@ -266,7 +266,11 @@ saveCurrentURL();
                   <!-- Card Body -->
                   <div class="card-body" style="min-height: 225px;">
                     <div class="divMetodologia" style="overflow: auto; max-height: 142px;">
-                    <p><?php echo $LANG['34']; ?></p>
+                    <p style='text-align: justify; text-justify: inter-word;'><?php echo $LANG['34']; ?> 
+                      <a href='#' data-target='#modalSobre' data-toggle='modal' data-id='sobre' style='display: inline-block; margin-left:3px; margin-right:3px; text-decoration:none;'>
+                        [+ <?php echo $LANG['226']; ?>]
+                      </a>
+                    </p>
                     </div>
                     <div class="mt-4 text-center small">
                       <span class="mr-2">

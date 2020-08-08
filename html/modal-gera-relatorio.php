@@ -17,7 +17,7 @@ saveCurrentURL();
             <div class='modal-body'>";
 
         echo "<div class='row justify-content-center'>
-                <div class='col-sm-6 col-md-3'>
+                <div class='col-sm-4 col-md-4'>
                   <div class='col-md-12 feature-box'>
                   <img src='img/csv.png' style='width: 100px; height: 100px; display: inline-block;'/>
                     <h4>".$LANG['149']."</h4>
@@ -25,7 +25,7 @@ saveCurrentURL();
                     <button class='btn btn-primary' style='margin:5px;' onclick='geraRelatorioCSV();'><i class='fas fa-download fa-sm text-white-50'></i>    ".$LANG['161']."</button>
                   </div>
                 </div> <!-- End Col -->
-                <div class='col-sm-6 col-md-3'>
+                <div class='col-sm-4 col-md-4'>
                   <div class='col-md-12 feature-box'>
                     <img src='img/pdf.png' style='width: 100px; height: 100px; display: inline-block;'/>
                     <h4>".$LANG['151']."</h4>
@@ -33,7 +33,7 @@ saveCurrentURL();
                     <button class='btn btn-primary' style='margin:5px;' onclick='geraRelatorioPDF();'><i class='fas fa-download fa-sm text-white-50'></i>    ".$LANG['161']."</button>
                   </div>
                 </div> <!-- End Col -->	
-                <div class='col-sm-6 col-md-3'>
+                <div class='col-sm-4 col-md-4'>
                   <div class='col-md-12 feature-box'>
                     <img src='img/txt.png' style='width: 100px; height: 100px; display: inline-block;'/>
                     <h4>".$LANG['153']."</h4>
@@ -44,7 +44,7 @@ saveCurrentURL();
           </div>";
 
           echo "<div class='row justify-content-center'>
-                <div class='col-sm-6 col-md-3'>
+                 <div class='col-sm-4 col-md-4'>
                   <div class='col-md-12 feature-box'>
                     <img src='img/doc.png' style='width: 100px; height: 100px; display: inline-block;'/>
                     <h4>".$LANG['155']."</h4>
@@ -52,7 +52,7 @@ saveCurrentURL();
                     <button class='btn btn-primary' style='margin:5px;' onclick='geraRelatorioDOC();'><i class='fas fa-download fa-sm text-white-50'></i>    ".$LANG['161']."</button>
                   </div>
                 </div> <!-- End Col -->
-                <div class='col-sm-6 col-md-3'>
+                <div class='col-sm-4 col-md-4'>
                   <div class='col-md-12 feature-box'>
                     <img src='img/json.png' style='width: 100px; height: 100px; display: inline-block;'/>
                     <h4>".$LANG['157']."</h4>
@@ -60,7 +60,7 @@ saveCurrentURL();
                     <button class='btn btn-primary' style='margin:5px;' onclick='geraRelatorioJSON();'><i class='fas fa-download fa-sm text-white-50'></i>    ".$LANG['161']."</button>
                   </div>
                 </div> <!-- End Col -->
-                <div class='col-sm-6 col-md-3'>
+                <div class='col-sm-4 col-md-4'>
                   <div class='col-md-12 feature-box'>
                     <img src='img/api6.png' style='width: 100px; height: 100px; display: inline-block;'/>
                     <h4>".$LANG['159']."</h4>

@@ -1,8 +1,9 @@
 <?php
 require_once 'system.php';
+require_once 'lang.php';
 
 if (!isset($_SESSION) || !isset($_SESSION['email']) || ((isset($_SESSION['email']) && !($_SESSION['email']!='')))) {
- $_SESSION['message']='Sessão expirada! Faça login novamente.';
+ $_SESSION['message']= 'Session expired! Please log in again.';
 ?>
 <html>
 <head>

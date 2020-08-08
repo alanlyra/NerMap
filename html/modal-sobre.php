@@ -11,14 +11,16 @@ require_once 'lang.php';
                     <h6 class='m-0 font-weight-bold text-primary'>".$LANG['30']."</h6>
                       <div class='dropdown no-arrow'>
                         <a href='#' data-target='#modalSobre' data-toggle='modal' data-id='sobre' style='display: inline-block; margin-left:3px; margin-right:3px; text-decoration:none;'>
-                          <button type='button' class='close' data-dismiss='modal' style='margin-top: 8px; margin-right: 8px;'>&times;</button>
+                          <button type='button' class='close' data-dismiss='modal'>&times;</button>
                         </a>
                       </div>
                     </div>
-                  <div class='card-body' style='min-height: 225px;'>
-                    <p style='text-align: justify; text-justify: inter-word;'>".$LANG['34']."</p>
-                    <p style='text-align: justify; text-justify: inter-word;'>".$LANG['221']."</p>
-                    </br>
+                  <div class='card-body' style='min-height: 225px; text-align:center;'>
+                    <div class='col-xl-12 col-lg-12' style='display: inline-block;'>
+                      <p style='text-align: justify; text-justify: inter-word;'>".$LANG['34']." ".$LANG['221']."</p>
+                      <hr class='nermap_double_line'></hr>
+                    </div>
+                    </br></br>
                     <section id='one' class='wrapper1 style1'>
                       <div class='inner'>
                         <ul class='features' style='margin-bottom:2rem;'>
