@@ -54,7 +54,8 @@ saveCurrentURL();
                 </div>
                 
 
-                <form action="home.php" method="post" multipart="" enctype="multipart/form-data" style="text-align: center; max-height: 370px;">
+                <form action="home.php" method="post" multipart="" enctype="multipart/form-data" style="text-align: center; max-height: 370px; margin-bottom: 0 !important;
+">
                 <div class="col-md-11 feature-box" style="text-align: left; display:inline-block; margin-top:1.4rem;">
                 <div class="row justify-content-center">
                   <div class="col-xl-12 col-lg-12" style="margin-top:2.5vh;">
