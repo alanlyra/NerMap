@@ -24,7 +24,7 @@ include($language_file);
 ?>
 
 <script type="text/javascript">
-  var domain="nermap.cos.ufrj.br";
+  var domain="<?php echo $_SERVER['HTTP_HOST']; ?>";
   var cur_language="en-US";
   function change_language (x) {
     setCookie("lang", x, 1, "/", domain, false);
