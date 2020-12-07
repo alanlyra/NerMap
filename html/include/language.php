@@ -42,15 +42,20 @@ class Language
   private function initLanguageDir()
   {
       $dir = $this->dir;
-      if (file_exists($dir . $this->language_area) && !empty($this->language_area)) {
-          $this->language_dir = $dir . $this->language_area . '/';
-      } else {
-          if (file_exists($dir . $this->language_country) && !empty($this->language_country)) {
-              $this->language_dir = $dir . $this->language_country . '/';
-          } else {
-              $this->language_dir = $dir . 'en-US/';
-          }
-      }
+      
+      //Seta Inglês manualmente
+      $this->language_dir = $dir . 'en-US/';
+
+      //Pega idioma do chache
+      //if (file_exists($dir . $this->language_area) && !empty($this->language_area)) {
+      //    $this->language_dir = $dir . $this->language_area . '/';
+      //} else {
+      //    if (file_exists($dir . $this->language_country) && !empty($this->language_country)) {
+      //        $this->language_dir = $dir . $this->language_country . '/';
+      //    } else {
+      //        $this->language_dir = $dir . 'en-US/';
+      //    }
+      //}
   }
   public function initDefaultLanguage()
   {
