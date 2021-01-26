@@ -88,6 +88,7 @@ saveCurrentURL();
                     $section = array(
                         date => "",
                         temppred => "",
+                        duration => "",
                         info => "",
                         info_original => "",
                         assunto => "",
@@ -106,6 +107,7 @@ saveCurrentURL();
                         is_prospec => false,
                         has_date => false,
                         has_temppred => false,
+                        has_duration => false,
                     );
                     $assunto_roadmap = "";
                     $array_sections = [];
@@ -180,9 +182,11 @@ saveCurrentURL();
                                   $assunto_roadmap = $result2->assunto_prospec;
 
                                   $section[date] = "";
+                                  $section[duration] = "";
                                   $section[info] = "";
                                   $section[has_date] = false;
                                   $section[has_temppred] = false;
+                                  $section[has_duration] = false;
                                   $section[is_prospec] = false;
                                   $i_section++;
                                 }
@@ -192,7 +196,7 @@ saveCurrentURL();
                                 if($tag != "O" && $tag != "" && $tag != null) {
 
                                   if($tag == "DATE") {
-                                    if($palavra != "today" && $palavra != "now" && $palavra != "right") {
+                                    if($palavra != "today" && $palavra != "now" && $palavra != "right" && $palavra != "last" && $palavra != "past" && $palavra != "the" && $palavra != "future") {
                                       $section[date] = $result2->palavra;
                                       $section[has_date] = true;
                                     }
@@ -204,8 +208,68 @@ saveCurrentURL();
                                     }
                                   }
 
-                                  if($section[has_date] && $section[has_temppred]) {
-                                    $section[is_prospec] = true;
+                                  if($tag == "DURATION") {
+                                    if($palavra != "today") {
+                                      $section[duration] .= $result2->palavra . " ";
+                                      $section[has_duration] = true;
+                                    }
+                                  }
+
+                                  if($section[has_temppred]) {
+                                    if($section[has_date] && preg_match('~[0-9]+~', $section[date])) {
+                                      $section[is_prospec] = true;
+                                    }
+                                    else {
+                                      if($section[has_duration]) {
+                                        if(preg_match('~[0-9]+~', $section[duration])) {
+                                          preg_match('/(\d+)/', $section[duration], $matches);
+                                          $number_date = $result2->ano_arquivo + intval($matches[0]);
+                                          
+                                        }
+                                        else {
+                                          if(strpos($section[duration], 'one') !== false)
+                                            $number_date = 1;
+                                          elseif(strpos($section[duration], 'two') !== false)
+                                            $number_date = 2;
+                                          elseif(strpos($section[duration], 'three') !== false)
+                                            $number_date = 3;
+                                          elseif(strpos($section[duration], 'four') !== false)
+                                            $number_date = 4;
+                                          elseif(strpos($section[duration], 'five') !== false)
+                                            $number_date = 5;
+                                          elseif(strpos($section[duration], 'six') !== false)
+                                            $number_date = 6;
+                                          elseif(strpos($section[duration], 'seven') !== false)
+                                            $number_date = 7;
+                                          elseif(strpos($section[duration], 'eight') !== false)
+                                            $number_date = 8;
+                                          elseif(strpos($section[duration], 'nine') !== false)
+                                            $number_date = 9;
+                                          elseif(strpos($section[duration], 'ten') !== false)
+                                            $number_date = 10;
+                                          else {
+                                            if(strpos($section[duration], 'next') !== false)
+                                              $number_date = 1;
+                                          }
+                                        }
+                                        if(strpos($section[duration], 'year') !== false || strpos($section[duration], 'years') !== false)
+                                            $section[date] = $result2->ano_arquivo + $number_date;
+                                        elseif(strpos($section[duration], 'decade') !== false || strpos($section[duration], 'decades') !== false)
+                                            $section[date] = $result2->ano_arquivo + ($number_date * 10);
+                                        
+                                        $section[is_prospec] = true;
+                                      }
+                                      else {
+                                        if(strpos($section[date], 'year') !== false) {
+                                          $section[date] = $result2->ano_arquivo + 1;
+                                          $section[is_prospec] = true;
+                                        }
+                                        if(strpos($section[date], 'decade') !== false) {
+                                          $section[date] = $result2->ano_arquivo + 10;
+                                          $section[is_prospec] = true;
+                                        }
+                                      }
+                                    }
                                   }
                               
                                 }
@@ -234,11 +298,13 @@ saveCurrentURL();
                             $assunto_roadmap = $result3->assunto_prospec;
 
                             $section[date] = "";
-                                $section[info] = "";
-                                $section[has_date] = false;
-                                $section[has_temppred] = false;
-                                $section[is_prospec] = false;
-                                $i_section++;
+                            $section[info] = "";
+                            $section[duration] = "";
+                            $section[has_date] = false;
+                            $section[has_temppred] = false;
+                            $section[has_duration] = false;
+                            $section[is_prospec] = false;
+                            $i_section++;
                             }
                         
                         }
@@ -270,8 +336,10 @@ saveCurrentURL();
 
                         $section[date] = "";
                         $section[info] = "";
+                        $section[duration] = "";
                         $section[has_date] = false;
                         $section[has_temppred] = false;
+                        $section[has_duration] = false;
                         $section[is_prospec] = false;
                         $i_section++;
                       }
