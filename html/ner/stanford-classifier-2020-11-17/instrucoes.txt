@@ -1,0 +1,1 @@
+java -cp "*" edu.stanford.nlp.classify.ColumnDataClassifier -prop examples/cheese2007.prop -crossValidationFolds 10

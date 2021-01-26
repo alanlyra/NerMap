@@ -16,3 +16,17 @@ java -mx1g -cp "*;lib/*" edu.stanford.nlp.ie.NERClassifierCombiner -textFile sam
 
 java -cp "stanford-ner.jar;lib/*" -mx4g edu.stanford.nlp.ie.crf.CRFClassifier -prop C:/Users/Alan/Documents/stanford-ner-own-model/train/train/prop.txt
 
+////// Treinamento com teste para avaliação --- BASE
+java -Xmx10g -cp stanford-ner-2017-06-09/stanford-ner.jar edu.stanford.nlp.ie.crf.CRFClassifier 
+    -prop stanford_ner.prop 
+        -trainFile corpus/fold_1_2_3_4 
+            -testFile corpus/fold_0 1>tagged_fold_0.csv 2>results_fold_0.txt 
+                -serializeTo model_0.ser.gz`
+
+////// Treinamento com teste para avaliação
+java -Xmx10g -cp "*;lib\*" edu.stanford.nlp.ie.crf.CRFClassifier
+    -prop C:/Users/Alan/Documents/stanford-ner-own-model/train/train/prop.txt
+        -trainFile corpus/fold_1_2_3_4 
+            -testFile corpus/fold_0 1>tagged_fold_0.csv 2>results_fold_0.txt 
+                -serializeTo model_0.ser.gz`
+

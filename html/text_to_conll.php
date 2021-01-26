@@ -49,7 +49,7 @@
     function func1()
     {
         $str=file_get_contents('texto.txt');
-        $str=str_replace(" ", "\r\n",$str);
+        $str=str_replace(" ", " " . "O\r\n",$str);
         file_put_contents('texto2.txt', $str);
     }
     function func2()
