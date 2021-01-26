@@ -247,6 +247,12 @@ saveCurrentURL();
                                             $number_date = 9;
                                           elseif(strpos($section[duration], 'ten') !== false)
                                             $number_date = 10;
+                                          elseif(strpos($section[duration], 'fifty') !== false)
+                                            $number_date = 50;
+                                          elseif(strpos($section[duration], 'half century') !== false)
+                                            $number_date = 50;
+                                          elseif(strpos($section[duration], 'hundred') !== false)
+                                            $number_date = 100;
                                           else {
                                             if(strpos($section[duration], 'next') !== false)
                                               $number_date = 1;

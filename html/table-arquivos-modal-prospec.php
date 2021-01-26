@@ -11,9 +11,9 @@ saveCurrentURL();
       <th><?php echo $LANG['3']; ?></th>
       <th><?php echo $LANG['74']; ?></th>
       <th><?php echo $LANG['51']; ?></th>
-      <th><?php echo $LANG['76']; ?></th>
+      <th style="width: 130px; !important"><?php echo $LANG['76']; ?></th>
       <th><?php echo $LANG['53']; ?></th>
-      <th><?php echo $LANG['204']; ?></th>
+      <th style="width: 70px; !important"><?php echo $LANG['204']; ?></th>
       <th><?php echo $LANG['55']; ?></th>
       <th><?php echo $LANG['56']; ?></th>
     </tr>
@@ -23,9 +23,9 @@ saveCurrentURL();
       <th><?php echo $LANG['3']; ?></th>
       <th><?php echo $LANG['74']; ?></th>
       <th><?php echo $LANG['51']; ?></th>
-      <th><?php echo $LANG['76']; ?></th>
+      <th style="width: 130px; !important"><?php echo $LANG['76']; ?></th>
       <th><?php echo $LANG['53']; ?></th>
-      <th><?php echo $LANG['204']; ?></th>
+      <th style="width: 70px; !important"><?php echo $LANG['204']; ?></th>
       <th><?php echo $LANG['55']; ?></th>
       <th><?php echo $LANG['56']; ?></th>
     </tr>
