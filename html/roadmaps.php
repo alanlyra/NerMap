@@ -141,7 +141,7 @@ saveCurrentURL();
                         $results_max = pg_num_rows($search_roadmap1);
 
                         if ($results_max == 0) {
-                          
+                          $tmp_date = -1;
                           $search_results=get_data('SELECT * FROM arquivos a INNER JOIN texto t ON t.id_texto = a.id_arquivo INNER JOIN ren r ON r.id_ren = t.id_texto INNER JOIN prospec p ON p.id_prospec = a.id_prospec_arquivo AND r.ordem_texto = t.ordem WHERE a.id_arquivo = '.$result->id_arquivo.' order by a.id_arquivo, r.ordem_texto');
 
                             $results_max = pg_num_rows($search_results);
@@ -188,6 +188,7 @@ saveCurrentURL();
                                   $section[has_temppred] = false;
                                   $section[has_duration] = false;
                                   $section[is_prospec] = false;
+                                  $tmp_date = -1;
                                   $i_section++;
                                 }
 
@@ -196,20 +197,23 @@ saveCurrentURL();
                                 if($tag != "O" && $tag != "" && $tag != null) {
 
                                   if($tag == "DATE") {
-                                    if($palavra != "today" && $palavra != "now" && $palavra != "right" && $palavra != "last" && $palavra != "past" && $palavra != "the" && $palavra != "future") {
-                                      $section[date] = $result2->palavra;
-                                      $section[has_date] = true;
+                                    if($palavra != "today" && $palavra != "now" && $palavra != "right" && $palavra != "last" && $palavra != "past" && $palavra != "the" && $palavra != "future" && $palavra != "period" && $palavra != "Period") {
+                                      if(intval($result2->palavra) >= $tmp_date) {
+                                        $section[date] = $result2->palavra;
+                                        $section[has_date] = true;
+                                        $tmp_date = $section[date];
+                                      }
                                     }
                                   }
                                   if($tag == "U_TEMPPRED" || $tag == "B_TEMPPRED" || $tag == "M_TEMPPRED" || $tag == "E_TEMPPRED") {
-                                    if($palavra != "today") {
+                                    if($palavra != "today" && $palavra != "period" && $palavra != "Period") {
                                       $section[temppred] = $result2->palavra;
                                       $section[has_temppred] = true;
                                     }
                                   }
 
                                   if($tag == "DURATION") {
-                                    if($palavra != "today") {
+                                    if($palavra != "today" && $palavra != "period" && $palavra != "Period") {
                                       $section[duration] .= $result2->palavra . " ";
                                       $section[has_duration] = true;
                                     }
@@ -253,6 +257,8 @@ saveCurrentURL();
                                             $number_date = 50;
                                           elseif(strpos($section[duration], 'hundred') !== false)
                                             $number_date = 100;
+                                          elseif(strpos($section[duration], 'thousand') !== false || strpos($section[duration], 'thousands') !== false)
+                                            $number_date = 1000;
                                           else {
                                             if(strpos($section[duration], 'next') !== false)
                                               $number_date = 1;
@@ -277,7 +283,6 @@ saveCurrentURL();
                                       }
                                     }
                                   }
-                              
                                 }
                               }
                             }
