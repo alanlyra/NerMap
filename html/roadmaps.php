@@ -145,7 +145,7 @@ saveCurrentURL();
                           $search_results=get_data('SELECT * FROM arquivos a INNER JOIN texto t ON t.id_texto = a.id_arquivo INNER JOIN ren r ON r.id_ren = t.id_texto INNER JOIN prospec p ON p.id_prospec = a.id_prospec_arquivo AND r.ordem_texto = t.ordem WHERE a.id_arquivo = '.$result->id_arquivo.' order by a.id_arquivo, r.ordem_texto');
 
                             $results_max = pg_num_rows($search_results);
-                              if  ($results_max>0) {
+                            if  ($results_max>0) {
                               //Processo para coletar os acontecimentos do Roadmap
                               
                               while($result2=pg_fetch_object($search_results)) {
@@ -251,6 +251,12 @@ saveCurrentURL();
                                             $number_date = 9;
                                           elseif(strpos($section[duration], 'ten') !== false)
                                             $number_date = 10;
+                                          elseif(strpos($section[duration], 'twenty') !== false)
+                                            $number_date = 20;  
+                                          elseif(strpos($section[duration], 'thirty') !== false)
+                                            $number_date = 30;
+                                          elseif(strpos($section[duration], 'forty') !== false)
+                                            $number_date = 40;    
                                           elseif(strpos($section[duration], 'fifty') !== false)
                                             $number_date = 50;
                                           elseif(strpos($section[duration], 'half century') !== false)

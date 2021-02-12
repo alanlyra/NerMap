@@ -1,10740 +1,1390 @@
-By U_TEMPPRED O
-2030 O
-the O
-number O
-of O
-people O
-aged O
-over O
-60 O
-is O
-some O
-40% O
-higher O
-than O
-at O
-the O
-turn O
-of O
-the O
-century.
-By U_TEMPPRED O
-2030, O
-Switzerland O
-had O
-one O
-of O
-the O
-highest O
-proportions O
-of O
-foreign O
-residents O
-in O
-Europe, O
-as O
-it O
-did O
-at O
-the O
-beginning O
-of O
-the O
-century.
-The O
-net O
-result O
-is O
-that O
-the O
-total O
-population, O
-82 O
-million O
-at O
-the O
-start O
-of O
-the O
-century, O
-has O
-declined O
-to O
-71.5 O
-million O
-by U_TEMPPRED O
-2030.
-Here, O
-by U_TEMPPRED O
-2030, O
-people O
-over O
-65 O
-accounted O
-for O
-almost O
-half O
-the O
-adult O
-population, O
-compared O
-with O
-one-fifth O
-at O
-the O
-beginning O
-of O
-the O
-century.
-In O
-the O
-UK O
-for O
-instance, O
-compared O
-with O
-the O
-300 O
-people O
-aged O
-100+ O
-in O
-1950, O
-in U_TEMPPRED O
-2030 O
-there O
-is O
-a O
-growing O
-expectation O
-that O
-living O
-for O
-a O
-century O
-will O
-be O
-the O
-norm O
-for O
-thousands O
-of O
-people.
-However, O
-a O
-previous O
-lack O
-of O
-regulation O
-of O
-internal O
-movements O
-has O
-meant O
-that O
-although O
-the O
-extent O
-of O
-population O
-decline O
-and O
-ageing O
-projected O
-at O
-the O
-turn O
-of O
-the O
-century O
-for U_TEMPPRED O
-2030 O
-has O
-been O
-significantly O
-less O
-than O
-would O
-have O
-been O
-the O
-case O
-without O
-pro-migration O
-policy O
-intervention, O
-the O
-impacts O
-have O
-been O
-uneven.
-At O
-the O
-beginning O
-of O
-the O
-century O
-it O
-was O
-estimated O
-that O
-by U_TEMPPRED O
-2030 O
-the O
-age O
-at O
-which O
-full O
-retirement O
-benefits O
-start O
-would O
-have O
-risen O
-to O
-the O
-mid-1970s O
-in O
-all O
-developed O
-countries, O
-while O
-benefits O
-for O
-healthy O
-pensioners O
-would O
-be O
-substantially O
-lower O
-than O
-their O
-2005 O
-levels.
-Section O
-2 O
-provides O
-a O
-summary O
-of O
-the O
-evolution O
-of O
-demographic O
-trends O
-and O
-their O
-territorial O
-variation O
-in O
-Europe. O
 This O
-information O
-has O
-been O
-used O
-as O
+trend O
+is O
+likely O
+to O
+escalate O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+few O
+decades.
+Furthermore, O
 the O
-basis O
-for O
+publications O
+had O
+to O
+be O
+available O
+over B_TEMPPRED O
+several E_TEMPPRED O
+years.
+Futures O
+evolve O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+decades.
+The O
+title O
+and O
+theme O
+of O
+this O
+work O
+emerged O
+over B_TEMPPRED O
+a M_TEMPPRED O
+period M_TEMPPRED O
+of E_TEMPPRED O
+several O
+years.
+Almost O
+all O
+countries O
+are O
+consequently O
+planning O
+Foresight O
+studies O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+few O
+years.
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+twenty O
+years O
 the O
 development O
 of O
-two O
-scenarios O
-with O
-a O
-time O
-horizon B_TEMPPRED O
-of E_TEMPPRED O
-2030.
-By U_TEMPPRED O
-2030 O
 the O
-total O
-fertility O
-rate O
-is O
-barely O
-at O
-1 O
-per O
-woman.
-By U_TEMPPRED O
-2030 O
-pension O
-costs O
-have O
-reached O
-15% O
-of O
-GDP.
-In O
-2030 O
-the O
-balance O
-of O
-power O
-politically, O
-economically O
-and O
-spatially O
-is O
-increasingly O
-dominated O
-by O
-older O
-people.
-Eurostat’s O
-prognoses O
-concurred O
-with O
-predictions O
-for O
-the O
-period O
-up B_TEMPPRED O
-to E_TEMPPRED O
-2030 O
-that O
-three O
-quarters O
-of O
-all O
-European O
-regions O
-would O
-have O
-no O
-alternative O
-to O
-immigration O
-as O
-a O
-primary O
-growth O
-factor.
-Across O
-EU O
-territory O
-as O
-a O
-whole O
-though, O
-two O
-trends O
-became O
-apparent O
-by U_TEMPPRED O
-2020.
-However, O
-by U_TEMPPRED O
-2020, O
-a O
-reduction O
-in O
-the O
-participation O
-of O
-younger O
-women O
-in O
-the O
-work O
+web O
+will O
 force O
-was O
-balanced O
-by O
-an O
-increase O
-in O
 the O
-labour O
-activity O
-rate O
+hegemonic O
+state O
+to O
+make O
+the O
+choice O
 of O
-immigrant O
-and O
-older O
-workers.
-In O
-Poland O
-and O
-Hungary, O
-the O
-metropolitan O
-regions O
-of O
-Warsaw, O
-Poznan, O
-Krakow O
-and O
-Budapest O
-showed O
-population O
-gains O
-by U_TEMPPRED O
-2030, O
-but O
-other O
-regions O
-shed O
-populations.
-Following O
-this O
-analysis O
-the O
-predicted O
-continued O
-growth O
-of O
-the O
-Turkish O
-population O
-(World O
-Bank O
-forecasts O
-expect O
-this O
-to O
-exceed O
-100 O
-million O
-by U_TEMPPRED O
-2050) O
-would O
-be O
-sufficient O
-to O
-‘cover O
-the O
-predicted O
-12 O
-million O
-person O
-population O
-deficit O
-expected O
-within O
-the O
-EU.
-Certainly O
-social O
-and O
-cultural O
-changes O
-have O
-not O
-been O
-entirely O
-negative, O
-as O
-the O
-increase O
-in O
-contact O
-between O
-countries O
-of O
-origin O
-and O
-Europe O
-has O
-stimulated O
-cultural O
-expansion O
-and O
-exchange O
-as O
-re-emigration O
-and O
-movement O
-of O
-Europeans O
-has O
-grown O
-and O
-become O
-progressively O
-the O
-norm O
-by U_TEMPPRED O
-2030.
-Looking O
-further O
-into O
-the O
-future, O
-by U_TEMPPRED O
-2045 O
-the O
-range O
-could O
-extend O
-between O
-25.6 O
-and O
-32.5 O
-years O
-around O
-a O
-base O
-case O
-of O
-28.8 O
-years.
-Looking O
-further O
-into O
-the O
-future, O
-by U_TEMPPRED O
-2045 O
-the O
-range O
-could O
-extend O
-between O
-20.5 O
-and O
-30.0 O
-years O
-around O
-a O
-base O
-case O
-of O
-24.6 O
-years.
-Trends O
-in O
-these O
-parameters O
-are O
-then O
-fitted O
-and O
-extrapolated O
-to O
-enable O
-projections O
-of O
-life O
-expectancy O
-up B_TEMPPRED O
-to E_TEMPPRED O
-40 O
-years O
-into O
-the O
-future.
-Accurately O
-predicting O
-remaining O
-life O
-expectancy O
-is O
-a O
-challenging O
-exercise, O
-not O
-least O
-because O
-forecasts O
-of O
-up B_TEMPPRED O
-to E_TEMPPRED O
-50 O
-years O
-ahead O
-may O
-be O
-required.
-The O
-necessary O
-time B_TEMPPRED O
-period M_TEMPPRED O
-is E_TEMPPRED O
-337 O
-years O
-for O
-the O
-Congo, O
-219 O
-years O
-for O
-Yemen, O
-129 O
-years O
-for O
-Syria, O
-and O
-128 O
-years O
-for O
-Ghana, O
-32.6 O
-years O
-for O
-China, O
-59 O
-years O
-for O
-India, O
-33.6 O
-years O
-for O
-Russia, O
-and O
-45.7 O
-years O
-for O
-Turkey O
-to O
-catch O
-up O
-to O
-the O
-present O
-per O
-capita O
-level O
-of O
-Norway.
-The O
-necessary O
- B_TEMPPRED O
-period M_TEMPPRED O
-is E_TEMPPRED O
-374 O
-years O
-for O
-the O
-Congo, O
-241.4 O
-years O
-for O
-Yemen, O
-135.3 O
-years O
-for O
-Syria, O
-and O
-131.6 O
-years O
-for O
-Ghana, O
-31.2 O
-years O
-for O
-China, O
-58.1 O
-years O
-for O
-India, O
-31.1 O
-years O
-for O
-Russia O
-and O
-43.4 O
-years O
-for O
-Turkey O
-to O
-catch O
-up O
-to O
-the O
-present O
-per O
-capita O
-level O
-of O
-USA.
-It B_TEMPPRED O
-would M_TEMPPRED O
-take E_TEMPPRED O
-130 O
-years O
-for O
-the O
-Congo, O
-203.9 O
-years O
-for O
-Eritrea, O
-81.5 O
-years O
-for O
-Yemen, O
-69 O
-years O
-for O
-Ghana, O
-and O
-52.2 O
-years O
-for O
-Egypt O
-to O
-reach O
-the O
-current O
-average O
-level O
-of O
-per O
-capita O
-income O
-in O
-Norway.
-It B_TEMPPRED O
-would M_TEMPPRED O
-take E_TEMPPRED O
-37.5 O
-years O
-for O
-India, O
-51.3 O
-years O
-for O
-Indonesia, O
-50 O
-years O
-for O
-Nigeria O
-and O
-Pakistan O
-and O
-23.3 O
-years O
-for O
-Turkey O
-to O
-reach O
-the O
-current O
-average O
-level O
-of O
-per O
-capita O
-income O
-in O
-USA.
-It B_TEMPPRED O
-would M_TEMPPRED O
-take E_TEMPPRED O
-16 O
-years O
-for O
-Kazakhstan, O
-18 O
-years O
-for O
-Russia, O
-and O
-22.5 O
-years O
-for O
-China O
-to O
-reach O
-current O
-per O
-capita O
-income O
-level O
-of O
-the O
-USA.
-It B_TEMPPRED O
-would M_TEMPPRED O
-take E_TEMPPRED O
-130 O
-years O
-for O
-the O
-Congo, O
-203 O
-years O
-for O
-Eritrea O
-and O
-103 O
-years O
-for O
-low-income O
-countries O
-to O
-reach O
-to O
-the O
-current O
-average O
-per O
-capita O
-income O
-of O
-Norway.
-Table O
-1demonstrates O
-that O
-it B_TEMPPRED O
-would M_TEMPPRED O
-take E_TEMPPRED O
-60.7 O
-years O
-for O
-Sub-Saharan O
-Africa, O
-37.7 O
-years O
-for O
-South O
-Asia O
-and O
-30 O
-years O
-for O
-middle- O
-income O
-countries O
-to O
-reach O
-the O
-current O
-average O
-level O
-of O
-per O
-capita O
-income O
-in O
-high-income O
-countries.
-It B_TEMPPRED O
-would M_TEMPPRED O
-take E_TEMPPRED O
-118 O
-years O
-for O
-Sub-Saharan O
-African O
-countries O
-and O
-337 O
-years O
-for O
-the O
-Congo O
-to O
-eliminate O
-the O
-existing O
-gap O
-between O
-themselves O
-and O
-high-income O
-countries.
-For O
-China O
-to O
-catch O
-up O
-to O
-the O
-income O
-level O
-of O
-Norway O
-by U_TEMPPRED O
-2020, O
-it O
-needs O
-to O
-grow O
-15 O
-percent O
-each O
-year.
-Table O
-4 O
-illustrates O
-that O
-it B_TEMPPRED O
-would M_TEMPPRED O
-take E_TEMPPRED O
-103 O
-years O
-and O
-118 O
-years, O
-respectively, O
-to O
-eliminate O
-the O
-existing O
-gap O
-between O
-low- O
-income O
-countries O
-and O
-Sub-Saharan O
-Africa O
-and O
-high-income O
-countries.
-It B_TEMPPRED O
-would M_TEMPPRED O
-take E_TEMPPRED O
-61 O
-years O
-for O
-Sub-Saharan O
-African O
-countries, O
-and O
-approximately O
-60 O
-years O
-for O
-low-income O
-countries O
-to O
-reach O
-the O
-current O
-per O
-capita O
-income O
-level O
-of O
-the O
-high-income O
-countries.
-In O
-order O
-to O
-equalize O
-per O
-capita O
-incomes O
-by U_TEMPPRED O
-2020, O
-the O
-low-income O
-countries O
-need O
-to O
-grow O
-at O
-20 O
-percent O
-level O
-on O
-average O
-each O
-year.
-Conclusion O
-The O
-convergence O
-prediction O
-of O
-neoclassical O
-theory O
-may B_TEMPPRED O
-take E_TEMPPRED O
-100 O
-years O
+control O
 or O
-more.
-To O
-prevent O
-the O
-per O
-capita O
-income O
-gap O
-from O
-becoming O
-greater O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020, O
-the O
-low-income O
-country O
-group O
-needs O
-to O
-grow O
-at O
-the O
-14.75 O
-level.
-To O
-equalize O
-the O
-overall O
-per O
-capita O
-income O
-levels O
-of O
-high O
-and O
-low-income O
-countries O
-from O
-now O
-until B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020, O
-the O
-latter O
-group O
-would O
-have O
-to O
-grow O
-20 O
-percent.
-The O
-Congo O
-would O
-reach O
-the O
-current O
-per O
-capita O
-income O
-level O
-of O
-the O
-USA O
-after O
-126 O
-years, O
-but O
-after U_TEMPPRED O
-126 O
-years O
-the O
-per O
-capita O
-income O
-level O
-of O
-the O
-USA O
-could O
-reach O
-1.5 O
-million O
-USD, O
-if O
-the O
-same O
-average O
-growth O
-rate O
-is O
-reached.
-In O
-all O
-scenarios O
-it O
-is O
-assumed O
-that O
-countries O
-will O
-continue O
-to O
-grow O
-at O
-the O
-same O
-growth O
-rate O
-that O
-they O
-had O
-between O
-the O
-years O
-2000 O
-and O
-2007 O
-till U_TEMPPRED O
-2020.
-Finally O
-in O
-the O
-fourth O
-scenario, O
-the O
-answer O
-of O
-‘‘how O
-fast O
-would O
-the O
-underdeveloped O
-countries O
-have O
-to O
-grow O
-merely O
-to O
-prevent O
-the O
-absolute O
-per O
-capita O
-income O
-gap O
-between O
-rich O
-and O
-underdeveloped O
-countries O
-from O
-becoming O
-greater O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020 O
-than O
-now’’ O
-is O
-given.
-To O
-prevent O
-the O
-absolute O
-per O
-capita O
-income O
-gap O
-between O
-high O
-income O
-and O
-low-income O
-countries O
-from O
-becoming O
-greater O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020, O
-the O
-second O
-group O
-should O
-grow O
-at O
-Table O
-8 O
-Results O
-of O
-the O
-third O
-scenario O
-for O
-selected O
-countries O
-versus O
-Norway.
-To O
-prevent O
-the O
-absolute O
-per O
-capita O
-income O
-gap O
-from O
-becoming O
-greater O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020, O
-Sierra O
-Leone O
-should O
-grow O
-21.59 O
-percent, O
-Yemen O
-should O
-grow O
-at O
-14.75 O
-percent, O
-Uzbekistan O
-should O
-grow O
-14.22, O
-and O
-Pakistan O
-should O
-grow O
-13.57 O
-percent.
-To O
-prevent O
-the O
-absolute O
-per O
-capita O
-income O
-gap O
-from O
-becoming O
-greater O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020, O
-Congo O
-should O
-grow O
-at O
-a O
-rate O
-of O
-the O
-27 O
-percent, O
-Ethiopia O
-should O
-grow O
-at O
-20.96 O
-percent, O
-Ghana O
-should O
-grow O
-at O
-17.87 O
-percent O
-and O
-India O
-should O
-grow O
-at O
-13.90 O
-percent.
-here O
-gives O
-the O
-growth O
-rate O
-that O
-would O
-have O
-to O
-be O
-achieved O
-to O
-prevent O
-the O
-present O
-income O
-gap O
-from O
-wider O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020.
-Tables O
-7–9, O
-reveal O
-how O
-fast O
-underdeveloped O
-countries O
-would O
-have O
-to O
-grow O
-from O
-now O
-until B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020 O
-for O
-per O
-capita O
-income O
-to O
-be O
-equalized O
-by O
-2020.Table O
-7shows O
-the O
-results O
-for O
-the O
-country O
-groups,Table O
-8for O
-the O
-selected O
-countries O
-versus O
-Norway, O
-andTable O
-9for O
-the O
-selected O
-countries O
-versus O
-USA.
-Tables O
-10–12, O
-show O
-how O
-fast O
-underdeveloped O
-countries O
-have O
-to O
-grow O
-to O
-prevent O
-the O
-absolute O
-per O
-capita O
-income O
-gap O
-between O
-rich O
-and O
-underdeveloped O
-countries O
-from O
-becoming O
-greater O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020 O
-than O
-it O
-is O
-now.Table O
-10shows O
-the O
-results O
-for O
-the O
-country O
-groups,Table O
-11for O
-the O
-selected O
-countries O
-versus O
-Norway, O
-andTable O
-12for O
-the O
-selected O
-countries O
-versus O
-USA.
-The O
-list O
-of O
-the O
-variables O
-used O
-in O
-this O
-study O
-is O
-as O
-follows: O
-S¼Pð1þRÞ O
-n O
-Pis O
-the O
-principal O
-sum;Sis O
-the O
-sum O
-to O
-which O
-the O
-principal O
-grows O
-at O
-an O
-annual O
-rate O
-of O
-growth,r, O
-overnyears;nis O
-the O
-number O
-of O
-years;Ris O
-the O
-growth O
-rate O
-of O
-per O
-capita O
-income; O
-YDT O
-is O
-the O
-current O
-per O
-capita O
-income O
-level O
-of O
-developed O
-countries O
-in O
-USD; O
-YDCT O
-is O
-the O
-current O
-per O
-capita O
-income O
-level O
-of O
-underdeveloped O
-countries O
-in O
-USD; O
-RD O
-is O
-the O
-per O
-capita O
-income O
-growth O
-rate O
-in O
-developed O
-countries O
-from O
-the O
-year O
-2000 O
-to O
-2020 O
-(the O
-average O
-actual O
-growth O
-rate O
-of O
-per O
-capita O
-income O
-between O
-2000 O
-and O
-2007 O
-is O
-used); O
-RDC O
-is O
-the O
-per O
-capita O
-income O
-growth O
-rate O
-in O
-underdeveloped O
-countries O
-from O
-the O
-year O
-2000 O
-to U_TEMPPRED O
-2020.
-In O
-the O
-third O
-scenario O
-‘‘how O
-fast O
-any O
-country O
-or O
-the O
-underdeveloped O
-countries O
-would O
-have O
-to O
-grow O
-for O
-per O
-capita O
-income O
-to O
-be O
-equalized O
-with O
-that O
-of O
-the O
-developed O
-countries O
-by U_TEMPPRED O
-2020’’ O
-is O
-discussed.
-In O
-order O
-to O
-discuss O
-the O
-third O
-and O
-fourth O
-scenarios, O
-first O
-the O
-expected O
-per O
-capita O
-income O
-levels O
-of O
-countries O
-in U_TEMPPRED O
-2020 O
-are O
-calculated.
-If O
-the O
-countries O
-continue O
-their O
-existing O
-average O
-growth O
-rates, O
-the O
-expected O
-per O
-capita O
-income O
-level O
-for O
-the O
-high- O
-income O
-group O
-countries O
-will O
-be O
-58 O
-010 O
-USD O
-in U_TEMPPRED O
-2020.
-By O
-this O
-method, O
-the B_TEMPPRED O
-expected E_TEMPPRED O
-2020 O
-per O
-capita O
-income O
-level O
-of O
-Norway O
-will O
-be O
-87 O
-977 O
-USD, O
-and O
-the O
-expected O
-2020 O
-per O
-capita O
-income O
-level O
-of O
-the O
-USA O
-will O
-be O
-78 O
-117 O
-USD.
-In O
-order O
-to O
-equalize O
-per O
-capita O
-incomes O
-by U_TEMPPRED O
-2020, O
-the O
-low-income O
-countries O
-would O
-need O
-to O
-grow O
-at O
-a O
-rate O
-of O
-20.1 O
-percent O
-and O
-middle-income O
-countries O
-12.1 O
-percent, O
-Sub-Saharan O
-African O
-countries O
-at O
-a O
-rate O
-of O
-18.7, O
-South O
-Asia O
-countries O
-at O
-16.9 O
-Table O
-3 O
-Results O
-of O
-the O
-first O
-scenario O
-for O
-selected O
-countries O
-versus O
-USA.
-In O
-order O
-to O
-catch O
-up O
-to O
-the O
-per O
-capita O
-income O
-level O
-of O
-Norway O
-by U_TEMPPRED O
-2020, O
-the O
-required O
-annual O
-average O
-growth O
-rates O
-would O
-have O
-to O
-be O
-33 O
-percent O
-for O
-the O
-Congo O
-Democratic O
-Republic, O
-Table O
-5 O
-Results O
-of O
-the O
-second O
-scenario O
-for O
-selected O
-countries O
-versus O
-Norway.
-In O
-order O
-to O
-catch O
-up O
-to O
-the O
-per O
-capita O
-income O
-level O
-of O
-USA O
-by U_TEMPPRED O
-2020, O
-the O
-required O
-annual O
-average O
-growth O
-rates O
-would O
-have O
-to O
-be O
-32.3 O
-percent O
-for O
-the O
-Congo, O
-28.5 O
-percent O
-for O
-Eritrea, O
-25.9 O
-percent O
-for O
-Ethiopia, O
-22.6 O
-percent O
-for O
-Ghana, O
-18.2 O
-percent O
-for O
-India, O
-and O
-27 O
-percent O
-for O
-Sierra O
-Leone.
-We O
-anticipate O
-that O
-it O
-will O
-be O
-held O
-by U_TEMPPRED O
-2020
-The B_TEMPPRED O
-next E_TEMPPRED O
-50 O
-years O
-for O
-Malaysia: O
-an O
-inquiry O
-using O
-alternative O
-futures O
-methods’’ O
-focus O
-on O
-‘four O
-developments O
-that O
-have O
-taken O
-place O
-in O
-Malaysia O
-concerning O
-attempts O
-at O
-looking O
-to O
-alternative O
-futures O
-for O
-the O
-country’.
-The O
-translation O
-of O
-the O
-full O
-title O
-of O
-the O
-project O
-in O
-English O
-is O
-the O
-Pilot O
-Foresight O
-for O
-Most O
-Appropriate O
-Technologies O
-for O
-Iran O
-in U_TEMPPRED O
-2025.
-To O
-produce O
-a O
-number O
-of O
-scenarios O
-concerning O
-the O
-most O
-appropriate O
-technologies O
-for O
-Iran O
-in U_TEMPPRED O
-2025.
-The O
-questionnaire O
-had O
-to O
-identify O
-major O
-fields O
-or O
-areas O
-of O
-scientific O
-and O
+coexistence.
+Many O
 technological O
-developments O
-within O
-the O
-realm O
-of O
-physical O
-sciences O
-and O
-engineering O
-in U_TEMPPRED O
-2025.
-Furthermore, O
-it O
-had O
-to O
-specify O
-the O
-most O
-important O
-topics O
-within O
-each O
-field O
+breakthroughs O
+are O
+forecast O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+decade O
 or O
-area O
-which O
-had O
+so, O
+as O
+in O
 the O
-greatest O
-chances O
+detailed O
+Japanese O
+Delphi O
+studies.
+Instead O
 of O
-being O
-turned O
-into O
 a O
-dominant O
-trend O
-by U_TEMPPRED O
-2025.
-In O
-particular, O
-we O
-present O
-an O
-analysis O
+world O
 of O
-an O
-ongoing O
+have O
+nots O
 and O
-comprehensive O
-foresight O
-project O
-whose O
-objective O
-is O
-to O
-provide O
-Iranian O
-top O
+haves, O
+in O
+this O
+future, O
+equity O
+would O
+dramatically O
+increase O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+60 O
+years.
+This O
+will O
+allow O
 decision O
 makers O
-with O
-a O
-set O
-of O
-scenarios O
-concerning O
-future O
-developments O
-in O
-a O
-number O
-of O
-areas O
-of O
-science O
+to O
+somehow O
+quantify O
 and O
-technology O
-until U_TEMPPRED O
-2025.
+appreciate O
+the O
+effect O
+of O
+their O
+decisions O
+taken O
+today O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next M_TEMPPRED O
+several E_TEMPPRED O
+20 O
+years.
 The O
-overall O
-responsibility O
-of O
-these O
-project O
-with O
-one O
-of O
-the O
-co-authors O
-of O
-this O
-paper O
-(Shoraka) O
-the O
-other O
-co-author O
-is O
-involved O
-in O
-two O
-of O
-these O
-projects, O
-namely O
-the O
-socio-political O
+most O
+significant O
+events O
+for B_TEMPPRED O
+the M_TEMPPRED O
+next M_TEMPPRED O
+several E_TEMPPRED O
+thousand O
+years.
+It O
+would O
+seem O
+reasonable O
+after O
+several O
+dozen O
+papers, O
+reports, O
+chapters O
 and O
-ethical O
-impact O
-of O
-converging O
-sciences O
+books O
+involving O
+almost O
+as O
+many O
+researchers O
 and O
-technologies O
-(nano, O
-bio, O
-info O
-and O
-cogno) O
-on O
-Iran O
-in U_TEMPPRED O
-2025 O
-(which O
-is O
-part O
-of O
+consultants O
+worldwide O
+over B_TEMPPRED O
+a M_TEMPPRED O
+period M_TEMPPRED O
+of E_TEMPPRED O
+40 O
+years O
+that O
 the O
-project O
-on O
-Science O
-and O
-Technology) O
-and O
-also O
-the O
-tenth O
-project O
-from O
-the O
-above O
-list.
-The O
-diffusion O
-of O
-investment O
-capital O
-within O
-the O
-urban O
-system O
-results O
-in O
-a O
-natural O
-reduction O
-of O
-gradients, O
-and O
+weak O
+signals O
+field O
+would O
 by O
-knowing O
+now O
+have O
+reached O
+a O
+maturity.
+[T] O
+emerging O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+couple O
+of O
+decades O
+that O
+have O
+at O
+their O
+core O
+3D O
+printing.
+As O
+a O
+result, O
+for O
+Clarke, O
 the O
-macrolaws O
+exponential O
+acceleration O
+of O
+technological O
+development O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+thirty O
+years O
+will O
+enable O
+the O
+positive O
+creation O
+of O
+superhuman O
+intelligence.
+What O
+if O
+a O
+government O
+agency’s O
+mission O
+is O
+expected O
+to O
+increase O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next M_TEMPPRED O
+several E_TEMPPRED O
+10 O
+years, O
+but O
+its O
+budget O
+is O
+expected O
+to O
+shrink? O
+Could O
+both O
+of O
+those O
+trends O
+be O
+strong O
+and O
+almost O
+irrefutable? O
+Sure, O
+it O
+has O
+happened O
+before
+[T] O
+SF O
+prototyping O
+is O
+a O
+powerful O
+tool O
+in O
+the O
+social O
+science O
+repertoire O
+when O
+put O
+into O
+action O
+in O
+prototyping O
+futures O
+and O
+planning O
 for O
 the O
-evolution O
+range O
+and O
+degree O
 of O
-the O
-system O
-our O
-visibility O
-can O
-be O
-extended O
-150 O
-years O
-intoB_TEMPPRED O
+variables O
+emerging O
+over B_TEMPPRED O
 the M_TEMPPRED O
-future E_TEMPPRED.
-Finally O
-futures O
-research O
-is O
-described O
-as O
-an O
-evolutionary O
-science, O
-which O
-will O
-possibly O
-become O
-integrated O
-within O
-complexity O
-science O
-by U_TEMPPRED O
-2050.
-Based O
-upon O
-current O
-trends O
-it O
-can O
-be O
-reasonably O
-assumed O
+next E_TEMPPRED O
+couple O
+of O
+decades O
 that O
-futures O
-research O
-is O
-being O
-penetrated O
-by O
-complexity O
-scientists O
-at O
-a O
-rate O
-of O
-300–350 O
-per O
-annum, O
-so O
-that O
-by U_TEMPPRED O
-2025 O
-we O
-may O
-find O
-a O
-decline O
-in O
-the O
-number O
-of O
-futures O
-researchers O
-from O
-20,000 O
-to O
-15,000, O
-and O
-a O
-new O
-generation O
-of O
-7000 O
-complexity O
-scientists O
-working O
-on O
-policy O
-analysis.
-By U_TEMPPRED O
-2050, O
-it O
-may O
-be O
-expected O
-that O
-complexity O
-science O
-becomes O
-the O
-dominant O
-futures O
-research O
-discipline, O
-with O
-perhaps O
-15,000 O
-complexity O
-scientists O
-and O
-only O
-10,000 O
-futures O
-researchers.
-After O
-more O
-than O
-a O
-decade O
-of O
-chaotic O
-re-structuring O
-and O
-re-organisation O
-in O
-the O
-new O
-context, O
-Europe O
-was, O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030, O
-progressively O
-adapting O
-to O
-new O
-forms O
-of O
-living O
-and O
-working.
-These O
-required O
-however O
-significant O
-investments O
-and O
-their O
-impact O
-became O
-really O
-substantial O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2015.
-The O
-territorial O
-image O
-of O
-Europe O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030 O
-was O
-again O
-quite O
-different O
-from O
-what O
-it O
-was O
-in O
-2015.
-The O
-first O
-scenario O
-‘‘Europe O
-in O
-a O
-context O
-of O
-high O
-energy O
-price’’ O
-assumes O
-that O
-the O
-process O
-of O
-oil O
-peaking O
-will O
-not O
-take O
-place O
-before U_TEMPPRED O
-2030, O
-but O
-that O
-oil O
-price O
-increase O
-will O
-nevertheless O
-be O
-sustained O
-and O
-substantial O
-until O
-then.
-New O
-technologies O
-making O
-possible O
-the O
-production O
-of O
-large O
-energy O
-quantities O
-at O
-cheap O
-price O
-will O
-not O
 have O
-become O
-mature O
-before U_TEMPPRED O
-2030.
-It O
-is O
-however O
-assumed O
-that O
+at O
+their O
+core O
+3D O
+printing
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+decade, O
 the O
-oil O
-peaking O
-process O
-will O
-not O
-take O
-place O
-before U_TEMPPRED O
-2030.
-During O
-the O
-whole O
-period O
-up B_TEMPPRED O
-to E_TEMPPRED O
-2030, O
-the O
-definition O
-and O
-implementation O
-of O
-new O
-strategies O
-in O
-the O
+U.S.
 energy O
-sector O
-has O
-been O
-confronted O
-with O
-controversial O
-environmental O
-issues.
-On O
+efficiency O
+was O
+likely O
+to O
+be O
+realized O
+the B_TEMPPRED O
+next E_TEMPPRED O
+20 O
+years.
+Of O
+course, O
+a O
+lot O
+is O
+set O
+to O
+change O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next M_TEMPPRED O
+several E_TEMPPRED O
+three O
+decades.
+This O
+will O
+require O
+a O
+complete O
+change O
+in O
+power O
+generation O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next M_TEMPPRED O
+several E_TEMPPRED O
+40 O
+years.
+But O
+in O
+India, O
+there O
+are O
+many O
+signs O
+that O
+a O
+transformation O
+is O
+possible O
+the B_TEMPPRED O
+next E_TEMPPRED O
+few O
+decades, O
+including: O
+A.
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+two O
+decades, O
 the O
-contrary, O
+bird O
+may O
+take O
+flight O
+once O
+again’’.
+One O
+can O
+visualise O
+infrastructure O
+development O
+over O
+the O
+current O
+and O
+the B_TEMPPRED O
+next E_TEMPPRED O
+decade O
 in O
 terms O
 of O
-global O
-CO O
-2 O
-emissions, O
-the O
-situation O
-in U_TEMPPRED O
-2030 O
-has O
-strongly O
-worsened.
-Up B_TEMPPRED O
-to E_TEMPPRED O
-2020, O
-the O
-rate O
-of O
-decline O
-was O
-modest.
-Production O
-decline O
-accelerated O
-then, O
-to O
-reach O
-55 O
-million O
-b d O
-in O
-2030, O
-while O
-the O
-world O
-economy O
-could O
-have O
-absorbed O
-90 O
-million O
-b d.
-After U_TEMPPRED O
-2020, O
-the O
-steady O
-degradation O
+two-phases.
+Echoes O
 of O
 the O
-quality O
-of O
-oil O
-produced O
-could O
-be O
-observed O
-in O
-almost O
-all O
-regions O
-having O
-passed O
-the O
-peak O
-and O
-posed O
-additional O
-challenges O
-for O
-the O
-existing O
-downstream O
-infrastructures, O
-in O
-particular O
-refineries.
-Up B_TEMPPRED O
-to E_TEMPPRED O
-2020, O
-natural O
-gas O
-was O
-substituted O
-to O
-oil O
-as O
-a O
-primary O
-energy O
-source O
-in O
-a O
-number O
-of O
-uses O
-such O
-as O
-domestic O
-and O
-office O
-heating, O
-power O
-plants, O
-petrochemical O
-industries O
-and O
-partly O
-transportation O
-(buses, O
-lorries, O
-etc.).
-The O
-peaking O
-of O
-gas O
-production O
-did O
-not O
-occur O
-globally O
-before U_TEMPPRED O
-2025, O
-but O
-numerous O
-individual O
-large O
-gas O
-fields O
-had O
-peaked O
-earlier.
-Positive O
-feedback O
-involving O
-changes O
-in O
-human O
-population O
-(H) O
-and O
-energy O
-demand acquisition O
-(Q) O
-amplify O
-changes O
-in O
-sustainability O
-on O
-a O
-timescale O
-of O
-up B_TEMPPRED O
-to E_TEMPPRED O
-100 O
-years; O
-within O
-the O
-anthroposphere, O
-population O
-increase O
-causes O
-more O
-energy O
-demand, O
-whichin O
-turn O
-promotes O
-mankind O
-survival O
-(sustainability).
-Covering O
-a O
-period O
-up B_TEMPPRED O
-to E_TEMPPRED O
-2030, O
-the O
-ESPON O
-scenarios O
-have O
-a O
-very O
-limited O
-time O
-span O
-compared O
-to O
-other O
-climate O
-change O
-scenarios.
-Confining O
-the O
-time O
-horizon B_TEMPPRED O
-to E_TEMPPRED O
-2030 O
-also O
-increased O
-the O
-relevance O
-of O
-strategies O
-geared O
-towards O
-adaptation O
-vis-a O
-` O
--vis O
-mitigation O
-strategies O
-since O
-the O
-latter O
-will O
-only O
-become O
-noticeable O
-in O
-the O
-very O
-long O
-term.
-Any O
-extreme O
-climate O
-fluctuations O
-before U_TEMPPRED O
-2030 O
-would O
-be O
-rather O
-unrealistic.
-As O
-a O
-result, O
-the O
-world O
-nations O
-are O
-not O
-able O
-to O
-reduce O
-emission O
-rates O
-by U_TEMPPRED O
-2030, O
-and O
-adaptation O
-policies O
-are O
-not O
-prominent O
-on O
-the O
-EU O
-agenda.
-As O
-a O
-result, O
-a O
-drastic O
-cut O
-in O
-emission O
-rates O
-is O
-reached O
-by U_TEMPPRED O
-2030, O
-even O
-at O
-the O
-expense O
-of O
-some O
-economic O
-growth.
-The O
-negative O
-territorial O
-impacts O
-of O
-climate O
-change O
-are O
-at O
-least O
-alleviated O
-by U_TEMPPRED O
-2030
-The O
-carbon O
-permit O
-price O
-was O
-steadily O
-increased O
-to O
-EUR O
-65 t O
-CO O
-2 O
-by U_TEMPPRED O
-2030.
-A O
-territorial O
-view O
-on O
-Europe O
-by U_TEMPPRED O
-2030 O
-The O
-choice O
-for O
-a O
-firm O
-mitigation O
-policy O
-had O
-had O
-a O
-drawback O
-in O
-macro-economic O
-terms, O
-since O
-the O
-costs O
-of O
-all O
-mitigation O
-measures O
-mounted O
-to O
-0.4% O
-of O
-EU O
-GDP O
-by U_TEMPPRED O
-2030.
-As U_TEMPPRED O
-2020 O
-approached, O
-it O
-was O
-clear O
-that O
-ongoing O
-energy O
-saving O
-measures O
-were O
-rather O
-successful.
-By U_TEMPPRED O
-2020, O
-the O
-intensity O
-of O
-damage O
-generated O
-by O
-climate O
-change O
-had O
-reached O
-such O
-levels O
-that O
-national O
-governments O
-could O
-not O
-cope O
-with O
-the O
-numerous O
-requests O
-for O
-subsidies O
-to O
-finance O
-repair O
-works O
-and O
-to O
-compensate O
-for O
-the O
-loss O
-of O
-farmers’ O
-revenue.
-By U_TEMPPRED O
-2030, O
-mitigation O
-measures O
-taken O
-so O
-far O
-proved O
-to O
-be O
-too O
-small O
-to O
-make O
-a O
-difference.
-Climate O
-scientists O
-agreed O
-that O
-a O
-temperature O
-rise O
-of O
-48C O
-by U_TEMPPRED O
-2100 O
-was O
-now O
-inevitable, O
-even O
-if O
-drastic O
-measures O
-were O
-to O
-be O
-put O
-in O
-place O
-before O
-2050.
-Climate O
-change O
-impacts O
-across O
-Europe O
-until U_TEMPPRED O
-2030 O
-Up B_TEMPPRED O
-to E_TEMPPRED O
-2030, O
-temperatures O
-continued O
-to O
-rise O
-and O
-growing O
-seasons O
-continued O
-to O
-shift O
-and O
-expand.
-A O
-territorial O
-view O
-on O
-Europe O
-by U_TEMPPRED O
-2030 O
-Looking O
-at O
-Europe O
-as O
-whole, O
-macro-economic O
-impacts O
-of O
-mitigation O
-measures O
-were O
-negligible, O
-since O
-only O
-cost-effective O
-measures O
-were O
-put O
-in O
-place O
-(of O
-course O
-the O
-costs O
-of O
-new O
-measures O
-towards O
-2050, O
-needed O
-to O
-prevent O
-a O
-catastrophic O
-climate O
-change O
-towards U_TEMPPRED O
-2100, O
-would O
-be O
-huge).
-Decreasing O
-snow O
-cover O
-led O
-to O
-declining O
-winter O
-tourism; O
-by U_TEMPPRED O
-2030, O
-there O
-were O
-no O
-more O
-ski O
-resorts O
-below O
-1500 O
-m O
-in O
-the O
-Alps.
-By U_TEMPPRED O
-2020 O
-Break O
-on O
-further O
-enlargement O
-(except O
-Bulgaria O
-and O
-Romania) O
-Romania, O
-Bulgaria O
-in O
-2007 O
-Turkey O
-by U_TEMPPRED O
-2030.
-Only O
-lip O
-service O
-to O
-neighbourhood O
-policyWestern O
-Balkan, O
-EFTA EEA O
-countries O
-in O
-2015 O
-Continued O
-combination O
-of O
-deepening O
-and O
-widening O
-Turkey O
-in O
- U_TEMPPRED2020 O
-Strengthening O
-of O
-the O
-neighbourhood O
-policy O
-(Maghreb, O
-Ukraine, O
-Russia, O
-etc.) O
-All O
-scenarios O
-have O
-the O
-time O
-horizon B_TEMPPRED O
-of E_TEMPPRED O
-2030 O
-and O
-are O
-told O
+arguments O
 from O
 the O
-point O
-of O
-view O
-of O
-the O
-observer O
-situated O
-in O
-that O
-year O
-and O
-looking O
-back O
-at O
-the O
-evolution O
-from O
-2005 O
-onwards.
-As O
-mentioned O
-in O
-the O
-paper O
-by O
-Dammers O
-in O
-this O
-same O
-issue, O
-the O
-scenarios O
-were O
-then O
-constructed O
-as O
-a O
-combination O
-of O
-qualitative O
-and O
-quantitative O
-elements, O
-resulting O
-in O
-qualitative O
-scenarios O
-with O
-quantitative O
-support, O
-with O
-a O
-time O
-horizon B_TEMPPRED O
-of E_TEMPPRED O
-2030.
-This O
-was O
-then O
-translated O
+report O
+found O
+their O
+way O
 into O
-more O
-concrete O
-elements O
-of O
-a O
-territorial O
-image O
-of U_TEMPPRED O
-2030, O
-as O
-the O
-expression O
-of O
-the O
-materialisation O
-of O
-the O
-selected O
+newspaper O
+articles O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+two O
+years.
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+few O
+decades, O
+India’s O
+energy O
 policy O
-objectives.
-
-Socio-cultural O
-sectorSocio-cultural O
-sectorSocio-cultural O
-sector O
-Heterogeneous O
-and O
-insufficient O
-policies O
-related O
+will O
+have O
 to O
-integration O
-Promotion O
-of O
-regional O
-and O
-European O
-identities O
-Reactive O
-management O
-of O
-social O
-problems O
-in O
-large O
-cities O
-Growing O
-ethnic, O
-religious O
-and O
-social O
-tensionsProactive O
-socio-cultural O
-integration O
-policies, O
-in O
-particular O
-in O
-cities O
-Increase O
-of O
-surveillance O
-and O
-security O
-systems O
-Increased O
-fiscal O
-and or O
-social O
-investment O
-in O
-quality O
-of O
-life O
-issues O
-GovernanceGovernanceGovernance O
-Increasing O
-cooperation O
-between O
-cross-border O
-regions O
-Active O
-multi-level O
-territorial O
-governance, O
-particularly O
-in O
-areas O
-supported O
-by O
-structural O
-funds O
-Abolishment O
-of O
-barriers O
-to O
-cross-border O
-cooperation O
-Increase O
-in O
-multi-level O
-and O
-cross-sectoral O
-approaches, O
-but O
-limited O
-to O
-specific O
-programmes O
-(rural O
-development); O
-Strong O
-role O
-of O
-public O
-actors O
-in O
-territorial O
-governance O
-Less O
-public O
-intervention O
-Stronger O
-role O
-for O
-the O
-European O
-Commission O
-Wider O
-application O
-of O
-the O
-Open O
-Method O
-of O
-Coordination O
-Increased O
-role O
-of O
-private O
-sector O
-in O
-decision O
-making O
-Climate O
-changeClimate O
-changeClimate O
-change O
-Moderate O
-overall O
-climate O
-change O
-until U_TEMPPRED O
-2030 O
-(+18) O
-Constant O
-emission O
-levelsConstant O
-to O
-increasing O
-emission O
-levels O
-Increase O
-in O
-extreme O
-local O
-eventsStrict O
-mitigation O
-measures O
-(taxes, O
-road O
-pricing O
-as O
-far O
-as O
-non O
-detrimental O
-to O
-peripheral O
-regions) O
-Mitigation O
-measures O
-based O
-on O
-flexible O
-schemes O
-and O
-stimulation O
-of O
-alternative O
-technologies.
-By U_TEMPPRED O
-2030, O
-other O
-territorial O
-developments O
-began O
-to O
-emerge.
-By U_TEMPPRED O
-2030, O
-population O
-ageing O
-had O
-produced O
-some O
-strains O
-on O
-the O
-labour O
-market, O
-particularly O
-in O
-East O
-Europe, O
-but O
-also O
-in O
-Italy O
-and O
-parts O
-of O
-the O
-Iberian O
-Peninsula.
-New O
-labour O
-markets O
-became O
-available O
-with O
-the O
-accession O
-of O
-the O
-Balkan O
-states O
-in U_TEMPPRED O
-2020 O
-and O
-Turkey O
-in U_TEMPPRED O
-2030.
-1illustrates O
-the O
-attraction O
-and O
-polarisation O
-of O
-metropolitan O
-areas O
-in U_TEMPPRED O
-2030.
-By U_TEMPPRED O
-2030 O
-more O
-long-term O
-territorial O
-effects O
-became O
-apparent.
-2reveals O
-a O
-less O
-concentrated, O
-but O
-more O
-widespread O
-pattern O
-regarding O
-the O
-attraction O
-and O
-polarisation O
-potential O
-of O
-metropolitan O
-areas O
-in U_TEMPPRED O
-2030.
-By U_TEMPPRED O
-2030 O
-more O
-structural O
-changes O
-had O
-become O
-apparent.
-3shows, O
-by U_TEMPPRED O
-2030 O
-the O
-attraction O
-and O
-polarisation O
-potential O
-of O
-metropolitan O
-areas O
-is O
-powerfully O
-concentrated O
-in O
-the O
-traditional O
-pentagon.
-Although O
-the O
-external O
-competition O
-of O
-emerging O
-economies O
-takes O
-place, O
-by U_TEMPPRED O
-2030, O
-increasingly O
+navigate O
 through O
-innovation, O
-know-how O
-and O
-technologies, O
+uncharted O
+waters.
+In O
 the O
-European O
-economy O
-has O
-reached O
-a O
-sufficient O
-level O
-of O
-competitiveness O
-to O
-increase O
-its O
-share O
-in O
-the O
-strongly O
-growing O
-external O
-markets.
-Europe O
-in U_TEMPPRED O
-2030 O
-is O
-well-connected O
-by O
-a O
-clean O
-and O
-efficient O
-multimodal O
-system, O
-the O
-envy O
-of O
-the O
-world.
-Any O
-action O
-against O
-climate O
-change O
-or O
-for O
-the O
-tapping O
-of O
-new O
-energy O
-sources O
-will O
-almost O
-inevitably O
-create O
-effects O
-only O
-after U_TEMPPRED O
-2030, O
-the O
-time O
-horizon O
-set O
-for O
-the O
-scenarios.
-Expectations O
-regarding O
-the O
-future O
-The O
-questionnaire O
-was O
-also O
-extended O
-to O
-include O
-the O
-likely O
-change O
-of O
-financial O
-status O
-and O
-expectations O
-of O
-happiness O
-in B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-10 O
-years.
-Members O
-of O
+end O
 this O
-group O
-predominantly O
-think O
-that O
-they O
-would O
-not O
-be O
-alive O
-in B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-10 O
-years, O
-despite O
-the O
-fact O
-that O
-many O
+is O
+a O
+fairly O
+optimistic O
+view O
 of O
-them O
-were O
-relatively O
-young.
-Questions O
-concerning O
-financial O
-status O
-were O
-extended O
-to O
-look O
-at O
-changes O
-both O
-at O
-individual O
-and O
-family O
-level, O
-among O
-friends O
-and O
-the O
-wider O
-Hungarian O
-population, O
-in B_TEMPPRED O
-the M_TEMPPRED O
-coming E_TEMPPRED O
-10 O
-years.
-Actions O
-for O
-the O
-future O
-Our O
-questions O
-concerning O
-actions O
-taken O
-to O
-improve O
-the O
-future O
-were O
-focusing O
-on O
 what O
-the O
-respondents O
-were O
-doing O
-to O
-achieve O
-a O
-better O
-and O
-happier O
-life O
-in B_TEMPPRED O
+could O
+be O
+possibly O
+achieved O
+over B_TEMPPRED O
 the M_TEMPPRED O
 next E_TEMPPRED O
-10 O
+38 O
 years.
-In B_TEMPPRED O
-the M_TEMPPRED O
-following E_TEMPPRED O
-30 O
-years, O
-the O
-arable O
-was O
-extended O
-somewhat O
-but O
-the O
-major O
-change O
-was O
-in O
-the O
-ownership O
-structure: O
-in O
-the O
-1930s, O
-the O
-land O
-was O
-owned O
-by O
-the O
-farms O
-creating O
-an O
-intricate O
-property O
-pattern O
-in O
-the O
-landscape.
-Vision B_TEMPPRED O
-for M_TEMPPRED O
-the M_TEMPPRED O
-future E_TEMPPRED O
-Ten O
-years O
-into O
-the O
-rapid O
-areal O
-growth O
+[T] O
+Some O
 of O
-the O
-capital O
-city O
-the O
-market O
-has O
-slowed O
-and O
-a O
-partly O
-enforced O
-pause O
-in O
-launching O
-further O
-construction O
-may O
-provide O
-a O
-chance O
-for O
-the O
-landscape O
-surrounding O
-Tallinn O
-to O
-settle O
-.At O
-the O
-moment, O
-the O
-new O
-housing O
-developments O
-– O
-eclectic O
-or O
-fully O
-designed O
-– O
-south O
-of O
-the O
-city O
-look O
-uniformly O
-raw O
-and O
-ugly.
-These O
-are O
-things O
-we O
-can O
-only O
-discover O
-10, O
-20 O
-years O
-from B_TEMPPRED O
-now E_TEMPPRED.
-Participants O
-as O
-characters O
-The O
-FFP O
-scenarios O
-were O
-set O
-in U_TEMPPRED O
-2050 O
-and O
-presented O
-from O
-that O
-point O
-of O
-view, O
-describing O
-the O
-state O
-of O
-the O
-world O
-and O
-the O
-events O
-throughout O
-the O
-first O
-half O
-of O
-the O
-21st O
-century.
-3 O
-Written O
-similar O
-to O
-other O
-qualitative O
-scenarios[33,34], O
-the O
-narratives O
-described O
-events O
-in, O
-and O
-leading O
-up O
-to, O
-the B_TEMPPRED O
-year E_TEMPPRED O
-2050.
-The O
-FFP O
-was O
-a O
-nation-wide O
-scenario-based O
-policy O
-exercise O
-to O
-develop O
-and O
-analyze O
-scenarios O
-of O
-possible O
-states O
-of O
-Canada’s O
-forests O
-and O
-forest O
-sector O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2050.
-These O
-participants O
-felt O
-the O
-scenarios O
-may O
+these O
+issues O
 have O
 been O
-more O
-engaging O
-if O
-written O
-as O
-short O
-fiction, O
-or, O
-for O
-example, O
-from O
+identified O
+among O
 the O
-perspective O
-of O
-a O
-specific, O
-identifiable O
-character O
-such O
-as O
-a O
-retired O
-forester O
-reflecting O
-on O
-life O
-up B_TEMPPRED O
-to E_TEMPPRED O
-2050.
-By O
-reading O
-them O
-as O
-though U_TEMPPRED O
-2050 O
-were O
-the O
-present O
-tense, O
-people O
-had O
-to O
-situate O
-themselves O
-in O
-that O
-time.
-So O
-rather O
-than O
-saying, O
-‘this O
-might O
-happen O
-in U_TEMPPRED O
-2050,’ O
-you O
-say, O
-‘this O
-has O
-happened’’’ O
-(Participant O
-05)
-When O
-describing O
-how O
-they O
-dealt O
-with O
-the O
-fact O
-that O
-the O
-scenarios O
-were O
-crafted O
-as O
-though U_TEMPPRED O
-2050 O
-was O
-the O
-present, O
-participants O
-made O
-comments O
-like: O
-‘‘We O
-all O
-did O
-our O
-best O
-to O
-try O
-and O
-look O
-at O
-it O
-as, O
-‘o.k
-Another O
-participant O
-explained O
-that O
-she O
-dealt O
-with O
-it O
-by O
-pretending O
-she O
-took O
-a O
-time O
-machine O
-to U_TEMPPRED O
-2050 O
-and O
-was O
-living O
-at O
-that O
-point O
-in O
-the O
-future O
-(Participant O
-12)
-So O
-they’re O
-still O
-thinking, O
-‘hey O
-it’s O
-me O
-that’s O
-going O
-to O
-be O
-impacted’’’ O
-(Participant02).Almost O
-a O
-third O
+extant O
+growth O
+drivers O
 of O
 the O
-interviewees O
-referred O
-specifically O
-to O
-their O
-own O
-lives, O
-and O
-calculated O
-their O
-approximate O
-age O
-in U_TEMPPRED O
-2050, O
-imagining O
-what O
-they O
-might O
-be O
-doing.
-The O
-raw O
-power O
-of O
-financial O
-systems O
-is O
-exposed O
-by O
-the O
-observation O
-that O
-in O
-a O
-global O
-financial O
-crisis O
-that O
-will B_TEMPPRED O
-take E_TEMPPRED O
-10 O
-year O
-to O
-repair, O
-the O
-people O
-and O
-institutions O
-that O
-caused O
-the O
-crises O
-continue O
-to O
-be O
-unfeasibly O
-rewarded.
-In O
-the O
-final O
-part, O
-the O
-conversation O
-partner O
-was O
-asked O
-to O
-formulate O
-a O
-desirable O
-and O
-plausible O
-future O
-for O
-Brussels O
-in U_TEMPPRED O
-2035.
-On O
-the O
-day, O
-the O
-parade O
-included O
-floats O
-depicting O
-2058 O
-as O
-well O
-as U_TEMPPRED O
-2250.
-First, O
-to O
-enrich O
-the O
-long-term O
-municipality O
-plan O
-with O
-a O
-desired O
-vision O
-of O
-the O
-community O
-in U_TEMPPRED O
-2020; O
-and O
-second O
-to O
-enable O
-young O
-people O
-between O
-14 O
-and O
-19 O
-years O
-old O
-to O
-contribute O
-their O
-ideas O
-to O
-the O
-vision.
-The O
-project O
-was O
-coined O
-‘Visions, O
-Values O
-and O
-Goals O
-for O
-our O
-Municipality O
-in U_TEMPPRED O
-2020’.
-Therefore, O
-the O
-ideas O
-needed O
-to O
-be O
-developed O
-into O
-short O
-stories, O
+economy, O
 which O
-should O
-show O
-desired O
-descriptions O
-of O
-Lundal O
-in U_TEMPPRED O
-2020.
-In O
-the O
-USA, O
-for O
-example, O
-the O
-number O
-of O
-people O
-with O
-diabetes O
-will O
-rise O
-from O
-24 O
-million O
-to O
-44 O
-million O
-people O
-by U_TEMPPRED O
-2034 O
-if O
-current O
-trends O
-continue O
-and O
-the O
-cost O
-will O
-triple O
-from O
-$113 O
-billion O
-annually O
-to O
-$336 O
-billion O
-annually[4]
-In O
-India, O
-the O
-share O
-of O
-deaths O
-from O
-chronic O
-disease O
-is O
-expected O
-to O
-increase O
-from O
-40% O
-in O
-1990 O
-to O
-67% O
-in U_TEMPPRED O
-2020, O
-and O
-spending O
-on O
-cardiac-related O
-treatments O
-is O
-expected O
-to O
-grow O
-annually O
-by O
-13%’’.
-For O
-example, O
-longer O
-life O
-spans O
-will O
-lead O
-to O
-a O
-doubling O
-of O
-the O
-world O
-population O
-with O
-dementia O
-and O
-alzheimer’s, O
-from O
-35 O
-million O
-to O
-65 O
-million O
-by U_TEMPPRED O
-2030.
-As O
-for O
-decision-makers, O
-the O
-extent O
-to O
-which O
-the O
-territorial O
-image O
-of O
-Europe O
-in U_TEMPPRED O
-2030 O
-is O
-more O
+are O
 likely O
 to O
-be O
-the O
-result O
+persist O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+couple O
 of O
-a O
-Wild O
-Card O
-(whatever O
-it O
-appears O
-to O
-be) O
-than O
-of O
+decades O
+and O
+some O
+are O
+analysed O
+in O
 the O
-well-crafted O
-policies O
-developed O
-during O
-the O
-same O
-period O
+next O
+section.
+Growth O
+drivers O
+and O
+some O
+trends O
+There O
 is O
-interesting O
-to O
-reflect O
-upon.
-The O
-dollar O
-thus O
-loses O
-its O
-status O
-as O
-the O
-reserve O
-currency O
-and O
-the O
-rest O
+a O
+fair O
+consensus O
+that O
+long-term O
+growth O
+drivers O
 of O
 the O
-world O
-invests O
-in O
-the O
-Euro, O
-which O
-thus O
-becomes O
-thede O
-factoreserve O
-currency O
-by U_TEMPPRED O
-2020.
-Indeed, O
-the O
-project O
-developed O
-strategic O
-prospective O
-scenarios O
+Indian O
+economy O
+are O
+intact O
+and O
+there O
+are O
+several O
+reasons O
 for O
-the O
-future O
-development O
-of O
-the O
-European O
-territory, O
-especially O
-in O
-the O
-light O
-of O
-the O
-ESDP O
-and O
-European O
-Union O
-(EU) O
-cohesion O
-policy, O
+GDP O
+growth O
+to O
+be O
+sustained O
 at O
-the O
-horizon B_TEMPPRED O
-of E_TEMPPRED O
-2030.
-Confronted O
-by O
-this O
-vicious O
-cycle, O
-mixing O
-the O
-effects O
+a O
+high O
+rate O
 of O
-weak O
-demographic O
-development, O
-political O
-manoeuvring, O
-fiscal O
-crisis O
-and O
-economic O
-recession, O
-by U_TEMPPRED O
-2022, O
-European O
-leaders O
-declare O
+8 O
+to O
+9 O
+percent O
+per O
+annum O
+the B_TEMPPRED O
+next E_TEMPPRED O
+few O
+decades.
+Consequently, O
 the O
-European O
-social O
-model O
-‘bankrupt’, O
-halting O
-almost O
-all O
-but O
-the O
-most O
-basic O
-social O
-redistributions.
-The O
-transport O
-and O
-energy O
+probability O
+of O
+selecting O
+a O
+fixed O
+set O
+of O
 policies O
-followed O
-up B_TEMPPRED O
-to E_TEMPPRED O
-2022 O
-would O
-simply O
-magnify O
+today O
+that O
+will O
+be O
+optimal O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next M_TEMPPRED O
+several E_TEMPPRED O
+50–100 O
+years O
+is O
+zero.
+Following O
+this O
+introduction, O
+Section O
+2 O
+presents O
+an O
+analysis O
+of O
+India’s O
+economic O
+performance O
+over O
 the O
-effect O
-produced O
-by O
-the O
-Wild O
-Card.
+last O
+few O
+decades O
+and O
+projects O
+an O
+optimistic O
+and O
+baseline O
+growth O
+scenario O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+four O
+decades.
+This O
+technological O
+environment O
+available O
+to O
+preventive O
+and O
+health O
+care O
+systems O
+is O
+likely O
+to O
+develop O
+radically O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+10–15 O
+years.
+Projections O
+2050 O
 It O
 is O
-however O
-unlikely O
+against O
+this O
+background O
 that O
+Table O
+2 O
+projects O
+growth O
+in O
+potential O
+output O
+for O
 the O
-countries O
-of O
-Central O
+Indian O
+economy O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+four O
+decades.
+Energy, O
+infrastructure O
 and O
-Eastern O
-Europe O
-would O
-have O
-‘caught O
-up’ O
-by U_TEMPPRED O
-2022 O
-(perhaps O
-with O
+ecology O
+The O
+rapid O
+urbanisation O
+and O
+growth O
+of O
+India’s O
+towns O
+is O
+one O
+of O
 the O
-exception O
+major O
+transformations O
+and O
+challenges O
+India O
+will O
+deal O
+with O
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+four O
+decades.
+over B_TEMPPRED O
+the M_TEMPPRED O
+next E_TEMPPRED O
+four O
+decades, O
+some O
+of O
+the O
+world’s O
+fastest O
+urbanization O
+will O
+happen O
+in O
+India O
+with O
+55% O
+of O
+India’s O
+population O
+expected O
+to O
+live O
+in O
+cities O
+by U_TEMPPRED O
+2050.
+From O
+this O
+it O
+follows O
+that O
+expecting O
+energy O
+future O
+studies O
+to O
+contribute O
+to O
+the O
+formulation O
+of O
+a O
+fixed O
+set O
+of O
+policies O
+that O
+will O
+perform O
+optimally O
+the B_TEMPPRED O
+next E_TEMPPRED O
+50–100 O
+years O
+is O
+actually O
+unrealistic.
+On O
+August O
+15, O
+2008, O
+President O
+Lee O
+Myung-bak O
+announced O
+‘‘Green O
+Growth’’ O
+as O
+a O
+new O
+national O
+development O
+strategy O
+to O
+guide O
+the O
+South O
+Korean O
+economy O
+the B_TEMPPRED O
+next E_TEMPPRED O
+60 O
+years.
+A O
+forthcoming O
+OECD O
+study O
+[2] O
+projects O
+that O
+in O
+less O
+than O
+two O
+years, O
+India O
+will O
+outdo O
+the O
+Japanese O
+economy O
+for O
+good, O
+surpass O
+the O
+Euro O
+economy O
+the B_TEMPPRED O
+next E_TEMPPRED O
+two O
+decades O
+and O
+leave O
+the O
+US O
+behind O
+by O
+2060.
+This O
+trend O
+is O
+likely O
+to O
+escalate O
+only B_TEMPPRED O
+a M_TEMPPRED O
+few E_TEMPPRED O
+decades.
+The O
+Kafo O
+Jiginew O
+lending O
+agents O
+report O
+that O
+borrowers O
+who O
+purchase O
+these O
+machines O
+were O
+able O
+to O
+pay O
+off O
+a O
+loan O
+in O
+only B_TEMPPRED O
+a M_TEMPPRED O
+few E_TEMPPRED O
+five O
+years.
+As O
+a O
+result, O
+foreign O
+investors O
+and O
+a O
+global O
+companies O
+and O
+businesses O
+are O
+making O
+a O
+beeline O
+for O
+the O
+Indian O
+market, O
+which O
+promises O
+a O
+booming O
+middle O
+class O
 of O
 a O
 few O
-capital O
-regions O
-and O
-high-tech O
-enclaves), O
-while O
-the O
-sudden O
-withdrawal O
-of O
-the O
-fiscal O
-and O
-institutional O
-‘safety O
-blanket’ O
-from O
-many O
-traditional O
-lagging O
-regions O
-may O
-actually O
-see O
-them O
-suffer O
-even O
-more O
-egregiously O
-than O
-would O
-have O
-been O
-the O
-case O
-if O
-a O
-managed O
-process O
-had O
-been O
-acted O
-upon O
-sooner.
-For O
-instance, O
-as O
-noted O
-by O
-Greeuw O
-et O
-al.[15], O
-the O
-POSSUM O
-team[42], O
-in O
-formulating O
-sustainable O
-transport O
-goals O
-for B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020, O
-seems O
-to O
-have O
-treated O
-Europe O
-as O
-an O
-isolated O
-continent.
-Accordingly, O
-building O
-scenarios O
-for O
-Yalova O
-in U_TEMPPRED O
-2020 O
-benefited O
-from O
-the O
-larger-scale O
-scenarios O
-already O
-developed O
-and O
-tested
-European O
-Commission O
-(EC-DGXVII), O
-Energy O
-in O
-Europe: O
-European O
-Energy O
-to U_TEMPPRED O
-2020: O
-A O
-Scenario O
-Approach, O
-European O
-Commission, O
-Luxembourg, O
-1996.
-Delta O
-Scan, O
-a O
-project O
-for O
-the O
-British O
-government’s O
-Horizon O
-Scanning O
-Centre, O
-collected O
-over O
-a O
 hundred O
-long O
-forecasts O
-on O
-the O
-future O
-of O
-science O
-and O
-technology O
-to U_TEMPPRED O
-2050.
-The O
-advantage O
-here O
-is O
-with O
-open O
-source, O
-and O
-my O
-forecast O
-is O
-that O
-platform-independent, O
-flexible O
-systems O
-will O
-see O
-considerable O
-growth, O
-with O
-a O
-good O
-proportion, O
-possibly O
-half O
-or O
-more O
-based O
-on O
-open O
-source O
-components O
-by U_TEMPPRED O
-2020.
-I O
-anticipate O
-that O
-by U_TEMPPRED O
-2020 O
-roughly O
-30% O
-of O
-any O
-segment O
-of O
-activity O
-that O
-can O
-be O
-called O
-‘‘infrastructure’’ O
-will O
-be O
-open O
-source, O
-such O
-as O
-server O
-and O
-client O
-tools, O
-office O
-applications, O
-utilities O
-and O
-operating O
-systems.
-In O
-principle, O
-all O
-TEN O
-projects O
-(Trans-European O
-Network) O
-were O
-expected O
-to O
-be O
-completed O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020, O
-but O
-given O
-the O
-slow O
-evolution O
-of O
-infrastructure O
-investments, O
-additional O
-hypotheses O
-were O
-used O
-to O
-define O
-which O
-links O
-would O
-be O
-built.
-Each O
-scenario O
-concluded O
-with O
-a O
-final O
-image O
-of O
-Europe O
-in U_TEMPPRED O
-2030 O
-(the O
-time O
-horizon O
-of O
-the O
-scenarios).
-The O
-time B_TEMPPRED O
-horizon M_TEMPPRED O
-was E_TEMPPRED O
-2030 O
-and O
-the O
-geographic O
-scope O
-pan-European.
-Eurostat O
-predicts O
-that, O
-under O
-normal O
-conditions, O
-the O
-EU-27’s O
-population O
-will O
-rise O
-to O
-around O
-496 O
 million O
-persons O
-in U_TEMPPRED O
-2025.
-But O
-how O
-to O
-treat O
-individuals O
-who O
-turned O
-to O
-the O
-health O
-care O
-system O
-with O
-no O
-other O
-evidence O
-than O
-the O
-results O
-of O
-a O
-commercial O
-genetic O
-test? O
-In U_TEMPPRED O
-2022, O
-a O
-twenty-eight O
-year O
-young O
-woman, O
-who O
-had O
-consulted O
-her O
-doctor O
-after O
-having O
-learnt O
-about O
-her O
-risk O
-for O
-diabetes O
-from O
-a O
-commercial O
-genetic O
-test, O
-filed O
-a O
-complaint O
-against O
-her O
-health O
-insurer O
-for O
-denying O
-her O
-reimbursement O
-of O
-subsequent O
-counselling O
+consumers, O
+expanding O
+steadily O
+only B_TEMPPRED O
+a M_TEMPPRED O
+few E_TEMPPRED O
+few O
+decades.
+Food O
 and O
-monitoring.
-If O
-there O
-were O
-other O
-indications O
-for O
-being O
-at O
-risk, O
-like O
-a O
-family O
-history, O
-individuals O
-could O
-be O
-included O
-in O
+agriculture: O
+Driving O
+action O
+across O
 the O
-preventive O
-diabetes O
-programme, O
-which O
-by O
-now O
-(from U_TEMPPRED O
-2020) O
-had O
-acquired O
-a O
-national O
-status O
-and O
-was O
-covered O
-by O
-all O
-health O
-insurers.
-Consequently, O
-climate O
-scientists O
-estimate O
-the O
-average O
-temperature O
-in O
-North-western O
-Europe O
-to O
-decrease O
-by O
-38C O
-in B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-15 O
-years.
-20% O
-emissions O
-reduction O
-by U_TEMPPRED O
-2020) O
-influences O
-the O
-behavior O
-of O
-actors O
-such O
-as O
-companies O
-which O
-introduce O
-their O
-own O
-emission O
-reduction O
-targets, O
-or O
-CO O
-2 O
-reduction O
-initiatives.
-These O
-ongoing O
-scans O
-look O
-ahead O
-over O
-a O
-range O
-of O
-up B_TEMPPRED O
-to E_TEMPPRED O
-50 O
-years O
-to O
-uncover O
-‘‘contradictions O
-and O
-ambiguities O
-in O
-mapping O
-the O
-turbulence O
-of O
-change’’.
-Four O
-scenarios O
-are O
-developed O
-for B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030.
-A O
-Framework O
-for O
-Speculation O
-on B_TEMPPRED O
-the M_TEMPPRED O
-Next E_TEMPPRED O
-33 O
-Years, O
-Macmillan, O
-New O
-York, O
-1967.
-Visual O
-simulation O
-of O
-scenarios O
-developed O
-for O
-Me O
-́ O
-rtola O
-in B_TEMPPRED O
-2030.
-This O
-study O
-set O
-out O
-to O
-‘‘identify O
-important, O
-novel O
-ethical O
-issues O
-of O
-a O
-global O
-scale O
-that O
-might O
-come O
-on O
-the O
-scene O
-within B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-50 O
-years’.
-The O
-Institute O
-also O
-recognises O
-the O
-value O
-of O
-a O
-vision O
-of O
-the O
-future O
-for O
-‘‘euroatlantic O
-global O
-society’’[4]and O
-it O
-is O
-preparing O
-an O
-‘‘integrated O
-metavision O
-for U_TEMPPRED O
-2050–2100’’ O
-which O
-‘‘will O
-be O
-a O
-sacral O
-(spiritual, O
-transcendent) O
-world’.
-Ledos, O
-Brittany: O
-agricultural O
-and O
-agri-food O
-products O
-in U_TEMPPRED O
-2020.
-Iran O
-has O
-not O
-started O
-substantial O
-production O
-(has O
-no O
-export), O
-but O
-is O
-assumed O
-to O
-become O
-important O
-exporter O
-by B_TEMPPRED O
-year E_TEMPPRED O
-2030.
-Long O
-run O
-and O
-very O
-long O
-run O
-future O
-for O
-gas O
-demand O
-Let O
-us O
-start O
-from O
-middle O
-term O
-forecasts O
-(by B_TEMPPRED O
-year E_TEMPPRED O
-2030).
-OPEC O
-predicts O
-that O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030, O
-world O
-share O
-of O
-renewable O
-will O
-still O
-remain O
-below O
-10%, O
-with O
-24.4% O
-of O
-natural O
-gas O
-in O
-energy O
-portfolio.
-EU O
-has O
-quite O
-ambitious O
-program O
-20-20-20 O
-to O
-use O
-20% O
-of O
-renewable O
-energy O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020 O
-and O
-to O
-have O
-similar O
-energy O
-saving.
-For O
-example O
-Algeria O
-may O
-be O
-a O
-supplier O
-of O
-equal O
-magnitude O
-say O
-as O
-Russia O
-but O
-then O
-only O
-for O
-a O
-period O
-of O
-about U_TEMPPRED O
-10 O
-years.
-Some O
-publications O
-in O
-US O
-press O
-revealed O
-the O
-fact O
-about O
-substantial O
-increase O
-of O
-production O
-of O
-shale O
-gas O
-that O
-may O
-turn O
-US O
-from O
-net O
-gas O
-importer O
-into O
-exporter O
-into O
-next U_TEMPPRED O
-decade.
-The O
-General O
-Scheme O
-of O
-Gas O
-Sector O
-Developmentin O
-Russia O
-(quoted O
-in[14]) O
-suggests O
-that O
-in B_TEMPPRED O
-year E_TEMPPRED O
+agenda U_TEMPPRED O
 2030 O
-the O
-major O
-replacementof O
-depleted O
-fieldswillcome O
-fromYamal O
-and O
-other O
-fields O
-in O
-Western O
-Siberia O
-(up O
-to O
-260 O
-bcm).
-It O
-has O
-two O
-strategic O
-choices: O
-(a) O
-When O
-to O
-peak O
-(most O
-likely O
-narrow O
-choice O
-between U_TEMPPRED O
-2040 O
-and U_TEMPPRED O
-2050, O
-based O
-also O
-on O
-strategic O
-considerations); O
-in O
-the O
-first O
-case O
-its O
-maximal O
-export O
-can O
-reach O
-400 O
-bcm O
-but O
-will O
-last O
 for O
-fewer O
-decades, O
-(b) O
+sustainable O
+development.
 The O
-long O
-term O
-LNG O
-capacity O
-(most O
-likely, O
+borough O
+has O
+supported O
 the O
-choice O
-between O
-50 O
-and O
-100 O
-bcm)
-Gas O
-production O
-at O
-Iran’s O
-offshore O
-natural O
-gas O
-field O
-South O
-Pars O
-will O
-rise O
-to O
-175 O
-Mcm O
-per O
-day O
-within O
-the O
-next U_TEMPPRED O
-2 O
+green O
+agenda B_TEMPPRED O
+for E_TEMPPRED O
+30 O
 years.
+Reducing O
+poverty O
+in O
+Africa: O
+Realistic O
+targets O
+for O
+the O
+post-2015 O
+MDGs O
+and O
+agenda U_TEMPPRED O
+2063.
 The O
+2030 O
+agenda U_TEMPPRED O
+emphasises O
+that O
+in O
+less O
+than O
+two O
+years, O
+India O
+will O
+outdo O
+the O
+Japanese O
+economy O
+for O
+good, O
+surpass O
+the O
+Euro O
+economy.
+The O
+2040 O
+agenda U_TEMPPRED O
+shows O
+that O
 development O
 of O
-gas O
-in O
-Eastern O
-Siberia O
-and O
-Far O
-East O
-is O
-planned O
-to O
-go O
-with O
-comparable O
-increments O
-each O
-year O
-between U_TEMPPRED O
-2010 O
-and U_TEMPPRED O
-2030, O
-but O
-it O
-might O
-go O
-faster O
-after O
-2015.
-EIA O
-projects O
-that O
-renewable O
-energy O
+the O
+web O
 will O
-account O
-for O
-approximately O
-11% O
-of O
-total O
-energy O
-consumption O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030.
-Even O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030, O
-renewable O
-energy O
-is O
-not O
-expected O
+force O
+the O
+hegemonic O
+state O
 to O
 make O
-up O
-a O
-very O
-large O
-fraction O
-of O
-overall O
-energy O
-usage.
-Under O
-this O
-scenario, O
-renewable O
-energy O
-should O
-be O
-able O
-to O
-account O
-for O
-15–25% O
-of O
-total O
-energy O
-demand O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030.
-Some O
-estimates O
-put O
 the O
-cost O
+choice O
 of O
-holding O
-carbon O
-dioxide O
-emissions O
+control O
+or O
+coexistence.
+This O
+is O
+already O
+visible O
 at O
-500 O
-ppm O
-at O
-around O
-2% O
+the O
+2035 O
+target U_TEMPPRED, O
+when O
+thelevel O
 of O
-global O
-GDP O
-per O
-year O
+GHG O
+in O
+the O
+atmosphere O
+start O
+todecrease O
+toward O
+the O
+‘‘virtuous’’ O
+of O
+350 O
+ppm, O
+which O
+is O
+achieved O
+before O
+the O
+end O
+ofthe O
+21st O
+century.
+The O
+2030 O
+target U_TEMPPRED O
+is O
+the O
+development O
+of O
+the O
+web O
+will O
+force O
+the O
+hegemonic O
+state O
+to O
+make O
+the O
+choice O
+of O
+control O
+or O
+coexistence.
+The O
+2040 O
+target U_TEMPPRED O
+shows O
+some O
+of O
+the O
+world’s O
+fastest O
+urbanization O
+will O
+happen O
+in O
+India O
+with O
+55% O
+of O
+India’s O
+population O
+expected O
+to O
+live O
+in O
+cities O
+by U_TEMPPRED O
+2050.
+The O
+2044 O
+target U_TEMPPRED O
+shows O
+the O
+bird O
+may O
+take O
+flight O
+once O
+again’.
+This O
+illustrates O
+the O
+utility O
+of O
+the O
+model O
+for O
+exploring O
+different O
+possible O
+pathways B_TEMPPRED O
+to E_TEMPPRED O
+2050.
+The O
+model O
+allows O
+us O
+to O
+explore O
+different O
+possible O
+pathways B_TEMPPRED O
+to E_TEMPPRED O
+2040 O
+and O
+the O
+difficulty O
+of O
+the O
+overall O
+endeavour.
+Energy, O
+infrastructure O
+and O
+ecology O
+The O
+rapid O
+urbanisation O
+and O
+growth O
+of O
+India’s O
+towns O
+is O
+one O
+of O
+the O
+major O
+transformations O
+and O
+challenges O
+India O
+will O
+deal O
+with O
+pathways B_TEMPPRED O
+to E_TEMPPRED O
+2035.
+From O
+this O
+it O
+follows O
+that O
+expecting O
+energy O
+future O
+studies O
+to O
+contribute O
+to O
+the O
+formulation O
+of O
+a O
+fixed O
+set O
+of O
+policies O
+that O
+will O
+perform O
+optimally O
+pathways B_TEMPPRED O
+to E_TEMPPRED O
+2050.
+The O
+2063 O
+vision U_TEMPPRED O
+illustrates O
+the O
+utility O
+of O
+the O
+model O
+for O
+exploring O
+different O
+possible.
+The O
+2050 O
+vision U_TEMPPRED O
+is O
+heavily O
+embedded O
+within O
+development O
+of O
+the O
+web O
+will O
+force O
+the O
+hegemonic O
+state O
+to O
+make O
+the O
+choice O
+of O
+control O
+or O
+coexistence.
+The O
+2040 O
+vision U_TEMPPRED O
+emphasises O
+that O
+in O
+less O
+than O
+two O
+years, O
+India O
+will O
+outdo O
+the O
+Japanese O
+economy O
+for O
+good, O
+surpass O
+the O
+Euro O
+economy.
+The O
+2063 O
+vision U_TEMPPRED O
+expecting O
+that O
+India’s O
+energy O
+policy O
+will O
+have O
+to O
+navigate O
+through O
+uncharted O
+waters.
+Thai’s O
+agriculture O
+scenario U_TEMPPRED O
+2020 O
+illustrates O
+the O
+utility O
+of O
+the O
+model O
+for O
+exploring O
+different O
+possible.
+The O
+Association O
+2030 O
+scenarios U_TEMPPRED, O
+is O
+represented O
+by O
+the O
+matrix O
+of O
+conomy O
+for O
+good, O
+surpass O
+the O
+Euro O
+economy.
+China O
+industry O
+scenario U_TEMPPRED O
+2030 O
+shows O
+the O
+utility O
+of O
+the O
+model O
+for O
+exploring O
+different O
+possible.
+The O
+Press O
+2035 O
+scenarios U_TEMPPRED, O
+is O
+represented O
+by O
+the O
+matrix O
+of O
+conomy O
+for O
+good, O
+surpass O
+the O
+Euro O
+economy.
+The O
+title O
+and O
+theme O
+of O
+this O
+work O
+emerged O
 over O
 a O
 period B_TEMPPRED O
-of E_TEMPPRED O
-50 O
-year.
-The O
-IEA’s O
-[17] O
-450 O
-scenario O
-puts O
-renewable O
-energy O
-(biomass O
-and O
-waste, O
-other, O
-hydro) O
-at O
-22% O
-of O
-total O
-energy O
-demand O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030.
-The O
-peaks O
-in O
-coal, O
-oil natural O
-gas, O
-and O
-energy O
-efficiency O
-are O
-spaced O
-apart O
-by B_TEMPPRED O
-about E_TEMPPRED O
-50 O
+of M_TEMPPRED O
+several E_TEMPPRED O
 years.
-EIA O
-[49] O
-and O
-IEA O
-[17] O
-projections, O
-scenario O
-1 O
-should O
-be O
-able O
-to O
-achieve O
-renewable O
-energy O
-consumption O
-of O
-between O
-10% O
-and O
-20% O
-of O
-total O
-energy O
-demand O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030.
-In O
-comparison, O
-the O
-IEA O
-[17] O
-estimates O
-that O
-renewable O
-energy O
-will O
-account O
-for O
-approximately O
-14% O
-of O
-total O
-energy O
-consumption O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030 O
-[17] O
-which O
-is O
-not O
-too O
-different O
-from O
-the O
-IEA’s O
-estimate O
-of O
-a O
-12.6% O
-share O
-of O
-total O
-energy O
-demand O
-that O
-renewable O
-energy O
-accounted O
-for O
-in O
-2007.
-In O
-the O
-IEA’s O
-450 O
-energy O
-scenario, O
-a O
-scenario O
-in O
-which O
-government O
-policies O
-currently O
-being O
-discussed O
-to O
-address O
-issues O
-of O
-climate O
-change O
-and O
-energy O
-security O
+They O
 are O
-actually O
-implemented O
-with O
-the O
-effect O
-of O
-limiting O
-carbon O
-dioxide O
-concentrations O
-in O
-the O
-atmosphere O
-at O
-450 O
-ppm, O
-the O
-demand O
-for O
-renewable O
-energy O
-is O
-expected O
-to O
-grow O
+experienced O
 by O
-10.4% O
-per O
-year O
-between U_TEMPPRED O
-2007 O
-and U_TEMPPRED O
-2030.
-In O
-fact O
-the O
-IEA O
-now O
-expects O
-global O
-oil O
-production O
-to O
-peak O
-around U_TEMPPRED O
-2020.
-According O
-to O
-official O
-estimates, O
-the O
-pipe O
-grid O
-will O
-be O
-extended O
-by O
-11% O
+everyone O
+and O
+often O
 in O
-the O
-first O
-years O
-and O
-by O
-20–23% O
-as O
-of U_TEMPPRED O
-2030.
-In B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-decade, O
-other O
-ongoing O
-projects O
-will O
-serve O
-to O
-very O
-significantly O
-reduce O
-gas O
-flow O
-through O
-the O
-centre O
-of O
-the O
-European O
-continent.
-In O
-this O
-case, O
-the O
-increase O
-in O
-gas O
-production O
-through O
-two O
-next U_TEMPPRED O
-decades O
-will O
-most O
-likely O
-be O
-lower O
-than O
-forecast O
-by O
-the O
-government.
-This O
-discount O
-will O
-be O
-only O
-partially O
-offset O
-by O
-higher O
-domestic O
-prices, O
-thus O
-reducing O
-Gazprom’s O
-financial O
-capacity O
-to O
-lead O
-several O
-simultaneous O
-large O
-projects O
-over O
-the O
-next U_TEMPPRED O
-decade.
-In O
-December O
-2009, O
-Russia O
-and O
-Turkmenistan O
-have O
-reached O
-a O
-new O
-agreement O
-for O
-trading O
-30 O
-bcm O
-annually O
-over O
-the O
-next U_TEMPPRED O
-three O
-years.
-Thus, O
-government O
-figures O
-posit O
-that O
-the O
-gas O
-sold O
-abroad O
-from O
-Russia O
-will O
-grow O
-by O
-40% O
-in O
-twenty O
-years, O
-from O
-270 O
-bcm O
-in O
-2008 O
-to O
-370 O
-bcm O
-in U_TEMPPRED O
-2030.
-The O
-increase O
-would O
-be O
-minimal O
-in O
-the O
-early O
-years O
-and O
-grow O
-at O
-a O
-faster O
-rate O
-between O
-2015 O
-and O
-2030, O
-so O
-that O
-the O
-average O
-annual O
-rate O
-over O
-the O
-whole O
-period O
-(2008–2030) O
-would O
-range O
-between O
-1.38% O
-and O
-1.69%, O
-resulting O
-in O
-an O
-export O
-increase O
-of O
-about O
-85 O
-bcm, O
-from O
-205 O
-bcm O
-in O
-2008 O
-to O
-290 O
-bcm O
-in U_TEMPPRED O
-2030.
-However, O
-despite O
-this O
-decline, O
-the O
-region O
-will O
-remain O
-the O
-main O
-centre O
-for O
-global O
-gas O
-production O
-in U_TEMPPRED O
-2030.
-The O
-Arctic O
-coast, O
-where O
-fields O
-(Yamal, O
-Kara O
-Sea, O
-and O
-Ob-Taz O
-bay) O
-are O
-still O
-untapped, O
-would O
-provide O
-40% O
-of O
-output O
-by U_TEMPPRED O
-2030.
-16 O
-The O
-data O
-source O
-for O
-official O
-forecasts O
-through U_TEMPPRED O
-2030 O
-is O
-Interfax.
-It O
-projects O
-135–175 O
-bcm O
-by O
-2020 O
-and O
-310– O
-360 O
-by U_TEMPPRED O
-2030.
-Overall, O
-new O
-production O
-regions O
-which O
-now O
-provide O
-20 O
-bcm O
-would O
-produce O
-350 O
-bcm O
-(of O
-a O
-total O
-820 O
-bcm) O
-in O
-2020, O
-and O
-580 O
-bcm O
-(of O
-915 O
-bcm) O
-in U_TEMPPRED O
-2030.
-As O
-a O
-result, O
-sales O
-to O
-Europe O
-could O
-grow O
-by O
-50–60 O
-bcm O
-by U_TEMPPRED O
-2030.
-Following O
-government O
-forecasts, O
-export O
-share O
-will O
-tend O
-to O
-stabilize O
-at O
-around O
-50% O
-from U_TEMPPRED O
-2020, O
-against O
-an O
-estimated O
-national O
-average O
-of O
-around O
-33%.
-However, O
-demand O
-growth O
-is O
-almost O
-nil O
-and O
-the O
-government O
-foresees O
-its O
-decline O
-from U_TEMPPRED O
-2020.
-Thus, O
-the O
-80 O
-bcm O
-currently O
-consumed O
-would O
-rise O
-to O
-200 O
-bcm O
-in U_TEMPPRED O
-2020, O
-making O
-China O
-a O
-large O
-consumer O
-capable O
-of O
-formalizing O
-important O
-agreements O
-with O
-Russia, O
-as O
-Chinese O
-self-reliance O
-is O
-limited O
-and O
-most O
-domestic O
-consumption O
-will O
-have O
-to O
-be O
-met O
-by O
-imports.
-Therefore, O
-new O
-launches O
-are O
-not O
-likely O
-to O
-occur O
-before U_TEMPPRED O
-2020, O
-so O
-until O
-this O
-date O
-exports O
-to O
-Asia O
-will O
-depend O
-crucially O
-on O
-the O
-development O
-of O
-Sakhalin-2, O
-while O
-the O
-continuity O
-of O
-Sakhalin-1 O
-is O
-subject O
-to O
-the O
-resolution O
-of O
-tensions O
-between O
-Gazprom O
-and O
-its O
-partners O
-in O
-the O
-PSA.
-Thus, O
-gas O
-output O
-in U_TEMPPRED O
-2030 O
-would O
-be O
-860 O
-bcm, O
-compared O
-to O
-the O
-915 O
-bcm O
-expected O
-by O
-the O
-government.
-The O
-most O
-plausible O
-forecasts O
-put O
-the O
-annual O
-growth O
-rate O
-of O
-consumption O
-between O
-1.4% O
-and O
-1.1%, O
-so O
-that O
-the O
-absolute O
-level O
-in U_TEMPPRED O
-2030 O
-would O
-range O
-between O
-625 O
-and O
-585 O
-bcm.
-Gas O
-drilling O
-may O
-further O
-increase O
-through U_TEMPPRED O
-2020–2030, O
-putting O
-into O
-operation O
-either O
-some O
-Eastern O
-fields O
-(Krasnoyarsk, O
-Irkutsk, O
+more O
 or O
-Sakha) O
-or O
-some O
-Northern O
-fields O
-(Shtokman, O
-Ob- O
-Taz O
-bay, O
-and O
-others).
-Source: O
-Own O
-design O
-29 O
-Hartley O
-and O
-Medlock O
-[21], O
-Energy O
-Information O
-Administration O
-[10], O
-and O
-Gromov O
-[20] O
-estimate O
-that O
-Russian O
-gas O
-output O
-in U_TEMPPRED O
-2030 O
-would O
-be O
-880–890 O
-bcm.
-Moreover, O
-offshore O
-fields O
-in O
-Ob-Taz O
-bay O
-and O
-Kara O
-sea O
-are O
-projected O
-to O
-start O
-after U_TEMPPRED O
-2020 O
-and U_TEMPPRED O
-2025, O
-respectively.
-Table O
-3 O
-summarizes O
-the O
-results O
-of O
-four O
-qualitative O
-scenario O
-studies O
-outlining O
-scenarios O
-for B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2050 O
-(in O
-one O
-case O
-2040).
-This O
-requires O
-that O
-the O
-developed O
-countries’ O
-emissions O
-are O
-radically O
-reduced O
-during O
-the O
-next U_TEMPPRED O
-40 O
-years.
-Contemporary O
-low-carbon O
-energy O
-scenarios O
-in O
-perspective O
-In O
-this O
-section O
-we O
-review O
-and O
-discuss O
-20 O
-studies O
-that O
-analyze O
-the O
-consequences O
-of O
-substantial O
-GHG O
-emission O
-cuts O
-until B_TEMPPRED O
-the M_TEMPPRED O
-yearE_TEMPPRED O
-2050 O
-and O
-beyond.
-In O
-a O
-majority O
-of O
-the O
-studies O
-the O
-reduction O
-scenarios O
-build O
-on O
-the O
-requirement O
-that O
-the O
-stabilization O
-targets O
-must O
-be O
-met O
-no O
-later O
-than O
-the O
-year O
-2100, O
-but O
-in O
-our O
-review O
-we O
-focus O
-mainly O
-on O
-the O
-implications O
-for O
-the O
-energy O
-system O
-in U_TEMPPRED O
-2050.
-This O
-requires O
-that O
-global O
-greenhouse O
-gas O
-(GHG) O
-emissions O
-are O
-halved O
-during O
-the O
-next U_TEMPPRED O
-40 O
-years, O
-implying O
-in O
-turn O
-that O
-the O
-developed O
-countries’ O
-emissions O
-may O
-have O
-to O
-be O
-reduced O
-by O
-70–95%.
-Concluding O
-remarks O
-Energy O
-scenario O
-studies O
-provide O
-insights O
-on O
-the O
-different O
-societal O
-transitions O
-implied O
-by O
-approaching O
-low-carbon O
-futures O
-in O
-the O
-next U_TEMPPRED O
-40 O
-years, O
-and O
-in O
-this O
-article O
-we O
-have O
-discussed O
-how O
-greater O
-attention O
-to O
-governance O
-issues O
-can O
-improve O
-future O
-scenario O
-exercises.
-Governing O
-the O
-transition O
-to O
-low-carbon O
-futures: O
-A O
-critical O
-survey O
-of O
-energy O
-scenarios O
-for U_TEMPPRED O
-2050 O
-§ O
-Patrik O
-So O
-̈ O
-derholm O
-a, O
-* O
-, O
-Roger O
-Hildingsson O
-b O
-, O
-Bengt O
-Johansson O
-c O
-, O
-Jamil O
-Khan O
-c O
-, O
-Fredrik O
-Wilhelmsson O
-d O
-a O
-Economics O
-Unit, O
-Lulea O
-̊ O
-University O
-of O
-Technology, O
-Lulea O
-̊ O
-, O
-Sweden O
-b O
-Department O
-of O
-Political O
-Science, O
-Lund O
-University, O
-Lund, O
-Sweden O
-c O
-Environmental O
-and O
-Energy O
-System O
-Studies, O
-Lund O
-University, O
-Lund, O
-Sweden O
-d O
-AgriFood O
-Economics O
-Center, O
-Lund O
-University, O
-Lund, O
-Sweden O
-1.
-Firstly, O
-the O
-transformation O
-has O
-to O
-take O
-place O
-over O
-a O
-relatively O
-short O
-time O
-period O
-with O
-the O
-peak O
-in O
-global O
-emissions O
-having O
-to O
-occur O
-as B_TEMPPRED O
-early M_TEMPPRED O
-as E_TEMPPRED O
-2020.
-50 O
-Annual O
-CO O
-2 O
-emissions O
-equal O
-10 O
-Gt O
-in U_TEMPPRED O
-2050, O
-with O
-a O
-CO O
-2 O
-concentration O
-of O
-450 O
-pmv.
-400 O
-GHG O
-stabilization O
-at O
-400 O
-ppmvin O
-2100, O
-i.e., O
-80% O
-reduction O
-of O
-GHGemissions O
-by U_TEMPPRED O
-2050.
-70% O
-reduction O
-by U_TEMPPRED O
-2050.
-400 O
-ppmv O
-requires75% O
-emissions O
-decrease O
-by U_TEMPPRED O
-2050.
-[5] O
-Bottom-up O
-partialequilibriummodel O
-(POLES) O
-2050 O
-Global O
-0 O
-(baseline) O
-Concentration O
-of O
-CO O
-2 O
--eq O
-equals O
-675 O
-ppmv O
-in U_TEMPPRED O
-2050.
-Primary O
-energy O
-consumption O
-increasesmore O
-than O
-2.5 O
-times O
-by U_TEMPPRED O
-2050.
-Global O
-GHGemissions O
-in U_TEMPPRED O
-2050 O
-15% O
-lowerthan O
-in O
-1990.
-IVA O
-[25] O
-Sector-specific O
-bottom-upassessments O
-2043 O
-Sweden O
-No O
-assumption O
-Essentially O
-a O
-back-casting O
-scenario O
-investigating O
-the O
-technical O
-possibilities O
-to O
-achieve O
-100%reduction O
-in O
-GHG O
-emissions O
-by U_TEMPPRED O
-2043.
-[1] O
-Sector-specific O
-bottom-upassessments O
-2050 O
-Sweden O
-No O
-assumption O
-Essentially O
-a O
-back-casting O
-scenario O
-investigating O
-the O
-possibilities O
-to O
-achieve O
-85% O
-reduction O
-in O
-GHGemissions O
-by U_TEMPPRED O
-2050.
-World O
-Energy O
-Council O
-[51] O
-Purpose O
-Analysis O
-of O
-four O
-plausible O
-policy O
-scenarios O
-until O
-2050, O
-and O
-assessment O
-of O
-how O
-well O
-they O
-achieve O
-WEC’s O
-policy O
-goals O
-(accessibility, O
-affordab O
-ility, O
-acceptability).
-Technologydevelopment O
-solves O
-many O
-problems O
-Open O
-global O
-markets O
-to O
-promotegrowth O
-and O
-technological O
-development.Risk O
-of O
-energy O
-shock O
-Bruggink O
-[11] O
-Purpose O
-Four O
-scenarios O
-until U_TEMPPRED O
-2050 O
-that O
-explore O
-possible O
-energy O
-transitions O
-in O
-Europe.
-Study O
-Model O
-approach O
-Time O
-horizon O
-Geographical O
-scope O
-Scenario O
-assumptions O
-and O
-results O
-Carbon O
-price O
-2050( O
-s O
- ton O
-CO O
-2 O
-) O
-GHG O
-emissions O
-and O
-reductiontargets O
-in O
-2050 O
-Comments O
-European O
-Commission O
-[18] O
-Bottom-up O
-partialequilibriummodel O
-(POLES) O
-2050 O
-Global O
-(with O
-a O
-European O
-focus) O
-30 O
-in O
-Europe O
-and15 O
-elsewhere(reference) O
-GHG O
-emissions O
-are O
-225% O
-of O
-the1990 O
-level O
-in U_TEMPPRED O
-2050 O
-(44 O
-Gt), O
-with O
-aCO O
-2 O
-concentration O
-of O
-900– O
-1000 O
-pmv.
-10-region O
-bottom-upenergy O
-system O
-model O
-2050 O
-Global O
-0 O
-(reference) O
-Annual O
-CO O
-2 O
-emissions O
-equal O
-45 O
-Gt O
-in U_TEMPPRED O
-2050.
-2050 O
-Global O
-5 O
-(baseline) O
-GHG O
-emissions O
-are O
-86% O
-higher O
-in U_TEMPPRED O
-2050 O
-compared O
-to O
-1990.
-64 O
-(22 O
-in O
-developingcountries) O
-25% O
-reduction O
-of O
-GHG O
-emissions O
-by U_TEMPPRED O
-2050 O
-compared O
-to O
-the O
-1990 O
-level.
-Bottom-up O
-energysystem O
-model(GET O
-1.0) O
-2100 O
-(resultsfor O
-2050) O
-Global O
-There O
-is O
-an O
-implicit O
-price O
-on O
-carbon O
-butthe O
-specific O
-levelis O
-not O
-provided O
-The O
-study O
-does O
-not O
-specify O
-anexplicit O
-baseline O
-scenario, O
-butconsiders O
-the O
-cost-effective O
-wayto O
-reach O
-a O
-stabilization O
-target O
-of400 O
-ppmv O
-by U_TEMPPRED O
-2100.
-Global O
-primary O
-energy O
-supply O
-increasesby O
-50% O
-in U_TEMPPRED O
-2050 O
-(compared O
-to O
-1990).Fossil O
-fuels O
-(oil, O
-coal O
-and O
-gas) O
-still O
-play O
-adominant O
-role O
-in O
-the O
-energy O
-mix, O
-butthere O
-is O
-also O
-an O
-increase O
-in O
-biomass.
-Primary O
-energy O
-consumption O
-increasesby O
-50% O
-by U_TEMPPRED O
-2050 O
-(compared O
-to O
-1990).Fossil O
-fuels O
-primarily O
-replaced O
-bybiomass.
-Doubling O
-of O
-primary O
-energyconsumption O
-by U_TEMPPRED O
-2050.
-Study O
-Model O
-approach O
-Time O
-horizon O
-Geographicalscope O
-Scenario O
-assumptions O
-and O
-resultsCarbon O
-price O
-2050( O
-s O
- ton O
-CO O
-2 O
-) O
-GHG O
-emissions O
-and O
-reduction O
-targets O
-in O
-2050 O
-Comments O
-Nordic O
-Council O
-of O
-Ministers O
-[42] O
-Bottom-up O
-model(MARKAL-Nordic,EU O
-PRIMES) O
-2050 O
-Nordic O
-countries O
-20 O
-(baseline) O
-GHG O
-emissions O
-94% O
-of O
-the O
-1990 O
-level O
-in U_TEMPPRED O
-2050.
-[40] O
-Purpose O
-Outline O
-and O
-analysis O
-of O
-five O
-policy O
-scenarios O
-for O
-addressing O
-climate O
-change O
-until U_TEMPPRED O
-2050.
-No O
-internationalflexibility O
-options O
-Targets O
-for O
-all O
-countries, O
-excessemission O
-rights O
-can O
-be O
-soldinternationally O
-Domestic O
-taxes O
-arelevied O
-on O
-emissions O
-Domestic O
-policywithout O
-internationalcoordination O
-ADAM O
-project O
-[7,47] O
-Purpose O
-Develop O
-climate O
-policy O
-scenarios O
-until U_TEMPPRED O
-2040 O
-for O
-analyzing O
-EU O
-climate O
-policy.
-Ciscar, O
-Global O
-Climate O
-Policy O
-Scenarios O
-for U_TEMPPRED O
-2030 O
-and O
-Beyon.
-Table O
-3 O
-summarizes O
-the O
-results O
-of O
-four O
-qualitative O
-scenario O
-studies O
-outlining O
-scenarios O
-for B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2050 O
-(in O
-one O
-case O
-2040).
-This O
-requires O
-that O
-the O
-developed O
-countries’ O
-emissions O
-are O
-radically O
-reduced O
-during O
-the O
-next U_TEMPPRED O
-40 O
-years.
-Contemporary O
-low-carbon O
-energy O
-scenarios O
-in O
-perspective O
-In O
-this O
-section O
-we O
-review O
-and O
-discuss O
-20 O
-studies O
-that O
-analyze O
-the O
-consequences O
-of O
-substantial O
-GHG O
-emission O
-cuts O
-until B_TEMPPRED O
-the M_TEMPPRED O
-yearE_TEMPPRED O
-2050 O
-and O
-beyond.
-In O
-a O
-majority O
-of O
-the O
-studies O
-the O
-reduction O
-scenarios O
-build O
-on O
-the O
-requirement O
-that O
-the O
-stabilization O
-targets O
-must O
-be O
-met O
-no O
-later O
-than O
-the O
-year O
-2100, O
-but O
-in O
-our O
-review O
-we O
-focus O
-mainly O
-on O
-the O
-implications O
-for O
-the O
-energy O
-system O
-in U_TEMPPRED O
-2050.
-This O
-requires O
-that O
-global O
-greenhouse O
-gas O
-(GHG) O
-emissions O
-are O
-halved O
-during O
-the O
-next U_TEMPPRED O
-40 O
-years, O
-implying O
-in O
-turn O
-that O
-the O
-developed O
-countries’ O
-emissions O
-may O
-have O
-to O
-be O
-reduced O
-by O
-70–95%.
-Concluding O
-remarks O
-Energy O
-scenario O
-studies O
-provide O
-insights O
-on O
-the O
-different O
-societal O
-transitions O
-implied O
-by O
-approaching O
-low-carbon O
-futures O
-in O
-the O
-next U_TEMPPRED O
-40 O
-years, O
-and O
-in O
-this O
-article O
-we O
-have O
-discussed O
-how O
-greater O
-attention O
-to O
-governance O
-issues O
-can O
-improve O
-future O
-scenario O
-exercises.
-Governing O
-the O
-transition O
-to O
-low-carbon O
-futures: O
-A O
-critical O
-survey O
-of O
-energy O
-scenarios O
-for U_TEMPPRED O
-2050 O
-§ O
-Patrik O
-So O
-̈ O
-derholm O
-a, O
-* O
-, O
-Roger O
-Hildingsson O
-b O
-, O
-Bengt O
-Johansson O
-c O
-, O
-Jamil O
-Khan O
-c O
-, O
-Fredrik O
-Wilhelmsson O
-d O
-a O
-Economics O
-Unit, O
-Lulea O
-̊ O
-University O
-of O
-Technology, O
-Lulea O
-̊ O
-, O
-Sweden O
-b O
-Department O
-of O
-Political O
-Science, O
-Lund O
-University, O
-Lund, O
-Sweden O
-c O
-Environmental O
-and O
-Energy O
-System O
-Studies, O
-Lund O
-University, O
-Lund, O
-Sweden O
-d O
-AgriFood O
-Economics O
-Center, O
-Lund O
-University, O
-Lund, O
-Sweden O
-1.
-Firstly, O
-the O
-transformation O
-has O
-to O
-take O
-place O
-over O
-a O
-relatively O
-short O
-time O
-period O
-with O
-the O
-peak O
-in O
-global O
-emissions O
-having O
-to O
-occur O
-as B_TEMPPRED O
-early M_TEMPPRED O
-as E_TEMPPRED O
-2020.
-50 O
-Annual O
-CO O
-2 O
-emissions O
-equal O
-10 O
-Gt O
-in U_TEMPPRED O
-2050, O
-with O
-a O
-CO O
-2 O
-concentration O
-of O
-450 O
-pmv.
-400 O
-GHG O
-stabilization O
-at O
-400 O
-ppmvin O
-2100, O
-i.e., O
-80% O
-reduction O
-of O
-GHGemissions O
-by U_TEMPPRED O
-2050.
-70% O
-reduction O
-by U_TEMPPRED O
-2050.
-400 O
-ppmv O
-requires75% O
-emissions O
-decrease O
-by U_TEMPPRED O
-2050.
-[5] O
-Bottom-up O
-partialequilibriummodel O
-(POLES) O
-2050 O
-Global O
-0 O
-(baseline) O
-Concentration O
-of O
-CO O
-2 O
--eq O
-equals O
-675 O
-ppmv O
-in U_TEMPPRED O
-2050.
-Primary O
-energy O
-consumption O
-increasesmore O
-than O
-2.5 O
-times O
-by U_TEMPPRED O
-2050.
-Global O
-GHGemissions O
-in U_TEMPPRED O
-2050 O
-15% O
-lowerthan O
-in O
-1990.
-IVA O
-[25] O
-Sector-specific O
-bottom-upassessments O
-2043 O
-Sweden O
-No O
-assumption O
-Essentially O
-a O
-back-casting O
-scenario O
-investigating O
-the O
-technical O
-possibilities O
-to O
-achieve O
-100%reduction O
-in O
-GHG O
-emissions O
-by U_TEMPPRED O
-2043.
-[1] O
-Sector-specific O
-bottom-upassessments O
-2050 O
-Sweden O
-No O
-assumption O
-Essentially O
-a O
-back-casting O
-scenario O
-investigating O
-the O
-possibilities O
-to O
-achieve O
-85% O
-reduction O
-in O
-GHGemissions O
-by U_TEMPPRED O
-2050.
-World O
-Energy O
-Council O
-[51] O
-Purpose O
-Analysis O
-of O
-four O
-plausible O
-policy O
-scenarios O
-until O
-2050, O
-and O
-assessment O
-of O
-how O
-well O
-they O
-achieve O
-WEC’s O
-policy O
-goals O
-(accessibility, O
-affordab O
-ility, O
-acceptability).
-Technologydevelopment O
-solves O
-many O
-problems O
-Open O
-global O
-markets O
-to O
-promotegrowth O
-and O
-technological O
-development.Risk O
-of O
-energy O
-shock O
-Bruggink O
-[11] O
-Purpose O
-Four O
-scenarios O
-until U_TEMPPRED O
-2050 O
-that O
-explore O
-possible O
-energy O
-transitions O
-in O
-Europe.
-Study O
-Model O
-approach O
-Time O
-horizon O
-Geographical O
-scope O
-Scenario O
-assumptions O
-and O
-results O
-Carbon O
-price O
-2050( O
-s O
- ton O
-CO O
-2 O
-) O
-GHG O
-emissions O
-and O
-reductiontargets O
-in O
-2050 O
-Comments O
-European O
-Commission O
-[18] O
-Bottom-up O
-partialequilibriummodel O
-(POLES) O
-2050 O
-Global O
-(with O
-a O
-European O
-focus) O
-30 O
-in O
-Europe O
-and15 O
-elsewhere(reference) O
-GHG O
-emissions O
-are O
-225% O
-of O
-the1990 O
-level O
-in U_TEMPPRED O
-2050 O
-(44 O
-Gt), O
-with O
-aCO O
-2 O
-concentration O
-of O
-900– O
-1000 O
-pmv.
-10-region O
-bottom-upenergy O
-system O
-model O
-2050 O
-Global O
-0 O
-(reference) O
-Annual O
-CO O
-2 O
-emissions O
-equal O
-45 O
-Gt O
-in U_TEMPPRED O
-2050.
-2050 O
-Global O
-5 O
-(baseline) O
-GHG O
-emissions O
-are O
-86% O
-higher O
-in U_TEMPPRED O
-2050 O
-compared O
-to O
-1990.
-64 O
-(22 O
-in O
-developingcountries) O
-25% O
-reduction O
-of O
-GHG O
-emissions O
-by U_TEMPPRED O
-2050 O
-compared O
-to O
-the O
-1990 O
-level.
-Bottom-up O
-energysystem O
-model(GET O
-1.0) O
-2100 O
-(resultsfor O
-2050) O
-Global O
-There O
-is O
-an O
-implicit O
-price O
-on O
-carbon O
-butthe O
-specific O
-levelis O
-not O
-provided O
-The O
-study O
-does O
-not O
-specify O
-anexplicit O
-baseline O
-scenario, O
-butconsiders O
-the O
-cost-effective O
-wayto O
-reach O
-a O
-stabilization O
-target O
-of400 O
-ppmv O
-by U_TEMPPRED O
-2100.
-Global O
-primary O
-energy O
-supply O
-increasesby O
-50% O
-in U_TEMPPRED O
-2050 O
-(compared O
-to O
-1990).Fossil O
-fuels O
-(oil, O
-coal O
-and O
-gas) O
-still O
-play O
-adominant O
-role O
-in O
-the O
-energy O
-mix, O
-butthere O
-is O
-also O
-an O
-increase O
-in O
-biomass.
-Primary O
-energy O
-consumption O
-increasesby O
-50% O
-by U_TEMPPRED O
-2050 O
-(compared O
-to O
-1990).Fossil O
-fuels O
-primarily O
-replaced O
-bybiomass.
-Doubling O
-of O
-primary O
-energyconsumption O
-by U_TEMPPRED O
-2050.
-Study O
-Model O
-approach O
-Time O
-horizon O
-Geographicalscope O
-Scenario O
-assumptions O
-and O
-resultsCarbon O
-price O
-2050( O
-s O
- ton O
-CO O
-2 O
-) O
-GHG O
-emissions O
-and O
-reduction O
-targets O
-in O
-2050 O
-Comments O
-Nordic O
-Council O
-of O
-Ministers O
-[42] O
-Bottom-up O
-model(MARKAL-Nordic,EU O
-PRIMES) O
-2050 O
-Nordic O
-countries O
-20 O
-(baseline) O
-GHG O
-emissions O
-94% O
-of O
-the O
-1990 O
-level O
-in U_TEMPPRED O
-2050.
-[40] O
-Purpose O
-Outline O
-and O
-analysis O
-of O
-five O
-policy O
-scenarios O
-for O
-addressing O
-climate O
-change O
-until U_TEMPPRED O
-2050.
-No O
-internationalflexibility O
-options O
-Targets O
-for O
-all O
-countries, O
-excessemission O
-rights O
-can O
-be O
-soldinternationally O
-Domestic O
-taxes O
-arelevied O
-on O
-emissions O
-Domestic O
-policywithout O
-internationalcoordination O
-ADAM O
-project O
-[7,47] O
-Purpose O
-Develop O
-climate O
-policy O
-scenarios O
-until U_TEMPPRED O
-2040 O
-for O
-analyzing O
-EU O
-climate O
-policy.
-Ciscar, O
-Global O
-Climate O
-Policy O
-Scenarios O
-for U_TEMPPRED O
-2030 O
-and O
-Beyon.
-In O
-your O
-opinion, O
-how O
-much O
-of O
-the O
-energy O
-will O
-be O
-produced O
-with O
-Fuel O
-Cells O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030.
-Estimate O
-the O
-percentage O
-of O
-Fuel O
-Cell O
-electricity O
-generation O
-capacity O
-from O
-the O
-total O
-electricity O
-generation O
-capacity O
-(excluding O
-transport O
-sector) O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030.
-However O
-for O
-the O
-market O
-penetration O
-of O
-PFCs O
-in O
-portable O
-applications O
-to O
-increase O
-even O
-to O
-the O
-lower O
-percentages O
-will O
-take O
-up B_TEMPPRED O
-to E_TEMPPRED O
-ten O
-years.
-It O
-was O
-pointed O
-out O
-that O
-it O
-would O
-be O
-easy O
-to O
-predict O
-that O
-the O
-PFC O
-is O
-fully O
-commercial O
-in B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-10 O
-years, O
-but O
-there O
-is O
-no O
-basis O
-to O
-support O
-this O
-claim.
-The O
-participants O
-were O
-asked O
-to O
-continue O
-drawing O
-the O
-lines O
-given, O
-so O
-that O
-they O
-would O
-fit O
-their O
-opinion O
-on O
-future O
-developments, O
-to B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2013.
-Please O
-estimate O
-the O
-amount O
-percentage O
-of O
-mobile O
-devices O
-(such O
-as O
-PDA’s, O
-mobile O
-phones, O
-MP3-players, O
-etc.) O
-using O
-Fuel O
-Cell O
-technology O
-in U_TEMPPRED O
-2020.
-In O
-your O
-opinion, O
-how O
-much O
-of O
-the O
-energy O
-will O
-be O
-produced O
-with O
-Fuel O
-Cells O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030.
-Estimate O
-the O
-percentage O
-of O
-Fuel O
-Cell O
-electricity O
-generation O
-capacity O
-from O
-the O
-total O
-electricity O
-generation O
-capacity O
-(excluding O
-transport O
-sector) O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030.
-However O
-for O
-the O
-market O
-penetration O
-of O
-PFCs O
-in O
-portable O
-applications O
-to O
-increase O
-even O
-to O
-the O
-lower O
-percentages O
-will O
-take O
-up B_TEMPPRED O
-to E_TEMPPRED O
-ten O
-years.
-It O
-was O
-pointed O
-out O
-that O
-it O
-would O
-be O
-easy O
-to O
-predict O
-that O
-the O
-PFC O
-is O
-fully O
-commercial O
-in B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-10 O
-years, O
-but O
-there O
-is O
-no O
-basis O
-to O
-support O
-this O
-claim.
-The O
-participants O
-were O
-asked O
-to O
-continue O
-drawing O
-the O
-lines O
-given, O
-so O
-that O
-they O
-would O
-fit O
-their O
-opinion O
-on O
-future O
-developments, O
-to B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2013.
-Please O
-estimate O
-the O
-amount O
-percentage O
-of O
-mobile O
-devices O
-(such O
-as O
-PDA’s, O
-mobile O
-phones, O
-MP3-players, O
-etc.) O
-using O
-Fuel O
-Cell O
-technology O
-in U_TEMPPRED O
-2020.
-All O
-respondents O
-from O
 less O
-than O
-1 O
-year O
-experience O
-to O
-more O
-than O
-15 O
-years O
-considered O
-that O
-the O
-majority O
-of O
-the O
-drivers O
-will O
-occur O
-between U_TEMPPRED O
-2016 O
-and O
-2025.
-As O
-the O
-years O
-of O
-experience O
-increased, O
-the O
-time O
-horizon O
-for O
-the O
-occurrence O
-of O
-wild O
-cards O
-tended O
-to O
-remain O
-between U_TEMPPRED O
-2016 O
-and O
-2025.
-Our O
-primary O
-conclusion O
-is O
-that O
-it O
-will O
-be O
-very O
-useful O
-to O
-repeat O
-the O
-survey O
-with O
-FTA O
-2010 O
-if O
-possible, O
-and O
-extend O
-it O
-to O
-other O
-similar O
-groups, O
-in B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-year O
-or O
-two, O
-for O
-comparison O
-purposes.
-Different O
-from O
-the O
-other O
-groups, O
-respondents O
-with O
-5–15 O
-years O
-experience O
-considered O
-that O
-more O
-than O
-50% O
-of O
-the O
-discontinuities O
-will O
-occur O
-with O
-the O
-realisation O
-time O
-between U_TEMPPRED O
-2016 O
-and O
-2025.
-Respondents O
-with O
-no O
-experience O
-expected O
-that O
-the O
-wild O
-cards O
-would O
-occur O
-after U_TEMPPRED O
-2025, O
-whereas O
-the O
-respondents O
-with O
-maximum O
-3 O
-years O
-of O
-experience O
-had O
-a O
-shorter O
-time O
-horizon.
-Smith  O
-Futures O
-43 O
-(2011) O
-292–312296 O
-Recent O
-reports O
-about O
-accelerated O
-arctic O
-ice O
-shelf O
-melting O
-and O
-greenhouse O
-gas O
-concentrations O
-in O
-the O
-atmosphere O
-may O
-create O
-discontinuities O
-in O
-national O
-and O
-international O
-policy O
-approaches O
-toward O
-climate O
-treaties O
-design O
-and O
-promulgation; O
-Advances O
-in O
-nanotechnology, O
-genomics O
-and O
-quantum O
-computing, O
-if O
-realised O
-within O
-the O
-next U_TEMPPRED O
-decade, O
-could O
-fundamentally O
-alter O
-our O
-ways O
-of O
-making O
-materials, O
-practicing O
-medicine O
-and O
-computation-making O
-calculations, O
-with O
-pervasive O
-societal O
-impacts.
-While O
-clearly O
-beyond O
-the O
-scope O
-of O
-this O
-paper, O
-it O
-may O
-be O
-revealing O
-to O
-pursue O
-some O
-scenarios O
-development O
-that O
-focus O
-on O
-tracking O
-many O
-of O
-these O
-possible O
-provocative O
-trends O
-forward O
-to O
-try O
-to O
-estimate O
-how O
-disruptive O
-they O
-might O
-conceivably O
-be O
-by U_TEMPPRED O
-2025.
-A O
-considerable O
-percentage O
-of O
-respondents O
-from O
-Australasia O
-suggested O
-that O
-the O
-drivers O
-will O
-emerge O
-in O
-the O
-short O
-run, O
-whereas O
-the O
-majority O
-of O
-the O
-respondents O
-from O
-the O
-EU O
-Candidate O
-countries O
-assessed O
-the O
-time O
-horizon O
-for O
-the O
-occurrence O
-of O
-drivers O
-after U_TEMPPRED O
-2025.
-None O
-of O
-the O
-student O
-respondents O
-expect O
-that O
-the O
-drivers O
-will O
-occur O
-after U_TEMPPRED O
-2025.
-On O
-current O
-trends, O
-millions O
-of O
-men O
-will O
-be O
-unable O
-to O
-father O
-children O
-because O
-of O
-this O
-effect O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2050.
-He O
-puts O
-forward O
-three O
-scenarios O
-of O
-how O
-the O
-world O
-will O
-develop O
-over B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-fifty O
-years.
-If O
-this O
-decline O
-continues O
-at O
 the O
 same O
-rate, O
-healthy O
-sperm O
-counts O
-will O
-be O
-seriously O
-low O
-in O
-most O
-men O
-within O
-the O
-next U_TEMPPRED O
-80 O
-years.
-But O
-what O
-happens O
-to O
-male O
-consumers O
-or O
-to O
-unborn O
-boys?’’[2] O
-Similarly, O
-writes O
-Dixon, O
-‘‘environmental O
-oestrogens O
-in O
-an O
-increasingly O
-urbanized O
-society O
-may O
-also O
-be O
-the O
-explanation O
-for O
-a O
-catastrophic O
-loss O
-of O
-sperm O
-in O
-men O
-in O
-industrialised O
-nations, O
-where O
-counts O
-have O
-fallen O
-by B_TEMPPRED O
-half M_TEMPPRED O
-in E_TEMPPRED O
-50 O
-years.
-Space O
-activities O
-or O
-energy O
-policy O
-require O
-long O
-term O
-horizon), O
-the O
-finality O
-(society O
-visioning O
-may O
-require O
-even O
-longer O
-time O
-span, O
-such O
+contexts O
+insofar O
 as O
-50 O
-years O
-forward U_TEMPPRED O
-), O
-the O
-stakeholders O
-(usually O
-a O
-shorter O
-horizon) O
-or O
-the O
-decision-makers O
-(electoral O
-life O
-span).
-The O
-second O
-step O
-is O
-about O
-imagining O
-the O
-future O
-of O
-Romanian O
-rural O
-communities O
-From O
-this O
-starting O
-point, O
-the O
-imagination O
-work O
-can O
-begin: O
-how O
-unexpected O
-phenomena O
-and O
-known O
-trends O
-(climate O
-change, O
-migrations, O
-laicization O
-of O
-the O
-society, O
-increasing O
-hybridization, O
-urbanization, O
-food O
-crisis, O
-knowledge-based O
-society, O
-etc.) O
-can O
-impact O
-on O
-this O
-system O
-during B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-20 O
-years.
-Yet O
-grow O
-is O
-so O
-firmly O
-and O
-deeply O
-implanted O
-in O
-us O
-by U_TEMPPRED O
-150 O
-years O
-of O
-formal O
-education, O
-developmental O
-policies, O
-economic O
-theories, O
-and O
-media O
-hype O
-that O
-it O
-is O
-almost O
-impossible O
-for O
-most O
-people O
-easily O
-to O
-consider, O
-much O
-less O
-to O
-embrace, O
-other O
-alternatives, O
-and O
-thus O
 they O
-envision O
-and O
-plan O
+create O
+broad O
+parameters O
 for O
-a O
-kind O
-of O
-grow O
-future O
+shifts O
+in O
+attitudes, O
+policies O
+and O
+business O
+focus O
+over O
+period B_TEMPPRED O
+of M_TEMPPRED O
+several E_TEMPPRED O
+years O
 that O
-cannot O
-be O
-achieved, O
-thus O
-failing O
-to O
-take O
-advantage O
-of O
-the O
-challenges O
+usually O
+have O
+global O
+reach.
+The O
+study O
+identified O
+potential O
+threats O
 and O
 opportunities O
-that O
-do O
-exist O
-in O
-other O
-alternatives.
-‘‘What O
-are O
-the O
-criteria O
-we O
-start O
-from O
-when O
-we O
-decide O
-the O
-methods?’’ O
-A O
-usual O
-non-exhaustive O
-list O
-of O
-criteria O
-[8] O
-includes O
-the O
-following: O
-main O
-goals O
-to O
-reach O
-(in-depth O
-study, O
-participatory O
-experience, O
-decision-makers’ O
-involvement, O
-capacity O
-building, O
-etc.); O
-mainly O
-exploratory O
-or O
-normative O
-(transformative) O
-approach; O
-time O
-horizon O
-(20 O
-or O
-40 O
-years O
-ahead U_TEMPPRED O
-?); O
-limits O
-of O
-the O
-studied O
-system; O
-main O
-scale O
-of O
-the O
-study O
-(local, O
-national, O
-regional, O
-etc.
-What O
-is O
-the O
-most O
-suitable O
-horizon? O
-In O
-order O
-to O
-convince O
-decision-makers O
-and O
-to O
-be O
-in O
-line O
-with O
-other O
-foresight O
-exercises O
-in O
-EU, O
-2030 O
-seems O
-an O
-acceptable O
-horizon, O
-although U_TEMPPRED O
-2040 O
-would O
-have O
-been O
-more O
-suitable O
-due O
-to O
-the O
-inherent O
-time O
-dynamics O
-of O
-the O
-studied O
-system.
-Two O
-scales O
-could O
-be O
-involved: O
-a O
-national O
-scale O
-with O
-working O
-groups O
-of O
-national O
-decision-makers O
-describing O
-what O
-desirable O
-future O
-they O
-envision O
-for O
-rural O
-communities O
-in O
-Romania O
-at U_TEMPPRED O
-2030.
-It O
-is O
-notable O
-that O
-China O
-has O
-already O
-identified O
-the O
-‘Internet O
-of O
-Things’ O
-as O
-a O
-goal O
-to O
-be O
-achieved O
-within B_TEMPPRED M_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-five O
-years, O
-under O
-its O
-12th O
-Five O
-Year O
-Plan.
-By U_TEMPPRED O
-2030, O
-at O
-the O
-rate O
-we O
-are O
-going, O
-our O
-industrial O
-civilization O
-will O
-need O
-the O
-capacity O
-of O
-two O
-planets O
-to O
-absorb O
-its O
-carbon O
-dioxide O
-and O
-other O
-wastes O
-and O
-provide O
-for O
-continued O
-mining O
-and O
-exploitation O
-of O
-resources.
-13 O
-When O
-we O
-add O
-in O
-China’s O
-planning O
-system O
-that O
-directs O
-finance O
-towards O
-favored O
-investment, O
-it O
-could O
-well O
-have O
-an O
-energy O
-system O
-based O
-on O
-hydro, O
-renewable O
-and O
-nuclear O
-that O
-generates O
-more O
-electric O
-power O
-than O
-fossil O
-fuels O
-by O
-2030, O
-and O
-eclipses O
-fossil O
-fuels O
-as O
-primary O
-energy O
-source O
-by U_TEMPPRED O
-2050.
-From O
-the O
-perspective B_TEMPPRED O
-of E_TEMPPRED O
-2050, O
-when O
-the O
-shift O
-to O
-renewables O
-will O
-be O
-well O
-under O
-way O
-and O
-acquiring O
-unstoppable O
-momentum, O
-the O
-idea O
-that O
-we O
-could O
-mortgage O
-the O
-future O
-of O
-our O
-industrial O
-civilization O
-to O
-a O
-finite O
-resource O
-whose O
-exploitation O
-made O
-countries O
-the O
-pawns O
-of O
-those O
-endowed O
-by O
-chance O
-with O
-supplies, O
-and O
-encouraged O
-brutal O
-dictatorships O
-to O
-protect O
-it, O
-and O
-whose O
-burning O
-was O
-effectively O
-poisoning O
-the O
-planet O
-– O
-such O
-an O
-idea O
-will O
-appear O
-preposterous.
-Again O
-from O
-the O
-perspective B_TEMPPRED O
-of E_TEMPPRED O
-2050, O
-when O
-this O
-process O
-will O
-be O
-well O
-advanced, O
-the O
-idea O
-that O
-the O
-origin O
-of O
-resources O
-could O
-be O
-ignored, O
-and O
-commodities O
-could O
-be O
-produced O
-and O
-traded O
-in O
-a O
-‘generic’ O
-form O
-without O
-regard O
-to O
-their O
-origins, O
-will O
-be O
-regarded O
-as O
-benighted.
-Several O
-visions O
-and O
-images O
-were O
-developed O
-and O
-a O
-time O
-horizon O
-was O
-set O
-for O
-the O
-development O
-of O
-the O
-future O
-sustainable O
-society, O
-denoted O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2050.
-The O
-images O
-of O
-the O
-future O
-include O
-a O
-qualitative O
-part O
-that O
-describes O
-changes O
-in B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2050 O
-as O
-well O
-as O
-quantitative O
-in O
-the O
-form O
-of O
-calculated O
-amounts O
-of O
-transportation, O
-energy O
-use, O
-and O
-CO O
-2 O
-emissions.
-Scenarios O
-on O
-European O
-energy O
-security: O
-Outcomes O
-of O
-natural O
-gas O
-strategy O
-in U_TEMPPRED O
-2020 O
-Mert O
-Bilgin O
-* O
-Political O
-Science O
-and O
-International O
-Relations O
-Department, O
-Bahc O
-̧es O
-̧ O
-ehir O
-University, O
-Istanbul, O
-Turkey O
-1.
-It O
-implements O
-‘‘trend O
-analysis’’ O
-to O
-forecast O
-the O
-volume O
-of O
-gas O
-needed O
-until U_TEMPPRED O
-2020 O
-by O
-elaborating O
-the O
-estimates O
-of O
-the O
-EU O
-Commission O
-and O
-‘‘scenario O
-building’’ O
-to O
-come O
-up O
-with O
-alternative O
-futures O
-forging O
-different O
-regional O
-implications.
-1 O
-gives O
-four O
-scenarios O
-on O
-EU-27 O
-gas O
-supply O
-and O
-demand O
-in U_TEMPPRED O
-2020.
-Scenarios O
-on O
-EU-27 O
-gas O
-supply O
-and O
-demand O
-in U_TEMPPRED O
-2020.
-Scenarios O
-on O
-EU-27 O
-gas O
-import O
-dependence O
-in U_TEMPPRED O
-2020 O
-(%).
-The O
-initial O
-capacity O
-of O
-20 O
-Bcm O
-will O
-be O
-increased O
-to O
-30 O
-Bcm O
-by U_TEMPPRED O
-2030.
-Regarding O
-the O
-EU O
-Commission; O
-diversification O
-of O
-natural O
-gas O
-supplies O
-is O
-a O
-significant O
-decision O
-to O
-support O
-European O
-energy O
-security O
-given O
-that O
-if O
-the O
-EU-27 O
-does O
-not O
-take O
-appropriate O
-measures, O
-its O
-dependence O
-on O
-Russian O
-gas O
-may O
-drastically O
-increase, O
-which O
-for O
-some O
-perspectives O
-can O
-reach O
-70% O
-of O
-total O
-imports O
-in U_TEMPPRED O
-2020 O
-and O
-80% O
-in U_TEMPPRED O
-2030.
-These O
-suppliers O
-may O
-choose O
-defying O
-European O
-norms O
-on O
-various O
-issues O
-Table O
-4 O
-Contingencies O
-on O
-European O
-energy O
-security O
-in U_TEMPPRED O
-2020.
-Institutions O
-In O
-the O
-similar O
-way, O
-unless O
-we O
-change O
-our O
-beliefs O
-and O
-values O
-about O
-the O
-world O
-at O
-large, O
-our O
-political O
-systems O
-will O
-be O
-unable O
-to O
-introduce O
-required O
-institutional O
-changes O
-that O
-would O
-guide O
-investment O
-and O
-consumption O
-choices O
-towards O
-socially O
-desirable O
-6 O
-If O
-we O
-exclude O
-CERA’s O
-optimistic O
-estimates O
-of O
-an O
-undulating O
-plateau O
-between U_TEMPPRED O
-2030 O
-and O
-2055 O
-year O
-after O
-which O
-oil O
-production O
-starts O
-declining.
-They O
-put O
-the O
-peak O
-of O
-conventional O
-oil O
-production O
-before U_TEMPPRED O
-2030.
-The O
-world O
-will O
-probably O
-add O
-2.2 O
-billion O
-people O
-by U_TEMPPRED O
-2075 O
-and O
-peak O
-at O
-9 O
-billion.
-A O
-long-term O
-global O
-strategic O
-plan O
-is O
-needed O
-to O
-help O
-reduce O
-the O
-gap O
-between O
-rich O
-and O
-poor, O
-by O
-creating O
-50 O
-million O
-jobs O
-per O
-year O
-over B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-decade.
-World O
-energy O
-demand O
-is O
-expected O
-to O
-increase O
-by O
-40–50% O
-in B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-25 O
-years, O
-with O
-much O
-of O
-the O
-increase O
-due O
-to O
-China O
-and O
-India.
-Special O
-studies O
-in O
-the2009 O
-State O
-of O
-the O
-Futurediscussed O
-the2009 O
-State O
-of O
-the O
-Future O
-Index(with O
-two O
-scenarios O
-of O
-‘‘no O
-economic O
-recession’’ O
-and O
-‘‘lengthy O
-recession’’),Some O
-Elements O
-of O
-the O
-Next O
-Global O
-Economic O
-System O
-over B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-20 O
-Years(a O
-survey O
-of O
-217 O
-participants O
-from O
-35 O
-countries O
-considering O
-35 O
-elements O
-such O
-as O
-new O
-GNP O
-definitions, O
-a O
-small O
-tax O
-on O
-global O
-public O
-goods, O
-greatly O
-increased O
-disclosure O
-of O
-tax O
-havens, O
-wealth O
-redefined, O
-a O
-global O
-minimum O
-living O
-wage, O
-and O
-a O
-single O
-global O
-currency),Real-Time O
-Delphi O
-Studies(a O
-relatively O
-new O
-and O
-efficient O
-method O
-for O
-collecting O
-and O
-synthesizing O
-expert O
-opinions, O
-based O
-on O
-the O
-original O
-Delphi O
-technique O
-co-developed O
-by O
-Theodore O
-J.
-Properly O
-managed, O
-the O
-new O
-technologies O
-will O
-get O
-humanity O
-through O
-the O
-looming O
-environmental, O
-economic, O
-and O
-social O
-conflicts O
-as O
-we O
-move O
-toward O
-a O
-crowded O
-world O
-of O
-some O
-9 O
-billion O
-people O
-by U_TEMPPRED O
-2050.
-Without O
-major O
-changes, O
-global O
-water O
-demand O
-could O
-be O
-40% O
-more O
-than O
-current O
-supply O
-by U_TEMPPRED O
-2030.
-Today’s O
-6.9 O
-billion O
-population O
-is O
-expected O
-to O
-grow O
-to O
-9.1 O
-billion O
-by O
-2050; O
-
-The2007 O
-SOFincludes O
-a O
-study O
-onFuture O
-Possibilities O
-for O
-Education O
-and O
-Learning O
-by U_TEMPPRED O
-2030, O
-based O
-on O
-a O
-Real-Time O
-Delphi O
-collecting O
-judgments O
-of O
-213 O
-experts O
-around O
-the O
-world.
-Japan O
-plans O
-to O
-have O
-a O
-working O
-space O
-solar O
-power O
-system O
-in O
-orbit O
-by U_TEMPPRED O
-2030, O
-and O
-other O
-innovations O
-are O
-accelerating, O
-e.g.
-For B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-forty O
-years, O
-urban O
-development O
-proved O
-him O
-largely O
-correct, O
-as O
-highways, O
-strip O
-commercial O
-centers, O
-and O
-bland O
-suburbs O
-dominated O
-new O
-construction.
-United O
-States O
-Energy O
-Information O
-Agency O
-Statistics O
-Center,http:  tonto.eia.doe.gov country country_energy_data.cfm?fips=US, O
-In O
-the O
-United O
-States, O
-cities O
-including O
-buildings O
-and O
-transportation O
-are O
-responsible O
-for O
-seventy-five O
-per O
-cent O
-of O
-energy O
-consumption O
-with O
-a O
-baseline O
-projection O
-of O
-a O
-thirty-four O
-percent O
-increase O
-by U_TEMPPRED O
-2030.
-Nevertheless, O
-in O
-the O
-inevitable O
-situation O
-of O
-nine O
-to O
-ten O
-billion O
-people O
-in B_TEMPPRED O
-the M_TEMPPRED O
-middle M_TEMPPRED O
-of E_TEMPPRED O
-the O
-century, O
-the O
-shift O
-to O
-less O
-materialistic O
-value O
-orientations O
-and O
-corresponding O
-consumption O
-patterns O
-might O
-temporarily O
-surpass O
-the O
-earth O
-carrying O
-capacity.
-With O
-a O
-population O
-increasing O
-from O
-1 O
-billion O
-in O
-1800 O
-to O
-6 O
-billion O
-in O
-2000 O
-and O
-probably O
-over O
-9 O
-billion O
-in U_TEMPPRED O
-2050 O
-and O
-an O
-ever-increasing O
-consumption O
-level, O
-the O
-pressure O
-on O
-the O
-earth O
-system O
-is O
-increasing O
-to O
-more O
-than O
-ten-fold O
-the O
-level O
-of O
-1800 O
-during O
-the O
-coming O
-decades.
-In O
-the O
-left O
-hand O
-side O
-globalization O
-worldviews, O
-the O
-world O
-population O
-is O
-expected O
-to O
-decline O
-after U_TEMPPRED O
-2050.
-He O
-admits O
-that O
-the O
-most O
-important O
-trends O
 for B_TEMPPRED O
 the M_TEMPPRED O
-next U_TEMPPRED O
-50 O
-years.
-We O
-will O
-be O
-able O
-to O
-rank O
-everything O
-from O
-politicians O
-to O
-personal O
-computers O
-and O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2020 O
-people, O
-products O
-and O
-organizations O
-will O
-have O
-reliability O
-ratings.
-Interestingly, O
-he O
-selected O
-5 O
-main O
-trends O
-of B_TEMPPRED O
-the M_TEMPPRED O
-following E_TEMPPRED O
-50 O
-years O
-at O
-the O
-beginning O
-of O
-the O
-book O
-but O
-at O
-the O
-end O
-of O
-the O
-book O
-he O
-also O
-determines O
-5 O
-things O
-that O
-would O
-not O
-change O
-over B_TEMPPRED O
-the M_TEMPPRED O
-next U_TEMPPRED O
-50 O
-years.
-Interestingly, O
-he O
-selected O
-5 O
-main O
-trends O
-of B_TEMPPRED O
-the M_TEMPPRED O
-following E_TEMPPRED O
-50 O
-years O
-at O
-the O
-beginning O
-of O
-the O
-book O
-but O
-at O
-the O
-end O
-of O
-the O
-book O
-he O
-also O
-determines O
-5 O
-things O
-that O
-won’t O
-change O
-over B_TEMPPRED O
-the M_TEMPPRED O
-next U_TEMPPRED O
-50 O
-years.
-Richard O
-Watson, O
-a O
-futurist, O
-has O
-written O
-a O
-very O
-interesting O
-book O
-on O
-the O
-trends O
-that O
-will O
-shape B_TEMPPRED O
-the M_TEMPPRED O
-next U_TEMPPRED O
-50 O
-years.
-As O
-the O
-author O
-puts O
-forward, O
-it O
-seems O
-the O
-history O
-of B_TEMPPRED O
-the M_TEMPPRED O
-next U_TEMPPRED O
-50 O
-years O
-will O
-be O
-about O
-the O
-relationship O
-between O
-technology O
-and O
-people.
-Richard O
-Watson, O
-a O
-futurist, O
-has O
-written O
-a O
-very O
-interesting O
-book O
-on O
-the O
-trends O
-that O
-will O
-shape B_TEMPPRED O
-the M_TEMPPRED O
-next U_TEMPPRED O
-50 O
-years.
-By B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2050 O
-if O
-this O
-trend O
-continues, O
-most O
-inner O
-cities O
-will O
-be O
-made O
-up O
-almost O
-entirely O
-of O
-rich O
-singles, O
-wealthy O
-families O
-and O
-gay O
-couples O
-with O
-high O
-disposable O
-incomes O
-and O
-liberal O
-political O
-persuasions
-By B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2050 O
-if O
-this O
-trend O
-continues, O
-most O
-inner O
-cities O
-will O
-be O
-made O
-up O
-almost O
-entirely O
-of O
-rich O
-singles, O
-wealthy O
-families O
-and O
-gay O
-couples O
-with O
-high O
-disposable O
-incomes O
-and O
-liberal O
-political O
-persuasions
-Watson, O
-Future O
-Files: O
-A O
-Brief O
-History O
-of B_TEMPPRED O
-the M_TEMPPRED O
-Next E_TEMPPRED O
-50 O
-Years, O
-Nicholas O
-Brealey O
-Publishing, O
-London O
-(2010)., O
-v+324 O
-pp., O
-£ O
-9.99 O
+period E_TEMPPRED O
+2015–2030.
 The O
-future O
-is O
-uncertain O
-and O
-the O
-speed O
-of O
-technology O
-is O
-too O
-high.
-In O
-terms O
-of O
-method, O
-the O
-question O
-how O
-to O
-investigate O
-what O
-is O
-not O
-yet O
-there, O
-presents O
-the O
-challenge O
-of O
-designing O
-intellectual O
-exercises O
-and O
-tools O
-that O
-can O
-provide O
-insight O
-into O
-the O
-state O
-of O
-the O
-world O
-ten, O
-twenty O
-or O
-fifty O
-years O
-from B_TEMPPRED O
-now E_TEMPPRED
-He O
-admits O
-that O
-the O
-most O
-important O
-trends O
-for B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-50 O
-years O
-are: O
-(1) O
-ageing O
-(demographic O
-shift), O
-(2) O
-power O
-shift O
-(towards O
-China, O
-India O
-and O
-the O
-Middle O
-East), O
-(3) O
-global O
-connectivity O
-(the O
-shift O
-from O
-‘‘me’’ O
-to O
-‘‘we’’), O
-(4) O
-GRIN O
-technologies O
-(genetics, O
-robotics, O
-internet O
-and O
-nanotechnology) O
-and O
-(5) O
-the O
-environment O
-(climate O
-change).
-In O
-this O
-project, O
-futurists O
-made O
-a O
-distinction O
-between O
-the O
-relatively O
-short O
-term O
-future O
-until U_TEMPPRED O
-2020 O
-and O
-the O
-longer O
-term O
-between U_TEMPPRED O
-2020 O
-and O
-2040.
-Between U_TEMPPRED O
-2020 O
-and O
-2050 O
-we O
-can O
-see O
-trade O
-unions; O
-petrol O
-engined O
-vehicles, O
-European O
-Union O
-(the O
-author O
-expresses O
-his O
-apology O
-for O
-this), O
-coins, O
-oil, O
-free O
-public O
-services, O
-Microsoft, O
-peace O
-and O
-quite, O
-blindness O
-on O
-this O
-list.
-On O
-the O
-innovation O
-timeline O
-side O
-till U_TEMPPRED O
-2050 O
-we O
-can O
-see O
-self-cleaning O
-windows, O
-synthetic O
-skin, O
-wearable O
-computers, O
-disposable O
-phones, O
-plastic O
-bones, O
-self-driving O
-cars, O
-global O
-voting, O
-smart O
-bullets, O
-space O
-factories O
-and O
-many O
-more O
-on O
-the O
-list.
-Heshows O
-that O
-the O
-number O
-of O
-some O
-computer O
-game O
-owners O
-is O
-more O
-than O
-the O
-population O
-of O
-many O
-countries. O
-By O
-relying O
-on O
-the O
-se O
-examples O
-he O
-claims O
-that O
-by U_TEMPPRED O
-2050 O
-Hollywood, O
-the O
-computer O
-industry, O
-neuroscience O
-and O
-the O
-pharmaceutical O
-industry O
-will O
-have O
-merged O
-into O
-one.
-The O
-author O
-highlights O
-that O
-between U_TEMPPRED O
-now O
-and O
-2030, O
-emission O
-of O
-CO O
-2 O
-from O
-China O
-is O
-predicted O
-to O
-equal O
-that O
-of O
-the O
-rest O
-of O
-the O
-world O
-combined.
-Between U_TEMPPRED O
-2020 O
-and O
-2050 O
-we O
-can O
-see O
-trade O
-unions; O
-petrol O
-engined O
-vehicles, O
-European O
-Union O
-(the O
-author O
-expresses O
-his O
-apology O
-for O
-this), O
-coins, O
-oil, O
-free O
-public O
-services, O
-Microsoft, O
-peace O
-and O
-quite, O
-blindness O
-on O
-this O
-list.
-On O
-the O
-innovation O
-timeline O
-side O
-till U_TEMPPRED O
-2050 O
-we O
-can O
-see O
-self-cleaning O
-windows, O
-synthetic O
-skin, O
-wearable O
-computers, O
-disposable O
-phones, O
-plastic O
-bones, O
-self-driving O
-cars, O
-global O
-voting, O
-smart O
-bullets, O
-space O
-factories O
-and O
-many O
-more O
-on O
-the O
-list.
-In B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-quarter O
-century, O
-changes O
-will O
-be O
-more O
-dramatic, O
-coinciding O
-with O
-the O
-advancing O
-development O
-of O
-the O
-energy O
-and O
-transportation O
-infrastructures.
-Health O
-psychology O
-and O
-health O
-education O
-In B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-decade, O
-we O
-are O
-likely O
-to O
-see O
-a O
-greater O
-fusion O
-of O
-health O
-psychology O
-with O
-the O
-insights O
-provided O
-by O
-an O
-understanding O
-of O
-evolutionary O
-selection O
-pressures.
-Gas O
-prices O
-in O
-the O
-USA O
-rose O
-above O
-$4 gal O
-in O
-2008, O
-providing O
-hints O
-of O
-what O
-will O
-happen O
-In B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-two O
-decades O
-as O
-fuel O
-prices O
-rise, O
-steadily O
-or O
-not.
-In B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-decade, O
-there O
-will O
-be O
-increasing O
-numbers O
-of O
-currently O
-existing O
-projects O
-such O
-as O
-community O
-gardens, O
-which O
-provide O
-locally O
-produced O
-fresh O
-produce, O
-better O
-air O
-quality, O
-and O
-additional O
-public O
-green O
-space.
-The O
-experience O
-with O
-the O
-rate O
-of O
-retreat O
-in O
-the O
-first O
-decade O
-of O
-this O
-century O
-suggests O
-that O
-this O
-may O
-happen O
-much O
-earlier, O
-possibly O
-by U_TEMPPRED O
-2020.
-Reports O
-like O
-those O
-of O
-the O
-IPCC[1]and O
-the O
-ACIA[2]have O
-predicted O
-that O
-most O
-of O
-the O
-sea O
-ice O
-will O
-have O
-disappeared O
-from O
-the O
-Arctic O
-Ocean O
-in O
-the O
-summer O
-time, O
-around B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2040.
-Too O
-many O
-people: O
-As O
-the O
-world’s O
-population O
-grows O
-to O
-about O
-9 O
-billion O
-around U_TEMPPRED O
-2050, O
-global O
-tensions O
-will O
-climb O
-as O
-a O
-result O
-of O
-dropping O
-water O
-tables, O
-rising O
-and O
-changing O
-consumer O
-demand, O
-uncontrolled O
-migratory O
-movements, O
-demands O
-for O
-equality O
-in O
-healthcare, O
-pollution, O
-famine, O
-congestion, O
-unemployment, O
-poverty, O
-disease, O
-starvation, O
-social O
-violence O
-and O
-the O
-like.
-Train O
-notes O
-the O
-Club O
-of O
-Rome O
-study O
-predicting O
-that O
-current O
-population, O
-resource O
-use O
-and O
-other O
-trends O
-will O
-end O
-in O
-disaster O
-in B_TEMPPRED O
-next E_TEMPPRED O
-century.
-The O
-authors O
-explicitly O
-note O
-that O
-it O
-is O
-not O
-a O
-forecast, O
-and O
-that O
-they O
-do O
-not O
-believe O
-the O
-available O
-data O
-and O
-theories O
-would O
-enable O
-an O
-accurate O
-prediction O
-of O
-what O
-will O
-happen O
-to O
-the O
-world O
-over B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-century.
-And O
-Fisk O
-points O
-out O
-that O
-‘The O
-precipitous O
-collapse O
-of O
-economic O
-growth O
-projected O
-by O
-the O
-MIT O
-report O
-does O
-not O
-occur O
-before U_TEMPPRED O
-2020 O
-in O
-any O
-of O
-the O
-model O
-runs, O
-so O
-it O
-is O
-hard O
-to O
-see O
-how O
-its O
-doomsday O
-projections O
-have O
-been O
-disproved.
-The O
-British O
-government O
-has O
-pledged O
-to O
-reduce O
-carbon O
-emissions O
-by O
-80% O
-by U_TEMPPRED O
-2050, O
-a O
-very O
-ambitious O
-goal.
-The O
-report O
-argues O
-that O
-this O
-amount O
-of O
-emissions O
-reduction O
-is O
-achievable O
-at O
-an O
-affordable O
-cost O
-of O
-between O
-1% O
-and O
-2% O
-of O
-GDP O
-in U_TEMPPRED O
-2050.’ O
-Pielke[16] O
-further O
-argues O
-that O
-not O
-only O
-‘is O
-the O
-Climate O
-Change O
-Act O
-all O
-but O
-certain O
-to O
-fail O
-to O
-achieve O
-its O
-ambitious O
-emissions O
-reduction O
-goals O
-in O
-both O
-the O
-short O
-and O
-long O
-term, O
-but O
-that O
-it O
-is O
-fundamentally O
-flawed O
-in O
-its O
-basic O
-conception.’.
-It O
-is O
-likely O
-that O
-the O
-world O
-will O
-reach O
-Hubbert’s O
-Peak O
-in M_TEMPPRED O
-the U_TEMPPRED O
-next E_TEMPPRED O
-decade O
-or O
-two, O
-which O
-is O
-defined O
-to O
-be O
-the O
-highest O
-amount O
-of O
-oil O
-production O
-that O
-could O
-ever O
-be O
-reached O
-in O
-human O
-history.
-Worldwide, O
-fossil O
-fuels O
-represented O
-at O
-least O
-87% O
-of O
-energy O
-consumed O
-in O
-2004, O
-a O
-percentage O
-that O
-is O
-not O
-forecasted O
-to O
-change O
-by B_TEMPPRED O
-the M_TEMPPRED O
-year E_TEMPPRED O
-2030.
-Each O
-path O
-from O
-now O
-to O
-1000 O
-years O
-into O
-the O
-future O
-will O
-be O
-describable O
-over O
-a O
-number O
-of O
-variables, O
-including O
-the O
-number O
-of O
-deaths O
-attributable O
-to O
-energy O
-problems.
-This O
-paper O
-assumes O
-that O
-the O
-unsustainable O
-energy O
-policies O
-at O
-least O
-pose O
-very O
-serious O
-problems O
-for O
-humanity, O
-if O
-not O
-extremely O
-serious O
-problems, O
-over B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-1000 O
-years.
-Tonn  O
-Futures O
-43 O
-(2011) O
-348–355354 O
-It O
-can O
-be O
-argued O
-that O
-unsustainable O
-energy O
-policies O
-could O
-lead O
-to O
-the O
-deaths O
-of O
-millions O
-of O
-people O
-over B_TEMPPRED O
-the M_TEMPPRED O
-next E_TEMPPRED O
-1000 O
-years, O
-from O
-the O
-combined O
-ravages O
-of O
-climate O
-change O
-and O
-energy O
-shortages.
-The O
-weight O
-of O
-history O
-and O
-the O
-structure O
-of O
-the O
-present O
-These O
-trends O
-and O
-issues O
-are O
-only O
-a O
-small O
-part O
-of O
-the O
-story; O
-the O
-urbanization O
-of O
-the O
-planet O
-(by U_TEMPPRED O
-2050, O
-when O
-the O
-vast O
-majority O
-of O
-people O
-will O
-be O
-living O
-in O
-cities), O
-deep O
-inequity, O
-loss O
-of O
-green O
-space, O
-hyper-urbanization O
-(the O
-rise O
-of O
-the O
-mega O
-city) O
-and O
-the O
-car–road O
-worldview O
-continue.
-In O
-his O
-review O
-of O
-Davis’ O
-work, O
-Harding O
-writes O
-that O
-the O
-‘‘slumization O
-of O
-the O
-world’’ O
-deserves O
-more O
-global O
-attention, O
-given O
-that O
-by U_TEMPPRED O
-2020 O
-half O
-the O
-world’s O
-urban O
-population O
-will O
-exist O
-in O
-poverty.
-The O
-‘how’ O
-of O
-city O
-futures O
-To O
-respond O
-to O
-these O
-and O
-other O
-potential O
-changes, O
-many O
-cities O
-have O
-embarked O
-on U_TEMPPRED O
-2030 O
-type O
-projects O
-where O
-they O
-map O
-possible O
-and O
+scenarios O
+depict O
 plausible O
-futures O
-and O
-then O
-create O
-their O
-desired O
-future.
-The O
-participants O
-wanted O
-to O
-begin O
-the O
-process O
+development O
+paths O
+for B_TEMPPRED O
+the M_TEMPPRED O
+period E_TEMPPRED O
+2006–2015.
+About O
+21% O
 of O
-thinking O
-about U_TEMPPRED O
-2046 O
-since O
-they O
-understood O
-that O
-climate O
-change O
-was O
-a O
-long O
-term O
-issue.
-Multiple O
-issues: O
-climate O
-change, O
-searching O
-for O
-differentiation O
-in O
-a O
-world O
-economy O
-and O
-protecting O
-against O
-tourism O
-downturns— O
-Gold O
-Coast O
-City O
-Council O
-Another O
-group O
-that O
-has O
-taken O
-a O
-longer O
-term O
-approach O
-is O
 the O
-Gold O
-Coast O
-City O
-Council O
-(focused O
-on U_TEMPPRED O
-2038).
-Since O
-the O
-Vision’s O
-refreshment O
+initial O
+sample O
+experienced O
+a O
+succession O
 in B_TEMPPRED O
-the E_TEMPPRED O
-2026 O
-project O
-(and O
-this O
-is O
-part O
-of O
-the O
-pendulum O
-swing O
-of O
-local O
-politics), O
-the O
-focus O
-has O
-not O
-been O
-on O
-challenging O
-the O
-current O
-direction O
-of O
-the O
-city O
-but O
-on O
-implementing O
-large O
-scale O
-infrastructure O
-projects, O
-such O
-as O
-building O
-tunnels.
-In O
-order O
-to O
-calculate O
-a O
-default O
-value O
+the M_TEMPPRED O
+period E_TEMPPRED O
+2003–2009.
+Primary O
+energy O
+consumption O
+increasesby O
+100% O
+over B_TEMPPRED O
+the M_TEMPPRED O
+period E_TEMPPRED O
+2005–2050.
+While O
 for O
-investment O
-stock O
-in O
 the O
-future, O
-an O
-assessment O
-needs O
-to O
-be O
-made O
-of O
-the O
-total O
-settlement O
-costs O
-in U_TEMPPRED O
-2025 O
-and O
-2150 O
-on O
-the O
-assumption O
-that O
-the O
-urban O
-and O
-rural O
-housing O
-planning O
-standards O
-are O
-achieved.
-As O
-the O
-proportion O
-of O
-the O
-urban O
-population O
-is O
-expected O
-to O
-increase O
-from O
-say O
-60% O
-to O
-90% O
-in O
-the O
+2000–2020 O
 period O
-from U_TEMPPRED O
-2025 O
-to U_TEMPPRED O
-2150, O
 the O
-rural O
-settlement O
-factor O
-becomes O
-of O
-diminishing O
-importance.
+assessment O
+approach O
+was O
+framed O
+as O
+describing O
+the O
+probable O
+future O
+grounded O
+in O
+past-based O
+knowledge, O
+the O
+futurists O
+aimed O
+at O
+envisioning O
+different O
+possible O
+futures O
+a O
+period B_TEMPPRED O
+of M_TEMPPRED O
+several E_TEMPPRED O
+2020–2040.
+The O
+model O
+was O
+initialised O
+with O
+the O
+conditions O
+present O
+in O
+1995 O
+and O
+simulated O
+for O
+the O
+time O
+period B_TEMPPRED O
+of M_TEMPPRED O
+several E_TEMPPRED O
+1995 O
+to O
+2050.
