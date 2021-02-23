@@ -5,6 +5,7 @@ require_once 'lang.php';
 saveCurrentURL();
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+<link rel="stylesheet" href="./css/style-scroll-select.css" type="text/css" media="all" />
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,7 +82,7 @@ saveCurrentURL();
 
                   $search_grupos=get_data("SELECT * FROM grupos WHERE id_prospec_grupos = " . intval($id_roadmap) . " AND id_user_grupos = ". $_SESSION['id']. "AND accepted = 'true'");
                   $results_max_grupos = pg_num_rows($search_grupos);
-
+                  
                   if($results_max_grupos > 0) {
 
                     $side_left = true;
@@ -102,6 +103,7 @@ saveCurrentURL();
                         confiabilidade => "",
                         nome_arquivo => "",
                         ano_arquivo => "",
+                        filtro => "",
                         nome_trm => $nome_roadmap,
                         ano_limite_trm => $ano_limite_roadmap,
                         is_prospec => false,
@@ -140,7 +142,15 @@ saveCurrentURL();
                         $search_roadmap1=get_data('SELECT * FROM roadmap WHERE arquivo_origem = ' . $result->id_arquivo . ' AND id_arquivo_unico = '. $result->id_arquivo);
                         $results_max = pg_num_rows($search_roadmap1);
 
+                        //DEFINE FILTROS PRÉ-EXISTENTES
+                        //$filtro_work = array("work", "toil", "job", "graft", "sweat", "labour", "working", "drudgery", "overwork", "moil", "handiwork", "grind", "labor", "ply", "spadework", "slave", "slog", "idle", "yakka", "temp", "off", "topiary", "travail", "opus", "serve", "busy", "tool", "clerk", "Cooper", "industry", "swot", "practice", "cooperage", "carpenter", "caddie", "stonework", "beaver", "trouble", "underwork", "outwork", "char", "hustle", "beadwork", "boondoggle", "stucco", "hard-working", "joinery", "inlay", "missionize", "cowboy", "effort", "employment", "sculpture", "hand", "tinker", "coordinate", "shirk", "workroom", "forge", "millwork", "erg", "do", "workless", "ranch", "start", "plumbing", "drudge", "hack", "treadle", "mesh", "energy", "dig", "saddlery", "oeuvre", "function", "power", "mission", "plumb", "opuscule", "spell", "plug", "service", "garden", "take", "quilting", "cooperative", "elaborate", "earn", "business", "wk", "social service", "carpentry", "masonry", "study", "loafer", "doss", "hook", "lazy", "housework", "lean", "composition", "task", "pay", "nonwork", "sleuth", "copyright", "opera", "wrought", "operate", "taskwork");
+                        $filtro_work = array("jobs", "Internet");
+                        $filtro_education = array("");
+                        $filtro_medicine = array("");
+                        $filtro_transport = array("");
+
                         if ($results_max == 0) {
+                          //Monta o roadmap pela primeira vez
                           $tmp_date = -1;
                           $search_results=get_data('SELECT * FROM arquivos a INNER JOIN texto t ON t.id_texto = a.id_arquivo INNER JOIN ren r ON r.id_ren = t.id_texto INNER JOIN prospec p ON p.id_prospec = a.id_prospec_arquivo AND r.ordem_texto = t.ordem WHERE a.id_arquivo = '.$result->id_arquivo.' order by a.id_arquivo, r.ordem_texto');
 
@@ -180,6 +190,16 @@ saveCurrentURL();
                                   $section[info_original] = $section[info];
                                   $array_sections[$i_section] = $section;
                                   $assunto_roadmap = $result2->assunto_prospec;
+
+                                  //CARREGA FILTRO PRÉ-DEFINIDO POR CATEGORIA
+                                  if($assunto_roadmap == "Work")
+                                    $section[filtro] = array($filtro_work);
+                                  if($assunto_roadmap == "Education")
+                                    $section[filtro] = array($filtro_education);
+                                  if($assunto_roadmap == "Medicine")
+                                    $section[filtro] = array($filtro_medicine);
+                                  if($assunto_roadmap == "Transport")
+                                    $section[filtro] = array($filtro_transport);
 
                                   $section[date] = "";
                                   $section[duration] = "";
@@ -295,7 +315,7 @@ saveCurrentURL();
                             array_multisort(array_column($array_sections, 'date'), SORT_ASC, $array_sections);
                         }
                         else {
-                            //echo "<script>console.log(".$result->id_arquivo.");</script>";
+                            //Recupera roadmap já salvo do banco
                             $search_roadmap2=get_data('SELECT * FROM roadmap r INNER JOIN prospec p ON p.id_prospec = r.id_prospec_roadmap INNER JOIN arquivos a ON a.id_arquivo = r.arquivo_origem WHERE a.id_arquivo = '.$result->id_arquivo.' AND id_arquivo_unico ='.$result->id_arquivo.' AND arquivo_origem != 0 order by tempo asc');
 
                             while($result3=pg_fetch_object($search_roadmap2)) {
@@ -311,8 +331,28 @@ saveCurrentURL();
                             $section[ano_arquivo] = $result3->ano_arquivo;
                             $section[autores] = $result3->autores_prospeccao;
                             $section[confiabilidade] = $result3->conf_arquivo;
-                            $array_sections[$i_section] = $section;
                             $assunto_roadmap = $result3->assunto_prospec;
+
+                            //CARREGA FILTRO PRÉ-DEFINIDO POR CATEGORIA
+                            if($assunto_roadmap == "Work")
+                              $section[filtro] = array($filtro_work);
+                            if($assunto_roadmap == "Education")
+                              $section[filtro] = array($filtro_education);
+                            if($assunto_roadmap == "Medicine")
+                              $section[filtro] = array($filtro_medicine);
+                            if($assunto_roadmap == "Transport")
+                              $section[filtro] = array($filtro_transport);
+
+
+                           
+                            //if (strpos($section[info], 'jobs') !== false) {
+                            //   echo "<script>console.log('passei aqui');</script>";
+                            //   $array_sections[$i_section] = $section;
+                            //    $i_section++;
+                            //}
+                            
+                            $array_sections[$i_section] = $section;
+                            $i_section++;
 
                             $section[date] = "";
                             $section[info] = "";
@@ -321,7 +361,6 @@ saveCurrentURL();
                             $section[has_temppred] = false;
                             $section[has_duration] = false;
                             $section[is_prospec] = false;
-                            $i_section++;
                             }
                         
                         }
@@ -363,10 +402,14 @@ saveCurrentURL();
 
                     echo "<div class='card shadow mb-4' style='height: 100%;'>
                     <div id='box_roadmap' class='card-header py-3' style='padding-top: 0.7rem !important; padding-bottom: 0.7rem !important;'>
-                    <a href='#' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm' style='float:right;' data-target='#modalGeraRelatorio' data-toggle='modal' data-id='gerarelatorio-".$id_roadmap."'>                         		
-                      <i class='fas fa-download fa-sm text-white-50'></i> ".$LANG['130']."
-                    </a>";
 
+                    ";
+
+                    echo "<button href='#' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm' style='float:right;' data-target='#modalGeraRelatorio' data-toggle='modal' data-id='gerarelatorio-".$id_roadmap."'>                         		
+                    <i class='fas fa-download fa-sm text-white-50'></i> ".$LANG['130']."
+                  </button>";
+
+                  
                       /* echo "<a href='#' title='Baixar relatório em CSV' style='float:right;' onclick='geraRelatorio();' class='d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm'>
                       <i class='fas fa-download fa-sm text-white-50'></i> Gerar .CSV
                       </a>";  */
@@ -389,6 +432,8 @@ saveCurrentURL();
                     
                     //Traduz a area
                     $assunto_multilang = "";
+                    if($assunto_roadmap == "General")
+                      $assunto_multilang = $LANG['228'];
                     if($assunto_roadmap == "Work")
                       $assunto_multilang = $LANG['20'];
                     if($assunto_roadmap == "Education")
@@ -406,7 +451,6 @@ saveCurrentURL();
                     echo "<p id='box_conf_media_roadmap' style='margin: 0px 0px -8px 10px; padding-top: 5px; float:left;'></p>";
 
                     //echo "<p id='box_conf_media_roadmap' style='margin: 0px 0px -8px 10px; padding-top: 5px; float:left;'><small class='text-muted'><b> Confiabilidade média do roadmap: </b></small><img id='conf_media_roadmap' src='img/conf_10_bw.png' title='Confiabilidade média: 10' style='width: 20px; height: 20px; margin-right:10px; margin-top: -5px; margin-left: 3px;'/></p>";
-
 
                     if($tipoCabecalho == "arquivo")
                     $id_arquivo_adicionar = $id_arquivo;
@@ -427,19 +471,91 @@ saveCurrentURL();
                     </div>
                     <div id='box_info_roadmap' class='card-header' style='height: 3vh; margin: 0; padding: 0; background-color: whitesmoke; border-radius: 0px 0px 0px 40px;'>";
 
-                  
+                   
+
                     if(isset($_GET["roadmap-completo"])) {
                       echo "<p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>".$LANG['131']."</b></small></p>
                           <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>".$LANG['133']."</b></small></div></p></a>
-                        </div>";
+                        ";
                     }
                     else {
                       echo "<p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b>".$LANG['132']." ".$section[nome_arquivo]."</b></small></p>
                           <a href='#' data-target='#modalArquivosRoadmap' data-toggle='modal' data-id='modalArquivosRoadmap-".$id_roadmap."' style='margin: 0px 20px 0px 0px; float: right;'><div style='text-align: center;'><p style='margin: 3px 0px 0px 6px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>".$LANG['133']."</b></small></div></p></a>
                           <div href='' style='margin: 0; float: right;'><p style='margin: 3px 0px 0px 20px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>·</b></small></p></div>
                           <a href='roadmaps.php?roadmap-completo=".$id_roadmap."' style='margin: 0; float: right;'><div style='text-align: center;'><p style='margin: 3px -14px 0px 0px; padding: 0; float: left;'><small class='text-muted'><b style='color: #6a8db3;'>".$LANG['137']."</b></small></p></div></a>
-                        </div>";
+                        ";
                     }
+
+                    echo "<div class='dropdown keep-open' style='float: right;'>
+                    <!-- Dropdown Button -->
+                    <button id='btnCalendar' style=' background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none; margin-right: -18px; margin-top: -2px;' role='button' href='#'
+                      data-toggle='dropdown' data-target='#' 
+                      class='btn btn-primary shadow-none'>
+                      <i class='fas fa-calendar-week fa-sm' style='color: #858796;'></i>
+                    </button>
+                    
+                    <!-- Dropdown Menu -->
+                    <ul id='dropdown-menu-filtro' class='dropdown-menu' role='menu' aria-labelledby='dLabel' style='min-width: 50px; width: 101px; height: 115px; margin-left: -33px;'>
+                        <div>
+                          <i id='close-dropdown-years' onclick='closePopupYears();' class='fas fa-times fa-sm' style='display:none; float: right; padding-right: 8px; margin-top: -13px; cursor: pointer;'></i>
+                          <i id='prev' class='fas fa-sort-up fa-sm' style='float: right; padding-right: 45px; cursor: pointer;'></i>
+  
+                          <div id='select' style='float:right; width: 85px; margin-right: 7px;'></div>
+                          <i id='next' class='fas fa-sort-down fa-sm' style='float: right; margin-top: 75px; margin-right: -45px; cursor: pointer;'></i>
+                        </div>
+                      </ul>
+                  </div>";
+
+                  echo "<div class='dropdown keep-open' style='float: left;'>
+                    <!-- Dropdown Button -->
+                    <button id='btnFiltroAssunto' style=' background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none; margin-right: -18px; margin-top: -2px;' role='button' href='#'
+                      data-toggle='dropdown' data-target='#' 
+                      class='btn btn-primary shadow-none'>
+                      <i class='fas fa-filter fa-sm' style='color: #858796;'></i>
+                    </button>
+                    
+                    <!-- Dropdown Menu -->
+                    <ul id='dropdown-menu-filtro-assunto' class='dropdown-menu' role='menu' aria-labelledby='dLabel' style='min-width: 50px; width: 322px; height: 250px; margin-left: -75px;'>
+                        <div style='margin-left:10px;'>
+                          <div style='display:inline-block; width: 140px;'>
+                            <input type='checkbox' id='filtro_education_checkbox' nome='filtro_education_checkbox' value='filtro_education_checkbox'>
+                            <label for='filtro_education_checkbox'> Education </ label>
+                          </div>
+                          <div style='display:inline-block; width: 140px;'>
+                            <input type='checkbox' id='filtro_medicine_checkbox' nome='filtro_medicine_checkbox' value='filtro_medicine_checkbox'>
+                            <label for='filtro_medicine_checkbox'> Medicine </ label>
+                          </div>
+                          <div style='display:inline-block; width: 140px;'>
+                            <input type='checkbox' id='filtro_transport_checkbox' nome='filtro_transport_checkbox' value='filtro_transport_checkbox'>
+                            <label for='filtro_transport_checkbox'> Transport </ label>
+                          </div>
+                          <div style='display:inline-block; width: 140px;'>
+                            <input type='checkbox' id='filtro_work_checkbox' nome='filtro_work_checkbox' value='filtro_work_checkbox'>
+                            <label for='filtro_work_checkbox'> Work </ label>
+                          </div>
+                          <div style='display:inline-block; width: 140px;'>
+                            <button type='button' class='btn btn-info add-new' style='float: left;'><i class='fa fa-plus'></i>Add more filter</button>
+                            <div style='max-height:160px;'>
+                              <table id='tableFiltroCustomizado' class='table' style='border-collapse: collapse; border: none; width: 300px;'>
+                                <tbody>
+                                  <tr style='display:none;'>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                      <a class='add' title='Add'><img src='img/add2.png' title='".$LANG['75']."' style='width: 20px; height: 20px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                                      <a class='edit' title='Edit'><img src='img/editar7.png' title='".$LANG['84']."' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                                      <a class='delete' title='Delete'><img src='img/deletar2.png' title='".$LANG['83']."' style='width: 18px; height: 18px; display: inline-block; opacity: 70%; cursor: pointer;'/></a>
+                                    </td>
+                                  </tr>           
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </ul>
+                  </div>";
+
+                  echo "</div>";
 
                     echo "<div id='container-roadmap' class='container' style='background: white url(img/fundoSistema2.png); height: 100%; overflow: auto; max-width:100%;'>";
 
@@ -461,65 +577,84 @@ saveCurrentURL();
                     $previous_date = 0;
                     $id_filtered = 0;
 
-                    for ($j = 0; $j < sizeof($array_sections); $j++) {                            
+                    for ($j = 0; $j < sizeof($array_sections); $j++) {
+                      $inside_filter_context = true;                            
                       if($array_sections[$j][is_prospec]) {  
                         $array_relatorio[$i_prospec] = $array_sections[$j];
                         if($array_sections[$j][date] > $array_sections[$j][ano_arquivo] && $array_sections[$j][date] <= $ano_limite_roadmap) {
                           
-                          $array_relatorio_filtered[$id_filtered] = $array_sections[$j];
+                          //TODO - IF PARA CHECAR FILTRO ANTES DE INSERIR NO ARRAY
+                          
+                         // for ($w = 0; $w < sizeof($array_sections[$j][filtro][0]); $w++) {
+                          //  echo "<script>console.log(".json_encode($array_sections[$j][filtro][0][$w]).");</script>"; 
+                           // if (strpos($array_sections[$j][info], $array_sections[$j][filtro][0][$w]) !== false)
+                           //   $inside_filter_context = true;
+                          //}
 
-                          if($array_sections[$j][date] > $previous_date)
-                            echo "<li><div class='tldate'>".$array_sections[$j][date]."</div></li>";
+                          if ($inside_filter_context) {
+                            
+                            $array_relatorio_filtered[$id_filtered] = $array_sections[$j];
+                         
+                            
+                            $var_tmp = false;
 
-                          if($side_left)
-                            echo "<li>";
-                          else
-                            echo "<li class='timeline-inverted'>";
-                          echo "<div class='tl-circ'></div>
-                                  <div class='timeline-panel'>";
+                            if($array_sections[$j][date] > $previous_date) {
+                              echo "<li><div id='tldate-".$array_sections[$j][date]."' class='tldate'>".$array_sections[$j][date]."</div></li>";
+                              $var_tmp = true;
+                            }
+                            else $var_tmp = false;
 
-                        /*if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-                                    echo "<a href='/uploads/pdf/".$array_sections[$j][id_arquivo].".pdf' download><div><img src='img/pdf_download3.png' style='width: 20px; height: 20px; float:right;'/></a>";
-                                  else
-                                    echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
-                                if($array_sections[$j][arquivo_origem] != 0) {	
-                                  if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-                                    echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/search_on_pdf1.png' title='".$LANG['135']."' style='width: 28px; height: 20px; float:right; margin-right: -9px;'/></a>";
-                                  else
-                                    echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/search_on_txt1.png' title='".$LANG['135']."' style='width: 28px; height: 20px; float:right; cursor: pointer; margin-right: -9px;'/></a>";
-                                }
-                                else {
-                                  echo "<div><img src='img/user9.png' title='".$LANG['138']."' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
-                                }
+                            if($side_left)
+                              if($var_tmp) echo "<li>";
+                              else echo "<li style='margin-top:-50px'>";
+                            else
+                              echo "<li class='timeline-inverted' style='margin-top:-50px'>";
+                            echo "<div class='tl-circ'></div>
+                                    <div class='timeline-panel'>";
 
-                                //Ver no texto
-                                /* if($array_sections[$j][id_arquivo] != 0) {	
-                                    if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
-                                      echo "<a href='#' data-target='#modalVerNoTexto' data-toggle='modal' data-id='verNoTexto-".$array_sections[$j][id_arquivo]."'><div><img src='img/add.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right;'/></a>";
+                          /*if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
+                                      echo "<a href='/uploads/pdf/".$array_sections[$j][id_arquivo].".pdf' download><div><img src='img/pdf_download3.png' style='width: 20px; height: 20px; float:right;'/></a>";
                                     else
-                                      echo "<a data-target='#modalVerNoTexto' data-toggle='modal' data-id='verNoTexto-".$array_sections[$j][id_arquivo]."'><div><img src='img/add.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
-                                }
-                                else {
-                                  echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
-                                } */
+                                      echo "<a href='/relatorios/relatorio_".$id_roadmap.".txt' download><div><img src='img/txt_download2.png' style='width: 20px; height: 20px; float:right;'/></a>";*/
+                                  if($array_sections[$j][arquivo_origem] != 0) {	
+                                    if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
+                                      echo "<a href='#' data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='pdf'><div><img src='img/search_on_pdf1.png' title='".$LANG['135']."' style='width: 28px; height: 20px; float:right; margin-right: -9px;'/></a>";
+                                    else
+                                      echo "<a data-target='#modalAbrirPDF' data-toggle='modal' data-id='abrirpdf-".$array_sections[$j][id_arquivo]."' data-original='".$array_sections[$j][info_original]."' data-tipoarquivo='txt'><div><img src='img/search_on_txt1.png' title='".$LANG['135']."' style='width: 28px; height: 20px; float:right; cursor: pointer; margin-right: -9px;'/></a>";
+                                  }
+                                  else {
+                                    echo "<div><img src='img/user9.png' title='".$LANG['138']."' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
+                                  }
 
-                                //echo "<img src='img/conf_stars_".$array_sections[$j][confiabilidade]."_bw.png' title='".$LANG['134'].": ".$array_sections[$j][confiabilidade]."' style='height: 20px; float:right; margin-right:10px;'/>";
-                                $rate = $array_sections[$j][confiabilidade] * 1000;
-                                    echo "<div class='tl-heading'>
-                                      <h4>".$array_sections[$j][date]."</h4>
-                                      <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i>".$array_sections[$j][autores]." <b>".$array_sections[$j][nome_arquivo]."</b> (".$array_sections[$j][ano_arquivo].").</small></p>
+                                  //Ver no texto
+                                  /* if($array_sections[$j][id_arquivo] != 0) {	
+                                      if (file_exists("uploads/pdf/".$array_sections[$j][id_arquivo].".pdf")) 
+                                        echo "<a href='#' data-target='#modalVerNoTexto' data-toggle='modal' data-id='verNoTexto-".$array_sections[$j][id_arquivo]."'><div><img src='img/add.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right;'/></a>";
+                                      else
+                                        echo "<a data-target='#modalVerNoTexto' data-toggle='modal' data-id='verNoTexto-".$array_sections[$j][id_arquivo]."'><div><img src='img/add.png' title='Ver arquivo original' style='width: 20px; height: 20px; float:right; cursor: pointer;'/></a>";
+                                  }
+                                  else {
+                                    echo "<div><img src='img/user9.png' title='Prospecção adicionada manualmente' style='width: 20px; height: 20px; float:right; opacity: 60%;'/>";
+                                  } */
+
+                                  //echo "<img src='img/conf_stars_".$array_sections[$j][confiabilidade]."_bw.png' title='".$LANG['134'].": ".$array_sections[$j][confiabilidade]."' style='height: 20px; float:right; margin-right:10px;'/>";
+                                  $rate = $array_sections[$j][confiabilidade] * 1000;
+                                      echo "<div class='tl-heading'>
+                                        <h4>".$array_sections[$j][date]."</h4>
+                                        <p><small class='text-muted'><i class='glyphicon glyphicon-time'></i>".$array_sections[$j][autores]." <b>".$array_sections[$j][nome_arquivo]."</b> (".$array_sections[$j][ano_arquivo].").</small></p>
+                                      </div>
+                                      <div class='tl-body'>
+                                        <p>".$array_sections[$j][info]."</p>
+                                      </div>
+                                      <div class='divBotaoEditarRoadmap' style='visibility: hidden;'>
+                                      <p><small class='text-muted' style='float:left;'>".$LANG['134'].":</small><img src='img/conf_stars_".$array_sections[$j][confiabilidade]."_bw.png' title='".$LANG[$rate]."' style='height: 13px; float:left; margin-left: 5px; margin-top: 1.3px;'/></p>
+                                      <a href='#' data-target='#modalEditarRoadmap' data-toggle='modal' data-id='editarRoadmap-".$array_sections[$j][id_arquivo]."' data-indice='".$i_prospec."' data-date='".$array_sections[$j][date]."' data-info='".$array_sections[$j][info]."' data-cabecalho='".$tipoCabecalho."' data-prospec='".$id_roadmap."' ><div><img src='img/editar7.png' title='".$LANG['136']."' style='width: 20px; height: 20px; float:right; opacity: 50%;'/></a>
+                                      <div>
                                     </div>
-                                    <div class='tl-body'>
-                                      <p>".$array_sections[$j][info]."</p>
-                                    </div>
-                                    <div class='divBotaoEditarRoadmap' style='visibility: hidden;'>
-                                    <p><small class='text-muted' style='float:left;'>".$LANG['134'].":</small><img src='img/conf_stars_".$array_sections[$j][confiabilidade]."_bw.png' title='".$LANG[$rate]."' style='height: 13px; float:left; margin-left: 5px; margin-top: 1.3px;'/></p>
-                                    <a href='#' data-target='#modalEditarRoadmap' data-toggle='modal' data-id='editarRoadmap-".$array_sections[$j][id_arquivo]."' data-indice='".$i_prospec."' data-date='".$array_sections[$j][date]."' data-info='".$array_sections[$j][info]."' data-cabecalho='".$tipoCabecalho."' data-prospec='".$id_roadmap."' ><div><img src='img/editar7.png' title='".$LANG['136']."' style='width: 20px; height: 20px; float:right; opacity: 50%;'/></a>
-                                    <div>
-                                  </div>
-                                </li>";
-                          $side_left = !$side_left;
-                          $id_filtered++;
+                                  </li>";
+                            $side_left = !$side_left;
+                            $id_filtered++;
+                          }
                         }                           
                         $i_prospec++;
 
@@ -669,6 +804,8 @@ saveCurrentURL();
 
                               //Traduz a area
                               $assunto_multilang = "";
+                              if($result->assunto_prospec == "General")
+                                $assunto_multilang = $LANG['228'];
                               if($result->assunto_prospec == "Work")
                                 $assunto_multilang = $LANG['20'];
                               if($result->assunto_prospec == "Education")
@@ -862,6 +999,112 @@ saveCurrentURL();
     </div>
   </div>
 
+  <!-- should include scroll-select.css first -->
+<link rel="stylesheet" href="./scroll-select/scroll-select.css" type="text/css" media="all" />
+<link rel="stylesheet" href="./css/drop.css" type="text/css" media="all" />
+    <!-- should include scroll-select.js second -->
+    <script src="./scroll-select/scroll-select.js" type="text/javascript" charset="utf-8"></script>
+<!-- at last , is your code -->
+<script>
+var el = document.getElementById('select')
+
+var select = new Select(el, {
+  data: getData(1980)
+})
+select.value(2018)
+
+select.on('change', function (v) {
+  document.getElementById("tldate-" + v).scrollIntoView({
+    block: "start",
+    behavior: "smooth"
+  });
+})
+
+function getData(from) {
+  var data = [{id: 2018, text: '2018'}, {id: 2020, text: '2020'}, {id: 2027, text: '2027'}, {id: 2050, text: '2050'}, {id: 2051, text: '2051'}, {id: 2052, text: '2052'}]
+  //for (var i = 0; i < 15; i ++) {
+  //  data.push({
+  //    id: String(from + i),
+  //    text: String(from + i)
+  //  })
+  //}
+  return data
+}
+
+document.getElementById('prev').addEventListener('click', function () {
+  select.prev()
+}, false)
+
+document.getElementById('next').addEventListener('click', function () {
+  select.next()
+}, false)
+
+document.getElementById('rebuild').addEventListener('click', function () {
+  select.setData(getData(1970))
+}, false)
+
+document.getElementById('unbind').addEventListener('click', function () {
+  select.unbind()
+}, false)
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+	var actions = $("#tableFiltroCustomizado td:last-child").html();
+	// Append table with add row form on add new button click
+    $(".add-new").click(function(){
+		$(this).attr("disabled", "disabled");
+		var index = $("#tableFiltroCustomizado tbody tr:last-child").index();
+        var row = '<tr>' +
+            '<td><input type="text" class="form-control" name="filterCustom" id="filterCustom" placeholder="Filter..." style="width: 100%; font-size: 1rem;"></td>' +
+			'<td style="width: 5rem;">' + actions + '</td>' +
+        '</tr>';
+    	$("#tableFiltroCustomizado").append(row);		
+		$("#tableFiltroCustomizado tbody tr").eq(index + 1).find(".add, .edit").toggle();
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+	// Add row on add button click
+	$(document).on("click", ".add", function(){
+		var empty = false;
+		var input = $(this).parents("tr").find('input[type="text"]');
+        input.each(function(){
+			if(!$(this).val()){
+				$(this).addClass("error");
+				empty = true;
+			} else{
+                $(this).removeClass("error");
+            }
+		});
+		$(this).parents("tr").find(".error").first().focus();
+		if(!empty){
+			input.each(function(){
+        if (this.id.indexOf("sobrenome") > -1) 
+				  $(this).parent("td").html($(this).val());
+        else
+          $(this).parent("td").html($(this).val());
+			});			
+			$(this).parents("tr").find(".add, .edit").toggle();
+			$(".add-new").removeAttr("disabled");
+		}		
+    });
+	// Edit row on edit button click
+	$(document).on("click", ".edit", function(){		
+        $(this).parents("tr").find("td:not(:last-child)").each(function(){
+			$(this).html('<input type="text" class="form-control" value="' + $(this).text() + '">');
+		});		
+		$(this).parents("tr").find(".add, .edit").toggle();
+		$(".add-new").attr("disabled", "disabled");
+    });
+	// Delete row on delete button click
+	$(document).on("click", ".delete", function(){
+        $(this).parents("tr").remove();
+		$(".add-new").removeAttr("disabled");
+    });
+});
+</script>
+
+
   <script>
     var data_id = '';
     $(document).ready(function() {
@@ -1046,6 +1289,26 @@ saveCurrentURL();
     }
 
 
+  </script>
+
+<script type="text/javascript">
+      $('.dropdown.keep-open').on({
+        "shown.bs.dropdown": function() { this.closable = false; },
+        "click":             function() { this.closable = true; },
+        "hide.bs.dropdown":  function() { return this.closable; }
+    });
+
+    $('#btnCalendar, #overlay').on('click', function(){
+      $('#dropdown-menu-filtro, #overlay').toggleClass('show')
+    })
+
+    $('#btnFiltroAssunto, #overlay').on('click', function(){
+      $('#dropdown-menu-filtro-assunto, #overlay').toggleClass('show')
+    })
+
+    function closePopupYears(){
+      $('#dropdown-menu-filtro, #overlay').toggleClass('hide')
+    }
   </script>
 
   <script type="text/javascript">

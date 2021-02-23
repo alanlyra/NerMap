@@ -70,6 +70,7 @@ saveCurrentURL();
                       <h5><?php echo $LANG['4']; ?>:</h5>
                       <select type="text" id="temaRoadmap" name="temaRoadmap" class="form-control" style="cursor: pointer;" required>
                         <option value="" disabled selected><?php echo $LANG['16']; ?>...</option>
+                        <option value="General"><?php echo $LANG['228']; ?></option>
                         <option value="Education"><?php echo $LANG['17']; ?></option>
                         <option value="Medicine"><?php echo $LANG['18']; ?></option>
                         <option value="Transport"><?php echo $LANG['19']; ?></option>
@@ -532,6 +533,8 @@ saveCurrentURL();
     for (const [key, value] of Object.entries(uniqs_arrayTemasUserJS)) {
       //Traduz a area
       assunto_multilang_user = "";
+      if(key == "General")
+        assunto_multilang_user = "<?php echo $LANG['228']; ?>";
       if(key == "Work")
         assunto_multilang_user = "<?php echo $LANG['20']; ?>";
       if(key == "Education")
@@ -607,6 +610,8 @@ saveCurrentURL();
       for (const [key, value] of Object.entries(uniqs_arrayTemasGlobalJS)) {
         //Traduz a area
         assunto_multilang_global = "";
+        if(key == "General")
+          assunto_multilang_global = "<?php echo $LANG['228']; ?>";
         if(key == "Work")
           assunto_multilang_global = "<?php echo $LANG['20']; ?>";
         if(key == "Education")

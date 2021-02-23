@@ -233,6 +233,7 @@ $LANG = array(
   '225' => 'Incorrect password or email. Try again.',
   '226' => 'See more',
   '227' => 'Session expired! Please log in again.',
+  '228' => 'General',
   '5000' => 'Very reliable',
   '4000' => 'Reliable',
   '3000' => 'Neuter',

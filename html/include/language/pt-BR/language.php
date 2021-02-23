@@ -231,6 +231,7 @@ $LANG = array(
   '225' => 'Senha ou e-mail incorretos. Tente novamente.',
   '226' => 'Ver mais',
   '227' => 'Sessão expirada! Faça login novamente.',
+  '228' => 'Geral',
   '5000' => 'Muito confiável',
   '4000' => 'Confiável',
   '3000' => 'Neutro',

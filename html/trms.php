@@ -179,6 +179,8 @@ saveCurrentURL();
                   
                       //Traduz as areas
                       $assunto_multilang = "";
+                      if($result->assunto_prospec == "General")
+                        $assunto_multilang = $LANG['228'];
                       if($result->assunto_prospec == "Work")
                         $assunto_multilang = $LANG['20'];
                       if($result->assunto_prospec == "Education")

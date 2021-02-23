@@ -412,3 +412,15 @@ input[type=text], input[type=password]{
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+#btnFiltroAssunto:focus {
+  border: none !important;
+  outline: none !important;
+  text-transform: none !important;
+}
+
+#btnCalendar:focus {
+  border: none !important;
+  outline: none !important;
+  text-transform: none !important;
+}
