@@ -104,6 +104,7 @@ saveCurrentURL();
                         nome_arquivo => "",
                         ano_arquivo => "",
                         filtro => "",
+                        filtro_customizado => "",
                         nome_trm => $nome_roadmap,
                         ano_limite_trm => $ano_limite_roadmap,
                         is_prospec => false,
@@ -144,10 +145,10 @@ saveCurrentURL();
 
                         //DEFINE FILTROS PRÉ-EXISTENTES
                         //$filtro_work = array("work", "toil", "job", "graft", "sweat", "labour", "working", "drudgery", "overwork", "moil", "handiwork", "grind", "labor", "ply", "spadework", "slave", "slog", "idle", "yakka", "temp", "off", "topiary", "travail", "opus", "serve", "busy", "tool", "clerk", "Cooper", "industry", "swot", "practice", "cooperage", "carpenter", "caddie", "stonework", "beaver", "trouble", "underwork", "outwork", "char", "hustle", "beadwork", "boondoggle", "stucco", "hard-working", "joinery", "inlay", "missionize", "cowboy", "effort", "employment", "sculpture", "hand", "tinker", "coordinate", "shirk", "workroom", "forge", "millwork", "erg", "do", "workless", "ranch", "start", "plumbing", "drudge", "hack", "treadle", "mesh", "energy", "dig", "saddlery", "oeuvre", "function", "power", "mission", "plumb", "opuscule", "spell", "plug", "service", "garden", "take", "quilting", "cooperative", "elaborate", "earn", "business", "wk", "social service", "carpentry", "masonry", "study", "loafer", "doss", "hook", "lazy", "housework", "lean", "composition", "task", "pay", "nonwork", "sleuth", "copyright", "opera", "wrought", "operate", "taskwork");
-                        $filtro_work = array("jobs", "Internet");
-                        $filtro_education = array("");
-                        $filtro_medicine = array("");
-                        $filtro_transport = array("");
+                        $filtro_work = array("filtro_work", "work", "jobs", "Internet");
+                        $filtro_education = array("filtro_education", "education", "school");
+                        $filtro_medicine = array("filtro_medicine", "medicine", "hospital");
+                        $filtro_transport = array("filtro_transport", "transport", "bus");
 
                         if ($results_max == 0) {
                           //Monta o roadmap pela primeira vez
@@ -333,18 +334,20 @@ saveCurrentURL();
                             $section[confiabilidade] = $result3->conf_arquivo;
                             $assunto_roadmap = $result3->assunto_prospec;
 
-                            //CARREGA FILTRO PRÉ-DEFINIDO POR CATEGORIA
-                            if($assunto_roadmap == "Work")
-                              $section[filtro] = array($filtro_work);
-                            if($assunto_roadmap == "Education")
-                              $section[filtro] = array($filtro_education);
-                            if($assunto_roadmap == "Medicine")
-                              $section[filtro] = array($filtro_medicine);
-                            if($assunto_roadmap == "Transport")
-                              $section[filtro] = array($filtro_transport);
+                            $filtro = json_decode($result3->filtro);
+                            $filtro = str_replace("[[","[",$filtro);
+                            $filtro = str_replace("]]","]",$filtro);
 
+                            $section[filtro] = $filtro;
 
-                           
+                            $filtroCustomizado = $result3->filtro_customizado;
+                            $filtro_customizado = str_replace("[[","[",$filtro_customizado);
+                            $filtro_customizado = str_replace("]]","]",$filtro_customizado);
+
+                            $section[filtro_customizado] = $filtro_customizado;
+
+                            //$section[filtro] = array_merge($filtro, $filtro_customizado);
+
                             //if (strpos($section[info], 'jobs') !== false) {
                             //   echo "<script>console.log('passei aqui');</script>";
                             //   $array_sections[$i_section] = $section;
@@ -515,28 +518,30 @@ saveCurrentURL();
                     </button>
                     
                     <!-- Dropdown Menu -->
-                    <ul id='dropdown-menu-filtro-assunto' class='dropdown-menu' role='menu' aria-labelledby='dLabel' style='min-width: 50px; width: 322px; height: 250px; margin-left: -75px;'>
+                    <form action='roadmaps.php?".$tipoCabecalho."=".$id_roadmap."' method='post' multipart='' enctype='multipart/form-data'>
+                    <ul id='dropdown-menu-filtro-assunto' class='dropdown-menu' role='menu' aria-labelledby='dLabel' style='min-width: 50px; width: 350px; height: auto; max-height: 300px; margin-left: -145px;'>
                         <div style='margin-left:10px;'>
                           <div style='display:inline-block; width: 140px;'>
-                            <input type='checkbox' id='filtro_education_checkbox' nome='filtro_education_checkbox' value='filtro_education_checkbox'>
+                            <input type='checkbox' id='filtro_education_checkbox' name='filtro_education_checkbox' value='filtro_education_checkbox' style='cursor:pointer;'>
                             <label for='filtro_education_checkbox'> Education </ label>
                           </div>
                           <div style='display:inline-block; width: 140px;'>
-                            <input type='checkbox' id='filtro_medicine_checkbox' nome='filtro_medicine_checkbox' value='filtro_medicine_checkbox'>
+                            <input type='checkbox' id='filtro_medicine_checkbox' name='filtro_medicine_checkbox' value='filtro_medicine_checkbox' style='cursor:pointer;'>
                             <label for='filtro_medicine_checkbox'> Medicine </ label>
                           </div>
                           <div style='display:inline-block; width: 140px;'>
-                            <input type='checkbox' id='filtro_transport_checkbox' nome='filtro_transport_checkbox' value='filtro_transport_checkbox'>
+                            <input type='checkbox' id='filtro_transport_checkbox' name='filtro_transport_checkbox' value='filtro_transport_checkbox' style='cursor:pointer;'>
                             <label for='filtro_transport_checkbox'> Transport </ label>
                           </div>
                           <div style='display:inline-block; width: 140px;'>
-                            <input type='checkbox' id='filtro_work_checkbox' nome='filtro_work_checkbox' value='filtro_work_checkbox'>
+                            <input type='checkbox' id='filtro_work_checkbox' name='filtro_work_checkbox' value='filtro_work_checkbox' style='cursor:pointer;'>
                             <label for='filtro_work_checkbox'> Work </ label>
                           </div>
-                          <div style='display:inline-block; width: 140px;'>
-                            <button type='button' class='btn btn-info add-new' style='float: left;'><i class='fa fa-plus'></i>Add more filter</button>
-                            <div style='max-height:160px;'>
-                              <table id='tableFiltroCustomizado' class='table' style='border-collapse: collapse; border: none; width: 300px;'>
+                          
+                          <button type='button' class='btn btn-info add-new' style='float: left;'><i class='fa fa-plus'></i>Add more filter</button>
+                          <div style='display:inline-block; width: 330px; max-height: 150px; overflow: auto;'>
+                           
+                              <table id='tableFiltroCustomizado' class='table' style='border-collapse: collapse; border: none; width: 300px; margin-top: 10px;'>
                                 <tbody>
                                   <tr style='display:none;'>
                                     <td></td>
@@ -549,10 +554,15 @@ saveCurrentURL();
                                   </tr>           
                                 </tbody>
                               </table>
-                            </div>
+                          
                           </div>
                         </div>
+                        <input type='text' id='filtroCustomizadoString' name='filtroCustomizadoString' value='' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' style='display:none;'>
+                    
+                        <button type='submit' name='salvarEdicaoFiltro' class='btn btn-info' style='margin: 10px 0px 10px 120px; height: 30px; font-weight: bold; font-size: 12px; text-shadow: none; min-width: 100px; border-radius: 50px;
+                        line-height: 13px;'>Apply</button>
                       </ul>
+                      </form>
                   </div>";
 
                   echo "</div>";
@@ -660,7 +670,7 @@ saveCurrentURL();
 
                         //Adiciona na tabela ROADMAP
 
-                        $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original, autores_prospeccao, conf_prospeccao) VALUES ('".$array_sections[$j][assunto]."', null, ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."', '".$array_sections[$j][autores]."', ".$array_sections[$j][confiabilidade].");");
+                        $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original, autores_prospeccao, conf_prospeccao) VALUES ('".$array_sections[$j][assunto]."', '".json_encode($array_sections[$j][filtro])."', ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."', '".$array_sections[$j][autores]."', ".$array_sections[$j][confiabilidade].");");
                       }
                       $previous_date = $array_sections[$j][date];
                     }
@@ -999,55 +1009,8 @@ saveCurrentURL();
     </div>
   </div>
 
-  <!-- should include scroll-select.css first -->
-<link rel="stylesheet" href="./scroll-select/scroll-select.css" type="text/css" media="all" />
-<link rel="stylesheet" href="./css/drop.css" type="text/css" media="all" />
-    <!-- should include scroll-select.js second -->
-    <script src="./scroll-select/scroll-select.js" type="text/javascript" charset="utf-8"></script>
-<!-- at last , is your code -->
-<script>
-var el = document.getElementById('select')
+ 
 
-var select = new Select(el, {
-  data: getData(1980)
-})
-select.value(2018)
-
-select.on('change', function (v) {
-  document.getElementById("tldate-" + v).scrollIntoView({
-    block: "start",
-    behavior: "smooth"
-  });
-})
-
-function getData(from) {
-  var data = [{id: 2018, text: '2018'}, {id: 2020, text: '2020'}, {id: 2027, text: '2027'}, {id: 2050, text: '2050'}, {id: 2051, text: '2051'}, {id: 2052, text: '2052'}]
-  //for (var i = 0; i < 15; i ++) {
-  //  data.push({
-  //    id: String(from + i),
-  //    text: String(from + i)
-  //  })
-  //}
-  return data
-}
-
-document.getElementById('prev').addEventListener('click', function () {
-  select.prev()
-}, false)
-
-document.getElementById('next').addEventListener('click', function () {
-  select.next()
-}, false)
-
-document.getElementById('rebuild').addEventListener('click', function () {
-  select.setData(getData(1970))
-}, false)
-
-document.getElementById('unbind').addEventListener('click', function () {
-  select.unbind()
-}, false)
-
-</script>
 <script type="text/javascript">
 $(document).ready(function(){
 	$('[data-toggle="tooltip"]').tooltip();
@@ -1349,6 +1312,18 @@ $(document).ready(function(){
         conf_media = "conf_stars_0.5_bw.png"; 
 
       document.getElementById("box_conf_media_roadmap").innerHTML = "<small class='text-muted'><b> <?php echo $LANG['76']; ?>: </b></small><img id='conf_media_roadmap' src='img/" + conf_media + "' title='<?php echo $LANG['128']; ?>: " + media_conf_roadmap + "' style='height: 15px; margin-right:10px; margin-top: -4px; margin-left: 3px;'/>";
+
+      var filtro = relatorio_arrayJS_Global[0]["filtro"][0];
+      if(filtro.includes("filtro_work"))
+        document.getElementById("filtro_work_checkbox").checked = true;
+      if(filtro.includes("filtro_education"))
+        document.getElementById("filtro_education_checkbox").checked = true;
+      if(filtro.includes("filtro_medicine"))
+        document.getElementById("filtro_medicine_checkbox").checked = true;
+      if(filtro.includes("filtro_transport"))
+        document.getElementById("filtro_transport_checkbox").checked = true;
+      console.log(filtro);
+
     }
     else {
       document.getElementById("dot_separator").style.visibility = "hidden";
@@ -1592,6 +1567,32 @@ $(document).ready(function(){
     return fileTitle;    
   }
 
+  function getFiltroCustomizadoToString(){
+  var autores = "";
+  x = document.getElementById("tableFiltroCustomizado").rows.length;
+
+  for(i=1;i<x;i++){
+    var tr = document.getElementById("tableFiltroCustomizado").getElementsByTagName("tr")[i];
+    
+    for(j=0;j<2;j++){
+      var td = tr.getElementsByTagName("td")[j];
+      if (td.innerHTML.indexOf("<") == -1 && td.innerHTML !== "") {
+        if(j==0)
+          if(i!=x-1)
+              autores += td.innerHTML + ", "; 
+          else
+            autores += td.innerHTML;
+      }    
+    }
+  }
+  //console.log(autores);
+  return autores;
+}
+
+$("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
+  document.getElementById("filtroCustomizadoString").value = getFiltroCustomizadoToString();
+});
+
  </script>
 
   <!-- Bootstrap core JavaScript-->
@@ -1645,6 +1646,44 @@ $(document).ready(function(){
     $update_on_roadmap = set_data("UPDATE roadmap SET tempo = $1, prospeccao = $2 where id_arquivo_unico = $3 AND ordem = $4 AND id_prospec_roadmap = $5", array($anoProspec, $infoProspec, $idArquivo, $indiceRoadmap, $idRoadmap));
 
     echo "<script>window.location.href = 'roadmaps.php?".$cabecalhoCompleto."';</script>";
+
+  }
+
+  if(isset($_POST["salvarEdicaoFiltro"])) {
+
+  	$filtroEducationEdicao = $_POST['filtro_education_checkbox'];
+  	$filtroMedicineEdicao = $_POST['filtro_medicine_checkbox'];
+  	$filtroTransportEdicao = $_POST['filtro_transport_checkbox'];
+  	$filtroWorkEdicao = $_POST['filtro_work_checkbox'];
+  	$filtroCustomizadoEdicao = $_POST['filtroCustomizadoString'];
+
+    $filtro_completo = array();
+    $filtro_customizado = array();
+    if(isset($filtroEducationEdicao))
+      $filtro_completo = array_merge($filtro_completo, $filtro_education);
+    if(isset($filtroMedicineEdicao))
+      $filtro_completo = array_merge($filtro_completo, $filtro_medicine);
+    if(isset($filtroTransportEdicao))
+      $filtro_completo = array_merge($filtro_completo, $filtro_transport);
+    if(isset($filtroWorkEdicao))
+      $filtro_completo = array_merge($filtro_completo, $filtro_work);
+
+    $wordsFiltroCustomizado = explode(",", $filtroCustomizadoEdicao);
+    for ($j = 0; $j < sizeof($wordsFiltroCustomizado); $j++) {
+      array_push($filtro_customizado, $wordsFiltroCustomizado[$j]);
+    }
+
+    echo "<script>console.log('".$tipoCabecalho."');</script>";
+    echo "<script>console.log(".$id_roadmap.");</script>";
+
+    $update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1, filtro_customizado = '234' where id_roadmap = $2", array(json_encode($filtro_completo), $id_roadmap));
+    //$update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1, filtro_customizado = $2 where id_roadmap = $3", array(json_encode($filtro_completo), json_encode($filtro_customizado), $id_roadmap));
+    //$update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1 where id_roadmap = $2", array(json_encode($filtro_completo), $id_roadmap));
+    //$update_on_roadmap2 = set_data("UPDATE roadmap SET filtro_customizado = $1 where id_roadmap = $2", array(json_encode($filtro_customizado), $id_roadmap));
+
+    //$update_on_roadmap = set_data("UPDATE roadmap SET tempo = $1, prospeccao = $2 where id_arquivo_unico = $3 AND ordem = $4 AND id_prospec_roadmap = $5", array($anoProspec, $infoProspec, $idArquivo, $indiceRoadmap, $idRoadmap));
+
+    echo "<script>window.location.href = 'roadmaps.php?".$tipoCabecalho."=".$id_roadmap."';</script>";
 
   }
 
@@ -1718,3 +1757,59 @@ $(document).ready(function(){
   }
 
 ?>
+
+ <!-- should include scroll-select.css first -->
+ <link rel="stylesheet" href="./scroll-select/scroll-select.css" type="text/css" media="all" />
+<link rel="stylesheet" href="./css/drop.css" type="text/css" media="all" />
+    <!-- should include scroll-select.js second -->
+    <script src="./scroll-select/scroll-select.js" type="text/javascript" charset="utf-8"></script>
+<!-- at last , is your code -->
+
+<script>
+  var el = document.getElementById('select')
+
+  var select = new Select(el, {
+    data: getData()
+  })
+  select.value(2018)
+
+  select.on('change', function (v) {
+    document.getElementById("tldate-" + v).scrollIntoView({
+      block: "start",
+      behavior: "smooth"
+    });
+  })
+
+  function getData() {
+    
+    var data = [];
+    var currentDate = 0;
+    for (var i = 0; i < relatorio_arrayJS_Global.length; i++) {
+      var date = parseInt(relatorio_arrayJS_Global[i]["date"]);
+      if(date > currentDate) {
+        const tuple = {id: date, text: date.toString()};
+        data.push(tuple);
+      }
+      currentDate = date;
+    }
+    console.log(data);
+    //var data = [{id: 2018, text: '2018'}, {id: 2020, text: '2020'}, {id: 2027, text: '2027'}, {id: 2050, text: '2050'}, {id: 2051, text: '2051'}, {id: 2052, text: '2052'}]
+    return data;
+  }
+
+  document.getElementById('prev').addEventListener('click', function () {
+    select.prev()
+  }, false)
+
+  document.getElementById('next').addEventListener('click', function () {
+    select.next()
+  }, false)
+
+  document.getElementById('rebuild').addEventListener('click', function () {
+    select.setData(getData(1970))
+  }, false)
+
+  document.getElementById('unbind').addEventListener('click', function () {
+    select.unbind()
+  }, false)
+</script>
