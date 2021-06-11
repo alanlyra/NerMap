@@ -90,12 +90,12 @@ saveCurrentURL();
 
                         while($result2=pg_fetch_object($search_results)) {
 
-                          echo "<a class='dropdown-item d-flex align-items-center' href='#' style='cursor: default;'>
+                          echo "<a class='dropdown-item d-flex align-items-center' href='#' style='cursor: default; max-height: 94%;margin-top: 5px;'>
                                   <div class='dropdown-list-image mr-3'>
                                     <img class='rounded-circle' src='".$result2->photo."' alt='' style='width:50px; height:50px;'>
                                   </div>
                                   <div class='font-weight-bold'>
-                                    <div class='text-truncate'>".$result2->nome_prospec."</div>
+                                    <div class='text-truncate' style='max-width: 100% !important;'>".$result2->nome_prospec."</div>
                                     <div class='small text-gray-500'>".$result2->name_user." " . $LANG['45'] . "</div>
 
                                     <form action='trms.php?' method='post' multipart='' enctype='multipart/form-data' style='display: inline-block;'>

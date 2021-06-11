@@ -144,7 +144,7 @@ saveCurrentURL();
                         $results_max = pg_num_rows($search_roadmap1);
 
                         //DEFINE FILTROS PRÉ-EXISTENTES
-                        //$filtro_work = array("work", "toil", "job", "graft", "sweat", "labour", "working", "drudgery", "overwork", "moil", "handiwork", "grind", "labor", "ply", "spadework", "slave", "slog", "idle", "yakka", "temp", "off", "topiary", "travail", "opus", "serve", "busy", "tool", "clerk", "Cooper", "industry", "swot", "practice", "cooperage", "carpenter", "caddie", "stonework", "beaver", "trouble", "underwork", "outwork", "char", "hustle", "beadwork", "boondoggle", "stucco", "hard-working", "joinery", "inlay", "missionize", "cowboy", "effort", "employment", "sculpture", "hand", "tinker", "coordinate", "shirk", "workroom", "forge", "millwork", "erg", "do", "workless", "ranch", "start", "plumbing", "drudge", "hack", "treadle", "mesh", "energy", "dig", "saddlery", "oeuvre", "function", "power", "mission", "plumb", "opuscule", "spell", "plug", "service", "garden", "take", "quilting", "cooperative", "elaborate", "earn", "business", "wk", "social service", "carpentry", "masonry", "study", "loafer", "doss", "hook", "lazy", "housework", "lean", "composition", "task", "pay", "nonwork", "sleuth", "copyright", "opera", "wrought", "operate", "taskwork");
+                        //$filtro_work = array("filtro_work", "work", "toil", "job", "graft", "sweat", "labour", "working", "drudgery", "overwork", "moil", "handiwork", "grind", "labor", "ply", "spadework", "slave", "slog", "idle", "yakka", "temp", "off", "topiary", "travail", "opus", "serve", "busy", "tool", "clerk", "Cooper", "industry", "swot", "practice", "cooperage", "carpenter", "caddie", "stonework", "beaver", "trouble", "underwork", "outwork", "char", "hustle", "beadwork", "boondoggle", "stucco", "hard-working", "joinery", "inlay", "missionize", "cowboy", "effort", "employment", "sculpture", "hand", "tinker", "coordinate", "shirk", "workroom", "forge", "millwork", "erg", "do", "workless", "ranch", "start", "plumbing", "drudge", "hack", "treadle", "mesh", "energy", "dig", "saddlery", "oeuvre", "function", "power", "mission", "plumb", "opuscule", "spell", "plug", "service", "garden", "take", "quilting", "cooperative", "elaborate", "earn", "business", "wk", "social service", "carpentry", "masonry", "study", "loafer", "doss", "hook", "lazy", "housework", "lean", "composition", "task", "pay", "nonwork", "sleuth", "copyright", "opera", "wrought", "operate", "taskwork");
                         $filtro_work = array("filtro_work", "work", "jobs", "Internet");
                         $filtro_education = array("filtro_education", "education", "school");
                         $filtro_medicine = array("filtro_medicine", "medicine", "hospital");
@@ -340,19 +340,7 @@ saveCurrentURL();
 
                             $section[filtro] = $filtro;
 
-                            $filtroCustomizado = $result3->filtro_customizado;
-                            $filtro_customizado = str_replace("[[","[",$filtro_customizado);
-                            $filtro_customizado = str_replace("]]","]",$filtro_customizado);
-
-                            $section[filtro_customizado] = $filtro_customizado;
-
-                            //$section[filtro] = array_merge($filtro, $filtro_customizado);
-
-                            //if (strpos($section[info], 'jobs') !== false) {
-                            //   echo "<script>console.log('passei aqui');</script>";
-                            //   $array_sections[$i_section] = $section;
-                            //    $i_section++;
-                            //}
+                            $section[filtro_customizado] = $result3->filtro_customizado;
                             
                             $array_sections[$i_section] = $section;
                             $i_section++;
@@ -391,7 +379,17 @@ saveCurrentURL();
                         $section[ano_arquivo] = $result3->ano_arquivo_adicionado;
                         $section[autores] = $result3->autores_prospeccao;
                         $section[confiabilidade] = $result3->conf_prospeccao;
-                        $array_sections[$i_section] = $section;
+                        
+
+                        $filtro = json_decode($result3->filtro);
+                        $filtro = str_replace("[[","[",$filtro);
+                        $filtro = str_replace("]]","]",$filtro);
+
+                        $section[filtro] = $filtro;
+                        
+                        $section[filtro_customizado] = $result3->filtro_customizado;
+
+                        $array_sections[$i_section] = $section;    
 
                         $section[date] = "";
                         $section[info] = "";
@@ -538,7 +536,7 @@ saveCurrentURL();
                             <label for='filtro_work_checkbox'> Work </ label>
                           </div>
                           
-                          <button type='button' class='btn btn-info add-new' style='float: left;'><i class='fa fa-plus'></i>Add more filter</button>
+                          <button type='button' class='btn btn-info add-new' style='float: left;'><i class='fa fa-plus'></i>Add custom filter</button>
                           <div style='display:inline-block; width: 330px; max-height: 150px; overflow: auto;'>
                            
                               <table id='tableFiltroCustomizado' class='table' style='border-collapse: collapse; border: none; width: 300px; margin-top: 10px;'>
@@ -588,20 +586,20 @@ saveCurrentURL();
                     $id_filtered = 0;
 
                     for ($j = 0; $j < sizeof($array_sections); $j++) {
-                      $inside_filter_context = true;                            
                       if($array_sections[$j][is_prospec]) {  
                         $array_relatorio[$i_prospec] = $array_sections[$j];
                         if($array_sections[$j][date] > $array_sections[$j][ano_arquivo] && $array_sections[$j][date] <= $ano_limite_roadmap) {
                           
                           //TODO - IF PARA CHECAR FILTRO ANTES DE INSERIR NO ARRAY
                           
-                         // for ($w = 0; $w < sizeof($array_sections[$j][filtro][0]); $w++) {
-                          //  echo "<script>console.log(".json_encode($array_sections[$j][filtro][0][$w]).");</script>"; 
-                           // if (strpos($array_sections[$j][info], $array_sections[$j][filtro][0][$w]) !== false)
-                           //   $inside_filter_context = true;
-                          //}
+                          $inside_filter_context = false;
+                          for ($w = 0; $w < sizeof($array_sections[$j][filtro]); $w++) {
+                            echo "<script>console.log(".json_encode($array_sections[$j][filtro][$w]).");</script>";
+                            if (strpos($array_sections[$j][info], $array_sections[$j][filtro][$w]) !== false)
+                              $inside_filter_context = true;
+                          }
 
-                          if ($inside_filter_context) {
+                          if (true) {
                             
                             $array_relatorio_filtered[$id_filtered] = $array_sections[$j];
                          
@@ -616,9 +614,10 @@ saveCurrentURL();
 
                             if($side_left)
                               if($var_tmp) echo "<li>";
-                              else echo "<li style='margin-top:-50px'>";
+                              else echo "<li style='margin-top:-100px'>";
                             else
-                              echo "<li class='timeline-inverted' style='margin-top:-50px'>";
+                              if($var_tmp) echo "<li class='timeline-inverted'>";
+                              else echo "<li class='timeline-inverted' style='margin-top:-100px'>";
                             echo "<div class='tl-circ'></div>
                                     <div class='timeline-panel'>";
 
@@ -670,7 +669,7 @@ saveCurrentURL();
 
                         //Adiciona na tabela ROADMAP
 
-                        $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original, autores_prospeccao, conf_prospeccao) VALUES ('".$array_sections[$j][assunto]."', '".json_encode($array_sections[$j][filtro])."', ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."', '".$array_sections[$j][autores]."', ".$array_sections[$j][confiabilidade].");");
+                        $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, filtro_customizado, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original, autores_prospeccao, conf_prospeccao) VALUES ('".$array_sections[$j][assunto]."', '".json_encode($array_sections[$j][filtro])."', '".json_encode($array_sections[$j][filtro_customizado])."', ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."', '".$array_sections[$j][autores]."', ".$array_sections[$j][confiabilidade].");");
                       }
                       $previous_date = $array_sections[$j][date];
                     }
@@ -1676,13 +1675,12 @@ $("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
     echo "<script>console.log('".$tipoCabecalho."');</script>";
     echo "<script>console.log(".$id_roadmap.");</script>";
 
-    $update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1, filtro_customizado = '234' where id_roadmap = $2", array(json_encode($filtro_completo), $id_roadmap));
-    //$update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1, filtro_customizado = $2 where id_roadmap = $3", array(json_encode($filtro_completo), json_encode($filtro_customizado), $id_roadmap));
-    //$update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1 where id_roadmap = $2", array(json_encode($filtro_completo), $id_roadmap));
-    //$update_on_roadmap2 = set_data("UPDATE roadmap SET filtro_customizado = $1 where id_roadmap = $2", array(json_encode($filtro_customizado), $id_roadmap));
-
-    //$update_on_roadmap = set_data("UPDATE roadmap SET tempo = $1, prospeccao = $2 where id_arquivo_unico = $3 AND ordem = $4 AND id_prospec_roadmap = $5", array($anoProspec, $infoProspec, $idArquivo, $indiceRoadmap, $idRoadmap));
-
+    $update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1, filtro_customizado= $2 where id_prospec_roadmap = $3", array(json_encode($filtro_completo), json_encode($filtro_customizado), $id_roadmap));
+    
+    
+    //$update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1 where id_prospec_roadmap = $2", array(json_encode($filtro_completo), $id_roadmap));
+    //$update_on_roadmap2 = set_data("UPDATE roadmap SET filtro_customizado= $1 where id_prospec_roadmap = $2", array(json_encode($filtro_customizado), $id_roadmap));
+    
     echo "<script>window.location.href = 'roadmaps.php?".$tipoCabecalho."=".$id_roadmap."';</script>";
 
   }
@@ -1771,7 +1769,6 @@ $("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
   var select = new Select(el, {
     data: getData()
   })
-  select.value(2018)
 
   select.on('change', function (v) {
     document.getElementById("tldate-" + v).scrollIntoView({
@@ -1803,6 +1800,7 @@ $("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
 
   document.getElementById('next').addEventListener('click', function () {
     select.next()
+    console.log("teste");
   }, false)
 
   document.getElementById('rebuild').addEventListener('click', function () {
