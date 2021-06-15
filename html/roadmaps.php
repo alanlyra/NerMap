@@ -509,7 +509,7 @@ saveCurrentURL();
 
                   echo "<div class='dropdown keep-open' style='float: left;'>
                     <!-- Dropdown Button -->
-                    <button id='btnFiltroAssunto' style=' background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none; margin-right: -18px; margin-top: -2px;' role='button' href='#'
+                    <button id='btnFiltroAssunto' style='background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none; margin-right: -18px; margin-top: -2px;' role='button' href='#'
                       data-toggle='dropdown' data-target='#' 
                       class='btn btn-primary shadow-none'>
                       <i class='fas fa-filter fa-sm' style='color: #858796;'></i>
@@ -519,28 +519,28 @@ saveCurrentURL();
                     <form action='roadmaps.php?".$tipoCabecalho."=".$id_roadmap."' method='post' multipart='' enctype='multipart/form-data'>
                     <ul id='dropdown-menu-filtro-assunto' class='dropdown-menu' role='menu' aria-labelledby='dLabel' style='min-width: 50px; width: 350px; height: auto; max-height: 300px; margin-left: -145px;'>
                         <div style='margin-left:10px;'>
-                          <div style='display:inline-block; width: 140px;'>
+                          <div style='display:inline-block; width: 140px; display:none;'>
                             <input type='checkbox' id='filtro_education_checkbox' name='filtro_education_checkbox' value='filtro_education_checkbox' style='cursor:pointer;'>
                             <label for='filtro_education_checkbox'> Education </ label>
                           </div>
-                          <div style='display:inline-block; width: 140px;'>
+                          <div style='display:inline-block; width: 140px; display:none;'>
                             <input type='checkbox' id='filtro_medicine_checkbox' name='filtro_medicine_checkbox' value='filtro_medicine_checkbox' style='cursor:pointer;'>
                             <label for='filtro_medicine_checkbox'> Medicine </ label>
                           </div>
-                          <div style='display:inline-block; width: 140px;'>
+                          <div style='display:inline-block; width: 140px; display:none;'>
                             <input type='checkbox' id='filtro_transport_checkbox' name='filtro_transport_checkbox' value='filtro_transport_checkbox' style='cursor:pointer;'>
                             <label for='filtro_transport_checkbox'> Transport </ label>
                           </div>
-                          <div style='display:inline-block; width: 140px;'>
+                          <div style='display:inline-block; width: 140px; display:none;'>
                             <input type='checkbox' id='filtro_work_checkbox' name='filtro_work_checkbox' value='filtro_work_checkbox' style='cursor:pointer;'>
                             <label for='filtro_work_checkbox'> Work </ label>
                           </div>
                           
-                          <button type='button' class='btn btn-info add-new' style='float: left;'><i class='fa fa-plus'></i>Add custom filter</button>
+                          <button type='button' id='adicionarFiltroCustomizadoButton' class='btn btn-info add-new' style='float: left;'><i class='fa fa-plus'></i>Add custom filter</button>
                           <div style='display:inline-block; width: 330px; max-height: 150px; overflow: auto;'>
                            
                               <table id='tableFiltroCustomizado' class='table' style='border-collapse: collapse; border: none; width: 300px; margin-top: 10px;'>
-                                <tbody>
+                                <tbody id='tbodyFiltroCustomizadoEdicao'>
                                   <tr style='display:none;'>
                                     <td></td>
                                     <td></td>
@@ -591,15 +591,24 @@ saveCurrentURL();
                         if($array_sections[$j][date] > $array_sections[$j][ano_arquivo] && $array_sections[$j][date] <= $ano_limite_roadmap) {
                           
                           //TODO - IF PARA CHECAR FILTRO ANTES DE INSERIR NO ARRAY
+                          // (Feito para os filtros customizados das palavras adicionadas)
                           
-                          $inside_filter_context = false;
-                          for ($w = 0; $w < sizeof($array_sections[$j][filtro]); $w++) {
-                            echo "<script>console.log(".json_encode($array_sections[$j][filtro][$w]).");</script>";
-                            if (strpos($array_sections[$j][info], $array_sections[$j][filtro][$w]) !== false)
-                              $inside_filter_context = true;
+                          $inside_filter_context = true;
+
+                          $pieces = explode(",", $array_sections[$j][filtro_customizado]);
+                          if($array_sections[$j][filtro_customizado] != "" && 
+                             $array_sections[$j][filtro_customizado] != " " && 
+                             $array_sections[$j][filtro_customizado] != null) {
+
+                              $inside_filter_context = false;
+                              for ($w = 0; $w < sizeof($pieces); $w++) {
+                                if (strpos($array_sections[$j][info], $pieces[$w]) !== false)
+                                  $inside_filter_context = true;
+                              }
+
                           }
 
-                          if (true) {
+                          if ($inside_filter_context) {
                             
                             $array_relatorio_filtered[$id_filtered] = $array_sections[$j];
                          
@@ -669,12 +678,12 @@ saveCurrentURL();
 
                         //Adiciona na tabela ROADMAP
 
-                        $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, filtro_customizado, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original, autores_prospeccao, conf_prospeccao) VALUES ('".$array_sections[$j][assunto]."', '".json_encode($array_sections[$j][filtro])."', '".json_encode($array_sections[$j][filtro_customizado])."', ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."', '".$array_sections[$j][autores]."', ".$array_sections[$j][confiabilidade].");");
+                        $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, filtro_customizado, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original, autores_prospeccao, conf_prospeccao) VALUES ('".$array_sections[$j][assunto]."', '".json_encode($array_sections[$j][filtro])."', '".$array_sections[$j][filtro_customizado]."', ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."', '".$array_sections[$j][autores]."', ".$array_sections[$j][confiabilidade].");");
                       }
                       $previous_date = $array_sections[$j][date];
                     }
 
-                    echo "<script>console.log(".json_encode($array_relatorio_filtered).");</script>"; 
+                    //echo "<script>console.log(".json_encode($array_relatorio_filtered).");</script>"; 
                     if(sizeof($array_relatorio_filtered) <= 0) {
                       if(isset($_GET["roadmap-completo"]))
                         echo "<script>document.getElementById('container-roadmap').innerHTML = '<div class=\'container4\'><p class=\'text-muted\'> Sem prospecções para este TRM </p></div>';</script>";  
@@ -1041,7 +1050,7 @@ $(document).ready(function(){
 		$(this).parents("tr").find(".error").first().focus();
 		if(!empty){
 			input.each(function(){
-        if (this.id.indexOf("sobrenome") > -1) 
+        if (this.id.indexOf("filterCustom") > -1) 
 				  $(this).parent("td").html($(this).val());
         else
           $(this).parent("td").html($(this).val());
@@ -1064,6 +1073,28 @@ $(document).ready(function(){
 		$(".add-new").removeAttr("disabled");
     });
 });
+
+
+function getAutoresToString(){
+  var autores = "";
+  x = document.getElementById("tableFiltroCustomizado").rows.length;
+
+  for(i=1;i<x;i++){
+    var tr = document.getElementById("tableFiltroCustomizado").getElementsByTagName("tr")[i];
+    
+    for(j=0;j<2;j++){
+      var td = tr.getElementsByTagName("td")[j];
+      if (td.innerHTML.indexOf("<") == -1 && td.innerHTML !== "") {
+        if(j==0)
+          autores += td.innerHTML + ", "; //Sobrenome
+        else
+          autores += td.innerHTML + "; "; //Nome
+      }    
+    }
+  }
+  //console.log(autores);
+  return autores;
+}
 </script>
 
 
@@ -1321,7 +1352,7 @@ $(document).ready(function(){
         document.getElementById("filtro_medicine_checkbox").checked = true;
       if(filtro.includes("filtro_transport"))
         document.getElementById("filtro_transport_checkbox").checked = true;
-      console.log(filtro);
+      //console.log(filtro);
 
     }
     else {
@@ -1352,6 +1383,38 @@ $(document).ready(function(){
 	    }
 	    return str;
 	}
+
+   $("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
+    document.getElementById("filtroCustomizadoString").value = getAutoresToString();
+  });
+
+  $(document).ready(function() {
+
+    var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
+
+    var filtroCustomizadoJS = relatorio_arrayJS_Global[0]["filtro_customizado"];
+
+    filtro_customizadoJS = filtroCustomizadoJS.split(",");
+
+    for(i=0; i<filtro_customizadoJS.length; i++) {
+
+      wordFiltroCustomizado = filtro_customizadoJS[i];
+      if(wordFiltroCustomizado != "" && wordFiltroCustomizado != " ") {
+        addRow(wordFiltroCustomizado);
+      }  
+    }
+    
+  });
+
+  function addRow(wordFiltroCustomizado){
+    window.setTimeout(function() {
+      document.getElementById("adicionarFiltroCustomizadoButton").click();
+      document.getElementById("filterCustom").value = wordFiltroCustomizado;
+      $('#tbodyFiltroCustomizadoEdicao').find('a.add:last').trigger('click');
+    }, 5);
+
+  }
+
 
 	function exportCSVFile(headers, items, fileTitle) {
 	    if (headers) {
@@ -1672,10 +1735,10 @@ $("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
       array_push($filtro_customizado, $wordsFiltroCustomizado[$j]);
     }
 
-    echo "<script>console.log('".$tipoCabecalho."');</script>";
-    echo "<script>console.log(".$id_roadmap.");</script>";
+    //echo "<script>console.log('".$tipoCabecalho."');</script>";
+    //echo "<script>console.log(".$id_roadmap.");</script>";
 
-    $update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1, filtro_customizado= $2 where id_prospec_roadmap = $3", array(json_encode($filtro_completo), json_encode($filtro_customizado), $id_roadmap));
+    $update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1, filtro_customizado= $2 where id_prospec_roadmap = $3", array(json_encode($filtro_completo), $filtroCustomizadoEdicao, $id_roadmap));
     
     
     //$update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1 where id_prospec_roadmap = $2", array(json_encode($filtro_completo), $id_roadmap));
@@ -1789,7 +1852,7 @@ $("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
       }
       currentDate = date;
     }
-    console.log(data);
+    //console.log(data);
     //var data = [{id: 2018, text: '2018'}, {id: 2020, text: '2020'}, {id: 2027, text: '2027'}, {id: 2050, text: '2050'}, {id: 2051, text: '2051'}, {id: 2052, text: '2052'}]
     return data;
   }
@@ -1800,7 +1863,6 @@ $("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
 
   document.getElementById('next').addEventListener('click', function () {
     select.next()
-    console.log("teste");
   }, false)
 
   document.getElementById('rebuild').addEventListener('click', function () {
