@@ -519,19 +519,19 @@ saveCurrentURL();
                     <form action='roadmaps.php?".$tipoCabecalho."=".$id_roadmap."' method='post' multipart='' enctype='multipart/form-data'>
                     <ul id='dropdown-menu-filtro-assunto' class='dropdown-menu' role='menu' aria-labelledby='dLabel' style='min-width: 50px; width: 350px; height: auto; max-height: 300px; margin-left: -145px;'>
                         <div style='margin-left:10px;'>
-                          <div style='display:inline-block; width: 140px; display:none;'>
+                          <div style='height: 0px; width: 140px; visibility:hidden;'>
                             <input type='checkbox' id='filtro_education_checkbox' name='filtro_education_checkbox' value='filtro_education_checkbox' style='cursor:pointer;'>
                             <label for='filtro_education_checkbox'> Education </ label>
                           </div>
-                          <div style='display:inline-block; width: 140px; display:none;'>
+                          <div style='height: 0px; width: 140px; visibility:hidden;'>
                             <input type='checkbox' id='filtro_medicine_checkbox' name='filtro_medicine_checkbox' value='filtro_medicine_checkbox' style='cursor:pointer;'>
                             <label for='filtro_medicine_checkbox'> Medicine </ label>
                           </div>
-                          <div style='display:inline-block; width: 140px; display:none;'>
+                          <div style='height: 0px; width: 140px; visibility:hidden;'>
                             <input type='checkbox' id='filtro_transport_checkbox' name='filtro_transport_checkbox' value='filtro_transport_checkbox' style='cursor:pointer;'>
                             <label for='filtro_transport_checkbox'> Transport </ label>
                           </div>
-                          <div style='display:inline-block; width: 140px; display:none;'>
+                          <div style='height: 0px; width: 140px; visibility:hidden;'>
                             <input type='checkbox' id='filtro_work_checkbox' name='filtro_work_checkbox' value='filtro_work_checkbox' style='cursor:pointer;'>
                             <label for='filtro_work_checkbox'> Work </ label>
                           </div>
@@ -555,7 +555,7 @@ saveCurrentURL();
                           
                           </div>
                         </div>
-                        <input type='text' id='filtroCustomizadoString' name='filtroCustomizadoString' value='' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' style='display:none;'>
+                        <input type='text' id='filtroCustomizadoString' name='filtroCustomizadoString' value='' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' style='visibility:hidden; height:0px; margin: 0 !important; padding: 0 !important;'>
                     
                         <button type='submit' name='salvarEdicaoFiltro' class='btn btn-info' style='margin: 10px 0px 10px 120px; height: 30px; font-weight: bold; font-size: 12px; text-shadow: none; min-width: 100px; border-radius: 50px;
                         line-height: 13px;'>Apply</button>
@@ -1058,6 +1058,7 @@ $(document).ready(function(){
 			$(this).parents("tr").find(".add, .edit").toggle();
 			$(".add-new").removeAttr("disabled");
 		}		
+        atualizaFiltroBox();
     });
 	// Edit row on edit button click
 	$(document).on("click", ".edit", function(){		
@@ -1066,35 +1067,16 @@ $(document).ready(function(){
 		});		
 		$(this).parents("tr").find(".add, .edit").toggle();
 		$(".add-new").attr("disabled", "disabled");
+        atualizaFiltroBox();
     });
 	// Delete row on delete button click
 	$(document).on("click", ".delete", function(){
         $(this).parents("tr").remove();
 		$(".add-new").removeAttr("disabled");
+        atualizaFiltroBox();
     });
 });
 
-
-function getAutoresToString(){
-  var autores = "";
-  x = document.getElementById("tableFiltroCustomizado").rows.length;
-
-  for(i=1;i<x;i++){
-    var tr = document.getElementById("tableFiltroCustomizado").getElementsByTagName("tr")[i];
-    
-    for(j=0;j<2;j++){
-      var td = tr.getElementsByTagName("td")[j];
-      if (td.innerHTML.indexOf("<") == -1 && td.innerHTML !== "") {
-        if(j==0)
-          autores += td.innerHTML + ", "; //Sobrenome
-        else
-          autores += td.innerHTML + "; "; //Nome
-      }    
-    }
-  }
-  //console.log(autores);
-  return autores;
-}
 </script>
 
 
@@ -1254,6 +1236,7 @@ function getAutoresToString(){
     }
 
     $(document).ready(function() {
+        carregaFiltro();
       $('#table-prospec').DataTable({                  
         "bDestroy": true,
           "bAutoWidth": true,  
@@ -1384,15 +1367,11 @@ function getAutoresToString(){
 	    return str;
 	}
 
-   $("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
-    document.getElementById("filtroCustomizadoString").value = getAutoresToString();
-  });
+  function carregaFiltro() {
 
-  $(document).ready(function() {
+    var relatorio_arrayJS = <?php echo json_encode($array_relatorio); ?>;
 
-    var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
-
-    var filtroCustomizadoJS = relatorio_arrayJS_Global[0]["filtro_customizado"];
+    var filtroCustomizadoJS = relatorio_arrayJS[0]["filtro_customizado"];
 
     filtro_customizadoJS = filtroCustomizadoJS.split(",");
 
@@ -1404,7 +1383,7 @@ function getAutoresToString(){
       }  
     }
     
-  });
+  };
 
   function addRow(wordFiltroCustomizado){
     window.setTimeout(function() {
@@ -1655,6 +1634,10 @@ $("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
   document.getElementById("filtroCustomizadoString").value = getFiltroCustomizadoToString();
 });
 
+function atualizaFiltroBox(){
+    document.getElementById("filtroCustomizadoString").value = getFiltroCustomizadoToString();
+}
+
  </script>
 
   <!-- Bootstrap core JavaScript-->
@@ -1730,13 +1713,13 @@ $("#tableFiltroCustomizado").bind("DOMSubtreeModified", function() {
     if(isset($filtroWorkEdicao))
       $filtro_completo = array_merge($filtro_completo, $filtro_work);
 
-    $wordsFiltroCustomizado = explode(",", $filtroCustomizadoEdicao);
-    for ($j = 0; $j < sizeof($wordsFiltroCustomizado); $j++) {
-      array_push($filtro_customizado, $wordsFiltroCustomizado[$j]);
-    }
+    //$wordsFiltroCustomizado = explode(",", $filtroCustomizadoEdicao);
+    //for ($j = 0; $j < sizeof($wordsFiltroCustomizado); $j++) {
+    //  array_push($filtro_customizado, $wordsFiltroCustomizado[$j]);
+    //}
 
     //echo "<script>console.log('".$tipoCabecalho."');</script>";
-    //echo "<script>console.log(".$id_roadmap.");</script>";
+    echo "<script>console.log('".$filtroCustomizadoEdicao."');</script>";
 
     $update_on_roadmap = set_data("UPDATE roadmap SET filtro = $1, filtro_customizado= $2 where id_prospec_roadmap = $3", array(json_encode($filtro_completo), $filtroCustomizadoEdicao, $id_roadmap));
     
