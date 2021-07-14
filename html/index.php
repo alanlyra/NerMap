@@ -137,7 +137,7 @@ saveCurrentURL();
             </div>
           </div>
         </div>
-        <li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none; float:right;">
+        <li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none; float:right; display:none !important;">
                 <a class="nav-link dropdown-toggle" href="#" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                   <i class="fas fa-globe fa-fw" style="float:right; margin-top: -80px;margin-right: -10px;"></i>
                 </a>

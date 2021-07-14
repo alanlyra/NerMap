@@ -99,7 +99,7 @@ saveCurrentURL();
   </div>
 </li>-->
 
-<li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none;">
+<li class="nav-item dropdown no-arrow mx-1 show" style="list-style:none; display:none;">
   <a class="nav-link dropdown-toggle" href="#" id="languagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     <i class="fas fa-globe fa-fw"></i>
   </a>
@@ -131,7 +131,7 @@ saveCurrentURL();
   </div>
 </li>
 
-<div class="topbar-divider d-none d-sm-block"></div>
+<div class="topbar-divider d-none d-sm-block" style="display:none !important;"></div>
 
     <!-- Nav Item - User Information -->
     <li class="nav-item dropdown no-arrow" style="list-style:none;">

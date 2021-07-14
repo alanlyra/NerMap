@@ -33,10 +33,8 @@ saveCurrentURL();
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-         
             <h1 class="h3 mb-2 text-gray-800"><?php echo $LANG['113']; ?></h1>
         
-
           <!-- Content Row -->
 
               <?php 
