@@ -95,12 +95,16 @@ saveCurrentURL();
                 <form action="config-usuario.php" method="post" multipart="" enctype="multipart/form-data">
               		<div class="col-xl-12 col-lg-12">
               		<h5><?php echo $LANG['171']; ?>:</h5>
-                    <input type="password" id="senhaAntiga" name="senhaAntiga" class="form-control bg-light border-0 small" aria-label="Search" aria-describedby="basic-addon2" required>
+                    <input type="password" id="senhaAntiga" name="senhaAntiga" class="form-control bg-light border-0 small" aria-label="Search" aria-describedby="basic-addon2" style="float: left;" required>
+                      <i class="fas fa-eye" id="eyeSenhaAntiga" style="float: right; margin-top: -28px; margin-right: 10px; cursor: pointer;"></i>
+                    </input>
                   </div>
                   </br>
-                  <div class="col-xl-12 col-lg-12">
+                  <div class="col-xl-12 col-lg-12" style="margin-top: 40px;">
               		<h5><?php echo $LANG['172']; ?>:</h5>
                     <input type="password" id="novaSenha" name="novaSenha" class="form-control bg-light border-0 small" aria-label="Search" aria-describedby="basic-addon2" required>
+                     <i class="fas fa-eye" id="eyeNovaSenha" style="float: right; margin-top: -28px; margin-right: 10px; cursor: pointer;"></i>
+                    </input>
                   </div>
                   </br>
                   </br>
@@ -187,6 +191,27 @@ saveCurrentURL();
 
 </body>
 </html>
+
+<script>
+
+const toggleEyeSenhaAntiga = document.querySelector('#eyeSenhaAntiga');
+const toggleEyeNovaSenha = document.querySelector('#eyeNovaSenha');
+const inputPasswordSenhaAntiga = document.querySelector('#senhaAntiga');
+const inputPasswordNovaSenha = document.querySelector('#novaSenha');
+
+toggleEyeSenhaAntiga.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = inputPasswordSenhaAntiga.getAttribute('type') === 'password' ? 'text' : 'password';
+    inputPasswordSenhaAntiga.setAttribute('type', type);
+});
+
+toggleEyeNovaSenha.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = inputPasswordNovaSenha.getAttribute('type') === 'password' ? 'text' : 'password';
+    inputPasswordNovaSenha.setAttribute('type', type);
+});
+
+</script>
 
 
 <?php

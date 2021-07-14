@@ -99,6 +99,8 @@ saveCurrentURL();
               <td align="right"><?php echo $LANG['179']; ?>:</td>
               <td align="left">
                 <input type="password" id="password" name="password" class="form-control bg-light border-0" style="width:250px;">
+                  <i class="fas fa-eye" id="eyeSenha" style="float: right; margin-top: -28px; margin-right: 10px; cursor: pointer;"></i>
+                </input>
               </td>
             </tr>
             <tr>
@@ -328,7 +330,22 @@ saveCurrentURL();
     function hideModalMensagem() {
       $('#modalMensagemCadastroUsuario').modal('hide');
     }
+    
 </script>
+
+<script>
+
+const toggleEyeSenha = document.querySelector('#eyeSenha');
+const inputPasswordSenha = document.querySelector('#password');
+
+toggleEyeSenha.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = inputPasswordSenha.getAttribute('type') === 'password' ? 'text' : 'password';
+    inputPasswordSenha.setAttribute('type', type);
+});
+
+</script>
+
 
 <?php
 	//echo '<pre>';

@@ -45,10 +45,14 @@ saveCurrentURL();
                       <div class='col-xl-12 col-lg-12' style='margin-bottom: 2vh;'>
                         <h5>".$LANG['179'].":</h5>
                         <input type='password' id='senhaUsuario' name='senhaUsuario' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required>                   
-                      </div>
+                          <i class='fas fa-eye' id='eyeSenhaUsuario' style='float: right; margin-top: -28px; margin-right: 10px; cursor: pointer;'></i>
+                        </input>
+                        </div>
                       <div class='col-xl-12 col-lg-12'>
                         <h5>".$LANG['183'].":</h5>
                         <input type='password' id='confirmaSenhaUsuario' name='confirmaSenhaUsuario' class='form-control bg-light border-0 small' aria-label='Search' aria-describedby='basic-addon2' required>
+                          <i class='fas fa-eye' id='eyeConfirmaSenhaUsuario' style='float: right; margin-top: -28px; margin-right: 10px; cursor: pointer;'></i>
+                        </input>
                         <p id='mensagemSenhaNaoIgual' style='font-style: italic; color: red; font-size: small; display:none; margin: 0;'> * ".$LANG['188']."</p>
                       </div>
                     </div>                    
@@ -157,6 +161,27 @@ saveCurrentURL();
     }
 
   </script>
+
+<script>
+
+const toggleEyeSenhaUsuario = document.querySelector('#eyeSenhaUsuario');
+const toggleEyeConfirmaSenhaUsuario = document.querySelector('#eyeConfirmaSenhaUsuario');
+const inputPasswordSenhaUsuario = document.querySelector('#senhaUsuario');
+const inputPasswordConfirmaSenhaUsuario = document.querySelector('#confirmaSenhaUsuario');
+
+toggleEyeSenhaUsuario.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = inputPasswordSenhaUsuario.getAttribute('type') === 'password' ? 'text' : 'password';
+    inputPasswordSenhaUsuario.setAttribute('type', type);
+});
+
+toggleEyeConfirmaSenhaUsuario.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = inputPasswordConfirmaSenhaUsuario.getAttribute('type') === 'password' ? 'text' : 'password';
+    inputPasswordConfirmaSenhaUsuario.setAttribute('type', type);
+});
+
+</script>
 
   
 
