@@ -1,5 +1,5 @@
 
-<?php include 'pdfparser/vendor/autoload.php'; ?>
+<?php include ( 'pdftotextmaster/PdfToText.phpclass' ) ; ?>
 
 <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -19,20 +19,23 @@
 
   if($extfile == "pdf") {
     $newname_txt = str_replace(".pdf", ".txt", $newname);
-    $parser = new \Smalot\PdfParser\Parser();
-    $pdf    = $parser->parseFile('uploads/pdf/'.$newname);
+
+    function  output ( $message )
+	   {
+		if  ( php_sapi_name ( )  ==  'cli' )
+			echo ( $message ) ;
+		else
+			echo ( nl2br ( $message ) ) ;
+	    }
       
-    // Retrieve all pages from the pdf file.
-    $pages  = $pdf->getPages();
+    $pdf	=  new PdfToText("uploads/pdf/".$newname) ;
 
     $pdfUploaded = fopen("uploads/".$newname_txt, "w") or die("Unable to open file!");
       
-    // Loop over each page to extract text.
-    foreach ($pages as $page) {
-      fwrite($pdfUploaded, $page->getText());
-    }
-
+    fwrite($pdfUploaded, $pdf -> Text );
+    
     fclose($pdf_uploaded);
+
   }
 
   if(file_get_contents('uploads/' . $namefile . '.txt')) {
