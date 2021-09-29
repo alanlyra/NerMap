@@ -487,7 +487,7 @@ saveCurrentURL();
 
                     echo "<div class='dropdown keep-open' style='float: right;'>
                     <!-- Dropdown Button -->
-                    <button id='btnCalendar' style=' background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none; margin-right: -18px; margin-top: -2px;' role='button' href='#'
+                    <button id='btnCalendar' style=' background-color: Transparent; background-repeat:no-repeat; border: none; cursor:pointer; overflow: hidden; outline:none; margin-right: -6px; margin-top: -2px;' role='button' href='#'
                       data-toggle='dropdown' data-target='#' 
                       class='btn btn-primary shadow-none'>
                       <i class='fas fa-calendar-week fa-sm' style='color: #858796;'></i>
@@ -1344,8 +1344,7 @@ $(document).ready(function(){
       
       var relatorio_arrayJS = <?php echo json_encode($array_relatorio_filtered); ?>;
 
-  		formatArray(relatorio_arrayJS);
-  		exportCSVFile(headers, itemsFormatted, getNomeArquivoRelatorio());
+  		exportCSVFile(headers, formatArray(relatorio_arrayJS), getNomeArquivoRelatorio());
   	}
 
   	function convertToCSV(objArray) {
@@ -1428,16 +1427,18 @@ $(document).ready(function(){
 	    event: "<?php echo $LANG['207']; ?>"
 	};
 
-	var itemsFormatted = [];
+	
 
 	function formatArray(array) {
+    var itemsFormatted = [];
 		// format the data
 		array.forEach((item) => {
 		    itemsFormatted.push({
-		        model: item.date,
-		        cases: item.info //.replace(/,/g, '') // remove commas to avoid errors,
+            date: item.date,
+		        event: item.info //.replace(/,/g, '') // remove commas to avoid errors,
 		    });
 		});
+    return itemsFormatted;
   }
   
   function getFormattedTime() {

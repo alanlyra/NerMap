@@ -1,3 +1,9 @@
 html/uploads
 html/relatorios
 html/roadmaps
+html/composer.json
+html/composer.lock
+html/vendor/autoload.php
+html/vendor/composer
+html/vendor/spatie
+html/vendor/symfony
