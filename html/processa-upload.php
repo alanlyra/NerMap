@@ -1,8 +1,10 @@
-<?php include 'pdfparser/vendor/autoload.php'; ?>
+<?php require_once 'vendor/autoload.php'; ?>
 
 <script src="vendor/jquery/jquery.min.js"></script>
 
 <?php
+
+use Spatie\PdfToText\Pdf;
 
   $newname = $_POST["param"];
 
@@ -18,18 +20,15 @@
 
   if($extfile == "pdf") {
     $newname_txt = str_replace(".pdf", ".txt", $newname);
-    $parser = new \Smalot\PdfParser\Parser();
-    $pdf    = $parser->parseFile('uploads/pdf/'.$newname);
-      
-    // Retrieve all pages from the pdf file.
-    $pages  = $pdf->getPages();
 
     $pdfUploaded = fopen("uploads/".$newname_txt, "w") or die("Unable to open file!");
       
-    // Loop over each page to extract text.
-    foreach ($pages as $page) {
-      fwrite($pdfUploaded, $page->getText());
-    }
+    $path = '/usr/bin/pdftotext';
+    $text = (new Pdf($path))
+        ->setPdf('uploads/pdf/'.$newname)
+        ->text();
+
+    fwrite($pdfUploaded, $text);
 
     fclose($pdf_uploaded);
   }
