@@ -670,6 +670,7 @@ saveCurrentURL();
                                   </li>";
                             $side_left = !$side_left;
                             $id_filtered++;
+                            $previous_date = $array_sections[$j][date];
                           }
                         }                           
                         $i_prospec++;
@@ -678,7 +679,7 @@ saveCurrentURL();
 
                         $set_on_roadmap = set_data("INSERT INTO roadmap (assunto, filtro, filtro_customizado, id_arquivo_unico, id_prospec_roadmap, id_roadmap, prospeccao, tem_filtro, arquivo_origem,  ordem,  tempo, nome_arquivo_adicionado, ano_arquivo_adicionado, prospeccao_original, autores_prospeccao, conf_prospeccao) VALUES ('".$array_sections[$j][assunto]."', '".json_encode($array_sections[$j][filtro])."', '".$array_sections[$j][filtro_customizado]."', ".$array_sections[$j][id_arquivo].", ".$id_roadmap.", ".$array_sections[$j][id_roadmap].", '".$array_sections[$j][info]."', false,".$array_sections[$j][arquivo_origem].", ".$i_prospec.",'".$array_sections[$j][date]."','".$array_sections[$j][nome_arquivo]."','".$array_sections[$j][ano_arquivo]."', '".$array_sections[$j][info_original]."', '".$array_sections[$j][autores]."', ".$array_sections[$j][confiabilidade].");");
                       }
-                      $previous_date = $array_sections[$j][date];
+                      
                     }
 
                     //echo "<script>console.log(".json_encode($array_relatorio_filtered).");</script>"; 
@@ -789,7 +790,7 @@ saveCurrentURL();
                       <table class='table table-bordered' id='table-prospec' width='100%' cellspacing='0'>
                         <thead>
                           <tr>
-                            <th></th>
+                            <th style='width: 50px'></th>
                             <th style='width: 300px'>".$LANG['3']."</th>
                             <th>".$LANG['4']."</th>
                             <th>".$LANG['51']."</th>
