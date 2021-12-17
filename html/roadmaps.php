@@ -1741,7 +1741,11 @@ function atualizaFiltroBox(){
   	$cabecalhoCompleto = $_POST['cabecalhoCompleto'];
   	$keyConsulta = $_POST['keyConsulta'];
 
-    $delete_on_roadmap = set_data("DELETE FROM roadmap where ".$keyConsulta." = $1 AND ordem = $2 AND id_prospec_roadmap = $3", array($idArquivo, $indiceRoadmap, $idRoadmap));
+    //$delete_on_roadmap = set_data("DELETE FROM roadmap where ".$keyConsulta." = $1 AND ordem = $2 AND id_prospec_roadmap = $3", array($idArquivo, $indiceRoadmap, $idRoadmap));
+
+    //Nova função de remoção que seta tempo = 1 para esconder do roadmap
+    $update_on_roadmap = set_data("UPDATE roadmap SET tempo = $1 where ".$keyConsulta." = $2 AND ordem = $3 AND id_prospec_roadmap = $4", array('1_'.$anoProspec, $idArquivo, $indiceRoadmap, $idRoadmap));
+
 
     echo "<script>window.location.href = 'roadmaps.php?".$cabecalhoCompleto."';</script>";
 
