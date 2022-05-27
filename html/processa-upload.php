@@ -18,6 +18,8 @@ use Spatie\PdfToText\Pdf;
   $namefile = $pieces_newname[0];
   $extfile = $pieces_newname[1];
 
+  //criar função
+
   if($extfile == "pdf") {
     $newname_txt = str_replace(".pdf", ".txt", $newname);
 

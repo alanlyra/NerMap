@@ -5,9 +5,9 @@ require_once 'system.php';
     for ($i = 0; $i < $argc; $i++) {
       $id = intval($argv[$i]);
 
-      if(file_get_contents('roadmaps/' . $id . '-tagged.txt')) {
+      if(file_get_contents('/home/alan/NerMap/html/roadmaps/' . $id . '-tagged.txt')) {
 
-        $roadmapText = file_get_contents('roadmaps/' . $id . '-tagged.txt');
+        $roadmapText = file_get_contents('/home/alan/NerMap/html/roadmaps/' . $id . '-tagged.txt');
 
         $pieces_space_Array = explode(" ", $roadmapText);
 
