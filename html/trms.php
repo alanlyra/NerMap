@@ -197,6 +197,8 @@ saveCurrentURL();
                         $status_ren_msg = $LANG['200'];
                       if($result->status_ren_prospec == "ERROR")
                         $status_ren_msg = $LANG['201'];  
+
+                      $num_arquivos_trm_prospec = get_num_arquivos_on_prospec($result->id_prospec);
                     
       						    	echo "<tr>
                                 <td style='text-align: center;' width='30px;'>
@@ -210,7 +212,7 @@ saveCurrentURL();
         	                      <td>".$result->nome_prospec."</td>
         	                      <td>".$assunto_multilang."</td>
         	                      <td style='width='2em;'>".$result->ano_prospec."</td>
-        	                      <td>".$result->num_textos_prospec."</td>
+        	                      <td>".$num_arquivos_trm_prospec."</td>
         	                       <td><div style='text-align: center;'>";
                                 if($result->status_ren_prospec != "null" && $result->status_ren_prospec != "")
                                   echo "<img src='img/".$result->status_ren_prospec.".png' title='".$status_ren_msg."' style='width: 20px; height: 20px; display: inline-block;'/>";
@@ -227,6 +229,8 @@ saveCurrentURL();
                                 if($result->usuario_prospec == $result->id_user_grupos) {
                                   echo " <a href='#' data-target='#modalUsuarios' data-toggle='modal' data-id='usuarios-".$result->id_prospec."' data-usuarioconvite='".$_SESSION['id']."' style='display: inline-block; margin-right:3px;'><div style='text-align: center;'><img src='img/shared5.png' title='".$LANG['59']."' style='width: 18px; height: 18px; display: inline-block; opacity:70%;'/></div></a>         
 
+                                  <a href='#' data-target='#modalConfirmarBulkProcess' data-toggle='modal' data-id='bulkprocess-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."'  style='display: inline-block; margin-left:3px; margin-right:3px;'><div style='text-align: center;'><img src='img/bulk-transfer.png' title='Bulk Process' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
+                                  
                                   <a href='#' data-target='#modalEditarTrm' data-toggle='modal' data-id='editartrm-".$result->id_prospec."' data-nometrm='".$result->nome_prospec."' data-tematrm='".$result->assunto_prospec."' data-anotrm='".$result->ano_prospec."' style='display: inline-block; margin-left:3px; margin-right:3px;'><div style='text-align: center;'><img src='img/editar7.png' title='".$LANG['60']."' style='width: 18px; height: 18px; display: inline-block; opacity: 70%;'/></div></a>
                           
                                   <a href='#' data-target='#modalConfirmarDeleteProspec' data-toggle='modal' data-id='deleteprospec-".$result->id_prospec."' style='display: inline-block; margin-left:3px;'><div style='text-align: center;'><img src='img/deletar2.png' title='".$LANG['61']."' style='width: 18px; height: 18px; display: inline-block;'/></div></a>";
@@ -438,6 +442,13 @@ saveCurrentURL();
     </div>
   </div>
 
+  <!-- Confirma Bulk Process Modal-->
+  <div id="modalConfirmarBulkProcess" class="modal fade"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div id="bulk-process" class="modal-dialog" role="document">
+      
+    </div>
+  </div>
+
   <!-- Modal de Usuários-->
   <div id="modalUsuarios" class="modal fade" role="dialog">
     <div class="modal-dialog modal-ll">
@@ -518,6 +529,10 @@ saveCurrentURL();
             deleteprospec = $(this).data('deleteprospec');
           }
 
+          if (typeof $(this).data('bulkprocess') !== 'undefined') {
+            bulkprocess = $(this).data('bulkprocess');
+          }
+
           if (typeof $(this).data('usuarioconvite') !== 'undefined') {
             id_usuarioconvite = $(this).data('usuarioconvite');
           }
@@ -531,6 +546,7 @@ saveCurrentURL();
           var data_id_prospec = data_txt.replace('arquivos-','');
           var data_id_editarTrm = data_txt.replace('editartrm-','');
           var data_id_deleteprospec = data_txt.replace('deleteprospec-','');
+          var data_id_bulkprocess = data_txt.replace('bulkprocess-','');
           var data_id_usuarios = data_txt.replace('usuarios-','');
           var data_id_removecompartilhamentoprospec = data_txt.replace('removecompartilhamentoprospec-','');
           if(data_txt.indexOf('arquivos-') > -1) {
@@ -566,6 +582,17 @@ saveCurrentURL();
               success: function(html) {
                 $('#delete-trm').html(html);
                 $('#modalConfirmarDeleteProspec').modal('show');
+              }
+            })
+          }
+          else if (data_txt.indexOf('bulkprocess-') > -1) {
+            $.ajax({
+              url: "modal-confirma-bulk-process.php",
+              method: "POST",
+              data: { "identificador": data_id_bulkprocess},
+              success: function(html) {
+                $('#bulk-process').html(html);
+                $('#modalConfirmarBulkProcess').modal('show');
               }
             })
           }
@@ -777,6 +804,20 @@ $("#tableAutores").bind("DOMSubtreeModified", function() {
     }
 
     $remover_prospec = set_data(" DELETE FROM prospec WHERE id_prospec = $1", array($id_prospec));
+
+    //echo "<script>reloadtable();;</script>";
+    echo "<script>window.location.href = 'trms.php';</script>";
+
+  }
+
+  if(isset($_POST["bulkProcess"])) {
+
+    $id_prospec = $_POST["idProspec"];
+
+    //Seta FILA no TRM
+    $update_on_prospec = set_data("UPDATE prospec SET status_ren_prospec = 'FILA' where id_prospec = $1", array($id_prospec));
+
+    popen("bash /home/alan/NerMap/html/process_bulk.sh " . $id_prospec . " >> /home/alan/NerMap/html/log_process_bulk.txt", "r");
 
     //echo "<script>reloadtable();;</script>";
     echo "<script>window.location.href = 'trms.php';</script>";

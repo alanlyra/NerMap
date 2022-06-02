@@ -10,13 +10,7 @@ require_once 'system.php';
 
   require 'vendor/autoload.php';
 
-  if (isset($argc)) {
-    for ($i = 0; $i < $argc; $i++) {
-      $id = intval($argv[$i]);
-    }
-  }
-  
-  $identificador = $id;
+  $identificador = $_GET["idProspec"];
 
   //Passo 1
   //Processar BibTex na pasta /nermap-bulk-upload

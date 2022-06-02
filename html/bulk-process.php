@@ -52,8 +52,13 @@ require_once 'vendor/autoload.php';
   function run_ner($id_run) {   
     $id_arquivo = $id_run;
     $num_textos = 1;
-  
-    popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos, "r");
+
+    popen("bash echo 'Iniciando processamento do arquivo: '".$id_arquivo." >> /home/alan/NerMap/html/logbulk.txt", "r");
+
+    popen("bash /home/alan/NerMap/html/process_input.sh " . $id_arquivo . " " . $num_textos. " >> /home/alan/NerMap/html/logbulk.txt", "r");
+
+    popen("bash echo 'Finalizado processo do arquivo: '".$id_arquivo." >> /home/alan/NerMap/html/logbulk.txt", "r");
+
   }
 
 ?>

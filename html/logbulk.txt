@@ -1,0 +1,302 @@
+/home/alan/NerMap/html/uploads/169.txt
+/home/alan/NerMap/html/uploads/169.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (169, 191, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (169, 309, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (169, 705, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (169, 719, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/170.txt
+/home/alan/NerMap/html/uploads/170.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (170, 191, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (170, 309, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (170, 705, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (170, 719, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/171.txt
+/home/alan/NerMap/html/uploads/171.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (171, 818, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (171, 823, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (171, 828, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (171, 857, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (171, 863, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/172.txt
+/home/alan/NerMap/html/uploads/172.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+/home/alan/NerMap/html/uploads/173.txt
+/home/alan/NerMap/html/uploads/173.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+/home/alan/NerMap/html/uploads/174.txt
+/home/alan/NerMap/html/uploads/174.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (174, 434, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/175.txt
+/home/alan/NerMap/html/uploads/175.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (175, 191, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (175, 309, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (175, 705, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (175, 719, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/176.txt
+/home/alan/NerMap/html/uploads/176.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (176, 818, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (176, 823, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (176, 828, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (176, 857, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (176, 863, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/177.txt
+/home/alan/NerMap/html/uploads/177.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+/home/alan/NerMap/html/uploads/178.txt
+/home/alan/NerMap/html/uploads/178.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+/home/alan/NerMap/html/uploads/179.txt
+/home/alan/NerMap/html/uploads/179.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (179, 434, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/180.txt
+/home/alan/NerMap/html/uploads/180.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (180, 191, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (180, 309, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (180, 705, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (180, 719, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/181.txt
+/home/alan/NerMap/html/uploads/181.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (181, 818, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (181, 823, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (181, 828, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (181, 857, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (181, 863, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/182.txt
+/home/alan/NerMap/html/uploads/182.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+/home/alan/NerMap/html/uploads/183.txt
+/home/alan/NerMap/html/uploads/183.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+/home/alan/NerMap/html/uploads/184.txt
+/home/alan/NerMap/html/uploads/184.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (184, 434, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/185.txt
+/home/alan/NerMap/html/uploads/185.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (185, 191, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (185, 309, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (185, 705, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (185, 719, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/186.txt
+/home/alan/NerMap/html/uploads/186.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (186, 818, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (186, 823, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  syntax error at or near "s"
+LINE 1: ...TO texto (id_texto, ordem, palavra) VALUES (186, 828, ''s');
+                                                                   ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (186, 857, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (186, 863, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
+/home/alan/NerMap/html/uploads/187.txt
+/home/alan/NerMap/html/uploads/187.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+/home/alan/NerMap/html/uploads/188.txt
+/home/alan/NerMap/html/uploads/188.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+/home/alan/NerMap/html/uploads/189.txt
+/home/alan/NerMap/html/uploads/189.txt
+
+Warning: file_get_contents(/home/alan/NerMap/html/roadmaps/0-tagged.txt): failed to open stream: No such file or directory in /home/alan/NerMap/html/geraroadmap.php on line 8
+
+Notice: Undefined variable: id_prospec in /home/alan/NerMap/html/geraroadmap.php on line 102
+
+Warning: pg_query(): Query failed: ERROR:  unterminated quoted string at or near "''');"
+LINE 1: ...NTO texto (id_texto, ordem, palavra) VALUES (189, 434, ''');
+                                                                  ^ in /home/alan/NerMap/html/system.php on line 63
